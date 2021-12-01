@@ -1,6 +1,6 @@
-# Healthdata FHIR R4 common specs
+# Healthdata.be FHIR R4 CBB specs
 
-This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for data collections supported by healthdata.be (Sciensano) based on the zibs 2020 release.
+This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for the Clinical Building Blocks (CBB) supported by healthdata.be (Sciensano) based on the zibs 2020 release.
 
 ## Official releases
 
@@ -12,28 +12,28 @@ The profiling guidelines for this project can be found in `profiling-guidelines.
 
 ## Git workflow
 ### Branching strategy during development
-Healthdata uses the following branching strategy during initial development:
+Healthdata.be uses the following branching strategy during initial development:
 * The main branch holds artifacts that have gone through the entire process, pass all quality assurance tests and are deemed ready for publication. 
-* Development takes per information model (zib/cbb) within zib branches ("zib-[zib-name]" or "zib-lm-[zib-name]", for example "zib-LaboratoryTestResult"). These branches:
+* Development takes per information model (zib/cbb) within zib branches ("HdBe-[zib-name]", for example "HdBe-LaboratoryTestResult"). These branches:
     * are branched from main,
     * can be updated by merging main into the zib-branch at any time,
     * require a peer-reviewed pull-request before merging in main,
     * are deleted after merge in main, 
     * can be merged into integration at any time.
-    * can be split into two: one for the development of the logical model and one for the FHIR profiles. The logical model development is indicated with ""zib-lm-[zib-name]".    
+    * can be split into two: one for the development of the logical model and one for the FHIR profiles.    
 * Multiple zibs may be included in one zib branch which can be convenient for zibs that are strongly related, like the medication-related zibs.
 * The integration branch is linked to a Simplifier.net project which will render all resources and host an Implementation Guide. The integration branch is useful for quality control processes.
 
 The following illustration visualizes how this workflow might look like
 ```
 main
---x---x----------------+--x----------x------+-------
-  |   |                |  |          |      |
-  |   |  integration   |  |          |      |
-  \---|-----------+----|--|----------|---+--|--------
-      |           |    |  |          |   |  |  
-      | zib-xxx   |    |  | zib-yyy  |   |  |
-      \-----------/----/  \----------/---/--/
+--x---x----------------+--x------------x------+-------
+  |   |                |  |            |      |
+  |   |  integration   |  |            |      |
+  \---|-----------+----|--|------------|---+--|--------
+      |           |    |  |            |   |  |  
+      | HdBe-xxx  |    |  | HdBe--yyy  |   |  |
+      \-----------/----/  \------------/---/--/
 ```
 
 ### Branching strategy after publication
