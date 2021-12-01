@@ -1,0 +1,2 @@
+# HdBe-FHIR-R4-CBB/terminology
+This folder contains [FHIR terminology resources](http://hl7.org/fhir/terminologies.html) (CodeSytem, ValueSet, ConceptMap, NamingSystem) which are shared by the logical models and conformance resources in the folders '/logical models' and  '/resources'.
