@@ -2,7 +2,7 @@
 This folder contains resources that are the source for profiling work of this repository.
 
 ## zib-logicalmodels
-This folder contains the zibs in release 2020 exported as FHIR LogicalModels including terminology resources (ValueSets and CodeSystems) from [ArtDecor project 'Zorginformatiebouwstenen (ZIB) 2020](https://decor.nictiz.nl/decor/services/ProjectIndex?prefix=zib2020bbr-&format=html&language=&ui=nl-NL) which will be stored in a folder with foldername that contains the export date based on the `YYYYMMDD` format.
+This folder contains the zibs in release 2020 exported as FHIR LogicalModels including terminology resources (ValueSets and CodeSystems) from [ArtDecor project 'Zorginformatiebouwstenen (ZIB) 2020](https://decor.nictiz.nl/decor/services/ProjectIndex?prefix=zib2020bbr-&format=html&language=&ui=nl-NL) which will be stored in a folder with folder name that contains the export date based on the `YYYYMMDD` format.
 
 Documentation on how to export will follow. 
 
