@@ -1,7 +1,7 @@
 # HdBe-FHIR-R4-CBB/util
 This folder contains some utilities for HdBe CBBs profiling.
 
-## zib-models_2_hdbe-logical_models
+## zib-logicalmodels_2_hdbe-logicalmodels
 Contains utilities and documentation to transform the zib (release 2020) exported FHIR logical models, as stored in ../src folder, to the Healthdata.be context. It will adjust the metadata (`url`, `name`, `title`, `status`, `publisher`, `contact`, `purpose`, `copyright`, `abstract`) following the profiling guidelines. It will add the metadata if not present. 
 
 ## zib-profiles_2_hdbe-profiles

@@ -7,10 +7,10 @@ This folder contains the zibs in release 2020 exported as FHIR LogicalModels inc
 Documentation on how to export will follow. 
 
 ## zib-profiles
-Contains the downloaded Nictiz zib-profiles per folder based on preferable the [nictiz.fhir.nl.r4.zib2020](https://simplifier.net/packages/nictiz.fhir.nl.r4.zib2020) package version (e.g. `0.1.0-beta`) or download date in `YYYYMMDD` format.
+Contains the downloaded Nictiz zib2020-profiles, unpacked, per folder preferable based on the [nictiz.fhir.nl.r4.zib2020](https://simplifier.net/packages/nictiz.fhir.nl.r4.zib2020) package version (e.g. `0.1.0-beta`) or download date in `YYYYMMDD` format.
 
-## transformed-zib-logicalmodels
-Contains the results of the transformation of zib logical models to the HdBe context in subfolders similiar to the `zib-logicalmodels` folder based on the export date. 
+## transformed-logicalmodels
+Contains the results of the transformation of zib logical models to the HdBe context in subfolders similiar to the `zib-logicalmodels` folder. 
 
-## transformed-zib-profiles
+## transformed-profiles
 Contains the results of the transformation of zib-profiles to the HdBe context in subfolders similiar to the `zib-profiles` folder.

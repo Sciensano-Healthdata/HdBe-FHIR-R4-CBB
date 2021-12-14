@@ -162,7 +162,7 @@ Where:
     - name: "Healthdata.be (Sciensano)"
     - telecom: 
         - system: "email"
-        - value: "fhir.healthdata@sciensano.be "
+        - value: "fhir.healthdata@sciensano.be"
         - use: "work"
 - description:
     - For logical models: the zib exported values from the zib. Potentially updated or refined if healthdata.be requirements have changes to the zib.
