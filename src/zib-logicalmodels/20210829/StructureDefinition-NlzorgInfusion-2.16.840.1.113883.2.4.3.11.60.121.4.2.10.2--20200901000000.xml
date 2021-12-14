@@ -1,0 +1,2438 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.2.4.3.11.60.121.4.2.10.2--20200901000000"/>
+    <language value="en-US"/>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension><!-- http:/decor.nictiz.nl/fhir/4.0/zib2020bbr-/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.121.4.2.10.2-\-20200901000000 -->
+    <url value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.121.4.2.10.2--20200901000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.121.4.2.10.2"/>
+    </identifier>
+    <version value="2020-09-01T00:00:00"/>
+    <name value="NlzorgInfusion">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+            <extension url="lang">
+                <valueCode value="nl-NL"/>
+            </extension>
+            <extension url="content">
+                <valueMarkdown value="nl.zorg.Infuus"/>
+            </extension>
+        </extension>
+    </name>
+    <status value="active"/>
+    <publisher value="Werkgroep RadB Verpleegkundige Gegevens"/>
+    <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;An infusion is a device that slowly injects fluid into a blood vessel. The infusion has a number of components. &#xD;&#xA;The infusion contains: &#xD;&#xA;&#xD;&#xA;* the (peripheral) cannula or the (central) catheter put into the patient peripherally or centrally;&#xD;&#xA;* the administering system connected to the cannula/catheter allowing the administered fluid to run,&#xD;&#xA;* the infusion bag containing the fluid.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Multiple administering systems may be connected to one cannula/catheter. Furthermore, a central venous catheter may have multiple lumens. &#xD;&#xA;Arterial and epidural catheters also exist in addition to venous catheters.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;The purpose of an infusion is usually to administer fluid and/or medication. &#xD;&#xA;Information on present infusions is recorded to inform other health professionals. This information is of importance in determining the care required for the patient and in safely administering medication. In a transfer situation, the information offers the option to realize continuity of care by organizing specific expertise and materials in advance, for example.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+            <extension url="lang">
+                <valueCode value="nl-NL"/>
+            </extension>
+            <extension url="content">
+                <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Een infuus is een apparaat waarmee vloeistof langzaam in een bloedvat wordt gespoten. Het infuus bestaat uit een aantal delen.&#xD;&#xA;Tot het infuus wordt behoort:&#xD;&#xA;&#xD;&#xA;* de canule (perifeer) of de katheter (centraal) die perifeer of centraal wordt ingebracht bij de patiënt;&#xD;&#xA;* het toedieningssysteem dat aangesloten is op de canule/katheter waardoor de vloeistof loopt die wordt toegediend;&#xD;&#xA;* de infuuszak waar de vloeistof zich in bevindt.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Op één canule/katheter kunnen meerdere toedieningssystemen zijn aangesloten. Daarnaast kan een centraal veneuze katheter meerdere lumina bevatten.&#xD;&#xA;Naast veneuze katheters zijn er ook arteriële en epidurale katheters.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Het doel van een infuus is meestal het toedienen van vocht en/of medicatie. &#xD;&#xA;Het vastleggen van informatie over aanwezige infusen heeft tot doel om andere zorgverleners hierover te informeren. Deze informatie is van belang bij het vaststellen van benodigde zorg voor de patiënt en voor veilige toediening van medicatie. In een overplaatsingssituatie biedt de informatie de mogelijkheid om de continuiteit van zorg te bewerkstelligen door bijvoorbeeld specifieke deskundigheid en materialen vooraf te regelen. &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**References**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;1. Verpleegkundige Intensive Care Protocollen [Online] Beschikbaar op: [http://ic.venvn.nl/Downloads/Verpleegkundige-Intensive-Care-Protocollen](http://ic.venvn.nl/Downloads/Verpleegkundige-Intensive-Care-Protocollen) [Geraadpleegd: 13 februari 2015]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0 (01-07-2015)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.1 (04-09-2017)&#xD;&#xA;Bevat: [ZIB-433](https://bits.nictiz.nl/browse/ZIB-433), [ZIB-530](https://bits.nictiz.nl/browse/ZIB-530), [ZIB-534](https://bits.nictiz.nl/browse/ZIB-534), [ZIB-607](https://bits.nictiz.nl/browse/ZIB-607).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.2 (31-12-2017)&#xD;&#xA;Bevat: [ZIB-646](https://bits.nictiz.nl/browse/ZIB-646).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.3 (06-07-2019)&#xD;&#xA;Bevat: [ZIB-845](https://bits.nictiz.nl/browse/ZIB-845).&#xD;&#xA;&#xD;&#xA;"/>
+            </extension>
+        </extension>
+    </description>
+    <fhirVersion value="4.0.1"/>
+    <kind value="logical"/>
+    <abstract value="true"/>
+    <type value="infusion"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+    <derivation value="specialization"/>
+    <snapshot>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.1--20200901000000">
+            <path value="infusion"/>
+            <short value="Infusion">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Infuus"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the Infusion information model. This root concept contains all data elements of the infusion information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Infuus. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Infuus."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="infusion"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.3--20200901000000">
+            <path value="infusion.infusion_catheter"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="424226004"/>
+                <display value="met gebruik van hulpmiddel"/>
+            </code>
+            <short value="InfusionCatheter">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Infuuskatheter"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="InfusionCatheter describes the presence of an infusion catheter. If this is the case, the date of placement and insertion opening can be described in addition to the type of catheter. Furthermore, it offers the option to record identification information of the cannula/catheter if desired.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Infuuskatheter beschrijft de aanwezigheid van een infuuskatheter. Indien hier sprake van is, kunnen naast het type katheter de plaatsingsdatum en insteekopening bij de patiënt beschreven worden. Bovendien biedt het de mogelijkheid om indien gewenst identificerende gegevens van de canule/katheter vast te leggen."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.153--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device"/>
+            <short value="MedicalDevice">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="MedischHulpmiddel"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the MedicalDevice information model. This root concept contains all data elements of the MedicalDevice information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen MedischHulpmiddel. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedischHulpmiddel."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.154--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.product"/>
+            <short value="Product">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Product"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The medical device (internally or externally).">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het medische hulpmiddel dat wordt gebruikt (inwendig of uitwendig)."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.product"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.155--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.product.product_id"/>
+            <short value="ProductID">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ProductID"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Unique identification of the product, such as the serial number. &#xD;&#xA;Frequently used coding systems are HIBC and GTIN.&#xD;&#xA;If the law requires this to be registered on the basis of a UDI (Unique Device Identifier), the unique identification must consist of a UDI-DI (Device Identifier) and a UDI-PI (Production Identifier(s)). See http://www.gs1.org/healthcare/udi for more information. &#xD;&#xA;&#xD;&#xA;The UDI-DI must be recorded in reference to GS1 GTIN (01) encryptions, with which for example a firm is linked to the product type. The UDI-PI must consist of the following: application identifier (AI); expiration date (17) and serial number (21) and/or batch or lot number (10).&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Unieke identificatie van het product, bijvoorbeeld het serienummer.&#xD;&#xA;Veel gebruikte coderingen zijn HIBC en GTIN.&#xD;&#xA;Indien de wet verplicht stelt dat deze geregistreerd wordt op basis van een UDI (Unique Device Identifier), dient de unieke identificatie opgebouwd te zijn uit een UDI-DI (Device Identifier) en een UDI-PI (Production Identifier(s)). Voor meer informatie, zie: http://www.gs1.org/healthcare/udi .&#xD;&#xA;&#xD;&#xA;De UDI-DI dient m.b.t. GS1 GTIN (01) coderingen worden vastgelegd, waarmee o.a. een firma aan het producttype wordt gekoppeld. De UDI-PI dient te bestaan uit de volgende application identifier (AI); vervaldatum (17) en serienummer (21) en/of batch- of lotnummer (10)."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.product.product_id"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <text value="(01)08712345000004(17)160131(10)200652"/>
+                </valueCodeableConcept>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.155--20200901000000.coding">
+            <path value="infusion.infusion_catheter.medical_device.product.product_id.coding"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="system"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <definition value="-"/>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.155--20200901000000.coding:GTINProductIDCodelijst">
+            <path value="infusion.infusion_catheter.medical_device.product.product_id.coding"/>
+            <sliceName value="GTINProductIDCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+                <strength value="required"/>
+                <description value="GTINProductIDCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.10.1.3--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.155--20200901000000.coding:HIBCProductIDCodelijst">
+            <path value="infusion.infusion_catheter.medical_device.product.product_id.coding"/>
+            <sliceName value="HIBCProductIDCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+                <strength value="required"/>
+                <description value="HIBCProductIDCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.10.1.5--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.156--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.product.product_type"/>
+            <short value="ProductType">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ProductType"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="A description of the type of cannula/catheter.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een beschrijving van het type canule/katheter."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.product.product_type"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+                <strength value="extensible"/>
+                <description value="InfuuskatheterTypeCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.10.2.1--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.157--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.product_description"/>
+            <short value="ProductDescription">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ProductOmschrijving"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Textual description of the product.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Tekstuele beschrijving van het product. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.product_description"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.158--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.anatomical_location"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="363698007"/>
+                <display value="locatie van bevinding"/>
+            </code>
+            <short value="AnatomicalLocation">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="AnatomischeLocatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Patient’s anatomical location of the medical device used.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Anatomische locatie van het gebruikte hulpmiddel bij de patiënt."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.anatomical_location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.159--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.anatomical_location.location"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="363698007"/>
+                <display value="locatie van bevinding"/>
+            </code>
+            <short value="Location">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Locatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Localisation on/in the body.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Localisatie op/in het lichaam."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.anatomical_location.location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.159--20200901000000.coding">
+            <path value="infusion.infusion_catheter.medical_device.anatomical_location.location.coding"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="system"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <definition value="-"/>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.159--20200901000000.coding:LocatieCodelijst">
+            <path value="infusion.infusion_catheter.medical_device.anatomical_location.location.coding"/>
+            <sliceName value="LocatieCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+                <strength value="required"/>
+                <description value="LocatieCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.1--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.159--20200901000000.coding:LocatieICD-O-3Codelijst">
+            <path value="infusion.infusion_catheter.medical_device.anatomical_location.location.coding"/>
+            <sliceName value="LocatieICD-O-3Codelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+                <strength value="required"/>
+                <description value="LocatieICD-O-3Codelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.3--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.160--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.anatomical_location.laterality"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="272741003"/>
+                <display value="lateraliteit"/>
+            </code>
+            <short value="Laterality">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Lateraliteit"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.anatomical_location.laterality"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <text value="Links"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+                <strength value="required"/>
+                <description value="LateraliteitCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.2--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.161--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.indication"/>
+            <short value="Indication">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Indicatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The medical reason for use of the medical device.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De medische reden voor het gebruik van het medisch hulpmiddel. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.indication"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.162--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.indication.problem"/>
+            <short value="Problem">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Probleem"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the Problem information model.&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient himselve (in the form of a complaint) or by their healthprofessional (in the form of a diagnosis, for example). &#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Probleem.&#xD;&#xA;Een probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de patiënt zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose). "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.indication.problem"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.5.1.1--20200901000000"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.163--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.start_date"/>
+            <short value="StartDate">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="BeginDatum"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The start date of the first use or implant of the medical device. A ‘vague’ date, such as only the year, is permitted.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De startdatum van eerste toepassing of implantatie het medische hulpmiddel. Een vage datum, bijv. alleen een jaartal, is toegestaan."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.start_date"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="dateTime"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.164--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.eind_datum"/>
+            <short value="EindDatum">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="EindDatum"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The end date of the last use or explant of the medical device. A ‘vague’ date, such as only the year, is permitted.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De einddatum van de laatste toepassing of explantatie van het medische hulpmiddel. Een vage datum, bijv. alleen een jaartal, is toegestaan."/>
+                    </extension>
+                </extension>
+            </definition>
+            <alias value="EndDate"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.eind_datum"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="dateTime"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.165--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.comment"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="48767-8"/>
+                <display value="Annotation comment Imp"/>
+            </code>
+            <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Comment about use or information on the medical device used.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Opmerking bij de toepassing of informatie over het gebruikte hulpmiddel."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.166--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.location"/>
+            <short value="Location">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Locatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The healthcare provider at which use of the medical device was initiated or where the aid was implanted.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De zorgaanbieder waar het gebruik van het hulpmiddel geïnitieerd werd of waar het hulpmiddel geïmplanteerd werd."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.167--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.location.healthcare_provider"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="257622000"/>
+                <display value="zorginstelling"/>
+            </code>
+            <short value="HealthcareProvider">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Zorgaanbieder"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the Healthcare Provider information model. This root concept contains all data elements of the Healthcare Provider information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Zorgaanbieder. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgaanbieder. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.location.healthcare_provider"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.17.2.1--20200901000000"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.168--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.health_professional"/>
+            <short value="HealthProfessional">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Zorgverlener"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The healthcare provider involved in the indication for use of the medical device implant.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De zorgverlener betrokken bij de indicatiestelling voor het gebruik of de implantatie van het hulpmiddel. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.health_professional"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.17.1.1--20200901000000"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.8--20200901000000">
+            <path value="infusion.comment"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="48767-8"/>
+                <display value="Annotation comment Imp"/>
+            </code>
+            <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="A comment on the infusion.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een toelichting op het infuus."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.10--20200901000000">
+            <path value="infusion.lumen_or_line"/>
+            <short value="LumenOrLine">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="LumenOfLijn"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Container of the LumenOrLine concept. This container contains all data elements of the LumenOrLine concept. &#xD;&#xA;Central lines can contain one or more lumens; peripheral infusions do not have lumens and only have one line.&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Container van het concept LumenOfLijn. Deze container bevat alle gegevenselementen van het concept LumenOfLijn.&#xD;&#xA;Centrale lijnen kunnen één of meer lumina bevatten, bij een perifeer infuus is er geen sprake van lumina en is er slechts één lijn."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="3"/>
+            <base>
+                <path value="infusion.lumen_or_line"/>
+                <min value="1"/>
+                <max value="3"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.9--20200901000000">
+            <path value="infusion.lumen_or_line.line_status"/>
+            <short value="LineStatus">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="LijnStatus"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="LineStatus is used to indicate whether it is a running infusion, whether it has been capped, or has been fitted with a heparin lock, etc.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Met lijnstatus kan worden aangegeven of het een lopend infuus is, het afgedopt is, of van een heparineslot voorzien is, etcetera."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.lumen_or_line.line_status"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+                <strength value="extensible"/>
+                <description value="LijnStatusCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.10.2.3--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.11--20200901000000">
+            <path value="infusion.lumen_or_line.lumen_location"/>
+            <short value="LumenLocation">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="LumenLocatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="For central venous catheters with multiple lumens, LumenLocation indicates the relative position of the lumen with respect to the insertion opening.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Bij een centraal veneuze katheter met meerdere lumina geeft LumenLocatie de relatieve positie aan van het lumen ten opzichte van de insteekopening."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.lumen_or_line.lumen_location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+                <strength value="extensible"/>
+                <description value="LumenLocatieCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.10.2.2--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.13--20200901000000">
+            <path value="infusion.lumen_or_line.lock_fluid"/>
+            <short value="LockFluid">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="SlotVloeistof"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The description of the fluid used as an anticoagulation lock, such as heparin.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De beschrijving van de vloeistof die als antistollingsslot wordt gebruikt, bijvoorbeeld heparine."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.lumen_or_line.lock_fluid"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.170--20200901000000">
+            <path value="infusion.lumen_or_line.lock_fluid.medication_administration"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="18629005"/>
+                <display value="medicatietoediening"/>
+            </code>
+            <short value="MedicationAdministration">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="MedicatieToediening"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the MedicationAdministration information model. This root concept contains all data elements of the MedicationAdministration information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen MedicatieToediening. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedicatieToediening."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.lumen_or_line.lock_fluid.medication_administration"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.9.13.20928--20200901000000"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.7--20200901000000">
+            <path value="infusion.lumen_or_line.administering_system"/>
+            <short value="AdministeringSystem">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ToedieningsSysteem"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Container of the AdministeringSystem concept. This container contains all data elements of the AdministeringSystem concept. &#xD;&#xA;The administering system contains the entire system making the fluid run from the infusion bag via the cannula/catheter to the patient. This also includes any three-way valves/connecting joints used.&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Container van het concept ToedieningsSysteem. Deze container bevat alle gegevenselementen van het concept ToedieningsSysteem.&#xD;&#xA;Het toedieningssysteem bevat het hele systeem waardoor de vloeistof van de infuuszak via de canule/katheter de patiënt inloopt. Eventueel gebruikte driewegkranen/tussenstukjes vallen hier ook onder."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="infusion.lumen_or_line.administering_system"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.2--20200901000000">
+            <path value="infusion.lumen_or_line.administering_system.infusion_fluid"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="440132002"/>
+                <display value="geneesmiddel in parenterale toedieningsvorm"/>
+            </code>
+            <short value="InfusionFluid">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="InfuusVloeistof"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The description of the fluid administered through the infusion and the dose administered, as given in the medication prescription.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De beschrijving van de vloeistof die toegediend wordt via het infuus en de dosis van de verstrekking, zoals vermeld staat in het medicatievoorschrift."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.lumen_or_line.administering_system.infusion_fluid"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.171--20200901000000">
+            <path value="infusion.lumen_or_line.administering_system.infusion_fluid.medication_administration"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="18629005"/>
+                <display value="medicatietoediening"/>
+            </code>
+            <short value="MedicationAdministration">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="MedicatieToediening"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the MedicationAdministration information model. This root concept contains all data elements of the MedicationAdministration information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen MedicatieToediening. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedicatieToediening."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.lumen_or_line.administering_system.infusion_fluid.medication_administration"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.9.13.20928--20200901000000"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.6--20200901000000">
+            <path value="infusion.lumen_or_line.administering_system.peripheral"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="363710007"/>
+                <display value="indirect hulpmiddel"/>
+            </code>
+            <short value="Peripheral">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Randapparaat"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="A description of medical devices required for administering the infusion fluid and placing the catheter, such as a volumetric infusion pump, syringe and infusion bag.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een beschrijving van hulpmiddelen die benodigd zijn voor het toedienen van de infuusvloeistof en het toepassen van de katheter, bijvoorbeeld een volumetrische infuuspomp, spuitenpomp en drukzak."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="infusion.lumen_or_line.administering_system.peripheral"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.172--20200901000000">
+            <path value="infusion.lumen_or_line.administering_system.peripheral.medical_device"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="49062001"/>
+                <display value="hulpmiddel"/>
+            </code>
+            <short value="MedicalDevice">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="MedischHulpmiddel"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the MedicalDevice information model. This root concept contains all data elements of the MedicalDevice information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen MedischHulpmiddel. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedischHulpmiddel."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.lumen_or_line.administering_system.peripheral.medical_device"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.10.1.1--20200901000000"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.12--20200901000000">
+            <path value="infusion.lumen_or_line.administering_system.administering_system_comment"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="48767-8"/>
+                <display value="Annotation comment Imp"/>
+            </code>
+            <short value="AdministeringSystemComment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ToedieningsSysteemToelichting"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="A comment on the administering system.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een toelichting op het toedieningssysteem."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.lumen_or_line.administering_system.administering_system_comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+    </snapshot>
+    <differential>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.1--20200901000000">
+            <path value="infusion"/>
+            <short value="Infusion">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Infuus"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the Infusion information model. This root concept contains all data elements of the infusion information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Infuus. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Infuus."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="infusion"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.3--20200901000000">
+            <path value="infusion.infusion_catheter"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="424226004"/>
+                <display value="met gebruik van hulpmiddel"/>
+            </code>
+            <short value="InfusionCatheter">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Infuuskatheter"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="InfusionCatheter describes the presence of an infusion catheter. If this is the case, the date of placement and insertion opening can be described in addition to the type of catheter. Furthermore, it offers the option to record identification information of the cannula/catheter if desired.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Infuuskatheter beschrijft de aanwezigheid van een infuuskatheter. Indien hier sprake van is, kunnen naast het type katheter de plaatsingsdatum en insteekopening bij de patiënt beschreven worden. Bovendien biedt het de mogelijkheid om indien gewenst identificerende gegevens van de canule/katheter vast te leggen."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.153--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device"/>
+            <short value="MedicalDevice">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="MedischHulpmiddel"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the MedicalDevice information model. This root concept contains all data elements of the MedicalDevice information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen MedischHulpmiddel. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedischHulpmiddel."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.154--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.product"/>
+            <short value="Product">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Product"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The medical device (internally or externally).">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het medische hulpmiddel dat wordt gebruikt (inwendig of uitwendig)."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.product"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.155--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.product.product_id"/>
+            <short value="ProductID">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ProductID"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Unique identification of the product, such as the serial number. &#xD;&#xA;Frequently used coding systems are HIBC and GTIN.&#xD;&#xA;If the law requires this to be registered on the basis of a UDI (Unique Device Identifier), the unique identification must consist of a UDI-DI (Device Identifier) and a UDI-PI (Production Identifier(s)). See http://www.gs1.org/healthcare/udi for more information. &#xD;&#xA;&#xD;&#xA;The UDI-DI must be recorded in reference to GS1 GTIN (01) encryptions, with which for example a firm is linked to the product type. The UDI-PI must consist of the following: application identifier (AI); expiration date (17) and serial number (21) and/or batch or lot number (10).&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Unieke identificatie van het product, bijvoorbeeld het serienummer.&#xD;&#xA;Veel gebruikte coderingen zijn HIBC en GTIN.&#xD;&#xA;Indien de wet verplicht stelt dat deze geregistreerd wordt op basis van een UDI (Unique Device Identifier), dient de unieke identificatie opgebouwd te zijn uit een UDI-DI (Device Identifier) en een UDI-PI (Production Identifier(s)). Voor meer informatie, zie: http://www.gs1.org/healthcare/udi .&#xD;&#xA;&#xD;&#xA;De UDI-DI dient m.b.t. GS1 GTIN (01) coderingen worden vastgelegd, waarmee o.a. een firma aan het producttype wordt gekoppeld. De UDI-PI dient te bestaan uit de volgende application identifier (AI); vervaldatum (17) en serienummer (21) en/of batch- of lotnummer (10)."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.product.product_id"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <text value="(01)08712345000004(17)160131(10)200652"/>
+                </valueCodeableConcept>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.155--20200901000000.coding">
+            <path value="infusion.infusion_catheter.medical_device.product.product_id.coding"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="system"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <definition value="-"/>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.155--20200901000000.coding:GTINProductIDCodelijst">
+            <path value="infusion.infusion_catheter.medical_device.product.product_id.coding"/>
+            <sliceName value="GTINProductIDCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+                <strength value="required"/>
+                <description value="GTINProductIDCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.10.1.3--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.155--20200901000000.coding:HIBCProductIDCodelijst">
+            <path value="infusion.infusion_catheter.medical_device.product.product_id.coding"/>
+            <sliceName value="HIBCProductIDCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+                <strength value="required"/>
+                <description value="HIBCProductIDCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.10.1.5--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.156--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.product.product_type"/>
+            <short value="ProductType">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ProductType"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="A description of the type of cannula/catheter.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een beschrijving van het type canule/katheter."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.product.product_type"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+                <strength value="extensible"/>
+                <description value="InfuuskatheterTypeCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.10.2.1--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.157--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.product_description"/>
+            <short value="ProductDescription">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ProductOmschrijving"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Textual description of the product.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Tekstuele beschrijving van het product. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.product_description"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.158--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.anatomical_location"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="363698007"/>
+                <display value="locatie van bevinding"/>
+            </code>
+            <short value="AnatomicalLocation">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="AnatomischeLocatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Patient’s anatomical location of the medical device used.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Anatomische locatie van het gebruikte hulpmiddel bij de patiënt."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.anatomical_location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.159--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.anatomical_location.location"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="363698007"/>
+                <display value="locatie van bevinding"/>
+            </code>
+            <short value="Location">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Locatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Localisation on/in the body.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Localisatie op/in het lichaam."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.anatomical_location.location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.159--20200901000000.coding">
+            <path value="infusion.infusion_catheter.medical_device.anatomical_location.location.coding"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="system"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <definition value="-"/>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.159--20200901000000.coding:LocatieCodelijst">
+            <path value="infusion.infusion_catheter.medical_device.anatomical_location.location.coding"/>
+            <sliceName value="LocatieCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+                <strength value="required"/>
+                <description value="LocatieCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.1--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.159--20200901000000.coding:LocatieICD-O-3Codelijst">
+            <path value="infusion.infusion_catheter.medical_device.anatomical_location.location.coding"/>
+            <sliceName value="LocatieICD-O-3Codelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+                <strength value="required"/>
+                <description value="LocatieICD-O-3Codelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.3--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.160--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.anatomical_location.laterality"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="272741003"/>
+                <display value="lateraliteit"/>
+            </code>
+            <short value="Laterality">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Lateraliteit"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.anatomical_location.laterality"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <text value="Links"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+                <strength value="required"/>
+                <description value="LateraliteitCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.2--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.161--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.indication"/>
+            <short value="Indication">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Indicatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The medical reason for use of the medical device.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De medische reden voor het gebruik van het medisch hulpmiddel. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.indication"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.162--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.indication.problem"/>
+            <short value="Problem">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Probleem"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the Problem information model.&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient himselve (in the form of a complaint) or by their healthprofessional (in the form of a diagnosis, for example). &#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Probleem.&#xD;&#xA;Een probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de patiënt zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose). "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.indication.problem"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.5.1.1--20200901000000"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.163--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.start_date"/>
+            <short value="StartDate">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="BeginDatum"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The start date of the first use or implant of the medical device. A ‘vague’ date, such as only the year, is permitted.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De startdatum van eerste toepassing of implantatie het medische hulpmiddel. Een vage datum, bijv. alleen een jaartal, is toegestaan."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.start_date"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="dateTime"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.164--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.eind_datum"/>
+            <short value="EindDatum">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="EindDatum"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The end date of the last use or explant of the medical device. A ‘vague’ date, such as only the year, is permitted.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De einddatum van de laatste toepassing of explantatie van het medische hulpmiddel. Een vage datum, bijv. alleen een jaartal, is toegestaan."/>
+                    </extension>
+                </extension>
+            </definition>
+            <alias value="EndDate"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.eind_datum"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="dateTime"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.165--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.comment"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="48767-8"/>
+                <display value="Annotation comment Imp"/>
+            </code>
+            <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Comment about use or information on the medical device used.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Opmerking bij de toepassing of informatie over het gebruikte hulpmiddel."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.166--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.location"/>
+            <short value="Location">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Locatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The healthcare provider at which use of the medical device was initiated or where the aid was implanted.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De zorgaanbieder waar het gebruik van het hulpmiddel geïnitieerd werd of waar het hulpmiddel geïmplanteerd werd."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.167--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.location.healthcare_provider"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="257622000"/>
+                <display value="zorginstelling"/>
+            </code>
+            <short value="HealthcareProvider">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Zorgaanbieder"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the Healthcare Provider information model. This root concept contains all data elements of the Healthcare Provider information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Zorgaanbieder. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgaanbieder. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.location.healthcare_provider"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.17.2.1--20200901000000"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.168--20200901000000">
+            <path value="infusion.infusion_catheter.medical_device.health_professional"/>
+            <short value="HealthProfessional">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Zorgverlener"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The healthcare provider involved in the indication for use of the medical device implant.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De zorgverlener betrokken bij de indicatiestelling voor het gebruik of de implantatie van het hulpmiddel. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.infusion_catheter.medical_device.health_professional"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.17.1.1--20200901000000"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.8--20200901000000">
+            <path value="infusion.comment"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="48767-8"/>
+                <display value="Annotation comment Imp"/>
+            </code>
+            <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="A comment on the infusion.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een toelichting op het infuus."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.10--20200901000000">
+            <path value="infusion.lumen_or_line"/>
+            <short value="LumenOrLine">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="LumenOfLijn"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Container of the LumenOrLine concept. This container contains all data elements of the LumenOrLine concept. &#xD;&#xA;Central lines can contain one or more lumens; peripheral infusions do not have lumens and only have one line.&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Container van het concept LumenOfLijn. Deze container bevat alle gegevenselementen van het concept LumenOfLijn.&#xD;&#xA;Centrale lijnen kunnen één of meer lumina bevatten, bij een perifeer infuus is er geen sprake van lumina en is er slechts één lijn."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="3"/>
+            <base>
+                <path value="infusion.lumen_or_line"/>
+                <min value="1"/>
+                <max value="3"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.9--20200901000000">
+            <path value="infusion.lumen_or_line.line_status"/>
+            <short value="LineStatus">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="LijnStatus"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="LineStatus is used to indicate whether it is a running infusion, whether it has been capped, or has been fitted with a heparin lock, etc.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Met lijnstatus kan worden aangegeven of het een lopend infuus is, het afgedopt is, of van een heparineslot voorzien is, etcetera."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.lumen_or_line.line_status"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+                <strength value="extensible"/>
+                <description value="LijnStatusCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.10.2.3--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.11--20200901000000">
+            <path value="infusion.lumen_or_line.lumen_location"/>
+            <short value="LumenLocation">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="LumenLocatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="For central venous catheters with multiple lumens, LumenLocation indicates the relative position of the lumen with respect to the insertion opening.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Bij een centraal veneuze katheter met meerdere lumina geeft LumenLocatie de relatieve positie aan van het lumen ten opzichte van de insteekopening."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.lumen_or_line.lumen_location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+                <strength value="extensible"/>
+                <description value="LumenLocatieCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.10.2.2--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.13--20200901000000">
+            <path value="infusion.lumen_or_line.lock_fluid"/>
+            <short value="LockFluid">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="SlotVloeistof"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The description of the fluid used as an anticoagulation lock, such as heparin.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De beschrijving van de vloeistof die als antistollingsslot wordt gebruikt, bijvoorbeeld heparine."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.lumen_or_line.lock_fluid"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.170--20200901000000">
+            <path value="infusion.lumen_or_line.lock_fluid.medication_administration"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="18629005"/>
+                <display value="medicatietoediening"/>
+            </code>
+            <short value="MedicationAdministration">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="MedicatieToediening"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the MedicationAdministration information model. This root concept contains all data elements of the MedicationAdministration information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen MedicatieToediening. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedicatieToediening."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.lumen_or_line.lock_fluid.medication_administration"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.9.13.20928--20200901000000"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.7--20200901000000">
+            <path value="infusion.lumen_or_line.administering_system"/>
+            <short value="AdministeringSystem">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ToedieningsSysteem"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Container of the AdministeringSystem concept. This container contains all data elements of the AdministeringSystem concept. &#xD;&#xA;The administering system contains the entire system making the fluid run from the infusion bag via the cannula/catheter to the patient. This also includes any three-way valves/connecting joints used.&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Container van het concept ToedieningsSysteem. Deze container bevat alle gegevenselementen van het concept ToedieningsSysteem.&#xD;&#xA;Het toedieningssysteem bevat het hele systeem waardoor de vloeistof van de infuuszak via de canule/katheter de patiënt inloopt. Eventueel gebruikte driewegkranen/tussenstukjes vallen hier ook onder."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="infusion.lumen_or_line.administering_system"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.2--20200901000000">
+            <path value="infusion.lumen_or_line.administering_system.infusion_fluid"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="440132002"/>
+                <display value="geneesmiddel in parenterale toedieningsvorm"/>
+            </code>
+            <short value="InfusionFluid">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="InfuusVloeistof"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The description of the fluid administered through the infusion and the dose administered, as given in the medication prescription.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De beschrijving van de vloeistof die toegediend wordt via het infuus en de dosis van de verstrekking, zoals vermeld staat in het medicatievoorschrift."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.lumen_or_line.administering_system.infusion_fluid"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.171--20200901000000">
+            <path value="infusion.lumen_or_line.administering_system.infusion_fluid.medication_administration"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="18629005"/>
+                <display value="medicatietoediening"/>
+            </code>
+            <short value="MedicationAdministration">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="MedicatieToediening"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the MedicationAdministration information model. This root concept contains all data elements of the MedicationAdministration information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen MedicatieToediening. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedicatieToediening."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.lumen_or_line.administering_system.infusion_fluid.medication_administration"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.9.13.20928--20200901000000"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.6--20200901000000">
+            <path value="infusion.lumen_or_line.administering_system.peripheral"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="363710007"/>
+                <display value="indirect hulpmiddel"/>
+            </code>
+            <short value="Peripheral">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Randapparaat"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="A description of medical devices required for administering the infusion fluid and placing the catheter, such as a volumetric infusion pump, syringe and infusion bag.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een beschrijving van hulpmiddelen die benodigd zijn voor het toedienen van de infuusvloeistof en het toepassen van de katheter, bijvoorbeeld een volumetrische infuuspomp, spuitenpomp en drukzak."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="infusion.lumen_or_line.administering_system.peripheral"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.172--20200901000000">
+            <path value="infusion.lumen_or_line.administering_system.peripheral.medical_device"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="49062001"/>
+                <display value="hulpmiddel"/>
+            </code>
+            <short value="MedicalDevice">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="MedischHulpmiddel"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the MedicalDevice information model. This root concept contains all data elements of the MedicalDevice information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen MedischHulpmiddel. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedischHulpmiddel."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.lumen_or_line.administering_system.peripheral.medical_device"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.10.1.1--20200901000000"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.12--20200901000000">
+            <path value="infusion.lumen_or_line.administering_system.administering_system_comment"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="48767-8"/>
+                <display value="Annotation comment Imp"/>
+            </code>
+            <short value="AdministeringSystemComment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ToedieningsSysteemToelichting"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="A comment on the administering system.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een toelichting op het toedieningssysteem."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="infusion.lumen_or_line.administering_system.administering_system_comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+    </differential>
+</StructureDefinition>

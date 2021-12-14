@@ -1,0 +1,930 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.2.4.3.11.60.121.4.2.12.4--20200901000000"/>
+    <language value="en-US"/>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension><!-- http:/decor.nictiz.nl/fhir/4.0/zib2020bbr-/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.121.4.2.12.4-\-20200901000000 -->
+    <url value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.121.4.2.12.4--20200901000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.121.4.2.12.4"/>
+    </identifier>
+    <version value="2020-09-01T00:00:00"/>
+    <name value="NlzorgBloodPressure">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+            <extension url="lang">
+                <valueCode value="nl-NL"/>
+            </extension>
+            <extension url="content">
+                <valueMarkdown value="nl.zorg.Bloeddruk"/>
+            </extension>
+        </extension>
+    </name>
+    <status value="active"/>
+    <publisher value="Kerngroep Registratie aan de Bron"/>
+    <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;The blood pressure is a parameter for determining the condition of the blood circulation and is expressed in systolic and diastolic pressure in mmHg.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Blood pressure is measured to gain an indication of the health condition of the patient’s cardiovascular system.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Evidence Base**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;The local measurement of the arterial blood pressure, which acts as a surrogate for the arterial pressure in the systematic circulation. In most cases, the term ‘blood pressure' refers to the measurement of blood pressure of the arteria brachialis in the upper arm with the cuff using the Riva-Rocci method. &#xD;&#xA;The protocol for this measurement comprises many details that are not general knowledge (such as the correct way to interpret Korotkoff sounds) or carried out correctly (adjusting the cuff width to a very large or small diameter of the upper arm, the right rate of descent of the mercury column, cut-off values for cardiac arrhythmias).&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Traceability to other Standards**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;This health and care information model is in accordance with the information model template Measurement v1.0.&#xD;&#xA;&#xD;&#xA;">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+            <extension url="lang">
+                <valueCode value="nl-NL"/>
+            </extension>
+            <extension url="content">
+                <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;De bloeddruk is een parameter om de toestand van de bloedsomloop vast te leggen en wordt uitgedrukt in de systolische en diastolische druk in mmHg.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;De bloeddruk wordt gemeten om een indruk te krijgen van de gezondheidstoestand van het cardiovasculairsysteem van de patiënt.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Evidence Base**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;De lokale meting van de arteriële bloeddruk, welke surrogaat is voor de arteriële druk in de systemische circulatie. Meest gebruikelijk is dat de term 'bloeddruk' refereert aan de meting van de bloeddruk van de arteria brachialis in de bovenarm met manchet volgens de methode van Riva-Rocci.&#xD;&#xA;Het protocol voor deze meting bevat veel details die niet algemeen bekend zijn (zoals de juiste toepassing van de Korotkoff tonen) of goed worden uitgevoerd (manchetbreedte aanpassen aan zeer grote of kleine diameter van de bovenarm, juiste daalsnelheid van de kwikkolom, afkapwaarden bij ritmestoornissen). &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**References**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;1. Parelsnoer DCM Bloeddruk v0.9 [Online] Beschikbaar op: http://www.nictiz.nl/uploaded/FILES/htmlcontent/dcm/parelsnoer/Bloeddruk%20v0.9.pdf [Geraadpleegd: 23 februari 2015].&#xD;&#xA;&#xD;&#xA;2. openEHR-EHR-OBSERVATION.blood_pressure.v1 [Online] Beschikbaar op: http://www.openehr.org/knowledge/ [Geraadpleegd: 23 februari 2015].&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Traceability to other Standards**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Deze zorginformatie bouwsteen is in lijn met de bouwsteen blauwdruk Meting v1.0.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0 (15-02-2013)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (01-07-2013)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.2 (01-04-2015)&#xD;&#xA;Bevat: [ZIB-135](https://bits.nictiz.nl/browse/ZIB-135), [ZIB-136](https://bits.nictiz.nl/browse/ZIB-136), [ZIB-137](https://bits.nictiz.nl/browse/ZIB-137), [ZIB-148](https://bits.nictiz.nl/browse/ZIB-148), [ZIB-169](https://bits.nictiz.nl/browse/ZIB-169), [ZIB-218](https://bits.nictiz.nl/browse/ZIB-218), [ZIB-219](https://bits.nictiz.nl/browse/ZIB-219), [ZIB-220](https://bits.nictiz.nl/browse/ZIB-220), [ZIB-308](https://bits.nictiz.nl/browse/ZIB-308), [ZIB-315](https://bits.nictiz.nl/browse/ZIB-315), [ZIB-362](https://bits.nictiz.nl/browse/ZIB-362), [ZIB-363](https://bits.nictiz.nl/browse/ZIB-363).&#xD;&#xA;&#xD;&#xA;Incl. algemene wijzigingsverzoeken: &#xD;&#xA;[ZIB-94](https://bits.nictiz.nl/browse/ZIB-94), [ZIB-154](https://bits.nictiz.nl/browse/ZIB-154), [ZIB-200](https://bits.nictiz.nl/browse/ZIB-200), [ZIB-201](https://bits.nictiz.nl/browse/ZIB-201), [ZIB-309](https://bits.nictiz.nl/browse/ZIB-309), [ZIB-324](https://bits.nictiz.nl/browse/ZIB-324), [ZIB-326](https://bits.nictiz.nl/browse/ZIB-326).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.1 (04-09-2017)&#xD;&#xA;Bevat: [ZIB-431](https://bits.nictiz.nl/browse/ZIB-431), [ZIB-552](https://bits.nictiz.nl/browse/ZIB-552), [ZIB-564](https://bits.nictiz.nl/browse/ZIB-564), [ZIB-571](https://bits.nictiz.nl/browse/ZIB-571).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.2 (31-01-2020)&#xD;&#xA;Bevat: [ZIB-846](https://bits.nictiz.nl/browse/ZIB-846).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.2.1 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-962](https://bits.nictiz.nl/browse/ZIB-962).&#xD;&#xA;&#xD;&#xA;"/>
+            </extension>
+        </extension>
+    </description>
+    <fhirVersion value="4.0.1"/>
+    <kind value="logical"/>
+    <abstract value="true"/>
+    <type value="blood_pressure"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+    <derivation value="specialization"/>
+    <snapshot>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.1--20200901000000">
+            <path value="blood_pressure"/>
+            <short value="BloodPressure">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Bloeddruk"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the BloodPressure information model. This root concept contains all data elements of the BloodPressure information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Bloeddruk. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Bloeddruk."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="blood_pressure"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.7--20200901000000">
+            <path value="blood_pressure.measuring_method"/>
+            <short value="MeasuringMethod">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Meetmethode"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The type of method used to measure blood pressure.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De soort methode die is toegepast voor het meten van de bloeddruk."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.measuring_method"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+                <strength value="extensible"/>
+                <description value="MeetmethodeCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.1--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.9--20200901000000">
+            <path value="blood_pressure.cuff_type"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="70665002"/>
+                <display value="bloeddrukmanchet"/>
+            </code>
+            <short value="CuffType">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ManchetType"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The size of the cuff used in the measurement.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De grootte van de manchet gebruikt bij de meting."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.cuff_type"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+                <strength value="required"/>
+                <description value="ManchetTypeCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.3--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.10--20200901000000">
+            <path value="blood_pressure.measuring_location"/>
+            <short value="MeasuringLocation">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="MeetLocatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Anatomical location where the blood pressure was measured.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Lichaamslocatie waar de bloeddruk is gemeten."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.measuring_location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <text value="Bovenarm"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+                <strength value="extensible"/>
+                <description value="MeetLocatieCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.4--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.8--20200901000000">
+            <path value="blood_pressure.diastolic_endpoint"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="85549003"/>
+                <display value="Korotkofftonen"/>
+            </code>
+            <short value="DiastolicEndpoint">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="DiastolischEindpunt"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Registration of the Korotkoff sound used to measure diastolic pressure with the auscultatory method.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Registratie van de Korotkoff toon die gebruikt is om de diastolische druk te meten met de auscultatieve methode."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.diastolic_endpoint"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+                <strength value="required"/>
+                <description value="DiastolischEindpuntCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.2--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.2--20200901000000">
+            <path value="blood_pressure.systolic_blood_pressure"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="8480-6"/>
+                <display value="Systolic blood pressure"/>
+            </code>
+            <short value="SystolicBloodPressure">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="SystolischeBloeddruk"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The highest (peak) systematic arterial blood pressure - measured in the contraction stage or systole of the cardiac cycle.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De hoogste (piek) systemische arteriële bloeddruk - gemeten in de systolische of samentrekkingsfase van de hartslag."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.systolic_blood_pressure"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Quantity"/>
+            </type>
+            <example>
+                <label value="example 1 of Quantity"/>
+                <valueQuantity>
+                    <value value="155"/>
+                    <unit value="mmHg"/>
+                </valueQuantity>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.3--20200901000000">
+            <path value="blood_pressure.diastolic_blood_pressure"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="8462-4"/>
+                <display value="Diastolic blood pressure"/>
+            </code>
+            <short value="DiastolicBloodPressure">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="DiastolischeBloeddruk"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The lowest systematic arterial blood pressure - measured in the relaxation stage or diastole of the cardiac cycle.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De laagste systemische arteriële bloeddruk - gemeten in de diastolische of ontspanningsfase van de hartslag."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.diastolic_blood_pressure"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Quantity"/>
+            </type>
+            <example>
+                <label value="example 1 of Quantity"/>
+                <valueQuantity>
+                    <value value="70"/>
+                    <unit value="mmHg"/>
+                </valueQuantity>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.4--20200901000000">
+            <path value="blood_pressure.average_blood_pressure"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="6797001"/>
+                <display value="gemiddelde bloeddruk"/>
+            </code>
+            <short value="AverageBloodPressure">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="GemiddeldeBloeddruk"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Average blood pressure during one cycle of the heart contracting and relaxing. &#xD;&#xA;Estimated based on systolic and diastolic blood pressure. This estimate is unreliable in cases of circulatory disorders. This value can only be reliably determined when invasive blood pressure is measured.&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De gemiddelde bloeddruk gedurende één cyclus van samentrekken en ontspannen van het hart.&#xD;&#xA;Deze wordt geschat op basis van de boven- en onderdruk. Die schatting is onbetrouwbaar bij circulatiestoornissen. Alleen bij een invasief gemeten bloeddruk kan deze waarde betrouwbaar vastgesteld worden."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.average_blood_pressure"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Quantity"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.5--20200901000000">
+            <path value="blood_pressure.blood_pressure_date_time"/>
+            <short value="BloodPressureDateTime">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="BloeddrukDatumTijd"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The date and time at which these blood pressure values were measured.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De datum en tijd, dat de bloeddrukwaarden werden verkregen."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.blood_pressure_date_time"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="dateTime"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.6--20200901000000">
+            <path value="blood_pressure.comment"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="48767-8"/>
+                <display value="Annotation comment Imp"/>
+            </code>
+            <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Comments on the measured blood pressure. Here, an explanation could be given, for example, of circumstances that may have influenced the patient’s blood pressure, such as pain, stress, exertion and sleep/wake cycles.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Opmerkingen over de gemeten bloeddruk. Hier kan bijvoorbeeld een toelichting worden gegeven op omstandigheden die de meting hebben beïnvloed, zoals pijn, (in)spanning en slaap/waak toestand."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.11--20200901000000">
+            <path value="blood_pressure.position"/>
+            <short value="Position">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Houding"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The position of the patient when the blood pressure was measured.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De houding van de patiënt bij het meten van de bloeddruk."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.position"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <text value="Zittend"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+                <strength value="extensible"/>
+                <description value="HoudingCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.5--20200901000000"/>
+            </binding>
+        </element>
+    </snapshot>
+    <differential>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.1--20200901000000">
+            <path value="blood_pressure"/>
+            <short value="BloodPressure">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Bloeddruk"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the BloodPressure information model. This root concept contains all data elements of the BloodPressure information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Bloeddruk. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Bloeddruk."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="blood_pressure"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.7--20200901000000">
+            <path value="blood_pressure.measuring_method"/>
+            <short value="MeasuringMethod">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Meetmethode"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The type of method used to measure blood pressure.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De soort methode die is toegepast voor het meten van de bloeddruk."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.measuring_method"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+                <strength value="extensible"/>
+                <description value="MeetmethodeCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.1--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.9--20200901000000">
+            <path value="blood_pressure.cuff_type"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="70665002"/>
+                <display value="bloeddrukmanchet"/>
+            </code>
+            <short value="CuffType">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ManchetType"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The size of the cuff used in the measurement.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De grootte van de manchet gebruikt bij de meting."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.cuff_type"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+                <strength value="required"/>
+                <description value="ManchetTypeCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.3--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.10--20200901000000">
+            <path value="blood_pressure.measuring_location"/>
+            <short value="MeasuringLocation">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="MeetLocatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Anatomical location where the blood pressure was measured.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Lichaamslocatie waar de bloeddruk is gemeten."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.measuring_location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <text value="Bovenarm"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+                <strength value="extensible"/>
+                <description value="MeetLocatieCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.4--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.8--20200901000000">
+            <path value="blood_pressure.diastolic_endpoint"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="85549003"/>
+                <display value="Korotkofftonen"/>
+            </code>
+            <short value="DiastolicEndpoint">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="DiastolischEindpunt"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Registration of the Korotkoff sound used to measure diastolic pressure with the auscultatory method.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Registratie van de Korotkoff toon die gebruikt is om de diastolische druk te meten met de auscultatieve methode."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.diastolic_endpoint"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+                <strength value="required"/>
+                <description value="DiastolischEindpuntCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.2--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.2--20200901000000">
+            <path value="blood_pressure.systolic_blood_pressure"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="8480-6"/>
+                <display value="Systolic blood pressure"/>
+            </code>
+            <short value="SystolicBloodPressure">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="SystolischeBloeddruk"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The highest (peak) systematic arterial blood pressure - measured in the contraction stage or systole of the cardiac cycle.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De hoogste (piek) systemische arteriële bloeddruk - gemeten in de systolische of samentrekkingsfase van de hartslag."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.systolic_blood_pressure"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Quantity"/>
+            </type>
+            <example>
+                <label value="example 1 of Quantity"/>
+                <valueQuantity>
+                    <value value="155"/>
+                    <unit value="mmHg"/>
+                </valueQuantity>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.3--20200901000000">
+            <path value="blood_pressure.diastolic_blood_pressure"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="8462-4"/>
+                <display value="Diastolic blood pressure"/>
+            </code>
+            <short value="DiastolicBloodPressure">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="DiastolischeBloeddruk"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The lowest systematic arterial blood pressure - measured in the relaxation stage or diastole of the cardiac cycle.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De laagste systemische arteriële bloeddruk - gemeten in de diastolische of ontspanningsfase van de hartslag."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.diastolic_blood_pressure"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Quantity"/>
+            </type>
+            <example>
+                <label value="example 1 of Quantity"/>
+                <valueQuantity>
+                    <value value="70"/>
+                    <unit value="mmHg"/>
+                </valueQuantity>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.4--20200901000000">
+            <path value="blood_pressure.average_blood_pressure"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="6797001"/>
+                <display value="gemiddelde bloeddruk"/>
+            </code>
+            <short value="AverageBloodPressure">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="GemiddeldeBloeddruk"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Average blood pressure during one cycle of the heart contracting and relaxing. &#xD;&#xA;Estimated based on systolic and diastolic blood pressure. This estimate is unreliable in cases of circulatory disorders. This value can only be reliably determined when invasive blood pressure is measured.&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De gemiddelde bloeddruk gedurende één cyclus van samentrekken en ontspannen van het hart.&#xD;&#xA;Deze wordt geschat op basis van de boven- en onderdruk. Die schatting is onbetrouwbaar bij circulatiestoornissen. Alleen bij een invasief gemeten bloeddruk kan deze waarde betrouwbaar vastgesteld worden."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.average_blood_pressure"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Quantity"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.5--20200901000000">
+            <path value="blood_pressure.blood_pressure_date_time"/>
+            <short value="BloodPressureDateTime">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="BloeddrukDatumTijd"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The date and time at which these blood pressure values were measured.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De datum en tijd, dat de bloeddrukwaarden werden verkregen."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.blood_pressure_date_time"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="dateTime"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.6--20200901000000">
+            <path value="blood_pressure.comment"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="48767-8"/>
+                <display value="Annotation comment Imp"/>
+            </code>
+            <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Comments on the measured blood pressure. Here, an explanation could be given, for example, of circumstances that may have influenced the patient’s blood pressure, such as pain, stress, exertion and sleep/wake cycles.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Opmerkingen over de gemeten bloeddruk. Hier kan bijvoorbeeld een toelichting worden gegeven op omstandigheden die de meting hebben beïnvloed, zoals pijn, (in)spanning en slaap/waak toestand."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.11--20200901000000">
+            <path value="blood_pressure.position"/>
+            <short value="Position">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Houding"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The position of the patient when the blood pressure was measured.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De houding van de patiënt bij het meten van de bloeddruk."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="blood_pressure.position"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <text value="Zittend"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+                <strength value="extensible"/>
+                <description value="HoudingCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.12.4.5--20200901000000"/>
+            </binding>
+        </element>
+    </differential>
+</StructureDefinition>

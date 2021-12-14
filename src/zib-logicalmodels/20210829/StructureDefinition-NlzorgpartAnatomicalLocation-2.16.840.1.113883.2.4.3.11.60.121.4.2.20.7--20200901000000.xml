@@ -1,0 +1,396 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.2.4.3.11.60.121.4.2.20.7--20200901000000"/>
+    <language value="en-US"/>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension><!-- http:/decor.nictiz.nl/fhir/4.0/zib2020bbr-/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.121.4.2.20.7-\-20200901000000 -->
+    <url value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.121.4.2.20.7--20200901000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.121.4.2.20.7"/>
+    </identifier>
+    <version value="2020-09-01T00:00:00"/>
+    <name value="NlzorgpartAnatomicalLocation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+            <extension url="lang">
+                <valueCode value="nl-NL"/>
+            </extension>
+            <extension url="content">
+                <valueMarkdown value="nl.zorg.part.AnatomischeLocatie"/>
+            </extension>
+        </extension>
+    </name>
+    <status value="active"/>
+    <publisher value="*"/>
+    <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;An anatomical location specifies the location (e.g. foot) and laterality (e.g. links) of a bodypart.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;an anatomic location is used to specify the location of a finding, procedure or measurement.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+            <extension url="lang">
+                <valueCode value="nl-NL"/>
+            </extension>
+            <extension url="content">
+                <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Een anatomische locatie specificeert de locatie (bijv. voet) en lateraliteit (bijv. links) van een lichaamsonderdeel .&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Een anatomische locatie wordt gebruikt om de locatie van een bevinding, verrichting of meting te specificieren.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0 (01-09-2020)&#xD;&#xA;&#xD;&#xA;"/>
+            </extension>
+        </extension>
+    </description>
+    <fhirVersion value="4.0.1"/>
+    <kind value="logical"/>
+    <abstract value="true"/>
+    <type value="anatomical_location"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+    <derivation value="specialization"/>
+    <snapshot>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.7.1--20200901000000">
+            <path value="anatomical_location"/>
+            <short value="AnatomicalLocation">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="AnatomischeLocatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the AnatomicalLocation partial information model.This root concept contains all data elements of the AnatomicalLocation partial information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de subbouwsteen AnatomischeLocatie. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen AnatomischeLocatie."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="anatomical_location"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.7.4--20200901000000">
+            <path value="anatomical_location.location"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="363698007"/>
+                <display value="locatie van bevinding"/>
+            </code>
+            <short value="Location">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Locatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Localisation on/in the body.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Localisatie op/in het lichaam."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="anatomical_location.location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.7.4--20200901000000.coding">
+            <path value="anatomical_location.location.coding"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="system"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <definition value="-"/>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.7.4--20200901000000.coding:LocatieCodelijst">
+            <path value="anatomical_location.location.coding"/>
+            <sliceName value="LocatieCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+                <strength value="required"/>
+                <description value="LocatieCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.1--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.7.4--20200901000000.coding:LocatieICD-O-3Codelijst">
+            <path value="anatomical_location.location.coding"/>
+            <sliceName value="LocatieICD-O-3Codelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+                <strength value="required"/>
+                <description value="LocatieICD-O-3Codelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.3--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.7.3--20200901000000">
+            <path value="anatomical_location.laterality"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="272741003"/>
+                <display value="lateraliteit"/>
+            </code>
+            <short value="Laterality">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Lateraliteit"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="anatomical_location.laterality"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="272741003"/>
+                        <display value="lateraliteit"/>
+                    </coding>
+                    <text value="Links"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+                <strength value="required"/>
+                <description value="LateraliteitCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.2--20200901000000"/>
+            </binding>
+        </element>
+    </snapshot>
+    <differential>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.7.1--20200901000000">
+            <path value="anatomical_location"/>
+            <short value="AnatomicalLocation">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="AnatomischeLocatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the AnatomicalLocation partial information model.This root concept contains all data elements of the AnatomicalLocation partial information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de subbouwsteen AnatomischeLocatie. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen AnatomischeLocatie."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="anatomical_location"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.7.4--20200901000000">
+            <path value="anatomical_location.location"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="363698007"/>
+                <display value="locatie van bevinding"/>
+            </code>
+            <short value="Location">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Locatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Localisation on/in the body.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Localisatie op/in het lichaam."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="anatomical_location.location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.7.4--20200901000000.coding">
+            <path value="anatomical_location.location.coding"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="system"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <definition value="-"/>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.7.4--20200901000000.coding:LocatieCodelijst">
+            <path value="anatomical_location.location.coding"/>
+            <sliceName value="LocatieCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+                <strength value="required"/>
+                <description value="LocatieCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.1--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.7.4--20200901000000.coding:LocatieICD-O-3Codelijst">
+            <path value="anatomical_location.location.coding"/>
+            <sliceName value="LocatieICD-O-3Codelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+                <strength value="required"/>
+                <description value="LocatieICD-O-3Codelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.3--20200901000000"/>
+            </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.7.3--20200901000000">
+            <path value="anatomical_location.laterality"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="272741003"/>
+                <display value="lateraliteit"/>
+            </code>
+            <short value="Laterality">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Lateraliteit"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="anatomical_location.laterality"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="272741003"/>
+                        <display value="lateraliteit"/>
+                    </coding>
+                    <text value="Links"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+                <strength value="required"/>
+                <description value="LateraliteitCodelijst"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.2--20200901000000"/>
+            </binding>
+        </element>
+    </differential>
+</StructureDefinition>
