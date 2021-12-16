@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBe-PainCharacteristics"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PainCharacteristics"/>
+   <name value="HdBePainCharacteristics">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-Pijnkenmerken"/>
+         </extension>
+      </extension>
+   </name>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Pain characteristics describe specific, localized pain. They provide information on a number of  aspects of the pain the patient is experiencing. The aspects follow the ALTIS method (Quality, Localization, Duration, Intensity and Context). In this way, pain is always assessed in the same way.&#xD;&#xA;**Purpose**&#xD;&#xA;Pain Characteristics are instrumental in establishing a diagnosis and in evaluating the effectiveness of pain medication.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Pijnkenmerken geven een beschrijving van specifieke, gelokaliseerde pijn. Ze geven informatie over een aantal aspecten van de pijn die de patiënt ervaart.&#xD;&#xA;De aspecten volgen de ALTIS methode (Aard, Lokalisatie, Tijdsduur, Intensiteit en Samenhang). Op deze manier wordt pijn steeds op dezelfde manier beoordeeld.&#xD;&#xA;**Purpose**&#xD;&#xA;Pijnkenmerken zijn een hulpmiddel bij het vaststellen van een diagnose en bij het beoordelen van de effectiviteit van pijnmedicatie.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**References**&#xD;&#xA;1. openEHR-EHR-OBSERVATION.symptom-pain.v1[Online] Beschikbaar op: http://www.openehr.org/knowledge/ [Geraadpleegd: 23 december 2014].&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (01-09-2020)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/pain_characteristics"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.21.1--20200901000000">
+            <path value="pain_characteristics"/>
+            <short value="PainCharacteristics">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Pijnkenmerken"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the PainCharacteristics information model.This root concept contains all data elements of the PainCharacteristics information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Pijnkenmerken. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Pijnkenmerken."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="pain_characteristics"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.21.2--20200901000000">
+            <path value="pain_characteristics.pain_type"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="364632003"/>
+                <display value="aard van pijn"/>
+            </code>
+            <short value="PainType">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="PijnAard"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value=" Description of the characteristics of the pain as experienced by the patient.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Omschrijving van de aard van de pijn zoals de patient die ervaart."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="pain_characteristics.pain_type"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+            <strength value="extensible"/>
+            <description value="PainType codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/PijnAard"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.21.3--20200901000000">
+            <path value="pain_characteristics.pain_location"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="363698007"/>
+                <display value="locatie van bevinding"/>
+            </code>
+            <short value="PainLocation">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="PijnLocatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Anatomic location and laterality of the pain.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Anatomische locatie en zijdigheid van de pijn."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="pain_characteristics.pain_location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.322--20200901000000">
+            <path value="pain_characteristics.pain_location.location"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="363698007"/>
+                <display value="locatie van bevinding"/>
+            </code>
+            <short value="Location">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Locatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Localisation on/in the body.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Localisatie op/in het lichaam."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="pain_characteristics.pain_location.location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.322--20200901000000.coding">
+            <path value="pain_characteristics.pain_location.location.coding"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="system"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <definition value="-"/>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.322--20200901000000.coding:LocatieCodelijst">
+            <path value="pain_characteristics.pain_location.location.coding"/>
+            <sliceName value="LocatieCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Locatie"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.322--20200901000000.coding:LocatieICD-O-3Codelijst">
+            <path value="pain_characteristics.pain_location.location.coding"/>
+            <sliceName value="LocatieICD-O-3Codelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/LocatieICD-O-3"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.323--20200901000000">
+            <path value="pain_characteristics.pain_location.laterality"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="272741003"/>
+                <display value="lateraliteit"/>
+            </code>
+            <short value="Laterality">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Lateraliteit"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="pain_characteristics.pain_location.laterality"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <text value="Links"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+            <strength value="required"/>
+            <description value="Laterality codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.21.4--20200901000000">
+            <path value="pain_characteristics.pain_episode_duration"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="162442009"/>
+                <display value="duur van klacht"/>
+            </code>
+            <short value="PainEpisodeDuration">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="PijnAanvalDuur"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The duration of a pain episode with non-continues pain. The duration is measured in units of time (days, hours, ...)">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De duur van een pijnaanval bij niet continue pijn. De duur wordt aangegeven als in tijdseenheden (dagen, uren, ...)"/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="pain_characteristics.pain_episode_duration"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Quantity"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.21.12--20200901000000">
+            <path value="pain_characteristics.time_of_onset"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="405795006"/>
+                <display value="tijd van eerste optreden van symptoom"/>
+            </code>
+            <short value="TimeOfOnset">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="BeginTijdPijn"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Date and time of the onset of the pain.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Datum en eventueel tijdstip waarop de pijn is begonnen."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="pain_characteristics.time_of_onset"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="dateTime"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.21.5--20200901000000">
+            <path value="pain_characteristics.pain_intensity"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="406127006"/>
+                <display value="intensiteit van pijn"/>
+            </code>
+            <short value="PainIntensity">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="PijnIntensiteit"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The intensity or severity of the pain experienced by the patient, measured using the NRS or VAS score.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De door de patiënt ervaren intensiteit of ernst van de pijn, gemeten met behulp van de NRS of VAS score."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="pain_characteristics.pain_intensity"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.324--20200901000000">
+            <path value="pain_characteristics.pain_intensity.pain_score"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="425401001"/>
+                <display value="beoordelingsschaal voor intensiteit van pijn"/>
+            </code>
+            <short value="PainScore">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="PijnScore"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the PainScore information model. This root concept contains all data elements of the PainScore information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Pijnscore. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Pijnscore."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="pain_characteristics.pain_intensity.pain_score"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PainScore"/>
+         </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.21.6--20200901000000">
+            <path value="pain_characteristics.pain_pattern"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="364631005"/>
+                <display value="patroon van pijn"/>
+            </code>
+            <short value="PainPattern">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="PijnPatroon"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Description of any repeating patterns in the course of the pain that occur over time">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Beschrijving van eventueel aanwezige, zich in de tijd herhalende patronen van het verloop van de pijn"/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="pain_characteristics.pain_pattern"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+            <strength value="required"/>
+            <description value="PainPattern codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/PijnPatroon"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.21.7--20200901000000">
+            <path value="pain_characteristics.pain_course"/>
+            <short value="PainCourse">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Pijnbeloop"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The course of the pain over time since the onset.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Verloop van de pijn in de tijd sinds het begin van de pijn."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="pain_characteristics.pain_course"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+            <strength value="required"/>
+            <description value="PainCourse codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Pijnbeloop"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.21.8--20200901000000">
+            <path value="pain_characteristics.alleviating_factors"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="162483007"/>
+                <display value="klachtverlichtende factoren"/>
+            </code>
+            <short value="AlleviatingFactors">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VerzachtendeFactoren"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Description of the factors that relieve the pain, such as rest.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Beschrijving van de factoren die de pijn verzachten, zoals bijvoorbeeld rust."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="pain_characteristics.alleviating_factors"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.21.11--20200901000000">
+            <path value="pain_characteristics.aggravating_factors"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="162473008"/>
+                <display value="klachtverergerende factoren"/>
+            </code>
+            <short value="AggravatingFactors">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VerergerendeFactoren"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Description of the factors that aggravate the pain, such as exercise.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Beschrijving van de factoren die de pijn verergeren, zoals bijvoorbeeld bewegen."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="pain_characteristics.aggravating_factors"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.21.9--20200901000000">
+            <path value="pain_characteristics.pain_characteristics_date_time"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="439771001"/>
+                <display value="datum van gebeurtenis"/>
+            </code>
+            <short value="PainCharacteristicsDateTime">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="PijnkenmerkenDatumTijd"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The date and time at which the pain characteristics have been identified.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De datum en het tijdstip waarop de pijnkenmerken vastgesteld zijn."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="pain_characteristics.pain_characteristics_date_time"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="dateTime"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.21.10--20200901000000">
+            <path value="pain_characteristics.comment"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="48767-8"/>
+                <display value="Annotation comment Imp"/>
+            </code>
+            <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Comments on the described pain characteristics.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting op de beschreven pijnkenmerken."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="pain_characteristics.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+    </differential>
+</StructureDefinition>

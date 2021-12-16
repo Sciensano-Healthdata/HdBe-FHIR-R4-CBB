@@ -1,0 +1,1625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBe-HealthProfessional"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
+   <name value="HdBeHealthProfessional">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-Zorgverlener"/>
+         </extension>
+      </extension>
+   </name>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;A health professional is a person who is authorized to perform actions in the field of individual healthcare.&#xD;&#xA;**Purpose**&#xD;&#xA;The purpose of this information model is documenting the identity of people providing healthcare. For health professionals, information must be sufficiently complete for reference and auditing: if known, the name is mandatory. If an identification number is given such as a UZI or AGB number, the name and number have to match.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Other employees working in healthcare can also be mapped onto this HCIM. If needed the HealthCareProviderRole can be used to specify the type of healtcareworker by using the nullflavor OTH in free text.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;The concept HealthProfessionalRole can be expressed in two ways, as an element in the information model and as the definition code of a reference in another referring information model (Performer::HealthProfessional). In both cases, the code is taken from the same code list. If both possibilities are used, they should not be in conflict.&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Een zorgverlener is een persoon die bevoegd is om handelingen uit te voeren op het gebied van de individuele gezondheidszorg.&#xD;&#xA;**Purpose**&#xD;&#xA;Het doel van deze bouwsteen is het documenteren van de identiteit van zorgverlenende personen. Voor zorgverleners dient de informatie voldoende te zijn voor referentie en auditing: de naam is, indien deze bekend is, verplicht. Indien een identificatienummer als UZI of AGB nummer wordt meegegeven, moeten naam en nummer overeenkomen.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Ook niet BIG geregistreerde medewerkers werkzaam in de zorg zoals bijvoorbeeld kraamverzorgenden en praktijkondersteuners kunnen via de zib Zorgverlener worden overgedragen. Het zorgverlenerIdentificatienummer kan leeg blijven en (indien gewenst) kan de zorgverlener rol gebruikt worden om in vrije tekst via de nullflavor OTH een omschrijving van het type zorg medewerker worden meegegeven (bijvoorbeeld kraamzorgmedewerker).&#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;Het concept ZorgverlenerRol kan op twee manieren worden tot uiting worden gebracht, als element in de bouwsteen en als definitiecode bij een verwijzing in een andere bouwsteen (Uitvoerder::Zorgverlener). In beide gevallen wordt voor de code uit dezelfde codelijst geput. Als beide mogelijkheden benut worden, mogen zij niet met elkaar in strijd zijn.&#xD;&#xA;&#xD;&#xA;**References**&#xD;&#xA;1. Implementatiehandleiding HL7v3 Basiscomponenten, Stichting HL7 Nederland [Online] Beschikbaar op: [http://www.hl7.nl/images/downloads/Implementatiehandleiding%20HL7v3%20Basiscomponenten%20%202.3NL_secure.pdf](http://www.hl7.nl/images/downloads/Implementatiehandleiding%20HL7v3%20Basiscomponenten%20%202.3NL_secure.pdf) [Geraadpleegd: 23 februari 2015].&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (15-02-2013)&#xD;&#xA;-&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (01-07-2013)&#xD;&#xA;Bevat: [ZIB-42](https://bits.nictiz.nl/browse/ZIB-42), [ZIB-34](https://bits.nictiz.nl/browse/ZIB-34).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.2 (01-04-2015)&#xD;&#xA;Bevat: [ZIB-70](https://bits.nictiz.nl/browse/ZIB-70), [ZIB-104](https://bits.nictiz.nl/browse/ZIB-104), [ZIB-105](https://bits.nictiz.nl/browse/ZIB-105), [ZIB-287](https://bits.nictiz.nl/browse/ZIB-287), [ZIB-288](https://bits.nictiz.nl/browse/ZIB-288), [ZIB-289](https://bits.nictiz.nl/browse/ZIB-289), [ZIB-290](https://bits.nictiz.nl/browse/ZIB-290), [ZIB-291](https://bits.nictiz.nl/browse/ZIB-291), [ZIB-308](https://bits.nictiz.nl/browse/ZIB-308), [ZIB-343](https://bits.nictiz.nl/browse/ZIB-343), [ZIB-344](https://bits.nictiz.nl/browse/ZIB-344), [ZIB-353](https://bits.nictiz.nl/browse/ZIB-353).&#xD;&#xA;&#xD;&#xA;Incl. algemene wijzigingsverzoeken: &#xD;&#xA;[ZIB-94](https://bits.nictiz.nl/browse/ZIB-94), [ZIB-154](https://bits.nictiz.nl/browse/ZIB-154), [ZIB-200](https://bits.nictiz.nl/browse/ZIB-200), [ZIB-201](https://bits.nictiz.nl/browse/ZIB-201), [ZIB-309](https://bits.nictiz.nl/browse/ZIB-309), [ZIB-324](https://bits.nictiz.nl/browse/ZIB-324), [ZIB-326](https://bits.nictiz.nl/browse/ZIB-326).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.2.1 (16-07-2015)&#xD;&#xA;Bevat: [ZIB-413](https://bits.nictiz.nl/browse/ZIB-413), [ZIB-421](https://bits.nictiz.nl/browse/ZIB-421).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.1 (04-09-2017)&#xD;&#xA;Bevat: [ZIB-429](https://bits.nictiz.nl/browse/ZIB-429), [ZIB-448](https://bits.nictiz.nl/browse/ZIB-448), [ZIB-456](https://bits.nictiz.nl/browse/ZIB-456), [ZIB-491](https://bits.nictiz.nl/browse/ZIB-491), [ZIB-492](https://bits.nictiz.nl/browse/ZIB-492), [ZIB-501](https://bits.nictiz.nl/browse/ZIB-501), [ZIB-502](https://bits.nictiz.nl/browse/ZIB-502), [ZIB-513](https://bits.nictiz.nl/browse/ZIB-513), [ZIB-549](https://bits.nictiz.nl/browse/ZIB-549), [ZIB-564](https://bits.nictiz.nl/browse/ZIB-564)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.2 (31-12-2017)&#xD;&#xA;Bevat: [ZIB-619](https://bits.nictiz.nl/browse/ZIB-619), [ZIB-620](https://bits.nictiz.nl/browse/ZIB-620).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.3 (06-07-2019)&#xD;&#xA;Bevat: [ZIB-759](https://bits.nictiz.nl/browse/ZIB-759), [ZIB-704](https://bits.nictiz.nl/browse/ZIB-704)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.4 (31-01-2020)&#xD;&#xA;Bevat: [ZIB-960](https://bits.nictiz.nl/browse/ZIB-960).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.5 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-899](https://bits.nictiz.nl/browse/ZIB-899), [ZIB-952](https://bits.nictiz.nl/browse/ZIB-952), [ZIB-1142](https://bits.nictiz.nl/browse/ZIB-1142), [ZIB-1189](https://bits.nictiz.nl/browse/ZIB-1189).&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/health_professional"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.1.1--20200901000000">
+            <path value="health_professional"/>
+            <short value="HealthProfessional">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Zorgverlener"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the HealthProfessional information model. This root concept contains all data elements of the HealthProfessional information model.&#xD;&#xA;When referring to this information model the role the health professional fulfils in the healthcare process can be addressed additionally. For health professionals, this could be for example main practitioner or referrer.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Zorgverlener. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgverlener. &#xD;&#xA;Bij verwijzing naar deze bouwsteen kan tevens de rol die de zorgverlener in het zorgproces vervult, worden meegegeven. Voor zorgverleners kan dit bijvoorbeeld hoofdbehandelaar of verwijzer zijn"/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="health_professional"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.1.2--20200901000000">
+            <path value="health_professional.health_professional_identification_number"/>
+            <short value="HealthProfessionalIdentificationNumber">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ZorgverlenerIdentificatienummer"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The healthcare provider identification number is a number that uniquely identifies the healthcare provider. &#xD;&#xA;&#xD;&#xA;The following numbers are used in the Netherlands: &#xD;&#xA;1. UZI Health Professionals. Identification of health professionals (people) in the Dutch healthcare industry. &#xD;&#xA;2. VEKTIS AGB-Z. Identifies health professionals and healthcare organizations &#xD;&#xA;3. BIG-ID. The ID of the health professional listed in the BIG Register. &#xD;&#xA;&#xD;&#xA;This information is not readily available for foreign health professionals.&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het zorgverleneridentificatienummer is een nummer dat de zorgverlener uniek identificeert. &#xD;&#xA;&#xD;&#xA;In de Nederlandse situatie worden de volgende nummers gebruikt: &#xD;&#xA;1. Zorgverlener UZI. Identificatie van zorgverleners (natuurlijke personen) in de Nederlandse zorgsector.&#xD;&#xA;2. VEKTIS AGB-Z. Dient ter identificatie van zorgverleners en zorgverlenende organisaties&#xD;&#xA;3. BIG-ID. Het ID van de in het BIG Register opgenomen zorgverlener. &#xD;&#xA;&#xD;&#xA;Voor medisch personeel of verzorgenden die niet in het BIG register zijn opgenomen mogen bij implementaties eventueel andere nummers worden gebruikt. Voor buitenlandse zorgverleners zijn deze gegevens niet voorhanden."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="health_professional.health_professional_identification_number"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="Identifier"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueIdentifier>
+                    <value value="21870932"/>
+                </valueIdentifier>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.1.3--20200901000000">
+            <path value="health_professional.name_information"/>
+            <short value="NameInformation">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Naamgegevens"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Health professional’s full name. If a health professional identification number is entered, it will be the name as listed in UZI, AGB or by the healthcare center.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De naamgegevens van de zorgverlener. Indien een zorgverleneridentificatienummer wordt opgegeven, is dit de naam zoals vermeld in UZI, AGB of in de instelling."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.name_information"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.496--20200901000000">
+            <path value="health_professional.name_information.first_names"/>
+            <short value="FirstNames">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Voornamen"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The person’s official first names.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Officiële voornamen van de persoon."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.name_information.first_names"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueString value="Johanna Petronella Maria"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.497--20200901000000">
+            <path value="health_professional.name_information.initials"/>
+            <short value="Initials">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Initialen"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The person’s initials.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Initialen van de persoon."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.name_information.initials"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueString value="J.P.M."/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.498--20200901000000">
+            <path value="health_professional.name_information.given_name"/>
+            <short value="GivenName">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Roepnaam"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The name normally used to address the person.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De naam waarmee de persoon gebruikelijk aangesproken wordt."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.name_information.given_name"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueString value="Jo"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.499--20200901000000">
+            <path value="health_professional.name_information.name_usage"/>
+            <short value="NameUsage">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Naamgebruik"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="This concept indicates the last name or order of last names with which the person is to be addressed.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Dit concept geeft de achternaam of volgorde van achternamen aan waarmee de persoon aangesproken of aangeschreven wil worden."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.name_information.name_usage"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.101.5.4"/>
+                        <code value="NL3"/>
+                        <display value="Geslachtsnaam partner gevolgd door eigen geslachtsnaam"/>
+                    </coding>
+                    <text value="Geslachtsnaam partner gevolgd door eigen geslachtsnaam"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+            <strength value="required"/>
+            <description value="NameUsage codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Naamgebruik"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.500--20200901000000">
+            <path value="health_professional.name_information.last_name"/>
+            <short value="LastName">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Geslachtsnaam"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Container of the LastName concept. This container contains all data elements of the LastName concept.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Container van het concept Geslachtsnaam. Deze container bevat alle gegevenselementen van het concept Geslachtsnaam"/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.name_information.last_name"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.501--20200901000000">
+            <path value="health_professional.name_information.last_name.prefix"/>
+            <short value="Prefix">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Voorvoegsels"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Prefix to the person’s own last name.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Bij de eigen achternaam behorende voorvoegsels."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.name_information.last_name.prefix"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueString value="van"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.502--20200901000000">
+            <path value="health_professional.name_information.last_name.last_name"/>
+            <short value="LastName">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Achternaam"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The person’s official last name">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Officiële achternaam van de persoon."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.name_information.last_name.last_name"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueString value="Putten"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.503--20200901000000">
+            <path value="health_professional.name_information.last_name_partner"/>
+            <short value="LastNamePartner">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="GeslachtsnaamPartner"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Container of the LastNamePartner concept. This container contains all data elements of the LastNamePartner concept.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Container van het concept GeslachtsnaamPartner. Deze container bevat alle gegevenselementen van het concept GeslachtsnaamPartner."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.name_information.last_name_partner"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.504--20200901000000">
+            <path value="health_professional.name_information.last_name_partner.partner_prefix"/>
+            <short value="PartnerPrefix">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VoorvoegselsPartner"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Prefix to the partner’s last name.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Bij de achternaam van de partner behorende voorvoegsels"/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.name_information.last_name_partner.partner_prefix"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueString value="van der"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.505--20200901000000">
+            <path value="health_professional.name_information.last_name_partner.partner_last_name"/>
+            <short value="PartnerLastName">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="AchternaamPartner"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Partner’s official last name.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Officiële achternaam van de partner."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.name_information.last_name_partner.partner_last_name"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueString value="Giessen"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.506--20200901000000">
+            <path value="health_professional.name_information.titles"/>
+            <short value="Titles">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Titels"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Noble and scientific titles. These can assist in formulating oral and formal addresing titles.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Adellijke en wetenschappelijke titels. Deze kunnen behulpzaam zijn bij het formuleren van aanspreek- en aanschrijftitels."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.name_information.titles"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.1.4--20200901000000">
+            <path value="health_professional.specialty"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="394658006"/>
+                <display value="klinisch specialisme"/>
+            </code>
+            <short value="Specialty">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Specialisme"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Health professional’s medical specialty. This refers to the recognized medical specialties as stated in the BIG Act. For example general practitioner or cardiologist.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Medisch specialisme van de zorgverlener. Het betreft hierbij de erkende medische specialismen zoals vermeld in de wet BIG. Bijvoorbeeld huisarts of cardioloog. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.specialty"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="394658006"/>
+                        <display value="klinisch specialisme"/>
+                    </coding>
+                    <text value="Cardioloog"/>
+                </valueCodeableConcept>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.1.4--20200901000000.coding">
+            <path value="health_professional.specialty.coding"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="system"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <definition value="-"/>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.1.4--20200901000000.coding:SpecialismeUZICodelijst">
+            <path value="health_professional.specialty.coding"/>
+            <sliceName value="SpecialismeUZICodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/SpecialismeUZI"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.1.4--20200901000000.coding:SpecialismeAGBCodelijst">
+            <path value="health_professional.specialty.coding"/>
+            <sliceName value="SpecialismeAGBCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/SpecialismeAGB"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.1.9--20200901000000">
+            <path value="health_professional.gender"/>
+            <short value="Gender">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Geslacht"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Patient’s administrative gender.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Administratief geslacht van de zorgverlener"/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.gender"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+            <strength value="required"/>
+            <description value="Gender codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Geslacht"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.1.7--20200901000000">
+            <path value="health_professional.address_information"/>
+            <short value="AddressInformation">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Adresgegevens"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Health professional’s address information.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Adresgegevens van de zorgverlener."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="health_professional.address_information"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.507--20200901000000">
+            <path value="health_professional.address_information.street"/>
+            <short value="Street">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Straat"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Street name of the address.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Straatnaam van het adres."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.address_information.street"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueString value="1e Jacob van Campenstr"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.508--20200901000000">
+            <path value="health_professional.address_information.house_number"/>
+            <short value="HouseNumber">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Huisnummer"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="House number of the address. ">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Huisnummer van het adres."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.address_information.house_number"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueString value="15"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.509--20200901000000">
+            <path value="health_professional.address_information.house_number_letter"/>
+            <short value="HouseNumberLetter">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Huisnummerletter"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="A letter following the house number as assigned by the municipal authorities.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een alfabetisch teken achter het huisnummer zoals dit door het gemeentebestuur is toegekend."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.address_information.house_number_letter"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueString value="E"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.510--20200901000000">
+            <path value="health_professional.address_information.house_number_addition"/>
+            <short value="HouseNumberAddition">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Huisnummertoevoeging"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The letters or signs needed to locate the mailbox, in addition to the house number and letter.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Die letters of tekens die noodzakelijk zijn om, naast het huisnummer en de letter, de brievenbus te vinden."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.address_information.house_number_addition"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueString value="Rood"/>
+            </example>
+            <example>
+                <label value="example 2"/>
+                <valueString value="Twee hoog achter"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.511--20200901000000">
+            <path value="health_professional.address_information.house_number_indication"/>
+            <short value="HouseNumberIndication">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="AanduidingBijNummer"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The indication used for addresses which do not consist of the usual street name and house number.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De aanduiding die wordt gebruikt voor adressen die niet zijn voorzien van de gebruikelijke straatnaam en huisnummeraanduidingen."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.address_information.house_number_indication"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+            <strength value="required"/>
+            <description value="HouseNumberIndication codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/AanduidingBijNummer"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.512--20200901000000">
+            <path value="health_professional.address_information.postcode"/>
+            <short value="Postcode">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Postcode"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Postcode of the address. &#xD;&#xA;In Dutch addresses, preferably use the postcode from the Postcode table (OID: 2.16.840.1.113883.2.4.4.15).&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Postcode van het adres.&#xD;&#xA;Bij Nederlandse adressen bij voorkeur de postcode uit de Postcodetabel (OID: 2.16.840.1.113883.2.4.4.15) gebruiken."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.address_information.postcode"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueString value="1012 NX"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.513--20200901000000">
+            <path value="health_professional.address_information.place_of_residence"/>
+            <short value="PlaceOfResidence">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Woonplaats"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="A geographically determined area which forms part of the municipal area. &#xD;&#xA;For Dutch places of residence, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14).&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een geografisch bepaald gebied dat een deel is van het gemeentelijke grondgebied.&#xD;&#xA;Bij Nederlandse woonplaatsen bij voorkeur de naam uit de GBA tabel 33 (OID: 2.16.840.1.113883.2.4.6.14) gebruiken."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.address_information.place_of_residence"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueString value="Hoogmade"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.514--20200901000000">
+            <path value="health_professional.address_information.municipality"/>
+            <short value="Municipality">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Gemeente"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Municipality of residence. &#xD;&#xA;For Dutch municipalities, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14).&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Gemeente van inschrijving. &#xD;&#xA;Bij Nederlandse gemeenten bij voorkeur de naam uit de GBA tabel 33 (OID: 2.16.840.1.113883.2.4.6.14) gebruiken."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.address_information.municipality"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueString value="Kaag en Braassem"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.515--20200901000000">
+            <path value="health_professional.address_information.country"/>
+            <short value="Country">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Land"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Country in which the address is located.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Land waar het adres zich bevindt."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.address_information.country"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.16.34"/>
+                        <code value="6030"/>
+                        <display value="Nederland"/>
+                    </coding>
+                    <coding>
+                        <system value="urn:iso:std:iso:3166"/>
+                        <code value="NL"/>
+                        <display value="Nederland"/>
+                    </coding>
+                    <text value="Nederland"/>
+                </valueCodeableConcept>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.515--20200901000000.coding">
+            <path value="health_professional.address_information.country.coding"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="system"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <definition value="-"/>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.515--20200901000000.coding:LandGBACodelijst">
+            <path value="health_professional.address_information.country.coding"/>
+            <sliceName value="LandGBACodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/LandGBA"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.515--20200901000000.coding:LandISOCodelijst">
+            <path value="health_professional.address_information.country.coding"/>
+            <sliceName value="LandISOCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/LandISO"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.516--20200901000000">
+            <path value="health_professional.address_information.additional_information"/>
+            <short value="AdditionalInformation">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="AdditioneleInformatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Extra information such as the building name, building number, entrance, route number.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Extra informatie zoals naam van het gebouw, gebouwnummer, ingang, routenummer. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.address_information.additional_information"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueString value="Huis Zon en Licht"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.517--20200901000000">
+            <path value="health_professional.address_information.address_type"/>
+            <short value="AddressType">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="AdresSoort"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The type of address in question, such as a home address or mailing address.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het soort adres waarvan sprake is, bijv. woonadres, postadres."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.address_information.address_type"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <text value="Officieel adres"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+            <strength value="extensible"/>
+            <description value="AddressType codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/AdresSoort"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.1.8--20200901000000">
+            <path value="health_professional.contact_information"/>
+            <short value="ContactInformation">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Contactgegevens"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Health professional’s telephone number(s) or e-mail address(es).">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Telefoonnummer(s) of e-mailadres(sen) van de zorgverlener."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.contact_information"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.518--20200901000000">
+            <path value="health_professional.contact_information.telephone_numbers"/>
+            <short value="TelephoneNumbers">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Telefoonnummers"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Container of the TelephoneNumbers concept. This container contains all data elements of the TelephoneNumbers concept.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Container van het concept Telefoonnummers. Deze container bevat alle gegevenselementen van het concept Telefoonnummers."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="health_professional.contact_information.telephone_numbers"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.519--20200901000000">
+            <path value="health_professional.contact_information.telephone_numbers.telephone_number"/>
+            <short value="TelephoneNumber">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Telefoonnummer"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The person's telephone number.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een telefoonnummer van de persoon."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.contact_information.telephone_numbers.telephone_number"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueString value="+31612341234"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.520--20200901000000">
+            <path value="health_professional.contact_information.telephone_numbers.telecom_type"/>
+            <short value="TelecomType">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="TelecomType"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The telecom or device type that the telephone number is connected to.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het type netwerk of apparaat waar het telefoonummer aan verbonden is"/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.contact_information.telephone_numbers.telecom_type"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+            <strength value="extensible"/>
+            <description value="TelecomType codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/TelecomType"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.521--20200901000000">
+            <path value="health_professional.contact_information.telephone_numbers.number_type"/>
+            <short value="NumberType">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="NummerSoort"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="NumberType indicates whether the number is a landline, temporary, work telephone number.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Met NummerSoort kan aangegeven worden of het om een vast, tijdelijk, werk nummer gaat."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.contact_information.telephone_numbers.number_type"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <text value="Mobiel telefoonnummer"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+            <strength value="extensible"/>
+            <description value="NumberType codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/NummerSoort"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.522--20200901000000">
+            <path value="health_professional.contact_information.telephone_numbers.comment"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="48767-8"/>
+                <display value="Annotation comment Imp"/>
+            </code>
+            <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Explanation about the telephone number and how to use it. It can be indicated, for example, that it is a department number (for healthcare professionnels) or that availability by phone is only possible during a specified part of the day.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting over het telefoonnummer en over het gebruik ervan. Aangegeven kan bijvoorbeeld worden dat het een afdelingsnummer is (bij zorgverleners) of dat de bereikbaarheid slecht gedurende een aangegeven deel van de dag mogelijk is."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.contact_information.telephone_numbers.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.523--20200901000000">
+            <path value="health_professional.contact_information.email_addresses"/>
+            <short value="EmailAddresses">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="EmailAdressen"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Container of the E-mailAddresses concept. This container contains all data elements of the E-mailAddresses concept.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Container van het concept EmailAdressen. Deze container bevat alle gegevenselementen van het concept Emailadressen."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="health_professional.contact_information.email_addresses"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.524--20200901000000">
+            <path value="health_professional.contact_information.email_addresses.email_address"/>
+            <short value="EmailAddress">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="EmailAdres"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The person's e-mail address">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een e-mailadres van de persoon"/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.contact_information.email_addresses.email_address"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.525--20200901000000">
+            <path value="health_professional.contact_information.email_addresses.email_address_type"/>
+            <short value="EmailAddressType">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="EmailSoort"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="E-mailAddressType indicates whether it is a private or business e-mail address.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Met EmailSoort kan aangegeven worden of het om een prive of zakelijk e-mail adres gaat."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.contact_information.email_addresses.email_address_type"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <text value="Zakelijk e-mailadres"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+            <strength value="extensible"/>
+            <description value="EmailAddressType codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/EmailSoort"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.1.6--20200901000000">
+            <path value="health_professional.healthcare_provider"/>
+            <short value="HealthcareProvider">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Zorgaanbieder"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The organization the health professional works for.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De organisatie waarbij de zorgverlener werkzaam is."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.healthcare_provider"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
+         </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.1.5--20200901000000">
+            <path value="health_professional.health_professional_role"/>
+            <short value="HealthProfessionalRole">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ZorgverlenerRol"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The role the health professional fulfils in the healthcare process. For health professionals, this could be for example attender, referrer or performer.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De rol die de zorgverlener in het zorgproces vervult. Voor zorgverleners kan dit bijvoorbeeld behandelaar, verwijzer of uitvoerder zijn."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="health_professional.health_professional_role"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <text value="Hoofdbehandelaar"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+            <strength value="extensible"/>
+            <description value="HealthProfessionalRole codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ZorgverlenerRol"/>
+         </binding>
+        </element>
+    </differential>
+</StructureDefinition>
