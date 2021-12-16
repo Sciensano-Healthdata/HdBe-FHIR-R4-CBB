@@ -298,7 +298,7 @@
         </extension>
     </xsl:template>
     
-    
+   
     <xd:doc>
         <xd:desc>Template improves .binding.description by using the English name in stead of Dutch based on a hack of using the .short value. Template also converts the valueSet URL to newly assigned URL based on the Dutch ValueSet name.</xd:desc>
     </xd:doc>
@@ -343,8 +343,5 @@
             <xsl:apply-templates select="f:versioning"/>
         </xsl:copy>
     </xsl:template>
-    
-    
-    
     
 </xsl:stylesheet>

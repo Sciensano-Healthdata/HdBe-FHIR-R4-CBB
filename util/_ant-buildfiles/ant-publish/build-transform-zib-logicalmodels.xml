@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Apache ANT is based on Java and may be found here: https://ant.apache.org/
+    run on command line or from a batch file: 
+        ant [-f build.xml] [target]
+        
+    If you just run ant, it expects a build.xml in the working dir and runs the default target.
+-->
+<project basedir="../../" default="convert_zib_2_hdbe-logicalmodels" name="zib_2_hdbe-logicalmodels" xmlns:if="ant:if" xmlns:unless="ant:unless">
+<!--    <ant antfile="../_ant-buildfiles/ant-include/ant.ivy.xml" inheritall="true" usenativebasedir="true"/>-->
+    <property name="xsl.saxon" value="${saxon.path}"/>
+    <property name="xsl.saxon.class" value="net.sf.saxon.TransformerFactoryImpl"/>
+    
+    <property name="echo.label.in" value="zib-LogicalModels"/>
+    <property name="echo.label.out" value="HdBe-LogicalModels"/>
+    <property name="echo.label" value="${echo.label.in} to ${echo.label.out}"/>
+    
+    <property name="project.title" value="${echo.label} for zibs2020"/>
+    <property name="project.version" value="0.0.1"/>
+    <property name="project.prefix" value="HdBe"/>
+    <property name="project.description" value="Contains all relevant materials to convert valid ${echo.label.in} instances for zibs2020 building blocks."/>
+    <property name="project.author" value="Healthdata.be"/>
+    <property name="project.website" value="http://www.healthdata.be/"/>
+    <property name="project.status" value="beta"/>
+    <property name="project.license" value="GNU-LGPL"/>
+    <property name="project.copyright" value="true"/>
+    
+    
+    <property name="build.dir" value="."/>
+    <property name="src.dir" value=""/>
+    <property name="dummy.output.dir" value="dummy"/>
+
+    <target name="convert_zib_2_hdbe-logicalmodels">
+        <antcall target="convert_zib_2_hdbe-logicalmodels_sub">
+            <param name="build.dir" value="../${build.dir}"/>
+            <param name="xsl.in" value="src/zib-logicalmodels/${src.dir}"/>
+            <param name="xsl.out" value="src/hdbe-logicalmodels/${src.dir}"/>
+        </antcall>
+        
+    </target>
+    
+    <target name="convert_zib_2_hdbe-logicalmodels_sub">
+        
+        <property name="xsl" value="${build.dir}/util/zib-logicalmodels_2_hdbe-logicalmodels.xsl"/>
+        <property name="xsl.input" value="${build.dir}/${xsl.in}"/>
+        <property name="xsl.output" value="${build.dir}/${xsl.out}"/>
+        
+        <echo>Deleting previous results, if any</echo>
+        <delete failonerror="false">
+            <fileset dir="${xsl.output}" includes="*.*"/>
+        </delete>
+        
+        <sequential>
+            <fileset id="inputfiles" dir="${xsl.input}" includes="*.xml"/>
+            
+            <echo/>
+            <echo>${echo.label} ${xsl}</echo>
+            <xslt force="true" style="${xsl}" destdir="${xsl.output}" extension=".xml" useImplicitFileset="false">
+                <fileset refid="inputfiles"/>
+                <factory name="${xsl.saxon.class}"/>
+                <classpath location="${xsl.saxon}"/>
+            </xslt>
+        </sequential>
+    </target>
+    
+</project>
