@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBeTextResult"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeTextResult"/>
+   <name value="HdBeTextResult">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-TekstUitslag"/>
+         </extension>
+      </extension>
+   </name>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Textual results describe the findings and interpretation of diagnostic or therapeutic procedures carried out on patients or on specimens from the patient.&#xD;&#xA;**Purpose**&#xD;&#xA;Recording the results of diagnostic procedures for the purpose of communicating these with the person requesting the procedure and documenting the findings resulting from therapeutic procedures.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Most results of procedures and some laboratory test results are descriptive by nature. This includes reports from radiology, pathology, scopies, ultrasounds, etc. and laboratory tests such as cultures, in which results, interpretation and advice form integral parts of the result. This information model can be used for these (mainly unstructured) results.&#xD;&#xA;&#xD;&#xA;For laboratory test results, it is difficult to clearly indicate exactly when to use this information model and when to use the LaboratoryTestResult information model. &#xD;&#xA;In general, laboratory tests resulting in a value (7.1 mmol/L), ordinal number (++ from series to ++++) or a quantitative result (Low) can best be transferred using the LaboratoryTestResult, whereas this information model is better suited for textual results containing more than just a few words. &#xD;&#xA;Both types of tests occur in almost all laboratories. &#xD;&#xA;Applicability is not determined by the kind of lab but by the kind of result. &#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Een tekstuitslag beschrijft de bevindingen en interpretatie van diagnostische of therapeutische verrichtingen, uitgevoerd op patiënten of monsters afkomstig van de patiënt. &#xD;&#xA;**Purpose**&#xD;&#xA;Het vastleggen van de resultaten van diagnostische verrichtingen ten behoeve van communicatie hiervan met de aanvrager van de verrichting en het documenteren van de bevindingen naar aanleiding van therapeutische verrichtingen.&#xD;&#xA;**Evidence Base**&#xD;&#xA;De meeste uitslagen van verrichtingen en sommige uitslagen van laboratorium onderzoeken zijn verhalend van aard. Het gaat hierbij om o.a. verslagen van radiologie, pathologie, scopieën, echografie, etc en laboratoriumonderzoeken als banale kweken, waar uitslag, interpretatie en advies integraal onderdeel uitmaken van de uitslag. Deze bouwsteen kan gebruikt worden voor deze niet verder gestructureerde uitslagen.&#xD;&#xA;&#xD;&#xA;Bij uitslagen van laboratoriumbepalingen is het moeilijk eenduidig aan te geven wanneer deze bouwsteen gebruikt moet worden en wanneer de bouwsteen LaboratoriumUitslag gebruikt moet worden. &#xD;&#xA;In het algemeen worden laboratoriumtesten die resulteren in een waarde (7,1 mmol/L), rangtelwoord (++ uit reeks tot ++++) of een kwantitatieve uitslag (Weinig) het beste overgedragen met LaboratoriumUitslag en is deze bouwsteen meer geschikt voor tekstuele uitslagen die langer dan een paar woorden zijn.&#xD;&#xA;In vrijwel alle laboratoria komen beide soorten testen voor. &#xD;&#xA;De toepasbaarheid wordt niet door het soort lab maar door het soort uitslag bepaald. &#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (15-02-2013)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (01-07-2013)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.2 (01-04-2015)&#xD;&#xA;Bevat: [ZIB-76](https://bits.nictiz.nl/browse/ZIB-76), [ZIB-130](https://bits.nictiz.nl/browse/ZIB-130), [ZIB-274](https://bits.nictiz.nl/browse/ZIB-274), [ZIB-275](https://bits.nictiz.nl/browse/ZIB-275), [ZIB-322](https://bits.nictiz.nl/browse/ZIB-322), [ZIB-323](https://bits.nictiz.nl/browse/ZIB-323), [ZIB-370](https://bits.nictiz.nl/browse/ZIB-370).&#xD;&#xA;&#xD;&#xA;Incl. algemene wijzigingsverzoeken: &#xD;&#xA;[ZIB-94](https://bits.nictiz.nl/browse/ZIB-94), [ZIB-154](https://bits.nictiz.nl/browse/ZIB-154), [ZIB-200](https://bits.nictiz.nl/browse/ZIB-200), [ZIB-201](https://bits.nictiz.nl/browse/ZIB-201), [ZIB-309](https://bits.nictiz.nl/browse/ZIB-309), [ZIB-324](https://bits.nictiz.nl/browse/ZIB-324), [ZIB-326](https://bits.nictiz.nl/browse/ZIB-326).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-423](https://bits.nictiz.nl/browse/ZIB-423), [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453).&#xD;&#xA;&#xD;&#xA;Publicatieversie 4.0 (04-09-2017)&#xD;&#xA;Bevat: [ZIB-549](https://bits.nictiz.nl/browse/ZIB-549), [ZIB-576](https://bits.nictiz.nl/browse/ZIB-576).&#xD;&#xA;&#xD;&#xA;Publicatieversie 4.1 (31-12-2017)&#xD;&#xA;Bevat: [ZIB-646](https://bits.nictiz.nl/browse/ZIB-646).&#xD;&#xA;&#xD;&#xA;Publicatieversie 4.2 (01-10-2018)&#xD;&#xA;Bevat: [ZIB-630](https://bits.nictiz.nl/browse/ZIB-630).&#xD;&#xA;&#xD;&#xA;Publicatieversie 4.3 (31-01-2020)&#xD;&#xA;Bevat: [ZIB-955](https://bits.nictiz.nl/browse/ZIB-955).&#xD;&#xA;&#xD;&#xA;Publicatieversie 4.4 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-631](https://bits.nictiz.nl/browse/ZIB-631), [ZIB-1187](https://bits.nictiz.nl/browse/ZIB-1187).&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/text_result"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.2.1--20200901000000">
+            <path value="text_result"/>
+            <short value="TextResult">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="TekstUitslag"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the TextResult information model. This root concept contains all data elements of the TextResult information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen TekstUitslag. Dit rootconcept bevat alle gegevenselementen van de bouwsteen TekstUitslag."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="text_result"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.2.3--20200901000000">
+            <path value="text_result.text_result_date_time"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="399651003"/>
+                <display value="datum van verslag"/>
+            </code>
+            <short value="TextResultDateTime">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="TekstUitslagDatumTijd"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Date and if possible time of the result report. ">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Datum en eventueel tijdstip van de uitslag. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="text_result.text_result_date_time"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="dateTime"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueDateTime value="2012-10-12"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.2.5--20200901000000">
+            <path value="text_result.procedure"/>
+            <short value="Procedure">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Verrichting"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Reference to the Procedure information model including the date of the procedure, requesting and executive specialty.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Verwijzing naar de bouwsteen Verrichting en daarin ook de verrichtingsdatum, aanvragend en uitvoerend specialisme."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="text_result.procedure"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Procedure"/>
+         </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.2.6--20200901000000">
+            <path value="text_result.text_result_status"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="308552006"/>
+                <display value="status van verslag"/>
+            </code>
+            <short value="TextResultStatus">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="TekstUitslagStatus"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The status of the result.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De status van de uitslag."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="text_result.text_result_status"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="308552006"/>
+                        <display value="status van verslag"/>
+                    </coding>
+                    <text value="Definitief"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+            <strength value="extensible"/>
+            <description value="TextResultStatus codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/TextResultStatus codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.2.2--20200901000000">
+            <path value="text_result.text_result_report"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="423100009"/>
+                <display value="gedeelte betreffende resultaten in status"/>
+            </code>
+            <short value="TextResultReport">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="TekstResultaat"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The text report detailing the actual results of the test or procedure.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het tekstverslag waarin het feitelijke resultaat van de test of de verrichting staat."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="text_result.text_result_report"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.2.7--20200901000000">
+            <path value="text_result.visual_result"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="9841000146101"/>
+                <display value="beeld"/>
+            </code>
+            <short value="VisualResult">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VisueelResultaat"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Visual examination results that are the starting point and reason for the textual report. These results include visual material - e.g. radiological images, scopy images, medical photos and videos - as well as graphic recordings - e.g. ECGs, EEGs etc.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Visuele onderzoeksresultaten die uitgangspunt van en aanleiding voor het tekstuele verslag zijn. Deze resultaten omvatten zowel beeldmateriaal - bijvoorbeeld radiologische beelden, scopie beelden, medische foto's en video's - als grafische registraties - bijvoorbeeld ECG's, EEG's etc."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="text_result.visual_result"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="base64Binary"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.2.4--20200901000000">
+            <path value="text_result.text_result_type"/>
+            <short value="TextResultType">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="TekstUitslagType"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The type of result.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het soort resultaat."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="text_result.text_result_type"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <text value="Pathologie"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+            <strength value="extensible"/>
+            <description value="TextResultType codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/TextResultType codes."/>
+         </binding>
+        </element>
+    </differential>
+</StructureDefinition>

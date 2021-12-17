@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBeOutcomeOfCare"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeOutcomeOfCare"/>
+   <name value="HdBeOutcomeOfCare">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-UitkomstVanZorg"/>
+         </extension>
+      </extension>
+   </name>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;The OutcomeOfCare concept describes the determined status of the patient in terms of a certain problem. Comparing the healthcare result with the treatment objective provides insight into the effectively of the nursing interventions/activities carried out for this problem. It is a part of the nursing process, together with nursing diagnoses/problems, the treatment objective and nursing interventions. &#xD;&#xA;**Purpose**&#xD;&#xA;Healthcare results are important parameters for evaluating the patient’s health and monitoring the effectivity of the medical treatment and nursing interventions.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Het concept Uitkomst van zorg (zorgresultaten) beschrijft de vastgestelde status van de patiënt met betrekking tot een bepaald probleem. Het geeft door vergelijking met het behandeldoel inzicht in de effectiviteit van verpleegkundige interventies/activiteiten die ingezet zijn met betrekking tot dit probleem. Het is een onderdeel van het verpleegkundig proces, samen met verpleegkundige diagnoses/problemen, behandeldoel en verpleegkundige interventies.&#xD;&#xA;**Purpose**&#xD;&#xA;Zorgresultaten zijn belangrijke parameters voor beoordelen van de gezondheidstoestand van de patiënt en het volgen van de effectiviteit van de medische behandeling en de verpleegkundige interventies.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (01-07-2015)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.1 (04-09-2017)&#xD;&#xA;Bevat: [ZIB-539](https://bits.nictiz.nl/browse/ZIB-539), [ZIB-549](https://bits.nictiz.nl/browse/ZIB-549)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.2 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-1154](https://bits.nictiz.nl/browse/ZIB-1154), [ZIB-1158](https://bits.nictiz.nl/browse/ZIB-1158).&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/outcome_of_care"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.4.1--20200901000000">
+            <path value="outcome_of_care"/>
+            <short value="OutcomeOfCare">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="UitkomstVanZorg"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the OutcomeOfCare information model. This root concept contains all data elements of the OutcomeOfCare information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen UitkomstVanZorg. Dit rootconcept bevat alle gegevenselementen van de bouwsteen UitkomstVanZorg."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="outcome_of_care"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.4.5--20200901000000">
+            <path value="outcome_of_care.healthcare_result"/>
+            <short value="HealthcareResult">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Zorgresultaat"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The textual account of the healthcare result. If HealthcareResult cannot be entered as a measurement value or functional/mental status, it can be described as free text in the healthcare result.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De tekstuele weergave van het zorgresultaat. Indien UitkomstVanZorg niet kan worden weergegeven als een meetwaarde of functionele dan wel mentale status, kan het in zorgresultaat als vrije tekst omschreven worden. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="outcome_of_care.healthcare_result"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.4.3--20200901000000">
+            <path value="outcome_of_care.health_condition"/>
+            <short value="HealthCondition">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Gezondheidstoestand"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="A description of the patient’s health condition in the form of a functional and/or mental status.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een beschrijving van gezondheidstoestand van de patiënt in de vorm van een functionele en/of mentale status."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="outcome_of_care.health_condition"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.397--20200901000000">
+            <path value="outcome_of_care.health_condition.functional_or_mental_status"/>
+            <short value="FunctionalOrMentalStatus">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="FunctioneleOfMentaleStatus"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of FunctionalOrMentalStatus. This concept contains all data elements of the FunctionalOrMentalStatus information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van FunctioneleOfMentaleStatus. Dit concept bevat alle gegevenselementen van de bouwsteen FunctioneleOfMentaleStatus."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="outcome_of_care.health_condition.functional_or_mental_status"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FunctionalOrMentalStatus"/>
+         </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.4.4--20200901000000">
+            <path value="outcome_of_care.intervention"/>
+            <short value="Intervention">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Interventie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="A description of the nursing intervention of which the effectivity is evaluated with the healthcare result.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een beschrijving van de verpleegkundige interventie waarvan de effectiviteit met het zorgresultaat beoordeeld wordt."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="outcome_of_care.intervention"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.398--20200901000000">
+            <path value="outcome_of_care.intervention.nursing_intervention"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="9632001"/>
+                <display value="verpleegkundige verrichting"/>
+            </code>
+            <short value="NursingIntervention">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VerpleegkundigeInterventie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the NursingIntervention information model. This root concept contains all data elements of the NursingIntervention information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen VerpleegkundigeInterventie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen VerpleegkundigeInterventie."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="outcome_of_care.intervention.nursing_intervention"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NursingIntervention"/>
+         </type>
+        </element>
+    </differential>
+</StructureDefinition>

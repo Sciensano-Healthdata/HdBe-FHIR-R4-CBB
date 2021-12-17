@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBeNationality"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeNationality"/>
+   <name value="HdBeNationality">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-Nationaliteit"/>
+         </extension>
+      </extension>
+   </name>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Nationality is used as an indication of the country of citizenship.&#xD;&#xA;**Purpose**&#xD;&#xA;Nationality is recorded for administrative purposes. The information model is not intended for documenting ethnicity.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;De nationaliteit wordt gebruikt als aanduiding voor het land van staatsburgerschap.&#xD;&#xA;**Purpose**&#xD;&#xA;Nationaliteit wordt vastgelegd voor administratieve doeleinden. De bouwsteen is dan ook niet bedoeld voor het vastleggen van etniciteiten.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (15-02-2013)&#xD;&#xA;-&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (01-07-2013)&#xD;&#xA;Bevat: [ZIB-57](https://bits.nictiz.nl/browse/ZIB-57).&#xD;&#xA;&#xD;&#xA;Publicatieversie 2.0 (01-04-2015)&#xD;&#xA;Bevat: [ZIB-253](https://bits.nictiz.nl/browse/ZIB-253), [ZIB-254](https://bits.nictiz.nl/browse/ZIB-254), [ZIB-255](https://bits.nictiz.nl/browse/ZIB-255), [ZIB-256](https://bits.nictiz.nl/browse/ZIB-256), [ZIB-306](https://bits.nictiz.nl/browse/ZIB-306), [ZIB-308](https://bits.nictiz.nl/browse/ZIB-308), [ZIB-341](https://bits.nictiz.nl/browse/ZIB-341), [ZIB-353](https://bits.nictiz.nl/browse/ZIB-353).&#xD;&#xA;&#xD;&#xA;Incl. algemene wijzigingsverzoeken: &#xD;&#xA;[ZIB-94](https://bits.nictiz.nl/browse/ZIB-94), [ZIB-154](https://bits.nictiz.nl/browse/ZIB-154), [ZIB-200](https://bits.nictiz.nl/browse/ZIB-200), [ZIB-201](https://bits.nictiz.nl/browse/ZIB-201), [ZIB-309](https://bits.nictiz.nl/browse/ZIB-309), [ZIB-324](https://bits.nictiz.nl/browse/ZIB-324), [ZIB-326](https://bits.nictiz.nl/browse/ZIB-326).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/nationality_rc"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.6.1--20200901000000">
+            <path value="nationality_rc"/>
+            <short value="NationalityRC">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="NationaliteitRC"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the Nationality information model. This concept contains all data elements of the Nationality information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Nationaliteit. Dit concept bevat alle gegevenselementen van de bouwsteen Nationaliteit."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="nationality_rc"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.6.3--20200901000000">
+            <path value="nationality_rc.nationality"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="66476-3"/>
+                <display value="Country of citizenship"/>
+            </code>
+            <short value="Nationality">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Nationaliteit"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Indicates the country of citizenship.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De aanduiding van het land van staatsburgerschap."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="nationality_rc.nationality"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+            <strength value="extensible"/>
+            <description value="Nationality codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Nationality codes."/>
+         </binding>
+        </element>
+    </differential>
+</StructureDefinition>

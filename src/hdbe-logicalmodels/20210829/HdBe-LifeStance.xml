@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBeLifeStance"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeLifeStance"/>
+   <name value="HdBeLifeStance">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-Levensovertuiging"/>
+         </extension>
+      </extension>
+   </name>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Patient’s life stance and/or religion.&#xD;&#xA;**Purpose**&#xD;&#xA;Life stance may have implications for treatment and care, such as in instructions for treatment, diet, or mental care.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;De levens- en/of geloofsovertuiging van de patiënt. &#xD;&#xA;**Purpose**&#xD;&#xA;Levensovertuiging kan implicaties hebben rondom de behandeling en verzorging, zoals bij behandelaanwijzingen, dieet, geestelijke verzorging.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (15-02-2013)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (01-07-2013)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.2 (01-04-2015)&#xD;&#xA;Bevat: [ZIB-143](https://bits.nictiz.nl/browse/ZIB-143), [ZIB-308](https://bits.nictiz.nl/browse/ZIB-308), [ZIB-348](https://bits.nictiz.nl/browse/ZIB-348).&#xD;&#xA;&#xD;&#xA;Incl. algemene wijzigingsverzoeken: &#xD;&#xA;[ZIB-94](https://bits.nictiz.nl/browse/ZIB-94), [ZIB-154](https://bits.nictiz.nl/browse/ZIB-154), [ZIB-200](https://bits.nictiz.nl/browse/ZIB-200), [ZIB-201](https://bits.nictiz.nl/browse/ZIB-201), [ZIB-309](https://bits.nictiz.nl/browse/ZIB-309), [ZIB-324](https://bits.nictiz.nl/browse/ZIB-324), [ZIB-326](https://bits.nictiz.nl/browse/ZIB-326).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.2.1 (22-05-2015)&#xD;&#xA;Bevat: [ZIB-399](https://bits.nictiz.nl/browse/ZIB-399), [ZIB-389](https://bits.nictiz.nl/browse/ZIB-389).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.1 (04-09-2017)&#xD;&#xA;Bevat: [ZIB-548](https://bits.nictiz.nl/browse/ZIB-548).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.2 (06-07-2019)&#xD;&#xA;Bevat: [ZIB-763](https://bits.nictiz.nl/browse/ZIB-763).&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/life_stance_rc"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.5.1--20200901000000">
+            <path value="life_stance_rc"/>
+            <short value="LifeStanceRC">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="LevensovertuigingRC"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the LifeStance information model. This root concept contains all data elements of the LifeStance information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Levensovertuiging. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Levensovertuiging."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="life_stance_rc"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.5.2--20200901000000">
+            <path value="life_stance_rc.life_stance"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="160538000"/>
+                <display value="geloofsovertuiging"/>
+            </code>
+            <short value="LifeStance">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Levensovertuiging"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Patient’s life stance and/or religion.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De levens- en/of geloofsovertuiging van de patiënt."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="life_stance_rc.life_stance"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="160538000"/>
+                        <display value="geloofsovertuiging"/>
+                    </coding>
+                    <text value="Moslim"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+            <strength value="extensible"/>
+            <description value="LifeStance codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/LifeStance codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.5.3--20200901000000">
+            <path value="life_stance_rc.comment"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="48767-8"/>
+                <display value="Annotation comment Imp"/>
+            </code>
+            <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Explanation that reflects the importance of religion or life stance for the patient, for example how much value the patient attaches to rituals and the like.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting die het belang van de religie of levensovertuiging voor de patiënt weergeeft, bijvoorbeeld hoeveel waarde de patiënt hecht aan rituelen e.d."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="life_stance_rc.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+    </differential>
+</StructureDefinition>

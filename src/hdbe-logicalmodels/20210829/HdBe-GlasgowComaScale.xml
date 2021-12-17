@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBeGlasgowComaScale"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeGlasgowComaScale"/>
+   <name value="HdBeGlasgowComaScale">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-GlasgowComaScale"/>
+         </extension>
+      </extension>
+   </name>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Fifteen-point scale for expressing a person’s level of consciousness, from fully awake to deep unconsciousness, in a number: the so-called EMV score. &#xD;&#xA;The Glasgow Coma Scale score or EMV (Eye-Motor-Verbal) score is a scale to measure the extent of consciousness, based on eye, verbal and motor responses to specific prescribed sound and pain stimuli.&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;The GCS score provides the opportunity to document a clinical observation of a patient’s conscious state with a validated instrument which makes use of a patient’s responses to stimuli.&#xD;&#xA;**Evidence Base**&#xD;&#xA;The Glasgow Coma Scale is used to evaluate a patient’s consciousness by means of three elements: &#xD;&#xA;&#xD;&#xA;1. opening eyes (eye response); &#xD;&#xA;&#xD;&#xA;1. answering questions (verbal response); &#xD;&#xA;&#xD;&#xA;1. motor response. &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;The three response values are looked at individually and as a whole. The total is referred to as the EMV score. The minimum total score is 3 and the maximum is 15. A slightly altered scale is used for infants (age 0-2) and toddlers (age 2-5). &#xD;&#xA;&#xD;&#xA;The EMV score can be expressed as a combination of each of the three individual scores, such as: E3M2V4 (opens eyes when spoken to, arms stretch in response to pain and patient produces incomprehensible sounds). &#xD;&#xA;If one of the EMV elements cannot be evaluated - such as might be the case if a patient is intubated and incapable of verbally responding, or is paralyzed/weak and incapable of fulfilling the motor request, then the individual score is included (score NT), with an extra comment. Er moet dan GEEN totaalscore worden doorgegeven.&#xD;&#xA;V1T is used for an intubated patient, in which t = 'tube'. &#xD;&#xA;Clinical decisions must be based on each of the specific data of the eyes, motor and verbal responses and, if evaluation is not possible, an explicit explanation. &#xD;&#xA;&#xD;&#xA;Standard values for the total score, depending on age: &#xD;&#xA;0-6 months : 9 and up&#xD;&#xA;6 months: 10 and up&#xD;&#xA;6-12 months : 11 and up &#xD;&#xA;1-2 : 12 and up &#xD;&#xA;2-5 : 13 and up &#xD;&#xA;&gt; 5 : 14 and up&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Vijftienpuntschaal waarmee het bewustzijnsniveau van een persoon, van volkomen helder tot diep bewusteloos, kan worden weergegeven in een cijfer, de zogenaamde EMV-score.&#xD;&#xA;De Glasgow comascore ofwel EMV (Eye-Motor-Verbal) score is een maat voor de mate van het bewustzijn, gebaseerd op oog-, verbale en bewegingsreacties op specifieke voorgeschreven hoorbare en voelbare prikkels.&#xD;&#xA;**Purpose**&#xD;&#xA;De Glasgow comascore biedt de mogelijkheid om een klinische observatie betreffende de bewustzijnstoestand van een patiënt vast te leggen met een gevalideerd instrument dat gebruikt maakt van de reacties van een patiënt op stimuli.&#xD;&#xA;**Evidence Base**&#xD;&#xA;De Glasgow Coma Scale wordt gebruikt om gebruikt om het bewustzijn van een patiënt te beoordelen aan de hand van drie componenten: &#xD;&#xA;&#xD;&#xA;1. de ogen openen; &#xD;&#xA;&#xD;&#xA;1. op vragen antwoorden; &#xD;&#xA;&#xD;&#xA;1. bewegingsreactie. &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;De drie responswaarden worden afzonderlijk en als totaal beschouwd. Het totaal wordt de EMV-score genoemd. De minimale totale score is 3 en de maximaal mogelijke is 15. Voor zuigelingen (0-2 jaar) en peuters (2-5 jaar) wordt een aangepaste schaal gebruikt.&#xD;&#xA;&#xD;&#xA;De EMV score kan worden weergegeven als een samenstelling van elk de deelscores bijvoorbeeld E3M2V4 (opent ogen bij aanspreken, heeft een strekreactie van de armen op pijn en produceert onbegrijpelijke geluiden).&#xD;&#xA;&#xD;&#xA;Als een van de EMV onderdelen niet kan worden beoordeeld - bijvoorbeeld als het subject geïntubeerd is en niet in staat om verbaal te reageren, of verlamd/verslapt en niet in staat om de motor vraag te beantwoorden, dan wordt de deelscore wel opgenomen (score NT), en aangevuld met een extra toelichting. Er moet dan GEEN totaalscore worden doorgegeven.&#xD;&#xA;Voor een geïntubeerde patiënt wordt V1T gebruikt, waarbij t = 'tube'. &#xD;&#xA;Klinische besluitvorming moet worden gebaseerd op elk van de specifieke gegevens van de ogen, motorische en verbale reacties en de expliciete toelichting als niet kan worden beoordeeld.&#xD;&#xA;&#xD;&#xA;Normaalwaarden voor de totaal score, afhankelijk van de leeftijd:&#xD;&#xA;0-6 maanden : 9 of hoger&#xD;&#xA;6 maanden : 10 of hoger&#xD;&#xA;6-12 maanden : 11 of hoger&#xD;&#xA;1-2 jaar : 12 of hoger&#xD;&#xA;2-5 jaar : 13 of hoger&#xD;&#xA;&gt; 5 jaar : 14 of hoger&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**References**&#xD;&#xA;&#xD;&#xA;1. Glasgow Coma Scale (GCS) [Online] op [https://www.openehr.org/ckm/ ](https://www.openehr.org/ckm/)[Geraadpleegd: 22 mei 2020].&#xD;&#xA;1. Paediatric Glasgow Coma Scale (pGCS) [online] beschikbaar via [https://www.openehr.org/ckm/ ](https://www.openehr.org/ckm/ ) [Geraadpleegd: 22 mei 2020].&#xD;&#xA;1. Performance of the Pediatric Glasgow Coma Scale Score in the Evaluation of Children With Blunt Head Trauma, Dominic A. Borgialli, et. all. 2016 by the Society for Academic Emergency Medicine, doi: 10.1111/acem.13014 &#xD;&#xA;1. [https://www.glasgowcomascale.org](https://www.glasgowcomascale.org) [geraadpleegd: 22 mei 2020]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (15-02-2013)&#xD;&#xA;-&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (01-07-2013)&#xD;&#xA;-&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.2 (01-04-2015)&#xD;&#xA;Bevat: [ZIB-227](https://bits.nictiz.nl/browse/ZIB-227), [ZIB-228](https://bits.nictiz.nl/browse/ZIB-228), [ZIB-229](https://bits.nictiz.nl/browse/ZIB-229), [ZIB-230](https://bits.nictiz.nl/browse/ZIB-230), [ZIB-231](https://bits.nictiz.nl/browse/ZIB-231), [ZIB-232](https://bits.nictiz.nl/browse/ZIB-232), [ZIB-308](https://bits.nictiz.nl/browse/ZIB-308), [ZIB-311](https://bits.nictiz.nl/browse/ZIB-311), [ZIB-361](https://bits.nictiz.nl/browse/ZIB-361).&#xD;&#xA;&#xD;&#xA;Incl. algemene wijzigingsverzoeken: &#xD;&#xA;[ZIB-94](https://bits.nictiz.nl/browse/ZIB-94), [ZIB-154](https://bits.nictiz.nl/browse/ZIB-154), [ZIB-200](https://bits.nictiz.nl/browse/ZIB-200), [ZIB-201](https://bits.nictiz.nl/browse/ZIB-201), [ZIB-309](https://bits.nictiz.nl/browse/ZIB-309), [ZIB-324](https://bits.nictiz.nl/browse/ZIB-324), [ZIB-326](https://bits.nictiz.nl/browse/ZIB-326).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.2.1 (16-07-2015)&#xD;&#xA;Bevat: [ZIB-414](https://bits.nictiz.nl/browse/ZIB-414).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.1 (04-09-2017)&#xD;&#xA;Bevat: [ZIB-431](https://bits.nictiz.nl/browse/ZIB-431), [ZIB-466](https://bits.nictiz.nl/browse/ZIB-466), [ZIB-564](https://bits.nictiz.nl/browse/ZIB-564).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.2 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-1050](https://bits.nictiz.nl/browse/ZIB-1050), [ZIB-1085](https://bits.nictiz.nl/browse/ZIB-1085).&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/glasgow_coma_scale"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.1--20200901000000">
+            <path value="glasgow_coma_scale"/>
+            <short value="GlasgowComaScale">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="GlasgowComaScale"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the GlasgowComaScale information model. This root concept contains all data elements of the GlasgowComaScale information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen GlasgowComaScale. Dit rootconcept bevat alle gegevenselementen van de bouwsteen GlasgowComaScale."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="glasgow_coma_scale"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.8--20200901000000">
+            <path value="glasgow_coma_scale.glasgow_coma_scale_date_time"/>
+            <short value="GlasgowComaScaleDateTime">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="GlasgowComaScaleDatumTijd"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Time at which the EMV score was determined.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Tijdstip waarop de EMV score werd bepaald."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="glasgow_coma_scale.glasgow_coma_scale_date_time"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="dateTime"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.2--20200901000000">
+            <path value="glasgow_coma_scale.gcs_eyes"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="281395000"/>
+                <display value="score op openen van ogen binnen glasgowcomaschaal"/>
+            </code>
+            <short value="GCS_Eyes">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="GCS_Eyes"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Best eye response to a stimulus. The element is mandatory, but does not require a numerical value. If no value is given, the reason for this is to be provided in the ConditionsDuringMeasurement concept.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Beste response van de ogen op een stimulus. Het element is verplicht, maar er hoeft geen getalmatige waarde toegekend te zijn. Als er geen waarde is toegekend, dan wordt de reden hiervan vermeld in het concept ConditiesTijdensMeting."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="glasgow_coma_scale.gcs_eyes"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="281395000"/>
+                        <display value="score op openen van ogen binnen glasgowcomaschaal"/>
+                    </coding>
+                    <text value="3"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+            <strength value="required"/>
+            <description value="GCS_Eyes codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/GCS_Eyes codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.4--20200901000000">
+            <path value="glasgow_coma_scale.gcs_motor"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="281396004"/>
+                <display value="score op motorische respons binnen glasgowcomaschaal"/>
+            </code>
+            <short value="GCS_Motor">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="GCS_Motor"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Best motor response to a stimulus. The element is mandatory, but does not require a numerical value. If no value is given, the reason for this is to be provided in the ConditionsDuringMeasurement concept.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Beste motorische response op een stimulus. Het element is verplicht, maar er hoeft geen getalmatige waarde toegekend te zijn. Als er geen waarde is toegekend, dan wordt de reden hiervan vermeld in het concept ConditiesTijdensMeting."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="glasgow_coma_scale.gcs_motor"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="281396004"/>
+                        <display value="score op motorische respons binnen glasgowcomaschaal"/>
+                    </coding>
+                    <text value="4"/>
+                </valueCodeableConcept>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.4--20200901000000.coding">
+            <path value="glasgow_coma_scale.gcs_motor.coding"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="system"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <definition value="-"/>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.4--20200901000000.coding:GCS_MotorCodelijst">
+            <path value="glasgow_coma_scale.gcs_motor.coding"/>
+            <sliceName value="GCS_MotorCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.4--20200901000000.coding:GCS_MotorCodelijstKleuter">
+            <path value="glasgow_coma_scale.gcs_motor.coding"/>
+            <sliceName value="GCS_MotorCodelijstKleuter"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.4--20200901000000.coding:GCS_MotorCodelijstBaby">
+            <path value="glasgow_coma_scale.gcs_motor.coding"/>
+            <sliceName value="GCS_MotorCodelijstBaby"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.6--20200901000000">
+            <path value="glasgow_coma_scale.gcs_verbal"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="281397008"/>
+                <display value="verbale score binnen glasgowcomaschaal"/>
+            </code>
+            <short value="GCS_Verbal">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="GCS_Verbal"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Best verbal response to a stimulus. The element is mandatory, but does not require a numerical value. If no value is given, the reason for this is to be provided in the ConditionsDuringMeasurement concept.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Beste verbale response op een stimulus. Het element is verplicht, maar er hoeft geen getalmatige waarde toegekend te zijn. Als er geen waarde is toegekend, dan wordt de reden hiervan vermeld in het concept ConditiesTijdensMeting."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="glasgow_coma_scale.gcs_verbal"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="281397008"/>
+                        <display value="verbale score binnen glasgowcomaschaal"/>
+                    </coding>
+                    <text value="3"/>
+                </valueCodeableConcept>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.6--20200901000000.coding">
+            <path value="glasgow_coma_scale.gcs_verbal.coding"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="system"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <definition value="-"/>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.6--20200901000000.coding:GCS_VerbalCodelijst">
+            <path value="glasgow_coma_scale.gcs_verbal.coding"/>
+            <sliceName value="GCS_VerbalCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.6--20200901000000.coding:GCS_VerbalCodelijstKleuter">
+            <path value="glasgow_coma_scale.gcs_verbal.coding"/>
+            <sliceName value="GCS_VerbalCodelijstKleuter"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.6--20200901000000.coding:GCS_VerbalCodelijstBaby">
+            <path value="glasgow_coma_scale.gcs_verbal.coding"/>
+            <sliceName value="GCS_VerbalCodelijstBaby"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.10--20200901000000">
+            <path value="glasgow_coma_scale.total_score"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="444323003"/>
+                <display value="gemodificeerde Glasgow-comaschaal"/>
+            </code>
+            <short value="TotalScore">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="TotaalScore"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The sum of the EMV scores, expressed as a number on a scale from 3-15. The value does not have to be recorded, as it can always be calculated based on the individual scores, and as recording the total is not common for a difficult to determine individual score.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De som van de EMV scores, uitgedrukt als getal in het bereik 3-15. De waarde hoeft niet te worden vastgelegd, omdat deze altijd op grond van de deelscores berekend kan worden, en omdat het vastleggen van het totaal bij een niet goed te bepalen deelscore niet gebruikelijk is."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="glasgow_coma_scale.total_score"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Count"/>
+            </type>
+            <example>
+                <label value="example 1 of Count"/>
+                <valueQuantity>
+                    <value value="10"/>
+                    <system value="http://unitsofmeasure.org"/>
+                    <code value="1"/>
+                </valueQuantity>
+            </example>
+            <minValueQuantity>
+                <value value="3"/>
+            </minValueQuantity>
+            <maxValueQuantity>
+                <value value="15"/>
+            </maxValueQuantity>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.11--20200901000000">
+            <path value="glasgow_coma_scale.conditions_during_measurement"/>
+            <short value="ConditionsDuringMeasurement">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ConditiesTijdensMeting"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Conditions during the measurement that prevent one or more of the subscores from being determined (non testable), such as,e.g. intubation during testing of GCS_Verbal.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Condities tijdens de meting die verhinderen dat een of meer van de subscores bepaald kan worden (niet testbaar), zoals bijvoorbeeld intubatie van het bepalen van GCS_Verbal."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="glasgow_coma_scale.conditions_during_measurement"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+            <strength value="extensible"/>
+            <description value="ConditionsDuringMeasurement codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ConditionsDuringMeasurement codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.9--20200901000000">
+            <path value="glasgow_coma_scale.comment"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="48767-8"/>
+                <display value="Annotation comment Imp"/>
+            </code>
+            <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Comment on (the context of) the EMV score measurement, such as any problems or factors that may influence interpretation.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Opmerking over de (context van de) meting van de EMV score, zoals eventuele problemen of factoren die van invloed kunnen zijn op de interpretatie."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="glasgow_coma_scale.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueString value="Patient was direct voor intubatie volkomen helder; reageert nu minder maar is ook onderkoeld (temperatuur rectaal 35°C)."/>
+            </example>
+        </element>
+    </differential>
+</StructureDefinition>

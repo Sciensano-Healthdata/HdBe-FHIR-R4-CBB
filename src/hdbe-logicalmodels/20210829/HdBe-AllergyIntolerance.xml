@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBeAllergyIntolerance"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeAllergyIntolerance"/>
+   <name value="HdBeAllergyIntolerance">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-AllergieIntolerantie"/>
+         </extension>
+      </extension>
+   </name>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;An allergy or intolerance describes a patient’s tendency towards hypersensitivity to a certain substance, so that an unwanted physiological reaction is expected after exposure to the substance, while most people would not exhibit such a reaction to that amount. The observed physiological changes are usually the result of an immunological reaction. &#xD;&#xA;The substances can be categorized as follows: &#xD;&#xA;&#xD;&#xA;* Medicine&#xD;&#xA;* Medicine category&#xD;&#xA;* Ingredient/addition&#xD;&#xA;* Nutrition&#xD;&#xA;* Environmental factor&#xD;&#xA;* Animal&#xD;&#xA;* Plants&#xD;&#xA;* Chemicals&#xD;&#xA;* Inhaled allergenic&#xD;&#xA;**Purpose**&#xD;&#xA;Documenting and communicating allergies and intolerances is an important part of medical registration. It concerns the core of patient safety in general and medication safety in particular. In the execution of research, treatment and care, these patient characteristics constantly have to be taken into account. &#xD;&#xA;In principle, allergies and intolerances are also disorders and also could be entered as a problem. Nevertheless, these are usually entered separately. &#xD;&#xA;Allergies/Intolerances have a lot in common with warnings (Alert). An important difference is that with allergies and intolerances, a lot of detailed information is recorded on things such as the reactions to the causative substance. Furthermore, not every warning is a problem or medical condition. Every allergy/intolerance is, however, while not every allergy or intolerance implies a warning.&#xD;&#xA;&#xD;&#xA;**Evidence Base**&#xD;&#xA;For all allergies in the Netherlands, the codes available in the G standard are used to register and complete medicinal allergies in the work process of prescribers and pharmacists (in medication monitoring). This is outlined in the document “Allergies and unwanted substances IR V-2-3-1”. &#xD;&#xA;&#xD;&#xA;This code is insufficient when it comes to reactions to exposure to food products, items (such as bandages and band-aids), plants and animals. For these items, the standard allows the use of free text or the use of SNOMED CT code. However, no validated value set is currently available for this purpose for SNOMED CT.&#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Issues**&#xD;&#xA;**No known allergies**&#xD;&#xA;The question is whether to offer a code for &#34;No known allergies (SNOMED CT 160244002)&#34; and subdirectories in this information model that fall under this code, or to determine that, where applicable, the document should outline when the information model is to be applied.&#xD;&#xA;**Value set for the ‘Causative substance’ concept **&#xD;&#xA;Currently, no defined code list is yet available for allergenic substances other than medication. Entering SNOMED CT must therefore suffice to code allergenic substances for the time-being. The G standard is used to code medical products.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Een allergie of intolerantie beschrijft de geneigdheid tot overgevoeligheid van een patiënt voor een stof, zodat na blootstelling een ongewenste fysiologische reactie verwacht wordt, terwijl bij de meeste mensen bij die hoeveelheid geen reactie zou optreden. De waargenomen fysiologische veranderingen zijn meestal het resultaat van een immunologische reactie. &#xD;&#xA;De stoffen kunnen als volgt worden ingedeeld:&#xD;&#xA;&#xD;&#xA;* Geneesmiddel&#xD;&#xA;* Geneesmiddelgroep&#xD;&#xA;* Ingrediënt/toevoeging&#xD;&#xA;* Voeding&#xD;&#xA;* Omgevingsfactor&#xD;&#xA;* Dier&#xD;&#xA;* Planten&#xD;&#xA;* Chemicaliën&#xD;&#xA;* Inhalatieallergenen&#xD;&#xA;**Purpose**&#xD;&#xA;Het vastleggen en doorgeven van allergieën en intoleranties, is een belangrijk onderdeel van de medische registratie. Het raakt de kern van patiëntveiligheid in het algemeen en medicatieveiligheid in het bijzonder. In de uitvoering van onderzoek, behandeling en verzorging moet veelal continu rekening worden gehouden met deze patiëntkenmerken. &#xD;&#xA;Allergieën en intoleranties zijn in principe ook aandoeningen en zouden ook als probleem vastegelegd kunnen worden. Het is niettemin gebruikelijk deze separaat vast te leggen.&#xD;&#xA;Allergieën/Intoleraties hebben veel gemeen met waarschuwingen (Alert). Belangrijk verschil is dat bij allergieën en intoleranties veel getailleerdere informatie wordt vast gelegd o.a over de reacties op de veroorzakende stof. Daarnaast is niet iedere waarschuwing een probleem of medische conditie. Bij allergie/intolerantie is dit wel het geval, terwijl niet iedere allergie of intolerentie een waarschuwing inhoudt.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Om geneesmiddelallergieën in het werkproces van voorschrijvers en apothekers te kunnen registreren en afhandelen (in de medicatiebewaking) wordt in Nederland voor allergieën gebruik gemaakt van de beschikbare coderingen in de G-standaard. Dit is beschreven in het document “Allergieën en ongewenste middelen IR V-2-3-1”.&#xD;&#xA;&#xD;&#xA;Deze codering is niet toereikend waar het gaat om reacties bij blootstelling aan voedingsmiddelen, artikelen (zoals verbandmiddelen en pleisters), planten en dieren. Voor deze items staat de standaard het gebruik van vrije tekst toe of van SNOMED CT codering. Voor SNOMED CT is echter voor dit doel op dit moment geen gevalideerde valueset beschikbaar.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Issues**&#xD;&#xA;**Geen bekende allergieën**&#xD;&#xA;De vraag is of we in deze bouwsteen een code voor &#34;No known allergies (SNOMED CT 160244002)&#34; en kinderen hiervan aanbieden of dat we stellen dat, waar van toepassing, dat geregeld moet worden in het document waar de bouwsteen wordt toegepast .&#xD;&#xA;**Valueset voor het concept 'Veroorzakende Stof'**&#xD;&#xA;Er is momenteel nog geen afgebakende codelijst beschikbaar voor allergene stoffen anders dan medicatie. Daarom is volstaan met het noemen van SNOMED CT voor de codering van allergene stoffen. Voor de codering van medicatieproducten wordt de G-standaard gebruikt.&#xD;&#xA;**References**&#xD;&#xA;1. Z-INDEX. (2011) *Allergieën en ongewenste middelen *[Online] v. R V-2-3-1 Beschikbaar op: http://www.z-index.nl/g-standaard/beschrijvingen/functioneel/wijzigingen/mb/bewaking-op-allergie/IR%20Allergieen%20V%202-1-1.pdf [Geraadpleegd: 15 oktober 2014]&#xD;&#xA;&#xD;&#xA;2. HL7 FHIR *Resource AllergyIntolerance.* [Online] Continuous Build. Beschikbaar op: http://hl7-fhir.github.io/allergyintolerance.html [Geraadpleegd: 12 maart 2014]&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (01-04-2015)&#xD;&#xA;Bevat: [ZIB-109](https://bits.nictiz.nl/browse/ZIB-109), [ZIB-111](https://bits.nictiz.nl/browse/ZIB-111), [ZIB-151](https://bits.nictiz.nl/browse/ZIB-151), [ZIB-308](https://bits.nictiz.nl/browse/ZIB-308), [ZIB-352](https://bits.nictiz.nl/browse/ZIB-352), [ZIB-353](https://bits.nictiz.nl/browse/ZIB-353).&#xD;&#xA;&#xD;&#xA;Incl. algemene wijzigingsverzoeken: &#xD;&#xA;[ZIB-94](https://bits.nictiz.nl/browse/ZIB-94), [ZIB-154](https://bits.nictiz.nl/browse/ZIB-154), [ZIB-200](https://bits.nictiz.nl/browse/ZIB-200), [ZIB-201](https://bits.nictiz.nl/browse/ZIB-201), [ZIB-309](https://bits.nictiz.nl/browse/ZIB-309), [ZIB-324](https://bits.nictiz.nl/browse/ZIB-324), [ZIB-326](https://bits.nictiz.nl/browse/ZIB-326).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.1 (22-05-2015)&#xD;&#xA;Bevat: [ZIB-380](https://bits.nictiz.nl/browse/ZIB-380), [ZIB-373](https://bits.nictiz.nl/browse/ZIB-373).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.2 (16-07-2015)&#xD;&#xA;Bevat: [ZIB-417](https://bits.nictiz.nl/browse/ZIB-417).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-425](https://bits.nictiz.nl/browse/ZIB-425), [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.1 (04-09-2017)&#xD;&#xA;Bevat: [ZIB-426](https://bits.nictiz.nl/browse/ZIB-426), [ZIB-427](https://bits.nictiz.nl/browse/ZIB-427), [ZIB-482](https://bits.nictiz.nl/browse/ZIB-482), [ZIB-487](https://bits.nictiz.nl/browse/ZIB-487), [ZIB-499](https://bits.nictiz.nl/browse/ZIB-499), [ZIB-500](https://bits.nictiz.nl/browse/ZIB-500), [ZIB-564](https://bits.nictiz.nl/browse/ZIB-564).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.2 (31-12-2017)&#xD;&#xA;Bevat: [ZIB-610](https://bits.nictiz.nl/browse/ZIB-610).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.3 (06-07-2019)&#xD;&#xA;Bevat: [ZIB-732](https://bits.nictiz.nl/browse/ZIB-732), [ZIB-734](https://bits.nictiz.nl/browse/ZIB-734), [ZIB-823](https://bits.nictiz.nl/browse/ZIB-823).&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/allergy_intolerance"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.1--20200901000000">
+            <path value="allergy_intolerance"/>
+            <short value="AllergyIntolerance">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="AllergieIntolerantie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the AllergyIntolerance information model. This root concept contains all data elements of the AllergyIntolerance information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen AllergieIntolerantie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen AllergieIntolerantie."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="allergy_intolerance"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.2--20200901000000">
+            <path value="allergy_intolerance.causative_agent"/>
+            <short value="CausativeAgent">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VeroorzakendeStof"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Substance, group of substances or environmental factor to which the patient is allergic or hypersensitive.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Stof, groep stoffen of omgevingsfactor waar de patiënt allergisch of overgevoelig voor is."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="allergy_intolerance.causative_agent"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.2--20200901000000.coding">
+            <path value="allergy_intolerance.causative_agent.coding"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="system"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <definition value="-"/>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.2--20200901000000.coding:VeroorzakendeStofSSKCodelijst">
+            <path value="allergy_intolerance.causative_agent.coding"/>
+            <sliceName value="VeroorzakendeStofSSKCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.2--20200901000000.coding:VeroorzakendeStofSNKCodelijst">
+            <path value="allergy_intolerance.causative_agent.coding"/>
+            <sliceName value="VeroorzakendeStofSNKCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.2--20200901000000.coding:VeroorzakendeStofThesaurus122Codelijst">
+            <path value="allergy_intolerance.causative_agent.coding"/>
+            <sliceName value="VeroorzakendeStofThesaurus122Codelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.2--20200901000000.coding:VeroorzakendeStofAllergeneStoffenCodelijst">
+            <path value="allergy_intolerance.causative_agent.coding"/>
+            <sliceName value="VeroorzakendeStofAllergeneStoffenCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.2--20200901000000.coding:VeroorzakendeStofHPKCodelijst">
+            <path value="allergy_intolerance.causative_agent.coding"/>
+            <sliceName value="VeroorzakendeStofHPKCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.4--20200901000000">
+            <path value="allergy_intolerance.allergy_category"/>
+            <short value="AllergyCategory">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="AllergieCategorie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Identifies the allergy category such as medication, food or environment.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Identificeert de categorie van de overgevoeligheid aan zoals medicatie, voedsel of omgeving. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="allergy_intolerance.allergy_category"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+            <strength value="required"/>
+            <description value="AllergyCategory codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/AllergyCategory codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.5--20200901000000">
+            <path value="allergy_intolerance.allergy_status"/>
+            <short value="AllergyStatus">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="AllergieStatus"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Statement on the status of the patient’s hypersensitivity.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Bewering over de status van de overgevoeligheid."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="allergy_intolerance.allergy_status"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+            <strength value="required"/>
+            <description value="AllergyStatus codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/AllergyStatus codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.6--20200901000000">
+            <path value="allergy_intolerance.start_date_time"/>
+            <short value="StartDateTime">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="BeginDatumTijd"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The date and time at which the allergy or undesired reaction was determined. &#xD;&#xA;This can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year).&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De datum en tijd dat de allergie of de ongewenste reactie is vastgesteld. &#xD;&#xA;Dit kan een exacte datum en tijd zijn maar ook een globale aanduiding van de datum (bijvoorbeeld alleen jaar of jaar en maand)."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="allergy_intolerance.start_date_time"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="dateTime"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueDateTime value="2011-09-10"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.7--20200901000000">
+            <path value="allergy_intolerance.criticality"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="246112005"/>
+                <display value="ernst"/>
+            </code>
+            <short value="Criticality">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="MateVanKritiekZijn"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Critical extent is defined as “the potential severity of future reactions.” &#xD;&#xA;This represents a clinical evaluation of the worst case scenario for a future reaction. It can be based on the severity of past reactions, the dose and manner of exposure which caused reactions in the past, and the life-threatening potential of the type of reaction. Critical extent is a property of the allergy, and not of the reaction itself.&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Mate van kritiek zijn wordt gedefinieerd als &#34;de potentiële ernst van toekomstige reacties.&#34;&#xD;&#xA;Dit vertegenwoordigt een klinisch oordeel over het worst case scenario voor een toekomstige reactie. Het kan worden gebaseerd op de ernst van de reacties in het verleden, de dosis en de wijze van blootstelling die in het verleden reacties veroorzaakten, en de levensbedreigende potentie van het type reactie. Mate van kritiek zijn is een kenmerk van de allergische aandoening, niet van de reactie."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="allergy_intolerance.criticality"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+            <strength value="required"/>
+            <description value="Criticality codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Criticality codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.8--20200901000000">
+            <path value="allergy_intolerance.last_reaction_date_time"/>
+            <short value="LastReactionDateTime">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="LaatsteReactieDatumTijd"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Entry of the last time a hypersensitive reaction took place.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Opgave van de laatste maal dat een reactie in het licht van de overgevoeligheid is opgetreden."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="allergy_intolerance.last_reaction_date_time"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="dateTime"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.9--20200901000000">
+            <path value="allergy_intolerance.comment"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="48767-8"/>
+                <display value="Annotation comment Imp"/>
+            </code>
+            <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Textual explanation of the hypersensitivity which cannot be entered in any of the other fields.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Tekstuele toelichting op de overgevoeligheid die niet in één van de andere velden kan worden weergegeven."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="allergy_intolerance.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.10--20200901000000">
+            <path value="allergy_intolerance.reaction"/>
+            <short value="Reaction">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Reactie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Container of the Reaction concept. This container contains all data elements of the Reaction concept.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Container van het concept Reactie. Deze container bevat alle gegevenselementen van het concept Reactie. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="allergy_intolerance.reaction"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.11--20200901000000">
+            <path value="allergy_intolerance.reaction.symptom"/>
+            <short value="Symptom">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Symptoom"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The content specifications of the reaction that takes place when the patient is exposed to the causative substance.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De inhoudelijke specificatie van de reactie die optreedt indien de patiënt wordt blootgesteld aan de veroorzakende stof."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="*"/>
+            <base>
+                <path value="allergy_intolerance.reaction.symptom"/>
+                <min value="1"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <text value="Anafylaxie, Jeuk"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+            <strength value="extensible"/>
+            <description value="Symptom codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Symptom codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.12--20200901000000">
+            <path value="allergy_intolerance.reaction.specific_substance"/>
+            <short value="SpecificSubstance">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="SpecifiekeStof"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="More specific indication of the substance that caused the reaction. This can be a specific substance from a group of substances to which the patient is allergic or hypersensitive.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Meer specifieke aanduiding van de stof die de reactie opriep. Dit kan een specifieke stof uit een groep stoffen zijn waarvoor de patiënt allergisch of overgevoelig is."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="allergy_intolerance.reaction.specific_substance"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.12--20200901000000.coding">
+            <path value="allergy_intolerance.reaction.specific_substance.coding"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="system"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <definition value="-"/>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.12--20200901000000.coding:SpecifiekeStofSNKCodelijst">
+            <path value="allergy_intolerance.reaction.specific_substance.coding"/>
+            <sliceName value="SpecifiekeStofSNKCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.12--20200901000000.coding:SpecifiekeStofThesaurus122Codelijst">
+            <path value="allergy_intolerance.reaction.specific_substance.coding"/>
+            <sliceName value="SpecifiekeStofThesaurus122Codelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.12--20200901000000.coding:SpecifiekeStofAllergeneStoffenCodelijst">
+            <path value="allergy_intolerance.reaction.specific_substance.coding"/>
+            <sliceName value="SpecifiekeStofAllergeneStoffenCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.12--20200901000000.coding:SpecifiekeStofHPKCodelijst">
+            <path value="allergy_intolerance.reaction.specific_substance.coding"/>
+            <sliceName value="SpecifiekeStofHPKCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.12--20200901000000.coding:SpecifiekeStofSSKCodelijst">
+            <path value="allergy_intolerance.reaction.specific_substance.coding"/>
+            <sliceName value="SpecifiekeStofSSKCodelijst"/>
+            <definition value="-"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <binding>
+            <strength value="required"/>
+            <description value=" codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.13--20200901000000">
+            <path value="allergy_intolerance.reaction.reaction_description"/>
+            <short value="ReactionDescription">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ReactieBeschrijving"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Textual description of the reaction as a whole.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Tekstuele beschrijving van de reactie als geheel."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="allergy_intolerance.reaction.reaction_description"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.14--20200901000000">
+            <path value="allergy_intolerance.reaction.severity"/>
+            <short value="Severity">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Ernst"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The severity of the reaction as a result of exposure to the causative substance.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De ernst van de reactie ten gevolge van de blootgestelling aan de veroorzakende stof."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="allergy_intolerance.reaction.severity"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <text value="Ernstig"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+            <strength value="required"/>
+            <description value="Severity codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Severity codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.15--20200901000000">
+            <path value="allergy_intolerance.reaction.route_of_exposure"/>
+            <short value="RouteOfExposure">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="WijzeVanBlootstelling"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Way in which the patient came into contact with the causative agent or the way in which the agent was administered.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Wijze waarop de patiënt in aanraking is gekomen met de veroorzakende stof of de wijze waarop de stof toegediend is."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="allergy_intolerance.reaction.route_of_exposure"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+            <strength value="required"/>
+            <description value="RouteOfExposure codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/RouteOfExposure codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.17--20200901000000">
+            <path value="allergy_intolerance.reaction.reaction_time"/>
+            <short value="ReactionTime">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ReactieTijdstip"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Date and time at which the reaction took place. This may also be just the date or a partial date, in the event that the exact date is unknown.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Datum en tijd waarop de reactie plaats gevonden heeft. Dit mag ook alleen een datum of een gedeeltelijke datum zijn, indien dit niet nauwkeuriger bekend is."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="allergy_intolerance.reaction.reaction_time"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="dateTime"/>
+            </type>
+        </element>
+    </differential>
+</StructureDefinition>

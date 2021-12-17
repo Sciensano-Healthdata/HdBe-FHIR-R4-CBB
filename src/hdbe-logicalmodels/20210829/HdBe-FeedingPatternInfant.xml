@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBeFeedingPatternInfant"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeFeedingPatternInfant"/>
+   <name value="HdBeFeedingPatternInfant">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-VoedingspatroonZuigeling"/>
+         </extension>
+      </extension>
+   </name>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;A healthy diet means that we do not consume too much or too little (energy intake balanced with energy use) and that the composition of food (mainly important nutrients) follows the recommendations from the Health Council. For an infant, this means that the child receives breastfeeding or formula milk or a combination thereof.&#xD;&#xA;**Purpose**&#xD;&#xA;The purpose is to register which type of feeding the infant receives and when, to enable early estimation whether there are problems or whether the care surrounding feeding the infant can be taken over.&#xD;&#xA;**Evidence Base**&#xD;&#xA;The definitions of the concepts were (partly) based on the Multidisciplinary guideline Breastfeeding by the NCJ.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;The container Feeding can be filled in multiple times to denote different combinations of type of milk given and method used to feed. Several combinations are possible:&#xD;&#xA;1) FeedingType breast milk, FeedingMethod breastfed = to give breastfeeding naturally.&#xD;&#xA;2) FeedingType breast milk, FeedingMethod bottle fed = to give expressed breast milk via bottle.&#xD;&#xA;3) FeedingType formula milk, FeedingMethod bottle fed = to give formula milk via bottle.&#xD;&#xA;Fill in the container for each relevant combination.&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Een gezonde voeding houdt in dat we niet te veel of te weinig eten (energie-inname in balans met het energieverbruik) en dat de voedingssamenstelling (m.b.t. belangrijke voedingsstoffen) is zoals aanbevolen door de Gezondheidsraad. Voor een zuigeling betekent dit dat het kind borstvoeding, kunstvoeding of een combinatie hiervan krijgt.&#xD;&#xA;**Purpose**&#xD;&#xA;Het doel is om vast te leggen welke voeding de zuigeling krijgt en op wat voor een moment, zodat vroegtijdig kan worden ingeschat als er problemen zijn of de zorg voor de voeding aan de zuigeling kan worden overgenomen.&#xD;&#xA;**Evidence Base**&#xD;&#xA;De definities van de concepten zijn (deels) gebaseerd op de Multidisciplinaire richtlijn Borstvoeding van het NCJ.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;De container Voeding kan meermalen ingevuld worden om verschillende combinaties aan soort melk en voedingsmethode weer te geven. Er zijn verschillende combinaties mogelijk:&#xD;&#xA;1) VoedingSoort borstvoeding, VoedingMethode borstvoeding = borst geven op de natuurlijke wijze.&#xD;&#xA;2) VoedingSoort borstvoeding, VoedingMethode flesvoeding = afgekolfte borstvoeding geven per fles.&#xD;&#xA;3) VoedingSoort kunstvoeding, VoedingMethode flesvoeding = fles met kunstvoeding geven.&#xD;&#xA;Vul de container voor elke relevante combinatie in.&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (04-09-2017)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-921](https://bits.nictiz.nl/browse/ZIB-921), [ZIB-933](https://bits.nictiz.nl/browse/ZIB-933).&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/feeding_pattern_infant"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.31.1--20200901000000">
+            <path value="feeding_pattern_infant"/>
+            <short value="FeedingPatternInfant">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VoedingspatroonZuigeling"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the FeedingPatternInfant information model. This root concept contains all data elements of the FeedingPatternInfant information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen VoedingspatroonZuigeling. Dit rootconcept bevat alle gegevenselementen van de bouwsteen VoedingspatroonZuigeling."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="feeding_pattern_infant"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.31.6--20200901000000">
+            <path value="feeding_pattern_infant.feeding_pattern_infant_date_time"/>
+            <short value="FeedingPatternInfantDateTime">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VoedingspatroonZuigelingDatumTijd"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The date and time on which the characteristics of feeding of the infant are registered.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De datum en tijd waarop de kenmerken van voeding van de zuigeling zijn geregistreerd."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="feeding_pattern_infant.feeding_pattern_infant_date_time"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="dateTime"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.31.7--20200901000000">
+            <path value="feeding_pattern_infant.feeding_supplement"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="373453009"/>
+                <display value="voedingssupplement"/>
+            </code>
+            <short value="FeedingSupplement">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VoedingToevoeging"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="It is possible to add supplements to breast and formula milk, such as locust bean gum to thicken milk in case of infant reflux.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het is mogelijk om toevoegingen aan borst- en kunstvoeding toe te voegen, zoals johannesbroodpitmeel om de voeding dikker te maken bij reflux van de zuigeling."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="feeding_pattern_infant.feeding_supplement"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueString value="johannesbroodpitmeel"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.31.5--20200901000000">
+            <path value="feeding_pattern_infant.feeding_frequency"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="364653007"/>
+                <display value="frequentie van voeding van zuigeling"/>
+            </code>
+            <short value="FeedingFrequency">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VoedingFrequentie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The number of feeding gifts within 24 hours.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het aantal giften van voeding per 24 uur."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="feeding_pattern_infant.feeding_frequency"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Quantity"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.31.8--20200901000000">
+            <path value="feeding_pattern_infant.comment"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="48767-8"/>
+                <display value="Annotation comment Imp"/>
+            </code>
+            <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Comment on the feeding of the infant.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De toelichting op de voeding van de zuigeling."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="feeding_pattern_infant.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.31.9--20200901000000">
+            <path value="feeding_pattern_infant.nutrition_advice"/>
+            <short value="NutritionAdvice">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Voedingsadvies"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="This is a reference to the rootconcept DietaryRecommendations of information model DietaryRecommendations.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Dit is een verwijzing naar het rootconcept Voedingsadvies van de bouwsteen Voedingsadvies."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="feeding_pattern_infant.nutrition_advice"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NutritionAdvice"/>
+         </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.31.2--20200901000000">
+            <path value="feeding_pattern_infant.feeding"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="230126006"/>
+                <display value="bevinding betreffende voeden van zuigeling"/>
+            </code>
+            <short value="Feeding">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Voeding"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Container of the Feeding concept. This container contains all data elements of the Feeding concept.&#xD;&#xA;&#xD;&#xA;Several combinations are possible:&#xD;&#xA;1) FeedingType breast milk, FeedingMethod breastfed = to give breastfeeding naturally.&#xD;&#xA;2) FeedingType breast milk, FeedingMethod bottle fed = to give expressed breast milk via bottle.&#xD;&#xA;3) FeedingType formula milk, FeedingMethod bottle fed = to give formula milk via bottle.&#xD;&#xA;Fill in the container for each relevant combination.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Container van het concept Voeding. Deze container bevat alle gegevenselementen van het concept Voeding.&#xD;&#xA;&#xD;&#xA;Er zijn verschillende combinaties mogelijk:&#xD;&#xA;1) VoedingSoort borstvoeding, VoedingMethode borstvoeding = borst geven op de natuurlijke wijze.&#xD;&#xA;2) VoedingSoort borstvoeding, VoedingMethode flesvoeding = afgekolfte borstvoeding geven per fles.&#xD;&#xA;3) VoedingSoort kunstvoeding, VoedingMethode flesvoeding = fles met kunstvoeding geven.&#xD;&#xA;Vul de container voor elke relevante combinatie in.&#xD;&#xA;"/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="feeding_pattern_infant.feeding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.31.3--20200901000000">
+            <path value="feeding_pattern_infant.feeding.feeding_type"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="109021000146107"/>
+                <display value="soort zuigelingenvoeding"/>
+            </code>
+            <short value="FeedingType">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VoedingSoort"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The type of feeding (breast or formula milk) that is given to the infant.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het soort voeding (borst- of kunstvoeding) wat aan de zuigeling wordt gegeven."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="feeding_pattern_infant.feeding.feeding_type"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+            <strength value="extensible"/>
+            <description value="FeedingType codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/FeedingType codes."/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.31.4--20200901000000">
+            <path value="feeding_pattern_infant.feeding.feeding_method"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="169740003"/>
+                <display value="wijze van voeden van zuigeling"/>
+            </code>
+            <short value="FeedingMethod">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VoedingMethode"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The method how the feeding is given to the infant.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De manier waarop de voeding aan de zuigeling wordt gegeven."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="feeding_pattern_infant.feeding.feeding_method"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <binding>
+            <strength value="extensible"/>
+            <description value="FeedingMethod codes."/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/FeedingMethod codes."/>
+         </binding>
+        </element>
+    </differential>
+</StructureDefinition>
