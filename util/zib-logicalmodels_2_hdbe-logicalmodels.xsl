@@ -10,17 +10,18 @@
     
     <xsl:output indent="yes"/> 
     <!-- 
-    * requires a name!    
-    * remove .identifier and .version because they are zib specific
-    * convert .type to a full url 
-    * remove snapshot because diff and snap are similar
-    
-    MISSING:
-    ** update profile references
-    ** update valuesets
-    ** update codesystems in valuesets
-    ** remove slicing
-    
+        * requires a name!    
+        * remove .identifier and .version because they are zib specific
+        * convert .type to a full url 
+        * remove snapshot because diff and snap are similar
+        * in StructureDefinition update profile URLs, by moving them from .profile to .targetProfile and by updating the reference
+        * in StructureDefinition update valueset URLs 
+        * updates name
+        
+        MISSING:
+        ** update codesystems URL/URI in ValueSets
+        ** remove invalid slicing
+        ** remove inline partZibs
     
     -->
     <xsl:output indent="yes"/>
@@ -31,7 +32,8 @@
         <xsl:param name="urlValueSet" select="'ValueSet/'"/>
     <xsl:param name="publisher" select="'Healthdata.be (Sciensano)'"/>
     <xsl:param name="contactEmail" select="'fhir.healthdata@sciensano.be'"/>
-
+    <xsl:param name="convertFileNames" select="true()" as="xs:boolean"/>
+    
     <xsl:template match="node()|@*">
         <xsl:copy>
             <xsl:apply-templates select="node()|@*"/>
@@ -146,10 +148,7 @@
             <xsl:otherwise>
                 <xsl:message terminate="no" select="'no logical models found'"></xsl:message>
             </xsl:otherwise>
-        </xsl:choose>
-         
-        
-        
+        </xsl:choose>        
         
     </xsl:template>
     
@@ -278,8 +277,7 @@
             <xsl:apply-templates select="f:caseSensitive | f:valueSet | f:hierachyMeaning | f:compositional | f:versionNeeded | f:content | f:supplements | f:count | f:filter | f:property | f:concept"/>
         </xsl:copy>
     </xsl:template>
-    
-    
+      
     <xd:doc>
         <xd:desc>Insert the FHIR translation extension that is configured by two parameters.</xd:desc>
         <xd:param name="language">The language, coded conform FHIR, of the translation. Defaults to 'nl-NL'.</xd:param>
@@ -323,7 +321,6 @@
         </xsl:copy>
     </xsl:template>
     
-    
     <xd:doc>
         <xd:desc>Template to move profile reference from .profile to .targetProfile and to convert the reference URL to newly assigned URL based on a hack (the value located in .short is used).</xd:desc>
     </xd:doc>
@@ -342,6 +339,64 @@
             <xsl:apply-templates select="f:aggregation"/>
             <xsl:apply-templates select="f:versioning"/>
         </xsl:copy>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>Perform the transformation on input and convert files names, depending on the convertFileNames parameter.</xd:desc>
+    </xd:doc>
+    <xsl:template match="/">
+        <xsl:variable name="output">
+            <xsl:apply-templates select="node()"/>
+        </xsl:variable>
+        <xsl:choose>
+            <xsl:when test="$convertFileNames">
+                <xsl:for-each select="$output/f:StructureDefinition">
+                    <xsl:choose>
+                        <xsl:when test="string-length(f:id/@value) gt 0">
+                            <xsl:result-document href="{./f:id/@value}.xml">
+                                <xsl:apply-templates select="."/>
+                            </xsl:result-document>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <!-- This happens when transforming a non-saved document in Oxygen -->
+                            <xsl:message>Could not output to result-document without Resource.id.
+                                Outputting to console instead.</xsl:message>
+                            <xsl:copy-of select="."/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:for-each>
+                <xsl:for-each select="$output/f:ValueSet">
+                    <xsl:choose>
+                        <xsl:when test="string-length(f:id/@value) gt 0">
+                            <xsl:result-document href="ValueSet-{./f:id/@value}.xml">
+                                <xsl:apply-templates select="."/>
+                            </xsl:result-document>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <!-- This happens when transforming a non-saved document in Oxygen -->
+                            <xsl:message>Could not output to result-document without Resource.id.
+                                Outputting to console instead.</xsl:message>
+                            <xsl:copy-of select="."/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:for-each>
+                <xsl:for-each select="$output/f:CodeSystem">
+                    <xsl:choose>
+                        <xsl:when test="string-length(f:id/@value) gt 0">
+                            <xsl:result-document href="CodeSystem-{./f:id/@value}.xml">
+                                <xsl:apply-templates select="."/>
+                            </xsl:result-document>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <!-- This happens when transforming a non-saved document in Oxygen -->
+                            <xsl:message>Could not output to result-document without Resource.id.
+                                Outputting to console instead.</xsl:message>
+                            <xsl:copy-of select="."/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:for-each>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
     
 </xsl:stylesheet>
