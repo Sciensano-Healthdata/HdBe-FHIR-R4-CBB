@@ -176,7 +176,9 @@
     </xsl:template>
     
     
-    
+    <xd:doc>
+        <xd:desc>Convert ValueSets to HdBe metadata</xd:desc>
+    </xd:doc>
     <xsl:template match="f:ValueSet">
         <xsl:copy>
             <xsl:variable name="name" select="replace(concat(upper-case(substring(f:name/@value,1,1)), substring(f:name/@value, 2)),'Codelijst','')"/>   
@@ -245,10 +247,12 @@
         </xsl:copy>
     </xsl:template>
     
+    <xd:doc>
+        <xd:desc>Convert CodeSystems to HdBe metadata.</xd:desc>
+    </xd:doc>
     <xsl:template match="f:CodeSystem">
         <xsl:copy>
             <xsl:variable name="name" select="concat(upper-case(substring(f:name/@value,1,1)), substring(f:name/@value, 2))"/>   
-            
             <xsl:choose>
                 <xsl:when test="f:id or not(f:id)">
                     <id value="{$name}"/>
@@ -324,13 +328,12 @@
                 <valueMarkdown value="{$translation}"/>
             </extension>
         </extension>
-    </xsl:template>
-    
+    </xsl:template> 
 
     <xd:doc>
         <xd:desc>Template improves .binding.description by using the English name in stead of Dutch based on a hack of using the .short value. Template also converts the valueSet URL to newly assigned URL based on the Dutch ValueSet name.</xd:desc>
     </xd:doc>
-    <xsl:template match="f:differential/f:element/f:binding" name="valueSetReferences">
+    <xsl:template match="f:differential/f:element/f:binding">
                 <xsl:variable name="valueSetNameEN" select="../f:short/@value" as="xs:string"/>
                 <xsl:variable name="valueSetNameNL" select="replace(f:description/@value,'Codelijst', '')" as="xs:string"/>
                 <xsl:copy>
