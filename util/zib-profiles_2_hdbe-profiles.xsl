@@ -99,6 +99,7 @@
     <xsl:template match="f:element/f:type/f:profile">
         <profile>
             <xsl:attribute name="value" select="replace(@value,'http://nictiz.nl/fhir/StructureDefinition/zib-','https://fhir.healthdata.be/StructureDefinition/HdBe-')"/>
+            <xsl:attribute name="value" select="replace(@value,'http://nictiz.nl/fhir/StructureDefinition/ext-','https://fhir.healthdata.be/StructureDefinition/ext-')"/>            
         </profile>
     </xsl:template>
     <xsl:template match="f:element/f:type/f:targetProfile">
