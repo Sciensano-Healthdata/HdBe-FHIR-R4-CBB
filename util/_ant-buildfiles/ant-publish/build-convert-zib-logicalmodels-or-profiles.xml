@@ -79,7 +79,7 @@
             <fileset dir="${xsl.output}" includes="*.*"/>
         </delete>
         <sequential>
-            <fileset id="inputfiles" dir="${xsl.input}" includes="*.xml"/>
+            <fileset id="inputfiles" dir="${xsl.input}" includes="StructureDefinition-ext-*.xml, StructureDefinition-zib-*.xml, StructureDefinition-pattern-*.xml "/>
             <echo/>
             <echo>Converting zib-profiles to HdBe-profiles using ${xsl}</echo>
             <xslt force="true" style="${xsl}" destdir="${xsl.output}" extension=".xml" useImplicitFileset="false">
@@ -88,6 +88,9 @@
                 <classpath location="${xsl.saxon}"/>
             </xslt>
         </sequential>
+        <delete>
+            <fileset dir="${xsl.output}" includes="StructureDefinition*--*.xml, StructureDefinition-*.xml"/>
+        </delete>
     </target>
     
 </project>
