@@ -22,7 +22,7 @@ This document is titled "profiling guidelines", but actually addresses all confo
 FHIR conformance materials will be created in English in order to encourage adoption. A method to include translations to French and Dutch will be investigated and described in a future version.
 
 ## Open vs. closed world modeling <a name="openvsclosedworldmodeling"></a>
-When profiling, an "open world" or a "closed world" model can be chosen. The former means that the profile only allows the elements to be used specified by the logical model, with all the restrictions from the logical model. The latter means that the profile can accommodate the elements specified by the logical model, but doesn't impose further restrictions.
+When profiling, a "closed world" or an "open world" model can be chosen. The former means that the profile only allows the elements to be used specified by the logical model, with all the restrictions from the logical model. The latter means that the profile can accommodate the elements specified by the logical model, but doesn't impose further restrictions.
 
 We adopt the "open world" modeling approach to aid re-usability beyond the known use cases. When restrictions are deemed necessary for a specific use case, it will be added to the use case specific profiles. We only profile elements, cardinalities and bindings that require profiling. We leave other elements, cardinalities and bindings as-is.
 

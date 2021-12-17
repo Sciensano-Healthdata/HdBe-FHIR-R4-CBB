@@ -143,6 +143,9 @@
                 </xsl:choose>
                 <!-- For now, turn of snapshots, because diff and snapthots are the same. -->
                 <xsl:apply-templates select="f:baseDefinition | f:derivation | f:differential"/>
+              
+         <!--       <xsl:call-template name="profileReferences"/> -->               
+        <!--        <xsl:call-template name="valueSetReferences"/>-->
             </xsl:copy>
             </xsl:when>
             <xsl:otherwise>
@@ -152,14 +155,27 @@
         
     </xsl:template>
     
+    <xd:doc>
+        <xd:desc>Remove invalid slicing</xd:desc>
+    </xd:doc>
+    <xsl:template match="f:differential/f:element[f:path[ends-with(@value,'.coding')]]">
+    </xsl:template>
+    
+    
+    
     <xsl:template match="f:ValueSet">
         <xsl:copy>
             <xsl:variable name="name" select="replace(concat(upper-case(substring(f:name/@value,1,1)), substring(f:name/@value, 2)),'Codelijst','')"/>   
             
             <xsl:choose>
-                <xsl:when test="f:id or not(f:id)">
+                <xsl:when test="(f:id or not(f:id)) and ends-with(f:name/@value, 'Codelijst')">
                     <id value="{$name}"/>
                 </xsl:when>
+                <xsl:otherwise>
+                    <id>
+                        <xsl:attribute name="value" select="f:name/@value"/>
+                    </id>
+                </xsl:otherwise>
             </xsl:choose>
             <xsl:apply-templates select="f:meta | f:implicitRules | f:language | f:text | f:contained | f:extension | f:modifierExtension"/>
             <xsl:choose>
@@ -296,35 +312,42 @@
         </extension>
     </xsl:template>
     
-   
+
     <xd:doc>
         <xd:desc>Template improves .binding.description by using the English name in stead of Dutch based on a hack of using the .short value. Template also converts the valueSet URL to newly assigned URL based on the Dutch ValueSet name.</xd:desc>
     </xd:doc>
-    <xsl:template match="f:StructureDefinition/f:differential/f:element/f:binding">
-        <xsl:variable name="valueSetNameEN" select="../f:short/@value"/>
-        <xsl:variable name="valueSetNameNL" select="replace(f:description/@value,'Codelijst', '')"/>
-        <xsl:copy>
-            <xsl:apply-templates select="f:strength"/>
-            <xsl:choose>
-                <xsl:when test="f:description">
-                    <description>
-                        <xsl:attribute name="value" select="concat($valueSetNameEN, ' codes.')"/>
-                    </description>
-                </xsl:when>
-            </xsl:choose>
-            <xsl:choose>
-                <xsl:when test="f:valueSet">
-                    <!-- ValueSet URLs are build based on the Dutch name. There is no EN translation available in ArtDecor and therefore it is also not in in the exprot. -->
-                    <valueSet value="{$urlBase}{$urlValueSet}{$valueSetNameNL}"/>
-                </xsl:when>
-            </xsl:choose>            
-        </xsl:copy>
+    <xsl:template match="f:differential/f:element/f:binding" name="valueSetReferences">
+        <!-- If valueset not in an invalid slicing.... update.-->
+       <!-- <xsl:if test="not(f:differential/f:element[f:path[ends-with(@value,'.coding')]])">-->
+            <!--<xsl:for-each select="f:differential/f:element/f:binding">-->
+                <xsl:variable name="valueSetNameEN" select="../f:short/@value"/>
+                <xsl:variable name="valueSetNameNL" select="replace(f:description/@value,'Codelijst', '')" as="xs:string"/>
+                <xsl:copy>
+                    <xsl:apply-templates select="f:strength"/>
+                    <xsl:choose>
+                        <xsl:when test="f:description">
+                            <description>
+                                <xsl:attribute name="value" select="concat($valueSetNameEN, ' codes.')"/>
+                            </description>
+                        </xsl:when>
+                    </xsl:choose>
+                    <xsl:choose>
+                        <xsl:when test="f:valueSet">
+                            <!-- ValueSet URLs are build based on the Dutch name. There is no EN translation available in ArtDecor and therefore it is also not in in the exprot. -->
+                            <valueSet value="{$urlBase}{$urlValueSet}{$valueSetNameNL}"/>
+                        </xsl:when>
+                    </xsl:choose>            
+                </xsl:copy>
+            <!--</xsl:for-each>-->    
+        <!--</xsl:if>-->
+        
     </xsl:template>
     
     <xd:doc>
         <xd:desc>Template to move profile reference from .profile to .targetProfile and to convert the reference URL to newly assigned URL based on a hack (the value located in .short is used).</xd:desc>
     </xd:doc>
-    <xsl:template match="f:StructureDefinition/f:differential/f:element/f:type[f:code[@value='Reference']]"> 
+    <xsl:template name="profileReferences"> 
+        <xsl:for-each select="f:differential/f:element/f:type[f:code[@value='Reference']]">
         <xsl:variable name="zibName" select="../f:short/@value"/>
         <xsl:copy>
             <xsl:apply-templates select="f:code"/>
@@ -339,6 +362,7 @@
             <xsl:apply-templates select="f:aggregation"/>
             <xsl:apply-templates select="f:versioning"/>
         </xsl:copy>
+        </xsl:for-each>
     </xsl:template>
     
     <xd:doc>
@@ -357,12 +381,6 @@
                                 <xsl:apply-templates select="."/>
                             </xsl:result-document>
                         </xsl:when>
-                        <xsl:otherwise>
-                            <!-- This happens when transforming a non-saved document in Oxygen -->
-                            <xsl:message>Could not output to result-document without Resource.id.
-                                Outputting to console instead.</xsl:message>
-                            <xsl:copy-of select="."/>
-                        </xsl:otherwise>
                     </xsl:choose>
                 </xsl:for-each>
                 <xsl:for-each select="$output/f:ValueSet">
@@ -372,12 +390,6 @@
                                 <xsl:apply-templates select="."/>
                             </xsl:result-document>
                         </xsl:when>
-                        <xsl:otherwise>
-                            <!-- This happens when transforming a non-saved document in Oxygen -->
-                            <xsl:message>Could not output to result-document without Resource.id.
-                                Outputting to console instead.</xsl:message>
-                            <xsl:copy-of select="."/>
-                        </xsl:otherwise>
                     </xsl:choose>
                 </xsl:for-each>
                 <xsl:for-each select="$output/f:CodeSystem">
@@ -387,12 +399,6 @@
                                 <xsl:apply-templates select="."/>
                             </xsl:result-document>
                         </xsl:when>
-                        <xsl:otherwise>
-                            <!-- This happens when transforming a non-saved document in Oxygen -->
-                            <xsl:message>Could not output to result-document without Resource.id.
-                                Outputting to console instead.</xsl:message>
-                            <xsl:copy-of select="."/>
-                        </xsl:otherwise>
                     </xsl:choose>
                 </xsl:for-each>
             </xsl:when>
