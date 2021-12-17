@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeLivingSituation"/>
+   <id value="HdBe-LivingSituation"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeLivingSituation"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LivingSituation"/>
    <name value="HdBeLivingSituation">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/living_situation"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/living_situation"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -121,8 +121,8 @@
             </example>
             <binding>
             <strength value="required"/>
-            <description value="HouseType codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/HouseType codes."/>
+            <description value="HouseType codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/WoningType"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.8.5--20200901000000">
@@ -164,8 +164,8 @@
             </type>
             <binding>
             <strength value="extensible"/>
-            <description value="HomeAdaption codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/HomeAdaption codes."/>
+            <description value="HomeAdaption codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/WoningAanpassing"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.8.4--20200901000000">
@@ -207,8 +207,8 @@
             </type>
             <binding>
             <strength value="extensible"/>
-            <description value="LivingCondition codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/LivingCondition codes."/>
+            <description value="LivingCondition codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/WoonOmstandigheid"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.8.2--20200901000000">

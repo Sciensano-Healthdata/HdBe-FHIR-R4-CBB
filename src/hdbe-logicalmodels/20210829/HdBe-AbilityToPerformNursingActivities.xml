@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeAbilityToPerformNursingActivities"/>
+   <id value="HdBe-AbilityToPerformNursingActivities"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeAbilityToPerformNursingActivities"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AbilityToPerformNursingActivities"/>
    <name value="HdBeAbilityToPerformNursingActivities">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/ability_to_perform_nursing_activities"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/ability_to_perform_nursing_activities"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -106,9 +106,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NursingIntervention"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.14.2.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.34.2--20200901000000">
             <path value="ability_to_perform_nursing_activities.perform_nursing_activity"/>
@@ -160,8 +160,8 @@
             </example>
             <binding>
             <strength value="required"/>
-            <description value="PerformNursingActivity codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/PerformNursingActivity codes."/>
+            <description value="PerformNursingActivity codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/VerrichtenVPKHandeling"/>
          </binding>
         </element>
     </differential>

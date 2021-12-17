@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBePayer"/>
+   <id value="HdBe-Payer"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBePayer"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Payer"/>
    <name value="HdBePayer">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/payer"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/payer"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -479,8 +479,8 @@
             </example>
             <binding>
             <strength value="required"/>
-            <description value="InsuranceType codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/InsuranceType codes."/>
+            <description value="InsuranceType codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Verzekeringssoort"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.7--20200901000000">
@@ -817,8 +817,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="HouseNumberIndication codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/HouseNumberIndication codes."/>
+            <description value="HouseNumberIndication codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/AanduidingBijNummer"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.30--20200901000000">
@@ -981,58 +981,9 @@
                 </valueCodeableConcept>
             </example>
         </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.33--20200901000000.coding">
-            <path value="payer.address_information.country.coding"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="system"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <definition value="-"/>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.33--20200901000000.coding:LandGBACodelijst">
-            <path value="payer.address_information.country.coding"/>
-            <sliceName value="LandGBACodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.33--20200901000000.coding:LandISOCodelijst">
-            <path value="payer.address_information.country.coding"/>
-            <sliceName value="LandISOCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
+        
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.34--20200901000000">
             <path value="payer.address_information.additional_information"/>
             <short value="AdditionalInformation">
@@ -1110,8 +1061,8 @@
             </example>
             <binding>
             <strength value="extensible"/>
-            <description value="AddressType codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/AddressType codes."/>
+            <description value="AddressType codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/AdresSoort"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.12--20200901000000">
@@ -1252,8 +1203,8 @@
             </type>
             <binding>
             <strength value="extensible"/>
-            <description value="TelecomType codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/TelecomType codes."/>
+            <description value="TelecomType codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/TelecomType"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.39--20200901000000">
@@ -1296,8 +1247,8 @@
             </example>
             <binding>
             <strength value="extensible"/>
-            <description value="NumberType codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/NumberType codes."/>
+            <description value="NumberType codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/NummerSoort"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.40--20200901000000">
@@ -1444,8 +1395,8 @@
             </example>
             <binding>
             <strength value="extensible"/>
-            <description value="EmailAddressType codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/EmailAddressType codes."/>
+            <description value="EmailAddressType codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/EmailSoort"/>
          </binding>
         </element>
     </differential>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeLegalSituation"/>
+   <id value="HdBe-LegalSituation"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeLegalSituation"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LegalSituation"/>
    <name value="HdBeLegalSituation">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/legal_situation"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/legal_situation"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -142,8 +142,8 @@
             <condition value="NL-CM-7.17.2-1"/>
             <binding>
             <strength value="required"/>
-            <description value="LegalStatus codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/LegalStatus codes."/>
+            <description value="LegalStatus codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/JuridischeStatus"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.17.5--20200901000000">
@@ -181,8 +181,8 @@
             <condition value="NL-CM-7.17.2-1"/>
             <binding>
             <strength value="required"/>
-            <description value="Representation codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Representation codes."/>
+            <description value="Representation codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Vertegenwoordiging"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.17.3--20200901000000">

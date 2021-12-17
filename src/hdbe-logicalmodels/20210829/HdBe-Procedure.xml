@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeProcedure"/>
+   <id value="HdBe-Procedure"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeProcedure"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Procedure"/>
    <name value="HdBeProcedure">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/procedure"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/procedure"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -189,109 +189,12 @@
                 </valueCodeableConcept>
             </example>
         </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.1.4--20200901000000.coding">
-            <path value="procedure.procedure_type.coding"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="system"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <definition value="-"/>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.1.4--20200901000000.coding:VerrichtingTypeDHDCodelijst">
-            <path value="procedure.procedure_type.coding"/>
-            <sliceName value="VerrichtingTypeDHDCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.1.4--20200901000000.coding:VerrichtingTypeNZaCodelijst">
-            <path value="procedure.procedure_type.coding"/>
-            <sliceName value="VerrichtingTypeNZaCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.1.4--20200901000000.coding:VerrichtingTypeCBVCodelijst">
-            <path value="procedure.procedure_type.coding"/>
-            <sliceName value="VerrichtingTypeCBVCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.1.4--20200901000000.coding:VerrichtingTypeGGZCodelijst">
-            <path value="procedure.procedure_type.coding"/>
-            <sliceName value="VerrichtingTypeGGZCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.1.4--20200901000000.coding:VerrichtingTypeNHGCodelijst">
-            <path value="procedure.procedure_type.coding"/>
-            <sliceName value="VerrichtingTypeNHGCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
+        
+        
+        
+        
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.1.12--20200901000000">
             <path value="procedure.procedure_method"/>
             <code>
@@ -331,8 +234,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="ProcedureMethod codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ProcedureMethod codes."/>
+            <description value="ProcedureMethod codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/VerrichtingMethode"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.1.13--20200901000000">
@@ -411,58 +314,9 @@
                 <code value="CodeableConcept"/>
             </type>
         </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.426--20200901000000.coding">
-            <path value="procedure.procedure_anatomical_location.location.coding"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="system"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <definition value="-"/>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.426--20200901000000.coding:LocatieCodelijst">
-            <path value="procedure.procedure_anatomical_location.location.coding"/>
-            <sliceName value="LocatieCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.426--20200901000000.coding:LocatieICD-O-3Codelijst">
-            <path value="procedure.procedure_anatomical_location.location.coding"/>
-            <sliceName value="LocatieICD-O-3Codelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
+        
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.427--20200901000000">
             <path value="procedure.procedure_anatomical_location.laterality"/>
             <code>
@@ -508,8 +362,8 @@
             </example>
             <binding>
             <strength value="required"/>
-            <description value="Laterality codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Laterality codes."/>
+            <description value="Laterality codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.1.9--20200901000000">
@@ -580,9 +434,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.5.1.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.1.7--20200901000000">
             <path value="procedure.medical_device"/>
@@ -614,9 +468,9 @@
                 <max value="*"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicalDevice"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.10.1.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.1.5--20200901000000">
             <path value="procedure.location"/>
@@ -686,9 +540,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.17.2.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.1.6--20200901000000">
             <path value="procedure.performer"/>
@@ -758,9 +612,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.17.1.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.1.10--20200901000000">
             <path value="procedure.requester"/>
@@ -830,9 +684,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.17.1.1--20200901000000"/>
+            </type>
         </element>
     </differential>
 </StructureDefinition>

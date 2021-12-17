@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeAdministrationAgreement"/>
+   <id value="HdBe-AdministrationAgreement"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeAdministrationAgreement"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AdministrationAgreement"/>
    <name value="HdBeAdministrationAgreement">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/administration_agreement"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/administration_agreement"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -144,9 +144,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.17.2.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.8.20237--20200901000000">
             <path value="administration_agreement.medicine_for_administration_agreement"/>
@@ -211,9 +211,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.9.7.19926--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.8.22098--20200901000000">
             <path value="administration_agreement.instructions_for_use"/>
@@ -390,8 +390,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="RouteOfAdministration codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/RouteOfAdministration codes."/>
+            <description value="RouteOfAdministration codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieToedieningsweg"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.365--20200901000000">
@@ -1003,8 +1003,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="Condition codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Condition codes."/>
+            <description value="Condition codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ZonodigCriterium"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.383--20200901000000">
@@ -1245,8 +1245,8 @@
             </example>
             <binding>
             <strength value="required"/>
-            <description value="WeekDay codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/WeekDay codes."/>
+            <description value="WeekDay codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Weekdag"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.390--20200901000000">
@@ -1289,8 +1289,8 @@
             </example>
             <binding>
             <strength value="required"/>
-            <description value="TimeOfDay codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/TimeOfDay codes."/>
+            <description value="TimeOfDay codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Dagdeel"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.391--20200901000000">
@@ -1592,9 +1592,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationAgreement"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.9.6.9580--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.8.22498--20200901000000">
             <path value="administration_agreement.administration_agreement_stop_type"/>
@@ -1630,8 +1630,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="AdministrationAgreementStopType codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/AdministrationAgreementStopType codes."/>
+            <description value="AdministrationAgreementStopType codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ToedieningsafspraakStopType"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.8.23034--20200901000000">
@@ -1701,8 +1701,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="AdministrationAgreementAdditionalInformation codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/AdministrationAgreementAdditionalInformation codes."/>
+            <description value="AdministrationAgreementAdditionalInformation codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ToedieningsafspraakAanvullendeInformatie"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.8.22275--20200901000000">

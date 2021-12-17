@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeDrugUse"/>
+   <id value="HdBe-DrugUse"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeDrugUse"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-DrugUse"/>
    <name value="HdBeDrugUse">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/drug_use"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/drug_use"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -294,8 +294,8 @@
             </example>
             <binding>
             <strength value="extensible"/>
-            <description value="DrugOrMedicationType codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/DrugOrMedicationType codes."/>
+            <description value="DrugOrMedicationType codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/DrugsOfGeneesmiddelSoort"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.4.3--20200901000000">
@@ -348,8 +348,8 @@
             </example>
             <binding>
             <strength value="extensible"/>
-            <description value="DrugUseStatus codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/DrugUseStatus codes."/>
+            <description value="DrugUseStatus codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/DrugsGebruikStatus"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.4.4--20200901000000">
@@ -402,8 +402,8 @@
             </example>
             <binding>
             <strength value="extensible"/>
-            <description value="RouteOfAdministration codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/RouteOfAdministration codes."/>
+            <description value="RouteOfAdministration codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Toedieningsweg"/>
          </binding>
         </element>
     </differential>

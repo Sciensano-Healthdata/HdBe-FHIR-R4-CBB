@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeRespiration"/>
+   <id value="HdBe-Respiration"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeRespiration"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Respiration"/>
    <name value="HdBeRespiration">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/respiration"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/respiration"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -195,8 +195,8 @@
             </type>
             <binding>
             <strength value="extensible"/>
-            <description value="Rhythm codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Rhythm codes."/>
+            <description value="Rhythm codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Ritme"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.5.6--20200901000000">
@@ -238,8 +238,8 @@
             </type>
             <binding>
             <strength value="extensible"/>
-            <description value="Depth codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Depth codes."/>
+            <description value="Depth codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Diepte"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.5.7--20200901000000">
@@ -281,8 +281,8 @@
             </type>
             <binding>
             <strength value="extensible"/>
-            <description value="DeviatingBreathingPattern codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/DeviatingBreathingPattern codes."/>
+            <description value="DeviatingBreathingPattern codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/AfwijkendAdemhalingspatroon"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.5.12--20200901000000">
@@ -608,58 +608,9 @@
                 </valueCodeableConcept>
             </example>
         </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.3--20200901000000.coding">
-            <path value="respiration.administered_oxygen.administration_device.medical_device.product.product_id.coding"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="system"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <definition value="-"/>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.3--20200901000000.coding:GTINProductIDCodelijst">
-            <path value="respiration.administered_oxygen.administration_device.medical_device.product.product_id.coding"/>
-            <sliceName value="GTINProductIDCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.3--20200901000000.coding:HIBCProductIDCodelijst">
-            <path value="respiration.administered_oxygen.administration_device.medical_device.product.product_id.coding"/>
-            <sliceName value="HIBCProductIDCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
+        
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.4--20200901000000">
             <path value="respiration.administered_oxygen.administration_device.medical_device.product.product_type"/>
             <short value="ProductType">
@@ -694,8 +645,8 @@
             </type>
             <binding>
             <strength value="extensible"/>
-            <description value="ProductType codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ProductType codes."/>
+            <description value="ProductType codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ToedieningHulpmiddel"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.5--20200901000000">
@@ -807,58 +758,9 @@
                 <code value="CodeableConcept"/>
             </type>
         </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.7--20200901000000.coding">
-            <path value="respiration.administered_oxygen.administration_device.medical_device.anatomical_location.location.coding"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="system"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <definition value="-"/>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.7--20200901000000.coding:LocatieCodelijst">
-            <path value="respiration.administered_oxygen.administration_device.medical_device.anatomical_location.location.coding"/>
-            <sliceName value="LocatieCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.7--20200901000000.coding:LocatieICD-O-3Codelijst">
-            <path value="respiration.administered_oxygen.administration_device.medical_device.anatomical_location.location.coding"/>
-            <sliceName value="LocatieICD-O-3Codelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
+        
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.8--20200901000000">
             <path value="respiration.administered_oxygen.administration_device.medical_device.anatomical_location.laterality"/>
             <code>
@@ -904,8 +806,8 @@
             </example>
             <binding>
             <strength value="required"/>
-            <description value="Laterality codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Laterality codes."/>
+            <description value="Laterality codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.9--20200901000000">
@@ -971,9 +873,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.5.1.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.11--20200901000000">
             <path value="respiration.administered_oxygen.administration_device.medical_device.start_date"/>
@@ -1148,9 +1050,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.17.2.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.16--20200901000000">
             <path value="respiration.administered_oxygen.administration_device.medical_device.health_professional"/>
@@ -1182,9 +1084,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.17.1.1--20200901000000"/>
+            </type>
         </element>
     </differential>
 </StructureDefinition>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeVaccination"/>
+   <id value="HdBe-Vaccination"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeVaccination"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Vaccination"/>
    <name value="HdBeVaccination">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/vaccination"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/vaccination"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -115,126 +115,13 @@
                 </valueCodeableConcept>
             </example>
         </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.11.1.2--20200901000000.coding">
-            <path value="vaccination.product_code.coding"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="system"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <definition value="-"/>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.11.1.2--20200901000000.coding:ProductCodePRKCodelijst">
-            <path value="vaccination.product_code.coding"/>
-            <sliceName value="ProductCodePRKCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.11.1.2--20200901000000.coding:ProductCodeHPKCodelijst">
-            <path value="vaccination.product_code.coding"/>
-            <sliceName value="ProductCodeHPKCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.11.1.2--20200901000000.coding:ProductCodeGPKCodelijst">
-            <path value="vaccination.product_code.coding"/>
-            <sliceName value="ProductCodeGPKCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.11.1.2--20200901000000.coding:ProductCodeATCCodelijst">
-            <path value="vaccination.product_code.coding"/>
-            <sliceName value="ProductCodeATCCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.11.1.2--20200901000000.coding:ProductCodeGTINCodelijst">
-            <path value="vaccination.product_code.coding"/>
-            <sliceName value="ProductCodeGTINCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.11.1.2--20200901000000.coding:ProductCodeZICodelijst">
-            <path value="vaccination.product_code.coding"/>
-            <sliceName value="ProductCodeZICodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
+        
+        
+        
+        
+        
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.11.1.4--20200901000000">
             <path value="vaccination.dose"/>
             <short value="Dose">
@@ -382,9 +269,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.17.1.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.11.1.7--20200901000000">
             <path value="vaccination.comment"/>

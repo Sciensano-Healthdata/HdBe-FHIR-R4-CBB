@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeBowelFunction"/>
+   <id value="HdBe-BowelFunction"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeBowelFunction"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BowelFunction"/>
    <name value="HdBeBowelFunction">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/bowel_function"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/bowel_function"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -115,8 +115,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="FecalContinence codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/FecalContinence codes."/>
+            <description value="FecalContinence codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/FecesContinentie"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.15.3--20200901000000">
@@ -149,9 +149,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Stoma"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.5.2.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.15.4--20200901000000">
             <path value="bowel_function.frequency"/>
@@ -248,8 +248,8 @@
             </example>
             <binding>
             <strength value="required"/>
-            <description value="DefecationConsistency codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/DefecationConsistency codes."/>
+            <description value="DefecationConsistency codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/DefecatieConsistentie"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.15.10--20200901000000">
@@ -302,8 +302,8 @@
             </example>
             <binding>
             <strength value="extensible"/>
-            <description value="DefecationColor codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/DefecationColor codes."/>
+            <description value="DefecationColor codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/DefecatieKleur"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.15.6--20200901000000">
@@ -379,9 +379,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicalDevice"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.10.1.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.15.7--20200901000000">
             <path value="bowel_function.comment"/>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeMedicationContraIndication"/>
+   <id value="HdBe-MedicationContraIndication"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeMedicationContraIndication"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationContraIndication"/>
    <name value="HdBeMedicationContraIndication">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/medication_contra_indication"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/medication_contra_indication"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -266,9 +266,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.17.1.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.14.6--20200901000000">
             <path value="medication_contra_indication.medication_contra_indication_name"/>
@@ -309,8 +309,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="MedicationContraIndicationName codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicationContraIndicationName codes."/>
+            <description value="MedicationContraIndicationName codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieContraIndicatieNaam"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.14.7--20200901000000">

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeBloodPressure"/>
+   <id value="HdBe-BloodPressure"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeBloodPressure"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BloodPressure"/>
    <name value="HdBeBloodPressure">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/blood_pressure"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/blood_pressure"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -110,8 +110,8 @@
             </type>
             <binding>
             <strength value="extensible"/>
-            <description value="MeasuringMethod codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/MeasuringMethod codes."/>
+            <description value="MeasuringMethod codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Meetmethode"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.9--20200901000000">
@@ -153,8 +153,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="CuffType codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/CuffType codes."/>
+            <description value="CuffType codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ManchetType"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.10--20200901000000">
@@ -197,8 +197,8 @@
             </example>
             <binding>
             <strength value="extensible"/>
-            <description value="MeasuringLocation codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/MeasuringLocation codes."/>
+            <description value="MeasuringLocation codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/MeetLocatie"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.8--20200901000000">
@@ -240,8 +240,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="DiastolicEndpoint codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/DiastolicEndpoint codes."/>
+            <description value="DiastolicEndpoint codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/DiastolischEindpunt"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.4.2--20200901000000">
@@ -483,8 +483,8 @@
             </example>
             <binding>
             <strength value="extensible"/>
-            <description value="Position codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Position codes."/>
+            <description value="Position codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Houding"/>
          </binding>
         </element>
     </differential>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeFamilySituation"/>
+   <id value="HdBe-FamilySituation"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeFamilySituation"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FamilySituation"/>
    <name value="HdBeFamilySituation">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/family_situation"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/family_situation"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -139,9 +139,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MaritalStatusRC"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.7.9.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.13.8--20200901000000">
             <path value="family_situation.family_composition"/>
@@ -182,8 +182,8 @@
             </type>
             <binding>
             <strength value="extensible"/>
-            <description value="FamilyComposition codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/FamilyComposition codes."/>
+            <description value="FamilyComposition codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Gezinssamenstelling"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.13.2--20200901000000">

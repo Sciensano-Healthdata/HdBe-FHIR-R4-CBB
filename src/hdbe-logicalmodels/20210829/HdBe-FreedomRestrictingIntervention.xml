@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeFreedomRestrictingIntervention"/>
+   <id value="HdBe-FreedomRestrictingIntervention"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeFreedomRestrictingIntervention"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FreedomRestrictingIntervention"/>
    <name value="HdBeFreedomRestrictingIntervention">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/freedomrestricting_intervention"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/freedomrestricting_intervention"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -186,9 +186,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LegalSituation"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.7.17.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.6.5--20200901000000">
             <path value="freedomrestricting_intervention.type_of_intervention"/>
@@ -239,75 +239,10 @@
                 </valueCodeableConcept>
             </example>
         </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.6.5--20200901000000.coding">
-            <path value="freedomrestricting_intervention.type_of_intervention.coding"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="system"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <definition value="-"/>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.6.5--20200901000000.coding:SoortInterventieCodelijst">
-            <path value="freedomrestricting_intervention.type_of_intervention.coding"/>
-            <sliceName value="SoortInterventieCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="extensible"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.6.5--20200901000000.coding:SoortInterventieWvggzCodelijst">
-            <path value="freedomrestricting_intervention.type_of_intervention.coding"/>
-            <sliceName value="SoortInterventieWvggzCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.6.5--20200901000000.coding:SoortInterventieWzdCodelijst">
-            <path value="freedomrestricting_intervention.type_of_intervention.coding"/>
-            <sliceName value="SoortInterventieWzdCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
+        
+        
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.6.6--20200901000000">
             <path value="freedomrestricting_intervention.reason_for_use"/>
             <short value="ReasonForUse">
@@ -342,8 +277,8 @@
             </type>
             <binding>
             <strength value="extensible"/>
-            <description value="ReasonForUse codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ReasonForUse codes."/>
+            <description value="ReasonForUse codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/RedenVanToepassen"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.6.7--20200901000000">
@@ -396,8 +331,8 @@
             </example>
             <binding>
             <strength value="required"/>
-            <description value="Assent codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Assent codes."/>
+            <description value="Assent codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Instemming"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.6.8--20200901000000">

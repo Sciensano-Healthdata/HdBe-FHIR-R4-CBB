@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeDAS"/>
+   <id value="HdBe-DAS"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeDAS"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-DAS"/>
    <name value="HdBeDAS">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/das"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/das"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -178,8 +178,8 @@
             </example>
             <binding>
             <strength value="extensible"/>
-            <description value="DASMethod codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/DASMethod codes."/>
+            <description value="DASMethod codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/DASMethode"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.21--20200901000000">
@@ -320,8 +320,8 @@
             </type>
             <binding>
             <strength value="extensible"/>
-            <description value="Location codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Location codes."/>
+            <description value="Location codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Locatie"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.102--20200901000000">
@@ -369,8 +369,8 @@
             </example>
             <binding>
             <strength value="required"/>
-            <description value="Laterality codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Laterality codes."/>
+            <description value="Laterality codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.4--20200901000000">
@@ -655,9 +655,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LaboratoryTestResult"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.13.1.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.19--20200901000000">
             <path value="das.inflammation_indicator.crp"/>
@@ -732,9 +732,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LaboratoryTestResult"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.13.1.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.17--20200901000000">
             <path value="das.dasdate_time"/>

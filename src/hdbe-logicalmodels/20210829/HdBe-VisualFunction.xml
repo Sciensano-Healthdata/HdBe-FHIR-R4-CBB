@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeVisualFunction"/>
+   <id value="HdBe-VisualFunction"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeVisualFunction"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-VisualFunction"/>
    <name value="HdBeVisualFunction">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/visual_function"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/visual_function"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -126,8 +126,8 @@
             </example>
             <binding>
             <strength value="required"/>
-            <description value="VisualFunction codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/VisualFunction codes."/>
+            <description value="VisualFunction codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/VisueleFunctie"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.16.4--20200901000000">
@@ -273,58 +273,9 @@
                 </valueCodeableConcept>
             </example>
         </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.127--20200901000000.coding">
-            <path value="visual_function.visual_aid.medical_device.product.product_id.coding"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="system"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <definition value="-"/>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.127--20200901000000.coding:GTINProductIDCodelijst">
-            <path value="visual_function.visual_aid.medical_device.product.product_id.coding"/>
-            <sliceName value="GTINProductIDCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.127--20200901000000.coding:HIBCProductIDCodelijst">
-            <path value="visual_function.visual_aid.medical_device.product.product_id.coding"/>
-            <sliceName value="HIBCProductIDCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
+        
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.128--20200901000000">
             <path value="visual_function.visual_aid.medical_device.product.product_type"/>
             <short value="ProductType">
@@ -365,8 +316,8 @@
             </example>
             <binding>
             <strength value="extensible"/>
-            <description value="ProductType codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ProductType codes."/>
+            <description value="ProductType codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ZienHulpmiddelType"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.129--20200901000000">
@@ -478,58 +429,9 @@
                 <code value="CodeableConcept"/>
             </type>
         </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.131--20200901000000.coding">
-            <path value="visual_function.visual_aid.medical_device.anatomical_location.location.coding"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="system"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <definition value="-"/>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.131--20200901000000.coding:LocatieCodelijst">
-            <path value="visual_function.visual_aid.medical_device.anatomical_location.location.coding"/>
-            <sliceName value="LocatieCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.131--20200901000000.coding:LocatieICD-O-3Codelijst">
-            <path value="visual_function.visual_aid.medical_device.anatomical_location.location.coding"/>
-            <sliceName value="LocatieICD-O-3Codelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
+        
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.132--20200901000000">
             <path value="visual_function.visual_aid.medical_device.anatomical_location.laterality"/>
             <code>
@@ -575,8 +477,8 @@
             </example>
             <binding>
             <strength value="required"/>
-            <description value="Laterality codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Laterality codes."/>
+            <description value="Laterality codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.133--20200901000000">
@@ -642,9 +544,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.5.1.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.135--20200901000000">
             <path value="visual_function.visual_aid.medical_device.start_date"/>
@@ -819,9 +721,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.17.2.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.140--20200901000000">
             <path value="visual_function.visual_aid.medical_device.health_professional"/>
@@ -853,9 +755,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.17.1.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.16.2--20200901000000">
             <path value="visual_function.comment"/>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeFamilyHistory"/>
+   <id value="HdBe-FamilyHistory"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeFamilyHistory"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FamilyHistory"/>
    <name value="HdBeFamilyHistory">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/family_history"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/family_history"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -182,8 +182,8 @@
             </example>
             <binding>
             <strength value="extensible"/>
-            <description value="BiologicalRelationship codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/BiologicalRelationship codes."/>
+            <description value="BiologicalRelationship codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/BiologischeRelatie"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.6.1.5--20200901000000">
@@ -365,9 +365,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.5.1.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.6.1.9--20200901000000">
             <path value="family_history.family_member.disorder.is_cause_of_death"/>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBePainCharacteristics"/>
+   <id value="HdBe-PainCharacteristics"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBePainCharacteristics"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PainCharacteristics"/>
    <name value="HdBePainCharacteristics">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/pain_characteristics"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/pain_characteristics"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -115,8 +115,8 @@
             </type>
             <binding>
             <strength value="extensible"/>
-            <description value="PainType codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/PainType codes."/>
+            <description value="PainType codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/PijnAard"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.21.3--20200901000000">
@@ -195,58 +195,9 @@
                 <code value="CodeableConcept"/>
             </type>
         </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.322--20200901000000.coding">
-            <path value="pain_characteristics.pain_location.location.coding"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="system"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <definition value="-"/>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.322--20200901000000.coding:LocatieCodelijst">
-            <path value="pain_characteristics.pain_location.location.coding"/>
-            <sliceName value="LocatieCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.322--20200901000000.coding:LocatieICD-O-3Codelijst">
-            <path value="pain_characteristics.pain_location.location.coding"/>
-            <sliceName value="LocatieICD-O-3Codelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
+        
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.323--20200901000000">
             <path value="pain_characteristics.pain_location.laterality"/>
             <code>
@@ -292,8 +243,8 @@
             </example>
             <binding>
             <strength value="required"/>
-            <description value="Laterality codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Laterality codes."/>
+            <description value="Laterality codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.21.4--20200901000000">
@@ -445,9 +396,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PainScore"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.12.9.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.21.6--20200901000000">
             <path value="pain_characteristics.pain_pattern"/>
@@ -488,8 +439,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="PainPattern codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/PainPattern codes."/>
+            <description value="PainPattern codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/PijnPatroon"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.21.7--20200901000000">
@@ -526,8 +477,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="PainCourse codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/PainCourse codes."/>
+            <description value="PainCourse codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Pijnbeloop"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.21.8--20200901000000">

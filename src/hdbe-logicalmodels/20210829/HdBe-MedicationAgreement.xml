@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeMedicationAgreement"/>
+   <id value="HdBe-MedicationAgreement"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeMedicationAgreement"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationAgreement"/>
    <name value="HdBeMedicationAgreement">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/medication_agreement"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/medication_agreement"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -144,9 +144,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.17.1.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.6.23133--20200901000000">
             <path value="medication_agreement.prescription_reason"/>
@@ -216,9 +216,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.5.1.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.6.19925--20200901000000">
             <path value="medication_agreement.agreed_medicine"/>
@@ -283,9 +283,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.9.7.19926--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.6.23240--20200901000000">
             <path value="medication_agreement.instructions_for_use"/>
@@ -462,8 +462,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="RouteOfAdministration codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/RouteOfAdministration codes."/>
+            <description value="RouteOfAdministration codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieToedieningsweg"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.188--20200901000000">
@@ -1075,8 +1075,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="Condition codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Condition codes."/>
+            <description value="Condition codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ZonodigCriterium"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.206--20200901000000">
@@ -1317,8 +1317,8 @@
             </example>
             <binding>
             <strength value="required"/>
-            <description value="WeekDay codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/WeekDay codes."/>
+            <description value="WeekDay codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Weekdag"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.213--20200901000000">
@@ -1361,8 +1361,8 @@
             </example>
             <binding>
             <strength value="required"/>
-            <description value="TimeOfDay codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/TimeOfDay codes."/>
+            <description value="TimeOfDay codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Dagdeel"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.214--20200901000000">
@@ -1635,8 +1635,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="MedicationAgreementStopType codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicationAgreementStopType codes."/>
+            <description value="MedicationAgreementStopType codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieafspraakStopType"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.6.22094--20200901000000">
@@ -1678,8 +1678,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="ReasonMedicationAgreement codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ReasonMedicationAgreement codes."/>
+            <description value="ReasonMedicationAgreement codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/RedenMedicatieafspraak"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.6.23283--20200901000000">
@@ -1716,8 +1716,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="MedicationAgreementAdditionalInformation codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicationAgreementAdditionalInformation codes."/>
+            <description value="MedicationAgreementAdditionalInformation codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieafspraakAanvullendeInformatie"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.6.22273--20200901000000">

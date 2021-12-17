@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeMedicationDispense"/>
+   <id value="HdBe-MedicationDispense"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeMedicationDispense"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationDispense"/>
    <name value="HdBeMedicationDispense">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/medication_dispense"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/medication_dispense"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -144,9 +144,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.17.2.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.9.22396--20200901000000">
             <path value="medication_dispense.dispense_request"/>
@@ -178,9 +178,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-DispenseRequest"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.9.10.19963--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.9.22259--20200901000000">
             <path value="medication_dispense.dispensed_medicine"/>
@@ -245,9 +245,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.9.7.19926--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.9.20272--20200901000000">
             <path value="medication_dispense.medication_dispense_date_time"/>
@@ -349,8 +349,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="DistributionForm codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/DistributionForm codes."/>
+            <description value="DistributionForm codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieverstrekkingDistributievorm"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.9.20924--20200901000000">
@@ -427,8 +427,8 @@
             </type>
             <binding>
             <strength value="required"/>
-            <description value="MedicationDispenseAdditionalInformation codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicationDispenseAdditionalInformation codes."/>
+            <description value="MedicationDispenseAdditionalInformation codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieverstrekkingAanvullendeInformatie"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.9.20923--20200901000000">

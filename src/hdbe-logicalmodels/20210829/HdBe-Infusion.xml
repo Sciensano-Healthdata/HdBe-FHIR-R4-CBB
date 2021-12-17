@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeInfusion"/>
+   <id value="HdBe-Infusion"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeInfusion"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Infusion"/>
    <name value="HdBeInfusion">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/infusion"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/infusion"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -219,58 +219,9 @@
                 </valueCodeableConcept>
             </example>
         </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.155--20200901000000.coding">
-            <path value="infusion.infusion_catheter.medical_device.product.product_id.coding"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="system"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <definition value="-"/>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.155--20200901000000.coding:GTINProductIDCodelijst">
-            <path value="infusion.infusion_catheter.medical_device.product.product_id.coding"/>
-            <sliceName value="GTINProductIDCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.155--20200901000000.coding:HIBCProductIDCodelijst">
-            <path value="infusion.infusion_catheter.medical_device.product.product_id.coding"/>
-            <sliceName value="HIBCProductIDCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
+        
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.156--20200901000000">
             <path value="infusion.infusion_catheter.medical_device.product.product_type"/>
             <short value="ProductType">
@@ -305,8 +256,8 @@
             </type>
             <binding>
             <strength value="extensible"/>
-            <description value="ProductType codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ProductType codes."/>
+            <description value="ProductType codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/InfuuskatheterType"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.157--20200901000000">
@@ -418,58 +369,9 @@
                 <code value="CodeableConcept"/>
             </type>
         </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.159--20200901000000.coding">
-            <path value="infusion.infusion_catheter.medical_device.anatomical_location.location.coding"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="system"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <definition value="-"/>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.159--20200901000000.coding:LocatieCodelijst">
-            <path value="infusion.infusion_catheter.medical_device.anatomical_location.location.coding"/>
-            <sliceName value="LocatieCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.159--20200901000000.coding:LocatieICD-O-3Codelijst">
-            <path value="infusion.infusion_catheter.medical_device.anatomical_location.location.coding"/>
-            <sliceName value="LocatieICD-O-3Codelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
+        
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.160--20200901000000">
             <path value="infusion.infusion_catheter.medical_device.anatomical_location.laterality"/>
             <code>
@@ -515,8 +417,8 @@
             </example>
             <binding>
             <strength value="required"/>
-            <description value="Laterality codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Laterality codes."/>
+            <description value="Laterality codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.161--20200901000000">
@@ -582,9 +484,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.5.1.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.163--20200901000000">
             <path value="infusion.infusion_catheter.medical_device.start_date"/>
@@ -759,9 +661,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.17.2.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.168--20200901000000">
             <path value="infusion.infusion_catheter.medical_device.health_professional"/>
@@ -793,9 +695,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.17.1.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.8--20200901000000">
             <path value="infusion.comment"/>
@@ -902,8 +804,8 @@
             </type>
             <binding>
             <strength value="extensible"/>
-            <description value="LineStatus codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/LineStatus codes."/>
+            <description value="LineStatus codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/LijnStatus"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.11--20200901000000">
@@ -940,8 +842,8 @@
             </type>
             <binding>
             <strength value="extensible"/>
-            <description value="LumenLocation codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/LumenLocation codes."/>
+            <description value="LumenLocation codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/LumenLocatie"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.13--20200901000000">
@@ -1012,9 +914,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationAdministration"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.9.13.20928--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.7--20200901000000">
             <path value="infusion.lumen_or_line.administering_system"/>
@@ -1122,9 +1024,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationAdministration"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.9.13.20928--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.6--20200901000000">
             <path value="infusion.lumen_or_line.administering_system.peripheral"/>
@@ -1199,9 +1101,9 @@
                 <max value="1"/>
             </base>
             <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicalDevice"/>
-         </type>
+                <code value="Reference"/>
+                <profile value="http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.10.1.1--20200901000000"/>
+            </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.10.2.12--20200901000000">
             <path value="infusion.lumen_or_line.administering_system.administering_system_comment"/>

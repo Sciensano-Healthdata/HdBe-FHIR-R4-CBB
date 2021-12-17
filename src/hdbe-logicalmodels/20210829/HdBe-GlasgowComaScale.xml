@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBeGlasgowComaScale"/>
+   <id value="HdBe-GlasgowComaScale"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBeGlasgowComaScale"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-GlasgowComaScale"/>
    <name value="HdBeGlasgowComaScale">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
@@ -42,7 +42,7 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/https://fhir.healthdata.be/StructureDefinition/LogicalModel/glasgow_coma_scale"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/glasgow_coma_scale"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
@@ -159,8 +159,8 @@
             </example>
             <binding>
             <strength value="required"/>
-            <description value="GCS_Eyes codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/GCS_Eyes codes."/>
+            <description value="GCS_Eyes codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/GCS_Eyes"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.4--20200901000000">
@@ -212,75 +212,10 @@
                 </valueCodeableConcept>
             </example>
         </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.4--20200901000000.coding">
-            <path value="glasgow_coma_scale.gcs_motor.coding"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="system"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <definition value="-"/>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.4--20200901000000.coding:GCS_MotorCodelijst">
-            <path value="glasgow_coma_scale.gcs_motor.coding"/>
-            <sliceName value="GCS_MotorCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.4--20200901000000.coding:GCS_MotorCodelijstKleuter">
-            <path value="glasgow_coma_scale.gcs_motor.coding"/>
-            <sliceName value="GCS_MotorCodelijstKleuter"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.4--20200901000000.coding:GCS_MotorCodelijstBaby">
-            <path value="glasgow_coma_scale.gcs_motor.coding"/>
-            <sliceName value="GCS_MotorCodelijstBaby"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
+        
+        
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.6--20200901000000">
             <path value="glasgow_coma_scale.gcs_verbal"/>
             <code>
@@ -330,75 +265,10 @@
                 </valueCodeableConcept>
             </example>
         </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.6--20200901000000.coding">
-            <path value="glasgow_coma_scale.gcs_verbal.coding"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="system"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <definition value="-"/>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.6--20200901000000.coding:GCS_VerbalCodelijst">
-            <path value="glasgow_coma_scale.gcs_verbal.coding"/>
-            <sliceName value="GCS_VerbalCodelijst"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.6--20200901000000.coding:GCS_VerbalCodelijstKleuter">
-            <path value="glasgow_coma_scale.gcs_verbal.coding"/>
-            <sliceName value="GCS_VerbalCodelijstKleuter"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.6--20200901000000.coding:GCS_VerbalCodelijstBaby">
-            <path value="glasgow_coma_scale.gcs_verbal.coding"/>
-            <sliceName value="GCS_VerbalCodelijstBaby"/>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="CodeableConcept.coding"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-            <binding>
-            <strength value="required"/>
-            <description value=" codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ codes."/>
-         </binding>
-        </element>
+        
+        
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.10--20200901000000">
             <path value="glasgow_coma_scale.total_score"/>
             <code>
@@ -485,8 +355,8 @@
             </type>
             <binding>
             <strength value="extensible"/>
-            <description value="ConditionsDuringMeasurement codes."/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ConditionsDuringMeasurement codes."/>
+            <description value="ConditionsDuringMeasurement codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ConditiesTijdensMeting"/>
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.8.9--20200901000000">
