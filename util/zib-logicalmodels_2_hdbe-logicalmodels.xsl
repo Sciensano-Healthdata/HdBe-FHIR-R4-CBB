@@ -8,7 +8,6 @@
     exclude-result-prefixes="#all"
     version="2.0">
     
-    <xsl:output indent="yes"/> 
     <!-- 
         * requires a name!    
         * remove .identifier and .version because they are zib specific
@@ -16,20 +15,22 @@
         * remove snapshot because diff and snap are similar
         * in StructureDefinition update profile URLs, by moving them from .profile to .targetProfile and by updating the reference
         * in StructureDefinition update valueset URLs 
-        * updates name
+        * removes invalid slicing
         
         MISSING:
         ** update codesystems URL/URI in ValueSets
-        ** remove invalid slicing
         ** remove inline partZibs
     
     -->
     <xsl:output indent="yes"/>
+    <xsl:strip-space elements="*"/>
+    
     <xsl:param name="projectPrefix" select="'HdBe-'"/>
     <xsl:param name="urlBase" select="'https://fhir.healthdata.be/'"/>
         <xsl:param name="urlLogicalModel" select="'StructureDefinition/LogicalModel/'"/>
         <xsl:param name="urlSD" select="'StructureDefinition/'"/>
         <xsl:param name="urlValueSet" select="'ValueSet/'"/>
+        <xsl:param name="urlCodeSystem" select="'CodeSystem/'"/>
     <xsl:param name="publisher" select="'Healthdata.be (Sciensano)'"/>
     <xsl:param name="contactEmail" select="'fhir.healthdata@sciensano.be'"/>
     <xsl:param name="convertFileNames" select="true()" as="xs:boolean"/>
@@ -42,111 +43,124 @@
     
     <xsl:template match="f:StructureDefinition">
         <xsl:choose>
-            <xsl:when test="f:kind/@value = 'logical'">            
-            <xsl:variable name="id" select="replace(concat(upper-case(substring(f:name/@value,1,1)), 
-                substring(f:name/@value, 2)),
-                'Nlzorg',$projectPrefix)" as="xs:string"/>
-            <!-- No projectPrefix variable here because it needs to be witouth a '-'. -->
-            <xsl:variable name="name" select="replace(concat(upper-case(substring(f:name/@value,1,1)),
-                substring(f:name/@value, 2)),
-                'Nlzorg','HdBe')" as="xs:string"/>
-            <xsl:variable name="title" select="replace($id,'-',' ')" as="xs:string"/>
-            
-            <xsl:copy>                
-                <xsl:choose>
-                    <xsl:when test="f:id or not(f:id)">
-                        <id value="{$id}"/>
-                    </xsl:when>
-                </xsl:choose>
-                
-                <xsl:apply-templates select="f:meta | f:implicitRules | f:language | f:text | f:contained | f:extension | f:modifierExtension"/>
+            <xsl:when test="f:kind/@value = 'logical'">
+                <xsl:variable name="id"
+                    select="
+                        replace(concat(upper-case(substring(f:name/@value, 1, 1)),
+                        substring(f:name/@value, 2)),
+                        'Nlzorg', $projectPrefix)"
+                    as="xs:string"/>
+                <!-- No projectPrefix variable here because it needs to be witouth a '-'. -->
+                <xsl:variable name="name"
+                    select="
+                        replace(concat(upper-case(substring(f:name/@value, 1, 1)),
+                        substring(f:name/@value, 2)),
+                        'Nlzorg', 'HdBe')"
+                    as="xs:string"/>
+                <xsl:variable name="title" select="replace($id, '-', ' ')" as="xs:string"/>
 
-                <xsl:choose>
-                    <xsl:when test="f:url or not(f:url)">
-                        <url value="{$urlBase}{$urlLogicalModel}{$id}"/>
-                    </xsl:when>
-                </xsl:choose>               
-                <!-- remove zib identifier and version -->    
-                <!--<xsl:apply-templates select="f:identifier | f:version"/> -->
-                <xsl:choose>
-                    <xsl:when test="f:name">
-                        <name value="{$name}">
-                            <xsl:call-template name="translatationExtension">
-                                <xsl:with-param name="translation" select="replace(f:name/f:extension/f:extension/f:valueMarkdown/@value, 'nl.zorg.',$projectPrefix)"/>
-                            </xsl:call-template>
-                        </name>                 
-                    </xsl:when>
-                </xsl:choose>
-                <xsl:choose>
-                    <xsl:when test="f:title or not(f:url)">
-                        <title value="{$title}"/>
-                    </xsl:when>
-                </xsl:choose>
-                <xsl:choose>
-                    <xsl:when test="f:status or not(f:status)">
-                        <status value="draft"/>
-                    </xsl:when>
-                </xsl:choose>
-                <xsl:apply-templates select="f:experimental | f:date"/>
-                <!-- Add publisher, contact-->
-                <xsl:choose>
-                    <xsl:when test="f:publisher or not(f:publisher)">
-                        <publisher value="{$publisher}"/>
-                    </xsl:when>
-                </xsl:choose>
-                <xsl:choose>
-                    <xsl:when test=" f:contact or not(f:contact)">
-                        <contact>
-                            <name value="{$publisher}" />
-                            <telecom>
-                                <system value="email" />
-                                <value value="{$contactEmail}" />
-                                <use value="work" />
-                            </telecom>
-                        </contact>  
-                    </xsl:when>
-                </xsl:choose>
-                <xsl:choose>
-                    <xsl:when test="f:description and f:description/f:extension/f:extension/f:valueMarkdown">
-                        <description>
-                            <xsl:attribute name="value" select="replace(f:description/@value, '&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;', '&#xD;&#xA;')"/>
-                            <xsl:call-template name="translatationExtension">
-                                <xsl:with-param name="translation" select="replace(f:description/f:extension/f:extension/f:valueMarkdown/@value, '&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;', '&#xD;&#xA;')"/>
-                            </xsl:call-template>
-                        </description>
-                    </xsl:when>
-                    <xsl:when test="f:description">
-                        <description>
-                            <xsl:attribute name="value" select="replace(f:description/@value, '&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;', '&#xD;&#xA;')"/>            
-                            <xsl:apply-templates select="f:description/f:extension"/>
-                        </description>
-                    </xsl:when>
-                </xsl:choose>
-                <xsl:choose>
-                    <xsl:when test="f:copyright or not(f:copyright)">
-                        <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-                    </xsl:when>
-                </xsl:choose>
-                <xsl:apply-templates select="f:keyword | f:fhirVersion | f:mapping | f:kind"/>
-                <xsl:choose>
-                    <xsl:when test="f:abstract or not(f:abstract)">
-                        <abstract value="true"/>
-                    </xsl:when>
-                </xsl:choose>
-                <xsl:apply-templates select="f:context | f:contextInvariant"/>
-                <!-- type needs to be an full URL, so convert it to a full URL. -->
-                <xsl:choose>
-                    <xsl:when test="f:type">
-                        <xsl:variable name="type" select="f:type/@value"/>                  
-                        <type value= "{$urlBase}{$urlLogicalModel}{$type}"/>
-                    </xsl:when>
-                </xsl:choose>
-                <!-- For now, turn of snapshots, because diff and snapthots are the same. -->
-                <xsl:apply-templates select="f:baseDefinition | f:derivation | f:differential"/>
-              
-         <!--       <xsl:call-template name="profileReferences"/> -->               
-        <!--        <xsl:call-template name="valueSetReferences"/>-->
-            </xsl:copy>
+                <xsl:copy>
+                    <xsl:choose>
+                        <xsl:when test="f:id or not(f:id)">
+                            <id value="{$id}"/>
+                        </xsl:when>
+                    </xsl:choose>
+
+                    <xsl:apply-templates
+                        select="f:meta | f:implicitRules | f:language | f:text | f:contained | f:extension | f:modifierExtension"/>
+
+                    <xsl:choose>
+                        <xsl:when test="f:url or not(f:url)">
+                            <url value="{$urlBase}{$urlLogicalModel}{$id}"/>
+                        </xsl:when>
+                    </xsl:choose>
+                    <!-- remove zib identifier and version -->
+                    <!--<xsl:apply-templates select="f:identifier | f:version"/> -->
+                    <xsl:choose>
+                        <xsl:when test="f:name">
+                            <name value="{$name}">
+                                <xsl:call-template name="translatationExtension">
+                                    <xsl:with-param name="translation"
+                                        select="replace(f:name/f:extension/f:extension/f:valueMarkdown/@value, 'nl.zorg.', $projectPrefix)"
+                                    />
+                                </xsl:call-template>
+                            </name>
+                        </xsl:when>
+                    </xsl:choose>
+                    <xsl:choose>
+                        <xsl:when test="f:title or not(f:url)">
+                            <title value="{$title}"/>
+                        </xsl:when>
+                    </xsl:choose>
+                    <xsl:choose>
+                        <xsl:when test="f:status or not(f:status)">
+                            <status value="draft"/>
+                        </xsl:when>
+                    </xsl:choose>
+                    <xsl:apply-templates select="f:experimental | f:date"/>
+                    <!-- Add publisher, contact-->
+                    <xsl:choose>
+                        <xsl:when test="f:publisher or not(f:publisher)">
+                            <publisher value="{$publisher}"/>
+                        </xsl:when>
+                    </xsl:choose>
+                    <xsl:choose>
+                        <xsl:when test="f:contact or not(f:contact)">
+                            <contact>
+                                <name value="{$publisher}"/>
+                                <telecom>
+                                    <system value="email"/>
+                                    <value value="{$contactEmail}"/>
+                                    <use value="work"/>
+                                </telecom>
+                            </contact>
+                        </xsl:when>
+                    </xsl:choose>
+                    <xsl:choose>
+                        <xsl:when
+                            test="f:description and f:description/f:extension/f:extension/f:valueMarkdown">
+                            <description>
+                                <xsl:attribute name="value"
+                                    select="replace(f:description/@value, '&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;', '&#xD;&#xA;')"/>
+                                <xsl:call-template name="translatationExtension">
+                                    <xsl:with-param name="translation"
+                                        select="replace(f:description/f:extension/f:extension/f:valueMarkdown/@value, '&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;', '&#xD;&#xA;')"
+                                    />
+                                </xsl:call-template>
+                            </description>
+                        </xsl:when>
+                        <xsl:when test="f:description">
+                            <description>
+                                <xsl:attribute name="value"
+                                    select="replace(f:description/@value, '&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;', '&#xD;&#xA;')"/>
+                                <xsl:apply-templates select="f:description/f:extension"/>
+                            </description>
+                        </xsl:when>
+                    </xsl:choose>
+                    <xsl:choose>
+                        <xsl:when test="f:copyright or not(f:copyright)">
+                            <copyright
+                                value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."
+                            />
+                        </xsl:when>
+                    </xsl:choose>
+                    <xsl:apply-templates select="f:keyword | f:fhirVersion | f:mapping | f:kind"/>
+                    <xsl:choose>
+                        <xsl:when test="f:abstract or not(f:abstract)">
+                            <abstract value="true"/>
+                        </xsl:when>
+                    </xsl:choose>
+                    <xsl:apply-templates select="f:context | f:contextInvariant"/>
+                    <!-- type needs to be an full URL, so convert it to a full URL. -->
+                    <xsl:choose>
+                        <xsl:when test="f:type">
+                            <xsl:variable name="type" select="f:type/@value"/>
+                            <type value="{$urlBase}{$urlLogicalModel}{$type}"/>
+                        </xsl:when>
+                    </xsl:choose>
+                    <!-- For now, turn of snapshots, because diff and snapthots are the same. -->
+                    <xsl:apply-templates select="f:baseDefinition | f:derivation | f:differential"/>
+                </xsl:copy>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:message terminate="no" select="'no logical models found'"></xsl:message>
@@ -243,7 +257,7 @@
             <xsl:apply-templates select="f:meta | f:implicitRules | f:language | f:text | f:contained | f:extension | f:modifierExtension"/>
             <xsl:choose>
                 <xsl:when test="f:url or not(f:url)">
-                    <url value="{$urlBase}{$urlValueSet}{$name}"/>
+                    <url value="{$urlBase}{$urlCodeSystem}{$name}"/>
                 </xsl:when>
             </xsl:choose>
             <xsl:apply-templates select="f:identifier | f:version"/> 
@@ -317,17 +331,14 @@
         <xd:desc>Template improves .binding.description by using the English name in stead of Dutch based on a hack of using the .short value. Template also converts the valueSet URL to newly assigned URL based on the Dutch ValueSet name.</xd:desc>
     </xd:doc>
     <xsl:template match="f:differential/f:element/f:binding" name="valueSetReferences">
-        <!-- If valueset not in an invalid slicing.... update.-->
-       <!-- <xsl:if test="not(f:differential/f:element[f:path[ends-with(@value,'.coding')]])">-->
-            <!--<xsl:for-each select="f:differential/f:element/f:binding">-->
-                <xsl:variable name="valueSetNameEN" select="../f:short/@value"/>
+                <xsl:variable name="valueSetNameEN" select="../f:short/@value" as="xs:string"/>
                 <xsl:variable name="valueSetNameNL" select="replace(f:description/@value,'Codelijst', '')" as="xs:string"/>
                 <xsl:copy>
                     <xsl:apply-templates select="f:strength"/>
                     <xsl:choose>
                         <xsl:when test="f:description">
                             <description>
-                                <xsl:attribute name="value" select="concat($valueSetNameEN, ' codes.')"/>
+                                <xsl:attribute name="value" select="concat($valueSetNameEN, ' codes')"/>
                             </description>
                         </xsl:when>
                     </xsl:choose>
@@ -377,8 +388,8 @@
                 <xsl:for-each select="$output/f:StructureDefinition">
                     <xsl:choose>
                         <xsl:when test="string-length(f:id/@value) gt 0">
-                            <xsl:result-document href="{./f:id/@value}.xml">
-                                <xsl:apply-templates select="."/>
+                            <xsl:result-document href="{./f:id/@value}.xml" indent="yes">
+                                <xsl:copy-of select="."/>
                             </xsl:result-document>
                         </xsl:when>
                     </xsl:choose>
@@ -386,8 +397,8 @@
                 <xsl:for-each select="$output/f:ValueSet">
                     <xsl:choose>
                         <xsl:when test="string-length(f:id/@value) gt 0">
-                            <xsl:result-document href="ValueSet-{./f:id/@value}.xml">
-                                <xsl:apply-templates select="."/>
+                            <xsl:result-document href="ValueSet-{./f:id/@value}.xml" indent="yes">
+                                <xsl:copy-of select="."/>
                             </xsl:result-document>
                         </xsl:when>
                     </xsl:choose>
@@ -396,7 +407,7 @@
                     <xsl:choose>
                         <xsl:when test="string-length(f:id/@value) gt 0">
                             <xsl:result-document href="CodeSystem-{./f:id/@value}.xml">
-                                <xsl:apply-templates select="."/>
+                                <xsl:copy-of select="."/>
                             </xsl:result-document>
                         </xsl:when>
                     </xsl:choose>
