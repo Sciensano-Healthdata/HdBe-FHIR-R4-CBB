@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="ext-MedicationAgreement.MedicationAgreementAdditionalInformation"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/ext-MedicationAgreement.MedicationAgreementAdditionalInformation"/>
+   <name value="ExtMedicationAgreementMedicationAgreementAdditionalInformation"/>
+   <title value="ExtMedicationAgreementMedicationAgreementAdditionalInformation"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="An extension to provide additional information that includes details on the structure of the agreement made that are relevant for pharmacovigilance and fulfillment by the pharmacist. This can be used e.g. to indicate that there was a conscious decision to deviate from the norm or that the agreement is to be structured in a certain way."/>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <mapping>
+      <identity value="zib-medicationagreement-v1.2-2020EN"/>
+      <uri value="https://zibs.nl/wiki/MedicationAgreement-v1.2(2020EN)"/>
+      <name value="zib MedicationAgreement-v1.2(2020EN)"/>
+   </mapping>
+   <kind value="complex-type"/>
+   <abstract value="false"/>
+   <context>
+      <type value="element"/>
+      <expression value="MedicationRequest"/>
+   </context>
+   <type value="Extension"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="Extension.url">
+         <path value="Extension.url"/>
+         <targetprofile value="https://fhir.healthdata.be/StructureDefinition/ext-MedicationAgreement.AdditionalInformation"/>
+      </element>
+      <element id="Extension.value[x]">
+         <path value="Extension.value[x]"/>
+         <short value="MedicationAgreementAdditionalInformation"/>
+         <definition value="Additional information includes details on the structure of the agreement made that are relevant for pharmacovigilance and fulfillment by the pharmacist. This can be used e.g. to indicate that there was a conscious decision to deviate from the norm or that the agreement is to be structured in a certain way."/>
+         <alias value="MedicatieafspraakAanvullendeInformatie"/>
+         <type>
+            <code value="CodeableConcept"/>
+         </type>
+         <binding>
+            <strength value="required"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieafspraakAanvullendeInformatie"/>
+         </binding>
+         <mapping>
+            <identity value="zib-medicationagreement-v1.2-2020EN"/>
+            <map value="NL-CM:9.6.23283"/>
+            <comment value="MedicationAgreementAdditionalInformation"/>
+         </mapping>
+      </element>
+   </differential>
+</StructureDefinition>
