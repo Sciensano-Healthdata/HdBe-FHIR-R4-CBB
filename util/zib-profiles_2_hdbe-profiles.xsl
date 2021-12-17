@@ -103,14 +103,14 @@
         </profile>
     </xsl:template>
     <xsl:template match="f:element/f:type/f:targetProfile">
-        <targetprofile>
+        <targetProfile>
             <xsl:attribute name="value" select="replace(@value,'http://nictiz.nl/fhir/StructureDefinition/zib-','https://fhir.healthdata.be/StructureDefinition/HdBe-')"/>
-        </targetprofile>
+        </targetProfile>
     </xsl:template>
     <xsl:template match="f:element/f:fixedUri">
-        <targetprofile>
+        <targetProfile>
             <xsl:attribute name="value" select="replace(@value,'http://nictiz.nl/fhir/StructureDefinition/ext-','https://fhir.healthdata.be/StructureDefinition/ext-')"/>
-        </targetprofile>
+        </targetProfile>
     </xsl:template>   
     
     <xsl:template match="f:element/f:binding/f:valueSet[starts-with(@value, 'http://decor.nictiz.nl/fhir/ValueSet')]">
