@@ -52,8 +52,10 @@
                 </xsl:when>
             </xsl:choose>
             <xsl:choose>
-                <xsl:when test="f:title or not(f:url)">
-                    <title value="{$name}"/>
+                <xsl:when test="f:title or not(f:title)">
+                    <title>
+                        <xsl:attribute name="value" select="replace($id, '-',' ')"/>
+                    </title>
                 </xsl:when>
             </xsl:choose>
             <xsl:choose>
@@ -140,9 +142,9 @@
     </xsl:template>
     
     <xsl:template match="f:element/f:fixedUri">
-        <targetProfile>
+        <fixedUri>
             <xsl:attribute name="value" select="replace(@value,concat($urlBaseNictizSD,'ext-'),concat($urlBase,$urlSD, 'ext-'))"/>
-        </targetProfile>
+        </fixedUri>
     </xsl:template>   
     
     <xsl:template match="f:element/f:constraint/f:source[starts-with(@value, $urlBaseNictizSD)]">
