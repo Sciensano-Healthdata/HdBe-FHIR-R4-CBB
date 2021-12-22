@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBe-Burnwound"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Burnwound"/>
+   <name value="HdBeBurnwound">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-Brandwond"/>
+         </extension>
+      </extension>
+   </name>
+   <title value="HdBe Burnwound"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;A burn wound is a wound caused by skin being exposed to heat for a certain time above a certain critical temperature. Heat above this critical temperature (+/- 40°C) will cause damage to the skin. There are different types of burn wounds, which are categorized according to the depth of the burn wound. &#xD;&#xA;The depth of the burn wound depends on: &#xD;&#xA;&#xD;&#xA;* the temperature of the impacting heat;&#xD;&#xA;* the duration of the impact of heat on the skin;&#xD;&#xA;* the source of the burn (e.g. fire, fluid).&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;The description of the burn wound is of importance for starting or continuing the best possible wound treatment and to be able to properly monitor the wound healing process.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Different degrees are used to evaluate the depth of the burn wound: &#xD;&#xA;&#xD;&#xA;First-degree burn (no wound): &#xD;&#xA;&#xD;&#xA;* redness&#xD;&#xA;* good capillary refill&#xD;&#xA;* supple&#xD;&#xA;* painful&#xD;&#xA;Superficial second-degree burn wound (partial thickness of the skin): &#xD;&#xA;&#xD;&#xA;* intact / broken blisters&#xD;&#xA;* pink, shiny, uniform&#xD;&#xA;* good capillary refill&#xD;&#xA;* supple&#xD;&#xA;* painful&#xD;&#xA;Deep second-degree burn wound:&#xD;&#xA;&#xD;&#xA;* intact / broken blisters&#xD;&#xA;* pink, matte, not homogenous, damp&#xD;&#xA;* slow capillary refill&#xD;&#xA;* slightly more firm&#xD;&#xA;* painful&#xD;&#xA;Third-degree burn wound &#xD;&#xA;&#xD;&#xA;* intact / broken blisters, epidermis stuck to burned dermis&#xD;&#xA;* white, brown, yellow, red (when kept in hot water for a prolonged period of time)&#xD;&#xA;* no capillary refill, non-removable redness&#xD;&#xA;* firm&#xD;&#xA;* less painful than the size of the wound makes it appear&#xD;&#xA;(Source: Brandwondenprotocol 2010, Rode Kruis Brandwondencentrum Beverwijk [2010 Burn wound protocol, Beverwijk Red Cross Burn Wound Center])&#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;&#xD;&#xA;**Issues**&#xD;&#xA;Damages to the skin as a result of exposure to intense heat and cold can lead to similar wounds. Nevertheless, we have decided not to expand the information model to become a generic thermal wound information model. The reason for this was the lack of a guideline for treating freeze wounds and insufficient agreement in the field on the applicability of the burn wound classification for freeze wounds. Freeze wounds also rarely occur in the Netherlands, due to the climate.&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Een brandwond is een verwonding door invloed van hitte op de huid gedurende een bepaalde tijd en boven een bepaalde kritische temperatuur. Boven deze kritische temperatuur (+/- 40° C) treedt beschadiging van de huid op. Er zijn verschillende soorten brandwonden en deze worden ingedeeld naar de diepte van de brandwond. &#xD;&#xA;De diepte van de brandwond hangt af van: &#xD;&#xA;&#xD;&#xA;* de temperatuur van de inwerkende hitte;&#xD;&#xA;* de tijd dat de hitte inwerkt op de huid;&#xD;&#xA;* de oorzaak van de verbranding (bijvoorbeeld hete vloeistof, vuur).&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;De beschrijving van de brandwond is van belang voor het inzetten of continueren van de optimale wondbehandeling en om de voortgang van de wondgenezing goed te kunnen monitoren. &#xD;&#xA;**Evidence Base**&#xD;&#xA;Voor het beoordelen van de diepte van de brandwond wordt gebruik gemaakt van graden:&#xD;&#xA;&#xD;&#xA;Eerstegraads verbranding (geen wond):&#xD;&#xA;&#xD;&#xA;* geen blaren, geen open wonden&#xD;&#xA;* roodheid&#xD;&#xA;* goede capillaire refill&#xD;&#xA;* soepel&#xD;&#xA;* pijnlijk&#xD;&#xA;Oppervlakkige tweedegraads brandwond (gedeeltelijke dikte van de huid):&#xD;&#xA;&#xD;&#xA;* blaren intact / kapot&#xD;&#xA;* roze, glanzend, egaal,&#xD;&#xA;* goede capillaire refill&#xD;&#xA;* soepel&#xD;&#xA;* pijnlijk&#xD;&#xA;Diepe tweedegraads brandwond:&#xD;&#xA;&#xD;&#xA;* blaren intact / kapot&#xD;&#xA;* roze, mat, niet homogeen, mottig&#xD;&#xA;* trage capillaire refill&#xD;&#xA;* iets stugger&#xD;&#xA;* pijnlijk&#xD;&#xA;Derdegraads brandwond:&#xD;&#xA;&#xD;&#xA;* blaren intact / kapot, epidermis verkleefd op verbrande dermis&#xD;&#xA;* wit, bruin, geel, rood (bij langdurige verblijf in heet water)&#xD;&#xA;* geen capillaire refill, niet wegdrukbare roodheid&#xD;&#xA;* stug&#xD;&#xA;* minder pijnlijk dat de grootte van de wond doet vermoeden&#xD;&#xA;(Bron: Brandwondenprotocol 2010, Rode Kruis Brandwondencentrum Beverwijk)&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;&#xD;&#xA;**Issues**&#xD;&#xA;Beschadigingen van de huid ten gevolge van blootstelling aan grote hitte en koude kunnen leiden tot vergelijkbare wonden. Niettemin is besloten om de bouwsteen niet te verbreden tot een generiekere bouwsteen thermische wonden. Reden hiervoor is het ontbreken van een richtlijn voor de behandeling van bevriezingswonden en onvoldoende overeenstemming in het veld over de toepasbaarheid van de brandwondenclassificatie voor bevriezingswonden. Tevens komen bevriezingswonden in Nederland weinig voor vanwege het klimaat.&#xD;&#xA;**References**&#xD;&#xA;1. Brandwondenprotocol 2010 [Online] Beschikbaar op: [https://www.rkz.nl/brandwondenprotocol_online](https://www.rkz.nl/brandwondenprotocol_online) [Geraadpleegd: 13 februari 2015]&#xD;&#xA;&#xD;&#xA;2. Brandwonden genezen. Hoe verder? [Online] Beschikbaar op: [http://brandwondenstichting.nl/wp-content/uploads/2013/08/NBS_Hoe-verder-huisartsen-2011.pdf](http://brandwondenstichting.nl/wp-content/uploads/2013/08/NBS_Hoe-verder-huisartsen-2011.pdf) [Geraadpleegd: 13 februari 2015]&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (01-07-2015)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.1 (04-09-2017)&#xD;&#xA;Bevat: [ZIB-530](https://bits.nictiz.nl/browse/ZIB-530), [ZIB-532](https://bits.nictiz.nl/browse/ZIB-532), [ZIB-585](https://bits.nictiz.nl/browse/ZIB-585).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.2 (31-12-2017)&#xD;&#xA;Bevat: [ZIB-646](https://bits.nictiz.nl/browse/ZIB-646).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.3 (31-01-2020)&#xD;&#xA;Bevat: [ZIB-828](https://bits.nictiz.nl/browse/ZIB-828).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.4 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-1116](https://bits.nictiz.nl/browse/ZIB-1116).&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/burn_wound"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.4.1--20200901000000">
+            <path value="burn_wound"/>
+            <short value="BurnWound">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Brandwond"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Root concept of the BurnWound information model. This concept contains all data elements of the BurnWound information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van bouwsteen Brandwond. Dit concept bevat alle gegevenselementen van de bouwsteen Brandwond."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="burn_wound"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.4.3--20200901000000">
+            <path value="burn_wound.date_of_onset"/>
+            <short value="DateOfOnset">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="OntstaansDatum"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Date on which the burn wound appeared.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Datum waarop de brandwond is ontstaan."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="burn_wound.date_of_onset"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="dateTime"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueDateTime value="2014-01-07"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.4.7--20200901000000">
+            <path value="burn_wound.extent"/>
+            <short value="Extent">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Uitgebreidheid"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The extent of a burn wound is indicated in a percentage of the ‘Total Body Surface Area’ (TBSA). For adults, the TBSA can be calculated on the basis of the ‘rule of nines’, in which body parts are expressed in the percentage 9 and multiples of 9. This ‘rule of nines’ cannot be used for children because a child’s body proportions are different from those of an adult. For children, separate tables were developed per age group to determine the extent of burn wounds. Another option is measuring the extent using the patient’s hand surface area. The surface area of a patient’s hand (including the fingers) equals approximately 1% of their total body surface area. &#xD;&#xA;(Source: Brandwonden genezen. Hoe verder? [Healing Burn Wounds. What now?)&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De uitgebreidheid van een brandwond wordt weergegeven in een percentage van het ‘Totaal Verbrande Lichaamsoppervlak’ (TVLO). Voor volwassenen is het TVLO te berekenen aan de hand van de ‘regel van negen’, waarbij de lichaamsdelen worden uitgedrukt in het percentage 9 en veelvouden hiervan. Deze ’regel van negen’ is voor kinderen niet bruikbaar omdat de lichaamsverhoudingen van een kind en een volwassene verschillen. Voor kinderen zijn per leeftijdsgroep aparte tabellen ontwikkeld om de uitgebreidheid van een brandwond vast te stellen. Een andere mogelijkheid is de uitgebreidheid te meten met het handoppervlak van de patiënt. De oppervlakte van een hand van de patiënt (met aaneengesloten vingers) komt overeen met ± 1% van het lichaamsoppervlak. &#xD;&#xA;(Bron: Brandwonden genezen. Hoe verder?)"/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="burn_wound.extent"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Quantity"/>
+            </type>
+            <example>
+                <label value="example 1 of Quantity"/>
+                <valueQuantity>
+                    <value value="27"/>
+                    <unit value="%"/>
+                    <system value="http://unitsofmeasure.org"/>
+                    <code value="%"/>
+                </valueQuantity>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.4.12--20200901000000">
+            <path value="burn_wound.anatomical_location"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="363698007"/>
+                <display value="locatie van bevinding"/>
+            </code>
+            <short value="AnatomicalLocation">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="AnatomischeLocatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="The location of the burn wound on the body.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Locatie op het lichaam waar de brandwond zich bevindt."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="burn_wound.anatomical_location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="BackboneElement"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.63--20200901000000">
+            <path value="burn_wound.anatomical_location.location"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="363698007"/>
+                <display value="locatie van bevinding"/>
+            </code>
+            <short value="Location">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Locatie"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Localisation on/in the body.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Localisatie op/in het lichaam."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="burn_wound.anatomical_location.location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+        </element>
+        
+        
+        
+        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.64--20200901000000">
+            <path value="burn_wound.anatomical_location.laterality"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="272741003"/>
+                <display value="lateraliteit"/>
+            </code>
+            <short value="Laterality">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Lateraliteit"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links. "/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="burn_wound.anatomical_location.laterality"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <text value="Links"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+            <strength value="required"/>
+            <description value="Laterality codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.4.10--20200901000000">
+            <path value="burn_wound.laterality"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="272741003"/>
+                <display value="lateraliteit"/>
+            </code>
+            <short value="Laterality">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Lateraliteit"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Laterality adds information about body side to the anatomic location, *e.g.* left">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="burn_wound.laterality"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="272741003"/>
+                        <display value="lateraliteit"/>
+                    </coding>
+                    <text value="Links"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+            <strength value="required"/>
+            <description value="Laterality codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/BrandwondLateraliteit"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.4.2--20200901000000">
+            <path value="burn_wound.depth"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="116676008"/>
+                <display value="gerelateerde morfologie"/>
+            </code>
+            <short value="Depth">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Dieptegraad"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Description of the severity of the burn wound, ranging from degree 1 - 3.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Beschrijving van de ernst van de brandwond, oplopend van graad 1 tot en met 3."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="burn_wound.depth"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="116676008"/>
+                        <display value="gerelateerde morfologie"/>
+                    </coding>
+                    <text value="2e graads, oppervlakkig"/>
+                </valueCodeableConcept>
+            </example>
+            <binding>
+            <strength value="required"/>
+            <description value="Depth codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Dieptegraad"/>
+         </binding>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.4.5--20200901000000">
+            <path value="burn_wound.comment"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="48767-8"/>
+                <display value="Annotation comment Imp"/>
+            </code>
+            <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Comment on the burn wound.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting over de brandwond."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="burn_wound.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.4.8--20200901000000">
+            <path value="burn_wound.date_of_last_dressing_change"/>
+            <short value="DateOfLastDressingChange">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="DatumLaatsteVerbandwissel"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="Date on which the dressing was last changed.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De datum waarop de laatste verbandwissel heeft plaatsgevonden."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="burn_wound.date_of_last_dressing_change"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="dateTime"/>
+            </type>
+            <example>
+                <label value="example 1"/>
+                <valueDateTime value="2014-10-10"/>
+            </example>
+        </element>
+        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.4.11--20200901000000">
+            <path value="burn_wound.wound_image"/>
+            <code>
+                <system value="http://loinc.org"/>
+                <code value="72170-4"/>
+                <display value="Photographic image"/>
+            </code>
+            <short value="WoundImage">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Wondfoto"/>
+                    </extension>
+                </extension>
+            </short>
+            <definition value="A photo of the wound as visual information.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een foto van de wond als visuele informatie."/>
+                    </extension>
+                </extension>
+            </definition>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="burn_wound.wound_image"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="base64Binary"/>
+            </type>
+        </element>
+    </differential>
+</StructureDefinition>

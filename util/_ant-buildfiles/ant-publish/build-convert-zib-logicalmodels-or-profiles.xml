@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Apache ANT is based on Java and may be found here: https://ant.apache.org/
+    run on command line or from a batch file: 
+        ant [-f build.xml] [target]
+            [-Dscr.dir=][source directory to transform]
+        
+    If you just run ant, it expects a build.xml in the working dir and runs the default target.
+-->
+<project basedir="../../" default="convert_zibs_logicalmodels-or-profiles" name="zib_2_hdbe" xmlns:if="ant:if" xmlns:unless="ant:unless">
+
+    <property name="xsl.saxon" value="${saxon.path}"/>
+    <property name="xsl.saxon.class" value="net.sf.saxon.TransformerFactoryImpl"/>
+    <property name="build.dir" value="."/>
+    <property name="src.dir" value=""/>
+    
+    <target name="-check-dir-logicalmodels-exists">
+        <available property="dir.logical.exists" file="../src/zib-logicalmodels/${src.dir}" type="dir"/>
+        <echo>Found directory ${src.dir} to convert: ${dir.logical.exists}</echo>
+    </target>
+    <target name="-check-dir-profiles-exists">
+        <available property="dir.profile.exists" file="../src/zib-profiles/${src.dir}" type="dir"/>
+        <echo>Found directory ${src.dir} to convert: ${dir.profiles.exists}</echo>
+    </target>
+    
+    <target name="convert_zibs_logicalmodels-or-profiles">
+        <antcall target="convert_zib_2_hdbe-logicalmodels"/>
+        <antcall target="convert_zib_2_hdbe-profiles"/>
+    </target>
+ 
+    <target name="convert_zib_2_hdbe-logicalmodels" depends="-check-dir-logicalmodels-exists" if="${dir.logical.exists}">
+        <echo>Starting to convert zib-LogicalModels...</echo>
+        <antcall target="convert_zib_2_hdbe-logicalmodels_sub">
+            <param name="build.dir" value="../${build.dir}"/>
+            <param name="xsl.in" value="src/zib-logicalmodels/${src.dir}"/>
+            <param name="xsl.out" value="src/hdbe-logicalmodels/${src.dir}"/>
+        </antcall>
+    </target>  
+    
+    <target name="convert_zib_2_hdbe-profiles" depends="-check-dir-profiles-exists" if="${dir.profile.exists}">
+        <echo>Starting to convert zib-profiles...</echo>
+        <antcall target="convert_zib_2_hdbe-profiles_sub">
+            <param name="build.dir" value="../${build.dir}"/>
+            <param name="xsl.in" value="src/zib-profiles/${src.dir}"/>
+            <param name="xsl.out" value="src/hdbe-profiles/${src.dir}"/>
+        </antcall>
+    </target>  
+    
+    <target name="convert_zib_2_hdbe-logicalmodels_sub">
+        <property name="xsl" value="${build.dir}/util/zib-logicalmodels_2_hdbe-logicalmodels.xsl"/>
+        <property name="xsl.input" value="${build.dir}/${xsl.in}"/>
+        <property name="xsl.output" value="${build.dir}/${xsl.out}"/>
+        <echo>Deleting previous results, if any</echo>
+        <delete failonerror="false">
+            <fileset dir="${xsl.output}" includes="*.*"/>
+        </delete>
+        <sequential>
+            <fileset id="inputfiles" dir="${xsl.input}" includes="*.xml"/>
+            <echo/>
+            <echo>Converting zibs to HdBe-LogicalModels using  ${xsl}</echo>
+            <xslt force="true" style="${xsl}" destdir="${xsl.output}" extension=".xml" useImplicitFileset="false" excludesFile="*--20200901000000.xml">
+                <fileset refid="inputfiles"/>
+                <factory name="${xsl.saxon.class}"/>
+                <classpath location="${xsl.saxon}"/>
+            </xslt>
+        </sequential>
+        <!-- Very ugly, but I don't know how to prevent the generated/copied empty files yet. -->
+        <delete>
+            <fileset dir="${xsl.output}" includes="*--20200901000000.xml"/>
+        </delete>
+    </target>
+    
+    <target name="convert_zib_2_hdbe-profiles_sub">
+        <property name="xsl" value="${build.dir}/util/zib-profiles_2_hdbe-profiles.xsl"/>
+        <property name="xsl.input" value="${build.dir}/${xsl.in}"/>
+        <property name="xsl.output" value="${build.dir}/${xsl.out}"/>
+        <echo>Deleting previous results, if any</echo>
+        <delete failonerror="false">
+            <fileset dir="${xsl.output}" includes="*.*"/>
+        </delete>
+        <sequential>
+            <fileset id="inputfiles" dir="${xsl.input}" includes="StructureDefinition-ext-*.xml, StructureDefinition-zib-*.xml, StructureDefinition-pattern-*.xml, ConceptMap-*.xml"/>
+            <echo/>
+            <echo>Converting zib-profiles to HdBe-profiles using ${xsl}</echo>
+            <xslt force="true" style="${xsl}" destdir="${xsl.output}" extension=".xml" useImplicitFileset="false">
+                <fileset refid="inputfiles"/>
+                <factory name="${xsl.saxon.class}"/>
+                <classpath location="${xsl.saxon}"/>
+            </xslt>
+        </sequential>
+        <delete>
+            <fileset dir="${xsl.output}" includes="StructureDefinition*--*.xml, StructureDefinition-*.xml, ConceptMap*--*.xml"/>
+        </delete>
+    </target>
+    
+</project>

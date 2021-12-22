@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConceptMap xmlns="http://hl7.org/fhir">
+   <id value="Dagdeel-to-EventTiming"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+        <valueBoolean value="true"/>
+    </extension>
+   <url value="https://fhir.healthdata.be/ConceptMap/Dagdeel-to-EventTiming"/>
+   <version value="1.0.1"/>
+   <name value="Dagdeel_to_EventTiming"/>
+   <title value="Dagdeel_to_EventTiming"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="Maps TimeOfDay codes as found in [zib InstructionsForUse v1.2.1 (2020)](https://zibs.nl/wiki/InstructionsForUse-v1.2.1(2020EN))) to Timing.repeat.when codes as found in FHIR R4"/>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <group>
+        <source value="http://snomed.info/sct"/>
+        <target value="http://hl7.org/fhir/event-timing"/>
+        <targetVersion value="http://hl7.org/fhir/event-timing version 3.0.1"/>
+        <element>
+            <code value="73775008"/>
+            <display value="During the morning"/>
+            <target>
+                <code value="MORN"/>
+                <display value="Morning"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="255213009"/>
+            <display value="During the afternoon"/>
+            <target>
+                <code value="AFT"/>
+                <display value="Afternoon"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="3157002"/>
+            <display value="During the evening"/>
+            <target>
+                <code value="EVE"/>
+                <display value="Evening"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="2546009"/>
+            <display value="During the night"/>
+            <target>
+                <code value="NIGHT"/>
+                <display value="Night"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+    </group>
+</ConceptMap>

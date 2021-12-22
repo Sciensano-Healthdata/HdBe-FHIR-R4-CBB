@@ -1,0 +1,318 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="pattern-ZibTimeIntervalPeriod"/>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/pattern-ZibTimeIntervalPeriod"/>
+    <name value="PatternZibTimeIntervalPeriod"/>
+    <title value="pattern ZibTimeIntervalPeriod"/>
+    <status value="draft"/>
+    <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="email"/>
+            <value value="info@nictiz.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <description
+        value="A Period datatype profile to implement the Period half of zib TimeInterval. This datatype profile is used in various resource profiles and is never instantiated directly."/>
+    <purpose
+        value="To fully implement the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) TimeInterval v1.0 (2020)](https://zibs.nl/wiki/TimeInterval-v1.0(2020EN)) within a hosting profile, it needs to have an element of type _Period_ and an element of type _Duration_. This datatype profile can be used to add the guidance and mapping for this zib to the _Period_ element.&#xD;&#xA;&#xD;&#xA;When no native _Period_ element exists, the &lt;http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval-Period&gt; extension can be added to the profile. The _Duration_ element can be added using the &lt;http://nictiz.nl/fhir/StructureDefinition/ext-TimeInterval-Duration&gt; extension.&#xD;&#xA;&#xD;&#xA;Note: this profile should not be used in resources that natively supports both a _Period_ and a _Duration_ element, as the guidance in this profile refers to the Duration extension profile, which is the most common pattern."/>
+    <copyright
+        value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+    <fhirVersion value="4.0.1"/>
+    <mapping>
+        <identity value="zib-timeinterval-v1.0-2020EN"/>
+        <uri value="https://zibs.nl/wiki/TimeInterval-v1.0(2020EN)"/>
+        <name value="zib TimeInterval-v1.0(2020EN)"/>
+    </mapping>
+    <kind value="complex-type"/>
+    <abstract value="false"/>
+    <type value="Period"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Period"/>
+    <derivation value="constraint"/>
+    <snapshot>
+        <element id="Period">
+            <extension
+                url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+                <valueCode value="normative"/>
+            </extension>
+            <extension
+                url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+                <valueCode value="4.0.0"/>
+            </extension>
+            <path value="Period"/>
+            <short value="Time range defined by start and end date/time"/>
+            <definition value="A time period defined by a start and end date and optionally time."/>
+            <comment
+                value="When the Duration of zib TimeInterval is known in conjunction with either the startDateTime or endDateTime, it SHALL be converted to a Period and represented using this element. When only the Duration is known, it can be communicated using the &lt;http://nictiz.nl/fhir/StructureDefinition/ext-PeriodOfUse-Duration&gt; extension."/>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="Period"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <condition value="ele-1"/>
+            <constraint>
+                <key value="ele-1"/>
+                <severity value="error"/>
+                <human value="All FHIR elements must have a @value or children"/>
+                <expression value="hasValue() or (children().count() &gt; id.count())"/>
+                <xpath value="@value|f:*|h:div"/>
+                <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+            </constraint>
+            <constraint>
+                <key value="per-1"/>
+                <severity value="error"/>
+                <human value="If present, start SHALL have a lower value than end"/>
+                <expression
+                    value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
+                <xpath
+                    value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
+                <source value="http://hl7.org/fhir/StructureDefinition/Identifier"/>
+            </constraint>
+            <mapping>
+                <identity value="rim"/>
+                <map value="n/a"/>
+            </mapping>
+            <mapping>
+                <identity value="v2"/>
+                <map value="DR"/>
+            </mapping>
+            <mapping>
+                <identity value="rim"/>
+                <map
+                    value="IVL&lt;TS&gt;[lowClosed=&quot;true&quot; and highClosed=&quot;true&quot;] or URG&lt;TS&gt;[lowClosed=&quot;true&quot; and highClosed=&quot;true&quot;]"
+                />
+            </mapping>
+        </element>
+        <element id="Period.id">
+            <path value="Period.id"/>
+            <representation value="xmlAttr"/>
+            <short value="Unique id for inter-element referencing"/>
+            <definition
+                value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="Element.id"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <extension
+                    url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+                    <valueUrl value="string"/>
+                </extension>
+                <code value="http://hl7.org/fhirpath/System.String"/>
+            </type>
+            <mapping>
+                <identity value="rim"/>
+                <map value="n/a"/>
+            </mapping>
+        </element>
+        <element id="Period.extension">
+            <extension
+                url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+                <valueCode value="normative"/>
+            </extension>
+            <extension
+                url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+                <valueCode value="4.0.0"/>
+            </extension>
+            <path value="Period.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <description value="Extensions are always sliced by (at least) url"/>
+                <rules value="open"/>
+            </slicing>
+            <short value="Additional content defined by implementations"/>
+            <definition
+                value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+            <comment
+                value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+            <alias value="extensions"/>
+            <alias value="user content"/>
+            <min value="0"/>
+            <max value="*"/>
+            <base>
+                <path value="Element.extension"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="Extension"/>
+            </type>
+            <condition value="ele-1"/>
+            <constraint>
+                <key value="ele-1"/>
+                <severity value="error"/>
+                <human value="All FHIR elements must have a @value or children"/>
+                <expression value="hasValue() or (children().count() &gt; id.count())"/>
+                <xpath value="@value|f:*|h:div"/>
+                <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+            </constraint>
+            <constraint>
+                <key value="ext-1"/>
+                <severity value="error"/>
+                <human value="Must have either extensions or value[x], not both"/>
+                <expression value="extension.exists() != value.exists()"/>
+                <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
+                <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+            </constraint>
+            <mapping>
+                <identity value="rim"/>
+                <map value="n/a"/>
+            </mapping>
+            <mapping>
+                <identity value="rim"/>
+                <map value="N/A"/>
+            </mapping>
+        </element>
+        <element id="Period.start">
+            <extension
+                url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+                <valueCode value="normative"/>
+            </extension>
+            <extension
+                url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+                <valueCode value="4.0.0"/>
+            </extension>
+            <path value="Period.start"/>
+            <short value="startDateTime"/>
+            <definition value="The start date and time of the interval. The boundary is inclusive."/>
+            <comment
+                value="If the low element is missing, the meaning is that the low boundary is not known."/>
+            <alias value="startDatumTijd"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="Period.start"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="dateTime"/>
+            </type>
+            <condition value="ele-1"/>
+            <condition value="per-1"/>
+            <constraint>
+                <key value="ele-1"/>
+                <severity value="error"/>
+                <human value="All FHIR elements must have a @value or children"/>
+                <expression value="hasValue() or (children().count() &gt; id.count())"/>
+                <xpath value="@value|f:*|h:div"/>
+                <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+            </constraint>
+            <isSummary value="true"/>
+            <mapping>
+                <identity value="rim"/>
+                <map value="n/a"/>
+            </mapping>
+            <mapping>
+                <identity value="v2"/>
+                <map value="DR.1"/>
+            </mapping>
+            <mapping>
+                <identity value="rim"/>
+                <map value="./low"/>
+            </mapping>
+            <mapping>
+                <identity value="zib-timeinterval-v1.0-2020EN"/>
+                <map value="NL-CM:20.3.2"/>
+                <comment value="startDateTime"/>
+            </mapping>
+        </element>
+        <element id="Period.end">
+            <extension
+                url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+                <valueCode value="normative"/>
+            </extension>
+            <extension
+                url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+                <valueCode value="4.0.0"/>
+            </extension>
+            <path value="Period.end"/>
+            <short value="endDateTime"/>
+            <definition
+                value="The end date and time of the interval. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time."/>
+            <comment
+                value="The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has an end value of 2012-02-03."/>
+            <alias value="eindDatumTijd"/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="Period.end"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="dateTime"/>
+            </type>
+            <meaningWhenMissing
+                value="If the end of the period is missing, it means that the period is ongoing"/>
+            <condition value="ele-1"/>
+            <condition value="per-1"/>
+            <constraint>
+                <key value="ele-1"/>
+                <severity value="error"/>
+                <human value="All FHIR elements must have a @value or children"/>
+                <expression value="hasValue() or (children().count() &gt; id.count())"/>
+                <xpath value="@value|f:*|h:div"/>
+                <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+            </constraint>
+            <isSummary value="true"/>
+            <mapping>
+                <identity value="rim"/>
+                <map value="n/a"/>
+            </mapping>
+            <mapping>
+                <identity value="v2"/>
+                <map value="DR.2"/>
+            </mapping>
+            <mapping>
+                <identity value="rim"/>
+                <map value="./high"/>
+            </mapping>
+            <mapping>
+                <identity value="zib-timeinterval-v1.0-2020EN"/>
+                <map value="NL-CM:20.3.3"/>
+                <comment value="endDateTime"/>
+            </mapping>
+        </element>
+    </snapshot>
+    <differential>
+        <element id="Period">
+            <path value="Period"/>
+            <comment
+                value="When the Duration of zib TimeInterval is known in conjunction with either the startDateTime or endDateTime, it SHALL be converted to a Period and represented using this element. When only the Duration is known, it can be communicated using the &lt;http://nictiz.nl/fhir/StructureDefinition/ext-PeriodOfUse-Duration&gt; extension."
+            />
+        </element>
+        <element id="Period.start">
+            <path value="Period.start"/>
+            <short value="startDateTime"/>
+            <definition value="The start date and time of the interval. The boundary is inclusive."/>
+            <alias value="startDatumTijd"/>
+            <mapping>
+                <identity value="zib-timeinterval-v1.0-2020EN"/>
+                <map value="NL-CM:20.3.2"/>
+                <comment value="startDateTime"/>
+            </mapping>
+        </element>
+        <element id="Period.end">
+            <path value="Period.end"/>
+            <short value="endDateTime"/>
+            <definition
+                value="The end date and time of the interval. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time."/>
+            <alias value="eindDatumTijd"/>
+            <mapping>
+                <identity value="zib-timeinterval-v1.0-2020EN"/>
+                <map value="NL-CM:20.3.3"/>
+                <comment value="endDateTime"/>
+            </mapping>
+        </element>
+    </differential>
+</StructureDefinition>
