@@ -75,21 +75,21 @@
                 <severity value="error"/>
                 <human value="If a prefix for a familiy name is specified, the family name is expected as well"/>
                 <expression value="name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()"/>
-                <source value="http://nictiz.nl/fhir/StructureDefinition/zib-NameInformation"/>
+                <source value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation"/>
             </constraint>
             <constraint>
                 <key value="zib-NameInformation-2"/>
                 <severity value="error"/>
                 <human value="If the prefix for a partner family name is specified, the partner family name is expected as well"/>
                 <expression value="name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()"/>
-                <source value="http://nictiz.nl/fhir/StructureDefinition/zib-NameInformation"/>
+                <source value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation"/>
             </constraint>
             <constraint>
                 <key value="zib-NameInformation-3"/>
                 <severity value="warning"/>
                 <human value="If the name is specified as 'official' then the name is expected to contain only official parts"/>
                 <expression value="use.where(value = 'official').exists() implies given.extension('http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier').where(value = 'CL').exists().not()"/>
-                <source value="http://nictiz.nl/fhir/StructureDefinition/zib-NameInformation"/>
+                <source value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation"/>
             </constraint>
             <mapping>
                 <identity value="zib-nameinformation-v1.1-2020EN"/>
