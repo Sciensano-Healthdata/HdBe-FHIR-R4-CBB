@@ -17,6 +17,7 @@
         * updates ValueSet URLs in StructureDefinitions 
         * removes invalid slicing
         * replaces inline partZibs ContactInformation, AddressInformation and NameInformation with a reference to the respective model
+        * removes 'part' in zibs name for easier referencing.
         
         DOES NOT YET DO:
         *update codesystems URL/URI in ValueSets
@@ -35,6 +36,7 @@
     <xsl:param name="contactEmail" select="'fhir.healthdata@sciensano.be'"/>
     <xsl:param name="convertFileNames" select="true()" as="xs:boolean"/>
     
+    
     <xsl:template match="node()|@*">
         <xsl:copy>
             <xsl:apply-templates select="node()|@*"/>
@@ -44,21 +46,40 @@
     <xsl:template match="f:StructureDefinition">
         <xsl:choose>
             <xsl:when test="f:kind/@value = 'logical'">
-                <xsl:variable name="id"
-                    select="
-                        replace(concat(upper-case(substring(f:name/@value, 1, 1)),
-                        substring(f:name/@value, 2)),
-                        'Nlzorg', $projectPrefix)"
-                    as="xs:string"/>
+                <xsl:variable name="id" as="xs:string">
+                    <xsl:choose>
+                        <xsl:when test="starts-with(f:name/@value, 'Nlzorgpart')">
+                            <xsl:value-of select="
+                                replace(concat(upper-case(substring(f:name/@value, 1, 1)),
+                                substring(f:name/@value, 2)),
+                                'Nlzorgpart', $projectPrefix)"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="
+                                replace(concat(upper-case(substring(f:name/@value, 1, 1)),
+                                substring(f:name/@value, 2)),
+                                'Nlzorg', $projectPrefix)"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:variable>               
+                
                 <!-- No projectPrefix variable here because it needs to be witouth a '-'. -->
-                <xsl:variable name="name"
-                    select="
-                        replace(concat(upper-case(substring(f:name/@value, 1, 1)),
-                        substring(f:name/@value, 2)),
-                        'Nlzorg', 'HdBe')"
-                    as="xs:string"/>
+                <xsl:variable name="name" as="xs:string">
+                    <xsl:choose>
+                        <xsl:when test="starts-with(f:name/@value, 'Nlzorgpart')">
+                            <xsl:value-of select=" replace(concat(upper-case(substring(f:name/@value, 1, 1)),
+                                substring(f:name/@value, 2)),
+                                'Nlzorgpart', 'HdBe')"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="
+                                replace(concat(upper-case(substring(f:name/@value, 1, 1)),
+                                substring(f:name/@value, 2)),
+                                'Nlzorg', 'HdBe')"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:variable>
                 <xsl:variable name="title" select="replace($id, '-', ' ')" as="xs:string"/>
-
                 <xsl:copy>
                     <xsl:choose>
                         <xsl:when test="f:id or not(f:id)">
@@ -77,18 +98,26 @@
                     <!-- remove zib identifier and version -->
                     <!--<xsl:apply-templates select="f:identifier | f:version"/> -->
                     <xsl:choose>
-                        <xsl:when test="f:name">
+                        <xsl:when test="starts-with(f:name/@value, 'Nlzorgpart')">
                             <name value="{$name}">
                                 <xsl:call-template name="translatationExtension">
                                     <xsl:with-param name="translation"
-                                        select="replace(f:name/f:extension/f:extension/f:valueMarkdown/@value, 'nl.zorg.', $projectPrefix)"
-                                    />
+                                        select="replace(f:name/f:extension/f:extension/f:valueMarkdown/@value, 'nl.zorg.part.', $projectPrefix)"/>
                                 </xsl:call-template>
                             </name>
                         </xsl:when>
+                        <xsl:otherwise>
+                            <name value="{$name}">
+                                <xsl:call-template name="translatationExtension">
+                                    <xsl:with-param name="translation"
+                                        select="replace(f:name/f:extension/f:extension/f:valueMarkdown/@value, 'nl.zorg.', $projectPrefix) "
+                                    />
+                                </xsl:call-template>
+                            </name>
+                        </xsl:otherwise>
                     </xsl:choose>
                     <xsl:choose>
-                        <xsl:when test="f:title or not(f:url)">
+                        <xsl:when test="f:title or not(f:title)">
                             <title value="{$title}"/>
                         </xsl:when>
                     </xsl:choose>
@@ -186,7 +215,7 @@
         f:differential/f:element[f:path[starts-with(@value,'medication_agreement.instructions_for_use.')]] |
         f:differential/f:element[f:path[starts-with(@value,'administration_agreement.instructions_for_use.')]] |
         f:differential/f:element[f:path[starts-with(@value,'medication_use.instructions_for_use.')]] |
-        f:differential/f:element[f:path[starts-with(@value,'medication_agreement.instructions_for_use.')]]">       
+        f:differential/f:element[f:path[starts-with(@value,'medication_agreement.instructions_for_use.')]] "> 
     </xsl:template>
     
     <xd:doc>
@@ -195,14 +224,9 @@
     <xsl:template match="f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.0.1.6--20200901000000'] | 
         f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.3.1.4--20200901000000'] |
         f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.17.1.3--20200901000000']">
-        <xsl:copy>
-            <xsl:apply-templates select="@*" />
-            <xsl:apply-templates select="f:path | f:short | f:definition | f:min | f:max"/>
-            <type>
-                <code value="HumanName" />
-                <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-partNameInformation" />
-            </type>
-        </xsl:copy>       
+        <xsl:call-template name="replaceBackBoneElementWithReference">
+            <xsl:with-param name="code" select="'HumanName'"/>
+        </xsl:call-template>
     </xsl:template>
     <xd:doc>
         <xd:desc>Replace inline BackboneElement of AddressInformation with a reference</xd:desc>
@@ -211,14 +235,9 @@
         f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.3.1.5--20200901000000'] |
         f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.17.2.5--20200901000000'] |
         f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.17.1.7--20200901000000']">
-        <xsl:copy>
-            <xsl:apply-templates select="@*" />
-            <xsl:apply-templates select="f:path | f:short | f:definition | f:min | f:max"/>
-            <type>
-                <code value="Address" />
-                <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-partAddressInformation" />
-            </type>
-        </xsl:copy>
+        <xsl:call-template name="replaceBackBoneElementWithReference">
+            <xsl:with-param name="code" select="'Address'"/>
+        </xsl:call-template>
     </xsl:template>
     <xd:doc>
         <xd:desc>Replace inline BackboneElement of ContactInformation with a reference</xd:desc>
@@ -227,14 +246,9 @@
         f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.3.1.6--20200901000000'] |
         f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.17.2.6--20200901000000'] |
         f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.17.1.8--20200901000000']">
-        <xsl:copy>
-            <xsl:apply-templates select="@*" />
-            <xsl:apply-templates select="f:path | f:short | f:definition | f:min | f:max"/>
-            <type>
-                <code value="ContactPoint" />
-                <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-partContactInformation" />
-            </type>
-        </xsl:copy>
+        <xsl:call-template name="replaceBackBoneElementWithReference">
+            <xsl:with-param name="code" select="'ContactPoint'"/>
+        </xsl:call-template>
     </xsl:template>    
     <xd:doc>
         <xd:desc>Replace inline BackboneElement of InsturctionForUse with a reference</xd:desc>
@@ -242,15 +256,26 @@
     <xsl:template match="f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.9.6.23240--20200901000000'] |
         f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.9.8.22098--20200901000000'] |
         f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.9.11.22504--20200901000000'] ">
+        <xsl:call-template name="replaceBackBoneElementWithReference">
+            <xsl:with-param name="code" select="'Dosage'"/>
+        </xsl:call-template>
+    </xsl:template>  
+    
+    
+    
+    
+    <xsl:template name="replaceBackBoneElementWithReference">
+        <xsl:param name="code" as="xs:string"/>
         <xsl:copy>
             <xsl:apply-templates select="@*" />
             <xsl:apply-templates select="f:path | f:short | f:definition | f:min | f:max"/>
+            <xsl:variable name="zibname" select="f:short/@value"/>
             <type>
-                <code value="Dosage" />
-                <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-partInstructionsForUse" />
+                <code value="{$code}"/>
+                <profile value="{$urlBase}{$urlLogicalModel}{$projectPrefix}{$zibname}" />
             </type>
         </xsl:copy>
-    </xsl:template>  
+    </xsl:template>
     
     <xd:doc>
         <xd:desc>Convert ValueSets to HdBe metadata</xd:desc>
