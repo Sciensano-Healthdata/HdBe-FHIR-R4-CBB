@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="GCS_MotorCodelijstBaby"/>
+   <id value="GCS-Motor"/>
    <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
@@ -10,15 +10,15 @@
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/ValueSet/GCS-MotorBaby"/>
+   <url value="https://fhir.healthdata.be/ValueSet/GCS-Motor"/>
    <identifier>
         <use value="official"/>
         <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.12.8.8"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.12.8.2"/>
     </identifier>
    <version value="2020-09-01T00:00:00"/>
-   <name value="GCS_MotorBaby"/>
-   <title value="GCS_MotorBaby"/>
+   <name value="GCS_Motor"/>
+   <title value="GCS_Motor"/>
    <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Healthdata.be (Sciensano)"/>
@@ -30,7 +30,7 @@
          <use value="work"/>
       </telecom>
    </contact>
-   <description value="GCS_MotorCodelijstBaby"/>
+   <description value="GCS_MotorCodelijst"/>
    <immutable value="false"/>
    <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
    <compose>
@@ -41,10 +41,10 @@
                     <valueDecimal value="6"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
+                    <valueString value="Voert opdracht uit [Een eenvoudig bevel wordt uitgevoerd]"/>
                 </extension>
                 <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
+                <display value="Obeys"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -52,7 +52,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Moves spontaneously and purposefully"/>
+                    <value value="Obeys"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -61,7 +61,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normaal"/>
+                    <value value="Voert opdracht uit"/>
                 </designation>
             </concept>
             <concept>
@@ -69,10 +69,10 @@
                     <valueDecimal value="5"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Lokaliseren [In staat zijn de pijn duidelijk te lokaliseren]"/>
                 </extension>
                 <code value="M5"/>
-                <display value="Localising"/>
+                <display value="Localises pain"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -80,7 +80,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Localising"/>
+                    <value value="Localises pain"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -89,7 +89,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="Lokaliseren"/>
                 </designation>
             </concept>
             <concept>
@@ -97,10 +97,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Terugtrekken [In staat om een afwerende of wegtrekkende beweging te maken op een pijnprikkel]"/>
                 </extension>
                 <code value="M4"/>
-                <display value="Normal flexion"/>
+                <display value="Withdrawal response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -108,7 +108,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normal flexion"/>
+                    <value value="Withdrawal response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -117,7 +117,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="Terugtrekken"/>
                 </designation>
             </concept>
             <concept>
@@ -125,10 +125,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Buigreactie [Armen en handen op krampachtige manier geplooid. Meestal benen gestrekt.]"/>
                 </extension>
                 <code value="M3"/>
-                <display value="Abnormal flexion"/>
+                <display value="Flexor response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -136,7 +136,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal flexion"/>
+                    <value value="Flexor response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -153,10 +153,10 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Strekreactie [Armen en handen op krampachtige manier geplooid met naar buitengedraaide hand. Mogelijk alle spieren van het lichaam gespannen]"/>
                 </extension>
                 <code value="M2"/>
-                <display value="Abnormal extension"/>
+                <display value="Extensor response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -164,7 +164,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal extension"/>
+                    <value value="Extensor response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -173,7 +173,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="Strekreactie"/>
                 </designation>
             </concept>
             <concept>
@@ -183,7 +183,7 @@
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                     <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
                 </extension>
-                <code value="M1"/>
+                <code value="M7"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -234,10 +234,10 @@
                     <valueDecimal value="6"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
+                    <valueString value="Voert opdracht uit [Een eenvoudig bevel wordt uitgevoerd]"/>
                 </extension>
                 <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
+                <display value="Obeys"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -245,7 +245,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Moves spontaneously and purposefully"/>
+                    <value value="Obeys"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -254,7 +254,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normaal"/>
+                    <value value="Voert opdracht uit"/>
                 </designation>
             </concept>
             <concept>
@@ -262,10 +262,10 @@
                     <valueDecimal value="6"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
+                    <valueString value="Voert opdracht uit [Een eenvoudig bevel wordt uitgevoerd]"/>
                 </extension>
                 <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
+                <display value="Obeys"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -273,7 +273,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Moves spontaneously and purposefully"/>
+                    <value value="Obeys"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -282,7 +282,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normaal"/>
+                    <value value="Voert opdracht uit"/>
                 </designation>
             </concept>
             <concept>
@@ -290,10 +290,10 @@
                     <valueDecimal value="5"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Lokaliseren [In staat zijn de pijn duidelijk te lokaliseren]"/>
                 </extension>
                 <code value="M5"/>
-                <display value="Localising"/>
+                <display value="Localises pain"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -301,7 +301,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Localising"/>
+                    <value value="Localises pain"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -310,7 +310,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="Lokaliseren"/>
                 </designation>
             </concept>
             <concept>
@@ -318,10 +318,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Terugtrekken [In staat om een afwerende of wegtrekkende beweging te maken op een pijnprikkel]"/>
                 </extension>
                 <code value="M4"/>
-                <display value="Normal flexion"/>
+                <display value="Withdrawal response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -329,7 +329,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normal flexion"/>
+                    <value value="Withdrawal response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -338,7 +338,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="Terugtrekken"/>
                 </designation>
             </concept>
             <concept>
@@ -346,10 +346,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Buigreactie [Armen en handen op krampachtige manier geplooid. Meestal benen gestrekt.]"/>
                 </extension>
                 <code value="M3"/>
-                <display value="Abnormal flexion"/>
+                <display value="Flexor response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -357,7 +357,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal flexion"/>
+                    <value value="Flexor response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -374,10 +374,10 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Strekreactie [Armen en handen op krampachtige manier geplooid met naar buitengedraaide hand. Mogelijk alle spieren van het lichaam gespannen]"/>
                 </extension>
                 <code value="M2"/>
-                <display value="Abnormal extension"/>
+                <display value="Extensor response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -385,7 +385,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal extension"/>
+                    <value value="Extensor response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -394,7 +394,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="Strekreactie"/>
                 </designation>
             </concept>
             <concept>
@@ -404,7 +404,7 @@
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                     <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
                 </extension>
-                <code value="M1"/>
+                <code value="M7"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -455,10 +455,10 @@
                     <valueDecimal value="5"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Lokaliseren [In staat zijn de pijn duidelijk te lokaliseren]"/>
                 </extension>
                 <code value="M5"/>
-                <display value="Localising"/>
+                <display value="Localises pain"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -466,7 +466,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Localising"/>
+                    <value value="Localises pain"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -475,7 +475,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="Lokaliseren"/>
                 </designation>
             </concept>
             <concept>
@@ -483,10 +483,10 @@
                     <valueDecimal value="6"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
+                    <valueString value="Voert opdracht uit [Een eenvoudig bevel wordt uitgevoerd]"/>
                 </extension>
                 <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
+                <display value="Obeys"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -494,7 +494,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Moves spontaneously and purposefully"/>
+                    <value value="Obeys"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -503,7 +503,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normaal"/>
+                    <value value="Voert opdracht uit"/>
                 </designation>
             </concept>
             <concept>
@@ -511,10 +511,10 @@
                     <valueDecimal value="5"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Lokaliseren [In staat zijn de pijn duidelijk te lokaliseren]"/>
                 </extension>
                 <code value="M5"/>
-                <display value="Localising"/>
+                <display value="Localises pain"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -522,7 +522,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Localising"/>
+                    <value value="Localises pain"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -531,7 +531,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="Lokaliseren"/>
                 </designation>
             </concept>
             <concept>
@@ -539,10 +539,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Terugtrekken [In staat om een afwerende of wegtrekkende beweging te maken op een pijnprikkel]"/>
                 </extension>
                 <code value="M4"/>
-                <display value="Normal flexion"/>
+                <display value="Withdrawal response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -550,7 +550,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normal flexion"/>
+                    <value value="Withdrawal response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -559,7 +559,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="Terugtrekken"/>
                 </designation>
             </concept>
             <concept>
@@ -567,10 +567,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Buigreactie [Armen en handen op krampachtige manier geplooid. Meestal benen gestrekt.]"/>
                 </extension>
                 <code value="M3"/>
-                <display value="Abnormal flexion"/>
+                <display value="Flexor response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -578,7 +578,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal flexion"/>
+                    <value value="Flexor response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -595,10 +595,10 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Strekreactie [Armen en handen op krampachtige manier geplooid met naar buitengedraaide hand. Mogelijk alle spieren van het lichaam gespannen]"/>
                 </extension>
                 <code value="M2"/>
-                <display value="Abnormal extension"/>
+                <display value="Extensor response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -606,7 +606,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal extension"/>
+                    <value value="Extensor response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -615,7 +615,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="Strekreactie"/>
                 </designation>
             </concept>
             <concept>
@@ -625,7 +625,7 @@
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                     <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
                 </extension>
-                <code value="M1"/>
+                <code value="M7"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -676,10 +676,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Terugtrekken [In staat om een afwerende of wegtrekkende beweging te maken op een pijnprikkel]"/>
                 </extension>
                 <code value="M4"/>
-                <display value="Normal flexion"/>
+                <display value="Withdrawal response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -687,7 +687,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normal flexion"/>
+                    <value value="Withdrawal response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -696,7 +696,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="Terugtrekken"/>
                 </designation>
             </concept>
             <concept>
@@ -704,10 +704,10 @@
                     <valueDecimal value="6"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
+                    <valueString value="Voert opdracht uit [Een eenvoudig bevel wordt uitgevoerd]"/>
                 </extension>
                 <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
+                <display value="Obeys"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -715,7 +715,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Moves spontaneously and purposefully"/>
+                    <value value="Obeys"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -724,7 +724,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normaal"/>
+                    <value value="Voert opdracht uit"/>
                 </designation>
             </concept>
             <concept>
@@ -732,10 +732,10 @@
                     <valueDecimal value="5"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Lokaliseren [In staat zijn de pijn duidelijk te lokaliseren]"/>
                 </extension>
                 <code value="M5"/>
-                <display value="Localising"/>
+                <display value="Localises pain"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -743,7 +743,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Localising"/>
+                    <value value="Localises pain"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -752,7 +752,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="Lokaliseren"/>
                 </designation>
             </concept>
             <concept>
@@ -760,10 +760,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Terugtrekken [In staat om een afwerende of wegtrekkende beweging te maken op een pijnprikkel]"/>
                 </extension>
                 <code value="M4"/>
-                <display value="Normal flexion"/>
+                <display value="Withdrawal response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -771,7 +771,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normal flexion"/>
+                    <value value="Withdrawal response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -780,7 +780,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="Terugtrekken"/>
                 </designation>
             </concept>
             <concept>
@@ -788,10 +788,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Buigreactie [Armen en handen op krampachtige manier geplooid. Meestal benen gestrekt.]"/>
                 </extension>
                 <code value="M3"/>
-                <display value="Abnormal flexion"/>
+                <display value="Flexor response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -799,7 +799,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal flexion"/>
+                    <value value="Flexor response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -816,10 +816,10 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Strekreactie [Armen en handen op krampachtige manier geplooid met naar buitengedraaide hand. Mogelijk alle spieren van het lichaam gespannen]"/>
                 </extension>
                 <code value="M2"/>
-                <display value="Abnormal extension"/>
+                <display value="Extensor response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -827,7 +827,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal extension"/>
+                    <value value="Extensor response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -836,7 +836,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="Strekreactie"/>
                 </designation>
             </concept>
             <concept>
@@ -846,7 +846,7 @@
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                     <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
                 </extension>
-                <code value="M1"/>
+                <code value="M7"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -897,10 +897,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Buigreactie [Armen en handen op krampachtige manier geplooid. Meestal benen gestrekt.]"/>
                 </extension>
                 <code value="M3"/>
-                <display value="Abnormal flexion"/>
+                <display value="Flexor response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -908,7 +908,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal flexion"/>
+                    <value value="Flexor response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -925,10 +925,10 @@
                     <valueDecimal value="6"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
+                    <valueString value="Voert opdracht uit [Een eenvoudig bevel wordt uitgevoerd]"/>
                 </extension>
                 <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
+                <display value="Obeys"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -936,7 +936,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Moves spontaneously and purposefully"/>
+                    <value value="Obeys"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -945,7 +945,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normaal"/>
+                    <value value="Voert opdracht uit"/>
                 </designation>
             </concept>
             <concept>
@@ -953,10 +953,10 @@
                     <valueDecimal value="5"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Lokaliseren [In staat zijn de pijn duidelijk te lokaliseren]"/>
                 </extension>
                 <code value="M5"/>
-                <display value="Localising"/>
+                <display value="Localises pain"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -964,7 +964,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Localising"/>
+                    <value value="Localises pain"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -973,7 +973,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="Lokaliseren"/>
                 </designation>
             </concept>
             <concept>
@@ -981,10 +981,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Terugtrekken [In staat om een afwerende of wegtrekkende beweging te maken op een pijnprikkel]"/>
                 </extension>
                 <code value="M4"/>
-                <display value="Normal flexion"/>
+                <display value="Withdrawal response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -992,7 +992,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normal flexion"/>
+                    <value value="Withdrawal response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1001,7 +1001,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="Terugtrekken"/>
                 </designation>
             </concept>
             <concept>
@@ -1009,10 +1009,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Buigreactie [Armen en handen op krampachtige manier geplooid. Meestal benen gestrekt.]"/>
                 </extension>
                 <code value="M3"/>
-                <display value="Abnormal flexion"/>
+                <display value="Flexor response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1020,7 +1020,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal flexion"/>
+                    <value value="Flexor response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1037,10 +1037,10 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Strekreactie [Armen en handen op krampachtige manier geplooid met naar buitengedraaide hand. Mogelijk alle spieren van het lichaam gespannen]"/>
                 </extension>
                 <code value="M2"/>
-                <display value="Abnormal extension"/>
+                <display value="Extensor response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1048,7 +1048,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal extension"/>
+                    <value value="Extensor response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1057,7 +1057,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="Strekreactie"/>
                 </designation>
             </concept>
             <concept>
@@ -1067,7 +1067,7 @@
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                     <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
                 </extension>
-                <code value="M1"/>
+                <code value="M7"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -1118,10 +1118,10 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Strekreactie [Armen en handen op krampachtige manier geplooid met naar buitengedraaide hand. Mogelijk alle spieren van het lichaam gespannen]"/>
                 </extension>
                 <code value="M2"/>
-                <display value="Abnormal extension"/>
+                <display value="Extensor response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1129,7 +1129,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal extension"/>
+                    <value value="Extensor response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1138,7 +1138,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="Strekreactie"/>
                 </designation>
             </concept>
             <concept>
@@ -1146,10 +1146,10 @@
                     <valueDecimal value="6"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
+                    <valueString value="Voert opdracht uit [Een eenvoudig bevel wordt uitgevoerd]"/>
                 </extension>
                 <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
+                <display value="Obeys"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1157,7 +1157,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Moves spontaneously and purposefully"/>
+                    <value value="Obeys"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1166,7 +1166,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normaal"/>
+                    <value value="Voert opdracht uit"/>
                 </designation>
             </concept>
             <concept>
@@ -1174,10 +1174,10 @@
                     <valueDecimal value="5"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Lokaliseren [In staat zijn de pijn duidelijk te lokaliseren]"/>
                 </extension>
                 <code value="M5"/>
-                <display value="Localising"/>
+                <display value="Localises pain"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1185,7 +1185,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Localising"/>
+                    <value value="Localises pain"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1194,7 +1194,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="Lokaliseren"/>
                 </designation>
             </concept>
             <concept>
@@ -1202,10 +1202,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Terugtrekken [In staat om een afwerende of wegtrekkende beweging te maken op een pijnprikkel]"/>
                 </extension>
                 <code value="M4"/>
-                <display value="Normal flexion"/>
+                <display value="Withdrawal response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1213,7 +1213,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normal flexion"/>
+                    <value value="Withdrawal response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1222,7 +1222,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="Terugtrekken"/>
                 </designation>
             </concept>
             <concept>
@@ -1230,10 +1230,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Buigreactie [Armen en handen op krampachtige manier geplooid. Meestal benen gestrekt.]"/>
                 </extension>
                 <code value="M3"/>
-                <display value="Abnormal flexion"/>
+                <display value="Flexor response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1241,7 +1241,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal flexion"/>
+                    <value value="Flexor response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1258,10 +1258,10 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Strekreactie [Armen en handen op krampachtige manier geplooid met naar buitengedraaide hand. Mogelijk alle spieren van het lichaam gespannen]"/>
                 </extension>
                 <code value="M2"/>
-                <display value="Abnormal extension"/>
+                <display value="Extensor response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1269,7 +1269,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal extension"/>
+                    <value value="Extensor response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1278,7 +1278,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="Strekreactie"/>
                 </designation>
             </concept>
             <concept>
@@ -1288,7 +1288,7 @@
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                     <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
                 </extension>
-                <code value="M1"/>
+                <code value="M7"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -1341,7 +1341,7 @@
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                     <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
                 </extension>
-                <code value="M1"/>
+                <code value="M7"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -1370,10 +1370,10 @@
                     <valueDecimal value="6"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
+                    <valueString value="Voert opdracht uit [Een eenvoudig bevel wordt uitgevoerd]"/>
                 </extension>
                 <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
+                <display value="Obeys"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1381,7 +1381,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Moves spontaneously and purposefully"/>
+                    <value value="Obeys"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1390,7 +1390,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normaal"/>
+                    <value value="Voert opdracht uit"/>
                 </designation>
             </concept>
             <concept>
@@ -1398,10 +1398,10 @@
                     <valueDecimal value="5"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Lokaliseren [In staat zijn de pijn duidelijk te lokaliseren]"/>
                 </extension>
                 <code value="M5"/>
-                <display value="Localising"/>
+                <display value="Localises pain"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1409,7 +1409,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Localising"/>
+                    <value value="Localises pain"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1418,7 +1418,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="Lokaliseren"/>
                 </designation>
             </concept>
             <concept>
@@ -1426,10 +1426,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Terugtrekken [In staat om een afwerende of wegtrekkende beweging te maken op een pijnprikkel]"/>
                 </extension>
                 <code value="M4"/>
-                <display value="Normal flexion"/>
+                <display value="Withdrawal response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1437,7 +1437,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normal flexion"/>
+                    <value value="Withdrawal response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1446,7 +1446,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="Terugtrekken"/>
                 </designation>
             </concept>
             <concept>
@@ -1454,10 +1454,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Buigreactie [Armen en handen op krampachtige manier geplooid. Meestal benen gestrekt.]"/>
                 </extension>
                 <code value="M3"/>
-                <display value="Abnormal flexion"/>
+                <display value="Flexor response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1465,7 +1465,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal flexion"/>
+                    <value value="Flexor response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1482,10 +1482,10 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Strekreactie [Armen en handen op krampachtige manier geplooid met naar buitengedraaide hand. Mogelijk alle spieren van het lichaam gespannen]"/>
                 </extension>
                 <code value="M2"/>
-                <display value="Abnormal extension"/>
+                <display value="Extensor response"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1493,7 +1493,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal extension"/>
+                    <value value="Extensor response"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1502,7 +1502,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="Strekreactie"/>
                 </designation>
             </concept>
             <concept>
@@ -1512,7 +1512,7 @@
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                     <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
                 </extension>
-                <code value="M1"/>
+                <code value="M7"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>

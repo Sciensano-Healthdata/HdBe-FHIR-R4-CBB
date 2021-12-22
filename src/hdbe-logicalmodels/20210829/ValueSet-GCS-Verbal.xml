@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="GCS_MotorCodelijstBaby"/>
+   <id value="GCS-Verbal"/>
    <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
@@ -10,15 +10,15 @@
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/ValueSet/GCS-MotorBaby"/>
+   <url value="https://fhir.healthdata.be/ValueSet/GCS-Verbal"/>
    <identifier>
         <use value="official"/>
         <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.12.8.8"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.12.8.3"/>
     </identifier>
    <version value="2020-09-01T00:00:00"/>
-   <name value="GCS_MotorBaby"/>
-   <title value="GCS_MotorBaby"/>
+   <name value="GCS_Verbal"/>
+   <title value="GCS_Verbal"/>
    <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Healthdata.be (Sciensano)"/>
@@ -30,49 +30,21 @@
          <use value="work"/>
       </telecom>
    </contact>
-   <description value="GCS_MotorCodelijstBaby"/>
+   <description value="GCS_VerbalCodelijst"/>
    <immutable value="false"/>
    <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
    <compose>
         <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.2.2"/>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="6"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
-                </extension>
-                <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Moves spontaneously and purposefully"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Normaal"/>
-                </designation>
-            </concept>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.2.3"/>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
                     <valueDecimal value="5"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Georiënteerd [Helder en duidelijk bewust van de situatie]"/>
                 </extension>
-                <code value="M5"/>
-                <display value="Localising"/>
+                <code value="V5"/>
+                <display value="Oriented"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -80,7 +52,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Localising"/>
+                    <value value="Oriented"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -89,7 +61,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="Georiënteerd"/>
                 </designation>
             </concept>
             <concept>
@@ -97,10 +69,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Verward [verward maar communiceert coherent]"/>
                 </extension>
-                <code value="M4"/>
-                <display value="Normal flexion"/>
+                <code value="V7"/>
+                <display value="Confused"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -108,7 +80,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normal flexion"/>
+                    <value value="Confused"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -117,7 +89,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="Verward"/>
                 </designation>
             </concept>
             <concept>
@@ -125,10 +97,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Inadequaat [Woorden zijn te verstaan maar vormen geen zinnen]"/>
                 </extension>
-                <code value="M3"/>
-                <display value="Abnormal flexion"/>
+                <code value="V3"/>
+                <display value="Inappropriate speech"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -136,7 +108,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal flexion"/>
+                    <value value="Inappropriate speech"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -145,7 +117,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Buigreactie"/>
+                    <value value="Inadequaat"/>
                 </designation>
             </concept>
             <concept>
@@ -153,18 +125,18 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Kreunen [geen spraak, alleen kreunen]"/>
                 </extension>
-                <code value="M2"/>
-                <display value="Abnormal extension"/>
+                <code value="V6"/>
+                <display value="Kreunen"/>
                 <designation>
-                    <language value="en-US"/>
+                    <language value="nl-NL"/>
                     <use>
                         <system value="http://snomed.info/sct"/>
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal extension"/>
+                    <value value="Kreunen"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -173,7 +145,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="Kreunen"/>
                 </designation>
             </concept>
             <concept>
@@ -181,9 +153,9 @@
                     <valueDecimal value="1"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
+                    <valueString value="Geen reactie [Geen enkel verbale respons]"/>
                 </extension>
-                <code value="M1"/>
+                <code value="V1"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -201,228 +173,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Geen beweging op prikkel"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="0"/>
-                </extension>
-                <code value="NA"/>
-                <display value="Not applicable"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Not applicable"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Niet van toepassing"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="6"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
-                </extension>
-                <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Moves spontaneously and purposefully"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Normaal"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="6"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
-                </extension>
-                <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Moves spontaneously and purposefully"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Normaal"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="5"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
-                </extension>
-                <code value="M5"/>
-                <display value="Localising"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Localising"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Terugtrekken bij aanraking"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="4"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
-                </extension>
-                <code value="M4"/>
-                <display value="Normal flexion"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Normal flexion"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Terugtrekken in respons op pijn"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="3"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
-                </extension>
-                <code value="M3"/>
-                <display value="Abnormal flexion"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Abnormal flexion"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Buigreactie"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="2"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
-                </extension>
-                <code value="M2"/>
-                <display value="Abnormal extension"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Abnormal extension"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Decerebrale strekreactie"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="1"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
-                </extension>
-                <code value="M1"/>
-                <display value="No response"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="No response"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Geen beweging op prikkel"/>
+                    <value value="Geen reactie"/>
                 </designation>
             </concept>
             <concept>
@@ -455,10 +206,10 @@
                     <valueDecimal value="5"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Georiënteerd [Helder en duidelijk bewust van de situatie]"/>
                 </extension>
-                <code value="M5"/>
-                <display value="Localising"/>
+                <code value="V5"/>
+                <display value="Oriented"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -466,7 +217,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Localising"/>
+                    <value value="Oriented"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -475,35 +226,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="6"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
-                </extension>
-                <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Moves spontaneously and purposefully"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Normaal"/>
+                    <value value="Georiënteerd"/>
                 </designation>
             </concept>
             <concept>
@@ -511,10 +234,10 @@
                     <valueDecimal value="5"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Georiënteerd [Helder en duidelijk bewust van de situatie]"/>
                 </extension>
-                <code value="M5"/>
-                <display value="Localising"/>
+                <code value="V5"/>
+                <display value="Oriented"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -522,7 +245,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Localising"/>
+                    <value value="Oriented"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -531,7 +254,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="Georiënteerd"/>
                 </designation>
             </concept>
             <concept>
@@ -539,10 +262,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Verward [verward maar communiceert coherent]"/>
                 </extension>
-                <code value="M4"/>
-                <display value="Normal flexion"/>
+                <code value="V7"/>
+                <display value="Confused"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -550,7 +273,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normal flexion"/>
+                    <value value="Confused"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -559,7 +282,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="Verward"/>
                 </designation>
             </concept>
             <concept>
@@ -567,10 +290,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Inadequaat [Woorden zijn te verstaan maar vormen geen zinnen]"/>
                 </extension>
-                <code value="M3"/>
-                <display value="Abnormal flexion"/>
+                <code value="V3"/>
+                <display value="Inappropriate speech"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -578,7 +301,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal flexion"/>
+                    <value value="Inappropriate speech"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -587,7 +310,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Buigreactie"/>
+                    <value value="Inadequaat"/>
                 </designation>
             </concept>
             <concept>
@@ -595,18 +318,18 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Kreunen [geen spraak, alleen kreunen]"/>
                 </extension>
-                <code value="M2"/>
-                <display value="Abnormal extension"/>
+                <code value="V6"/>
+                <display value="Kreunen"/>
                 <designation>
-                    <language value="en-US"/>
+                    <language value="nl-NL"/>
                     <use>
                         <system value="http://snomed.info/sct"/>
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal extension"/>
+                    <value value="Kreunen"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -615,7 +338,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="Kreunen"/>
                 </designation>
             </concept>
             <concept>
@@ -623,9 +346,9 @@
                     <valueDecimal value="1"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
+                    <valueString value="Geen reactie [Geen enkel verbale respons]"/>
                 </extension>
-                <code value="M1"/>
+                <code value="V1"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -643,7 +366,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Geen beweging op prikkel"/>
+                    <value value="Geen reactie"/>
                 </designation>
             </concept>
             <concept>
@@ -676,10 +399,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Verward [verward maar communiceert coherent]"/>
                 </extension>
-                <code value="M4"/>
-                <display value="Normal flexion"/>
+                <code value="V7"/>
+                <display value="Confused"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -687,7 +410,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normal flexion"/>
+                    <value value="Confused"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -696,35 +419,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="6"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
-                </extension>
-                <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Moves spontaneously and purposefully"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Normaal"/>
+                    <value value="Verward"/>
                 </designation>
             </concept>
             <concept>
@@ -732,10 +427,10 @@
                     <valueDecimal value="5"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Georiënteerd [Helder en duidelijk bewust van de situatie]"/>
                 </extension>
-                <code value="M5"/>
-                <display value="Localising"/>
+                <code value="V5"/>
+                <display value="Oriented"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -743,7 +438,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Localising"/>
+                    <value value="Oriented"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -752,7 +447,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="Georiënteerd"/>
                 </designation>
             </concept>
             <concept>
@@ -760,10 +455,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Verward [verward maar communiceert coherent]"/>
                 </extension>
-                <code value="M4"/>
-                <display value="Normal flexion"/>
+                <code value="V7"/>
+                <display value="Confused"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -771,7 +466,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normal flexion"/>
+                    <value value="Confused"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -780,7 +475,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="Verward"/>
                 </designation>
             </concept>
             <concept>
@@ -788,10 +483,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Inadequaat [Woorden zijn te verstaan maar vormen geen zinnen]"/>
                 </extension>
-                <code value="M3"/>
-                <display value="Abnormal flexion"/>
+                <code value="V3"/>
+                <display value="Inappropriate speech"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -799,7 +494,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal flexion"/>
+                    <value value="Inappropriate speech"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -808,7 +503,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Buigreactie"/>
+                    <value value="Inadequaat"/>
                 </designation>
             </concept>
             <concept>
@@ -816,18 +511,18 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Kreunen [geen spraak, alleen kreunen]"/>
                 </extension>
-                <code value="M2"/>
-                <display value="Abnormal extension"/>
+                <code value="V6"/>
+                <display value="Kreunen"/>
                 <designation>
-                    <language value="en-US"/>
+                    <language value="nl-NL"/>
                     <use>
                         <system value="http://snomed.info/sct"/>
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal extension"/>
+                    <value value="Kreunen"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -836,7 +531,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="Kreunen"/>
                 </designation>
             </concept>
             <concept>
@@ -844,9 +539,9 @@
                     <valueDecimal value="1"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
+                    <valueString value="Geen reactie [Geen enkel verbale respons]"/>
                 </extension>
-                <code value="M1"/>
+                <code value="V1"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -864,7 +559,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Geen beweging op prikkel"/>
+                    <value value="Geen reactie"/>
                 </designation>
             </concept>
             <concept>
@@ -897,10 +592,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Inadequaat [Woorden zijn te verstaan maar vormen geen zinnen]"/>
                 </extension>
-                <code value="M3"/>
-                <display value="Abnormal flexion"/>
+                <code value="V3"/>
+                <display value="Inappropriate speech"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -908,7 +603,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal flexion"/>
+                    <value value="Inappropriate speech"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -917,35 +612,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Buigreactie"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="6"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
-                </extension>
-                <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Moves spontaneously and purposefully"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Normaal"/>
+                    <value value="Inadequaat"/>
                 </designation>
             </concept>
             <concept>
@@ -953,10 +620,10 @@
                     <valueDecimal value="5"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Georiënteerd [Helder en duidelijk bewust van de situatie]"/>
                 </extension>
-                <code value="M5"/>
-                <display value="Localising"/>
+                <code value="V5"/>
+                <display value="Oriented"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -964,7 +631,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Localising"/>
+                    <value value="Oriented"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -973,7 +640,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="Georiënteerd"/>
                 </designation>
             </concept>
             <concept>
@@ -981,10 +648,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Verward [verward maar communiceert coherent]"/>
                 </extension>
-                <code value="M4"/>
-                <display value="Normal flexion"/>
+                <code value="V7"/>
+                <display value="Confused"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -992,7 +659,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normal flexion"/>
+                    <value value="Confused"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1001,7 +668,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="Verward"/>
                 </designation>
             </concept>
             <concept>
@@ -1009,10 +676,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Inadequaat [Woorden zijn te verstaan maar vormen geen zinnen]"/>
                 </extension>
-                <code value="M3"/>
-                <display value="Abnormal flexion"/>
+                <code value="V3"/>
+                <display value="Inappropriate speech"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1020,7 +687,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal flexion"/>
+                    <value value="Inappropriate speech"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1029,7 +696,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Buigreactie"/>
+                    <value value="Inadequaat"/>
                 </designation>
             </concept>
             <concept>
@@ -1037,18 +704,18 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Kreunen [geen spraak, alleen kreunen]"/>
                 </extension>
-                <code value="M2"/>
-                <display value="Abnormal extension"/>
+                <code value="V6"/>
+                <display value="Kreunen"/>
                 <designation>
-                    <language value="en-US"/>
+                    <language value="nl-NL"/>
                     <use>
                         <system value="http://snomed.info/sct"/>
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal extension"/>
+                    <value value="Kreunen"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1057,7 +724,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="Kreunen"/>
                 </designation>
             </concept>
             <concept>
@@ -1065,9 +732,9 @@
                     <valueDecimal value="1"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
+                    <valueString value="Geen reactie [Geen enkel verbale respons]"/>
                 </extension>
-                <code value="M1"/>
+                <code value="V1"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -1085,7 +752,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Geen beweging op prikkel"/>
+                    <value value="Geen reactie"/>
                 </designation>
             </concept>
             <concept>
@@ -1118,18 +785,18 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Kreunen [geen spraak, alleen kreunen]"/>
                 </extension>
-                <code value="M2"/>
-                <display value="Abnormal extension"/>
+                <code value="V6"/>
+                <display value="Kreunen"/>
                 <designation>
-                    <language value="en-US"/>
+                    <language value="nl-NL"/>
                     <use>
                         <system value="http://snomed.info/sct"/>
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal extension"/>
+                    <value value="Kreunen"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1138,35 +805,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="6"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
-                </extension>
-                <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Moves spontaneously and purposefully"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Normaal"/>
+                    <value value="Kreunen"/>
                 </designation>
             </concept>
             <concept>
@@ -1174,10 +813,10 @@
                     <valueDecimal value="5"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Georiënteerd [Helder en duidelijk bewust van de situatie]"/>
                 </extension>
-                <code value="M5"/>
-                <display value="Localising"/>
+                <code value="V5"/>
+                <display value="Oriented"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1185,7 +824,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Localising"/>
+                    <value value="Oriented"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1194,7 +833,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="Georiënteerd"/>
                 </designation>
             </concept>
             <concept>
@@ -1202,10 +841,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Verward [verward maar communiceert coherent]"/>
                 </extension>
-                <code value="M4"/>
-                <display value="Normal flexion"/>
+                <code value="V7"/>
+                <display value="Confused"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1213,7 +852,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normal flexion"/>
+                    <value value="Confused"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1222,7 +861,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="Verward"/>
                 </designation>
             </concept>
             <concept>
@@ -1230,10 +869,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Inadequaat [Woorden zijn te verstaan maar vormen geen zinnen]"/>
                 </extension>
-                <code value="M3"/>
-                <display value="Abnormal flexion"/>
+                <code value="V3"/>
+                <display value="Inappropriate speech"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1241,7 +880,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal flexion"/>
+                    <value value="Inappropriate speech"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1250,7 +889,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Buigreactie"/>
+                    <value value="Inadequaat"/>
                 </designation>
             </concept>
             <concept>
@@ -1258,18 +897,18 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Kreunen [geen spraak, alleen kreunen]"/>
                 </extension>
-                <code value="M2"/>
-                <display value="Abnormal extension"/>
+                <code value="V6"/>
+                <display value="Kreunen"/>
                 <designation>
-                    <language value="en-US"/>
+                    <language value="nl-NL"/>
                     <use>
                         <system value="http://snomed.info/sct"/>
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal extension"/>
+                    <value value="Kreunen"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1278,7 +917,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="Kreunen"/>
                 </designation>
             </concept>
             <concept>
@@ -1286,9 +925,9 @@
                     <valueDecimal value="1"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
+                    <valueString value="Geen reactie [Geen enkel verbale respons]"/>
                 </extension>
-                <code value="M1"/>
+                <code value="V1"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -1306,7 +945,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Geen beweging op prikkel"/>
+                    <value value="Geen reactie"/>
                 </designation>
             </concept>
             <concept>
@@ -1339,9 +978,9 @@
                     <valueDecimal value="1"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
+                    <valueString value="Geen reactie [Geen enkel verbale respons]"/>
                 </extension>
-                <code value="M1"/>
+                <code value="V1"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -1359,49 +998,21 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Geen beweging op prikkel"/>
+                    <value value="Geen reactie"/>
                 </designation>
             </concept>
         </include>
         <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.2.2"/>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="6"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
-                </extension>
-                <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Moves spontaneously and purposefully"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Normaal"/>
-                </designation>
-            </concept>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.2.3"/>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
                     <valueDecimal value="5"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Georiënteerd [Helder en duidelijk bewust van de situatie]"/>
                 </extension>
-                <code value="M5"/>
-                <display value="Localising"/>
+                <code value="V5"/>
+                <display value="Oriented"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1409,7 +1020,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Localising"/>
+                    <value value="Oriented"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1418,7 +1029,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="Georiënteerd"/>
                 </designation>
             </concept>
             <concept>
@@ -1426,10 +1037,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Verward [verward maar communiceert coherent]"/>
                 </extension>
-                <code value="M4"/>
-                <display value="Normal flexion"/>
+                <code value="V7"/>
+                <display value="Confused"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1437,7 +1048,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normal flexion"/>
+                    <value value="Confused"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1446,7 +1057,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="Verward"/>
                 </designation>
             </concept>
             <concept>
@@ -1454,10 +1065,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Inadequaat [Woorden zijn te verstaan maar vormen geen zinnen]"/>
                 </extension>
-                <code value="M3"/>
-                <display value="Abnormal flexion"/>
+                <code value="V3"/>
+                <display value="Inappropriate speech"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1465,7 +1076,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal flexion"/>
+                    <value value="Inappropriate speech"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1474,7 +1085,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Buigreactie"/>
+                    <value value="Inadequaat"/>
                 </designation>
             </concept>
             <concept>
@@ -1482,18 +1093,18 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Kreunen [geen spraak, alleen kreunen]"/>
                 </extension>
-                <code value="M2"/>
-                <display value="Abnormal extension"/>
+                <code value="V6"/>
+                <display value="Kreunen"/>
                 <designation>
-                    <language value="en-US"/>
+                    <language value="nl-NL"/>
                     <use>
                         <system value="http://snomed.info/sct"/>
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Abnormal extension"/>
+                    <value value="Kreunen"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1502,7 +1113,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="Kreunen"/>
                 </designation>
             </concept>
             <concept>
@@ -1510,9 +1121,9 @@
                     <valueDecimal value="1"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
+                    <valueString value="Geen reactie [Geen enkel verbale respons]"/>
                 </extension>
-                <code value="M1"/>
+                <code value="V1"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -1530,7 +1141,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Geen beweging op prikkel"/>
+                    <value value="Geen reactie"/>
                 </designation>
             </concept>
             <concept>

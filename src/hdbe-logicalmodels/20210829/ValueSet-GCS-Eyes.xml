@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="GCS_VerbalCodelijstKleuter"/>
+   <id value="GCS-Eyes"/>
    <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
@@ -10,15 +10,15 @@
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/ValueSet/GCS-VerbalKleuter"/>
+   <url value="https://fhir.healthdata.be/ValueSet/GCS-Eyes"/>
    <identifier>
         <use value="official"/>
         <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.12.8.4"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.12.8.1"/>
     </identifier>
    <version value="2020-09-01T00:00:00"/>
-   <name value="GCS_VerbalKleuter"/>
-   <title value="GCS_VerbalKleuter"/>
+   <name value="GCS_Eyes"/>
+   <title value="GCS_Eyes"/>
    <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Healthdata.be (Sciensano)"/>
@@ -30,49 +30,21 @@
          <use value="work"/>
       </telecom>
    </contact>
-   <description value="GCS_VerbalCodelijstKleuter"/>
+   <description value="GCS_EyesCodelijst"/>
    <immutable value="false"/>
    <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
    <compose>
         <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.2.3"/>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="5"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Georiënteerd [Helder en duidelijk bewust van de situatie]"/>
-                </extension>
-                <code value="V10"/>
-                <display value="Orientated"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Orientated"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Georiënteerd"/>
-                </designation>
-            </concept>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.2.1"/>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Verward [verward maar communiceert coherent]"/>
+                    <valueString value="Spontaan [De ogen worden geopend zonder aansporing"/>
                 </extension>
-                <code value="V9"/>
-                <display value="Confused"/>
+                <code value="E4"/>
+                <display value="Spontaneous"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -80,7 +52,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Confused"/>
+                    <value value="Spontaneous"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -89,7 +61,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Verward"/>
+                    <value value="Spontaan"/>
                 </designation>
             </concept>
             <concept>
@@ -97,10 +69,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Inadequaat [Woorden zijn te verstaan maar vormen geen zinnen]"/>
+                    <valueString value="Bij aanspreken of aanroepen [De ogen worden pas geopend op aanspreken van de patiënt]"/>
                 </extension>
-                <code value="V8"/>
-                <display value="Words"/>
+                <code value="E3"/>
+                <display value="To sound"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -108,7 +80,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Words"/>
+                    <value value="To sound"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -117,7 +89,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Inadequaat"/>
+                    <value value="Bij aanspreken of aanroepen"/>
                 </designation>
             </concept>
             <concept>
@@ -125,10 +97,10 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Onjuiste woorden [onjuiste woorden of geluiden zoals kreunen]"/>
+                    <valueString value="Bij een prikkel [De ogen worden pas geopend na geven van een fysieke prikkel]"/>
                 </extension>
-                <code value="V7"/>
-                <display value="Sounds"/>
+                <code value="E2"/>
+                <display value="To stimuli"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -136,7 +108,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Sounds"/>
+                    <value value="To stimuli"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -145,7 +117,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Onjuiste woorden"/>
+                    <value value="Bij een prikkel"/>
                 </designation>
             </concept>
             <concept>
@@ -153,9 +125,9 @@
                     <valueDecimal value="1"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen reactie [Geen enkel verbale response]"/>
+                    <valueString value="Geen reactie [De ogen blijven gesloten onder elke omstandigheid]"/>
                 </extension>
-                <code value="V1"/>
+                <code value="E1"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -180,198 +152,8 @@
                 <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
                     <valueDecimal value="0"/>
                 </extension>
-                <code value="NA"/>
-                <display value="Not applicable"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Not applicable"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Niet van toepassing"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="5"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Georiënteerd [Helder en duidelijk bewust van de situatie]"/>
-                </extension>
-                <code value="V10"/>
-                <display value="Orientated"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Orientated"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Georiënteerd"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="5"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Georiënteerd [Helder en duidelijk bewust van de situatie]"/>
-                </extension>
-                <code value="V10"/>
-                <display value="Orientated"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Orientated"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Georiënteerd"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="4"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Verward [verward maar communiceert coherent]"/>
-                </extension>
-                <code value="V9"/>
-                <display value="Confused"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Confused"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Verward"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="3"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Inadequaat [Woorden zijn te verstaan maar vormen geen zinnen]"/>
-                </extension>
-                <code value="V8"/>
-                <display value="Words"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Words"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Inadequaat"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="2"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Onjuiste woorden [onjuiste woorden of geluiden zoals kreunen]"/>
-                </extension>
-                <code value="V7"/>
-                <display value="Sounds"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Sounds"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Onjuiste woorden"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="1"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen reactie [Geen enkel verbale response]"/>
-                </extension>
-                <code value="V1"/>
-                <display value="No response"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="No response"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Geen reactie"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="0"/>
+                    <valueString value="Niet testbaar door een lokale beperkende factor"/>
                 </extension>
                 <code value="NA"/>
                 <display value="Not applicable"/>
@@ -399,10 +181,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Verward [verward maar communiceert coherent]"/>
+                    <valueString value="Spontaan [De ogen worden geopend zonder aansporing"/>
                 </extension>
-                <code value="V9"/>
-                <display value="Confused"/>
+                <code value="E4"/>
+                <display value="Spontaneous"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -410,7 +192,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Confused"/>
+                    <value value="Spontaneous"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -419,35 +201,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Verward"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="5"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Georiënteerd [Helder en duidelijk bewust van de situatie]"/>
-                </extension>
-                <code value="V10"/>
-                <display value="Orientated"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Orientated"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Georiënteerd"/>
+                    <value value="Spontaan"/>
                 </designation>
             </concept>
             <concept>
@@ -455,10 +209,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Verward [verward maar communiceert coherent]"/>
+                    <valueString value="Spontaan [De ogen worden geopend zonder aansporing"/>
                 </extension>
-                <code value="V9"/>
-                <display value="Confused"/>
+                <code value="E4"/>
+                <display value="Spontaneous"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -466,7 +220,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Confused"/>
+                    <value value="Spontaneous"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -475,7 +229,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Verward"/>
+                    <value value="Spontaan"/>
                 </designation>
             </concept>
             <concept>
@@ -483,10 +237,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Inadequaat [Woorden zijn te verstaan maar vormen geen zinnen]"/>
+                    <valueString value="Bij aanspreken of aanroepen [De ogen worden pas geopend op aanspreken van de patiënt]"/>
                 </extension>
-                <code value="V8"/>
-                <display value="Words"/>
+                <code value="E3"/>
+                <display value="To sound"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -494,7 +248,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Words"/>
+                    <value value="To sound"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -503,7 +257,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Inadequaat"/>
+                    <value value="Bij aanspreken of aanroepen"/>
                 </designation>
             </concept>
             <concept>
@@ -511,10 +265,10 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Onjuiste woorden [onjuiste woorden of geluiden zoals kreunen]"/>
+                    <valueString value="Bij een prikkel [De ogen worden pas geopend na geven van een fysieke prikkel]"/>
                 </extension>
-                <code value="V7"/>
-                <display value="Sounds"/>
+                <code value="E2"/>
+                <display value="To stimuli"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -522,7 +276,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Sounds"/>
+                    <value value="To stimuli"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -531,7 +285,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Onjuiste woorden"/>
+                    <value value="Bij een prikkel"/>
                 </designation>
             </concept>
             <concept>
@@ -539,9 +293,9 @@
                     <valueDecimal value="1"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen reactie [Geen enkel verbale response]"/>
+                    <valueString value="Geen reactie [De ogen blijven gesloten onder elke omstandigheid]"/>
                 </extension>
-                <code value="V1"/>
+                <code value="E1"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -565,6 +319,9 @@
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
                     <valueDecimal value="0"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Niet testbaar door een lokale beperkende factor"/>
                 </extension>
                 <code value="NA"/>
                 <display value="Not applicable"/>
@@ -592,10 +349,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Inadequaat [Woorden zijn te verstaan maar vormen geen zinnen]"/>
+                    <valueString value="Bij aanspreken of aanroepen [De ogen worden pas geopend op aanspreken van de patiënt]"/>
                 </extension>
-                <code value="V8"/>
-                <display value="Words"/>
+                <code value="E3"/>
+                <display value="To sound"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -603,7 +360,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Words"/>
+                    <value value="To sound"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -612,35 +369,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Inadequaat"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="5"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Georiënteerd [Helder en duidelijk bewust van de situatie]"/>
-                </extension>
-                <code value="V10"/>
-                <display value="Orientated"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Orientated"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Georiënteerd"/>
+                    <value value="Bij aanspreken of aanroepen"/>
                 </designation>
             </concept>
             <concept>
@@ -648,10 +377,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Verward [verward maar communiceert coherent]"/>
+                    <valueString value="Spontaan [De ogen worden geopend zonder aansporing"/>
                 </extension>
-                <code value="V9"/>
-                <display value="Confused"/>
+                <code value="E4"/>
+                <display value="Spontaneous"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -659,7 +388,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Confused"/>
+                    <value value="Spontaneous"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -668,7 +397,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Verward"/>
+                    <value value="Spontaan"/>
                 </designation>
             </concept>
             <concept>
@@ -676,10 +405,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Inadequaat [Woorden zijn te verstaan maar vormen geen zinnen]"/>
+                    <valueString value="Bij aanspreken of aanroepen [De ogen worden pas geopend op aanspreken van de patiënt]"/>
                 </extension>
-                <code value="V8"/>
-                <display value="Words"/>
+                <code value="E3"/>
+                <display value="To sound"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -687,7 +416,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Words"/>
+                    <value value="To sound"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -696,7 +425,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Inadequaat"/>
+                    <value value="Bij aanspreken of aanroepen"/>
                 </designation>
             </concept>
             <concept>
@@ -704,10 +433,10 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Onjuiste woorden [onjuiste woorden of geluiden zoals kreunen]"/>
+                    <valueString value="Bij een prikkel [De ogen worden pas geopend na geven van een fysieke prikkel]"/>
                 </extension>
-                <code value="V7"/>
-                <display value="Sounds"/>
+                <code value="E2"/>
+                <display value="To stimuli"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -715,7 +444,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Sounds"/>
+                    <value value="To stimuli"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -724,7 +453,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Onjuiste woorden"/>
+                    <value value="Bij een prikkel"/>
                 </designation>
             </concept>
             <concept>
@@ -732,9 +461,9 @@
                     <valueDecimal value="1"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen reactie [Geen enkel verbale response]"/>
+                    <valueString value="Geen reactie [De ogen blijven gesloten onder elke omstandigheid]"/>
                 </extension>
-                <code value="V1"/>
+                <code value="E1"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -758,6 +487,9 @@
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
                     <valueDecimal value="0"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Niet testbaar door een lokale beperkende factor"/>
                 </extension>
                 <code value="NA"/>
                 <display value="Not applicable"/>
@@ -785,10 +517,10 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Onjuiste woorden [onjuiste woorden of geluiden zoals kreunen]"/>
+                    <valueString value="Bij een prikkel [De ogen worden pas geopend na geven van een fysieke prikkel]"/>
                 </extension>
-                <code value="V7"/>
-                <display value="Sounds"/>
+                <code value="E2"/>
+                <display value="To stimuli"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -796,7 +528,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Sounds"/>
+                    <value value="To stimuli"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -805,35 +537,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Onjuiste woorden"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="5"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Georiënteerd [Helder en duidelijk bewust van de situatie]"/>
-                </extension>
-                <code value="V10"/>
-                <display value="Orientated"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Orientated"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Georiënteerd"/>
+                    <value value="Bij een prikkel"/>
                 </designation>
             </concept>
             <concept>
@@ -841,10 +545,10 @@
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Verward [verward maar communiceert coherent]"/>
+                    <valueString value="Spontaan [De ogen worden geopend zonder aansporing"/>
                 </extension>
-                <code value="V9"/>
-                <display value="Confused"/>
+                <code value="E4"/>
+                <display value="Spontaneous"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -852,7 +556,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Confused"/>
+                    <value value="Spontaneous"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -861,7 +565,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Verward"/>
+                    <value value="Spontaan"/>
                 </designation>
             </concept>
             <concept>
@@ -869,10 +573,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Inadequaat [Woorden zijn te verstaan maar vormen geen zinnen]"/>
+                    <valueString value="Bij aanspreken of aanroepen [De ogen worden pas geopend op aanspreken van de patiënt]"/>
                 </extension>
-                <code value="V8"/>
-                <display value="Words"/>
+                <code value="E3"/>
+                <display value="To sound"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -880,7 +584,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Words"/>
+                    <value value="To sound"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -889,7 +593,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Inadequaat"/>
+                    <value value="Bij aanspreken of aanroepen"/>
                 </designation>
             </concept>
             <concept>
@@ -897,10 +601,10 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Onjuiste woorden [onjuiste woorden of geluiden zoals kreunen]"/>
+                    <valueString value="Bij een prikkel [De ogen worden pas geopend na geven van een fysieke prikkel]"/>
                 </extension>
-                <code value="V7"/>
-                <display value="Sounds"/>
+                <code value="E2"/>
+                <display value="To stimuli"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -908,7 +612,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Sounds"/>
+                    <value value="To stimuli"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -917,7 +621,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Onjuiste woorden"/>
+                    <value value="Bij een prikkel"/>
                 </designation>
             </concept>
             <concept>
@@ -925,9 +629,9 @@
                     <valueDecimal value="1"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen reactie [Geen enkel verbale response]"/>
+                    <valueString value="Geen reactie [De ogen blijven gesloten onder elke omstandigheid]"/>
                 </extension>
-                <code value="V1"/>
+                <code value="E1"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -951,6 +655,9 @@
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
                     <valueDecimal value="0"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Niet testbaar door een lokale beperkende factor"/>
                 </extension>
                 <code value="NA"/>
                 <display value="Not applicable"/>
@@ -978,9 +685,9 @@
                     <valueDecimal value="1"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen reactie [Geen enkel verbale response]"/>
+                    <valueString value="Geen reactie [De ogen blijven gesloten onder elke omstandigheid]"/>
                 </extension>
-                <code value="V1"/>
+                <code value="E1"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -1003,44 +710,16 @@
             </concept>
         </include>
         <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.2.3"/>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="5"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Georiënteerd [Helder en duidelijk bewust van de situatie]"/>
-                </extension>
-                <code value="V10"/>
-                <display value="Orientated"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Orientated"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Georiënteerd"/>
-                </designation>
-            </concept>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.2.1"/>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
                     <valueDecimal value="4"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Verward [verward maar communiceert coherent]"/>
+                    <valueString value="Spontaan [De ogen worden geopend zonder aansporing"/>
                 </extension>
-                <code value="V9"/>
-                <display value="Confused"/>
+                <code value="E4"/>
+                <display value="Spontaneous"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1048,7 +727,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Confused"/>
+                    <value value="Spontaneous"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1057,7 +736,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Verward"/>
+                    <value value="Spontaan"/>
                 </designation>
             </concept>
             <concept>
@@ -1065,10 +744,10 @@
                     <valueDecimal value="3"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Inadequaat [Woorden zijn te verstaan maar vormen geen zinnen]"/>
+                    <valueString value="Bij aanspreken of aanroepen [De ogen worden pas geopend op aanspreken van de patiënt]"/>
                 </extension>
-                <code value="V8"/>
-                <display value="Words"/>
+                <code value="E3"/>
+                <display value="To sound"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1076,7 +755,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Words"/>
+                    <value value="To sound"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1085,7 +764,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Inadequaat"/>
+                    <value value="Bij aanspreken of aanroepen"/>
                 </designation>
             </concept>
             <concept>
@@ -1093,10 +772,10 @@
                     <valueDecimal value="2"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Onjuiste woorden [onjuiste woorden of geluiden zoals kreunen]"/>
+                    <valueString value="Bij een prikkel [De ogen worden pas geopend na geven van een fysieke prikkel]"/>
                 </extension>
-                <code value="V7"/>
-                <display value="Sounds"/>
+                <code value="E2"/>
+                <display value="To stimuli"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -1104,7 +783,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Sounds"/>
+                    <value value="To stimuli"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -1113,7 +792,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Onjuiste woorden"/>
+                    <value value="Bij een prikkel"/>
                 </designation>
             </concept>
             <concept>
@@ -1121,9 +800,9 @@
                     <valueDecimal value="1"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen reactie [Geen enkel verbale response]"/>
+                    <valueString value="Geen reactie [De ogen blijven gesloten onder elke omstandigheid]"/>
                 </extension>
-                <code value="V1"/>
+                <code value="E1"/>
                 <display value="No response"/>
                 <designation>
                     <language value="en-US"/>
@@ -1147,6 +826,9 @@
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
                     <valueDecimal value="0"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Niet testbaar door een lokale beperkende factor"/>
                 </extension>
                 <code value="NA"/>
                 <display value="Not applicable"/>
@@ -1172,6 +854,9 @@
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
                     <valueDecimal value="0"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Niet testbaar door een lokale beperkende factor"/>
                 </extension>
                 <code value="NA"/>
                 <display value="Not applicable"/>
