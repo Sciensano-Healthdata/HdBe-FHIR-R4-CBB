@@ -5,21 +5,9 @@
   predicate: id.exists()
   error-message: "Resource {{filepath}} must have an id"
 
-- name: unique-id-sd
-  status: "Checking if all StructureDefintions have a unique id"
-  filter: StructureDefintion
-  unique: id
-  error-message: "Resource {{filepath}} does not have an unique id"
-
-- name: unique-id-vs
-  status: "Checking if all ValueSets have a unique id"
-  filter: ValueSet
-  unique: id
-  error-message: "Resource {{filepath}} does not have an unique id"
-
-- name: unique-id-cs
-  status: "Checking if all CodeSystem have a unique id"
-  filter: ValueSet
+- name: unique-id
+  status: "Checking if all resources have a unique id"
+  filter: Resource
   unique: id
   error-message: "Resource {{filepath}} does not have an unique id"
 
@@ -37,12 +25,12 @@
   error-message: "Resource {{filepath}} - canonical URL doesn't start with correct base"  
 
 - name: extension-url-starts-with
-  status: "Checking whether extension starts with Ext-"
-  filter: Extension
+  status: "Checking whether extension starts with 'ext-'"
+  filter: StructureDefinition.exists() and StructureDefinition.type = 'Extension'
   predicate: id.startsWith('ext-')
-  error-message: "Extension {{filepath}} does not start with Ext-"  
+  error-message: "Extension {{filepath}} does not start with ext-"  
 
-- name: pubisher-mandatory
+- name: publisher-mandatory
   status: "Checking if all resources have 'Healthdata.be (Sciensano)' as publisher"
   filter: Conformance
   predicate: publisher = 'Healthdata.be (Sciensano)
