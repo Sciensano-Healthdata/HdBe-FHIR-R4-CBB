@@ -8,20 +8,20 @@
     exclude-result-prefixes="#all"
     version="2.0">
     
-    <!-- 
-        * requires a name!    
-        * remove .identifier and .version because they are zib specific
-        * convert .type to a full url 
-        * remove snapshot because diff and snap are similar
-        * in StructureDefinition update profile URLs, by moving them from .profile to .targetProfile and by updating the reference
-        * in StructureDefinition update valueset URLs 
+    <!-- This transformation script...
+        * requires a name per model/resource    
+        * removes .identifier and .version because they are zib specific
+        * converts .type to a full url 
+        * removes snapshot because diff and snap are similar
+        * updates StructureDefinition referenes, by moving them from .profile to .targetProfile and by updating the reference
+        * updates ValueSet URLs in StructureDefinitions 
         * removes invalid slicing
+        * replaces inline partZibs ContactInformation, AddressInformation and NameInformation with a reference to the respective model
         
-        MISSING:
-        ** update codesystems URL/URI in ValueSets
-        ** remove inline partZibs
-    
+        DOES NOT YET DO:
+        *update codesystems URL/URI in ValueSets
     -->
+    
     <xsl:output indent="yes"/>
     <xsl:strip-space elements="*"/>
     
@@ -170,11 +170,69 @@
     </xsl:template>
     
     <xd:doc>
-        <xd:desc>Remove invalid slicing</xd:desc>
+        <xd:desc>Remove invalid slicing and inline NameInformation, ContactInformation and AddressInformation.</xd:desc>
     </xd:doc>
-    <xsl:template match="f:differential/f:element[f:path[ends-with(@value,'.coding')]]">
+    <xsl:template match="f:differential/f:element[f:path[ends-with(@value,'.coding')]] |
+        f:differential/f:element[f:path[starts-with(@value,'patient.name_information.')]] |
+        f:differential/f:element[f:path[starts-with(@value,'patient.contact_information.')]] |
+        f:differential/f:element[f:path[starts-with(@value,'patient.address_information.')]] |
+        f:differential/f:element[f:path[starts-with(@value,'contact.name_information.')]] |
+        f:differential/f:element[f:path[starts-with(@value,'contact.contact_information.')]] |
+        f:differential/f:element[f:path[starts-with(@value,'contact.address_information.')]] |
+        f:differential/f:element[f:path[starts-with(@value,'healthcare_provider.contact_information.')]] |
+        f:differential/f:element[f:path[starts-with(@value,'healthcare_provider.address_information.')]] |
+        f:differential/f:element[f:path[starts-with(@value,'health_professional.name_information.')]] |
+        f:differential/f:element[f:path[starts-with(@value,'health_professional.contact_information.')]] |
+        f:differential/f:element[f:path[starts-with(@value,'health_professional.address_information.')]] ">
     </xsl:template>
     
+    <xd:doc>
+        <xd:desc>Replace inline BackboneElement of NameInformation with a reference</xd:desc>
+    </xd:doc>
+    <xsl:template match="f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.0.1.6--20200901000000'] | 
+        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.3.1.4--20200901000000'] |
+        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.17.1.3--20200901000000']">
+        <xsl:copy>
+            <xsl:apply-templates select="@*" />
+            <xsl:apply-templates select="f:path | f:short | f:definition | f:min | f:max"/>
+            <type>
+                <code value="HumanName" />
+                <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-partNameInformation" />
+            </type>
+        </xsl:copy>       
+    </xsl:template>
+    <xd:doc>
+        <xd:desc>Replace inline BackboneElement of AddressInformation with a reference</xd:desc>
+    </xd:doc>
+    <xsl:template match="f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.0.1.4--20200901000000'] |
+        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.3.1.5--20200901000000'] |
+        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.17.2.5--20200901000000'] |
+        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.17.1.7--20200901000000']">
+        <xsl:copy>
+            <xsl:apply-templates select="@*" />
+            <xsl:apply-templates select="f:path | f:short | f:definition | f:min | f:max"/>
+            <type>
+                <code value="Address" />
+                <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-partAddressInformation" />
+            </type>
+        </xsl:copy>
+    </xsl:template>
+    <xd:doc>
+        <xd:desc>Replace inline BackboneElement of ContactInformation with a reference</xd:desc>
+    </xd:doc>
+    <xsl:template match="f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.0.1.5--20200901000000'] |
+        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.3.1.6--20200901000000'] |
+        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.17.2.6--20200901000000'] |
+        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.17.1.8--20200901000000']">
+        <xsl:copy>
+            <xsl:apply-templates select="@*" />
+            <xsl:apply-templates select="f:path | f:short | f:definition | f:min | f:max"/>
+            <type>
+                <code value="ContactPoint" />
+                <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-partContactInformation" />
+            </type>
+        </xsl:copy>
+    </xsl:template>    
     
     <xd:doc>
         <xd:desc>Convert ValueSets to HdBe metadata</xd:desc>
