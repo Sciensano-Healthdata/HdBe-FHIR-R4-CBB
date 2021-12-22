@@ -145,6 +145,18 @@
         </targetProfile>
     </xsl:template>   
     
+    <xsl:template match="f:element/f:constraint/f:source[starts-with(@value, $urlBaseNictizSD)]">
+        <source>
+            <xsl:attribute name="value" select="replace(@value,concat($urlBaseNictizSD,'zib-'),concat($urlBase,$urlSD,$projectPrefix))"/>
+        </source>
+    </xsl:template>   
+    
+    <xsl:template match="f:element/f:comment[contains(@value, $urlBaseNictizSD)]">
+        <comment>
+            <xsl:attribute name="value" select="replace(@value,concat($urlBaseNictizSD,'zib-'),concat($urlBase,$urlSD,$projectPrefix))"/>
+        </comment>
+    </xsl:template> 
+    
     <xsl:template match="f:element/f:binding/f:valueSet[starts-with(@value, 'http://decor.nictiz.nl/fhir/ValueSet')]">
         <xsl:variable name="valueSetName" select="replace(../../f:alias[1]/@value,'_','-')"/>
         <valueSet>
