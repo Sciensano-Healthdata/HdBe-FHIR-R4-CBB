@@ -91,7 +91,18 @@
             </xsl:choose>
             <xsl:apply-templates select="f:type | f:context | f:contextInvariant"/>
             <!-- For now, turn of snapshots because they will not be in the profiles. -->
-            <xsl:apply-templates select="f:baseDefinition | f:derivation | f:differential"/>
+            <xsl:choose>
+                <xsl:when test="starts-with(f:baseDefinition/@value, 'http://nictiz.nl/fhir/')">
+                    <baseDefinition>
+                        <xsl:attribute name="value" select="replace(f:baseDefinition/@value,'http://nictiz.nl/fhir/StructureDefinition/',concat($urlBase,$urlSD))"/>
+                    </baseDefinition>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:apply-templates select="f:baseDefinition"/>
+                </xsl:otherwise>
+            </xsl:choose>
+            
+            <xsl:apply-templates select="f:derivation | f:differential"/>
         </xsl:copy>         
     </xsl:template>
     
