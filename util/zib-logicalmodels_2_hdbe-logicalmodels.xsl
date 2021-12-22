@@ -286,7 +286,9 @@
             
             <xsl:choose>
                 <xsl:when test="(f:id or not(f:id)) and ends-with(f:name/@value, 'Codelijst')">
-                    <id value="{$name}"/>
+                    <id>
+                        <xsl:attribute name="value" select="replace($name,'_','-')"/>
+                    </id>
                 </xsl:when>
                 <xsl:otherwise>
                     <id>
@@ -297,7 +299,9 @@
             <xsl:apply-templates select="f:meta | f:implicitRules | f:language | f:text | f:contained | f:extension | f:modifierExtension"/>
             <xsl:choose>
                 <xsl:when test="f:url or not(f:url)">
-                    <url value="{$urlBase}{$urlValueSet}{$name}"/>
+                    <url>
+                        <xsl:attribute name="value" select="concat($urlBase,$urlValueSet,replace($name,'_','-'))"/>
+                    </url>
                 </xsl:when>
             </xsl:choose>
             <xsl:apply-templates select="f:identifier | f:version"/> 
@@ -356,13 +360,17 @@
             <xsl:variable name="name" select="concat(upper-case(substring(f:name/@value,1,1)), substring(f:name/@value, 2))"/>   
             <xsl:choose>
                 <xsl:when test="f:id or not(f:id)">
-                    <id value="{$name}"/>
+                    <id>
+                        <xsl:attribute name="value" select="replace($name,'_','-')"/>
+                    </id>
                 </xsl:when>
             </xsl:choose>
             <xsl:apply-templates select="f:meta | f:implicitRules | f:language | f:text | f:contained | f:extension | f:modifierExtension"/>
             <xsl:choose>
                 <xsl:when test="f:url or not(f:url)">
-                    <url value="{$urlBase}{$urlCodeSystem}{$name}"/>
+                    <url>
+                        <xsl:attribute name="value" select="concat($urlBase,$urlCodeSystem,replace($name,'_','-'))"/>
+                    </url>
                 </xsl:when>
             </xsl:choose>
             <xsl:apply-templates select="f:identifier | f:version"/> 
@@ -435,7 +443,7 @@
         <xd:desc>Template improves .binding.description by using the English name in stead of Dutch based on a hack of using the .short value. Template also converts the valueSet URL to newly assigned URL based on the Dutch ValueSet name.</xd:desc>
     </xd:doc>
     <xsl:template match="f:differential/f:element/f:binding">
-                <xsl:variable name="valueSetNameEN" select="../f:short/@value" as="xs:string"/>
+                <xsl:variable name="valueSetNameEN" select="replace(../f:short/@value, '_','-')" as="xs:string"/>
                 <xsl:variable name="valueSetNameNL" select="replace(f:description/@value,'Codelijst', '')" as="xs:string"/>
                 <xsl:copy>
                     <xsl:apply-templates select="f:strength"/>
@@ -462,7 +470,7 @@
         <xd:desc>Template to move profile reference from .profile to .targetProfile and to convert the reference URL to newly assigned URL based on a hack (the value located in .short is used).</xd:desc>
     </xd:doc>
     <xsl:template match="f:differential/f:element/f:type[f:code[@value='Reference']]"> 
-        <xsl:variable name="zibName" select="../f:short/@value"/>
+        <xsl:variable name="zibName" select="replace(../f:short/@value, '_','-')"/>
         <xsl:copy>
             <xsl:apply-templates select="f:code"/>
             <xsl:choose>

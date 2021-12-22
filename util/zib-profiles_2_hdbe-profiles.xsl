@@ -146,7 +146,7 @@
     </xsl:template>   
     
     <xsl:template match="f:element/f:binding/f:valueSet[starts-with(@value, 'http://decor.nictiz.nl/fhir/ValueSet')]">
-        <xsl:variable name="valueSetName" select="../../f:alias[1]/@value"/>
+        <xsl:variable name="valueSetName" select="replace(../../f:alias[1]/@value,'_','-')"/>
         <valueSet>
             <xsl:attribute name="value" select="concat($urlBase,$urlValueSet,$valueSetName)"/>
         </valueSet>

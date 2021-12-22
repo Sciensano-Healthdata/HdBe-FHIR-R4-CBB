@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="GCS_MotorCodelijstBaby"/>
+   <id value="G-DifferentiatiegraadTumor"/>
    <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
@@ -10,15 +10,15 @@
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/ValueSet/GCS-MotorBaby"/>
+   <url value="https://fhir.healthdata.be/ValueSet/G-DifferentiatiegraadTumor"/>
    <identifier>
         <use value="official"/>
         <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.12.8.8"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.4.27.17"/>
     </identifier>
    <version value="2020-09-01T00:00:00"/>
-   <name value="GCS_MotorBaby"/>
-   <title value="GCS_MotorBaby"/>
+   <name value="G_DifferentiatiegraadTumor"/>
+   <title value="G_DifferentiatiegraadTumor"/>
    <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Healthdata.be (Sciensano)"/>
@@ -30,30 +30,18 @@
          <use value="work"/>
       </telecom>
    </contact>
-   <description value="GCS_MotorCodelijstBaby"/>
+   <description value="G_DifferentiatiegraadTumorCodelijst"/>
    <immutable value="false"/>
    <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
    <compose>
         <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.2.2"/>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.10.5"/>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="6"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
+                    <valueString value="Differentiatiegraad kan niet beoordeeld worden."/>
                 </extension>
-                <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Moves spontaneously and purposefully"/>
-                </designation>
+                <code value="GX"/>
+                <display value="GX"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -61,27 +49,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normaal"/>
+                    <value value="GX"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="5"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Goed gedifferentieerd."/>
                 </extension>
-                <code value="M5"/>
-                <display value="Localising"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Localising"/>
-                </designation>
+                <code value="G1"/>
+                <display value="G1"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -89,27 +65,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="G1"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="4"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Matig gedifferentieerd."/>
                 </extension>
-                <code value="M4"/>
-                <display value="Normal flexion"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Normal flexion"/>
-                </designation>
+                <code value="G2"/>
+                <display value="G2"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -117,27 +81,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="G2"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="3"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Slecht gedifferentieerd."/>
                 </extension>
-                <code value="M3"/>
-                <display value="Abnormal flexion"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Abnormal flexion"/>
-                </designation>
+                <code value="G3"/>
+                <display value="G3"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -145,27 +97,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Buigreactie"/>
+                    <value value="G3"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="2"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Slecht gedifferentieerd of ongedifferentieerd."/>
                 </extension>
-                <code value="M2"/>
-                <display value="Abnormal extension"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Abnormal extension"/>
-                </designation>
+                <code value="G3-4"/>
+                <display value="G3-4"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -173,27 +113,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="G3-4"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="1"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
+                    <valueString value="Ongedifferentieerd."/>
                 </extension>
-                <code value="M1"/>
-                <display value="No response"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="No response"/>
-                </designation>
+                <code value="G4"/>
+                <display value="G4"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -201,52 +129,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Geen beweging op prikkel"/>
+                    <value value="G4"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="0"/>
-                </extension>
-                <code value="NA"/>
-                <display value="Not applicable"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Not applicable"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Niet van toepassing"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="6"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
+                    <valueString value="Differentiatiegraad groep 5 (Gleason score: 9-10)"/>
                 </extension>
-                <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Moves spontaneously and purposefully"/>
-                </designation>
+                <code value="G5"/>
+                <display value="G5"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -254,27 +145,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normaal"/>
+                    <value value="G5"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="6"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
+                    <valueString value="Lage mitotische rato"/>
                 </extension>
-                <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Moves spontaneously and purposefully"/>
-                </designation>
+                <code value="LowMitoticRate"/>
+                <display value="LowMitoticRate"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -282,27 +161,24 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normaal"/>
+                    <value value="Lage mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="LowMitoticRate"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="5"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Hoge mitotische rato"/>
                 </extension>
-                <code value="M5"/>
-                <display value="Localising"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Localising"/>
-                </designation>
+                <code value="HighMitoticRate"/>
+                <display value="HighMitoticRate"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -310,27 +186,24 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="Hoge mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="HighMitoticRate"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="4"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Differentiatiegraad kan niet beoordeeld worden."/>
                 </extension>
-                <code value="M4"/>
-                <display value="Normal flexion"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Normal flexion"/>
-                </designation>
+                <code value="GX"/>
+                <display value="GX"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -338,27 +211,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="GX"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="3"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Differentiatiegraad kan niet beoordeeld worden."/>
                 </extension>
-                <code value="M3"/>
-                <display value="Abnormal flexion"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Abnormal flexion"/>
-                </designation>
+                <code value="GX"/>
+                <display value="GX"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -366,27 +227,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Buigreactie"/>
+                    <value value="GX"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="2"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Goed gedifferentieerd."/>
                 </extension>
-                <code value="M2"/>
-                <display value="Abnormal extension"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Abnormal extension"/>
-                </designation>
+                <code value="G1"/>
+                <display value="G1"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -394,27 +243,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="G1"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="1"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
+                    <valueString value="Matig gedifferentieerd."/>
                 </extension>
-                <code value="M1"/>
-                <display value="No response"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="No response"/>
-                </designation>
+                <code value="G2"/>
+                <display value="G2"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -422,52 +259,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Geen beweging op prikkel"/>
+                    <value value="G2"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="0"/>
-                </extension>
-                <code value="NA"/>
-                <display value="Not applicable"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Not applicable"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Niet van toepassing"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="5"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Slecht gedifferentieerd."/>
                 </extension>
-                <code value="M5"/>
-                <display value="Localising"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Localising"/>
-                </designation>
+                <code value="G3"/>
+                <display value="G3"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -475,27 +275,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="G3"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="6"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
+                    <valueString value="Slecht gedifferentieerd of ongedifferentieerd."/>
                 </extension>
-                <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Moves spontaneously and purposefully"/>
-                </designation>
+                <code value="G3-4"/>
+                <display value="G3-4"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -503,27 +291,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normaal"/>
+                    <value value="G3-4"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="5"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Ongedifferentieerd."/>
                 </extension>
-                <code value="M5"/>
-                <display value="Localising"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Localising"/>
-                </designation>
+                <code value="G4"/>
+                <display value="G4"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -531,27 +307,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="G4"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="4"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Differentiatiegraad groep 5 (Gleason score: 9-10)"/>
                 </extension>
-                <code value="M4"/>
-                <display value="Normal flexion"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Normal flexion"/>
-                </designation>
+                <code value="G5"/>
+                <display value="G5"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -559,27 +323,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="G5"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="3"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Lage mitotische rato"/>
                 </extension>
-                <code value="M3"/>
-                <display value="Abnormal flexion"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Abnormal flexion"/>
-                </designation>
+                <code value="LowMitoticRate"/>
+                <display value="LowMitoticRate"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -587,27 +339,24 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Buigreactie"/>
+                    <value value="Lage mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="LowMitoticRate"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="2"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Hoge mitotische rato"/>
                 </extension>
-                <code value="M2"/>
-                <display value="Abnormal extension"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Abnormal extension"/>
-                </designation>
+                <code value="HighMitoticRate"/>
+                <display value="HighMitoticRate"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -615,27 +364,24 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="Hoge mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="HighMitoticRate"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="1"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
+                    <valueString value="Goed gedifferentieerd."/>
                 </extension>
-                <code value="M1"/>
-                <display value="No response"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="No response"/>
-                </designation>
+                <code value="G1"/>
+                <display value="G1"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -643,52 +389,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Geen beweging op prikkel"/>
+                    <value value="G1"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="0"/>
-                </extension>
-                <code value="NA"/>
-                <display value="Not applicable"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Not applicable"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Niet van toepassing"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="4"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Differentiatiegraad kan niet beoordeeld worden."/>
                 </extension>
-                <code value="M4"/>
-                <display value="Normal flexion"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Normal flexion"/>
-                </designation>
+                <code value="GX"/>
+                <display value="GX"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -696,27 +405,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="GX"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="6"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
+                    <valueString value="Goed gedifferentieerd."/>
                 </extension>
-                <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Moves spontaneously and purposefully"/>
-                </designation>
+                <code value="G1"/>
+                <display value="G1"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -724,27 +421,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normaal"/>
+                    <value value="G1"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="5"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Matig gedifferentieerd."/>
                 </extension>
-                <code value="M5"/>
-                <display value="Localising"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Localising"/>
-                </designation>
+                <code value="G2"/>
+                <display value="G2"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -752,27 +437,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="G2"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="4"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Slecht gedifferentieerd."/>
                 </extension>
-                <code value="M4"/>
-                <display value="Normal flexion"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Normal flexion"/>
-                </designation>
+                <code value="G3"/>
+                <display value="G3"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -780,27 +453,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="G3"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="3"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Slecht gedifferentieerd of ongedifferentieerd."/>
                 </extension>
-                <code value="M3"/>
-                <display value="Abnormal flexion"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Abnormal flexion"/>
-                </designation>
+                <code value="G3-4"/>
+                <display value="G3-4"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -808,27 +469,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Buigreactie"/>
+                    <value value="G3-4"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="2"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Ongedifferentieerd."/>
                 </extension>
-                <code value="M2"/>
-                <display value="Abnormal extension"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Abnormal extension"/>
-                </designation>
+                <code value="G4"/>
+                <display value="G4"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -836,27 +485,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="G4"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="1"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
+                    <valueString value="Differentiatiegraad groep 5 (Gleason score: 9-10)"/>
                 </extension>
-                <code value="M1"/>
-                <display value="No response"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="No response"/>
-                </designation>
+                <code value="G5"/>
+                <display value="G5"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -864,52 +501,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Geen beweging op prikkel"/>
+                    <value value="G5"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="0"/>
-                </extension>
-                <code value="NA"/>
-                <display value="Not applicable"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Not applicable"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Niet van toepassing"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="3"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Lage mitotische rato"/>
                 </extension>
-                <code value="M3"/>
-                <display value="Abnormal flexion"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Abnormal flexion"/>
-                </designation>
+                <code value="LowMitoticRate"/>
+                <display value="LowMitoticRate"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -917,27 +517,24 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Buigreactie"/>
+                    <value value="Lage mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="LowMitoticRate"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="6"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
+                    <valueString value="Hoge mitotische rato"/>
                 </extension>
-                <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Moves spontaneously and purposefully"/>
-                </designation>
+                <code value="HighMitoticRate"/>
+                <display value="HighMitoticRate"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -945,27 +542,24 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normaal"/>
+                    <value value="Hoge mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="HighMitoticRate"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="5"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Matig gedifferentieerd."/>
                 </extension>
-                <code value="M5"/>
-                <display value="Localising"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Localising"/>
-                </designation>
+                <code value="G2"/>
+                <display value="G2"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -973,27 +567,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="G2"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="4"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Differentiatiegraad kan niet beoordeeld worden."/>
                 </extension>
-                <code value="M4"/>
-                <display value="Normal flexion"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Normal flexion"/>
-                </designation>
+                <code value="GX"/>
+                <display value="GX"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1001,27 +583,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="GX"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="3"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Goed gedifferentieerd."/>
                 </extension>
-                <code value="M3"/>
-                <display value="Abnormal flexion"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Abnormal flexion"/>
-                </designation>
+                <code value="G1"/>
+                <display value="G1"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1029,27 +599,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Buigreactie"/>
+                    <value value="G1"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="2"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Matig gedifferentieerd."/>
                 </extension>
-                <code value="M2"/>
-                <display value="Abnormal extension"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Abnormal extension"/>
-                </designation>
+                <code value="G2"/>
+                <display value="G2"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1057,27 +615,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="G2"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="1"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
+                    <valueString value="Slecht gedifferentieerd."/>
                 </extension>
-                <code value="M1"/>
-                <display value="No response"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="No response"/>
-                </designation>
+                <code value="G3"/>
+                <display value="G3"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1085,52 +631,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Geen beweging op prikkel"/>
+                    <value value="G3"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="0"/>
-                </extension>
-                <code value="NA"/>
-                <display value="Not applicable"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Not applicable"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Niet van toepassing"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="2"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Slecht gedifferentieerd of ongedifferentieerd."/>
                 </extension>
-                <code value="M2"/>
-                <display value="Abnormal extension"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Abnormal extension"/>
-                </designation>
+                <code value="G3-4"/>
+                <display value="G3-4"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1138,27 +647,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="G3-4"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="6"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
+                    <valueString value="Ongedifferentieerd."/>
                 </extension>
-                <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Moves spontaneously and purposefully"/>
-                </designation>
+                <code value="G4"/>
+                <display value="G4"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1166,27 +663,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normaal"/>
+                    <value value="G4"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="5"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Differentiatiegraad groep 5 (Gleason score: 9-10)"/>
                 </extension>
-                <code value="M5"/>
-                <display value="Localising"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Localising"/>
-                </designation>
+                <code value="G5"/>
+                <display value="G5"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1194,27 +679,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="G5"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="4"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Lage mitotische rato"/>
                 </extension>
-                <code value="M4"/>
-                <display value="Normal flexion"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Normal flexion"/>
-                </designation>
+                <code value="LowMitoticRate"/>
+                <display value="LowMitoticRate"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1222,27 +695,24 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="Lage mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="LowMitoticRate"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="3"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Hoge mitotische rato"/>
                 </extension>
-                <code value="M3"/>
-                <display value="Abnormal flexion"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Abnormal flexion"/>
-                </designation>
+                <code value="HighMitoticRate"/>
+                <display value="HighMitoticRate"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1250,27 +720,24 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Buigreactie"/>
+                    <value value="Hoge mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="HighMitoticRate"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="2"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Slecht gedifferentieerd."/>
                 </extension>
-                <code value="M2"/>
-                <display value="Abnormal extension"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Abnormal extension"/>
-                </designation>
+                <code value="G3"/>
+                <display value="G3"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1278,27 +745,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="G3"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="1"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
+                    <valueString value="Differentiatiegraad kan niet beoordeeld worden."/>
                 </extension>
-                <code value="M1"/>
-                <display value="No response"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="No response"/>
-                </designation>
+                <code value="GX"/>
+                <display value="GX"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1306,52 +761,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Geen beweging op prikkel"/>
+                    <value value="GX"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="0"/>
-                </extension>
-                <code value="NA"/>
-                <display value="Not applicable"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Not applicable"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Niet van toepassing"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="1"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
+                    <valueString value="Goed gedifferentieerd."/>
                 </extension>
-                <code value="M1"/>
-                <display value="No response"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="No response"/>
-                </designation>
+                <code value="G1"/>
+                <display value="G1"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1359,30 +777,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Geen beweging op prikkel"/>
+                    <value value="G1"/>
                 </designation>
             </concept>
-        </include>
-        <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.2.2"/>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="6"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Normaal [beweegt zoals verwacht]"/>
+                    <valueString value="Matig gedifferentieerd."/>
                 </extension>
-                <code value="M6"/>
-                <display value="Moves spontaneously and purposefully"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Moves spontaneously and purposefully"/>
-                </designation>
+                <code value="G2"/>
+                <display value="G2"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1390,27 +793,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Normaal"/>
+                    <value value="G2"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="5"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken bij aanraking [Trekt terug bij aanraken]"/>
+                    <valueString value="Slecht gedifferentieerd."/>
                 </extension>
-                <code value="M5"/>
-                <display value="Localising"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Localising"/>
-                </designation>
+                <code value="G3"/>
+                <display value="G3"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1418,27 +809,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken bij aanraking"/>
+                    <value value="G3"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="4"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Terugtrekken in respons op pijn [Maakt afwerende of wegtrekkende beweging bij een pijnprikkel]"/>
+                    <valueString value="Slecht gedifferentieerd of ongedifferentieerd."/>
                 </extension>
-                <code value="M4"/>
-                <display value="Normal flexion"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Normal flexion"/>
-                </designation>
+                <code value="G3-4"/>
+                <display value="G3-4"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1446,27 +825,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Terugtrekken in respons op pijn"/>
+                    <value value="G3-4"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="3"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Buigreactie [Langzame, buiging van armen en/of benen]"/>
+                    <valueString value="Ongedifferentieerd."/>
                 </extension>
-                <code value="M3"/>
-                <display value="Abnormal flexion"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Abnormal flexion"/>
-                </designation>
+                <code value="G4"/>
+                <display value="G4"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1474,27 +841,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Buigreactie"/>
+                    <value value="G4"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="2"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Decerebrale strekreactie [strekken van armen en/of benen]"/>
+                    <valueString value="Differentiatiegraad groep 5 (Gleason score: 9-10)"/>
                 </extension>
-                <code value="M2"/>
-                <display value="Abnormal extension"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Abnormal extension"/>
-                </designation>
+                <code value="G5"/>
+                <display value="G5"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1502,27 +857,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Decerebrale strekreactie"/>
+                    <value value="G5"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="1"/>
-                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geen beweging op prikkel [Geen enkele beweging op een prikkel]"/>
+                    <valueString value="Lage mitotische rato"/>
                 </extension>
-                <code value="M1"/>
-                <display value="No response"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="No response"/>
-                </designation>
+                <code value="LowMitoticRate"/>
+                <display value="LowMitoticRate"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1530,24 +873,24 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Geen beweging op prikkel"/>
+                    <value value="Lage mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="LowMitoticRate"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="0"/>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Hoge mitotische rato"/>
                 </extension>
-                <code value="NA"/>
-                <display value="Not applicable"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Not applicable"/>
-                </designation>
+                <code value="HighMitoticRate"/>
+                <display value="HighMitoticRate"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1555,24 +898,24 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Niet van toepassing"/>
+                    <value value="Hoge mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="HighMitoticRate"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
-                    <valueDecimal value="0"/>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Slecht gedifferentieerd of ongedifferentieerd."/>
                 </extension>
-                <code value="NA"/>
-                <display value="Not applicable"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Not applicable"/>
-                </designation>
+                <code value="G3-4"/>
+                <display value="G3-4"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -1580,7 +923,737 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Niet van toepassing"/>
+                    <value value="G3-4"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Differentiatiegraad kan niet beoordeeld worden."/>
+                </extension>
+                <code value="GX"/>
+                <display value="GX"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="GX"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Goed gedifferentieerd."/>
+                </extension>
+                <code value="G1"/>
+                <display value="G1"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G1"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Matig gedifferentieerd."/>
+                </extension>
+                <code value="G2"/>
+                <display value="G2"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G2"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Slecht gedifferentieerd."/>
+                </extension>
+                <code value="G3"/>
+                <display value="G3"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G3"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Slecht gedifferentieerd of ongedifferentieerd."/>
+                </extension>
+                <code value="G3-4"/>
+                <display value="G3-4"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G3-4"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Ongedifferentieerd."/>
+                </extension>
+                <code value="G4"/>
+                <display value="G4"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G4"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Differentiatiegraad groep 5 (Gleason score: 9-10)"/>
+                </extension>
+                <code value="G5"/>
+                <display value="G5"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G5"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Lage mitotische rato"/>
+                </extension>
+                <code value="LowMitoticRate"/>
+                <display value="LowMitoticRate"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Lage mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="LowMitoticRate"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Hoge mitotische rato"/>
+                </extension>
+                <code value="HighMitoticRate"/>
+                <display value="HighMitoticRate"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Hoge mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="HighMitoticRate"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Ongedifferentieerd."/>
+                </extension>
+                <code value="G4"/>
+                <display value="G4"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G4"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Differentiatiegraad kan niet beoordeeld worden."/>
+                </extension>
+                <code value="GX"/>
+                <display value="GX"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="GX"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Goed gedifferentieerd."/>
+                </extension>
+                <code value="G1"/>
+                <display value="G1"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G1"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Matig gedifferentieerd."/>
+                </extension>
+                <code value="G2"/>
+                <display value="G2"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G2"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Slecht gedifferentieerd."/>
+                </extension>
+                <code value="G3"/>
+                <display value="G3"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G3"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Slecht gedifferentieerd of ongedifferentieerd."/>
+                </extension>
+                <code value="G3-4"/>
+                <display value="G3-4"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G3-4"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Ongedifferentieerd."/>
+                </extension>
+                <code value="G4"/>
+                <display value="G4"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G4"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Differentiatiegraad groep 5 (Gleason score: 9-10)"/>
+                </extension>
+                <code value="G5"/>
+                <display value="G5"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G5"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Lage mitotische rato"/>
+                </extension>
+                <code value="LowMitoticRate"/>
+                <display value="LowMitoticRate"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Lage mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="LowMitoticRate"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Hoge mitotische rato"/>
+                </extension>
+                <code value="HighMitoticRate"/>
+                <display value="HighMitoticRate"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Hoge mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="HighMitoticRate"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Differentiatiegraad groep 5 (Gleason score: 9-10)"/>
+                </extension>
+                <code value="G5"/>
+                <display value="G5"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G5"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Differentiatiegraad kan niet beoordeeld worden."/>
+                </extension>
+                <code value="GX"/>
+                <display value="GX"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="GX"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Goed gedifferentieerd."/>
+                </extension>
+                <code value="G1"/>
+                <display value="G1"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G1"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Matig gedifferentieerd."/>
+                </extension>
+                <code value="G2"/>
+                <display value="G2"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G2"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Slecht gedifferentieerd."/>
+                </extension>
+                <code value="G3"/>
+                <display value="G3"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G3"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Slecht gedifferentieerd of ongedifferentieerd."/>
+                </extension>
+                <code value="G3-4"/>
+                <display value="G3-4"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G3-4"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Ongedifferentieerd."/>
+                </extension>
+                <code value="G4"/>
+                <display value="G4"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G4"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Differentiatiegraad groep 5 (Gleason score: 9-10)"/>
+                </extension>
+                <code value="G5"/>
+                <display value="G5"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G5"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Lage mitotische rato"/>
+                </extension>
+                <code value="LowMitoticRate"/>
+                <display value="LowMitoticRate"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Lage mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="LowMitoticRate"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Hoge mitotische rato"/>
+                </extension>
+                <code value="HighMitoticRate"/>
+                <display value="HighMitoticRate"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Hoge mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="HighMitoticRate"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Lage mitotische rato"/>
+                </extension>
+                <code value="LowMitoticRate"/>
+                <display value="LowMitoticRate"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Lage mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="LowMitoticRate"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Differentiatiegraad kan niet beoordeeld worden."/>
+                </extension>
+                <code value="GX"/>
+                <display value="GX"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="GX"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Goed gedifferentieerd."/>
+                </extension>
+                <code value="G1"/>
+                <display value="G1"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G1"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Matig gedifferentieerd."/>
+                </extension>
+                <code value="G2"/>
+                <display value="G2"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G2"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Slecht gedifferentieerd."/>
+                </extension>
+                <code value="G3"/>
+                <display value="G3"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G3"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Slecht gedifferentieerd of ongedifferentieerd."/>
+                </extension>
+                <code value="G3-4"/>
+                <display value="G3-4"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G3-4"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Ongedifferentieerd."/>
+                </extension>
+                <code value="G4"/>
+                <display value="G4"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G4"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Differentiatiegraad groep 5 (Gleason score: 9-10)"/>
+                </extension>
+                <code value="G5"/>
+                <display value="G5"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="G5"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Lage mitotische rato"/>
+                </extension>
+                <code value="LowMitoticRate"/>
+                <display value="LowMitoticRate"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Lage mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="LowMitoticRate"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Hoge mitotische rato"/>
+                </extension>
+                <code value="HighMitoticRate"/>
+                <display value="HighMitoticRate"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Hoge mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="HighMitoticRate"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Hoge mitotische rato"/>
+                </extension>
+                <code value="HighMitoticRate"/>
+                <display value="HighMitoticRate"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Hoge mitotische rato"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="HighMitoticRate"/>
                 </designation>
             </concept>
         </include>
