@@ -41,10 +41,8 @@ jobs:
       - name: Firely.Terminal validate conformance resources
         uses: FirelyTeam/firely-terminal-pipeline@v0.3.1
         with:
-          PATH_TO_CONFORMANCE_RESOURCES: resources
+          PATH_TO_CONFORMANCE_RESOURCES: resources terminology
           PATH_TO_EXAMPLES: examples
-          DOTNET_VALIDATION_ENABLED: true
-          JAVA_VALIDATION_ENABLED: false
           EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET
           OUTPUT_FORMAT: RAW
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
@@ -76,8 +74,6 @@ jobs:
         uses: FirelyTeam/firely-terminal-pipeline@v0.3.1
         with:
           PATH_TO_CONFORMANCE_RESOURCES: 'logical-models'
-          DOTNET_VALIDATION_ENABLED: true
-          JAVA_VALIDATION_ENABLED: false
           EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET
           OUTPUT_FORMAT: RAW
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
