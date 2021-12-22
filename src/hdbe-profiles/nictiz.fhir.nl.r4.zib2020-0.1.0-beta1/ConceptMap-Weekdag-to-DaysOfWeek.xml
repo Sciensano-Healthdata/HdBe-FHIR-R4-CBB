@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConceptMap xmlns="http://hl7.org/fhir">
+   <id value="Weekdag-to-DaysOfWeek"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+        <valueBoolean value="true"/>
+    </extension>
+   <url value="https://fhir.healthdata.be/ConceptMap/Weekdag-to-DaysOfWeek"/>
+   <version value="0.0.1"/>
+   <name value="Weekdag_to_DaysOfWeek"/>
+   <title value="Weekdag_to_DaysOfWeek"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="Maps WeekDay codes as found in [zib InstructionsForUse v1.2.1 (2020)](https://zibs.nl/wiki/InstructionsForUse-v1.2.1(2020EN)) to `Timing.repeat.dayOfWeek` codes as found in FHIR R4."/>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <sourceCanonical value="https://fhir.healthdata.be/ConceptMap/Weekdag"/>
+   <targetCanonical value="http://hl7.org/fhir/ValueSet/days-of-week"/>
+   <group>
+        <source value="http://snomed.info/sct"/>
+        <target value="http://hl7.org/fhir/days-of-week"/>
+        <targetVersion value="http://hl7.org/fhir/condition-clinical version 3.0.1"/>
+        <element>
+            <code value="307145004"/>
+            <display value="Monday"/>
+            <target>
+                <code value="mon"/>
+                <display value="monday"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="307147007"/>
+            <display value="Tuesday"/>
+            <target>
+                <code value="tue"/>
+                <display value="tuesday"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="307148002"/>
+            <display value="Wednesday"/>
+            <target>
+                <code value="wed"/>
+                <display value="wednesday"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="307149005"/>
+            <display value="Thursday"/>
+            <target>
+                <code value="thu"/>
+                <display value="thursday"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="307150005"/>
+            <display value="Friday"/>
+            <target>
+                <code value="fri"/>
+                <display value="friday"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="307151009"/>
+            <display value="Saturday"/>
+            <target>
+                <code value="sat"/>
+                <display value="saturday"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="307146003"/>
+            <display value="Sunday"/>
+            <target>
+                <code value="sun"/>
+                <display value="sunday"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+    </group>
+</ConceptMap>

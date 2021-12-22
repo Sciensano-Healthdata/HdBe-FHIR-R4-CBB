@@ -92,7 +92,7 @@
             <alias value="Naamgegevens"/>
             <type>
                 <code value="HumanName"/>
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-NameInformation"/>
+                <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation"/>
             </type>
             <mapping>
                 <identity value="zib-healthprofessional-v3.5-2020EN"/>
@@ -128,7 +128,7 @@
             <sliceName value="telephoneNumbers"/>
             <type>
                 <code value="ContactPoint"/>
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelephoneNumbers"/>
+                <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers"/>
             </type>
         </element>
         <element id="Practitioner.telecom:emailAddresses">
@@ -136,7 +136,7 @@
             <sliceName value="emailAddresses"/>
             <type>
                 <code value="ContactPoint"/>
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-EmailAddresses"/>
+                <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-EmailAddresses"/>
             </type>
         </element>
         <element id="Practitioner.address">
@@ -146,7 +146,7 @@
             <alias value="Adresgegevens"/>
             <type>
                 <code value="Address"/>
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation"/>
+                <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation"/>
             </type>
             <mapping>
                 <identity value="zib-healthprofessional-v3.5-2020EN"/>
@@ -164,7 +164,7 @@
                 <description value="Use ConceptMap 'GeslachtCodelijst-to-AdministrativeGender' to translate zib terminology to profile terminology in ValueSet 'AdministrativeGender'. This ConceptMap is based on GeslachtCodelijst as defined in the zib Patient to avoid duplication of ConceptMaps. The GeslachtCodelijst of Patient and HealthProfessional are identical in terms of codes."/>
                 <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1">
                     <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-                        <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/GeslachtCodelijst-to-AdministrativeGender"/>
+                        <valueCanonical value="https://fhir.healthdata.be/ConceptMap/Geslacht-to-AdministrativeGender"/>
                     </extension>
                 </valueSet>
             </binding>
