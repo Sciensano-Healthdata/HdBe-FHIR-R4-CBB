@@ -44,7 +44,7 @@ jobs:
           PATH_TO_CONFORMANCE_RESOURCES: src/hdbe-logicalmodels/20210829
           DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
-          OUTPUT_FORMAT: SUMMARY
+          OUTPUT_FORMAT: RAW
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
         continue-on-error: true
@@ -53,7 +53,6 @@ jobs:
         uses: FirelyTeam/firely-terminal-pipeline@v0.3.1
         with:
           PATH_TO_CONFORMANCE_RESOURCES: src/hdbe-profiles/nictiz.fhir.nl.r4.zib2020-0.1.0-beta1
-          DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
           OUTPUT_FORMAT: SUMMARY
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
@@ -64,7 +63,6 @@ jobs:
         uses: FirelyTeam/firely-terminal-pipeline@v0.3.1
         with:
           PATH_TO_CONFORMANCE_RESOURCES: resources
-          DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
           OUTPUT_FORMAT: SUMMARY
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
@@ -75,7 +73,6 @@ jobs:
         uses: FirelyTeam/firely-terminal-pipeline@v0.3.1
         with:
           PATH_TO_CONFORMANCE_RESOURCES: terminology
-          DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
           OUTPUT_FORMAT: SUMMARY
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
@@ -86,7 +83,6 @@ jobs:
         uses: FirelyTeam/firely-terminal-pipeline@v0.3.1
         with:
           PATH_TO_CONFORMANCE_RESOURCES: examples
-          DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
           OUTPUT_FORMAT: SUMMARY
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
