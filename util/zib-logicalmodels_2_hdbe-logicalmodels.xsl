@@ -418,8 +418,7 @@
     <xd:doc>
         <xd:desc>Template to move profile reference from .profile to .targetProfile and to convert the reference URL to newly assigned URL based on a hack (the value located in .short is used).</xd:desc>
     </xd:doc>
-    <xsl:template name="profileReferences"> 
-        <xsl:for-each select="f:differential/f:element/f:type[f:code[@value='Reference']]">
+    <xsl:template match="f:differential/f:element/f:type[f:code[@value='Reference']]"> 
         <xsl:variable name="zibName" select="../f:short/@value"/>
         <xsl:copy>
             <xsl:apply-templates select="f:code"/>
@@ -434,7 +433,6 @@
             <xsl:apply-templates select="f:aggregation"/>
             <xsl:apply-templates select="f:versioning"/>
         </xsl:copy>
-        </xsl:for-each>
     </xsl:template>
     
     <xd:doc>
