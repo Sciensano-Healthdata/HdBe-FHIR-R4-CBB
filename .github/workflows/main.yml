@@ -41,10 +41,10 @@ jobs:
       - name: Firely.Terminal (GitHub Actions)
         uses: FirelyTeam/firely-terminal-pipeline@v0.3.1
         with:
-          PATH_TO_CONFORMANCE_RESOURCES: resources terminology examples src/hdbe-logicalmodels/20210829 #src/hdbe-profiles/nictiz.fhir.nl.r4.zib2020-0.1.0-beta1
+          PATH_TO_CONFORMANCE_RESOURCES: src/hdbe-logicalmodels/20210829
           DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
-          EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_CONFORMANCE_JAVA
+          EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET
           OUTPUT_FORMAT: RAW
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
