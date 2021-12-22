@@ -142,9 +142,9 @@
     </xsl:template>
     
     <xsl:template match="f:element/f:fixedUri">
-        <targetProfile>
+        <fixedUri>
             <xsl:attribute name="value" select="replace(@value,concat($urlBaseNictizSD,'ext-'),concat($urlBase,$urlSD, 'ext-'))"/>
-        </targetProfile>
+        </fixedUri>
     </xsl:template>   
     
     <xsl:template match="f:element/f:constraint/f:source[starts-with(@value, $urlBaseNictizSD)]">
