@@ -52,8 +52,10 @@
                 </xsl:when>
             </xsl:choose>
             <xsl:choose>
-                <xsl:when test="f:title or not(f:url)">
-                    <title value="{$name}"/>
+                <xsl:when test="f:title or not(f:title)">
+                    <title>
+                        <xsl:attribute name="value" select="replace($id, '-',' ')"/>
+                    </title>
                 </xsl:when>
             </xsl:choose>
             <xsl:choose>
