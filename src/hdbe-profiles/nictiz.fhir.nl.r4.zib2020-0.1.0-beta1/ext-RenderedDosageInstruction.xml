@@ -20,45 +20,45 @@
    <kind value="complex-type"/>
    <abstract value="false"/>
    <context>
-      <type value="element"/>
-      <expression value="MedicationRequest"/>
-   </context>
+        <type value="element"/>
+        <expression value="MedicationRequest"/>
+    </context>
    <context>
-      <type value="element"/>
-      <expression value="MedicationDispense"/>
-   </context>
+        <type value="element"/>
+        <expression value="MedicationDispense"/>
+    </context>
    <context>
-      <type value="element"/>
-      <expression value="MedicationAdministration"/>
-   </context>
+        <type value="element"/>
+        <expression value="MedicationAdministration"/>
+    </context>
    <context>
-      <type value="element"/>
-      <expression value="MedicationUse"/>
-   </context>
+        <type value="element"/>
+        <expression value="MedicationUse"/>
+    </context>
    <context>
-      <type value="element"/>
-      <expression value="MedicationStatement"/>
-   </context>
+        <type value="element"/>
+        <expression value="MedicationStatement"/>
+    </context>
    <type value="Extension"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
    <derivation value="constraint"/>
    <differential>
-      <element id="Extension">
-         <path value="Extension"/>
-         <definition value="Pre-adopt from FHIR R5 of the `.renderedDosageInstruction` element found in various medication resources."/>
-         <max value="1"/>
-      </element>
-      <element id="Extension.url">
-         <path value="Extension.url"/>
-         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/ext-RenderedDosageInstruction"/>
-      </element>
-      <element id="Extension.value[x]">
-         <path value="Extension.value[x]"/>
-         <definition value="The full representation of the dose of the medication included in all dosage instructions. To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses."/>
-         <comment value="The content of the renderedDosageInstructions must not be different than the dose represented in the dosageInstruction content."/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-   </differential>
+        <element id="Extension">
+            <path value="Extension"/>
+            <definition value="Pre-adopt from FHIR R5 of the `.renderedDosageInstruction` element found in various medication resources."/>
+            <max value="1"/>
+        </element>
+        <element id="Extension.url">
+            <path value="Extension.url"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/ext-RenderedDosageInstruction"/>
+        </element>
+        <element id="Extension.value[x]">
+            <path value="Extension.value[x]"/>
+            <definition value="The full representation of the dose of the medication included in all dosage instructions. To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses."/>
+            <comment value="The content of the renderedDosageInstructions must not be different than the dose represented in the dosageInstruction content."/>
+            <type>
+                <code value="string"/>
+            </type>
+        </element>
+    </differential>
 </StructureDefinition>
