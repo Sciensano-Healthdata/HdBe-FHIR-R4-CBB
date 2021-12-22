@@ -1,0 +1,27 @@
+# Include rules to check conformance to profiling guidelines 
+- include: qa-profiling-guidelines 
+
+# Validate logical models
+- action: validate
+  name: validate-logical-models
+  status: "Validatig logical models"
+  filter: Resource
+  filter: StructureDefinition.exists() and StructureDefinition.kind = 'logical'
+    
+# Validate all resources
+- action: validate
+  name: validate-resources
+  status: "Validatig all resources"
+  files: 
+    - /resources/*.xml
+    - /terminology/*.xml
+
+# Validate examples
+- action: validate
+  name: validate-examples
+  status: "Validatig all examples"
+  files: 
+    - /examples/*.xml
+
+
+ 
