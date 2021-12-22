@@ -44,12 +44,12 @@ jobs:
           PATH_TO_CONFORMANCE_RESOURCES: resources
           PATH_TO_EXAMPLES: examples
           DOTNET_VALIDATION_ENABLED: true
-          JAVA_VALIDATION_ENABLED: true
+          JAVA_VALIDATION_ENABLED: false
           EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET
           OUTPUT_FORMAT: RAW
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
-          
+
   # Validate all conformance resources using Firely Terminal 
   CI_FHIR_LOGICALMODELS_VALIDATION:
     # The type of runner that the job will run on
@@ -75,9 +75,9 @@ jobs:
       - name: Firely.Terminal validate logical models
         uses: FirelyTeam/firely-terminal-pipeline@v0.3.1
         with:
-          PATH_TO_CONFORMANCE_RESOURCES: 'logical models'
+          PATH_TO_CONFORMANCE_RESOURCES: 'logical-models'
           DOTNET_VALIDATION_ENABLED: true
-          JAVA_VALIDATION_ENABLED: true
+          JAVA_VALIDATION_ENABLED: false
           EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET
           OUTPUT_FORMAT: RAW
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
