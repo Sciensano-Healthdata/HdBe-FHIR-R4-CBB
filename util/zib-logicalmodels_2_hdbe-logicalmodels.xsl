@@ -166,11 +166,10 @@
                 <xsl:message terminate="no" select="'no logical models found'"></xsl:message>
             </xsl:otherwise>
         </xsl:choose>        
-        
     </xsl:template>
     
     <xd:doc>
-        <xd:desc>Remove invalid slicing and inline NameInformation, ContactInformation and AddressInformation.</xd:desc>
+        <xd:desc>Remove invalid slicing and inline NameInformation, ContactInformation, AddressInformation and InstructionsForUse.</xd:desc>
     </xd:doc>
     <xsl:template match="f:differential/f:element[f:path[ends-with(@value,'.coding')]] |
         f:differential/f:element[f:path[starts-with(@value,'patient.name_information.')]] |
@@ -183,7 +182,11 @@
         f:differential/f:element[f:path[starts-with(@value,'healthcare_provider.address_information.')]] |
         f:differential/f:element[f:path[starts-with(@value,'health_professional.name_information.')]] |
         f:differential/f:element[f:path[starts-with(@value,'health_professional.contact_information.')]] |
-        f:differential/f:element[f:path[starts-with(@value,'health_professional.address_information.')]] ">
+        f:differential/f:element[f:path[starts-with(@value,'health_professional.address_information.')]] |
+        f:differential/f:element[f:path[starts-with(@value,'medication_agreement.instructions_for_use.')]] |
+        f:differential/f:element[f:path[starts-with(@value,'administration_agreement.instructions_for_use.')]] |
+        f:differential/f:element[f:path[starts-with(@value,'medication_use.instructions_for_use.')]] |
+        f:differential/f:element[f:path[starts-with(@value,'medication_agreement.instructions_for_use.')]]">       
     </xsl:template>
     
     <xd:doc>
@@ -233,6 +236,21 @@
             </type>
         </xsl:copy>
     </xsl:template>    
+    <xd:doc>
+        <xd:desc>Replace inline BackboneElement of InsturctionForUse with a reference</xd:desc>
+    </xd:doc>
+    <xsl:template match="f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.9.6.23240--20200901000000'] |
+        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.9.8.22098--20200901000000'] |
+        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.9.11.22504--20200901000000'] ">
+        <xsl:copy>
+            <xsl:apply-templates select="@*" />
+            <xsl:apply-templates select="f:path | f:short | f:definition | f:min | f:max"/>
+            <type>
+                <code value="Dosage" />
+                <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-partInstructionsForUse" />
+            </type>
+        </xsl:copy>
+    </xsl:template>  
     
     <xd:doc>
         <xd:desc>Convert ValueSets to HdBe metadata</xd:desc>
@@ -474,5 +492,4 @@
             </xsl:when>
         </xsl:choose>
     </xsl:template>
-    
 </xsl:stylesheet>
