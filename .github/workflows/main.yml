@@ -38,15 +38,47 @@ jobs:
         with:
           java-version: 1.8
         
-      - name: Firely.Terminal (GitHub Actions)
+      - name: Firely.Terminal - validate generated Logical Models
         uses: FirelyTeam/firely-terminal-pipeline@v0.3.1
         with:
           PATH_TO_CONFORMANCE_RESOURCES: hdbe-logicalmodels/20210829
-          PATH_TO_CONFORMANCE_RESOURCES: hdbe-profiles/nictiz.fhir.nl.r4.zib2020-0.1.0-beta1
-          PATH_TO_CONFORMANCE_RESOURCES: resources
-          PATH_TO_CONFORMANCE_RESOURCES: terminology
-          PATH_TO_EXAMPLES: Examples
           DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
+
+      - name: Firely.Terminal - validate generated profiles
+        uses: FirelyTeam/firely-terminal-pipeline@v0.3.1
+        with:
+          PATH_TO_CONFORMANCE_RESOURCES: hdbe-profiles/nictiz.fhir.nl.r4.zib2020-0.1.0-beta1
+          DOTNET_VALIDATION_ENABLED: true
+          JAVA_VALIDATION_ENABLED: true
+          SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
+          SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}  
+
+      - name: Firely.Terminal - validate conformance resources
+        uses: FirelyTeam/firely-terminal-pipeline@v0.3.1
+        with:
+          PATH_TO_CONFORMANCE_RESOURCES: resources
+          DOTNET_VALIDATION_ENABLED: true
+          JAVA_VALIDATION_ENABLED: true
+          SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
+          SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}  
+
+      - name: Firely.Terminal - validate terminology resources
+        uses: FirelyTeam/firely-terminal-pipeline@v0.3.1
+        with:
+          PATH_TO_CONFORMANCE_RESOURCES: terminology
+          DOTNET_VALIDATION_ENABLED: true
+          JAVA_VALIDATION_ENABLED: true
+          SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
+          SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}  
+      
+      - name: Firely.Terminal - validate examples
+        uses: FirelyTeam/firely-terminal-pipeline@v0.3.1
+        with:
+          PATH_TO_CONFORMANCE_RESOURCES: examples
+          DOTNET_VALIDATION_ENABLED: true
+          JAVA_VALIDATION_ENABLED: true
+          SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
+          SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}  
