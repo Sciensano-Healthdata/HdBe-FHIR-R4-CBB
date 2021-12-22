@@ -64,7 +64,7 @@
                 <classpath location="${xsl.saxon}"/>
             </xslt>
         </sequential>
-        <!-- Very ugly, but I don't know how to prevent the generated/copied empty files. -->
+        <!-- Very ugly, but I don't know how to prevent the generated/copied empty files yet. -->
         <delete>
             <fileset dir="${xsl.output}" includes="*--20200901000000.xml"/>
         </delete>
@@ -79,7 +79,7 @@
             <fileset dir="${xsl.output}" includes="*.*"/>
         </delete>
         <sequential>
-            <fileset id="inputfiles" dir="${xsl.input}" includes="StructureDefinition-ext-*.xml, StructureDefinition-zib-*.xml, StructureDefinition-pattern-*.xml "/>
+            <fileset id="inputfiles" dir="${xsl.input}" includes="StructureDefinition-ext-*.xml, StructureDefinition-zib-*.xml, StructureDefinition-pattern-*.xml, ConceptMap-*.xml"/>
             <echo/>
             <echo>Converting zib-profiles to HdBe-profiles using ${xsl}</echo>
             <xslt force="true" style="${xsl}" destdir="${xsl.output}" extension=".xml" useImplicitFileset="false">
@@ -89,7 +89,7 @@
             </xslt>
         </sequential>
         <delete>
-            <fileset dir="${xsl.output}" includes="StructureDefinition*--*.xml, StructureDefinition-*.xml"/>
+            <fileset dir="${xsl.output}" includes="StructureDefinition*--*.xml, StructureDefinition-*.xml, ConceptMap*--*.xml"/>
         </delete>
     </target>
     

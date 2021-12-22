@@ -23,32 +23,32 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Quantity"/>
    <derivation value="constraint"/>
    <differential>
-      <element id="Quantity.extension">
-         <path value="Quantity.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="Quantity.extension:GstdQuantity">
-         <path value="Quantity.extension"/>
-         <sliceName value="gstdQuantity"/>
-         <type>
-            <code value="Extension"/>
-            <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation"/>
-         </type>
-      </element>
-      <element id="Quantity.extension:GstdQuantity.value[x]">
-         <path value="Quantity.extension.value[x]"/>
-         <definition value="A SimpleQuantity translation in G-standard units using. The extension MAY be used to additionally add translations expressed in a different unit from a different unit code system (e.g. NHG table Gebruiksvoorschriften (Table 25)."/>
-         <binding>
-            <strength value="extensible"/>
-            <description value="GstdTabel902"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/"/>
-         </binding>
-      </element>
-   </differential>
+        <element id="Quantity.extension">
+            <path value="Quantity.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Quantity.extension:GstdQuantity">
+            <path value="Quantity.extension"/>
+            <sliceName value="gstdQuantity"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation"/>
+            </type>
+        </element>
+        <element id="Quantity.extension:GstdQuantity.value[x]">
+            <path value="Quantity.extension.value[x]"/>
+            <definition value="A SimpleQuantity translation in G-standard units using. The extension MAY be used to additionally add translations expressed in a different unit from a different unit code system (e.g. NHG table Gebruiksvoorschriften (Table 25)."/>
+            <binding>
+                <strength value="extensible"/>
+                <description value="GstdTabel902"/>
+                <valueSet value="https://fhir.healthdata.be/ValueSet/"/>
+            </binding>
+        </element>
+    </differential>
 </StructureDefinition>
