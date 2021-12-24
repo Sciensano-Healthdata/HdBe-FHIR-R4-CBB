@@ -14,6 +14,7 @@
     1. [Identity of artifacts](#identityofartifacts)
     2. [Metadata](#metadata)
 6. [Miscellaneous](#miscellaneous)
+    1. [Usage of DefinitionCodes](#DefinitionCodes)
 
 ## Introduction <a name="introduction"></a>
 This document is titled "profiling guidelines", but actually addresses all conformance resources (profiles, extensions, value sets, code systems, CapabilityStatements) and associated examples. We use these terms somewhat interchangeably throughout this document; 'profile' can usually be read as 'the whole set of conformance resources'.
@@ -181,4 +182,12 @@ Note: This template includes a markdown link: '[text] (url)'.
 
 
 ##	Miscellaneous <a name="miscellaneous"></a>
-To add!
+
+
+### Usage of DefinitionCodes <a name="DefinitionCodes"></a>
+For some elements within a zib, a DefinitionCode is assigned. A DefinitionCode matches with the meaning of a concept. For the CBB's we have decided to not take over these DefintionCodes as they are often outdated or wrong. Furthermore, they are not of value inside profiles.
+
+
+
+
+More to add!
