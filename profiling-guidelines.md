@@ -183,11 +183,5 @@ Note: This template includes a markdown link: '[text] (url)'.
 
 ##	Miscellaneous <a name="miscellaneous"></a>
 
-
 ### Usage of DefinitionCodes <a name="DefinitionCodes"></a>
-For some elements within a zib, a DefinitionCode is assigned. A DefinitionCode matches with the meaning of a concept. For the CBB's we have decided to not take over these DefintionCodes as they are often outdated or wrong. Furthermore, they are not of value inside profiles.
-
-
-
-
-More to add!
+For some elements within a zib, a DefinitionCode is assigned. A DefinitionCode matches with the meaning of a concept. For the CBB's we have decided to not take over these DefintionCodes in because they are often not-well suited or outdated. Furthermore, they are not of much value inside profiles because the element's definition provides sufficient meaning.
