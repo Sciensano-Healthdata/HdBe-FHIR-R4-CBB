@@ -171,13 +171,13 @@
           </extension>
         </extension>
       </short>
-      <definition value="The patient’s identification number. In transfer situations, use of the social security number (BSN) must comply with the Use of Social Security Numbers in Healthcare Act (Wbsn-z). In other situations, other number systems can be used, such as internal hospital patient numbers for example.">
+      <definition value="The patient’s identification number. When an Social Security Identification Number (SSIN) is available, it is used. A local identifier can also be provided when this is desired.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
           </extension>
           <extension url="content">
-            <valueMarkdown value="Identificatienummer van de patiënt. Bij overdrachtsituaties dient het gebruik van het burgerservicenummer (BSN) in overeenstemming te zijn met de 'Wet gebruik burgerservicenummer in de zorg (Wbsn-z)'. In andere situaties kunnen andere nummersystemen gebruikt worden, zoals bijv. interne ziekenhuis patiëntnummers." />
+            <valueMarkdown value="Identificatienummer van de patiënt. Als een identificatienummer van de sociale zekerheid (INSZ) beschikbaar is, dan wordt het gebruikt. Indien gewenst kan een lokaal identificatienummer ook meegegeven worden." />
           </extension>
         </extension>
       </definition>
@@ -186,13 +186,6 @@
       <type>
         <code value="Identifier" />
       </type>
-      <example>
-        <label value="example 1" />
-        <valueIdentifier>
-          <system value="http://fhir.nl/fhir/NamingSystem/bsn" />
-          <value value="111222333" />
-        </valueIdentifier>
-      </example>
     </element>
     <element id="patient.date_of_birth">
       <path value="patient.date_of_birth" />
@@ -244,13 +237,13 @@
           </extension>
         </extension>
       </short>
-      <definition value="Patient’s administrative gender.">
+      <definition value="Patient’s administrative gender. The gender that is geregistered for administration and record keeping purposes.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
           </extension>
           <extension url="content">
-            <valueMarkdown value="Administratief geslacht van de patiënt." />
+            <valueMarkdown value="Administratief geslacht van de patiënt. Het geslacht dat geregistreerd staat voor administratieve en dossiervormende doeleinden." />
           </extension>
         </extension>
       </definition>
@@ -311,7 +304,16 @@
     <element id="patient.multiple_birth_order">
       <path value="patient.multiple_birth_order" />
       <short value="MultipleBirthOrder" />
-      <definition value="An indication of the birth order in case the patient is of a multiple birth." />
+      <definition value="An indication of the birth order in case the patient is of a multiple birth.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Indicator die de volgorde van geboorte aangeeft als de patiënt één van een meerling is." />
+          </extension>
+        </extension>
+      </definition>
       <min value="0" />
       <max value="1" />
       <type>
