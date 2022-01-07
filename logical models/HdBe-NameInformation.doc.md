@@ -2,4 +2,7 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+|`name_usage` | textual | Renamed all instances of Geslachtsnaam to Familienaam in example. |
+|`name_usage` | valueset; textual | Renamed all instances of Geslachtsnaam to Familienaam in ValueSet-Naamgebruik. | 
+|`last_name` | textual | Renamed all instances of Geslachtsnaam to Familienaam. |
+|`last_name_partner` | textual | Renamed all instances of GeslachtsnaamPartner to FamilienaamPartner. |
