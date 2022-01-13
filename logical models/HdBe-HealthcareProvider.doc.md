@@ -2,4 +2,14 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+|`healthcare_provider_identification_number` | textual | Replaced the Dutch context (URA, AGB) with NIDHI and CBE. |
+|`healthcare_provider_identification_number` | example | Removed the Dutch example. | 
+|`organization_name` | example | Removed the Dutch example. | 
+|`department_specialty` | textual | Removed the Dutch context. |
+|`department_specialty` | example | Removed the Dutch example. |
+|`department_specialty` | terminology | Relaxed binding from required to extensible. To-do: replace with a new valueSet. |
+|`department_identification_number` | element | Added new element which specifies an identification number for a department. |
+|`organization_type` | textual | Removed the Dutch context. | 
+|`organization_type` | terminology| Restricted binding from extensible to preferred. To-do: replace with a new valueSet. | 
+|`organization_type` | example | Removed the Dutch example. |
+|`organization_location.location_name`| example | Removed the Dutch example. |
