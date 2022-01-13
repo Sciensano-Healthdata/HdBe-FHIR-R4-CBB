@@ -277,13 +277,13 @@
           </extension>
         </extension>
       </short>
-      <definition value="A geographically determined area which forms part of the municipal area. &#xD;&#xA;For Dutch places of residence, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14).">
+      <definition value="A geographically determined area which forms part of the municipal area.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
           </extension>
           <extension url="content">
-            <valueMarkdown value="Een geografisch bepaald gebied dat een deel is van het gemeentelijke grondgebied.&#xD;&#xA;Bij Nederlandse woonplaatsen bij voorkeur de naam uit de GBA tabel 33 (OID: 2.16.840.1.113883.2.4.6.14) gebruiken." />
+            <valueMarkdown value="Een geografisch bepaald gebied dat een deel is van het gemeentelijke grondgebied." />
           </extension>
         </extension>
       </definition>
@@ -292,10 +292,6 @@
       <type>
         <code value="string" />
       </type>
-      <example>
-        <label value="example 1" />
-        <valueString value="Hoogmade" />
-      </example>
     </element>
     <element id="address_information.municipality">
       <path value="address_information.municipality" />
@@ -309,13 +305,13 @@
           </extension>
         </extension>
       </short>
-      <definition value="Municipality of residence. &#xD;&#xA;For Dutch municipalities, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14).">
+      <definition value="Municipality of residence.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
           </extension>
           <extension url="content">
-            <valueMarkdown value="Gemeente van inschrijving. &#xD;&#xA;Bij Nederlandse gemeenten bij voorkeur de naam uit de GBA tabel 33 (OID: 2.16.840.1.113883.2.4.6.14) gebruiken." />
+            <valueMarkdown value="Gemeente van inschrijving." />
           </extension>
         </extension>
       </definition>
@@ -324,10 +320,6 @@
       <type>
         <code value="string" />
       </type>
-      <example>
-        <label value="example 1" />
-        <valueString value="Kaag en Braassem" />
-      </example>
     </element>
     <element id="address_information.country">
       <path value="address_information.country" />
@@ -356,22 +348,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <example>
-        <label value="example 1" />
-        <valueCodeableConcept>
-          <coding>
-            <system value="urn:oid:2.16.840.1.113883.2.4.4.16.34" />
-            <code value="6030" />
-            <display value="Nederland" />
-          </coding>
-          <coding>
-            <system value="urn:iso:std:iso:3166" />
-            <code value="NL" />
-            <display value="Nederland" />
-          </coding>
-          <text value="Nederland" />
-        </valueCodeableConcept>
-      </example>
+      <binding>
+        <strength value="required" />
+        <description value="Country ISO codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/LandISO" />
+      </binding>
     </element>
     <element id="address_information.additional_information">
       <path value="address_information.additional_information" />
