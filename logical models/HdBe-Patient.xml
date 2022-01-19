@@ -29,7 +29,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="**Concept**&#xD;&#xA;A person who receives medical, psychological, paramedical or nursing care. In some care settings, the term client or participant is used instead of the term patient.&#xD;&#xA;**Purpose**&#xD;&#xA;Recording relevant information to identify the patient for administrative purposes and process support.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Although the term Patient is not used in all care settings, it has been decided not to change the name of the zib to Person as the overall name for Patient, Client, Participant, etc. because the concept Person is broader than the concept referred to here. Healthprofessionals and contact persons are ultimately also Persons.&#xD;&#xA;The name and address information is based on the information set of the Municipal Personal Records Database (GBA) and on the Dutch Implementation Guide: HL7v3 Basic Components. &#xD;&#xA;&#xD;&#xA;The information for the legally required verification of a social security number provided by the SBV-Z also follows GBA specifications. &#xD;&#xA;&#xD;&#xA;Furthermore, the AZR (AWBZ-wide healthcare registration) data set used in AWBZ healthcare served as a base in determining the set. &#xD;&#xA;&#xD;&#xA;Use of patient and personal details must follow the Personal Data Protection Act. This law prohibits processing non-essential personal data and mandates decent and reasonable processing of obtained personal data (Kohnstamm, 2006). Patient data recorded in (electronic) patient records or in digital messages must be handled in the context of the Personal Data Protection Act. Furthermore, healthcare centers must meet the Information Security NEN 7510 standard. Observance of the PDPA is monitored by the Dutch Data Protection Authority (CBP). The CBP and the Healthcare Inspectorate (IGZ) are jointly responsible for monitoring information security in healthcare (CBP, IGZ, 2008). &#xD;&#xA;For those reasons, some personal data, seen in some countries as administrative data, are not included in this information model but in the information models for the Social Anamnesis.&#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;If both a name and an identification number are given, the name must match the name registered under that identification number, for verification purposes.">
+  <description value="**Concept**&#xD;&#xA;A person who receives medical, psychological, paramedical or nursing care. In some care settings, the term client or participant is used instead of the term patient.&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;Recording relevant information to identify the patient for administrative purposes and process support.&#xD;&#xA;&#xD;&#xA;**Evidence Base**&#xD;&#xA;Although the term Patient is not used in all care settings, it has been decided not to change the name of the zib to Person as the overall name for Patient, Client, Participant, etc. because the concept Person is broader than the concept referred to here. Healthprofessionals and contact persons are ultimately also Persons.&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;If both a name and an identification number are given, the name must match the name registered under that identification number, for verification purposes.">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
         <valueCode value="nl-NL" />
@@ -171,7 +171,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="The patient’s identification number. When an Social Security Identification Number (SSIN) is available, it is used. A local identifier can also be provided when this is desired.">
+      <definition value="The patient’s identification number. Typically, when an social security identification number (NISS-INSZ), is available it is used. A local identifier may be provided when this is desired.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -189,11 +189,6 @@
     </element>
     <element id="patient.date_of_birth">
       <path value="patient.date_of_birth" />
-      <code>
-        <system value="http://loinc.org" />
-        <code value="21112-8" />
-        <display value="Birth date" />
-      </code>
       <short value="DateOfBirth">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
@@ -222,11 +217,6 @@
     </element>
     <element id="patient.gender">
       <path value="patient.gender" />
-      <code>
-        <system value="http://loinc.org" />
-        <code value="46098-0" />
-        <display value="Sex" />
-      </code>
       <short value="Gender">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
@@ -237,7 +227,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="Patient’s administrative gender. The gender that is geregistered for administration and record keeping purposes.">
+      <definition value="Patient’s administrative gender. The gender that that the patient is considered to have for administration and record keeping purposes. Note that the gender might not match the biological sex as determined by genetics or the individual's preferred identification. The Observation resource can deal with specific sex or gender aspect of interest.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -252,17 +242,6 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <example>
-        <label value="example 1" />
-        <valueCodeableConcept>
-          <coding>
-            <system value="http://loinc.org" />
-            <code value="46098-0" />
-            <display value="Sex" />
-          </coding>
-          <text value="Female" />
-        </valueCodeableConcept>
-      </example>
       <binding>
         <strength value="required" />
         <description value="Gender codes" />
@@ -323,11 +302,6 @@
     </element>
     <element id="patient.death_indicator">
       <path value="patient.death_indicator" />
-      <code>
-        <system value="http://snomed.info/sct" />
-        <code value="397709008" />
-        <display value="patiënt overleden" />
-      </code>
       <short value="DeathIndicator">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
@@ -360,11 +334,6 @@
     </element>
     <element id="patient.date_of_death">
       <path value="patient.date_of_death" />
-      <code>
-        <system value="http://loinc.org" />
-        <code value="81954-0" />
-        <display value="Date of death [Date]" />
-      </code>
       <short value="DateOfDeath">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
