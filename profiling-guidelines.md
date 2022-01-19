@@ -6,7 +6,7 @@
 3. [Logical model as base](#logicalmodelasbase)
     1.  [Layering: zibs, healthdata.be CBBs and use case specific models](#layering)
         1. [zibs](#zibs)
-        2. [Healthdata.be CCBs](#healthdatacbb)
+        2. [Healthdata.be CBBs](#healthdatacbb)
         3. [Use case specific models](#usecasespecificmodels)
     2. [Associating the logical definition to StructureDefinitions](#associatingthelogicaldefinitiontostructuredefinitions)
 4. [Changelog of changes to zibs and zib-profiles](#changelog)
@@ -14,6 +14,7 @@
     1. [Identity of artifacts](#identityofartifacts)
     2. [Metadata](#metadata)
 6. [Miscellaneous](#miscellaneous)
+    1. [Usage of DefinitionCodes](#DefinitionCodes)
 
 ## Introduction <a name="introduction"></a>
 This document is titled "profiling guidelines", but actually addresses all conformance resources (profiles, extensions, value sets, code systems, CapabilityStatements) and associated examples. We use these terms somewhat interchangeably throughout this document; 'profile' can usually be read as 'the whole set of conformance resources'.
@@ -38,17 +39,17 @@ Most, if not all, conformance resources are based on an underlying logical model
 
 ### Layering: zibs, healthdata.be CBB and use case specific models<a name="layering"></a>
 #### zibs <a name="zibs"></a>
-The basis for most clinical buildig blocks are formed by the Dutch 'zibs' ('Zorginformatiebouwstenen'), in English also known as are Clinical Information Models (CIMs), Health and Care Information Models (HCIMs) or Clinical Building Blocks (CBB) -- we will use the Dutch term 'zib' for all profiling work as it has become a recognizable term over the past years. The zibs are defined by the program ‘Registratie aan de bron’ (Data capture at the point of care) and provide a foundation of use case neutral building blocks from which use cases can be built. The formal definition of the zibs can be found on the [zibs wiki](https://zibs.nl/) and are also imported into [ART-DECOR](https://decor.nictiz.nl/art-decor/decor-project--zib2020bbr-). Next, these zibs are exported as FHIR logical models.
+The basis for most clinical buildig blocks are formed by the Dutch 'zibs' ('Zorginformatiebouwstenen'), in English also known as are Clinical Information Models (CIMs), Health and Care Information Models (HCIMs) or Clinical Building Blocks (CBB) -- we will use the Dutch term 'zib' for all profiling work as it has become a recognizable term over the past years. The zibs are defined by the program ‘Registratie aan de bron’ (Data capture at the point of care) and provide a foundation of use case neutral building blocks from which use cases can be built. The formal definition of the zibs can be found on the [zibs wiki](https://zibs.nl/) and are also imported into [ART-DECOR](https://decor.nictiz.nl/art-decor/decor-project--zib2020bbr-). Next, these zibs are exported as logical models in FHIR format using StructureDefinition, ValueSet and CodeSystem resources.
 
 #### Healthdata.be CBB <a name="healthdatacbb"></a>
-The zibs are used as a starting point to create a clinical building block that represents the Belgium and healthdata.be context. The zibs are transformed into FHIR logical models that for example have additional concepts or adjusted terminology bindings. Unfortunately, a technical dependency is not possible because the required changes for the Belgium context are not compatible with the zibs. 
+The zibs are used as a starting point to create a clinical building block that represents the Belgium and healthdata.be context. Unfortunately, a technical dependency is not possible because many of the required changes for the Belgium context are not compatible with the zibs. 
 A structural and systematic method will be needed to track changes compared to the zibs.
 The FHIR conformance resources will be created based on the healthdata.be CBBs.
 
 #### Use case specific models<a name="usecasespecificmodels"></a>
-Use cases and exchange patterns use and potentially refine the healthdata.be CBBs information model to specific situation or applications.
+Use cases and exchange patterns use and potentially refine the healthdata.be CBBs information model to specific situations or applications.
 
-## Associating the logical definition to StructureDefinitions <a name="associatingthelogicaldefinitiontostructuredefinitions"></a>
+### Associating the logical definition to StructureDefinitions <a name="associatingthelogicaldefinitiontostructuredefinitions"></a>
 Any StructureDefinition that profiles a Resource does so because there is some kind of logical definition ''dictating'' how. Profiles SHALL have a traceable relationship with their logical counterpart(s).
 `ElementDefinition.mapping`: is a free text mapping ''inside'' the profile. We use the mapping elements in profiles to map logical elements to resource elements. Logical elements are referenced based on their `element.path` in the logical model. The mapping SHALL resolve to the logical model.
 
@@ -101,7 +102,7 @@ Example:
 |element| Complete removal or addition of a concept/element.| `element` 
 |textual| Textual changes (e.g. typo's) to the zib's definition. This may also contain changes that affect the definition and scope of the zib concept. |`.definition`, `.comment`, `.binding.description`
 |naming| Changes to zibs concept names. |`.short`, `.path`, `.alias`
-|terminology| Adjusted binding strenght of a ValueSet, replaced, removed or added a ValueSet binding | `.binding.strenght`, `.binding.valueSet`, 
+|terminology| Adjusted binding strenght of a ValueSet, replaced, removed or added a ValueSet binding | `.binding.strength`, `.binding.valueSet`, 
 |definition codes| Changes to the zib definition codes, e.g. another code/codesystem or removal.| `.code`
 |cardinality| Cardinality changes, e.g. relaxing or restricing a concept. |`.min`, `.max`
 |type| Usage of a different datatype, e.g. an Identifier instead of a Coded concept. | `.type`
@@ -181,4 +182,6 @@ Note: This template includes a markdown link: '[text] (url)'.
 
 
 ##	Miscellaneous <a name="miscellaneous"></a>
-To add!
+
+### Usage of DefinitionCodes <a name="DefinitionCodes"></a>
+For some elements within a zib, a DefinitionCode is assigned. A DefinitionCode matches with the meaning of a concept. For the CBB's we have decided to not take over these DefintionCodes in because they are often not-well suited or outdated. Furthermore, they are not of much value inside profiles because the element's definition provides sufficient meaning.
