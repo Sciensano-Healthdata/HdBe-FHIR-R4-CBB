@@ -8,5 +8,5 @@
 |`place_of_residence` | example| Removal of Dutch example.|
 |`municipality` | textual | Removal of Dutch context. |
 |`municipality` | example | Removal of Dutch example. |
-|`country` | terminology | Added valueSet LandISO with required binding. |
+|`country` | terminology | Removed GBA country codes valueset so only ISO country codes are used. |
 |`country` | example | Removal of Dutch example. | 
