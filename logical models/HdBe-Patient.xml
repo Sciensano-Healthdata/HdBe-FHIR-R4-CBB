@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="HdBe-Patient" />
+  <language value="en-US" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+02:00" />
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Patient" />
+  <name value="HdBePatient">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="HdBe-Patient" />
+      </extension>
+    </extension>
+  </name>
+  <title value="HdBe Patient" />
+  <status value="draft" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Healthdata.be (Sciensano)" />
+    <telecom>
+      <system value="email" />
+      <value value="fhir.healthdata@sciensano.be" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="**Concept**&#xD;&#xA;A person who receives medical, psychological, paramedical or nursing care. In some care settings, the term client or participant is used instead of the term patient.&#xD;&#xA;**Purpose**&#xD;&#xA;Recording relevant information to identify the patient for administrative purposes and process support.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Although the term Patient is not used in all care settings, it has been decided not to change the name of the zib to Person as the overall name for Patient, Client, Participant, etc. because the concept Person is broader than the concept referred to here. Healthprofessionals and contact persons are ultimately also Persons.&#xD;&#xA;The name and address information is based on the information set of the Municipal Personal Records Database (GBA) and on the Dutch Implementation Guide: HL7v3 Basic Components. &#xD;&#xA;&#xD;&#xA;The information for the legally required verification of a social security number provided by the SBV-Z also follows GBA specifications. &#xD;&#xA;&#xD;&#xA;Furthermore, the AZR (AWBZ-wide healthcare registration) data set used in AWBZ healthcare served as a base in determining the set. &#xD;&#xA;&#xD;&#xA;Use of patient and personal details must follow the Personal Data Protection Act. This law prohibits processing non-essential personal data and mandates decent and reasonable processing of obtained personal data (Kohnstamm, 2006). Patient data recorded in (electronic) patient records or in digital messages must be handled in the context of the Personal Data Protection Act. Furthermore, healthcare centers must meet the Information Security NEN 7510 standard. Observance of the PDPA is monitored by the Dutch Data Protection Authority (CBP). The CBP and the Healthcare Inspectorate (IGZ) are jointly responsible for monitoring information security in healthcare (CBP, IGZ, 2008). &#xD;&#xA;For those reasons, some personal data, seen in some countries as administrative data, are not included in this information model but in the information models for the Social Anamnesis.&#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;If both a name and an identification number are given, the name must match the name registered under that identification number, for verification purposes.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="**Concept**&#xD;&#xA;Een persoon die medische, psychische, paramedische of verpleegkundige zorg ontvangt. In sommige zorgsectoren wordt in plaats van de term patient de term client of deelnemer gebruikt.&#xD;&#xA;**Purpose**&#xD;&#xA;Het vastleggen van de relevante gegevens ten behoeve van identificatie van de patiënt, voor administratieve doeleinden en procesondersteuning.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Hoewel de term Patiënt niet in alle zorgsectoren gebruikt wordt, is er niet voor gekozen de naam van de zib te wijzigen in Persoon als overkoepelende aanduiding voor patiënt, cliënt, deelnemer, etc. omdat het begrip Persoon breder is dan het hier bedoelde concept. Zorgverleners en Contactpersonen zijn uiteindelijk ook personen.&#xD;&#xA;&#xD;&#xA;De naam en adresgegevens zijn gebaseerd op de gegevensset van de Gemeentelijk Basis Administratie (GBA) en op de Nederlandse implementatiehandleiding HL7v3 Basiscomponenten.&#xD;&#xA;&#xD;&#xA;De gegevens die bij de wettelijk verplichte verificatie van een BSN door de SBV-Z worden opgeleverd zijn eveneens conform de GBA specificatie.&#xD;&#xA;&#xD;&#xA;Daarnaast is bij het vaststellen van de set gekeken naar de in de AWBZ zorg gebruikte AZR (AWBZ-brede zorgregistratie) gegevensset.&#xD;&#xA;&#xD;&#xA;Gebruik van patiënt- en persoonsgegevens dient te voldoen aan de Wet Bescherming Persoonsgegevens. In deze wet wordt beschreven dat het verboden is om niet-noodzakelijke persoonsgegevens te verwerken en dat op een nadenkende en fatsoenlijke wijze met verkregen persoonsgegevens omgegaan wordt (Kohnstamm, 2006). Patiëntgegevens vastgelegd in een (elektronisch) patiëntendossier of in een elektronisch bericht dienen in de context van de Wet Bescherming Persoonsgegevens beschouwd te worden. Daarnaast dienen gezondheidszorginstellingen te voldoen aan de norm Informatiebeveiliging NEN 7510. Het toezicht op naleving van de WBP ligt bij het college Bescherming persoonsgegevens (CBP). Voor het toezicht op de informatiebeveiliging in de zorg zijn het CBP en de Inspectie voor de gezondheidszorg (IGZ) gezamenlijk verantwoordelijk (CBP, IGZ, 2008).&#xD;&#xA;Om die redenen zijn een aantal persoonsgegevens, die in sommige landen als administratieve gegevens beschouwd worden, niet&#xA;                    in deze bouwsteen maar in de bouwstenen voor de Sociale Anamnese opgenomen.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;Indien zowel een naam als een identificatienummer wordt meegegeven, moet, voor verificatiedoeleinden, de naam overeenkomen met de naam die bij het identifcatienummer geregistreerd is.&#xD;&#xA;**References**&#xD;&#xA;1. DCM Patientgegevens V0.91. [Online] Beschikbaar op: http://www.nictiz.nl/uploaded/FILES/htmlcontent/dcm/Nictiz/DCMPatientgegevens_V_0.91loNL.pdf [Geraadpleegd: 23 februari 2015].&#xD;&#xA;&#xD;&#xA;2. Implementatiehandleiding HL7v3 Basiscomponenten, Stichting HL7 Nederland [Online] Beschikbaar op: [http://www.hl7.nl/images/downloads/Implementatiehandleiding%20HL7v3%20Basiscomponenten%20%202.3NL_secure.pdf](http://www.hl7.nl/images/downloads/Implementatiehandleiding%20HL7v3%20Basiscomponenten%20%202.3NL_secure.pdf) [Geraadpleegd: 23 februari 2015].&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (15-02-2013)&#xD;&#xA;-&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (01-07-2013)&#xD;&#xA;Bevat: [ZIB-33](https://bits.nictiz.nl/browse/ZIB-33).&#xD;&#xA;&#xD;&#xA;Publicatieversie 2.0 (01-04-2015)&#xD;&#xA;Bevat: [ZIB-62](https://bits.nictiz.nl/browse/ZIB-62), [ZIB-67](https://bits.nictiz.nl/browse/ZIB-67), [ZIB-96](https://bits.nictiz.nl/browse/ZIB-96), [ZIB-97](https://bits.nictiz.nl/browse/ZIB-97), [ZIB-98](https://bits.nictiz.nl/browse/ZIB-98), [ZIB-99](https://bits.nictiz.nl/browse/ZIB-99), [ZIB-100](https://bits.nictiz.nl/browse/ZIB-100), [ZIB-102](https://bits.nictiz.nl/browse/ZIB-102), [ZIB-121](https://bits.nictiz.nl/browse/ZIB-121), [ZIB-257](https://bits.nictiz.nl/browse/ZIB-257), [ZIB-258](https://bits.nictiz.nl/browse/ZIB-258), [ZIB-259](https://bits.nictiz.nl/browse/ZIB-259), [ZIB-260](https://bits.nictiz.nl/browse/ZIB-260), [ZIB-261](https://bits.nictiz.nl/browse/ZIB-261), [ZIB-262](https://bits.nictiz.nl/browse/ZIB-262), [ZIB-303](https://bits.nictiz.nl/browse/ZIB-303), [ZIB-308](https://bits.nictiz.nl/browse/ZIB-308), [ZIB-349](https://bits.nictiz.nl/browse/ZIB-349), [ZIB-350](https://bits.nictiz.nl/browse/ZIB-350), [ZIB-351](https://bits.nictiz.nl/browse/ZIB-351), [ZIB-353](https://bits.nictiz.nl/browse/ZIB-353).&#xD;&#xA;&#xD;&#xA;Incl. algemene wijzigingsverzoeken: &#xD;&#xA;[ZIB-94](https://bits.nictiz.nl/browse/ZIB-94), [ZIB-154](https://bits.nictiz.nl/browse/ZIB-154), [ZIB-200](https://bits.nictiz.nl/browse/ZIB-200), [ZIB-201](https://bits.nictiz.nl/browse/ZIB-201), [ZIB-309](https://bits.nictiz.nl/browse/ZIB-309), [ZIB-324](https://bits.nictiz.nl/browse/ZIB-324), [ZIB-326](https://bits.nictiz.nl/browse/ZIB-326).&#xD;&#xA;&#xD;&#xA;Publicatieversie 2.0.1 (22-05-2015)&#xD;&#xA;Bevat: [ZIB-385](https://bits.nictiz.nl/browse/ZIB-385), [ZIB-374](https://bits.nictiz.nl/browse/ZIB-374).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.1 (04-09-2017)&#xD;&#xA;Bevat: [ZIB-429](https://bits.nictiz.nl/browse/ZIB-429), [ZIB-430](https://bits.nictiz.nl/browse/ZIB-430), [ZIB-442](https://bits.nictiz.nl/browse/ZIB-442), [ZIB-471](https://bits.nictiz.nl/browse/ZIB-471), [ZIB-491](https://bits.nictiz.nl/browse/ZIB-491), [ZIB-564](https://bits.nictiz.nl/browse/ZIB-564).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.1.1 (01-10-2018)&#xD;&#xA;Bevat: [ZIB-647](https://bits.nictiz.nl/browse/ZIB-647).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.2 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-961](https://bits.nictiz.nl/browse/ZIB-961), [ZIB-1029](https://bits.nictiz.nl/browse/ZIB-1029), [ZIB-1189](https://bits.nictiz.nl/browse/ZIB-1189)." />
+      </extension>
+    </extension>
+  </description>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="true" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/patient" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="2.16.840.1.113883.2.4.3.11.60.40.1.0.1.1--20200901000000">
+      <path value="patient" />
+      <short value="Patient">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Patient" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Root concept of the Patient information model. This root concept contains all data elements of the Patient information model.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+    </element>
+    <element id="patient.name_information">
+      <path value="patient.name_information" />
+      <short value="NameInformation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Naamgegevens" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Patient's full name.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De naamgegevens van de patiënt." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="HumanName" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NameInformation" />
+      </type>
+    </element>
+    <element id="patient.address_information">
+      <path value="patient.address_information" />
+      <short value="AddressInformation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Adresgegevens" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Patient's address information.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Adresgegevens van de patiënt." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Address" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AddressInformation" />
+      </type>
+    </element>
+    <element id="patient.contact_information">
+      <path value="patient.contact_information" />
+      <short value="ContactInformation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Contactgegevens" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Patient’s telephone number(s) or e-mail address(es).">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Telefoonnummer(s) of e-mailadres(sen) van de patiënt." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation" />
+      </type>
+    </element>
+    <element id="patient.patient_identification_number">
+      <path value="patient.patient_identification_number" />
+      <short value="PatientIdentificationNumber">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Identificatienummer" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The patient’s identification number. When an Social Security Identification Number (SSIN) is available, it is used. A local identifier can also be provided when this is desired.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Identificatienummer van de patiënt. Als een identificatienummer van de sociale zekerheid (INSZ) beschikbaar is, dan wordt het gebruikt. Indien gewenst kan een lokaal identificatienummer ook meegegeven worden." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Identifier" />
+      </type>
+    </element>
+    <element id="patient.date_of_birth">
+      <path value="patient.date_of_birth" />
+      <code>
+        <system value="http://loinc.org" />
+        <code value="21112-8" />
+        <display value="Birth date" />
+      </code>
+      <short value="DateOfBirth">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Geboortedatum" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Geboortedatum van de patiënt. Bij een patiënt is de geboortedatum verplicht. Vage datum (bv. alleen jaar) is toegestaan." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="patient.gender">
+      <path value="patient.gender" />
+      <code>
+        <system value="http://loinc.org" />
+        <code value="46098-0" />
+        <display value="Sex" />
+      </code>
+      <short value="Gender">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Geslacht" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Patient’s administrative gender. The gender that is geregistered for administration and record keeping purposes.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Administratief geslacht van de patiënt. Het geslacht dat geregistreerd staat voor administratieve en dossiervormende doeleinden." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <example>
+        <label value="example 1" />
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://loinc.org" />
+            <code value="46098-0" />
+            <display value="Sex" />
+          </coding>
+          <text value="Female" />
+        </valueCodeableConcept>
+      </example>
+      <binding>
+        <strength value="required" />
+        <description value="Gender codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/Geslacht" />
+      </binding>
+    </element>
+    <element id="patient.multiple_birth_indicator">
+      <path value="patient.multiple_birth_indicator" />
+      <short value="MultipleBirthIndicator">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="MeerlingIndicator" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="An indication stating whether the patient is of a multiple birth.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Indicator die aangeeft of de patiënt één van een meerling is." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <example>
+        <label value="example 1" />
+        <valueBoolean value="false" />
+      </example>
+    </element>
+    <element id="patient.multiple_birth_order">
+      <path value="patient.multiple_birth_order" />
+      <short value="MultipleBirthOrder" />
+      <definition value="An indication of the birth order in case the patient is of a multiple birth.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Indicator die de volgorde van geboorte aangeeft als de patiënt één van een meerling is." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="integer" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/integer" />
+      </type>
+    </element>
+    <element id="patient.death_indicator">
+      <path value="patient.death_indicator" />
+      <code>
+        <system value="http://snomed.info/sct" />
+        <code value="397709008" />
+        <display value="patiënt overleden" />
+      </code>
+      <short value="DeathIndicator">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="OverlijdensIndicator" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="An indication stating whether the patient has died.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Indicator die aangeeft of de patiënt overleden is." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <example>
+        <label value="example 1" />
+        <valueBoolean value="false" />
+      </example>
+    </element>
+    <element id="patient.date_of_death">
+      <path value="patient.date_of_death" />
+      <code>
+        <system value="http://loinc.org" />
+        <code value="81954-0" />
+        <display value="Date of death [Date]" />
+      </code>
+      <short value="DateOfDeath">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="DatumOverlijden" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The date on which the patient died. A ‘vague’ date, such as only the year, is permitted.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De datum waarop de patiënt overleden is. Een vage datum, b.v. alleen jaartal is toegestaan." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
