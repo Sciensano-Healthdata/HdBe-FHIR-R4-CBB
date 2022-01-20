@@ -7,9 +7,9 @@
 |`organization_name` | example | Removed the Dutch example. | 
 |`department_specialty` | textual | Removed the Dutch context. |
 |`department_specialty` | example | Removed the Dutch example. |
-|`department_specialty` | terminology | Relaxed binding from required to extensible. To-do: replace with a new valueSet. |
+|`department_specialty` | terminology | Removed ValueSet DepartmentSpecialty. |
 |`department_identification_number` | element | Added new element which specifies an identification number for a department. |
 |`organization_type` | textual | Removed the Dutch context. | 
-|`organization_type` | terminology| Restricted binding from extensible to preferred. To-do: replace with a new valueSet. | 
+|`organization_type` | terminology| Removed ValueSet OrganizationType. | 
 |`organization_type` | example | Removed the Dutch example. |
 |`organization_location.location_name`| example | Removed the Dutch example. |
