@@ -1,5 +1,5 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="2.16.840.1.113883.2.4.3.11.60.40.2.7.4.2--20200901000000"/>
+    <id value="2.16.840.1.113883.2.4.3.11.60.40.2.19.4.3--20200901000000"/>
     <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/><!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
     </meta>
@@ -8,15 +8,15 @@
             <start value="2020-09-01T00:00:00+01:00"/>
         </valuePeriod>
     </extension>
-    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.4.2--20200901000000"/>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.19.4.3--20200901000000"/>
     <identifier>
         <use value="official"/>
         <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.7.4.2"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.19.4.3"/>
     </identifier>
     <version value="2020-09-01T00:00:00"/>
-    <name value="DrugsGebruikStatusCodelijst"/>
-    <title value="DrugsGebruikStatusCodelijst"/>
+    <name value="BrandwondSoortCodelijst"/>
+    <title value="BrandwondSoortCodelijst"/>
     <status value="active"/>
     <experimental value="false"/>
     <publisher value="Registratie aan de bron"/>
@@ -31,43 +31,18 @@
             <value value="https://www.zibs.nl"/>
         </telecom>
     </contact>
-    <description value="DrugsGebruikStatusCodelijst"/>
+    <description value="BrandwondSoortCodelijst"/>
     <immutable value="false"/>
     <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
     <compose>
         <include>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
-            <concept>
-                <code value="OTH"/>
-                <display value="Other"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Other"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Anders"/>
-                </designation>
-            </concept>
-        </include>
-        <include>
             <system value="http://snomed.info/sct"/>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="huidige drugsgebruiker"/>
+                    <valueString value="Chemische verbranding"/>
                 </extension>
-                <code value="417284009"/>
-                <display value="huidige drugsgebruiker"/>
+                <code value="26696002"/>
+                <display value="chemische brandwond"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -75,7 +50,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Current drug user"/>
+                    <value value="Chemical burn"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -84,15 +59,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="huidige drugsgebruiker"/>
+                    <value value="chemische brandwond"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="gebruikt geen drugs"/>
+                    <valueString value="Brandwond door elektriciteit"/>
                 </extension>
-                <code value="228367002"/>
-                <display value="gebruikt geen drugs"/>
+                <code value="21720007"/>
+                <display value="brandwond door elektriciteit"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -100,7 +75,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Does not misuse drugs"/>
+                    <value value="Electrical burn"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -109,15 +84,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="gebruikt geen drugs"/>
+                    <value value="brandwond door elektriciteit"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="heeft nooit drugs gebruikt"/>
+                    <valueString value="Thermische brandwond"/>
                 </extension>
-                <code value="228368007"/>
-                <display value="heeft nooit drugs gebruikt"/>
+                <code value="105594005"/>
+                <display value="thermische brandwond"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -125,7 +100,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Has never misused drugs"/>
+                    <value value="Thermal burn"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -134,32 +109,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="heeft nooit drugs gebruikt"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="heeft in het verleden drugs gebruikt"/>
-                </extension>
-                <code value="44870007"/>
-                <display value="heeft in het verleden drugs misbruikt"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Misused drugs in past"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="heeft in het verleden drugs misbruikt"/>
+                    <value value="thermische brandwond"/>
                 </designation>
             </concept>
         </include>
