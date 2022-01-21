@@ -24,9 +24,19 @@
     <name value="HdBe logical model Patient" />
   </mapping>
   <mapping>
+    <identity value="zib-patient-v3.2-2020EN"/>
+    <uri value="https://zibs.nl/wiki/Patient-v3.2(2020EN)"/>
+    <name value="zib Patient-v3.2(2020EN)"/>
+  </mapping>
+  <mapping>
     <identity value="hdbe-nationality" />
     <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Nationality" />
     <name value="HdBe logical model Nationality" />
+  </mapping>
+  <mapping>
+    <identity value="zib-nationality-v3.0-2020EN"/>
+    <uri value="https://zibs.nl/wiki/Nationality-v3.0(2020EN)"/>
+    <name value="zib Nationality-v3.0(2020EN)"/>
   </mapping>
   <mapping>
     <identity value="hdbe-MaritalStatus" />
@@ -34,9 +44,19 @@
     <name value="HdBe logical model MaritalStatus" />
   </mapping>
   <mapping>
+    <identity value="zib-maritalstatus-v3.1-2020EN"/>
+    <uri value="https://zibs.nl/wiki/MaritalStatus-v3.1(2020EN)"/>
+    <name value="zib MaritalStatus-v3.1(2020EN)"/>
+  </mapping>
+  <mapping>
     <identity value="hdbe-LanguageProficiency" />
     <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LanguageProficiency" />
     <name value="HdBe logical model LanguageProficiency" />
+  </mapping>
+  <mapping>
+    <identity value="zib-languageproficiency-v3.2-2020EN"/>
+    <uri value="https://zibs.nl/wiki/LanguageProficiency-v3.2(2020EN)"/>
+    <name value="zib LanguageProficiency-v3.2(2020EN)"/>
   </mapping>
   <mapping>
     <identity value="hdbe-ContactInformation" />
@@ -44,9 +64,19 @@
     <name value="HdBe logical model ContactInformation" />
   </mapping>
   <mapping>
+    <identity value="zib-contactinformation-v1.2-2020EN"/>
+    <uri value="https://zibs.nl/wiki/ContactInformation-v1.2(2020EN)"/>
+    <name value="zib ContactInformation-v1.2(2020EN)"/>
+  </mapping>
+  <mapping>
     <identity value="hdbe-ContactPerson" />
     <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson" />
     <name value="HdBe logical model ContactPerson" />
+  </mapping>
+  <mapping>
+    <identity value="zib-contactperson-v3.4-2020EN"/>
+    <uri value="https://zibs.nl/wiki/ContactPerson-v3.4(2020EN)"/>
+    <name value="zib ContactPerson-v3.4(2020EN)"/>
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
@@ -108,13 +138,13 @@
       <alias value="Nationaliteit" />
       <binding>
         <strength value="extensible" />
-        <description value="NationaliteitCodelijst" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/Nationaliteit" />
+                <description value="NationaliteitCodelijst"/>
+                <valueSet value="https://fhir.healthdata.be/ValueSet/Nationaliteit"/>
       </binding>
       <mapping>
-        <identity value="zib-nationality-v3.0-2020EN" />
-        <map value="NL-CM:7.6.3" />
-        <comment value="Nationality" />
+        <identity value="zib-nationality-v3.0-2020EN"/>
+        <map value="NL-CM:7.6.3"/>
+        <comment value="Nationality"/>
       </mapping>
     </element>
     <element id="Patient.identifier">
@@ -131,15 +161,19 @@
       <path value="Patient.identifier" />
       <sliceName value="bsn" />
       <short value="PatientIdentificationNumber" />
-      <definition value="The patient’s identification number. In transfer situations, use of the social security number (BSN) must comply with the Use of Social Security Numbers in Healthcare Act (Wbsn-z). In other situations, other number systems can be used, such as internal hospital patient numbers for example." />
+      <definition value="The patient’s identification number. Typically, when an social security identification number (NISS-INSZ), is available it is used. A local identifier may be provided when this is desired." />
       <alias value="Identificatienummer" />
       <patternIdentifier>
-        <system value="http://fhir.nl/fhir/NamingSystem/bsn" />
+        <system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin" />
       </patternIdentifier>
       <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.7" />
-        <comment value="PatientIdentificationNumber" />
+        <identity value="hdbe-patient" />
+        <map value="patient_identification_number" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN"/>
+        <map value="NL-CM:0.1.7"/>
+        <comment value="PatientIdentificationNumber"/>
       </mapping>
     </element>
     <element id="Patient.name">
@@ -153,9 +187,13 @@
         <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation" />
       </type>
       <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.6" />
-        <comment value="NameInformation" />
+        <identity value="hdbe-patient" />
+        <map value="name_information" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN"/>
+        <map value="NL-CM:0.1.6"/>
+        <comment value="NameInformation"/>
       </mapping>
     </element>
     <element id="Patient.telecom">
@@ -172,14 +210,18 @@
       <comment value="The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the containers inside the ContactInformation model which are 0..*. FHIR ContactPoint does not have these containers." />
       <alias value="Contactgegevens" />
       <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.5" />
-        <comment value="ContactInformation" />
+        <identity value="hdbe-patient" />
+        <map value="contact_information" />
       </mapping>
       <mapping>
-        <identity value="zib-contactinformation-v1.2-2020EN" />
-        <map value="NL-CM:20.6.1" />
-        <comment value="ContactInformation" />
+        <identity value="zib-patient-v3.2-2020EN"/>
+        <map value="NL-CM:0.1.5"/>
+        <comment value="ContactInformation"/>
+      </mapping>
+      <mapping>
+        <identity value="zib-contactinformation-v1.2-2020EN"/>
+        <map value="NL-CM:20.6.1"/>
+        <comment value="ContactInformation"/>
       </mapping>
     </element>
     <element id="Patient.telecom:telephoneNumbers">
@@ -201,11 +243,11 @@
     <element id="Patient.gender">
       <path value="Patient.gender" />
       <short value="Gender" />
-      <definition value="Patient’s administrative gender." />
+      <definition value="Patient’s administrative gender. The gender that that the patient is considered to have for administration and record keeping purposes. Note that the gender might not match the biological sex as determined by genetics or the individual's preferred identification. The Observation resource can deal with specific sex or gender aspect of interest." />
       <alias value="Geslacht" />
       <binding>
         <strength value="required" />
-        <description value="Use ConceptMap 'GeslachtCodelijst-to-AdministrativeGender' to translate zib terminology to profile terminology in ValueSet 'AdministrativeGender'" />
+        <description value="Use ConceptMap 'GenderCodelijst-to-AdministrativeGender' to translate zib terminology to profile terminology in ValueSet 'AdministrativeGender'" />
         <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
             <valueCanonical value="https://fhir.healthdata.be/ConceptMap/Geslacht-to-AdministrativeGender" />
@@ -213,9 +255,13 @@
         </valueSet>
       </binding>
       <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.9" />
-        <comment value="Gender" />
+        <identity value="hdbe-patient" />
+        <map value="gender" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN"/>
+        <map value="NL-CM:0.1.9"/>
+        <comment value="Gender"/>
       </mapping>
     </element>
     <element id="Patient.gender.extension">
@@ -229,9 +275,9 @@
       </slicing>
       <min value="0" />
     </element>
-    <element id="Patient.gender.extension:geslachtCodelijst">
+    <element id="Patient.gender.extension:genderCodelist">
       <path value="Patient.gender.extension" />
-      <sliceName value="geslachtCodelijst" />
+      <sliceName value="genderCodelist" />
       <min value="0" />
       <max value="1" />
       <type>
@@ -239,24 +285,28 @@
         <profile value="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification" />
       </type>
     </element>
-    <element id="Patient.gender.extension:geslachtCodelijst.url">
+    <element id="Patient.gender.extension:genderCodelist.url">
       <path value="Patient.gender.extension.url" />
       <fixedUri value="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification" />
     </element>
-    <element id="Patient.gender.extension:geslachtCodelijst.value[x]">
+    <element id="Patient.gender.extension:genderCodelist.value[x]">
       <path value="Patient.gender.extension.value[x]" />
       <short value="Gender" />
       <definition value="Patient’s administrative gender." />
       <alias value="Geslacht" />
       <binding>
         <strength value="required" />
-        <description value="GeslachtCodelijst" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/Geslacht" />
+        <description value="GenderCodelist" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/Gender" />
       </binding>
       <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.9" />
-        <comment value="Gender" />
+        <identity value="hdbe-patient" />
+        <map value="gender" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN"/>
+        <map value="NL-CM:0.1.9"/>
+        <comment value="Gender"/>
       </mapping>
     </element>
     <element id="Patient.birthDate">
@@ -264,6 +314,10 @@
       <short value="DateOfBirth" />
       <definition value="Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted." />
       <alias value="Geboortedatum" />
+      <mapping>
+        <identity value="hdbe-patient"/>
+        <map value="date_of_birth"/>     
+      </mapping>
       <mapping>
         <identity value="zib-patient-v3.2-2020EN" />
         <map value="NL-CM:0.1.10" />
@@ -281,7 +335,7 @@
       </slicing>
     </element>
     <element id="Patient.deceased[x]:deceasedBoolean">
-      <path value="Patient.deceased[x]" />
+      <path value="Patient.deceasedBoolean" />
       <sliceName value="deceasedBoolean" />
       <short value="DeathIndicator" />
       <definition value="An indication stating whether the patient has died." />
@@ -290,13 +344,17 @@
         <code value="boolean" />
       </type>
       <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.32" />
-        <comment value="DeathIndicator" />
+        <identity value="hdbe-patient" />
+        <map value="death_indicator" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN"/>
+        <map value="NL-CM:0.1.32"/>
+        <comment value="DeathIndicator"/>
       </mapping>
     </element>
     <element id="Patient.deceased[x]:deceasedDateTime">
-      <path value="Patient.deceased[x]" />
+      <path value="Patient.deceasedDateTime" />
       <sliceName value="deceasedDateTime" />
       <short value="DateOfDeath" />
       <definition value="The date on which the patient died. A ‘vague’ date, such as only the year, is permitted." />
@@ -307,14 +365,18 @@
         <code value="dateTime" />
       </type>
       <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.33" />
-        <comment value="DateOfDeath" />
+        <identity value="hdbe-patient" />
+        <map value="date_of_death" />
       </mapping>
       <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.32" />
-        <comment value="DeathIndicator" />
+        <identity value="zib-patient-v3.2-2020EN"/>
+        <map value="NL-CM:0.1.33"/>
+        <comment value="DateOfDeath"/>
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN"/>
+        <map value="NL-CM:0.1.32"/>
+        <comment value="DeathIndicator"/>
       </mapping>
     </element>
     <element id="Patient.address">
@@ -327,9 +389,13 @@
         <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation" />
       </type>
       <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.4" />
-        <comment value="AddressInformation" />
+        <identity value="hdbe-patient" />
+        <map value="address_information" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN"/>
+        <map value="NL-CM:0.1.4"/>
+        <comment value="AddressInformation"/>
       </mapping>
     </element>
     <element id="Patient.maritalStatus">
@@ -338,14 +404,14 @@
       <definition value="A person’s marital status according to the terms and definition in the Dutch civil code." />
       <alias value="BurgerlijkeStaat" />
       <binding>
-        <strength value="required" />
-        <description value="BurgerlijkeStaatCodelijst" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/BurgerlijkeStaat" />
+        <strength value="required"/>
+        <description value="BurgerlijkeStaatCodelijst"/>
+        <valueSet value="https://fhir.healthdata.be/ValueSet/BurgerlijkeStaat"/>
       </binding>
       <mapping>
-        <identity value="zib-maritalstatus-v3.1-2020EN" />
-        <map value="NL-CM:7.9.2" />
-        <comment value="MaritalStatus" />
+        <identity value="zib-maritalstatus-v3.1-2020EN"/>
+        <map value="NL-CM:7.9.2"/>
+        <comment value="MaritalStatus"/>
       </mapping>
     </element>
     <element id="Patient.multipleBirth[x]">
@@ -359,7 +425,7 @@
       </slicing>
     </element>
     <element id="Patient.multipleBirth[x]:multipleBirthBoolean">
-      <path value="Patient.multipleBirth[x]" />
+      <path value="Patient.multipleBirthBoolean" />
       <sliceName value="multipleBirthBoolean" />
       <short value="MultipleBirthIndicator" />
       <definition value="An indication stating whether the patient is of a multiple birth." />
@@ -368,9 +434,26 @@
         <code value="boolean" />
       </type>
       <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.31" />
-        <comment value="MultipleBirthIndicator" />
+        <identity value="hdbe-patient" />
+        <map value="multiple_birth_indicator" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN"/>
+        <map value="NL-CM:0.1.31"/>
+        <comment value="MultipleBirthIndicator"/>
+      </mapping>
+    </element>
+    <element id="Patient.multipleBirth[x]:multipleBirthInteger">
+      <path value="Patient.multipleBirthInteger" />
+      <sliceName value="multipleBirthInteger" />
+      <short value="MultipleBirthOrder" />
+      <definition value="An indication of the birth order in case the patient is of a multiple birth." />
+      <type>
+        <code value="integer" />
+      </type>
+      <mapping>
+        <identity value="hdbe-patient" />
+        <map value="multiple_birth_order" />
       </mapping>
     </element>
     <element id="Patient.contact">
@@ -379,9 +462,9 @@
       <comment value="Whereas the zib ContactPerson includes all (non-healthcare professional) persons that are involved in the care for a patient, FHIR distinguishes two use cases for these persons:&#xD;&#xA;&#xD;&#xA;* The RelatedPerson resource is used to capture information about any person that is related to the patient, using the profile &lt;https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson&gt;.&#xD;&#xA;* Information about persons that should be _contacted_ regarding the care for the patient is captured using the `Patient.contact` resource.&#xD;&#xA;&#xD;&#xA;If a person is both a related person and a contact person, then some data duplication is inevitable. The zib-ContactPerson can be referenced using the extension in `contact:contactPerson`." />
       <alias value="Contactpersoon" />
       <mapping>
-        <identity value="zib-contactperson-v3.4-2020EN" />
-        <map value="NL-CM:3.1.1" />
-        <comment value="Contact" />
+        <identity value="zib-contactperson-v3.4-2020EN"/>
+        <map value="NL-CM:3.1.1"/>
+        <comment value="Contact"/>
       </mapping>
     </element>
     <element id="Patient.contact.extension">
@@ -543,9 +626,9 @@
       <definition value="Root concept of the LanguageProficiency information model. This concept contains all data elements of the LanguageProficiency information model." />
       <alias value="Taalvaardigheid" />
       <mapping>
-        <identity value="zib-languageproficiency-v3.2-2020EN" />
-        <map value="NL-CM:7.12.1" />
-        <comment value="LanguageProficiency" />
+        <identity value="zib-languageproficiency-v3.2-2020EN"/>
+        <map value="NL-CM:7.12.1"/>
+        <comment value="LanguageProficiency"/>
       </mapping>
     </element>
     <element id="Patient.communication.extension">
@@ -636,10 +719,6 @@
         <code value="Extension" />
         <profile value="https://fhir.healthdata.be/StructureDefinition/ext-Comment" />
       </type>
-    </element>
-    <element id="Patient.communication.extension:comment.url">
-      <path value="Patient.communication.extension.url" />
-      <fixedUri value="https://fhir.healthdata.be/StructureDefinition/ext-Comment" />
     </element>
     <element id="Patient.communication.extension:comment.value[x]">
       <path value="Patient.communication.extension.value[x]" />
