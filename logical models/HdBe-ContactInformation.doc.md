@@ -2,4 +2,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`telephone_numbers.comment` | definition codes | Replaced LOINC 48767-8 code with SNOMED code 703852005. 
+| | | 
