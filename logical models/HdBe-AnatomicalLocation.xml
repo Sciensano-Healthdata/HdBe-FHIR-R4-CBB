@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="HdBe-AnatomicalLocation" />
+  <meta>
+    <lastUpdated value="2022-01-21T11:10:14.7421332+00:00" />
+  </meta>
+  <language value="en-US" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+02:00" />
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation" />
+  <name value="HdBeAnatomicalLocation">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="HdBe-AnatomischeLocatie" />
+      </extension>
+    </extension>
+  </name>
+  <title value="HdBe AnatomicalLocation" />
+  <status value="draft" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Healthdata.be (Sciensano)" />
+    <telecom>
+      <system value="email" />
+      <value value="fhir.healthdata@sciensano.be" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="**Concept**&#xD;&#xA;An anatomical location specifies the location (e.g. foot) and laterality (e.g. links) of a bodypart.&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;An anatomic location is used to specify the location of a finding, procedure or measurement.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="**Concept**&#xD;&#xA;Een anatomische locatie specificeert de locatie (bijv. voet) en lateraliteit (bijv. links) van een lichaamsonderdeel .&#xD;&#xA;**Purpose**&#xD;&#xA;Een anatomische locatie wordt gebruikt om de locatie van een bevinding, verrichting of meting te specificieren.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (01-09-2020)" />
+      </extension>
+    </extension>
+  </description>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="true" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/anatomical_location" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.7.1--20200901000000">
+      <path value="anatomical_location" />
+      <short value="AnatomicalLocation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="AnatomischeLocatie" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Root concept of the AnatomicalLocation partial information model.This root concept contains all data elements of the AnatomicalLocation partial information model.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de subbouwsteen AnatomischeLocatie. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen AnatomischeLocatie." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+    </element>
+    <element id="anatomical_location.location">
+      <path value="anatomical_location.location" />
+      <short value="Location">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Locatie" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Localisation on/in the body.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Localisatie op/in het lichaam." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Location codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/Location" />
+      </binding>
+    </element>
+    <element id="anatomical_location.laterality">
+      <path value="anatomical_location.laterality" />
+      <short value="Laterality">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Lateraliteit" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Laterality adds information about body site to the anatomic location, e.g. left.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <example>
+        <label value="example 1" />
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="7771000" />
+            <display value="Left" />
+          </coding>
+        </valueCodeableConcept>
+      </example>
+      <binding>
+        <strength value="required" />
+        <description value="Laterality codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/Laterality" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>
