@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="AanduidingBijNummer"/>
+   <id value="AddressType"/>
    <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
@@ -10,15 +10,15 @@
             <start value="2020-09-01T00:00:00+02:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/ValueSet/AanduidingBijNummer"/>
+   <url value="https://fhir.healthdata.be/ValueSet/AddressType"/>
    <identifier>
         <use value="official"/>
         <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.20.5.4"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.20.5.3"/>
     </identifier>
    <version value="2020-09-01T00:00:00"/>
-   <name value="AanduidingBijNummer"/>
-   <title value="AanduidingBijNummer"/>
+   <name value="AddressType"/>
+   <title value="AddressType"/>
    <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Healthdata.be (Sciensano)"/>
@@ -30,18 +30,24 @@
          <use value="work"/>
       </telecom>
    </contact>
-   <description value="AanduidingBijNummerCodelijst"/>
+   <description value="AddressTypeCodelist"/>
    <immutable value="false"/>
    <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
    <compose>
         <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.101.5.3"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Tegenover"/>
-                </extension>
-                <code value="to"/>
-                <display value="Tegenover"/>
+                <code value="PST"/>
+                <display value="Postal Address"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Postal Address"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -49,15 +55,21 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Tegenover"/>
+                    <value value="Postadres"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Bij"/>
-                </extension>
-                <code value="by"/>
-                <display value="Bij"/>
+                <code value="HP"/>
+                <display value="Primary Home"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Primary Home"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -65,15 +77,21 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Bij"/>
+                    <value value="Officieel adres"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Tegenover"/>
-                </extension>
-                <code value="to"/>
-                <display value="Tegenover"/>
+                <code value="PHYS"/>
+                <display value="Visit Address"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Visit Address"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -81,15 +99,21 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Tegenover"/>
+                    <value value="Woon-/verblijfadres"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Tegenover"/>
-                </extension>
-                <code value="to"/>
-                <display value="Tegenover"/>
+                <code value="TMP"/>
+                <display value="Temporary Address"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Temporary Address"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -97,15 +121,21 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Tegenover"/>
+                    <value value="Tijdelijk adres"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Bij"/>
-                </extension>
-                <code value="by"/>
-                <display value="Bij"/>
+                <code value="WP"/>
+                <display value="Work Place"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Work Place"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -113,15 +143,21 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Bij"/>
+                    <value value="Werkadres"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Bij"/>
-                </extension>
-                <code value="by"/>
-                <display value="Bij"/>
+                <code value="HV"/>
+                <display value="Vacation Home"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Vacation Home"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -129,7 +165,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Bij"/>
+                    <value value="Vakantie adres"/>
                 </designation>
             </concept>
         </include>
