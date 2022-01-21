@@ -1,5 +1,5 @@
-## zib [zib-profile name] difference
+## zib Patient difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+|`Mappings` | mapping | Removed all mappings to zibs in StructureDefinition. |
