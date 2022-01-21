@@ -1,5 +1,7 @@
-## zib [zib-profile name] difference
+## zib Patient difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+|`patient_identification_number` | textual | Replaced the Dutch context (BSN) with the Belgian equivalent (NISS-INSZ). |
+|`gender` | textual | Extended definition to clarify that the concept is about administrative gender rather then the patient's identified sex.  |
+|`multiple_birth_order` | element | Added mapping to mulitple birth order.|
