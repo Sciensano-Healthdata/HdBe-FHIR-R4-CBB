@@ -345,11 +345,12 @@
       <max value="1" />
       <type>
         <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
       </type>
-      <example>
-        <label value="example 1" />
-        <valueString value="42 mmol/mol" />
-      </example>
+      <type>
+        <code value="Quantity" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity" />
+      </type>
     </element>
     <element id="laboratory_test_result.laboratory_test.reference_range_lower_limit">
       <path value="laboratory_test_result.laboratory_test.reference_range_lower_limit" />
@@ -378,11 +379,12 @@
       <max value="1" />
       <type>
         <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
       </type>
-      <example>
-        <label value="example 1" />
-        <valueString value="20 mmol/mol" />
-      </example>
+      <type>
+        <code value="Quantity" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity" />
+      </type>
     </element>
     <element id="laboratory_test_result.laboratory_test.interpretation_method">
       <path value="laboratory_test_result.laboratory_test.interpretation_method" />
@@ -675,8 +677,8 @@
       <min value="0" />
       <max value="1" />
       <type>
-        <code value="AnatomicalLocation"/>
-        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"/>
+        <code value="AnatomicalLocation" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation" />
       </type>
     </element>
     <element id="laboratory_test_result.specimen.microorganism">
