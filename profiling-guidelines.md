@@ -146,6 +146,22 @@ Conformance resources can have multiple types of identifying information, which 
 Where:
 `[purpose]` and `[English concept name]` are generally a PascalCased name joining words together, with the first letter of every word capitalized.
 
+#### ValueSets
+- The id will be constructed as a word or short wording that describes the ValueSet.
+- The canonical URL will then be: `https://fhir.healthdata.be/ValueSet/[id]`
+- The name will be constructed as: `.id`
+- The title will be constructed as: `.id`
+
+#### ConceptMaps
+- The id will be constructed as: `[source ValueSet.name]-to-[target ValueSet.name]`
+- The canonical URL will then be: `https://fhir.healthdata.be/ConceptMap/[id]`
+- The name will be constructed as: `[source ValueSet.name]_to_[target ValueSet.name]`
+- The title will be constructed as: `[source ValueSet.name] to [target ValueSet.name]`
+
+#### Examples
+Examples are not conformance resources and lack the `.url`, `.name` and `.title` elements. However, to ensure consistency, the `.id` is standardized in the following way:
+- `[profile id]-[unique string]`, capped to 64 characters where the unique string is usualy two digits.
+
 ### Folder structure and file name
 - logical models
     - `logical models/[id].xml`
@@ -153,6 +169,12 @@ Where:
     - `resources/[id].xml`
 - extensions
     - `resources/[id].xml`
+- valuesets
+    - `terminology/ValueSet-[id]`
+- codesystems
+    - `terminology/CodeSystem-[name]`    
+- conceptsmaps
+    - `terminology/ConceptMaps-[id]`
 - examples
     - `examples/[profile id]-[serial number, two digits].xml`
 ##	Metadata <a name="metadata"></a>
@@ -184,10 +206,10 @@ Note: This template includes a markdown link: '[text] (url)'.
 ## ValueSets <a name="ValueSets"></a>
 
 ### Deduplication of ValueSets 
-In the zibs, different ValueSets are used that consists of the same concepts. We choose to reuse these ValueSets if they are exactly the same. If the ValueSets contain the same content, but have a different name, e.g. with MedicationUseStopType and MedicationAgreementStopType; a ValueSet name can be chosen at one's own discretion.
+As a design principle, zibs contain distinct ValueSets for every concept even if the ValueSet's values are the same for multiple concepts. We deduplicate ValueSets and reuse them where they are applicable. If ValueSets are similar but have different names, e.g. with MedicationUseStopType and MedicationAgreementStopType, naming is done at the author's discretion.
 
-### Translation of ValueSets 
-Because Codelists are only available with Dutch naming, a manual translation is needed for Codelists. For each CBB logical model and profile that is modified to the Belgium context, a necessary step is to translate the naming of the ValueSet containing the Codelist that is referenced. This is needed at the ValueSet itself, the logical model, the profile and the ConceptMap. It is not necessary to record this in the Changelog, as these edits do not represent contextual changes or improvements.
+### Translation of ValueSet's metadata
+The zib export and Nictiz FHIR profiles contain ValueSet with Dutch naming. This needs to be manually translated for every ValueSet in use by the CBBs. The English translation of the ValueSet name is taken from the zib's wiki. All references to the ValueSet should be adjusted accordingly. It is not necessary to record this in the changelog.
 
 The example beneath comprises of the changes necessary within the ValueSet Gender. Wherever the ValueSet is referenced, the valueSet value must also be translated.
 
@@ -208,8 +230,6 @@ ValueSet-Geslacht.xml
 </ValueSet>
 
 ```
-
-
 After:
 ``` xml
  ValueSet-Gender.xml 
@@ -227,7 +247,6 @@ After:
    ...
    </ValueSet>
 ```
-
 
 
 ##	Miscellaneous <a name="miscellaneous"></a>
