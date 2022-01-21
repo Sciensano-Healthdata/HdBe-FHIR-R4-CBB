@@ -226,6 +226,12 @@
     </xsl:template>
     
     <xd:doc>
+        <xd:desc>Remove zib examples in element.example.</xd:desc>
+    </xd:doc>
+    <xsl:template match="f:differential/f:element/f:example"> 
+    </xsl:template>
+    
+    <xd:doc>
         <xd:desc>Replace inline BackboneElement of NameInformation with a reference</xd:desc>
     </xd:doc>
     <xsl:template match="f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.0.1.6--20200901000000'] | 
