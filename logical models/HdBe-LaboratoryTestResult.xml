@@ -29,7 +29,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="**Concept**&#xD;&#xA;A laboratory result describes the result of a laboratory analysis. &#xD;&#xA;These are specimen-oriented tests as performed in laboratories such as Clinical Chemistry, Serology, Microbiology, etc.&#xD;&#xA;In addition to the results of tests with a singular result, this concept can also contain the results of more complex tests with multiple results or a ‘panel’.&#xD;&#xA;**Purpose**&#xD;&#xA;Laboratory tests are done for the purpose of diagnosing and preventing disease and follow-up on the effects of treatment.&#xD;&#xA;**Evidence Base**&#xD;&#xA;There are two information models for recording laboratory test results: TextResult and LaboratoryTestResult. &#xD;&#xA;&#xD;&#xA;In the case of laboratory test results, it is difficult to clearly indicate exactly when to use this information model and when to use the TextResult information model. &#xD;&#xA;In general, laboratory tests resulting in a value (7.1 mmol/L), ordinal number (++ from series to ++++) or a quantitative result (Low) are recorded using this information model. The TextResult information model is better suited for textual results that are more descriptive in nature and which are longer than just a few words. Both types of tests occur in almost all laboratories. &#xD;&#xA;The applicability of the aforementioned information models is not determined by the kind of lab but by the kind of result. &#xD;&#xA;**Example Instances**">
+  <description value="**Concept**&#xD;&#xA;A laboratory result describes the result of a laboratory analysis.  These are specimen-oriented tests as performed in laboratories such as Clinical Chemistry, Serology, Microbiology, etc. In addition to the results of tests with a singular result, this concept can also contain the results of more complex tests with multiple results or a ‘panel’.&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;Laboratory tests are done for the purpose of diagnosing and preventing disease and follow-up on the effects of treatment.&#xD;&#xA;&#xD;&#xA;**Evidence Base**&#xD;&#xA;There are two information models for recording laboratory test results: TextResult and LaboratoryTestResult. &#xD;&#xA;&#xD;&#xA;In the case of laboratory test results, it is difficult to clearly indicate exactly when to use this information model and when to use the TextResult information model. &#xD;&#xA;In general, laboratory tests resulting in a value (7.1 mmol/L), ordinal number (++ from series to ++++) or a quantitative result (Low) are recorded using this information model. The TextResult information model is better suited for textual results that are more descriptive in nature and which are longer than just a few words. Both types of tests occur in almost all laboratories. &#xD;&#xA;The applicability of the aforementioned information models is not determined by the kind of lab but by the kind of result.">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
         <valueCode value="nl-NL" />
@@ -238,11 +238,48 @@
       <max value="1" />
       <type>
         <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
       </type>
-      <example>
-        <label value="example 1" />
-        <valueString value="53 mmol/mol" />
-      </example>
+      <type>
+        <code value="Quantity" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Quantity" />
+      </type>
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
+      </type>
+      <type>
+        <code value="boolean" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/boolean" />
+      </type>
+      <type>
+        <code value="integer" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/integer" />
+      </type>
+      <type>
+        <code value="Range" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Range" />
+      </type>
+      <type>
+        <code value="Ratio" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Ratio" />
+      </type>
+      <type>
+        <code value="SampledData" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/SampledData" />
+      </type>
+      <type>
+        <code value="time" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/time" />
+      </type>
+      <type>
+        <code value="dateTime" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/dateTime" />
+      </type>
+      <type>
+        <code value="Period" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Period" />
+      </type>
     </element>
     <element id="laboratory_test_result.laboratory_test.test_result_status">
       <path value="laboratory_test_result.laboratory_test.test_result_status" />
