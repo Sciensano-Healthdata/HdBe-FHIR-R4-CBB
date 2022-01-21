@@ -2,7 +2,6 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`location` | example | Improved example by providing a SNOMED code instead of a text value.
-|`location` | terminology | TO DO - needs to have correct bindings.
+|`location` | terminology | TO DO - needs to have correct bindings.|
 
 
