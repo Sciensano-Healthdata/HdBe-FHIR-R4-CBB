@@ -13,6 +13,7 @@
 5. [Practical guidelines](#practicalguidelines)
     1. [Identity of artifacts](#identityofartifacts)
     2. [Metadata](#metadata)
+    3. [ValueSets](#Valuesets)
 6. [Miscellaneous](#miscellaneous)
     1. [Usage of DefinitionCodes](#DefinitionCodes)
 
@@ -180,8 +181,57 @@ Note: This template includes a markdown link: '[text] (url)'.
         - Note: for extensions and datatype profiles, guidance for profilers may be placed here as well.
 - copyright: "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."
 
+## ValueSets <a name="ValueSets"></a>
+
+### Deduplication of ValueSets 
+In the zibs, different ValueSets are used that consists of the same concepts. We choose to reuse these ValueSets if they are exactly the same. If the ValueSets contain the same content, but have a different name, e.g. with MedicationUseStopType and MedicationAgreementStopType; a ValueSet name can be chosen at one's own discretion.
+
+### Translation of ValueSets 
+Because Codelists are only available with Dutch naming, a manual translation is needed for Codelists. For each CBB logical model and profile that is modified to the Belgium context, a necessary step is to translate the naming of the ValueSet containing the Codelist that is referenced. This is needed at the ValueSet itself, the logical model, the profile and the ConceptMap. It is not necessary to record this in the Changelog, as these edits do not represent contextual changes or improvements.
+
+The example beneath comprises of the changes necessary within the ValueSet Gender. Wherever the ValueSet is referenced, the valueSet value must also be translated.
+
+Before:
+``` xml
+ValueSet-Geslacht.xml
+------------------------------------
+<ValueSet xmlns="http://hl7.org/fhir">
+<id value="Geslacht"/>
+...
+<url value="https://fhir.healthdata.be/ValueSet/Geslacht"/>
+...
+<name value="Geslacht"/>
+<title value="Geslacht"/>
+...
+<description value="GeslachtCodelijst"/>
+...
+</ValueSet>
+
+```
+
+
+After:
+``` xml
+ ValueSet-Gender.xml 
+ ----------------------------------
+
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="Gender"/>
+   ...
+    <url value="https://fhir.healthdata.be/ValueSet/Gender"/>
+   ...
+   <name value="Gender"/>
+   <title value="Gender"/>
+   ...
+   <description value="GenderCodelist"/>
+   ...
+   </ValueSet>
+```
+
+
 
 ##	Miscellaneous <a name="miscellaneous"></a>
 
 ### Usage of DefinitionCodes <a name="DefinitionCodes"></a>
 For some elements within a zib, a DefinitionCode is assigned. A DefinitionCode matches with the meaning of a concept. For the CBB's we have decided to not take over these DefintionCodes in because they are often not-well suited or outdated. Furthermore, they are not of much value inside profiles because the element's definition provides sufficient meaning.
+
