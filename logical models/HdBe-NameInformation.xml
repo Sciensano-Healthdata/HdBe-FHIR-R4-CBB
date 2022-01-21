@@ -1,490 +1,430 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBe-NameInformation"/>
-   <language value="en-US"/>
-   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2020-09-01T00:00:00+02:00"/>
-        </valuePeriod>
+  <id value="HdBe-NameInformation" />
+  <language value="en-US" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+02:00" />
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NameInformation" />
+  <name value="HdBeNameInformation">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="HdBe-Naamgegevens" />
+      </extension>
     </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NameInformation"/>
-   <name value="HdBeNameInformation">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="HdBe-Naamgegevens"/>
-         </extension>
+  </name>
+  <title value="HdBe NameInformation" />
+  <status value="draft" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Healthdata.be (Sciensano)" />
+    <telecom>
+      <system value="email" />
+      <value value="fhir.healthdata@sciensano.be" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="**Concept**&#xD;&#xA;Name information includes a person's given names, nickname, last name and possibly the partner's last name.&#xD;&#xA;This is a partial information model.&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;Name information is used to identify and address person.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
       </extension>
-   </name>
-   <title value="HdBe NameInformation"/>
-   <status value="draft"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
-      <name value="Healthdata.be (Sciensano)"/>
-      <telecom>
-         <system value="email"/>
-         <value value="fhir.healthdata@sciensano.be"/>
-         <use value="work"/>
-      </telecom>
-   </contact>
-   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Name information includes a person's given names, nickname, last name and possibly the partner's last name.&#xD;&#xA;This is a partial information model.&#xD;&#xA;**Purpose**&#xD;&#xA;Name information is used to identify and address person.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;De naamgegevens van een persoon bevatten voornamen, roepnaam, achternaam en eventueel de achternaam van de partner.&#xD;&#xA;Dit is een subbouwsteen.&#xD;&#xA;**Purpose**&#xD;&#xA;Naamgegevens worden gebruikt om een persoon te identificeren en aan te spreken.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (04-09-2017)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.1 (31-12-2017)&#xD;&#xA;Bevat: [ZIB-614](https://bits.nictiz.nl/browse/ZIB-614).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-1067](https://bits.nictiz.nl/browse/ZIB-1067).&#xD;&#xA;&#xD;&#xA;"/>
-         </extension>
+      <extension url="content">
+        <valueMarkdown value="**Concept**&#xD;&#xA;De naamgegevens van een persoon bevatten voornamen, roepnaam, achternaam en eventueel de achternaam van de partner.&#xD;&#xA;Dit is een subbouwsteen.&#xD;&#xA;**Purpose**&#xD;&#xA;Naamgegevens worden gebruikt om een persoon te identificeren en aan te spreken.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (04-09-2017)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.1 (31-12-2017)&#xD;&#xA;Bevat: [ZIB-614](https://bits.nictiz.nl/browse/ZIB-614).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-1067](https://bits.nictiz.nl/browse/ZIB-1067)." />
       </extension>
-   </description>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-   <fhirVersion value="4.0.1"/>
-   <kind value="logical"/>
-   <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/name_information"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
-   <derivation value="specialization"/>
-   <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.4.1--20200901000000">
-            <path value="name_information"/>
-            <short value="NameInformation">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Naamgegevens"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Root concept of the NameInformation partial information model. This root concept contains all data elements of the NameInformation partial information model.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Rootconcept van de subbouwsteen Naamgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Naamgegevens."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
-                <path value="name_information"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.4.4--20200901000000">
-            <path value="name_information.first_names"/>
-            <short value="FirstNames">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Voornamen"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="The person’s official first names.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Officiële voornamen van de persoon."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="name_information.first_names"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="string"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueString value="Johanna Petronella Maria"/>
-            </example>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.4.5--20200901000000">
-            <path value="name_information.initials"/>
-            <short value="Initials">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Initialen"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="The person’s initials.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Initialen van de persoon."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="name_information.initials"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="string"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueString value="J.P.M."/>
-            </example>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.4.6--20200901000000">
-            <path value="name_information.given_name"/>
-            <short value="GivenName">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Roepnaam"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="The name normally used to address the person.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="De naam waarmee de persoon gebruikelijk aangesproken wordt."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="name_information.given_name"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="string"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueString value="Jo"/>
-            </example>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.4.7--20200901000000">
-            <path value="name_information.name_usage"/>
-            <short value="NameUsage">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Naamgebruik"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="This concept indicates the last name or order of last names with which the person is to be addressed.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Dit concept geeft de achternaam of volgorde van achternamen aan waarmee de persoon aangesproken of aangeschreven wil worden."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="name_information.name_usage"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.101.5.4"/>
-                        <code value="NL3"/>
-                        <display value="Familienaam partner gevolgd door eigen familienaam"/>
-                    </coding>
-                    <text value="Familienaam partner gevolgd door eigen familienaam"/>
-                </valueCodeableConcept>
-            </example>
-            <binding>
-            <strength value="required"/>
-            <description value="NameUsage codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Naamgebruik"/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.4.2--20200901000000">
-            <path value="name_information.last_name"/>
-            <short value="LastName">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Familienaam"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Container of the LastName concept. This container contains all data elements of the LastName concept.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Container van het concept Familienaam. Deze container bevat alle gegevenselementen van het concept Familienaam"/>
-                    </extension>
-                </extension>
-            </definition>
-            <comment value="* 0..1 The person’s own last name or partner’s last name must be entered. Entering both is also allowed."/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="name_information.last_name"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="BackboneElement"/>
-            </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.4.11--20200901000000">
-            <path value="name_information.last_name.prefix"/>
-            <short value="Prefix">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Voorvoegsels"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Prefix to the person’s own last name.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Bij de eigen achternaam behorende voorvoegsels."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="name_information.last_name.prefix"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="string"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueString value="van"/>
-            </example>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.4.10--20200901000000">
-            <path value="name_information.last_name.last_name"/>
-            <short value="LastName">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Achternaam"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="The person’s official last name">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Officiële achternaam van de persoon."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
-                <path value="name_information.last_name.last_name"/>
-                <min value="1"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="string"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueString value="Putten"/>
-            </example>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.4.3--20200901000000">
-            <path value="name_information.last_name_partner"/>
-            <short value="LastNamePartner">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="FamilienaamPartner"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Container of the LastNamePartner concept. This container contains all data elements of the LastNamePartner concept.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Container van het concept FamilienaamPartner. Deze container bevat alle gegevenselementen van het concept FamilienaamPartner."/>
-                    </extension>
-                </extension>
-            </definition>
-            <comment value="* 0..1 The person’s own last name or partner’s last name must be entered. Entering both is also allowed."/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="name_information.last_name_partner"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="BackboneElement"/>
-            </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.4.9--20200901000000">
-            <path value="name_information.last_name_partner.partner_prefix"/>
-            <short value="PartnerPrefix">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="VoorvoegselsPartner"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Prefix to the partner’s last name.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Bij de achternaam van de partner behorende voorvoegsels"/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="name_information.last_name_partner.partner_prefix"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="string"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueString value="van der"/>
-            </example>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.4.8--20200901000000">
-            <path value="name_information.last_name_partner.partner_last_name"/>
-            <short value="PartnerLastName">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="AchternaamPartner"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Partner’s official last name.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Officiële achternaam van de partner."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
-                <path value="name_information.last_name_partner.partner_last_name"/>
-                <min value="1"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="string"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueString value="Giessen"/>
-            </example>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.4.12--20200901000000">
-            <path value="name_information.titles"/>
-            <short value="Titles">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Titels"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Noble and scientific titles. These can assist in formulating oral and formal addresing titles.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Adellijke en wetenschappelijke titels. Deze kunnen behulpzaam zijn bij het formuleren van aanspreek- en aanschrijftitels."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="name_information.titles"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="string"/>
-            </type>
-        </element>
-    </differential>
+    </extension>
+  </description>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="true" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/name_information" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.4.1--20200901000000">
+      <path value="name_information" />
+      <short value="NameInformation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Naamgegevens" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Root concept of the NameInformation partial information model. This root concept contains all data elements of the NameInformation partial information model.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de subbouwsteen Naamgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Naamgegevens." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+    </element>
+    <element id="name_information.first_names">
+      <path value="name_information.first_names" />
+      <short value="FirstNames">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Voornamen" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The person’s official first names.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Officiële voornamen van de persoon." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+      <example>
+        <label value="example 1" />
+        <valueString value="Johanna Petronella Maria" />
+      </example>
+    </element>
+    <element id="name_information.initials">
+      <path value="name_information.initials" />
+      <short value="Initials">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Initialen" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The person’s initials.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Initialen van de persoon." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+      <example>
+        <label value="example 1" />
+        <valueString value="J.P.M." />
+      </example>
+    </element>
+    <element id="name_information.given_name">
+      <path value="name_information.given_name" />
+      <short value="GivenName">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Roepnaam" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The name normally used to address the person.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De naam waarmee de persoon gebruikelijk aangesproken wordt." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+      <example>
+        <label value="example 1" />
+        <valueString value="Jo" />
+      </example>
+    </element>
+    <element id="name_information.name_usage">
+      <path value="name_information.name_usage" />
+      <short value="NameUsage">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Naamgebruik" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="This concept indicates the last name or order of last names with which the person is to be addressed.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Dit concept geeft de achternaam of volgorde van achternamen aan waarmee de persoon aangesproken of aangeschreven wil worden." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <example>
+        <label value="example 1" />
+        <valueCodeableConcept>
+          <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.101.5.4" />
+            <code value="NL3" />
+            <display value="Familienaam partner gevolgd door eigen familienaam" />
+          </coding>
+          <text value="Familienaam partner gevolgd door eigen familienaam" />
+        </valueCodeableConcept>
+      </example>
+      <binding>
+        <strength value="required" />
+        <description value="NameUsage codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/NameUsage" />
+      </binding>
+    </element>
+    <element id="name_information.last_name">
+      <path value="name_information.last_name" />
+      <short value="LastName">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Familienaam" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Container of the LastName concept. This container contains all data elements of the LastName concept.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Container van het concept Familienaam. Deze container bevat alle gegevenselementen van het concept Familienaam" />
+          </extension>
+        </extension>
+      </definition>
+      <comment value="* 0..1 The person’s own last name or partner’s last name must be entered. Entering both is also allowed." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="name_information.last_name.prefix">
+      <path value="name_information.last_name.prefix" />
+      <short value="Prefix">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Voorvoegsels" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Prefix to the person’s own last name.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Bij de eigen achternaam behorende voorvoegsels." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+      <example>
+        <label value="example 1" />
+        <valueString value="van" />
+      </example>
+    </element>
+    <element id="name_information.last_name.last_name">
+      <path value="name_information.last_name.last_name" />
+      <short value="LastName">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Achternaam" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The person’s official last name. &#xD;&#xA;&#xD;&#xA;Preferrably, the last name prefix is captured using the `.prefix` element. It may however be included here for systems that do not record this separately.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Officiële achternaam van de persoon." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+      <example>
+        <label value="example 1" />
+        <valueString value="Putten" />
+      </example>
+    </element>
+    <element id="name_information.last_name_partner">
+      <path value="name_information.last_name_partner" />
+      <short value="LastNamePartner">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="FamilienaamPartner" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Container of the LastNamePartner concept. This container contains all data elements of the LastNamePartner concept.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Container van het concept FamilienaamPartner. Deze container bevat alle gegevenselementen van het concept FamilienaamPartner." />
+          </extension>
+        </extension>
+      </definition>
+      <comment value="* 0..1 The person’s own last name or partner’s last name must be entered. Entering both is also allowed." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="name_information.last_name_partner.partner_prefix">
+      <path value="name_information.last_name_partner.partner_prefix" />
+      <short value="PartnerPrefix">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="VoorvoegselsPartner" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Prefix to the partner’s last name.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Bij de achternaam van de partner behorende voorvoegsels" />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+      <example>
+        <label value="example 1" />
+        <valueString value="van der" />
+      </example>
+    </element>
+    <element id="name_information.last_name_partner.partner_last_name">
+      <path value="name_information.last_name_partner.partner_last_name" />
+      <short value="PartnerLastName">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="AchternaamPartner" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Partner’s official last name.&#xD;&#xA;&#xD;&#xA;Preferrably, the partner' last name prefix is captured using the `.partner_prefix` element. It may however be included here for systems that do not record this separately.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Officiële achternaam van de partner." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+      <example>
+        <label value="example 1" />
+        <valueString value="Giessen" />
+      </example>
+    </element>
+    <element id="name_information.titles">
+      <path value="name_information.titles" />
+      <short value="Titles">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Titels" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Noble and scientific titles. These can assist in formulating oral and formal addresing titles.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Adellijke en wetenschappelijke titels. Deze kunnen behulpzaam zijn bij het formuleren van aanspreek- en aanschrijftitels." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
 </StructureDefinition>

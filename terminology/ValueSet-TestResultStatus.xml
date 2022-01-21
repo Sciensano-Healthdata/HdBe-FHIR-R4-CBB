@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="TelecomType"/>
+   <id value="TestResultStatus"/>
    <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
@@ -10,15 +10,15 @@
             <start value="2020-09-01T00:00:00+01:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/ValueSet/TelecomType"/>
+   <url value="https://fhir.healthdata.be/ValueSet/TestResultStatus"/>
    <identifier>
         <use value="official"/>
         <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.20.6.1"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.13.1.15"/>
     </identifier>
    <version value="2020-09-01T00:00:00"/>
-   <name value="TelecomType"/>
-   <title value="TelecomType"/>
+   <name value="TestResultStatus"/>
+   <title value="TestResultStatus"/>
    <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Healthdata.be (Sciensano)"/>
@@ -30,50 +30,15 @@
          <use value="work"/>
       </telecom>
    </contact>
-   <description value="TelecomTypeCodelist"/>
+   <description value="TestResultStatusCodelist"/>
    <immutable value="false"/>
    <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
    <compose>
         <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.16.1"/>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Vast telefoonnummer"/>
-                </extension>
-                <code value="LL"/>
-                <display value="Land Line"/>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Land Line"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Fax"/>
-                </extension>
-                <code value="FAX"/>
-                <display value="Fax"/>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Fax"/>
-                </designation>
-            </concept>
-        </include>
-        <include>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
-            <concept>
-                <code value="MC"/>
-                <display value="Mobile Phone"/>
+                <code value="pending"/>
+                <display value="Pending"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -81,7 +46,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Mobile Phone"/>
+                    <value value="Pending"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -90,12 +55,12 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Mobiel telefoonnummer"/>
+                    <value value="Uitslag volgt"/>
                 </designation>
             </concept>
             <concept>
-                <code value="PG"/>
-                <display value="Pager"/>
+                <code value="preliminary"/>
+                <display value="Preliminary"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -103,7 +68,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Pager"/>
+                    <value value="Preliminary"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -112,7 +77,73 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Pieper"/>
+                    <value value="Voorlopig"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="final"/>
+                <display value="Final"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Final"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Definitief"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="appended"/>
+                <display value="Appended"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Appended"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Aanvullend"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="corrected"/>
+                <display value="Corrected"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Corrected"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Gecorrigeerd"/>
                 </designation>
             </concept>
         </include>

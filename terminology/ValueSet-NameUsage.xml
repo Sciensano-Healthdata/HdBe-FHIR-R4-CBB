@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="AanduidingBijNummer"/>
+   <id value="NameUsage"/>
    <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
     </meta>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
-            <start value="2020-09-01T00:00:00+02:00"/>
+            <start value="2020-09-01T00:00:00+01:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/ValueSet/AanduidingBijNummer"/>
+   <url value="https://fhir.healthdata.be/ValueSet/NameUsage"/>
    <identifier>
         <use value="official"/>
         <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.20.5.4"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.20.4.1"/>
     </identifier>
    <version value="2020-09-01T00:00:00"/>
-   <name value="AanduidingBijNummer"/>
-   <title value="AanduidingBijNummer"/>
+   <name value="NameUsage"/>
+   <title value="NameUsage"/>
    <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Healthdata.be (Sciensano)"/>
@@ -30,18 +30,18 @@
          <use value="work"/>
       </telecom>
    </contact>
-   <description value="AanduidingBijNummerCodelijst"/>
+   <description value="NameUsageCodelist"/>
    <immutable value="false"/>
    <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
    <compose>
         <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.101.5.3"/>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.101.5.4"/>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Tegenover"/>
+                    <valueString value="Eigen geslachtsnaam"/>
                 </extension>
-                <code value="to"/>
-                <display value="Tegenover"/>
+                <code value="NL1"/>
+                <display value="Eigen geslachtsnaam"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -49,15 +49,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Tegenover"/>
+                    <value value="Eigen geslachtsnaam"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Bij"/>
+                    <valueString value="Geslachtsnaam partner"/>
                 </extension>
-                <code value="by"/>
-                <display value="Bij"/>
+                <code value="NL2"/>
+                <display value="Geslachtsnaam partner"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -65,15 +65,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Bij"/>
+                    <value value="Geslachtsnaam partner"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Tegenover"/>
+                    <valueString value="Geslachtsnaam partner gevolgd door eigen geslachtsnaam"/>
                 </extension>
-                <code value="to"/>
-                <display value="Tegenover"/>
+                <code value="NL3"/>
+                <display value="Geslachtsnaam partner gevolgd door eigen geslachtsnaam"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -81,15 +81,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Tegenover"/>
+                    <value value="Geslachtsnaam partner gevolgd door eigen geslachtsnaam"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Tegenover"/>
+                    <valueString value="Eigen geslachtsnaam gevolgd door geslachtsnaam partner"/>
                 </extension>
-                <code value="to"/>
-                <display value="Tegenover"/>
+                <code value="NL4"/>
+                <display value="Eigen geslachtsnaam gevolgd door geslachtsnaam partner"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -97,31 +97,24 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Tegenover"/>
+                    <value value="Eigen geslachtsnaam gevolgd door geslachtsnaam partner"/>
                 </designation>
             </concept>
+        </include>
+        <include>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Bij"/>
-                </extension>
-                <code value="by"/>
-                <display value="Bij"/>
+                <code value="UNK"/>
+                <display value="Unknown"/>
                 <designation>
-                    <language value="nl-NL"/>
+                    <language value="en-US"/>
                     <use>
                         <system value="http://snomed.info/sct"/>
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Bij"/>
+                    <value value="Unknown"/>
                 </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Bij"/>
-                </extension>
-                <code value="by"/>
-                <display value="Bij"/>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -129,7 +122,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Bij"/>
+                    <value value="Onbekend"/>
                 </designation>
             </concept>
         </include>
