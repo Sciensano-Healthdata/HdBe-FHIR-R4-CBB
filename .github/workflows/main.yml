@@ -17,7 +17,7 @@ on:
 jobs:
 
   # Validate all conformance resources using Firely Terminal 
-  CI_FHIR_CONFORMANCE_VALIDATION:
+  CI_FHIR_VALIDATION:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     
@@ -38,10 +38,10 @@ jobs:
         with:
           java-version: 1.8
         
-      - name: Firely.Terminal validate conformance resources
+      - name: Firely.Terminal validation
         uses: FirelyTeam/firely-terminal-pipeline@v0.3.2
         with:
-          PATH_TO_CONFORMANCE_RESOURCES: resources
+          PATH_TO_CONFORMANCE_RESOURCES: resources, terminology
           PATH_TO_EXAMPLES: examples
           PATH_TO_QUALITY_CONTROL_RULES: qa-validation
           EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET
@@ -49,36 +49,3 @@ jobs:
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
 
-  # Validate all conformance resources using Firely Terminal 
-  CI_FHIR_LOGICALMODELS_VALIDATION:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-    
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        
-      # Install .NET runtime
-      - name: Setup .NET Core SDK
-        uses: actions/setup-dotnet@v1.7.2
-        with:
-          dotnet-version: 3.1.x
-      
-      # Install Java runtime (only needed if you want to run the offical HL7 Java validator)
-      - name: Setup Java JDK
-        uses: actions/setup-java@v1.4.3
-        with:
-          java-version: 1.8
-        
-      - name: Firely.Terminal validate logical models
-        uses: FirelyTeam/firely-terminal-pipeline@v0.3.1
-        with:
-          PATH_TO_CONFORMANCE_RESOURCES: logical models
-          PATH_TO_QUALITY_CONTROL_RULES: qa-validation
-          EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET
-          OUTPUT_FORMAT: RAW
-          SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
-          SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
-      
-     
