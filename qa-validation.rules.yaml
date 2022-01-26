@@ -5,7 +5,8 @@
 - action: validate
   name: validate-logical-models
   status: "Validatig logical models"
-  filter: Resource
+  files: 
+    - logical models/*.xml
   filter: StructureDefinition.exists() and StructureDefinition.kind = 'logical'
     
 # Validate all resources
@@ -13,8 +14,8 @@
   name: validate-resources
   status: "Validatig all resources"
   files: 
-    - /resources/*.xml
-    - /terminology/*.xml
+    - resources/*.xml
+    - terminology/*.xml
 
 # Validate examples
 - action: validate
