@@ -230,7 +230,7 @@ However, for the CBB's we have decided to not take over these DefintionCodes bec
 ### Usage of zib concept examples <a name="ZibConceptExamples"></a>
 For some concepts within a zib, examples are available in the export to FHIR logical models. These are mapped to `ElementDefinition.example`. 
 
-However, the quality of these examples is poor which is likely the result of storage as free text per concept within ART-DECOR. The `ElementDefinition.example` should ideally be using the concept's datatype. Often the example value of a coded concept is mapped to a `CodeableConcept.text` with the concept's DefinitionCode to `CodeadbleConcept.coding.` This might be very confusing for the readers as this will not be how such a concept will be exchanged. Therefore, `ElementDefinition.example` is not used with the pre-populated values for the zib export. 
+However, the quality of these examples is poor which is likely the result of storage as free text per concept within ART-DECOR. The `ElementDefinition.example` should ideally be using the concept's datatype. Often the example value of a coded concept is mapped to a `CodeableConcept.text` with the concept's DefinitionCode to `CodeadbleConcept.coding.` This might be very confusing for the readers as this does not represent how such a concept will be exchanged. Therefore, `ElementDefinition.example` is not used with the pre-populated values for the zib export. 
 
 The method of providing examples for the logical CBBs needs to be investigated. This might potentially be done by adding example values manually per concept or providing examples of a CBBs in table format in the CBBs implementation guide.  
 
