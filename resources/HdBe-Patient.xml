@@ -368,6 +368,10 @@
         <map value="date_of_death" />
       </mapping>
       <mapping>
+        <identity value="hdbe-patient" />
+        <map value="death_indicator" />
+      </mapping>
+      <mapping>
         <identity value="zib-patient-v3.2-2020EN" />
         <map value="NL-CM:0.1.33" />
         <comment value="DateOfDeath" />
@@ -445,12 +449,17 @@
       <sliceName value="multipleBirthInteger" />
       <short value="MultipleBirthOrder" />
       <definition value="An indication of the birth order in case the patient is of a multiple birth." />
+      <comment value="The CBB recognizes both the MultipleBirthIndicator (boolean) and MultipleBirthOrder (integer) concepts, whereas in FHIR only one of these concepts may be present. Therefore, if multipleBirthInteger is present and has a value, its value can be mapped to MultipleBirthOrder and MultipleBirthIndicator is assumed to be true." />
       <type>
         <code value="integer" />
       </type>
       <mapping>
         <identity value="hdbe-patient" />
         <map value="multiple_birth_order" />
+      </mapping>
+      <mapping>
+        <identity value="hdbe-patient" />
+        <map value="multiple_birth_indicator" />
       </mapping>
     </element>
     <element id="Patient.contact">
