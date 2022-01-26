@@ -215,9 +215,9 @@ Examples are not conformance resources and lack the `.url`, `.name` and `.title`
 As a design principle, zibs contain distinct ValueSets for every concept even if the ValueSet's values/concepts are the same for multiple concepts. For the CBBs, these ValueSets are 'deduplicated' and reused where they are applicable. If ValueSets are similar but have different names, e.g. 'MedicationUseStopType' and 'MedicationAgreementStopType', naming is done at the author's discretion.
 
 #### Translation
-The zib export and Nictiz FHIR profiles contain Dutch naming for ValueSets because the source application ART-DECOR is not yet multilingual for terminology resources. The English translation of the ValueSets is available on the zib's wiki. Therefore, for consistency and clarity, every ValueSet in use by the CBBs is (manually) translated using these English translations of the ValueSet name. All canonical references to the ValueSet should be adjusted accordingly. Because is not necessary to record this in the changelog.
+The zib export and Nictiz FHIR profiles contain Dutch naming for ValueSets because the source application ART-DECOR is not yet multilingual for terminology resources. The English translation of the ValueSets is available on the zib's wiki. Therefore, for consistency and clarity, every ValueSet in use by the CBBs is (manually) translated using the zib's English ValueSet name. All canonical references to the ValueSet should be adjusted accordingly.
 
-This means that the ValueSets elements `.id`, `.url`, `.name`, `.title` and `.description` and the filename are translated. 
+Practially, this means that the ValueSets elements `.id`, `.url`, `.name`, `.title` and `.description` and the file name are translated. These changes are not recorded in the diff files.
 
 ##	ElementDefinition <a name="ElementDefinintion"></a>
 Logical models and FHIR profiles are represented using [StructureDefinition resources](https://www.hl7.org/fhir/R4/structuredefinition.html). Every StructureDefinition has 1..* elements of the [ElementDefinition type](https://www.hl7.org/fhir/R4/elementdefinition.html#ElementDefinition). One element describes exactly one concept. Every zib and CBB concept is mapped and described by an ElementDefinition. 
