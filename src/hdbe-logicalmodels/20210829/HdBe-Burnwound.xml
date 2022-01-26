@@ -109,10 +109,7 @@
             <type>
                 <code value="dateTime"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueDateTime value="2014-01-07"/>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.4.7--20200901000000">
             <path value="burn_wound.extent"/>
@@ -146,24 +143,11 @@
             <type>
                 <code value="Quantity"/>
             </type>
-            <example>
-                <label value="example 1 of Quantity"/>
-                <valueQuantity>
-                    <value value="27"/>
-                    <unit value="%"/>
-                    <system value="http://unitsofmeasure.org"/>
-                    <code value="%"/>
-                </valueQuantity>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.4.12--20200901000000">
-            <path value="burn_wound.anatomical_location"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="363698007"/>
-                <display value="locatie van bevinding"/>
-            </code>
-            <short value="AnatomicalLocation">
+         <path value="burn_wound.anatomical_location"/>
+         <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -173,7 +157,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The location of the burn wound on the body.">
+         <definition value="The location of the burn wound on the body.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -183,114 +167,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="burn_wound.anatomical_location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="BackboneElement"/>
-            </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.63--20200901000000">
-            <path value="burn_wound.anatomical_location.location"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="363698007"/>
-                <display value="locatie van bevinding"/>
-            </code>
-            <short value="Location">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Locatie"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Localisation on/in the body.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Localisatie op/in het lichaam."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="burn_wound.anatomical_location.location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-        </element>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="AnatomicalLocation"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"/>
+         </type>
+      </element>
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.64--20200901000000">
-            <path value="burn_wound.anatomical_location.laterality"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="272741003"/>
-                <display value="lateraliteit"/>
-            </code>
-            <short value="Laterality">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links. "/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="burn_wound.anatomical_location.laterality"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="Links"/>
-                </valueCodeableConcept>
-            </example>
-            <binding>
-            <strength value="required"/>
-            <description value="Laterality codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
-         </binding>
-        </element>
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.4.10--20200901000000">
             <path value="burn_wound.laterality"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="272741003"/>
-                <display value="lateraliteit"/>
-            </code>
+            
             <short value="Laterality">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -321,17 +212,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="272741003"/>
-                        <display value="lateraliteit"/>
-                    </coding>
-                    <text value="Links"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="required"/>
             <description value="Laterality codes"/>
@@ -340,11 +221,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.4.2--20200901000000">
             <path value="burn_wound.depth"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="116676008"/>
-                <display value="gerelateerde morfologie"/>
-            </code>
+            
             <short value="Depth">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -375,17 +252,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="116676008"/>
-                        <display value="gerelateerde morfologie"/>
-                    </coding>
-                    <text value="2e graads, oppervlakkig"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="required"/>
             <description value="Depth codes"/>
@@ -394,11 +261,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.4.5--20200901000000">
             <path value="burn_wound.comment"/>
-            <code>
-                <system value="http://loinc.org"/>
-                <code value="48767-8"/>
-                <display value="Annotation comment Imp"/>
-            </code>
+            
             <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -462,18 +325,11 @@
             <type>
                 <code value="dateTime"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueDateTime value="2014-10-10"/>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.4.11--20200901000000">
             <path value="burn_wound.wound_image"/>
-            <code>
-                <system value="http://loinc.org"/>
-                <code value="72170-4"/>
-                <display value="Photographic image"/>
-            </code>
+            
             <short value="WoundImage">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">

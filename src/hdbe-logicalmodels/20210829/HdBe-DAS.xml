@@ -79,11 +79,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.15--20200901000000">
             <path value="das.dasvalue"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="763259004"/>
-                <display value="Disease Activity Score"/>
-            </code>
+            
             <short value="DASValue">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -114,14 +110,7 @@
             <type>
                 <code value="Quantity"/>
             </type>
-            <example>
-                <label value="example 1 of Quantity"/>
-                <valueQuantity>
-                    <value value="5.27"/>
-                    <system value="http://unitsofmeasure.org"/>
-                    <code value="1"/>
-                </valueQuantity>
-            </example>
+            
             <minValueQuantity>
                 <value value="0.00"/>
             </minValueQuantity>
@@ -131,11 +120,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.14--20200901000000">
             <path value="das.dasmethod"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="443349002"/>
-                <display value="'Disease Activity Score' bij reumatoïde artritis"/>
-            </code>
+            
             <short value="DASMethod">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -166,17 +151,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="443349002"/>
-                        <display value="'Disease Activity Score' bij reumatoïde artritis"/>
-                    </coding>
-                    <text value="DAS-28 CRP"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="extensible"/>
             <description value="DASMethod codes"/>
@@ -218,11 +193,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.2--20200901000000">
             <path value="das.affected_joint"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="118952005"/>
-                <display value="bevinding betreffende gewricht"/>
-            </code>
+            
             <short value="AffectedJoint">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -255,8 +226,8 @@
             </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.16--20200901000000">
-            <path value="das.affected_joint.anatomical_location"/>
-            <short value="AnatomicalLocation">
+         <path value="das.affected_joint.anatomical_location"/>
+         <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -266,7 +237,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Joints that are tender and/or swollen.">
+         <definition value="Joints that are tender and/or swollen.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -276,111 +247,18 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="das.affected_joint.anatomical_location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="BackboneElement"/>
-            </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.101--20200901000000">
-            <path value="das.affected_joint.anatomical_location.location"/>
-            <short value="Location">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Locatie"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Localisation on/in the body.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Localisatie op/in het lichaam."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="das.affected_joint.anatomical_location.location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-            <binding>
-            <strength value="extensible"/>
-            <description value="Location codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Locatie"/>
-         </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.102--20200901000000">
-            <path value="das.affected_joint.anatomical_location.laterality"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="272741003"/>
-                <display value="lateraliteit"/>
-            </code>
-            <short value="Laterality">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links. "/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="das.affected_joint.anatomical_location.laterality"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="Links"/>
-                </valueCodeableConcept>
-            </example>
-            <binding>
-            <strength value="required"/>
-            <description value="Laterality codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
-         </binding>
-        </element>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="AnatomicalLocation"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"/>
+         </type>
+      </element>
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.4--20200901000000">
             <path value="das.affected_joint.swollen"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="271771009"/>
-                <display value="gewrichtszwelling"/>
-            </code>
+            
             <short value="Swollen">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -411,18 +289,11 @@
             <type>
                 <code value="boolean"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueBoolean value="true"/>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.3--20200901000000">
             <path value="das.affected_joint.tender"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="110288007"/>
-                <display value="gevoeligheid van gewricht"/>
-            </code>
+            
             <short value="Tender">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -453,18 +324,11 @@
             <type>
                 <code value="boolean"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueBoolean value="true"/>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.11--20200901000000">
             <path value="das.count_of_tender_joints"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="442521001"/>
-                <display value="aantal gevoelige gewrichten voor evaluatie van reumatoïde artritis"/>
-            </code>
+            
             <short value="CountOfTenderJoints">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -495,22 +359,11 @@
             <type>
                 <code value="Count"/>
             </type>
-            <example>
-                <label value="example 1 of Count"/>
-                <valueQuantity>
-                    <value value="10"/>
-                    <system value="http://unitsofmeasure.org"/>
-                    <code value="1"/>
-                </valueQuantity>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.12--20200901000000">
             <path value="das.count_of_swolen_joints"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="442194005"/>
-                <display value="aantal gezwollen gewrichten voor evaluatie van reumatoïde artritis"/>
-            </code>
+            
             <short value="CountOfSwolenJoints">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -541,14 +394,7 @@
             <type>
                 <code value="Count"/>
             </type>
-            <example>
-                <label value="example 1 of Count"/>
-                <valueQuantity>
-                    <value value="20"/>
-                    <system value="http://unitsofmeasure.org"/>
-                    <code value="1"/>
-                </valueQuantity>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.22--20200901000000">
             <path value="das.inflammation_indicator"/>
@@ -585,16 +431,8 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.20--20200901000000">
             <path value="das.inflammation_indicator.esr"/>
-            <code>
-                <system value="http://loinc.org"/>
-                <code value="4537-7"/>
-                <display value="Erythrocyte sedimentation rate by Westergren method"/>
-            </code>
-            <code>
-                <system value="http://loinc.org"/>
-                <code value="4539-3"/>
-                <display value="Erythrocyte sedimentation rate Zeta by Zetafuge"/>
-            </code>
+            
+            
             <short value="ESR">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -662,16 +500,8 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.19--20200901000000">
             <path value="das.inflammation_indicator.crp"/>
-            <code>
-                <system value="http://loinc.org"/>
-                <code value="1988-5"/>
-                <display value="C reactive protein [Mass/volume] in Serum or Plasma"/>
-            </code>
-            <code>
-                <system value="http://loinc.org"/>
-                <code value="30522-7"/>
-                <display value="C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method"/>
-            </code>
+            
+            
             <short value="CRP">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -739,11 +569,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.17--20200901000000">
             <path value="das.dasdate_time"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="439771001"/>
-                <display value="datum van gebeurtenis"/>
-            </code>
+            
             <short value="DASDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -777,11 +603,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.8--20200901000000">
             <path value="das.vasgeneral_health"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="446661009"/>
-                <display value="score op visuele analoge schaal"/>
-            </code>
+            
             <short value="VASGeneralHealth">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -812,14 +634,7 @@
             <type>
                 <code value="Count"/>
             </type>
-            <example>
-                <label value="example 1 of Count"/>
-                <valueQuantity>
-                    <value value="68"/>
-                    <system value="http://unitsofmeasure.org"/>
-                    <code value="1"/>
-                </valueQuantity>
-            </example>
+            
             <minValueQuantity>
                 <value value="0"/>
             </minValueQuantity>

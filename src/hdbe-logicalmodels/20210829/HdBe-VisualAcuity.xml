@@ -79,11 +79,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.19.6--20200901000000">
             <path value="visual_acuity.visual_acuity_measurement_device"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="371548008"/>
-                <display value="verrichting op regio van oog"/>
-            </code>
+            
             <short value="VisualAcuityMeasurementDevice">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -114,17 +110,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="371548008"/>
-                        <display value="verrichting op regio van oog"/>
-                    </coding>
-                    <text value="with multiple pinholes"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="extensible"/>
             <description value="VisualAcuityMeasurementDevice codes"/>
@@ -133,11 +119,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.19.2--20200901000000">
             <path value="visual_acuity.visual_acuity_type"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="363983007"/>
-                <display value="visus"/>
-            </code>
+            
             <short value="VisualAcuityType">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -176,11 +158,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.19.7--20200901000000">
             <path value="visual_acuity.visual_acuity_measurement_chart"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="363691001"/>
-                <display value="verrichting ingedeeld naar hulpmiddel"/>
-            </code>
+            
             <short value="VisualAcuityMeasurementChart">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -211,17 +189,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="363691001"/>
-                        <display value="verrichting ingedeeld naar hulpmiddel"/>
-                    </coding>
-                    <text value="APK-TOV"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="extensible"/>
             <description value="VisualAcuityMeasurementChart codes"/>
@@ -260,21 +228,11 @@
             <type>
                 <code value="Quantity"/>
             </type>
-            <example>
-                <label value="example 1 of Quantity"/>
-                <valueQuantity>
-                    <value value="4"/>
-                    <unit value="meter"/>
-                </valueQuantity>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.19.11--20200901000000">
             <path value="visual_acuity.decimal_visual_aqcuity"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="363983007"/>
-                <display value="visus"/>
-            </code>
+            
             <short value="DecimalVisualAqcuity">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -305,14 +263,7 @@
             <type>
                 <code value="Quantity"/>
             </type>
-            <example>
-                <label value="example 1 of Quantity"/>
-                <valueQuantity>
-                    <value value="0.125"/>
-                    <system value="http://unitsofmeasure.org"/>
-                    <code value="1"/>
-                </valueQuantity>
-            </example>
+            
             <minValueQuantity>
                 <value value="0.000"/>
             </minValueQuantity>
@@ -322,11 +273,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.19.4--20200901000000">
             <path value="visual_acuity.visual_acuity_date_time"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="439771001"/>
-                <display value="datum van gebeurtenis"/>
-            </code>
+            
             <short value="VisualAcuityDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -357,14 +304,11 @@
             <type>
                 <code value="dateTime"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueDateTime value="2020-02-03"/>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.19.5--20200901000000">
-            <path value="visual_acuity.anatomical_location"/>
-            <short value="AnatomicalLocation">
+         <path value="visual_acuity.anatomical_location"/>
+         <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -374,7 +318,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The laterality of the eye of which the visual acuity has been measured.">
+         <definition value="The laterality of the eye of which the visual acuity has been measured.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -384,106 +328,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="visual_acuity.anatomical_location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="BackboneElement"/>
-            </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.438--20200901000000">
-            <path value="visual_acuity.anatomical_location.location"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="363698007"/>
-                <display value="locatie van bevinding"/>
-            </code>
-            <short value="Location">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Locatie"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Localisation on/in the body.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Localisatie op/in het lichaam."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="visual_acuity.anatomical_location.location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-        </element>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="AnatomicalLocation"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"/>
+         </type>
+      </element>
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.439--20200901000000">
-            <path value="visual_acuity.anatomical_location.laterality"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="272741003"/>
-                <display value="lateraliteit"/>
-            </code>
-            <short value="Laterality">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links. "/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="visual_acuity.anatomical_location.laterality"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="Links"/>
-                </valueCodeableConcept>
-            </example>
-            <binding>
-            <strength value="required"/>
-            <description value="Laterality codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
-         </binding>
-        </element>
+        
+        
     </differential>
 </StructureDefinition>

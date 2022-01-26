@@ -215,7 +215,20 @@
         f:differential/f:element[f:path[starts-with(@value,'medication_agreement.instructions_for_use.')]] |
         f:differential/f:element[f:path[starts-with(@value,'administration_agreement.instructions_for_use.')]] |
         f:differential/f:element[f:path[starts-with(@value,'medication_use.instructions_for_use.')]] |
-        f:differential/f:element[f:path[starts-with(@value,'medication_agreement.instructions_for_use.')]] "> 
+        f:differential/f:element[f:path[starts-with(@value,'medication_agreement.instructions_for_use.')]] |
+        f:differential/f:element[f:path[contains(@value,'.anatomical_location.')]] "> 
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>Remove zib definition codes in element.code.</xd:desc>
+    </xd:doc>
+    <xsl:template match="f:differential/f:element/f:code"> 
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>Remove zib examples in element.example.</xd:desc>
+    </xd:doc>
+    <xsl:template match="f:differential/f:element/f:example"> 
     </xsl:template>
     
     <xd:doc>
@@ -260,9 +273,14 @@
             <xsl:with-param name="code" select="'Dosage'"/>
         </xsl:call-template>
     </xsl:template>  
-    
-    
-    
+    <xd:doc>
+        <xd:desc>Replace inline BackboneElement of AnatomicalLocation with a reference</xd:desc>
+    </xd:doc>
+    <xsl:template match="f:differential/f:element[f:path[ends-with(@value,'.anatomical_location')]]">
+        <xsl:call-template name="replaceBackBoneElementWithReference">
+            <xsl:with-param name="code" select="'AnatomicalLocation'"/>
+        </xsl:call-template>
+    </xsl:template> 
     
     <xsl:template name="replaceBackBoneElementWithReference">
         <xsl:param name="code" as="xs:string"/>

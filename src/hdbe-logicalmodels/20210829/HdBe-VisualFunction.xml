@@ -79,11 +79,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.16.3--20200901000000">
             <path value="visual_function.visual_function"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="281004000"/>
-                <display value="visuele functie"/>
-            </code>
+            
             <short value="VisualFunction">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -114,17 +110,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="281004000"/>
-                        <display value="visuele functie"/>
-                    </coding>
-                    <text value="Geen visuele stoornis"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="required"/>
             <description value="VisualFunction codes"/>
@@ -133,11 +119,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.16.4--20200901000000">
             <path value="visual_function.visual_aid"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="257192006"/>
-                <display value="visueel hulpmiddel"/>
-            </code>
+            
             <short value="VisualAid">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -267,12 +249,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="(01)08712345000004(17)160131(10)200652"/>
-                </valueCodeableConcept>
-            </example>
+            
         </element>
         
         
@@ -309,12 +286,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="Leesbril"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="extensible"/>
             <description value="ProductType codes"/>
@@ -355,13 +327,8 @@
             </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.130--20200901000000">
-            <path value="visual_function.visual_aid.medical_device.anatomical_location"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="363698007"/>
-                <display value="locatie van bevinding"/>
-            </code>
-            <short value="AnatomicalLocation">
+         <path value="visual_function.visual_aid.medical_device.anatomical_location"/>
+         <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -371,7 +338,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Patient’s anatomical location of the medical device used.">
+         <definition value="Patient’s anatomical location of the medical device used.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -381,107 +348,18 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="visual_function.visual_aid.medical_device.anatomical_location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="BackboneElement"/>
-            </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.131--20200901000000">
-            <path value="visual_function.visual_aid.medical_device.anatomical_location.location"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="363698007"/>
-                <display value="locatie van bevinding"/>
-            </code>
-            <short value="Location">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Locatie"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Localisation on/in the body.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Localisatie op/in het lichaam."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="visual_function.visual_aid.medical_device.anatomical_location.location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-        </element>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="AnatomicalLocation"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"/>
+         </type>
+      </element>
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.132--20200901000000">
-            <path value="visual_function.visual_aid.medical_device.anatomical_location.laterality"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="272741003"/>
-                <display value="lateraliteit"/>
-            </code>
-            <short value="Laterality">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links. "/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="visual_function.visual_aid.medical_device.anatomical_location.laterality"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="Links"/>
-                </valueCodeableConcept>
-            </example>
-            <binding>
-            <strength value="required"/>
-            <description value="Laterality codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
-         </binding>
-        </element>
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.133--20200901000000">
             <path value="visual_function.visual_aid.medical_device.indication"/>
             <short value="Indication">
@@ -618,11 +496,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.137--20200901000000">
             <path value="visual_function.visual_aid.medical_device.comment"/>
-            <code>
-                <system value="http://loinc.org"/>
-                <code value="48767-8"/>
-                <display value="Annotation comment Imp"/>
-            </code>
+            
             <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -689,11 +563,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.139--20200901000000">
             <path value="visual_function.visual_aid.medical_device.location.healthcare_provider"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="257622000"/>
-                <display value="zorginstelling"/>
-            </code>
+            
             <short value="HealthcareProvider">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -762,11 +632,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.16.2--20200901000000">
             <path value="visual_function.comment"/>
-            <code>
-                <system value="http://loinc.org"/>
-                <code value="48767-8"/>
-                <display value="Annotation comment Imp"/>
-            </code>
+            
             <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -797,10 +663,7 @@
             <type>
                 <code value="string"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueString value="Ziet met linkeroog slechter dan met het rechteroog."/>
-            </example>
+            
         </element>
     </differential>
 </StructureDefinition>

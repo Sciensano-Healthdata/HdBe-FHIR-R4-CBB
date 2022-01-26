@@ -79,11 +79,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.14.2--20200901000000">
             <path value="bladder_function.urine_continence"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="129009001"/>
-                <display value="blaascontrole"/>
-            </code>
+            
             <short value="UrineContinence">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -114,17 +110,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="129009001"/>
-                        <display value="blaascontrole"/>
-                    </coding>
-                    <text value="Incontinent"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="required"/>
             <description value="UrineContinence codes"/>
@@ -133,11 +119,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.14.3--20200901000000">
             <path value="bladder_function.urinary_stoma"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="281601009"/>
-                <display value="urostoma"/>
-            </code>
+            
             <short value="UrinaryStoma">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -205,11 +187,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.14.4--20200901000000">
             <path value="bladder_function.urine_catheter"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="20568009"/>
-                <display value="urinekatheter"/>
-            </code>
+            
             <short value="UrineCatheter">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -339,12 +317,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="(01)08712345000004(17)160131(10)200652"/>
-                </valueCodeableConcept>
-            </example>
+            
         </element>
         
         
@@ -381,12 +354,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="Verblijfskatheter"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="extensible"/>
             <description value="ProductType codes"/>
@@ -427,13 +395,8 @@
             </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.50--20200901000000">
-            <path value="bladder_function.urine_catheter.medical_device.anatomical_location"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="363698007"/>
-                <display value="locatie van bevinding"/>
-            </code>
-            <short value="AnatomicalLocation">
+         <path value="bladder_function.urine_catheter.medical_device.anatomical_location"/>
+         <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -443,7 +406,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Patient’s anatomical location of the medical device used.">
+         <definition value="Patient’s anatomical location of the medical device used.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -453,107 +416,18 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="bladder_function.urine_catheter.medical_device.anatomical_location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="BackboneElement"/>
-            </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.51--20200901000000">
-            <path value="bladder_function.urine_catheter.medical_device.anatomical_location.location"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="363698007"/>
-                <display value="locatie van bevinding"/>
-            </code>
-            <short value="Location">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Locatie"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Localisation on/in the body.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Localisatie op/in het lichaam."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="bladder_function.urine_catheter.medical_device.anatomical_location.location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-        </element>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="AnatomicalLocation"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"/>
+         </type>
+      </element>
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.52--20200901000000">
-            <path value="bladder_function.urine_catheter.medical_device.anatomical_location.laterality"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="272741003"/>
-                <display value="lateraliteit"/>
-            </code>
-            <short value="Laterality">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links. "/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="bladder_function.urine_catheter.medical_device.anatomical_location.laterality"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="Links"/>
-                </valueCodeableConcept>
-            </example>
-            <binding>
-            <strength value="required"/>
-            <description value="Laterality codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
-         </binding>
-        </element>
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.53--20200901000000">
             <path value="bladder_function.urine_catheter.medical_device.indication"/>
             <short value="Indication">
@@ -690,11 +564,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.57--20200901000000">
             <path value="bladder_function.urine_catheter.medical_device.comment"/>
-            <code>
-                <system value="http://loinc.org"/>
-                <code value="48767-8"/>
-                <display value="Annotation comment Imp"/>
-            </code>
+            
             <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -761,11 +631,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.59--20200901000000">
             <path value="bladder_function.urine_catheter.medical_device.location.healthcare_provider"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="257622000"/>
-                <display value="zorginstelling"/>
-            </code>
+            
             <short value="HealthcareProvider">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -834,11 +700,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.14.5--20200901000000">
             <path value="bladder_function.incontinence_material"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="337588003"/>
-                <display value="incontinentiehulpmiddel"/>
-            </code>
+            
             <short value="IncontinenceMaterial">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -872,11 +734,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.62--20200901000000">
             <path value="bladder_function.incontinence_material.medical_device"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="49062001"/>
-                <display value="hulpmiddel"/>
-            </code>
+            
             <short value="MedicalDevice">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
@@ -911,11 +769,7 @@
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.14.6--20200901000000">
             <path value="bladder_function.comment"/>
-            <code>
-                <system value="http://loinc.org"/>
-                <code value="48767-8"/>
-                <display value="Annotation comment Imp"/>
-            </code>
+            
             <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
