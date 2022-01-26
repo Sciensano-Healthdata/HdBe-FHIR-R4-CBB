@@ -218,9 +218,8 @@
          </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.3.9--20200901000000">
-            <path value="skin_disorder.anatomical_location"/>
-            
-            <short value="AnatomicalLocation">
+         <path value="skin_disorder.anatomical_location"/>
+         <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -230,7 +229,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The location of the skin condition on the body.">
+         <definition value="The location of the skin condition on the body.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -240,99 +239,18 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="skin_disorder.anatomical_location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="BackboneElement"/>
-            </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.148--20200901000000">
-            <path value="skin_disorder.anatomical_location.location"/>
-            
-            <short value="Location">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Locatie"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Localisation on/in the body.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Localisatie op/in het lichaam."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="skin_disorder.anatomical_location.location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-        </element>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="AnatomicalLocation"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"/>
+         </type>
+      </element>
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.149--20200901000000">
-            <path value="skin_disorder.anatomical_location.laterality"/>
-            
-            <short value="Laterality">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links. "/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="skin_disorder.anatomical_location.laterality"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="Links"/>
-                </valueCodeableConcept>
-            </example>
-            <binding>
-            <strength value="required"/>
-            <description value="Laterality codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
-         </binding>
-        </element>
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.3.6--20200901000000">
             <path value="skin_disorder.comment"/>
             

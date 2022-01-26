@@ -1,37 +1,67 @@
 
 - name: id-mandatory
   status: "Checking if all resources have an id"
+  files: 
+    - examples/*.xml
+    - logical models/*.xml
+    - resources/*.xml
+    - terminology/*.xml
   filter: Resource
   predicate: id.exists()
-  error-message: "Resource {{filepath}} must have an id"
+  #error-message: "Resource {{filepath}} must have an id"
 
 - name: unique-id
   status: "Checking if all resources have a unique id"
+  files: 
+    - examples/*.xml
+    - logical models/*.xml
+    - resources/*.xml
+    - terminology/*.xml
   filter: Resource
   unique: id
-  error-message: "Resource {{filepath}} does not have an unique id"
+  #error-message: "Resource {{filepath}} does not have an unique id"
 
 - name: unique-url
   status: "Checking if all resources have a unique url"
+  files: 
+  # - examples/*.xml
+    - logical models/*.xml
+    - resources/*.xml
+    - terminology/*.xml
   filter: Conformance
   unique: url
-  error-message: "Resource {{filepath}} does not have an unique url"
+  #error-message: "Resource {{filepath}} does not have an unique url"
 
 - name: url-starts-with
   status: "Checking if canonical URL starts with correct base"
+  files: 
+  # - examples/*.xml
+    - logical models/*.xml
+    - resources/*.xml
+    - terminology/*.xml
   filter: Conformance
   filter: url.exists()
   predicate: url.startsWith('https://fhir.healthdata.be/')
-  error-message: "Resource {{filepath}} - canonical URL doesn't start with correct base"  
+  #error-message: "Resource {{filepath}} - canonical URL doesn't start with correct base"  
 
 - name: extension-url-starts-with
   status: "Checking whether extension starts with 'ext-'"
+  files: 
+  # - examples/*.xml
+  # - logical models/*.xml
+    - resources/*.xml
+  # - terminology/*.xml
   filter: StructureDefinition.exists() and StructureDefinition.type = 'Extension'
   predicate: id.startsWith('ext-')
-  error-message: "Extension {{filepath}} does not start with ext-"  
+  #error-message: "Extension {{filepath}} does not start with 'ext-'"  
 
 - name: publisher-mandatory
   status: "Checking if all resources have 'Healthdata.be (Sciensano)' as publisher"
+  files: 
+  # - examples/*.xml
+    - logical models/*.xml
+    - resources/*.xml
+    - terminology/*.xml
   filter: Conformance
   predicate: publisher = 'Healthdata.be (Sciensano)'
-  error-message: "Resource {{filepath}} does not the correct publisher"  
+  #error-message: "Resource {{filepath}} does not have the correct publisher info"  
