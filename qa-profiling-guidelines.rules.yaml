@@ -105,6 +105,24 @@
   predicate: ValueSet.url = 'https://fhir.healthdata.be/ValueSet/' + ValueSet.id
   error-message: "{{filepath}} - canonical URL doesn't conform to 'https://fhir.healthdata.be/ValueSet/[id]'"  
 
+- name: name-mandatory
+  status: "Checking if all Conformance resources contain a name"
+  files: 
+    - logical models/*.xml
+    - resources/*.xml
+    - terminology/*.xml
+  filter: Conformance
+  predicate: name.exists
+  error-message: "{{filepath}} - does not have a mapping on the root to a logical model" 
+
+- name: name-conformance
+  status: "Checking if all profiles resources naming is conform to profiling guidelines"
+  files: 
+    - logical models/*.xml
+    - resources/*.xml
+  predicate: StructureDefinition.name.substring(0, 1).matches('[A-Z]') and StructureDefinition.name.substring(1) = StructureDefinition.id.substring(1).replace('-','').replace('.', '')
+  error-message: "{{filepath}} - name does not conform to profiling guidelines" 
+
 - name: publisher-mandatory
   status: "Checking if all resources have 'Healthdata.be (Sciensano)' as publisher"
   files: 
@@ -114,6 +132,15 @@
   filter: Conformance
   predicate: publisher = 'Healthdata.be (Sciensano)'
   error-message: "{{filepath}} - does not have the correct publisher info ('Healthdata.be (Sciensano)')"  
+
+- name: mapping-mandatory
+  status: "Checking if all CBB profiles contain a mapping declaration to a logical model"
+  files: 
+    - resources/*.xml
+  filter: Profiles
+  predicate: StructureDefinition.mapping.where(uri.startsWith('https://fhir.healthdata.be/StructureDefinition/LogicalModel/')).exists() 
+  error-message: "{{filepath}} - does not have a mapping on the root to a CBB logical model"  
+
 
 - name: example-profile-mandatory
   status: "Checking whether example has a meta.profile"
