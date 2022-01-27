@@ -2,4 +2,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+|`use` | terminology | Changed the conceptmap NumberType-to-ContactInformation-EmailAddressesUse to EmailAddressType-to-ContactInformation-EmailAddressesUse [Nictiz ticket #231](https://github.com/Nictiz/Nictiz-R4-zib2020/issues/231) | 

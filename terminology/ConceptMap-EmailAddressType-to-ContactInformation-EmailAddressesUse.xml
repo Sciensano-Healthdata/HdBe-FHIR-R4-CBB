@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConceptMap xmlns="http://hl7.org/fhir">
+   <id value="EmailAddressType-to-ContactInformation-EmailAddressesUse"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+        <valueBoolean value="true"/>
+    </extension>
+   <url value="https://fhir.healthdata.be/ConceptMap/EmailAddressType-to-ContactInformation-EmailAddressesUse"/>
+   <name value="EmailAddressType_to_ContactInformation_EmailAddressesUse"/>
+   <title value="EmailAddressType_to_ContactInformation_EmailAddressesUse"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="Maps EmailAddressType codes as found in [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) ContactInformation v1.2(2020)](https://zibs.nl/wiki/ContactInformation-v1.2(2020EN)) to `ContactPoint.use` codes as found in FHIR R4"/>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <sourceCanonical value="https://fhir.healthdata.be/ConceptMap/EmailAddressType"/>
+   <targetCanonical value="http://nictiz.nl/fhir/ValueSet/ContactInformation-EmailAddressesUse"/>
+   <group>
+        <source value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+        <target value="http://hl7.org/fhir/contact-point-use"/>
+        <element>
+            <code value="HP"/>
+            <target>
+                <code value="home"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="WP"/>
+            <target>
+                <code value="work"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+    </group>
+</ConceptMap>
