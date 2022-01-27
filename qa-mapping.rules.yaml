@@ -1,0 +1,7 @@
+- name: mapping-mandatory
+  status: "Checking if all CBB profiles contain a mapping declaration to a logical model"
+  files: 
+    - resources/*.xml
+  filter: (StructureDefinition.exists() and StructureDefinition.type != 'Extension')
+  predicate: StructureDefinition.mapping.where(uri.startsWith('https://fhir.healthdata.be/StructureDefinition/LogicalModel/')).exists() 
+  error-message: "Resource does not have a mapping on the root to a CBB logical model"  
