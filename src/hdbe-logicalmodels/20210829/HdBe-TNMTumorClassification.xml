@@ -174,17 +174,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="78873005"/>
-                        <display value="T-categorie van Tumor-Node-Metastasis-classificatie"/>
-                    </coding>
-                    <text value="T2"/>
-                </valueCodeableConcept>
-            </example>
+            
         </element>
         
         
@@ -333,17 +323,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="371469007"/>
-                        <display value="histologische graad"/>
-                    </coding>
-                    <text value="Grade II (Moderately differentiated)"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="extensible"/>
             <description value="G-HistopathologicalGrading codes"/>
@@ -385,9 +365,8 @@
             </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.20--20200901000000">
-            <path value="tnmtumor_classification.primary_tumor.abnormality.tumor_localization.anatomical_location"/>
-            
-            <short value="AnatomicalLocation">
+         <path value="tnmtumor_classification.primary_tumor.abnormality.tumor_localization.anatomical_location"/>
+         <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -397,7 +376,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Contains the localization(s) of the primary tumor, which (i.a.) determines the assignment of the TNM classification to the tumor.">
+         <definition value="Contains the localization(s) of the primary tumor, which (i.a.) determines the assignment of the TNM classification to the tumor.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -407,99 +386,18 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="tnmtumor_classification.primary_tumor.abnormality.tumor_localization.anatomical_location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="BackboneElement"/>
-            </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.353--20200901000000">
-            <path value="tnmtumor_classification.primary_tumor.abnormality.tumor_localization.anatomical_location.location"/>
-            
-            <short value="Location">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Locatie"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Localisation on/in the body.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Localisatie op/in het lichaam."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="tnmtumor_classification.primary_tumor.abnormality.tumor_localization.anatomical_location.location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-        </element>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="AnatomicalLocation"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"/>
+         </type>
+      </element>
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.354--20200901000000">
-            <path value="tnmtumor_classification.primary_tumor.abnormality.tumor_localization.anatomical_location.laterality"/>
-            
-            <short value="Laterality">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links. "/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="tnmtumor_classification.primary_tumor.abnormality.tumor_localization.anatomical_location.laterality"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="Links"/>
-                </valueCodeableConcept>
-            </example>
-            <binding>
-            <strength value="required"/>
-            <description value="Laterality codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
-         </binding>
-        </element>
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.21--20200901000000">
             <path value="tnmtumor_classification.regional_lymphnodes"/>
             
@@ -611,9 +509,8 @@
             </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.24--20200901000000">
-            <path value="tnmtumor_classification.regional_lymphnodes.regional_lymph_nodes_localization.anatomical_location"/>
-            
-            <short value="AnatomicalLocation">
+         <path value="tnmtumor_classification.regional_lymphnodes.regional_lymph_nodes_localization.anatomical_location"/>
+         <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -623,7 +520,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Contains the localization(s) of the positive regional lymph nodes, caused by the primary tumor.">
+         <definition value="Contains the localization(s) of the positive regional lymph nodes, caused by the primary tumor.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -633,99 +530,18 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="tnmtumor_classification.regional_lymphnodes.regional_lymph_nodes_localization.anatomical_location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="BackboneElement"/>
-            </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.355--20200901000000">
-            <path value="tnmtumor_classification.regional_lymphnodes.regional_lymph_nodes_localization.anatomical_location.location"/>
-            
-            <short value="Location">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Locatie"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Localisation on/in the body.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Localisatie op/in het lichaam."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="tnmtumor_classification.regional_lymphnodes.regional_lymph_nodes_localization.anatomical_location.location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-        </element>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="AnatomicalLocation"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"/>
+         </type>
+      </element>
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.356--20200901000000">
-            <path value="tnmtumor_classification.regional_lymphnodes.regional_lymph_nodes_localization.anatomical_location.laterality"/>
-            
-            <short value="Laterality">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links. "/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="tnmtumor_classification.regional_lymphnodes.regional_lymph_nodes_localization.anatomical_location.laterality"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="Links"/>
-                </valueCodeableConcept>
-            </example>
-            <binding>
-            <strength value="required"/>
-            <description value="Laterality codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
-         </binding>
-        </element>
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.25--20200901000000">
             <path value="tnmtumor_classification.distant_metastasis"/>
             
@@ -833,9 +649,8 @@
             </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.28--20200901000000">
-            <path value="tnmtumor_classification.distant_metastasis.distant_metastasis_localization.anatomical_location"/>
-            
-            <short value="AnatomicalLocation">
+         <path value="tnmtumor_classification.distant_metastasis.distant_metastasis_localization.anatomical_location"/>
+         <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -845,7 +660,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Contains the localization(s) of distant metastasis, caused by the primary tumor.">
+         <definition value="Contains the localization(s) of distant metastasis, caused by the primary tumor.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -855,99 +670,18 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="tnmtumor_classification.distant_metastasis.distant_metastasis_localization.anatomical_location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="BackboneElement"/>
-            </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.357--20200901000000">
-            <path value="tnmtumor_classification.distant_metastasis.distant_metastasis_localization.anatomical_location.location"/>
-            
-            <short value="Location">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Locatie"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Localisation on/in the body.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Localisatie op/in het lichaam."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="tnmtumor_classification.distant_metastasis.distant_metastasis_localization.anatomical_location.location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-        </element>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="AnatomicalLocation"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"/>
+         </type>
+      </element>
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.358--20200901000000">
-            <path value="tnmtumor_classification.distant_metastasis.distant_metastasis_localization.anatomical_location.laterality"/>
-            
-            <short value="Laterality">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links. "/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="tnmtumor_classification.distant_metastasis.distant_metastasis_localization.anatomical_location.laterality"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="Links"/>
-                </valueCodeableConcept>
-            </example>
-            <binding>
-            <strength value="required"/>
-            <description value="Laterality codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
-         </binding>
-        </element>
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.2--20200901000000">
             <path value="tnmtumor_classification.date_of_tnmclassification"/>
             
@@ -981,10 +715,7 @@
             <type>
                 <code value="dateTime"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueDateTime value="2020-07-06"/>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.3--20200901000000">
             <path value="tnmtumor_classification.tnmversion"/>
@@ -1019,17 +750,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="273249006"/>
-                        <display value="beoordelingsschaal"/>
-                    </coding>
-                    <text value="AJCC 8th"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="extensible"/>
             <description value="TNMVersion codes"/>
@@ -1069,10 +790,7 @@
             <type>
                 <code value="string"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueString value="pT1N0M0"/>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.5--20200901000000">
             <path value="tnmtumor_classification.explanation"/>
@@ -1107,10 +825,7 @@
             <type>
                 <code value="string"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueString value="hoger stadium vanwege positieve lymfeklieren pelvis"/>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.6--20200901000000">
             <path value="tnmtumor_classification.tl_lymphatic_invasion"/>
@@ -1145,17 +860,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="395715009"/>
-                        <display value="status van lymfatische invasie door neoplasma"/>
-                    </coding>
-                    <text value="L0"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="extensible"/>
             <description value="TL-LymphaticInvasion codes"/>
