@@ -7,7 +7,7 @@
     - terminology/*.xml
   filter: Resource
   predicate: id.exists()
-  #error-message: "Resource {{filepath}} must have an id"
+  error-message: "{{filepath}} - must have an id"
 
 - name: id-unique
   status: "Checking if all resources have a unique id"
@@ -19,54 +19,43 @@
     - terminology/*.xml
   filter: Resource
   unique: id
-  #error-message: "Resource {{filepath}} does not have an unique id"
+  # custom error messages for unique checks do not work.
 
 - name: id-cbb-starts-with-hdbe
-  status: "Checking whether the CBB profile id starts with 'HdBe-'"
+  status: "Checking if all CBB profiles ids start with 'HdBe-'"
   files: 
-  # - examples/*.xml
     - logical models/*.xml
     - resources/*.xml
-  # - terminology/*.xml
   filter: Profiles
   predicate: id.startsWith('HdBe-')
-  #error-message: "CBB {{filepath}} - id does not start with 'HdBe-'" 
+  error-message: "{{filepath}} - id does not start with 'HdBe-'" 
 
 - name: id-extension-starts-with-ext
-  status: "Checking whether the extension id starts with 'ext-'"
+  status: "Checking if all extensions ids start with 'ext-'"
   files: 
-  # - examples/*.xml
-  # - logical models/*.xml
     - resources/*.xml
-  # - terminology/*.xml
-  filter: Extension
-  predicate: id.startsWith('ext-')
-  #error-message: "Extension {{filepath}} - id does not start with 'ext-'" 
+  filter: StructureDefinition.type = 'Extension'
+  predicate: id.startsWith('ext-') and 
+  error-message: "{{filepath}} - id does not start with 'ext-'" 
 
 - name: id-examples-starts-with-hdbe
-  status: "Checking whether example ids starts with 'HdBe-'"
+  status: "Checking if all example ids starts with 'HdBe-'"
   files: 
     - examples/*.xml
-  # - logical models/*.xml
-  # - resources/*.xml
-  # - terminology/*.xml
   filter: Resource
   predicate: id.startsWith('HdBe-')
-  #error-message: "Example {{filepath}} - id does not start with 'HdBe-'" 
+  error-message: "{{filepath}} - id does not start with 'HdBe-'" 
 
 - name: id-examples-ends-with-digits
-  status: "Checking whether example ids ends with two digits"
+  status: "Checking if all example ids end with two digits"
   files: 
     - examples/*.xml
-  # - logical models/*.xml
-  # - resources/*.xml
-  # - terminology/*.xml
   filter: Resource
   predicate: id.matches('.*\d\d$')
-  #error-message: "Example {{filepath}} - id does not start with 'HdBe-'" 
+  error-message: "{{filepath}} - id does not end with two digits" 
 
 - name: id-examples-pattern
-  status: "Checking whether example id has the right pattern per profiling guidelines"
+  status: "Checking if all example ids conform to the right pattern"
   files: 
     - examples/*.xml
   # - logical models/*.xml
@@ -74,7 +63,7 @@
   # - terminology/*.xml
   filter: Resource
   predicate: id.matches('[H][d][B][e][-].*[-]\d\d$')
-  #error-message: "Example {{filepath}} - id does confrom to the profiling guidelines'" 
+  error-message: "{{filepath}} - id pattern does not confrom to 'HdBe-[profilename]-[2digits]'" 
 
 - name: url-unique
   status: "Checking if all resources have a unique url"
@@ -85,10 +74,10 @@
     - terminology/*.xml
   filter: Conformance
   unique: url
-  #error-message: "Resource {{filepath}} does not have an unique url"
+  # custom error messages for unique checks do not work.
 
 - name: url-starts-with-correct-base
-  status: "Checking if all resource's canonical URL starts with correct base"
+  status: "Checking if all resources have a canonical URL that start with the correct base"
   files: 
   # - examples/*.xml
     - logical models/*.xml
@@ -96,58 +85,46 @@
     - terminology/*.xml
   filter: Conformance
   predicate: url.exists() and url.startsWith('https://fhir.healthdata.be/')
-  #error-message: "Resource {{filepath}} - canonical URL doesn't start with correct base"  
+  error-message: "{{filepath}} - canonical URL doesn't start with 'https://fhir.healthdata.be/'"  
 
 - name: url-profiles
-  status: "Checking if CBB's canonical URL confrom to the profiling guidelines"
+  status: "Checking if all CBBs canonical URL confrom to the profiling guidelines"
   files: 
-  #  - examples/*.xml
-  #  - logical models/*.xml
     - resources/*.xml
-  #  - terminology/*.xml
   filter: 
     - Profile
     - Extension
   predicate: url = 'https://fhir.healthdata.be/StructureDefinition/' + id
-  #error-message: "Resource {{filepath}} - canonical URL doesn't conform to profiling guidelines"  
+  error-message: "{{filepath}} - canonical URL pattern doesn't conform to 'https://fhir.healthdata.be/StructureDefinition/[id]'"  
 
 - name: url-valuesets
-  status: "Checking if ValueSet canonical URL confrom to the profiling guidelines"
+  status: "Checking if all ValueSet canonical URLs confrom to the profiling guidelines"
   files: 
-  #  - examples/*.xml
-  #  - logical models/*.xml
-  #  - resources/*.xml
      - terminology/*.xml
   filter: Terminology
-  predicate: ValueSet.url = 'https://fhir.healthdata.be/StructureDefinition/' + ValueSet.id
-  #error-message: "Resource {{filepath}} - canonical URL doesn't conform to profiling guidelines"  
+  predicate: ValueSet.url = 'https://fhir.healthdata.be/ValueSet/' + ValueSet.id
+  error-message: "{{filepath}} - canonical URL doesn't conform to 'https://fhir.healthdata.be/ValueSet/[id]'"  
 
 - name: publisher-mandatory
   status: "Checking if all resources have 'Healthdata.be (Sciensano)' as publisher"
   files: 
-  # - examples/*.xml
     - logical models/*.xml
     - resources/*.xml
     - terminology/*.xml
   filter: Conformance
   predicate: publisher = 'Healthdata.be (Sciensano)'
-  #error-message: "Resource {{filepath}} does not have the correct publisher info"  
+  error-message: "{{filepath}} - does not have the correct publisher info ('Healthdata.be (Sciensano)')"  
 
 - name: example-profile-mandatory
   status: "Checking whether example has a meta.profile"
   files: 
     - examples/*.xml
-  # - logical models/*.xml
-  # - resources/*.xml
-  # - terminology/*.xml
   filter: Resource
   predicate: meta.profile.exists()
-  #error-message: "Example {{filepath}} - does claim conformance to a profile" 
+  error-message: "{{filepath}} - does not claim conformance to a profile" 
 
   # References resolven
   # Voldoen alle reference aan de type die het profiel stelt
-  # CBBs beginnen met "HdBe-"
-  # Examples start with HdBe-
   # In profiles: als logical model mapping dan short, definition and gegeven.
   # In profiles: check that a mapping declaration is made
   # In logical models $ profiles: als element codeableconcept en mapping, geef warning wanneer er geen ValueSet binding is
