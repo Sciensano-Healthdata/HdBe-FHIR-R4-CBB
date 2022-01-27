@@ -1,5 +1,8 @@
-## zib [zib-profile name] difference
+## zib AddressInformation difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+|`city` | textual | Removed Dutch context.|
+|`district` | textual | Removed Dutch context. |
+|`postalCode` | textual | Removed Dutch context. |
+|`country.extension:countryCode.value[x]` | terminology | Replaced valueSet LandCodelijsten with CountryISO. |
