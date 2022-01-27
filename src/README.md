@@ -4,6 +4,8 @@ This folder contains resources that are the source for profiling work of this re
 ## zib-logicalmodels
 This folder contains the zibs in release 2020 exported as FHIR LogicalModels including terminology resources (ValueSets and CodeSystems) from [ArtDecor project 'Zorginformatiebouwstenen (ZIB) 2020](https://decor.nictiz.nl/decor/services/ProjectIndex?prefix=zib2020bbr-&format=html&language=&ui=nl-NL) which will be stored in a folder with folder name that contains the export date based on the `YYYYMMDD` format.
 
+The ValueSets and CodeSystems were only available with Dutch names, and the logical models refer to the Dutch ValueSet names as well. This requires manual translation of the Dutch names to the English equivalent.
+
 Documentation on how to export will follow. 
 
 ## zib-profiles
@@ -25,8 +27,11 @@ Convert all files in a folder by firstly navigating to the folder in a command p
 > fhir save --all --json
 ```
 
+For ConceptMaps, the naming is partly in Dutch as it consists of the mapping from a Dutch ValueSet. Also, in the profiles is referred to ValueSets with Dutch names. This requires manual translation of Dutch names to the English equivalent.
+
 ## hdbe-logicalmodels
 Contains the results of the transformation of zib logical models to the HdBe context in subfolders similiar to the `zib-logicalmodels` folder. 
 
 ## hdbe-profiles
 Contains the results of the transformation of zib-profiles to the HdBe context in subfolders similiar to the `zib-profiles` folder.
+
