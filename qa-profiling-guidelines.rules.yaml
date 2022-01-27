@@ -7,7 +7,7 @@
     - terminology/*.xml
   filter: Resource
   predicate: id.exists()
-  error-message: "{{filepath}} - must have an id"
+  error-message: "Resource must have an id"
 
 - name: id-unique
   status: "Checking if all resources have a unique id"
@@ -26,17 +26,17 @@
   files: 
     - logical models/*.xml
     - resources/*.xml
-  filter: Profiles
+  filter: (StructureDefinition.exists() and StructureDefinition.type != 'Extension')
   predicate: id.startsWith('HdBe-')
-  error-message: "{{filepath}} - id does not start with 'HdBe-'" 
+  #error-message: "Resource id does not start with 'HdBe-'" 
 
 - name: id-extension-starts-with-ext
   status: "Checking if all extensions ids start with 'ext-'"
   files: 
     - resources/*.xml
   filter: StructureDefinition.type = 'Extension'
-  predicate: id.startsWith('ext-') and 
-  error-message: "{{filepath}} - id does not start with 'ext-'" 
+  predicate: id.startsWith('ext-') 
+  error-message: "Resource id does not start with 'ext-'" 
 
 - name: id-examples-starts-with-hdbe
   status: "Checking if all example ids starts with 'HdBe-'"
@@ -44,7 +44,7 @@
     - examples/*.xml
   filter: Resource
   predicate: id.startsWith('HdBe-')
-  error-message: "{{filepath}} - id does not start with 'HdBe-'" 
+  error-message: "Resource id does not start with 'HdBe-'" 
 
 - name: id-examples-ends-with-digits
   status: "Checking if all example ids end with two digits"
@@ -52,40 +52,35 @@
     - examples/*.xml
   filter: Resource
   predicate: id.matches('.*\d\d$')
-  error-message: "{{filepath}} - id does not end with two digits" 
+  error-message: "Resource id does not end with two digits" 
 
 - name: id-examples-pattern
   status: "Checking if all example ids conform to the right pattern"
   files: 
     - examples/*.xml
-  # - logical models/*.xml
-  # - resources/*.xml
-  # - terminology/*.xml
   filter: Resource
   predicate: id.matches('[H][d][B][e][-].*[-]\d\d$')
-  error-message: "{{filepath}} - id pattern does not confrom to 'HdBe-[profilename]-[2digits]'" 
+  error-message: "Resource id pattern does not confrom to 'HdBe-[profilename]-[2digits]'" 
 
 - name: url-unique
   status: "Checking if all resources have a unique url"
   files: 
-  # - examples/*.xml
     - logical models/*.xml
     - resources/*.xml
     - terminology/*.xml
-  filter: Conformance
+  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
   unique: url
   # custom error messages for unique checks do not work.
 
 - name: url-starts-with-correct-base
   status: "Checking if all resources have a canonical URL that start with the correct base"
   files: 
-  # - examples/*.xml
     - logical models/*.xml
     - resources/*.xml
     - terminology/*.xml
-  filter: Conformance
+  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
   predicate: url.exists() and url.startsWith('https://fhir.healthdata.be/')
-  error-message: "{{filepath}} - canonical URL doesn't start with 'https://fhir.healthdata.be/'"  
+  error-message: "Resource canonical URL doesn't start with 'https://fhir.healthdata.be/'"  
 
 - name: url-profiles
   status: "Checking if all CBBs canonical URL confrom to the profiling guidelines"
@@ -95,69 +90,131 @@
     - Profile
     - Extension
   predicate: url = 'https://fhir.healthdata.be/StructureDefinition/' + id
-  error-message: "{{filepath}} - canonical URL pattern doesn't conform to 'https://fhir.healthdata.be/StructureDefinition/[id]'"  
+  error-message: "Resource canonical URL pattern doesn't conform to 'https://fhir.healthdata.be/StructureDefinition/[id]'"  
 
 - name: url-valuesets
   status: "Checking if all ValueSet canonical URLs confrom to the profiling guidelines"
   files: 
      - terminology/*.xml
-  filter: Terminology
+  filter: ValueSet.exists()
   predicate: ValueSet.url = 'https://fhir.healthdata.be/ValueSet/' + ValueSet.id
-  error-message: "{{filepath}} - canonical URL doesn't conform to 'https://fhir.healthdata.be/ValueSet/[id]'"  
+  error-message: "Resource canonical URL doesn't conform to 'https://fhir.healthdata.be/ValueSet/[id]'"  
 
 - name: name-mandatory
-  status: "Checking if all Conformance resources contain a name"
+  status: "Checking if all conformance resources contain a name"
   files: 
     - logical models/*.xml
     - resources/*.xml
     - terminology/*.xml
-  filter: Conformance
-  predicate: name.exists
-  error-message: "{{filepath}} - does not have a mapping on the root to a logical model" 
+  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
+  predicate: name.exists()
+  error-message: "Resource does not have a mapping on the root to a logical model" 
 
 - name: name-conformance
-  status: "Checking if all profiles resources naming is conform to profiling guidelines"
+  status: "Checking if all profile naming is conform to profiling guidelines"
   files: 
     - logical models/*.xml
     - resources/*.xml
   predicate: StructureDefinition.name.substring(0, 1).matches('[A-Z]') and StructureDefinition.name.substring(1) = StructureDefinition.id.substring(1).replace('-','').replace('.', '')
-  error-message: "{{filepath}} - name does not conform to profiling guidelines" 
+  error-message: "Resource name does not conform to profiling guidelines" 
 
-- name: publisher-mandatory
+- name: title-mandatory
+  status: "Checking if all profiles and logical models contain a title"
+  files: 
+    - logical models/*.xml
+    - resources/*.xml
+  filter: StructureDefinition.exists()
+  predicate: title.exists()
+  error-message: "Resource does not contain a title" 
+
+- name: description-mandatory
+  status: "Checking if all profiles and logical models contain a description"
+  files: 
+    - logical models/*.xml
+    - resources/*.xml
+    - terminology/*.xml
+  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
+  predicate: description.exists()
+  error-message: "Resource does not contain a description" 
+
+- name: copyright-mandatory
+  status: "Checking if all profiles and logical models contain a copyright"
+  files: 
+    - logical models/*.xml
+    - resources/*.xml
+    - terminology/*.xml
+  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
+  predicate: copyright.exists()
+  error-message: "Resource does not contain a copyright" 
+
+- name: contact-filled
+  status: "Checking if all conformance resources contain a name"
+  files: 
+    - logical models/*.xml
+    - resources/*.xml
+    - terminology/*.xml
+  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
+  predicate: contact.name.exists() and ('Healthdata.be (Sciensano)' in contact.name) and contact.telecom.exists()
+  error-message: "Contact not filled (correctly)" 
+
+- name: publisher-filled
   status: "Checking if all resources have 'Healthdata.be (Sciensano)' as publisher"
   files: 
     - logical models/*.xml
     - resources/*.xml
     - terminology/*.xml
-  filter: Conformance
+  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
   predicate: publisher = 'Healthdata.be (Sciensano)'
-  error-message: "{{filepath}} - does not have the correct publisher info ('Healthdata.be (Sciensano)')"  
+  error-message: "Incorrect publisher info, should be'Healthdata.be (Sciensano)'"  
+
+- name: publisher-equals-contact
+  status: "Checking if publisher is one of the contacts"
+  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
+  predicate: iif(publisher.exists() and contact.name.exists(), publisher in contact.name)
+  error-message: "Resource has publisher not listed as one of the contacts"
 
 - name: mapping-mandatory
   status: "Checking if all CBB profiles contain a mapping declaration to a logical model"
   files: 
     - resources/*.xml
-  filter: Profiles
+  filter: (StructureDefinition.exists() and StructureDefinition.type != 'Extension')
   predicate: StructureDefinition.mapping.where(uri.startsWith('https://fhir.healthdata.be/StructureDefinition/LogicalModel/')).exists() 
-  error-message: "{{filepath}} - does not have a mapping on the root to a CBB logical model"  
+  error-message: "Resource does not have a mapping on the root to a CBB logical model"  
 
+- name: abstract-false
+  status: "Checking if all profiles are not considered abstract"
+  files: 
+    - resources/*.xml
+  filter: Conformance
+  predicate: abstract = false
+  error-message: "Resource has abstract = true" 
 
 - name: example-profile-mandatory
-  status: "Checking whether example has a meta.profile"
+  status: "Checking if example has a meta.profile"
   files: 
     - examples/*.xml
   filter: Resource
   predicate: meta.profile.exists()
-  error-message: "{{filepath}} - does not claim conformance to a profile" 
+  error-message: "Resource does not claim conformance to a profile" 
 
-  # References resolven
-  # Voldoen alle reference aan de type die het profiel stelt
-  # In profiles: als logical model mapping dan short, definition and gegeven.
-  # In profiles: check that a mapping declaration is made
-  # In logical models $ profiles: als element codeableconcept en mapping, geef warning wanneer er geen ValueSet binding is
-  # In logical models: no DefinitionCodes
-  # In logical models: no examples
-  # In ValueSet: distinct values
-  # For profiles: .id, .url, .contact, .name, .title mandatory
-  # Gegeven het CBB logical model, bestaat er voor elke element/concept een mapping in de profielen
-  #
+- name: logicalmodel-no-definitioncodes
+  status: "Checking if logical models do not contain zib DefinitionCodes"
+  files: 
+    - logical models/*.xml
+  predicate: (StructureDefinition.differential.element.code.exists().not() or StructureDefinition.snapshot.element.code.exists().not())
+  error-message: "Logical model contains DefinitionCodes in element.code" 
+
+- name: logicalmodel-no-element-examples
+  status: "Checking if logical models do not contain element examples"
+  files: 
+    - logical models/*.xml
+  predicate: (StructureDefinition.differential.element.example.exists().not() or StructureDefinition.snapshot.element.example.exists().not())
+  error-message: "Logical model contains element examples" 
+
+
+  # TO DO CHECKS 
+  # Do all references resolve?
+  # Do all referenced resource conform to the type in the profile?
+  # Provide warning if CodeadbleConcept does not have a binding in the logical model.
+  # Given a CBB logical model -- is every element account for by a mapping in a profile?
+  
