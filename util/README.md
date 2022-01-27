@@ -26,7 +26,8 @@ call ant -f _ant-buildfiles\ant-publish\build-convert-zib-logicalmodels-or-profi
 The output depends on the input parameter, which determines which script given underneath is executed. The logging of the zib-converter is saved in `ant-build.log`.
 
 #### zib-logicalmodels_2_hdbe-logicalmodels.xsl
-Converts zibs (release 2020) exported as logical models, ValueSets and CodeSystems to the Healthdata.be context. It will convert each logical model's metadata and subsequently adjust references. All adjustments follow the project's profiling guidelines. The output is placed in `../src/hdbe-logicalmodels/[xxx]`
+Converts zibs (release 2020) exported as logical models, ValueSets and CodeSystems to the Healthdata.be context. It will convert each logical model's metadata and subsequently adjust references. All adjustments follow the project's profiling guidelines. The output is placed in `../src/hdbe-logicalmodels/[xxx]`.
+
 
 #### zib-profiles_2_hdbe-profiles.xsl
 Converts Nictiz's zib-profiles in R4 for the zib 2020 release (StructureDefinition and ConceptMap resources) to the Healthdata.be context. It will convert each resource's metadata and subsequently adjust the references. All adjustments follow the project's profiling guidelines. The output is placed in `../src/hdbe-profiles/[xxx]`.
