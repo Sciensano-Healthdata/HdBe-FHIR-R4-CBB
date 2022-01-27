@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-AddressInformation" />
   <meta>
-    <lastUpdated value="2022-01-27T11:02:09.4491327+00:00" />
+    <lastUpdated value="2022-01-27T13:33:00.1330682+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation" />
   <name value="HdBeAddressInformation" />
@@ -26,7 +26,7 @@
     <name value="zib AddressInformation-v1.1(2020EN)" />
   </mapping>
   <mapping>
-    <identity value="hdbe-AddressInformation" />
+    <identity value="hdbe-addressinformation" />
     <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AddressInformation" />
     <name value="HdBe logical model AddressInformation" />
   </mapping>
@@ -47,7 +47,7 @@
         <comment value="AddressInformation" />
       </mapping>
       <mapping>
-        <identity value="hdbe-AddressInformation" />
+        <identity value="hdbe-addressinformation" />
         <map value="address_information" />
       </mapping>
     </element>
@@ -71,6 +71,13 @@
         <profile value="https://fhir.healthdata.be/StructureDefinition/ext-AddressInformation.AddressType" />
       </type>
     </element>
+    <element id="Address.extension:addressType.value[x]">
+      <path value="Address.extension.value[x]" />
+      <mapping>
+        <identity value="hdbe-addressinformation" />
+        <map value="address_type" />
+      </mapping>
+    </element>
     <element id="Address.use">
       <path value="Address.use" />
       <short value="AddressType" />
@@ -78,10 +85,10 @@
       <alias value="AdresSoort" />
       <binding>
         <strength value="required" />
-        <description value="Use ConceptMap 'AdresSoortCodelijst-to-AddressUse' to translate zib terminology to profile terminology in ValueSet 'AddressUse'" />
+        <description value="Use ConceptMap 'AddressType-to-AddressUse' to translate zib terminology to profile terminology in ValueSet 'AddressUse'" />
         <valueSet value="http://hl7.org/fhir/ValueSet/address-use|4.0.1">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="https://fhir.healthdata.be/ConceptMap/AdresSoort-to-AddressUse" />
+            <valueCanonical value="https://fhir.healthdata.be/ConceptMap/AddressType-to-AddressUse" />
           </extension>
         </valueSet>
       </binding>
@@ -89,6 +96,10 @@
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.8" />
         <comment value="AddressType" />
+      </mapping>
+      <mapping>
+        <identity value="hdbe-addressinformation" />
+        <map value="address_type" />
       </mapping>
     </element>
     <element id="Address.type">
@@ -98,10 +109,10 @@
       <alias value="AdresSoort" />
       <binding>
         <strength value="required" />
-        <description value="Use ConceptMap 'AdresSoortCodelijst-to-AddressType' to translate zib terminology to profile terminology in ValueSet 'AddressType'" />
+        <description value="Use ConceptMap 'AddressType-to-AddressType' to translate zib terminology to profile terminology in ValueSet 'AddressType'" />
         <valueSet value="http://hl7.org/fhir/ValueSet/address-type|4.0.1">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="https://fhir.healthdata.be/ConceptMap/AdresSoort-to-AddressType" />
+            <valueCanonical value="https://fhir.healthdata.be/ConceptMap/AddressType-to-AddressType" />
           </extension>
         </valueSet>
       </binding>
@@ -109,6 +120,10 @@
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.8" />
         <comment value="AddressType" />
+      </mapping>
+      <mapping>
+        <identity value="hdbe-addressinformation" />
+        <map value="address_type" />
       </mapping>
     </element>
     <element id="Address.line">
@@ -147,7 +162,7 @@
         <comment value="Street" />
       </mapping>
       <mapping>
-        <identity value="hdbe-AddressInformation" />
+        <identity value="hdbe-addressinformation" />
         <map value="street" />
       </mapping>
     </element>
@@ -170,6 +185,10 @@
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.12" />
         <comment value="HouseNumber" />
+      </mapping>
+      <mapping>
+        <identity value="hdbe-addressinformation" />
+        <map value="house_number" />
       </mapping>
     </element>
     <element id="Address.line.extension:houseNumberLetter-houseNumberAddition">
@@ -197,6 +216,14 @@
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.10" />
         <comment value="HouseNumberAddition" />
+      </mapping>
+      <mapping>
+        <identity value="hdbe-addressinformation" />
+        <map value="house_number_letter" />
+      </mapping>
+      <mapping>
+        <identity value="hdbe-addressinformation" />
+        <map value="house_number_addition" />
       </mapping>
     </element>
     <element id="Address.line.extension:houseNumberIndication">
@@ -227,6 +254,10 @@
         <map value="NL-CM:20.5.9" />
         <comment value="HouseNumberIndication" />
       </mapping>
+      <mapping>
+        <identity value="hdbe-addressinformation" />
+        <map value="house_number_indication" />
+      </mapping>
     </element>
     <element id="Address.line.extension:additionalInformation">
       <path value="Address.line.extension" />
@@ -247,38 +278,54 @@
         <map value="NL-CM:20.5.7" />
         <comment value="AdditionalInformation" />
       </mapping>
+      <mapping>
+        <identity value="hdbe-addressinformation" />
+        <map value="additional_information" />
+      </mapping>
     </element>
     <element id="Address.city">
       <path value="Address.city" />
       <short value="PlaceOfResidence" />
-      <definition value="A geographically determined area which forms part of the municipal area. For Dutch places of residence, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14)." />
+      <definition value="A geographically determined area which forms part of the municipal area." />
       <alias value="Woonplaats" />
       <mapping>
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.3" />
         <comment value="PlaceOfResidence" />
       </mapping>
+      <mapping>
+        <identity value="hdbe-addressinformation" />
+        <map value="place_of_residence" />
+      </mapping>
     </element>
     <element id="Address.district">
       <path value="Address.district" />
       <short value="Municipality" />
-      <definition value="Municipality of residence. For Dutch municipalities, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14)." />
+      <definition value="Municipality of residence." />
       <alias value="Gemeente" />
       <mapping>
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.4" />
         <comment value="Municipality" />
       </mapping>
+      <mapping>
+        <identity value="hdbe-addressinformation" />
+        <map value="municipality" />
+      </mapping>
     </element>
     <element id="Address.postalCode">
       <path value="Address.postalCode" />
       <short value="Postcode" />
-      <definition value="Postcode of the address. In Dutch addresses, preferably use the postcode from the Postcode table (OID: 2.16.840.1.113883.2.4.4.15)." />
+      <definition value="Postcode of the address." />
       <alias value="Postcode" />
       <mapping>
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.6" />
         <comment value="Postcode" />
+      </mapping>
+      <mapping>
+        <identity value="hdbe-addressinformation" />
+        <map value="postcode" />
       </mapping>
     </element>
     <element id="Address.country">
@@ -313,12 +360,16 @@
       <alias value="Land" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/Land" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/CountryISO" />
       </binding>
       <mapping>
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.5" />
         <comment value="Country" />
+      </mapping>
+      <mapping>
+        <identity value="hdbe-addressinformation" />
+        <map value="country" />
       </mapping>
     </element>
   </differential>
