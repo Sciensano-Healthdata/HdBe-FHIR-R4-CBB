@@ -21,9 +21,19 @@
   files: 
     - /examples/*.xml
 
-# Include rules to check conformance to profiling guidelines 
-- include: qa-profiling-guidelines 
+# Include business rules to check conformance to profiling guidelines 
+- include: qa-id
+- include: qa-url
+- include: qa-various-elements
+- include: qa-mapping
+- include: qa-logicalmodels
 
+# TO DO CHECKS 
+  # Do all references resolve?
+  # Do all referenced resource conform to the type in the profile?
+  # Provide warning if CodeadbleConcept does not have a binding in the logical model.
+  # Given a CBB logical model -- is every element account for by a mapping in a profile?
+  
 
 
  
