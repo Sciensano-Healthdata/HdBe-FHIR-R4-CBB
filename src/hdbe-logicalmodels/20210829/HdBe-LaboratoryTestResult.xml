@@ -142,12 +142,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="HbA1c"/>
-                </valueCodeableConcept>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.9--20200901000000">
             <path value="laboratory_test_result.laboratory_test.test_method"/>
@@ -183,17 +178,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="246501002"/>
-                        <display value="techniek"/>
-                    </coding>
-                    <text value="IFCC"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="required"/>
             <description value="TestMethod codes"/>
@@ -232,10 +217,7 @@
             <type>
                 <code value="dateTime"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueDateTime value="2012-10-07T20:15:00+02:00"/>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.10--20200901000000">
             <path value="laboratory_test_result.laboratory_test.test_result"/>
@@ -269,10 +251,7 @@
             <type>
                 <code value="string"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueString value="53 mmol/mol"/>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.31--20200901000000">
             <path value="laboratory_test_result.laboratory_test.test_result_status"/>
@@ -345,10 +324,7 @@
             <type>
                 <code value="string"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueString value="42 mmol/mol"/>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.12--20200901000000">
             <path value="laboratory_test_result.laboratory_test.reference_range_lower_limit"/>
@@ -383,10 +359,7 @@
             <type>
                 <code value="string"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueString value="20 mmol/mol"/>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.30--20200901000000">
             <path value="laboratory_test_result.laboratory_test.interpretation_method"/>
@@ -459,17 +432,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="363713009"/>
-                        <display value="interpretatie"/>
-                    </coding>
-                    <text value="High"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="extensible"/>
             <description value="ResultFlags codes"/>
@@ -681,17 +644,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="370133003"/>
-                        <display value="monstermateriaal"/>
-                    </coding>
-                    <text value="Urine"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="required"/>
             <description value="SpecimenMaterial codes"/>
@@ -699,9 +652,8 @@
          </binding>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.36--20200901000000">
-            <path value="laboratory_test_result.specimen.anatomical_location"/>
-            
-            <short value="AnatomicalLocation">
+         <path value="laboratory_test_result.specimen.anatomical_location"/>
+         <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -711,7 +663,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Anatomic location where the material is collected, *e.g. *elbow">
+         <definition value="Anatomic location where the material is collected, *e.g. *elbow">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -721,96 +673,15 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="laboratory_test_result.specimen.anatomical_location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="BackboneElement"/>
-            </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.173--20200901000000">
-            <path value="laboratory_test_result.specimen.anatomical_location.location"/>
-            
-            <short value="Location">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Locatie"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Localisation on/in the body.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Localisatie op/in het lichaam."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="laboratory_test_result.specimen.anatomical_location.location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.174--20200901000000">
-            <path value="laboratory_test_result.specimen.anatomical_location.laterality"/>
-            
-            <short value="Laterality">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links. "/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="laboratory_test_result.specimen.anatomical_location.laterality"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="Links"/>
-                </valueCodeableConcept>
-            </example>
-            <binding>
-            <strength value="required"/>
-            <description value="Laterality codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
-         </binding>
-        </element>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="AnatomicalLocation"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"/>
+         </type>
+      </element>
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.22--20200901000000">
             <path value="laboratory_test_result.specimen.microorganism"/>
             <short value="Microorganism">
@@ -1047,10 +918,7 @@
             <type>
                 <code value="dateTime"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueDateTime value="2012-10-07T17:20:00+02:00"/>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.25--20200901000000">
             <path value="laboratory_test_result.specimen.received_date_time"/>
@@ -1118,17 +986,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="118171006"/>
-                        <display value="afnamemethode"/>
-                    </coding>
-                    <text value="Midstream"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="required"/>
             <description value="CollectionMethod codes"/>
@@ -1241,10 +1099,7 @@
             <type>
                 <code value="string"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueString value="Na (glucose)stimulus"/>
-            </example>
+            
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.1.4--20200901000000">
             <path value="laboratory_test_result.panel_or_battery"/>
@@ -1278,12 +1133,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="Bloedgassen"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="required"/>
             <description value="PanelOrBattery codes"/>
@@ -1322,12 +1172,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="Definitief"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="extensible"/>
             <description value="ResultStatus codes"/>
@@ -1400,12 +1245,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="Klinische Chemie"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="extensible"/>
             <description value="ResultType codes"/>
