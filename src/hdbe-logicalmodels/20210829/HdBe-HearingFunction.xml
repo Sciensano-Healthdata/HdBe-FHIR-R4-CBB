@@ -110,17 +110,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="47078008"/>
-                        <display value="gehoorfunctie"/>
-                    </coding>
-                    <text value="Verminderde gehoorfunctie"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="required"/>
             <description value="HearingFunction codes"/>
@@ -259,12 +249,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="(01)08712345000004(17)160131(10)200652"/>
-                </valueCodeableConcept>
-            </example>
+            
         </element>
         
         
@@ -301,12 +286,7 @@
             <type>
                 <code value="CodeableConcept"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="Gehoorapparaat"/>
-                </valueCodeableConcept>
-            </example>
+            
             <binding>
             <strength value="extensible"/>
             <description value="ProductType codes"/>
@@ -347,8 +327,8 @@
             </type>
         </element>
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.113--20200901000000">
-            <path value="hearing_function.hearing_aid.medical_device.anatomical_location"/>
-            <short value="AnatomicalLocation">
+         <path value="hearing_function.hearing_aid.medical_device.anatomical_location"/>
+         <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -358,7 +338,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Patient’s anatomical location of the medical device used.">
+         <definition value="Patient’s anatomical location of the medical device used.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -368,98 +348,18 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="hearing_function.hearing_aid.medical_device.anatomical_location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="BackboneElement"/>
-            </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.114--20200901000000">
-            <path value="hearing_function.hearing_aid.medical_device.anatomical_location.location"/>
-            
-            <short value="Location">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Locatie"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="Localisation on/in the body.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Localisatie op/in het lichaam."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="hearing_function.hearing_aid.medical_device.anatomical_location.location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-        </element>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="AnatomicalLocation"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"/>
+         </type>
+      </element>
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.115--20200901000000">
-            <path value="hearing_function.hearing_aid.medical_device.anatomical_location.device_anatomical_location"/>
-            <short value="DeviceAnatomicalLocation">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="HulpmiddelAnatomischeLocatie"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="The anatomical location of the hearing aid, such as: ‘left ear’.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="De anatomische locatie van het gehoorapparaat, bijvoorbeeld linkeroor."/>
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="hearing_function.hearing_aid.medical_device.anatomical_location.device_anatomical_location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-            <example>
-                <label value="example 1"/>
-                <valueCodeableConcept>
-                    <text value="Linkeroor"/>
-                </valueCodeableConcept>
-            </example>
-            <binding>
-            <strength value="required"/>
-            <description value="DeviceAnatomicalLocation codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/LocatieGehoorapparaat"/>
-         </binding>
-        </element>
+        
+        
         <element id="2.16.840.1.113883.2.4.3.11.60.121.2.116--20200901000000">
             <path value="hearing_function.hearing_aid.medical_device.indication"/>
             <short value="Indication">
@@ -763,10 +663,7 @@
             <type>
                 <code value="string"/>
             </type>
-            <example>
-                <label value="example 1"/>
-                <valueString value="Door duidelijk articuleren en langzaam te praten kan patiënt redelijk verstaan."/>
-            </example>
+            
         </element>
     </differential>
 </StructureDefinition>

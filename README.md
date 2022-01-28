@@ -19,8 +19,7 @@ Healthdata.be uses the following branching strategy during initial development:
     * can be updated by merging main into the zib-branch at any time,
     * require a peer-reviewed pull-request before merging in main,
     * are deleted after merge in main, 
-    * can be merged into integration at any time.
-    * can be split into two: one for the development of the logical model and one for the FHIR profiles.    
+    * can be merged into integration at any time.  
 * Multiple zibs may be included in one zib branch which can be convenient for zibs that are strongly related, like the medication-related zibs.
 * The integration branch is linked to a Simplifier.net project which will render all resources and host an Implementation Guide. The integration branch is useful for quality control processes.
 
