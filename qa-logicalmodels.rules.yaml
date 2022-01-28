@@ -1,0 +1,13 @@
+- name: logicalmodel-no-definitioncodes
+  status: "Checking if logical models do not contain zib DefinitionCodes"
+  files: 
+    - logical models/*.xml
+  predicate: (StructureDefinition.differential.element.code.exists().not() or StructureDefinition.snapshot.element.code.exists().not())
+  error-message: "Logical model contains DefinitionCodes in element.code" 
+
+- name: logicalmodel-no-element-examples
+  status: "Checking if logical models do not contain element examples"
+  files: 
+    - logical models/*.xml
+  predicate: (StructureDefinition.differential.element.example.exists().not() or StructureDefinition.snapshot.element.example.exists().not())
+  error-message: "Logical model contains element examples" 
