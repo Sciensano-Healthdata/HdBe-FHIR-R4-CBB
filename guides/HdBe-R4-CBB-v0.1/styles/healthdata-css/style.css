@@ -323,10 +323,43 @@ html, body {
   padding-right: 6%;
   }
   
+
+  /* Style for the box with snapshot/diff/example view */
+  .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+  }
+  /* Style the buttons inside the tab */
+  .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 8px 10px;
+      transition: 0.3s;
+      font-size: 14px;
+  }
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+      background-color: #ddd;
+  }
+  /* Create an active/current tablink class */
+  .tab button.active {
+      background-color: #69aa41;
+      color: #fff;
+  }
+  /* Style the tab content */
+  .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+  }  
   
   body
   {
-  
    background: no-repeat top left;
   
       background-size: cover;
