@@ -51,13 +51,15 @@ URL: url
   </div>
 
   <div id="Example instance" class="tabcontent">
-    <h3>JSON example instance</h3>
-     <div>
+    
+    <div>
+     <h3>JSON example instance</h3>
       {{json:examples/HdBe-Patient-01.xml}}
     </div>
 
-    <h3>XML example instance</h3>
-     <div>
+    
+    <div>
+     <h3>XML example instance</h3>
       {{xml:examples/HdBe-Patient-01.xml}}
      </div>
     
