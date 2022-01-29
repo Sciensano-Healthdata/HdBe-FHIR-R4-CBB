@@ -17,7 +17,8 @@ URL: url
      <button class="tablinks" onclick="openTab(event, 'Hybrid view')">Hybrid view</button>
      <button class="tablinks" onclick="openTab(event, 'Diff view')">Diff view</button>
      <button class="tablinks" onclick="openTab(event, 'Mapping')">Mapping</button>
-     <button class="tablinks" onclick="openTab(event, 'Example instance')">Example instance</button>
+     <button class="tablinks" onclick="openTab(event, 'JSON example')">JSON example</button>
+    <button class="tablinks" onclick="openTab(event, 'XML example')">XML example</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff')">Zib-profile diff</button>
   </div>
 
@@ -50,19 +51,11 @@ URL: url
     </div>
   </div>
 
-  <div id="Example instance" class="tabcontent">
-    
-    <div>
-     <h3>JSON example instance</h3>
+  <div id="JSON example" class="tabcontent">
       {{json:examples/HdBe-Patient-01.xml}}
-    </div>
-
-    
-    <div>
-     <h3>XML example instance</h3>
+  </div>
+  <div id="XML example" class="tabcontent">
       {{xml:examples/HdBe-Patient-01.xml}}
-     </div>
-    
   </div>
 
   <div id="Zib diff" class="tabcontent">
