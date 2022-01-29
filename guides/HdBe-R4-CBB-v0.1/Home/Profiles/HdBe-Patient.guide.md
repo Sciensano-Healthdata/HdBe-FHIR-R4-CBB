@@ -23,17 +23,17 @@ URL: url
 
   <div id="Snapshot view" class="tabcontent" style="display:block">
     <br>
-      {{render:https://fhir.healthdata.be/StructureDefinition/HdBe-Patient, snapshot}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-Patient, snapshot}}
   </div>
 
   <div id="Hybrid view" class="tabcontent">
     <br>
-      {{render:https://fhir.healthdata.be/StructureDefinition/HdBe-Patient, hybrid}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-Patient, hybrid}}
   </div>
 
   <div id="Diff view" class="tabcontent">
     <br>
-      {{render:https://fhir.healthdata.be/StructureDefinition/HdBe-Patient, diff}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-Patient, diff}}
   </div>
 
   <div id="Mapping" class="tabcontent">      
@@ -52,15 +52,19 @@ URL: url
 
   <div id="Example instance" class="tabcontent">
     <h3>JSON example instance</h3>
+     <div>
       {{json:examples/HdBe-Patient-01.xml}}
+    </div>
 
     <h3>XML example instance</h3>
+     <div>
       {{xml:examples/HdBe-Patient-01.xml}}
-
+     </div>
+    
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:resources/HdBe-Patient.doc}}
+      {{render:resources/HdBe-Patient.doc.md}}
   </div>
 
 </div>
