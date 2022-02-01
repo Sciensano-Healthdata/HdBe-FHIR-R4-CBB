@@ -1,11 +1,6 @@
-// example of Anatomical Location
-```
-## Example instances
 
+## Example instances
 | anatomical_location     |                   |
 |----------------------|-------------------|
 | location | nier   
 | laterality | links 
-
-
-```
