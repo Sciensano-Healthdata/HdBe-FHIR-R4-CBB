@@ -59,7 +59,7 @@ URL: url
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:resources/[CBB-ID].doc}}
+      {{render:resources/[CBB-ID].doc.md}}
   </div>
 
 </div>

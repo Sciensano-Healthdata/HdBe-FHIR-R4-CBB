@@ -5,4 +5,5 @@ This folder contains all required files for implementation guides that are hoste
 1. For every CBB logical model make a copy of `../LogicalModels/cbbname.guide.md` and place the correct CBB name in the file and on every placeholder in the file (e.g. [CBB-Name] ).
 2. Add a line in `../LogicalModels/toc.yaml` for the CBB.
 3. For every profile do the same as logicl models but in the `../Profiles` folder.
+    - If a profile (NameInformation, AddressInformation, etc.) does only have an example within another profile, remove the `{{json:examples/[CBB-ID]-01}}` and `{{xml:examples/[CBB-ID]-01}}` codelines with explanatory text and if possible a link with an example in another profile.
 4. If adjustments need to be made to the general structure, or CSS, this should happen within the main branch and be merged from their to any branch. 
