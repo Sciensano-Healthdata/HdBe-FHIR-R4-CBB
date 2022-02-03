@@ -52,10 +52,10 @@ URL: url
   </div>
 
   <div id="JSON example" class="tabcontent">
-      {{json:examples/HdBe-Patient-01}}
+      {{json:examples/HdBe-Patient-01.xml}}
   </div>
   <div id="XML example" class="tabcontent">
-      {{xml:examples/HdBe-Patient-01}}
+      {{xml:examples/HdBe-Patient-01.xml}}
   </div>
 
   <div id="Zib diff" class="tabcontent">
