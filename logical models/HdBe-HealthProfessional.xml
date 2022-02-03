@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-HealthProfessional" />
+  <meta>
+    <lastUpdated value="2022-01-26T14:25:01.4967597+00:00" />
+  </meta>
   <language value="en-US" />
   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
     <valuePeriod>
@@ -29,7 +32,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="**Concept**&#xD;&#xA;A health professional is a person who is authorized to perform actions in the field of individual healthcare.&#xD;&#xA;**Purpose**&#xD;&#xA;The purpose of this information model is documenting the identity of people providing healthcare. For health professionals, information must be sufficiently complete for reference and auditing: if known, the name is mandatory. If an identification number is given, the name and number have to match.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Other employees working in healthcare can also be mapped onto this CBB. If needed the HealthCareProviderRole can be used to specify the type of healthcareworker by using the nullflavor OTH in free text.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;The concept HealthProfessionalRole can be expressed in two ways, as an element in the information model and as the definition code of a reference in another referring information model (Performer::HealthProfessional). In both cases, the code is taken from the same code list. If both possibilities are used, they should not be in conflict.">
+  <description value="**Concept**&#xD;&#xA;A health professional is a person who is authorized to perform actions in the field of individual healthcare.&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;The purpose of this information model is documenting the identity of people providing healthcare. For health professionals, information must be sufficiently complete for reference and auditing: if known, the name is mandatory. If an identification number is given, the name and number have to match.&#xD;&#xA;&#xD;&#xA;**Evidence Base**&#xD;&#xA;Other employees working in healthcare can also be mapped onto this CBB. If needed the HealthCareProviderRole can be used to specify the type of healthcareworker by using the nullflavor OTH in free text.&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;The concept HealthProfessionalRole can be expressed in two ways, as an element in the information model and as the definition code of a reference in another referring information model (Performer::HealthProfessional). In both cases, the code is taken from the same code list. If both possibilities are used, they should not be in conflict.">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
         <valueCode value="nl-NL" />
@@ -156,6 +159,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <binding>
+        <strength value="preferred" />
+        <description value="Practice Setting Code Value Set" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/c80-practice-codes" />
+      </binding>
     </element>
     <element id="health_professional.gender">
       <path value="health_professional.gender" />
@@ -169,7 +177,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="Health professional ’s administrative gender. The gender that is geregistered for administration.">
+      <definition value="Health professional’s administrative gender - the gender that the health professional is considered to have for administration and record keeping purposes. Note that the gender might not match the biological sex as determined by genetics or the individual's preferred identification.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
