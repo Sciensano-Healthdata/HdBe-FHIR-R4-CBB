@@ -52,10 +52,10 @@ URL: url
   </div>
 
   <div id="JSON example" class="tabcontent">
-      {{json:examples/HdBe-AnatomicalLocation-01}}
+      <p> The HdBe-AnatomicalLocation is a CodeableConcept and an example will be provided within other HdBe profiles it is used. </p>
   </div>
   <div id="XML example" class="tabcontent">
-      {{xml:examples/HdBe-AnatomicalLocation-01}}
+      <p> The HdBe-AnatomicalLocation is a CodeableConcept and an example will be provided within other HdBe profiles it is used. </p>
   </div>
 
   <div id="Zib diff" class="tabcontent">
