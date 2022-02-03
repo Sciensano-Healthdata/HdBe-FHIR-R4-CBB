@@ -174,6 +174,82 @@
     </xsl:template> 
     
     
+    <xd:doc>
+        <xd:desc>Convert ValueSets to HdBe metadata</xd:desc>
+    </xd:doc>
+    <xsl:template match="f:ValueSet">
+        <xsl:copy>
+            <xsl:variable name="name" select="replace(concat(upper-case(substring(f:name/@value,1,1)), substring(f:name/@value, 2)),'Codelijst','')"/> 
+            <xsl:choose>
+                <xsl:when test="(f:id or not(f:id)) and ends-with(f:name/@value, 'Codelijst')">
+                    <id>
+                        <xsl:attribute name="value" select="replace($name,'_','-')"/>
+                    </id>
+                </xsl:when>
+                <xsl:otherwise>
+                    <id>
+                        <xsl:attribute name="value" select="f:name/@value"/>
+                    </id>
+                </xsl:otherwise>
+            </xsl:choose>
+            <xsl:apply-templates select="f:meta | f:implicitRules | f:language | f:text | f:contained | f:extension | f:modifierExtension"/>
+            <xsl:choose>
+                <xsl:when test="f:url or not(f:url)">
+                    <url>
+                        <xsl:attribute name="value" select="concat($urlBase,$urlValueSet,$name)"/>
+                    </url>
+                </xsl:when>
+            </xsl:choose>
+            <xsl:apply-templates select="f:identifier | f:version"/> 
+            <xsl:choose>
+                <xsl:when test="f:name">
+                    <name value="{$name}"/>
+                </xsl:when>
+            </xsl:choose>
+            <xsl:choose>
+                <xsl:when test="f:title or not(f:title)">
+                    <title>
+                        <xsl:attribute name="value" select="replace(f:title/@value, 'zib', 'HdBe')"/>
+                    </title>
+                </xsl:when>
+            </xsl:choose>
+            <xsl:choose>
+                <xsl:when test="f:status or not(f:status)">
+                    <status value="draft"/>
+                </xsl:when>
+            </xsl:choose>
+            <xsl:apply-templates select="f:experimental | f:date"/>
+            <xsl:choose>
+                <xsl:when test="f:publisher or not(f:publisher)">
+                    <publisher value="{$publisher}"/>
+                </xsl:when>
+            </xsl:choose>
+            <xsl:choose>
+                <xsl:when test=" f:contact or not(f:contact)">
+                    <contact>
+                        <name value="{$publisher}" />
+                        <telecom>
+                            <system value="email" />
+                            <value value="{$contactEmail}" />
+                            <use value="work" />
+                        </telecom>
+                    </contact>  
+                </xsl:when>
+            </xsl:choose>
+            <xsl:apply-templates select="f:description | f:immutable"/>
+            <xsl:choose>
+                <xsl:when test="not(f:copyright)">
+                    <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+                </xsl:when>
+                <!-- Sometimes a relevant copyright is stated in the ValueSet. So if a Copyright is present, use the orginal one.-->
+                <xsl:otherwise>
+                    <xsl:apply-templates select="f:copyright"/>
+                </xsl:otherwise>
+            </xsl:choose>
+            <xsl:apply-templates select="f:compose | f:expansion"/>
+        </xsl:copy>
+    </xsl:template>
+    
     <xsl:template match="f:ConceptMap">
         <xsl:copy>
             <xsl:variable name="name" select="replace(concat(upper-case(substring(f:name/@value,1,1)), substring(f:name/@value, 2)),'Codelijst','')"/>   
@@ -268,6 +344,15 @@
                     <xsl:choose>
                         <xsl:when test="string-length(f:id/@value) gt 0">
                             <xsl:result-document href="ConceptMap-{./f:id/@value}.xml" indent="yes">
+                                <xsl:copy-of select="."/>
+                            </xsl:result-document>
+                        </xsl:when>
+                    </xsl:choose>
+                </xsl:for-each>
+                <xsl:for-each select="$output/f:ValueSet">
+                    <xsl:choose>
+                        <xsl:when test="string-length(f:id/@value) gt 0">
+                            <xsl:result-document href="ValueSet-{./f:id/@value}.xml" indent="yes">
                                 <xsl:copy-of select="."/>
                             </xsl:result-document>
                         </xsl:when>
