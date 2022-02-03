@@ -52,14 +52,14 @@ URL: url
   </div>
 
   <div id="JSON example" class="tabcontent">
-      {{json:examples/[CBB-ID]-01}}
+      {{json:examples/[CBB-ID]-01.xml}}
   </div>
   <div id="XML example" class="tabcontent">
-      {{xml:examples/[CBB-ID]-01}}
+      {{xml:examples/[CBB-ID]-01.xml}}
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:resources/[CBB-ID].doc}}
+      {{render:resources/[CBB-ID].doc.md}}
   </div>
 
 </div>
