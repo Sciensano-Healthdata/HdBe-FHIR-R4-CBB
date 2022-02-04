@@ -198,9 +198,19 @@
     </xsl:template>
     
     <xd:doc>
+        <xd:desc>Replace element id with path.</xd:desc>
+    </xd:doc>
+    <xsl:template match="f:differential/f:element" >
+        <element>
+            <xsl:attribute name="id" select="f:path/@value"/>
+            <xsl:apply-templates select="f:path | f:short | f:definition | f:alias | f:min | f:max | f:base | f:type | f:binding"/>
+        </element>
+    </xsl:template>
+    
+    <xd:doc>
         <xd:desc>Remove invalid slicing and inline NameInformation, ContactInformation, AddressInformation and InstructionsForUse.</xd:desc>
     </xd:doc>
-    <xsl:template match="f:differential/f:element[f:path[ends-with(@value,'.coding')]] |
+    <xsl:template priority="9" match="f:differential/f:element[f:path[ends-with(@value,'.coding')]] |
         f:differential/f:element[f:path[starts-with(@value,'patient.name_information.')]] |
         f:differential/f:element[f:path[starts-with(@value,'patient.contact_information.')]] |
         f:differential/f:element[f:path[starts-with(@value,'patient.address_information.')]] |
@@ -234,9 +244,10 @@
     <xd:doc>
         <xd:desc>Replace inline BackboneElement of NameInformation with a reference</xd:desc>
     </xd:doc>
-    <xsl:template match="f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.0.1.6--20200901000000'] | 
-        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.3.1.4--20200901000000'] |
-        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.17.1.3--20200901000000']">
+    <xsl:template match="
+        f:differential/f:element[f:path/@value = 'patient.name_information'] | 
+        f:differential/f:element[f:path/@value = 'contact.name_information'] |
+        f:differential/f:element[f:path/@value = 'health_professional.name_information']">
         <xsl:call-template name="replaceBackBoneElementWithReference">
             <xsl:with-param name="code" select="'HumanName'"/>
         </xsl:call-template>
@@ -244,10 +255,11 @@
     <xd:doc>
         <xd:desc>Replace inline BackboneElement of AddressInformation with a reference</xd:desc>
     </xd:doc>
-    <xsl:template match="f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.0.1.4--20200901000000'] |
-        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.3.1.5--20200901000000'] |
-        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.17.2.5--20200901000000'] |
-        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.17.1.7--20200901000000']">
+    <xsl:template match="
+        f:differential/f:element[f:path/@value = 'patient.address_information'] |
+        f:differential/f:element[f:path/@value = 'contact.address_information'] |
+        f:differential/f:element[f:path/@value = 'healthcare_provider.address_information'] |
+        f:differential/f:element[f:path/@value = 'health_professional.address_information'] ">
         <xsl:call-template name="replaceBackBoneElementWithReference">
             <xsl:with-param name="code" select="'Address'"/>
         </xsl:call-template>
@@ -255,10 +267,11 @@
     <xd:doc>
         <xd:desc>Replace inline BackboneElement of ContactInformation with a reference</xd:desc>
     </xd:doc>
-    <xsl:template match="f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.0.1.5--20200901000000'] |
-        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.3.1.6--20200901000000'] |
-        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.17.2.6--20200901000000'] |
-        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.17.1.8--20200901000000']">
+    <xsl:template match="
+        f:differential/f:element[f:path/@value = 'patient.contact_information'] |
+        f:differential/f:element[f:path/@value = 'contact.contact_information'] |
+        f:differential/f:element[f:path/@value = 'healthcare_provider.contact_information'] |
+        f:differential/f:element[f:path/@value = 'health_professional.contact_information']">
         <xsl:call-template name="replaceBackBoneElementWithReference">
             <xsl:with-param name="code" select="'ContactPoint'"/>
         </xsl:call-template>
@@ -266,9 +279,10 @@
     <xd:doc>
         <xd:desc>Replace inline BackboneElement of InsturctionForUse with a reference</xd:desc>
     </xd:doc>
-    <xsl:template match="f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.9.6.23240--20200901000000'] |
-        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.9.8.22098--20200901000000'] |
-        f:differential/f:element[@id = '2.16.840.1.113883.2.4.3.11.60.40.1.9.11.22504--20200901000000'] ">
+    <xsl:template priority="2" match="
+        f:differential/f:element[f:path/@value = 'medication_agreement.instructions_for_use'] |
+        f:differential/f:element[f:path/@value = 'administration_agreement.instructions_for_use'] |
+        f:differential/f:element[f:path/@value = 'medication_use.instructions_for_use'] ">
         <xsl:call-template name="replaceBackBoneElementWithReference">
             <xsl:with-param name="code" select="'Dosage'"/>
         </xsl:call-template>
@@ -294,6 +308,9 @@
             </type>
         </xsl:copy>
     </xsl:template>
+    
+
+
     
     <xd:doc>
         <xd:desc>Convert ValueSets to HdBe metadata</xd:desc>
@@ -504,6 +521,8 @@
         </xsl:copy>
     </xsl:template>
     
+    
+  
     <xd:doc>
         <xd:desc>Perform the transformation on input and convert files names, depending on the convertFileNames parameter.</xd:desc>
     </xd:doc>
