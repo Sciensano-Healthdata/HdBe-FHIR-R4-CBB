@@ -298,8 +298,9 @@
     
     <xsl:template name="replaceBackBoneElementWithReference">
         <xsl:param name="code" as="xs:string"/>
-        <xsl:copy>
-            <xsl:apply-templates select="@*" />
+        <xsl:copy>            
+            <!--<xsl:apply-templates select="@*" />-->
+            <xsl:attribute name="id" select="f:path/@value"/>
             <xsl:apply-templates select="f:path | f:short | f:definition | f:min | f:max"/>
             <xsl:variable name="zibname" select="f:short/@value"/>
             <type>
