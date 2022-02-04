@@ -2,7 +2,7 @@
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/[CBB-ID]'
+where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation'
 select 
 Name: name,
 Description: description,
@@ -24,17 +24,17 @@ URL: url
 
   <div id="Snapshot view" class="tabcontent" style="display:block">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/[CBB-ID], snapshot}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation, snapshot}}
   </div>
 
   <div id="Hybrid view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/[CBB-ID], hybrid}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation, hybrid}}
   </div>
 
   <div id="Diff view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/[CBB-ID], diff}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation, diff}}
   </div>
 
   <div id="Mapping" class="tabcontent">      
@@ -42,24 +42,24 @@ URL: url
       <div>
       @```
       from StructureDefinition
-      where url = 'https://fhir.healthdata.be/StructureDefinition/[CBB-ID]'
+      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation'
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = '[CBB-ID]') { map, comment }
+        join mapping.where(identity = 'HdBe-AddressInformation') { map, comment }
       ```
     </div>
   </div>
 
   <div id="JSON example" class="tabcontent">
-      {{json:examples/[CBB-ID]-01.xml}}
+      <p> HdBe-AddressInformation is a datatype profile and can therefore not have an example of its own. Rather, an example is provided within the example of the HdBe-profile(s) that use this datatype profile. </p>
   </div>
   <div id="XML example" class="tabcontent">
-      {{xml:examples/[CBB-ID]-01.xml}}
+      <p> HdBe-AddressInformation is a datatype profile and can therefore not have an example of its own. Rather, an example is provided within the example of the HdBe-profile(s) that use this datatype profile. </p>
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:resources/[CBB-ID].doc.md}}
+      {{render:resources/HdBe-AddressInformation.doc.md}}
   </div>
 
 </div>
