@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.34.1--20200901000000">
-            <path value="ability_to_perform_nursing_activities"/>
-            <short value="AbilityToPerformNursingActivities">
+        <element id="ability_to_perform_nursing_activities">
+         <path value="ability_to_perform_nursing_activities"/>
+         <short value="AbilityToPerformNursingActivities">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the AbilityToPerformNursingActivities information model. This root concept contains all data elements of the AbilityToPerformNursingActivities information model.">
+         <definition value="Root concept of the AbilityToPerformNursingActivities information model. This root concept contains all data elements of the AbilityToPerformNursingActivities information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,17 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="ability_to_perform_nursing_activities"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.34.3--20200901000000">
-            <path value="ability_to_perform_nursing_activities.nursing_intervention"/>
-            <short value="NursingIntervention">
+      </element>
+        <element id="ability_to_perform_nursing_activities.nursing_intervention">
+         <path value="ability_to_perform_nursing_activities.nursing_intervention"/>
+         <short value="NursingIntervention">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -89,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Specification of nursing interventions where the skills relate to.">
+         <definition value="Specification of nursing interventions where the skills relate to.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -99,22 +99,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="ability_to_perform_nursing_activities.nursing_intervention"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NursingIntervention"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.34.2--20200901000000">
-            <path value="ability_to_perform_nursing_activities.perform_nursing_activity"/>
-            
-            <short value="PerformNursingActivity">
+      </element>
+        <element id="ability_to_perform_nursing_activities.perform_nursing_activity">
+         <path value="ability_to_perform_nursing_activities.perform_nursing_activity"/>
+         <short value="PerformNursingActivity">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -124,7 +123,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Qualification of the degree of independence when performing certain (nursing) interventions.">
+         <definition value="Qualification of the degree of independence when performing certain (nursing) interventions.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -134,22 +133,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="ability_to_perform_nursing_activities.perform_nursing_activity"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="PerformNursingActivity codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/VerrichtenVPKHandeling"/>
          </binding>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

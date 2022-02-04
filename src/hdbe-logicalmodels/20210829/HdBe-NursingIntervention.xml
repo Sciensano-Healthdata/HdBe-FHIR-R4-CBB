@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.2.1--20200901000000">
-            <path value="nursing_intervention"/>
-            <short value="NursingIntervention">
+        <element id="nursing_intervention">
+         <path value="nursing_intervention"/>
+         <short value="NursingIntervention">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the NursingIntervention information model. This root concept contains all data elements of the NursingIntervention information model.">
+         <definition value="Root concept of the NursingIntervention information model. This root concept contains all data elements of the NursingIntervention information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,17 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="nursing_intervention"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.2.2--20200901000000">
-            <path value="nursing_intervention.intervention"/>
-            <short value="Intervention">
+      </element>
+        <element id="nursing_intervention.intervention">
+         <path value="nursing_intervention.intervention"/>
+         <short value="Intervention">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -89,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A nursing intervention is a treatment carried out by a nurse based on an expert opinion and clinical knowledge for the benefit of the person requesting healthcare. The intervention is targeted towards a certain problem (diagnosis) and has a predetermined healthcare result. It is possible to build a hierarchy of nursing interventions (where one intervention is part of another).">
+         <definition value="A nursing intervention is a treatment carried out by a nurse based on an expert opinion and clinical knowledge for the benefit of the person requesting healthcare. The intervention is targeted towards a certain problem (diagnosis) and has a predetermined healthcare result. It is possible to build a hierarchy of nursing interventions (where one intervention is part of another).">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -99,23 +99,23 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="nursing_intervention.intervention"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-        </element>
+      </element>
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.2.6--20200901000000">
-            <path value="nursing_intervention.indication"/>
-            <short value="Indication">
+        <element id="nursing_intervention.indication">
+         <path value="nursing_intervention.indication"/>
+         <short value="Indication">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -125,7 +125,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The nursing-related problem (indication) providing cause for the intervention.">
+         <definition value="The nursing-related problem (indication) providing cause for the intervention.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -135,20 +135,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="nursing_intervention.indication"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.419--20200901000000">
-            <path value="nursing_intervention.indication.problem"/>
-            <short value="Problem">
+      </element>
+        <element id="nursing_intervention.indication.problem">
+         <path value="nursing_intervention.indication.problem"/>
+         <short value="Problem">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -158,7 +158,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Problem information model.&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient himselve (in the form of a complaint) or by their healthprofessional (in the form of a diagnosis, for example). &#xD;&#xA;">
+         <definition value="Root concept of the Problem information model.&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient himselve (in the form of a complaint) or by their healthprofessional (in the form of a diagnosis, for example). &#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -168,21 +168,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="nursing_intervention.indication.problem"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.2.14--20200901000000">
-            <path value="nursing_intervention.treatment_objective"/>
-            <short value="TreatmentObjective">
+      </element>
+        <element id="nursing_intervention.treatment_objective">
+         <path value="nursing_intervention.treatment_objective"/>
+         <short value="TreatmentObjective">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -192,7 +192,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The description of the treatment goal that the intervention decision is based on.">
+         <definition value="The description of the treatment goal that the intervention decision is based on.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -202,21 +202,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="nursing_intervention.treatment_objective"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-TreatmentObjective"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.2.3--20200901000000">
-            <path value="nursing_intervention.interval"/>
-            <short value="Interval">
+      </element>
+        <element id="nursing_intervention.interval">
+         <path value="nursing_intervention.interval"/>
+         <short value="Interval">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -226,7 +226,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Interval indicates the time between planned procedures. &#xD;&#xA;When entering an interval, the focus is on the time between the consecutive procedures, such as in the treatment of a wound, for example. The exact times are of lesser importance.&#xD;&#xA;">
+         <definition value="Interval indicates the time between planned procedures. &#xD;&#xA;When entering an interval, the focus is on the time between the consecutive procedures, such as in the treatment of a wound, for example. The exact times are of lesser importance.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -236,20 +236,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="nursing_intervention.interval"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.2.4--20200901000000">
-            <path value="nursing_intervention.frequency"/>
-            <short value="Frequency">
+      </element>
+        <element id="nursing_intervention.frequency">
+         <path value="nursing_intervention.frequency"/>
+         <short value="Frequency">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -259,7 +259,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The frequency describes how often and in which period certain procedures are carried out, e.g. 3x a day.">
+         <definition value="The frequency describes how often and in which period certain procedures are carried out, e.g. 3x a day.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -269,20 +269,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="nursing_intervention.frequency"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.2.11--20200901000000">
-            <path value="nursing_intervention.procedure_start_date_time"/>
-            <short value="ProcedureStartDateTime">
+      </element>
+        <element id="nursing_intervention.procedure_start_date_time">
+         <path value="nursing_intervention.procedure_start_date_time"/>
+         <short value="ProcedureStartDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -292,7 +292,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The start date (and if possible start time) of the procedure. The concept offers the option to indicate the start of the period of a series of repeating procedures.">
+         <definition value="The start date (and if possible start time) of the procedure. The concept offers the option to indicate the start of the period of a series of repeating procedures.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -302,20 +302,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="nursing_intervention.procedure_start_date_time"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.2.12--20200901000000">
-            <path value="nursing_intervention.procedure_end_date_time"/>
-            <short value="ProcedureEndDateTime">
+      </element>
+        <element id="nursing_intervention.procedure_end_date_time">
+         <path value="nursing_intervention.procedure_end_date_time"/>
+         <short value="ProcedureEndDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -325,7 +325,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The end date (and if possible end time) of the procedure. The concept offers the option to indicate the end of the period of a series of repeating procedures.">
+         <definition value="The end date (and if possible end time) of the procedure. The concept offers the option to indicate the end of the period of a series of repeating procedures.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -335,20 +335,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="nursing_intervention.procedure_end_date_time"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.2.13--20200901000000">
-            <path value="nursing_intervention.medical_device"/>
-            <short value="MedicalDevice">
+      </element>
+        <element id="nursing_intervention.medical_device">
+         <path value="nursing_intervention.medical_device"/>
+         <short value="MedicalDevice">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -358,7 +358,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Description of the materials used for the nursing procedure, such as bandages.">
+         <definition value="Description of the materials used for the nursing procedure, such as bandages.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -368,21 +368,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="nursing_intervention.medical_device"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicalDevice"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.2.18--20200901000000">
-            <path value="nursing_intervention.instruction"/>
-            <short value="Instruction">
+      </element>
+        <element id="nursing_intervention.instruction">
+         <path value="nursing_intervention.instruction"/>
+         <short value="Instruction">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -392,7 +392,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Instructions for performing the nursing action. This is particularly at issue when the action is performed by the patient himself or by a caregiver.">
+         <definition value="Instructions for performing the nursing action. This is particularly at issue when the action is performed by the patient himself or by a caregiver.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -402,20 +402,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="nursing_intervention.instruction"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.2.15--20200901000000">
-            <path value="nursing_intervention.performer"/>
-            <short value="Performer">
+      </element>
+        <element id="nursing_intervention.performer">
+         <path value="nursing_intervention.performer"/>
+         <short value="Performer">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -425,7 +425,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The person carrying out the nursing procedure.">
+         <definition value="The person carrying out the nursing procedure.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -435,20 +435,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="nursing_intervention.performer"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.2.7--20200901000000">
-            <path value="nursing_intervention.performer.healthcare_provider"/>
-            <short value="HealthcareProvider">
+      </element>
+        <element id="nursing_intervention.performer.healthcare_provider">
+         <path value="nursing_intervention.performer.healthcare_provider"/>
+         <short value="HealthcareProvider">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -458,7 +458,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The health professional carrying out the nursing procedure.">
+         <definition value="The health professional carrying out the nursing procedure.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -468,21 +468,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="nursing_intervention.performer.healthcare_provider"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.422--20200901000000">
-            <path value="nursing_intervention.performer.healthcare_provider.health_professional"/>
-            
-            <short value="HealthProfessional">
+      </element>
+        <element id="nursing_intervention.performer.healthcare_provider.health_professional">
+         <path value="nursing_intervention.performer.healthcare_provider.health_professional"/>
+         <short value="HealthProfessional">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -492,7 +491,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the HealthProfessional information model. This root concept contains all data elements of the HealthProfessional information model.&#xD;&#xA;When referring to this information model the role the health professional fulfils in the healthcare process can be addressed additionally. For health professionals, this could be for example main practitioner or referrer.">
+         <definition value="Root concept of the HealthProfessional information model. This root concept contains all data elements of the HealthProfessional information model.&#xD;&#xA;When referring to this information model the role the health professional fulfils in the healthcare process can be addressed additionally. For health professionals, this could be for example main practitioner or referrer.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -502,21 +501,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="nursing_intervention.performer.healthcare_provider.health_professional"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.2.16--20200901000000">
-            <path value="nursing_intervention.performer.caregiver"/>
-            <short value="Caregiver">
+      </element>
+        <element id="nursing_intervention.performer.caregiver">
+         <path value="nursing_intervention.performer.caregiver"/>
+         <short value="Caregiver">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -526,7 +525,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The caregiver carrying out the nursing procedure.">
+         <definition value="The caregiver carrying out the nursing procedure.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -536,21 +535,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="nursing_intervention.performer.caregiver"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.423--20200901000000">
-            <path value="nursing_intervention.performer.caregiver.contact"/>
-            
-            <short value="Contact">
+      </element>
+        <element id="nursing_intervention.performer.caregiver.contact">
+         <path value="nursing_intervention.performer.caregiver.contact"/>
+         <short value="Contact">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -560,7 +558,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Contact information model. This root concept contains all data elements of the Contact information model.">
+         <definition value="Root concept of the Contact information model. This root concept contains all data elements of the Contact information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -570,21 +568,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="nursing_intervention.performer.caregiver.contact"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Contact"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.2.17--20200901000000">
-            <path value="nursing_intervention.performer.patient"/>
-            <short value="Patient">
+      </element>
+        <element id="nursing_intervention.performer.patient">
+         <path value="nursing_intervention.performer.patient"/>
+         <short value="Patient">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -594,7 +592,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The patient carrying out the nursing procedure.">
+         <definition value="The patient carrying out the nursing procedure.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -604,21 +602,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="nursing_intervention.performer.patient"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Patient"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.2.8--20200901000000">
-            <path value="nursing_intervention.requester"/>
-            <short value="Requester">
+      </element>
+        <element id="nursing_intervention.requester">
+         <path value="nursing_intervention.requester"/>
+         <short value="Requester">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -628,7 +626,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The health professional who requested the nursing intervention. If desired, only the requester’s specialty can be entered.">
+         <definition value="The health professional who requested the nursing intervention. If desired, only the requester’s specialty can be entered.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -638,21 +636,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="nursing_intervention.requester"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.425--20200901000000">
-            <path value="nursing_intervention.requester.health_professional"/>
-            
-            <short value="HealthProfessional">
+      </element>
+        <element id="nursing_intervention.requester.health_professional">
+         <path value="nursing_intervention.requester.health_professional"/>
+         <short value="HealthProfessional">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -662,7 +659,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the HealthProfessional information model. This root concept contains all data elements of the HealthProfessional information model.&#xD;&#xA;When referring to this information model the role the health professional fulfils in the healthcare process can be addressed additionally. For health professionals, this could be for example main practitioner or referrer.">
+         <definition value="Root concept of the HealthProfessional information model. This root concept contains all data elements of the HealthProfessional information model.&#xD;&#xA;When referring to this information model the role the health professional fulfils in the healthcare process can be addressed additionally. For health professionals, this could be for example main practitioner or referrer.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -672,22 +669,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="nursing_intervention.requester.health_professional"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.2.5--20200901000000">
-            <path value="nursing_intervention.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="nursing_intervention.comment">
+         <path value="nursing_intervention.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -697,7 +693,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Comment on the nursing intervention.">
+         <definition value="Comment on the nursing intervention.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -707,16 +703,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="nursing_intervention.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

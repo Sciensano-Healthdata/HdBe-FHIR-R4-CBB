@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.7.1--20200901000000">
-            <path value="pulse_rate"/>
-            <short value="PulseRate">
+        <element id="pulse_rate">
+         <path value="pulse_rate"/>
+         <short value="PulseRate">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the PulseRate information model. This root concept contains all data elements of the PulseRate information model.">
+         <definition value="Root concept of the PulseRate information model. This root concept contains all data elements of the PulseRate information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="pulse_rate"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.7.2--20200901000000">
-            <path value="pulse_rate.pulse_rate_value"/>
-            
-            <short value="PulseRateValue">
+      </element>
+        <element id="pulse_rate.pulse_rate_value">
+         <path value="pulse_rate.pulse_rate_value"/>
+         <short value="PulseRateValue">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The element contains the value of the pulse rate measured. The pulse rate is expressed in the number of tangible pulsations of an artery per minute, usually the a. radialis, a. carotis or a. femoralis.">
+         <definition value="The element contains the value of the pulse rate measured. The pulse rate is expressed in the number of tangible pulsations of an artery per minute, usually the a. radialis, a. carotis or a. femoralis.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,21 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="pulse_rate.pulse_rate_value"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.7.3--20200901000000">
-            <path value="pulse_rate.pulse_rate_date_time"/>
-            <short value="PulseRateDateTime">
+      </element>
+        <element id="pulse_rate.pulse_rate_date_time">
+         <path value="pulse_rate.pulse_rate_date_time"/>
+         <short value="PulseRateDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -124,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Date and time of the pulse rate or pulse regularity measurement.">
+         <definition value="Date and time of the pulse rate or pulse regularity measurement.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -134,21 +132,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="pulse_rate.pulse_rate_date_time"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.7.4--20200901000000">
-            <path value="pulse_rate.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="pulse_rate.comment">
+         <path value="pulse_rate.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -158,7 +155,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Comment on any problems or factors that may influence the measurement. Further explanation of pulse properties can be provided here as well: aequale/inaequale, pulsus alternans, pulsus paradoxus, pulse volume, etc.">
+         <definition value="Comment on any problems or factors that may influence the measurement. Further explanation of pulse properties can be provided here as well: aequale/inaequale, pulsus alternans, pulsus paradoxus, pulse volume, etc.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -168,21 +165,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pulse_rate.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.7.5--20200901000000">
-            <path value="pulse_rate.pulse_regularity"/>
-            
-            <short value="PulseRegularity">
+      </element>
+        <element id="pulse_rate.pulse_regularity">
+         <path value="pulse_rate.pulse_regularity"/>
+         <short value="PulseRegularity">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -192,7 +188,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Regular or irregular rhythm.">
+         <definition value="Regular or irregular rhythm.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -202,21 +198,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pulse_rate.pulse_regularity"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="PulseRegularity codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/PolsRegelmatigheid"/>
          </binding>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

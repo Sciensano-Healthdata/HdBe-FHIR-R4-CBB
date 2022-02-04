@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.15.1--20200901000000">
-            <path value="advance_directive"/>
-            <short value="AdvanceDirective">
+        <element id="advance_directive">
+         <path value="advance_directive"/>
+         <short value="AdvanceDirective">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the LivingWill information model. This concept contains all data elements of the LivingWill information model.">
+         <definition value="Root concept of the LivingWill information model. This concept contains all data elements of the LivingWill information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,17 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="advance_directive"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.15.2--20200901000000">
-            <path value="advance_directive.living_will_type"/>
-            <short value="LivingWillType">
+      </element>
+        <element id="advance_directive.living_will_type">
+         <path value="advance_directive.living_will_type"/>
+         <short value="LivingWillType">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -89,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="List of the different types of living wills.">
+         <definition value="List of the different types of living wills.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -99,26 +99,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="advance_directive.living_will_type"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="LivingWillType codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/WilsverklaringType"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.15.7--20200901000000">
-            <path value="advance_directive.living_will_date"/>
-            <short value="LivingWillDate">
+      </element>
+        <element id="advance_directive.living_will_date">
+         <path value="advance_directive.living_will_date"/>
+         <short value="LivingWillDate">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -128,7 +127,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date on which the living will was recorded.">
+         <definition value="The date on which the living will was recorded.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -138,20 +137,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="advance_directive.living_will_date"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.15.4--20200901000000">
-            <path value="advance_directive.disorder"/>
-            <short value="Disorder">
+      </element>
+        <element id="advance_directive.disorder">
+         <path value="advance_directive.disorder"/>
+         <short value="Disorder">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -161,7 +160,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The problem or disorder to which the living will applies.">
+         <definition value="The problem or disorder to which the living will applies.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -171,20 +170,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="advance_directive.disorder"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.443--20200901000000">
-            <path value="advance_directive.disorder.problem"/>
-            <short value="Problem">
+      </element>
+        <element id="advance_directive.disorder.problem">
+         <path value="advance_directive.disorder.problem"/>
+         <short value="Problem">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -194,7 +193,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Problem information model.&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient himselve (in the form of a complaint) or by their healthprofessional (in the form of a diagnosis, for example). &#xD;&#xA;">
+         <definition value="Root concept of the Problem information model.&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient himselve (in the form of a complaint) or by their healthprofessional (in the form of a diagnosis, for example). &#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -204,21 +203,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="advance_directive.disorder.problem"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.15.3--20200901000000">
-            <path value="advance_directive.representative"/>
-            <short value="Representative">
+      </element>
+        <element id="advance_directive.representative">
+         <path value="advance_directive.representative"/>
+         <short value="Representative">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -228,7 +227,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The person who is the legal representative or is appointed as the authorized representative in the signed authorization.">
+         <definition value="The person who is the legal representative or is appointed as the authorized representative in the signed authorization.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -238,21 +237,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="advance_directive.representative"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.444--20200901000000">
-            <path value="advance_directive.representative.contact"/>
-            
-            <short value="Contact">
+      </element>
+        <element id="advance_directive.representative.contact">
+         <path value="advance_directive.representative.contact"/>
+         <short value="Contact">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -262,7 +260,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Contact information model. This root concept contains all data elements of the Contact information model.">
+         <definition value="Root concept of the Contact information model. This root concept contains all data elements of the Contact information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -272,21 +270,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="advance_directive.representative.contact"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Contact"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.15.5--20200901000000">
-            <path value="advance_directive.living_will_document"/>
-            <short value="LivingWillDocument">
+      </element>
+        <element id="advance_directive.living_will_document">
+         <path value="advance_directive.living_will_document"/>
+         <short value="LivingWillDocument">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -296,7 +294,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Scanned source document with the living will and the patient's signature, such as a PDF.">
+         <definition value="Scanned source document with the living will and the patient's signature, such as a PDF.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -306,21 +304,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="advance_directive.living_will_document"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="base64Binary"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.15.6--20200901000000">
-            <path value="advance_directive.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="advance_directive.comment">
+         <path value="advance_directive.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -330,7 +327,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Comment on the living will: the form, such as a medallion, tattoo, etc., or where the living will can be found.">
+         <definition value="Comment on the living will: the form, such as a medallion, tattoo, etc., or where the living will can be found.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -340,17 +337,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="advance_directive.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

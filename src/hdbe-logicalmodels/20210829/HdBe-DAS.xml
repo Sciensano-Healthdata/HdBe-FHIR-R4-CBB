@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.1--20200901000000">
-            <path value="das"/>
-            <short value="DAS">
+        <element id="das">
+         <path value="das"/>
+         <short value="DAS">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the information model.This root concept contains all data elements of the information model DAS.">
+         <definition value="Root concept of the information model.This root concept contains all data elements of the information model DAS.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="das"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.15--20200901000000">
-            <path value="das.dasvalue"/>
-            
-            <short value="DASValue">
+      </element>
+        <element id="das.dasvalue">
+         <path value="das.dasvalue"/>
+         <short value="DASValue">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The result (value). ">
+         <definition value="The result (value). ">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,28 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="das.dasvalue"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-            <minValueQuantity>
-                <value value="0.00"/>
-            </minValueQuantity>
-            <maxValueQuantity>
-                <value value="10.00"/>
-            </maxValueQuantity>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.14--20200901000000">
-            <path value="das.dasmethod"/>
-            
-            <short value="DASMethod">
+      </element>
+        <element id="das.dasmethod">
+         <path value="das.dasmethod"/>
+         <short value="DASMethod">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -131,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The specification of the DAS method used. &#xD;&#xA;There are different DAS scores. Each type has a different formula. DAS-28 or DAS-44 stands for 28 or 44 painful and swollen joints. One blood value for inflammation (a ESR or a CRP laboratory result) and the overall experience of disease activity by the patient via a Visual Analog Scale (VAS).">
+         <definition value="The specification of the DAS method used. &#xD;&#xA;There are different DAS scores. Each type has a different formula. DAS-28 or DAS-44 stands for 28 or 44 painful and swollen joints. One blood value for inflammation (a ESR or a CRP laboratory result) and the overall experience of disease activity by the patient via a Visual Analog Scale (VAS).">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -141,26 +132,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="das.dasmethod"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="DASMethod codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/DASMethode"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.21--20200901000000">
-            <path value="das.dasformula"/>
-            <short value="DASFormula">
+      </element>
+        <element id="das.dasformula">
+         <path value="das.dasformula"/>
+         <short value="DASFormula">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -170,7 +160,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The specification of the type of DAS. &#xD;&#xA;There are different DAS scores. Each type has a different formula. ">
+         <definition value="The specification of the type of DAS. &#xD;&#xA;There are different DAS scores. Each type has a different formula. ">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -180,21 +170,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="das.dasformula"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.2--20200901000000">
-            <path value="das.affected_joint"/>
-            
-            <short value="AffectedJoint">
+      </element>
+        <element id="das.affected_joint">
+         <path value="das.affected_joint"/>
+         <short value="AffectedJoint">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -204,7 +193,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the AffectedJoint concept.This container contains all data elements of the AffectedJoint concept.">
+         <definition value="Container of the AffectedJoint concept.This container contains all data elements of the AffectedJoint concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -214,18 +203,18 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="das.affected_joint"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.16--20200901000000">
+      </element>
+        <element id="das.affected_joint.anatomical_location">
          <path value="das.affected_joint.anatomical_location"/>
          <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
@@ -256,10 +245,9 @@
       </element>
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.4--20200901000000">
-            <path value="das.affected_joint.swollen"/>
-            
-            <short value="Swollen">
+        <element id="das.affected_joint.swollen">
+         <path value="das.affected_joint.swollen"/>
+         <short value="Swollen">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -269,7 +257,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Swolen joint indicator.">
+         <definition value="Swolen joint indicator.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -279,22 +267,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="das.affected_joint.swollen"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="boolean"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.3--20200901000000">
-            <path value="das.affected_joint.tender"/>
-            
-            <short value="Tender">
+      </element>
+        <element id="das.affected_joint.tender">
+         <path value="das.affected_joint.tender"/>
+         <short value="Tender">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -304,7 +290,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Tender joint indicator.">
+         <definition value="Tender joint indicator.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -314,22 +300,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="das.affected_joint.tender"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="boolean"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.11--20200901000000">
-            <path value="das.count_of_tender_joints"/>
-            
-            <short value="CountOfTenderJoints">
+      </element>
+        <element id="das.count_of_tender_joints">
+         <path value="das.count_of_tender_joints"/>
+         <short value="CountOfTenderJoints">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -339,7 +323,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Count of tender joints as reported by the patient. ">
+         <definition value="Count of tender joints as reported by the patient. ">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -349,22 +333,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="das.count_of_tender_joints"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.12--20200901000000">
-            <path value="das.count_of_swolen_joints"/>
-            
-            <short value="CountOfSwolenJoints">
+      </element>
+        <element id="das.count_of_swolen_joints">
+         <path value="das.count_of_swolen_joints"/>
+         <short value="CountOfSwolenJoints">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -374,7 +356,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Count of swollen joints.">
+         <definition value="Count of swollen joints.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -384,21 +366,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="das.count_of_swolen_joints"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.22--20200901000000">
-            <path value="das.inflammation_indicator"/>
-            <short value="InflammationIndicator">
+      </element>
+        <element id="das.inflammation_indicator">
+         <path value="das.inflammation_indicator"/>
+         <short value="InflammationIndicator">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -408,7 +389,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the InflammationIndicator concept.This container contains all data elements of the InflammationIndicator concept.">
+         <definition value="Container of the InflammationIndicator concept.This container contains all data elements of the InflammationIndicator concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -418,22 +399,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="das.inflammation_indicator"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.20--20200901000000">
-            <path value="das.inflammation_indicator.esr"/>
-            
-            
-            <short value="ESR">
+      </element>
+        <element id="das.inflammation_indicator.esr">
+         <path value="das.inflammation_indicator.esr"/>
+         <short value="ESR">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -443,7 +422,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The C-reactive protein (CRP) is a laboratory measurment valuable for determining the presence of inflammation or to monitor the effect of a medical treatment on the inflammation. The erythrocyte sedimentation rate (ESR or sed rate) is the rate at which red blood cells in anticoagulated whole blood descend in a standardized tube over a period of one hour. Both test results can be used to calculate the DAS. ">
+         <definition value="The C-reactive protein (CRP) is a laboratory measurment valuable for determining the presence of inflammation or to monitor the effect of a medical treatment on the inflammation. The erythrocyte sedimentation rate (ESR or sed rate) is the rate at which red blood cells in anticoagulated whole blood descend in a standardized tube over a period of one hour. Both test results can be used to calculate the DAS. ">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -453,20 +432,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="das.inflammation_indicator.esr"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.103--20200901000000">
-            <path value="das.inflammation_indicator.esr.laboratory_test_result"/>
-            <short value="LaboratoryTestResult">
+      </element>
+        <element id="das.inflammation_indicator.esr.laboratory_test_result">
+         <path value="das.inflammation_indicator.esr.laboratory_test_result"/>
+         <short value="LaboratoryTestResult">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -476,7 +455,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the LaboratoryTestResult information model. This root concept contains all data elements of the LaboratoryTestResult information model.">
+         <definition value="Root concept of the LaboratoryTestResult information model. This root concept contains all data elements of the LaboratoryTestResult information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -486,23 +465,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="das.inflammation_indicator.esr.laboratory_test_result"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LaboratoryTestResult"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.19--20200901000000">
-            <path value="das.inflammation_indicator.crp"/>
-            
-            
-            <short value="CRP">
+      </element>
+        <element id="das.inflammation_indicator.crp">
+         <path value="das.inflammation_indicator.crp"/>
+         <short value="CRP">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -512,7 +489,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The C-reactive protein (CRP) is a laboratory measurment valuable for determining the presence of inflammation or to monitor the effect of a medical treatment on the inflammation. The erythrocyte sedimentation rate (ESR or sed rate) is the rate at which red blood cells in anticoagulated whole blood descend in a standardized tube over a period of one hour. Both test results can be used to calculate the DAS. ">
+         <definition value="The C-reactive protein (CRP) is a laboratory measurment valuable for determining the presence of inflammation or to monitor the effect of a medical treatment on the inflammation. The erythrocyte sedimentation rate (ESR or sed rate) is the rate at which red blood cells in anticoagulated whole blood descend in a standardized tube over a period of one hour. Both test results can be used to calculate the DAS. ">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -522,20 +499,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="das.inflammation_indicator.crp"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.104--20200901000000">
-            <path value="das.inflammation_indicator.crp.laboratory_test_result"/>
-            <short value="LaboratoryTestResult">
+      </element>
+        <element id="das.inflammation_indicator.crp.laboratory_test_result">
+         <path value="das.inflammation_indicator.crp.laboratory_test_result"/>
+         <short value="LaboratoryTestResult">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -545,7 +522,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the LaboratoryTestResult information model. This root concept contains all data elements of the LaboratoryTestResult information model.">
+         <definition value="Root concept of the LaboratoryTestResult information model. This root concept contains all data elements of the LaboratoryTestResult information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -555,22 +532,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="das.inflammation_indicator.crp.laboratory_test_result"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LaboratoryTestResult"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.17--20200901000000">
-            <path value="das.dasdate_time"/>
-            
-            <short value="DASDateTime">
+      </element>
+        <element id="das.dasdate_time">
+         <path value="das.dasdate_time"/>
+         <short value="DASDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -580,7 +556,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date and possibly time when the DAS score measurement was carried out.">
+         <definition value="The date and possibly time when the DAS score measurement was carried out.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -590,21 +566,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="das.dasdate_time"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.18.8--20200901000000">
-            <path value="das.vasgeneral_health"/>
-            
-            <short value="VASGeneralHealth">
+      </element>
+        <element id="das.vasgeneral_health">
+         <path value="das.vasgeneral_health"/>
+         <short value="VASGeneralHealth">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -614,7 +589,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The VAS score for general health as experienced by the patient on a scale of 1 to 100">
+         <definition value="The VAS score for general health as experienced by the patient on a scale of 1 to 100">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -624,23 +599,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="das.vasgeneral_health"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-            
-            <minValueQuantity>
-                <value value="0"/>
-            </minValueQuantity>
-            <maxValueQuantity>
-                <value value="100"/>
-            </maxValueQuantity>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

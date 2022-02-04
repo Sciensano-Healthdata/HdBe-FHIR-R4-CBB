@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.14.1--20200901000000">
-            <path value="pregnancy"/>
-            <short value="Pregnancy">
+        <element id="pregnancy">
+         <path value="pregnancy"/>
+         <short value="Pregnancy">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Pregnancy information model. This root concept contains all data elements of the Pregnancy information model.">
+         <definition value="Root concept of the Pregnancy information model. This root concept contains all data elements of the Pregnancy information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="pregnancy"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.14.4--20200901000000">
-            <path value="pregnancy.pregnancy_duration"/>
-            
-            <short value="PregnancyDuration">
+      </element>
+        <element id="pregnancy.pregnancy_duration">
+         <path value="pregnancy.pregnancy_duration"/>
+         <short value="PregnancyDuration">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Duration of the pregnancy on the day on which the patient was asked. The duration can be given in days (d) or weeks (wk).">
+         <definition value="Duration of the pregnancy on the day on which the patient was asked. The duration can be given in days (d) or weeks (wk).">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,22 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pregnancy.pregnancy_duration"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.14.6--20200901000000">
-            <path value="pregnancy.parity"/>
-            
-            <short value="Parity">
+      </element>
+        <element id="pregnancy.parity">
+         <path value="pregnancy.parity"/>
+         <short value="Parity">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -125,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Number of previous pregnancies ending in partum (&gt;= 16w 0d / 112 days).">
+         <definition value="Number of previous pregnancies ending in partum (&gt;= 16w 0d / 112 days).">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -135,21 +132,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pregnancy.parity"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.14.5--20200901000000">
-            <path value="pregnancy.gravidity"/>
-            
-            <short value="Gravidity">
+      </element>
+        <element id="pregnancy.gravidity">
+         <path value="pregnancy.gravidity"/>
+         <short value="Gravidity">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -159,7 +155,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The number of times the woman has gotten pregnant (including this one).">
+         <definition value="The number of times the woman has gotten pregnant (including this one).">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -169,21 +165,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pregnancy.gravidity"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.14.7--20200901000000">
-            <path value="pregnancy.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="pregnancy.comment">
+         <path value="pregnancy.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -193,7 +188,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Comment on the pregnancy.">
+         <definition value="Comment on the pregnancy.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -203,20 +198,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pregnancy.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.14.9--20200901000000">
-            <path value="pregnancy.estimated_date_of_delivery_items"/>
-            <short value="EstimatedDateOfDeliveryItems">
+      </element>
+        <element id="pregnancy.estimated_date_of_delivery_items">
+         <path value="pregnancy.estimated_date_of_delivery_items"/>
+         <short value="EstimatedDateOfDeliveryItems">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -226,7 +221,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the EstimatedDateOfDeliveryItems concept.This container contains all data elements of the EstimatedDateOfDeliveryItems concept.">
+         <definition value="Container of the EstimatedDateOfDeliveryItems concept.This container contains all data elements of the EstimatedDateOfDeliveryItems concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -236,21 +231,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pregnancy.estimated_date_of_delivery_items"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.14.3--20200901000000">
-            <path value="pregnancy.estimated_date_of_delivery_items.estimated_date_of_delivery"/>
-            
-            <short value="EstimatedDateOfDelivery">
+      </element>
+        <element id="pregnancy.estimated_date_of_delivery_items.estimated_date_of_delivery">
+         <path value="pregnancy.estimated_date_of_delivery_items.estimated_date_of_delivery"/>
+         <short value="EstimatedDateOfDelivery">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -260,7 +254,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date on which the pregnancy is expected to be 40w 0d (280 days). Different due dates are used at various points in the pregnancy.">
+         <definition value="The date on which the pregnancy is expected to be 40w 0d (280 days). Different due dates are used at various points in the pregnancy.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -270,20 +264,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pregnancy.estimated_date_of_delivery_items.estimated_date_of_delivery"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.14.10--20200901000000">
-            <path value="pregnancy.estimated_date_of_delivery_items.estimating_method"/>
-            <short value="EstimatingMethod">
+      </element>
+        <element id="pregnancy.estimated_date_of_delivery_items.estimating_method">
+         <path value="pregnancy.estimated_date_of_delivery_items.estimating_method"/>
+         <short value="EstimatingMethod">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -293,7 +287,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Method by which the delivery date is estimated.">
+         <definition value="Method by which the delivery date is estimated.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -303,25 +297,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pregnancy.estimated_date_of_delivery_items.estimating_method"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="EstimatingMethod codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/BepalingsMethode"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.14.11--20200901000000">
-            <path value="pregnancy.estimated_date_of_delivery_items.date_of_estimation"/>
-            <short value="DateOfEstimation">
+      </element>
+        <element id="pregnancy.estimated_date_of_delivery_items.date_of_estimation">
+         <path value="pregnancy.estimated_date_of_delivery_items.date_of_estimation"/>
+         <short value="DateOfEstimation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -331,7 +325,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Date on which the delivery date is estimated.">
+         <definition value="Date on which the delivery date is estimated.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -341,21 +335,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pregnancy.estimated_date_of_delivery_items.date_of_estimation"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.14.8--20200901000000">
-            <path value="pregnancy.estimated_date_of_delivery_items.date_last_menstruation"/>
-            
-            <short value="DateLastMenstruation">
+      </element>
+        <element id="pregnancy.estimated_date_of_delivery_items.date_last_menstruation">
+         <path value="pregnancy.estimated_date_of_delivery_items.date_last_menstruation"/>
+         <short value="DateLastMenstruation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -365,7 +358,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date on which the last menstruation started.">
+         <definition value="The date on which the last menstruation started.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -375,16 +368,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pregnancy.estimated_date_of_delivery_items.date_last_menstruation"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>
