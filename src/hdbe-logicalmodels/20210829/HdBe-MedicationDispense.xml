@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.9.20270--20200901000000">
-            <path value="medication_dispense"/>
-            <short value="MedicationDispense">
+        <element id="medication_dispense">
+         <path value="medication_dispense"/>
+         <short value="MedicationDispense">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the MedicationDispense information model. This root concept contains all data elements of the MedicationDispense information model.">
+         <definition value="Root concept of the MedicationDispense information model. This root concept contains all data elements of the MedicationDispense information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,17 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="medication_dispense"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.9.20858--20200901000000">
-            <path value="medication_dispense.supplier"/>
-            <short value="Supplier">
+      </element>
+        <element id="medication_dispense.supplier">
+         <path value="medication_dispense.supplier"/>
+         <short value="Supplier">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -89,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="In almost all cases, the supplier will be a pharmacist. It could also be supplied by a webshop (in case of an online order), a drug store or a foreign pharmacist.">
+         <definition value="In almost all cases, the supplier will be a pharmacist. It could also be supplied by a webshop (in case of an online order), a drug store or a foreign pharmacist.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -99,21 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_dispense.supplier"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.266--20200901000000">
-            <path value="medication_dispense.supplier.healthcare_provider"/>
-            
-            <short value="HealthcareProvider">
+      </element>
+        <element id="medication_dispense.supplier.healthcare_provider">
+         <path value="medication_dispense.supplier.healthcare_provider"/>
+         <short value="HealthcareProvider">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -123,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Healthcare Provider information model. This root concept contains all data elements of the Healthcare Provider information model.">
+         <definition value="Root concept of the Healthcare Provider information model. This root concept contains all data elements of the Healthcare Provider information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -133,21 +132,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_dispense.supplier.healthcare_provider"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.9.22396--20200901000000">
-            <path value="medication_dispense.dispense_request"/>
-            <short value="DispenseRequest">
+      </element>
+        <element id="medication_dispense.dispense_request">
+         <path value="medication_dispense.dispense_request"/>
+         <short value="DispenseRequest">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -157,7 +156,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Relationship to the dispense request.">
+         <definition value="Relationship to the dispense request.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -167,21 +166,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_dispense.dispense_request"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-DispenseRequest"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.9.22259--20200901000000">
-            <path value="medication_dispense.dispensed_medicine"/>
-            <short value="DispensedMedicine">
+      </element>
+        <element id="medication_dispense.dispensed_medicine">
+         <path value="medication_dispense.dispensed_medicine"/>
+         <short value="DispensedMedicine">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -191,7 +190,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The dispensed medicine.">
+         <definition value="The dispensed medicine.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -201,20 +200,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_dispense.dispensed_medicine"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.268--20200901000000">
-            <path value="medication_dispense.dispensed_medicine.pharmaceutical_product"/>
-            <short value="PharmaceuticalProduct">
+      </element>
+        <element id="medication_dispense.dispensed_medicine.pharmaceutical_product">
+         <path value="medication_dispense.dispensed_medicine.pharmaceutical_product"/>
+         <short value="PharmaceuticalProduct">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -224,7 +223,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the PharmaceuticalProduct partial information model.This root concept contains all data elements of the PharmaceuticalProduct partial information model.&#xD;&#xA;&#xD;&#xA;The prescribed product is usually a medicine. However, medical aids and bandages can also be prescribed and supplied via the pharmacy. Strictly speaking, food and blood products do not belong in the medication category, but can be prescribed and supplied by a pharmacy as well. &#xD;&#xA;&#xD;&#xA;A type of medication can be indicated with **a single code**. That code can be chosen from several possible coding systems (concretely: GPK, PRK, HPK or article numbers). Correct use of these codes in the software systems will sufficiently record the composition of the product used, making a complete product specification unnecessary. &#xD;&#xA;&#xD;&#xA;In addition to a primary code, **alternative codes **from other coding systems can also be entered (so that the GPK can be sent along in the event that the patient was registered based on PRK, for example). &#xD;&#xA;&#xD;&#xA;Entering multiple ingredients will enable you to display a compound product. &#xD;&#xA;In that case, the **composition of the medication** can be specified implicitly (with the use of a medication code) or explicitly, for example by listing the (active) substance(s) of the medication. &#xD;&#xA;**Prescriptions to be prepared by the pharmacy** can be entered as well. This can be done by means of the option listed above to enter coded ingredients and/or by entering the composition and preparation method as free text.">
+         <definition value="Root concept of the PharmaceuticalProduct partial information model.This root concept contains all data elements of the PharmaceuticalProduct partial information model.&#xD;&#xA;&#xD;&#xA;The prescribed product is usually a medicine. However, medical aids and bandages can also be prescribed and supplied via the pharmacy. Strictly speaking, food and blood products do not belong in the medication category, but can be prescribed and supplied by a pharmacy as well. &#xD;&#xA;&#xD;&#xA;A type of medication can be indicated with **a single code**. That code can be chosen from several possible coding systems (concretely: GPK, PRK, HPK or article numbers). Correct use of these codes in the software systems will sufficiently record the composition of the product used, making a complete product specification unnecessary. &#xD;&#xA;&#xD;&#xA;In addition to a primary code, **alternative codes **from other coding systems can also be entered (so that the GPK can be sent along in the event that the patient was registered based on PRK, for example). &#xD;&#xA;&#xD;&#xA;Entering multiple ingredients will enable you to display a compound product. &#xD;&#xA;In that case, the **composition of the medication** can be specified implicitly (with the use of a medication code) or explicitly, for example by listing the (active) substance(s) of the medication. &#xD;&#xA;**Prescriptions to be prepared by the pharmacy** can be entered as well. This can be done by means of the option listed above to enter coded ingredients and/or by entering the composition and preparation method as free text.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -234,21 +233,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_dispense.dispensed_medicine.pharmaceutical_product"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.9.20272--20200901000000">
-            <path value="medication_dispense.medication_dispense_date_time"/>
-            <short value="MedicationDispenseDateTime">
+      </element>
+        <element id="medication_dispense.medication_dispense_date_time">
+         <path value="medication_dispense.medication_dispense_date_time"/>
+         <short value="MedicationDispenseDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -258,7 +257,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The time at which the medicine was supplied. The date and time at which the medicine is delivered. &#xD;&#xA;Note: this is the time at which the medicine was delivered to the patient (or their administrator/representative) and not the request date.&#xD;&#xA;">
+         <definition value="The time at which the medicine was supplied. The date and time at which the medicine is delivered. &#xD;&#xA;Note: this is the time at which the medicine was delivered to the patient (or their administrator/representative) and not the request date.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -268,20 +267,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_dispense.medication_dispense_date_time"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.9.22500--20200901000000">
-            <path value="medication_dispense.request_date"/>
-            <short value="RequestDate">
+      </element>
+        <element id="medication_dispense.request_date">
+         <path value="medication_dispense.request_date"/>
+         <short value="RequestDate">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -291,7 +290,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The request date is the time at which a pharmacist records an intended dispense.">
+         <definition value="The request date is the time at which a pharmacist records an intended dispense.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -301,20 +300,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_dispense.request_date"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.9.20927--20200901000000">
-            <path value="medication_dispense.distribution_form"/>
-            <short value="DistributionForm">
+      </element>
+        <element id="medication_dispense.distribution_form">
+         <path value="medication_dispense.distribution_form"/>
+         <short value="DistributionForm">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -324,7 +323,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Distribution form ">
+         <definition value="Distribution form ">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -334,25 +333,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_dispense.distribution_form"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="DistributionForm codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieverstrekkingDistributievorm"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.9.20924--20200901000000">
-            <path value="medication_dispense.duration_of_use"/>
-            <short value="DurationOfUse">
+      </element>
+        <element id="medication_dispense.duration_of_use">
+         <path value="medication_dispense.duration_of_use"/>
+         <short value="DurationOfUse">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -362,7 +361,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The period in which the medication is expected to be used. The value depends on the dose and the dispensed amount.">
+         <definition value="The period in which the medication is expected to be used. The value depends on the dose and the dispensed amount.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -372,21 +371,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_dispense.duration_of_use"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.9.23285--20200901000000">
-            <path value="medication_dispense.medication_dispense_additional_information"/>
-            <short value="MedicationDispenseAdditionalInformation">
+      </element>
+        <element id="medication_dispense.medication_dispense_additional_information">
+         <path value="medication_dispense.medication_dispense_additional_information"/>
+         <short value="MedicationDispenseAdditionalInformation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -396,7 +394,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Additional information includes details on the structure of the medical dispense. This can be e.g. a reason for deviating from the dispense request. &#xD;&#xA;For now, this list is used. This list will be replaced by a thesaurus in the G standard at a later stage.">
+         <definition value="Additional information includes details on the structure of the medical dispense. This can be e.g. a reason for deviating from the dispense request. &#xD;&#xA;For now, this list is used. This list will be replaced by a thesaurus in the G standard at a later stage.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -406,25 +404,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="medication_dispense.medication_dispense_additional_information"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="MedicationDispenseAdditionalInformation codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieverstrekkingAanvullendeInformatie"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.9.20923--20200901000000">
-            <path value="medication_dispense.dispensed_amount"/>
-            <short value="DispensedAmount">
+      </element>
+        <element id="medication_dispense.dispensed_amount">
+         <path value="medication_dispense.dispensed_amount"/>
+         <short value="DispensedAmount">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -434,7 +432,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Number of units of the product (measured based on the relevant product code) supplied. Optionally a translation to NHG table Gebruiksvoorschriften(Table 25) is also allowed.">
+         <definition value="Number of units of the product (measured based on the relevant product code) supplied. Optionally a translation to NHG table Gebruiksvoorschriften(Table 25) is also allowed.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -444,21 +442,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_dispense.dispensed_amount"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.9.20925--20200901000000">
-            <path value="medication_dispense.dispense_location"/>
-            <short value="DispenseLocation">
+      </element>
+        <element id="medication_dispense.dispense_location">
+         <path value="medication_dispense.dispense_location"/>
+         <short value="DispenseLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -468,7 +465,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Dispense location">
+         <definition value="Dispense location">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -478,20 +475,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_dispense.dispense_location"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.9.22276--20200901000000">
-            <path value="medication_dispense.comment"/>
-            <short value="Comment">
+      </element>
+        <element id="medication_dispense.comment">
+         <path value="medication_dispense.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -501,7 +498,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Comments on the dispense.">
+         <definition value="Comments on the dispense.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -511,16 +508,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_dispense.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.20.1--20200901000000">
-            <path value="refraction"/>
-            <short value="Refraction">
+        <element id="refraction">
+         <path value="refraction"/>
+         <short value="Refraction">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Refractie information model.This root concept contains all data elements of the Refraction information model.">
+         <definition value="Root concept of the Refractie information model.This root concept contains all data elements of the Refraction information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="refraction"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.20.4--20200901000000">
-            <path value="refraction.refraction_measurement_method"/>
-            
-            <short value="RefractionMeasurementMethod">
+      </element>
+        <element id="refraction.refraction_measurement_method">
+         <path value="refraction.refraction_measurement_method"/>
+         <short value="RefractionMeasurementMethod">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The method used to measure the refraction.">
+         <definition value="The method used to measure the refraction.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,26 +99,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="refraction.refraction_measurement_method"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="RefractionMeasurementMethod codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/RefractieMeetMethode"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.20.3--20200901000000">
-            <path value="refraction.refraction_date_time"/>
-            
-            <short value="RefractionDateTime">
+      </element>
+        <element id="refraction.refraction_date_time">
+         <path value="refraction.refraction_date_time"/>
+         <short value="RefractionDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -129,7 +127,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date and time when the refraction measurement was carried out.">
+         <definition value="The date and time when the refraction measurement was carried out.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -139,20 +137,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="refraction.refraction_date_time"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.20.12--20200901000000">
-            <path value="refraction.cilindrical_refraction"/>
-            <short value="CilindricalRefraction">
+      </element>
+        <element id="refraction.cilindrical_refraction">
+         <path value="refraction.cilindrical_refraction"/>
+         <short value="CilindricalRefraction">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -162,7 +160,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the CilindricalRefraction concept.This container contains all data elements of the CilindricalRefraction concept.">
+         <definition value="Container of the CilindricalRefraction concept.This container contains all data elements of the CilindricalRefraction concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -172,21 +170,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="refraction.cilindrical_refraction"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.20.11--20200901000000">
-            <path value="refraction.cilindrical_refraction.cylindrical_refraction_value"/>
-            
-            <short value="CylindricalRefractionValue">
+      </element>
+        <element id="refraction.cilindrical_refraction.cylindrical_refraction_value">
+         <path value="refraction.cilindrical_refraction.cylindrical_refraction_value"/>
+         <short value="CylindricalRefractionValue">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -196,7 +193,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value=" The power of the cylinder needed to correct the cylindrical error (astigmatism), expressed in diopters. When a cylindrical refraction is registered, the axis of the cylinder must also be specified.">
+         <definition value=" The power of the cylinder needed to correct the cylindrical error (astigmatism), expressed in diopters. When a cylindrical refraction is registered, the axis of the cylinder must also be specified.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -206,28 +203,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="refraction.cilindrical_refraction.cylindrical_refraction_value"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-            <minValueQuantity>
-                <value value="-10.00"/>
-            </minValueQuantity>
-            <maxValueQuantity>
-                <value value="0.00"/>
-            </maxValueQuantity>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.20.13--20200901000000">
-            <path value="refraction.cilindrical_refraction.cilindric_refraction_axis"/>
-            
-            <short value="CilindricRefractionAxis">
+      </element>
+        <element id="refraction.cilindrical_refraction.cilindric_refraction_axis">
+         <path value="refraction.cilindrical_refraction.cilindric_refraction_axis"/>
+         <short value="CilindricRefractionAxis">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -237,7 +226,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The axis direction of the cylindrical refraction value expressed in degrees.">
+         <definition value="The axis direction of the cylindrical refraction value expressed in degrees.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -247,27 +236,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="refraction.cilindrical_refraction.cilindric_refraction_axis"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-            <minValueQuantity>
-                <value value="0"/>
-            </minValueQuantity>
-            <maxValueQuantity>
-                <value value="180"/>
-            </maxValueQuantity>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.20.5--20200901000000">
-            <path value="refraction.prisma"/>
-            <short value="Prisma">
+      </element>
+        <element id="refraction.prisma">
+         <path value="refraction.prisma"/>
+         <short value="Prisma">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -277,7 +259,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the Prisma concept.This container contains all data elements of the Prisma container.">
+         <definition value="Container of the Prisma concept.This container contains all data elements of the Prisma container.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -287,21 +269,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="refraction.prisma"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.20.6--20200901000000">
-            <path value="refraction.prisma.prisma_value"/>
-            
-            <short value="PrismaValue">
+      </element>
+        <element id="refraction.prisma.prisma_value">
+         <path value="refraction.prisma.prisma_value"/>
+         <short value="PrismaValue">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -311,7 +292,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The power of the prism, expressed in diopters.&#xD;&#xA;">
+         <definition value="The power of the prism, expressed in diopters.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -321,28 +302,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="refraction.prisma.prisma_value"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-            <minValueQuantity>
-                <value value="0.00"/>
-            </minValueQuantity>
-            <maxValueQuantity>
-                <value value="40.00"/>
-            </maxValueQuantity>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.20.7--20200901000000">
-            <path value="refraction.prisma.prisma_base"/>
-            
-            <short value="PrismaBase">
+      </element>
+        <element id="refraction.prisma.prisma_base">
+         <path value="refraction.prisma.prisma_base"/>
+         <short value="PrismaBase">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -352,7 +325,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The base of the prism, expressed in degrees.&#xD;&#xA;">
+         <definition value="The base of the prism, expressed in degrees.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -362,27 +335,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="refraction.prisma.prisma_base"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-            <minValueQuantity>
-                <value value="0"/>
-            </minValueQuantity>
-            <maxValueQuantity>
-                <value value="360"/>
-            </maxValueQuantity>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.20.14--20200901000000">
-            <path value="refraction.sferic_refraction"/>
-            <short value="SfericRefraction">
+      </element>
+        <element id="refraction.sferic_refraction">
+         <path value="refraction.sferic_refraction"/>
+         <short value="SfericRefraction">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -392,7 +358,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the SfericRefraction concept.This container contains all data elements of the SfericRefraction concept.">
+         <definition value="Container of the SfericRefraction concept.This container contains all data elements of the SfericRefraction concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -402,21 +368,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="refraction.sferic_refraction"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.20.9--20200901000000">
-            <path value="refraction.sferic_refraction.sferic_refraction_value"/>
-            
-            <short value="SfericRefractionValue">
+      </element>
+        <element id="refraction.sferic_refraction.sferic_refraction_value">
+         <path value="refraction.sferic_refraction.sferic_refraction_value"/>
+         <short value="SfericRefractionValue">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -426,7 +391,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The spherical spectacle strength power needed to correct nearsightedness (myopia) or farsightedness (hyperopia), expressed in diopters, ascending by 0.25D.">
+         <definition value="The spherical spectacle strength power needed to correct nearsightedness (myopia) or farsightedness (hyperopia), expressed in diopters, ascending by 0.25D.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -436,26 +401,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="refraction.sferic_refraction.sferic_refraction_value"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            <minValueQuantity>
-                <value value="-25.00"/>
-            </minValueQuantity>
-            <maxValueQuantity>
-                <value value="25.00"/>
-            </maxValueQuantity>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.20.10--20200901000000">
-            <path value="refraction.sferic_refraction.sferical_equivalent"/>
-            <short value="SfericalEquivalent">
+      </element>
+        <element id="refraction.sferic_refraction.sferical_equivalent">
+         <path value="refraction.sferic_refraction.sferical_equivalent"/>
+         <short value="SfericalEquivalent">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -465,7 +424,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value=" The spherical power added to half of the cylindrical power. Expressed in diopters, ascending by 0.1D. Some equipment automatically calculates the spherical equivalent automatically.">
+         <definition value=" The spherical power added to half of the cylindrical power. Expressed in diopters, ascending by 0.1D. Some equipment automatically calculates the spherical equivalent automatically.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -475,27 +434,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="refraction.sferic_refraction.sferical_equivalent"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            <minValueQuantity>
-                <value value="-25.00"/>
-            </minValueQuantity>
-            <maxValueQuantity>
-                <value value="25.00"/>
-            </maxValueQuantity>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.20.8--20200901000000">
-            <path value="refraction.read_addition"/>
-            
-            <short value="ReadAddition">
+      </element>
+        <element id="refraction.read_addition">
+         <path value="refraction.read_addition"/>
+         <short value="ReadAddition">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -505,7 +457,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A supplement that is added to the refraction value to determine the strength of the reading glasses, expressed in diopters.">
+         <definition value="A supplement that is added to the refraction value to determine the strength of the reading glasses, expressed in diopters.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -515,25 +467,18 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="refraction.read_addition"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-            <minValueQuantity>
-                <value value="0.00"/>
-            </minValueQuantity>
-            <maxValueQuantity>
-                <value value="5.00"/>
-            </maxValueQuantity>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.20.2--20200901000000">
+      </element>
+        <element id="refraction.anatomical_location">
          <path value="refraction.anatomical_location"/>
          <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">

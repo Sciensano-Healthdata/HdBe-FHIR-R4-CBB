@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.7.19926--20200901000000">
-            <path value="pharmaceutical_product"/>
-            <short value="PharmaceuticalProduct">
+        <element id="pharmaceutical_product">
+         <path value="pharmaceutical_product"/>
+         <short value="PharmaceuticalProduct">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the PharmaceuticalProduct partial information model.This root concept contains all data elements of the PharmaceuticalProduct partial information model.&#xD;&#xA;&#xD;&#xA;The prescribed product is usually a medicine. However, medical aids and bandages can also be prescribed and supplied via the pharmacy. Strictly speaking, food and blood products do not belong in the medication category, but can be prescribed and supplied by a pharmacy as well. &#xD;&#xA;&#xD;&#xA;A type of medication can be indicated with **a single code**. That code can be chosen from several possible coding systems (concretely: GPK, PRK, HPK or article numbers). Correct use of these codes in the software systems will sufficiently record the composition of the product used, making a complete product specification unnecessary. &#xD;&#xA;&#xD;&#xA;In addition to a primary code, **alternative codes **from other coding systems can also be entered (so that the GPK can be sent along in the event that the patient was registered based on PRK, for example). &#xD;&#xA;&#xD;&#xA;Entering multiple ingredients will enable you to display a compound product. &#xD;&#xA;In that case, the **composition of the medication** can be specified implicitly (with the use of a medication code) or explicitly, for example by listing the (active) substance(s) of the medication. &#xD;&#xA;**Prescriptions to be prepared by the pharmacy** can be entered as well. This can be done by means of the option listed above to enter coded ingredients and/or by entering the composition and preparation method as free text.">
+         <definition value="Root concept of the PharmaceuticalProduct partial information model.This root concept contains all data elements of the PharmaceuticalProduct partial information model.&#xD;&#xA;&#xD;&#xA;The prescribed product is usually a medicine. However, medical aids and bandages can also be prescribed and supplied via the pharmacy. Strictly speaking, food and blood products do not belong in the medication category, but can be prescribed and supplied by a pharmacy as well. &#xD;&#xA;&#xD;&#xA;A type of medication can be indicated with **a single code**. That code can be chosen from several possible coding systems (concretely: GPK, PRK, HPK or article numbers). Correct use of these codes in the software systems will sufficiently record the composition of the product used, making a complete product specification unnecessary. &#xD;&#xA;&#xD;&#xA;In addition to a primary code, **alternative codes **from other coding systems can also be entered (so that the GPK can be sent along in the event that the patient was registered based on PRK, for example). &#xD;&#xA;&#xD;&#xA;Entering multiple ingredients will enable you to display a compound product. &#xD;&#xA;In that case, the **composition of the medication** can be specified implicitly (with the use of a medication code) or explicitly, for example by listing the (active) substance(s) of the medication. &#xD;&#xA;**Prescriptions to be prepared by the pharmacy** can be entered as well. This can be done by means of the option listed above to enter coded ingredients and/or by entering the composition and preparation method as free text.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,17 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="pharmaceutical_product"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.7.19927--20200901000000">
-            <path value="pharmaceutical_product.medication_code"/>
-            <short value="MedicationCode">
+      </element>
+        <element id="pharmaceutical_product.medication_code">
+         <path value="pharmaceutical_product.medication_code"/>
+         <short value="MedicationCode">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -89,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Coding medication in the Netherlands is done on the basis of the G standard (issued by Z-index), which is filled under the direction of KNMP. &#xD;&#xA;&#xD;&#xA;The coded medication can be expressed as: &#xD;&#xA;&#xD;&#xA;* GTIN International Article Number&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;* ZI-nummer (2.16.840.1.113883.2.4.4.8)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;* Trade product code (HPK)&#xD;&#xA;* Prescription code (PRK)&#xD;&#xA;* Generic product code (GPK)&#xD;&#xA;* Anatomic Therapeutic Classification code (ATC)&#xD;&#xA;* Substance Name Code (SNK)&#xD;&#xA;* Substance Name Code, in combination with Route of Administration (SSK)&#xD;&#xA;* SNOMED CT code&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;The GTIN enables identification of the product including its origin with a barcode. &#xD;&#xA;The ZI number represents the tradeproduct and the package size. &#xD;&#xA;The HPK is the code for the trade product (with the brand name) as used per dose/per time the medication is taken (1 pill, 1 puff, 1ml) &#xD;&#xA;The PRK contains als GPK information supplemented with information needed to prescribe the right product. this level is intended to facilitate generic prescription of drugs. &#xD;&#xA;The GPK defines the pharmaceutical characteristics of a product: ingredients, strengths, units, pharmaceutical form and route of administration. &#xD;&#xA;The Substance Name Code (SNK) is the (active) compound. &#xD;&#xA;Further information about the G-Standaard levels see https://www.z-index.nl &#xD;&#xA;So called 90.000.000 numbers are used in local IT systems. These numbers shall not be used for external communication. In the this is necessary only the description (not the code) may be included. This&#xA;                        is in accordance with national agreements (Nictiz Standard).&#xD;&#xA;">
+         <definition value="Coding medication in the Netherlands is done on the basis of the G standard (issued by Z-index), which is filled under the direction of KNMP. &#xD;&#xA;&#xD;&#xA;The coded medication can be expressed as: &#xD;&#xA;&#xD;&#xA;* GTIN International Article Number&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;* ZI-nummer (2.16.840.1.113883.2.4.4.8)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;* Trade product code (HPK)&#xD;&#xA;* Prescription code (PRK)&#xD;&#xA;* Generic product code (GPK)&#xD;&#xA;* Anatomic Therapeutic Classification code (ATC)&#xD;&#xA;* Substance Name Code (SNK)&#xD;&#xA;* Substance Name Code, in combination with Route of Administration (SSK)&#xD;&#xA;* SNOMED CT code&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;The GTIN enables identification of the product including its origin with a barcode. &#xD;&#xA;The ZI number represents the tradeproduct and the package size. &#xD;&#xA;The HPK is the code for the trade product (with the brand name) as used per dose/per time the medication is taken (1 pill, 1 puff, 1ml) &#xD;&#xA;The PRK contains als GPK information supplemented with information needed to prescribe the right product. this level is intended to facilitate generic prescription of drugs. &#xD;&#xA;The GPK defines the pharmaceutical characteristics of a product: ingredients, strengths, units, pharmaceutical form and route of administration. &#xD;&#xA;The Substance Name Code (SNK) is the (active) compound. &#xD;&#xA;Further information about the G-Standaard levels see https://www.z-index.nl &#xD;&#xA;So called 90.000.000 numbers are used in local IT systems. These numbers shall not be used for external communication. In the this is necessary only the description (not the code) may be included. This&#xA;                        is in accordance with national agreements (Nictiz Standard).&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -99,18 +99,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pharmaceutical_product.medication_code"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-        </element>
+      </element>
         
         
         
@@ -118,9 +117,9 @@
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.7.19928--20200901000000">
-            <path value="pharmaceutical_product.product_specifications"/>
-            <short value="ProductSpecifications">
+        <element id="pharmaceutical_product.product_specifications">
+         <path value="pharmaceutical_product.product_specifications"/>
+         <short value="ProductSpecifications">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -130,7 +129,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the ProductSpecifications concept. This container contains all data elements of the ProductSpecifications concept. &#xD;&#xA;&#xD;&#xA;Product specifications are required if the product code is not sufficient to ascertain the active substances and strength.&#xD;&#xA;">
+         <definition value="Container of the ProductSpecifications concept. This container contains all data elements of the ProductSpecifications concept. &#xD;&#xA;&#xD;&#xA;Product specifications are required if the product code is not sufficient to ascertain the active substances and strength.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -140,20 +139,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pharmaceutical_product.product_specifications"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.7.19931--20200901000000">
-            <path value="pharmaceutical_product.product_specifications.pharmaceutical_form"/>
-            <short value="PharmaceuticalForm">
+      </element>
+        <element id="pharmaceutical_product.product_specifications.pharmaceutical_form">
+         <path value="pharmaceutical_product.product_specifications.pharmaceutical_form"/>
+         <short value="PharmaceuticalForm">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -163,7 +162,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The pharmaceutical form indicates the form of the medication. Examples include: tablet, suppository, infusion liquid, ointment. If the product has a GPK code in the G standard, the form will be known in the G standard. For products without a code (free text, preparation by the pharmacy), the means of administration can be entered.">
+         <definition value="The pharmaceutical form indicates the form of the medication. Examples include: tablet, suppository, infusion liquid, ointment. If the product has a GPK code in the G standard, the form will be known in the G standard. For products without a code (free text, preparation by the pharmacy), the means of administration can be entered.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -173,26 +172,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pharmaceutical_product.product_specifications.pharmaceutical_form"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="PharmaceuticalForm codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/FarmaceutischeVorm"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.7.19929--20200901000000">
-            <path value="pharmaceutical_product.product_specifications.medication"/>
-            <short value="Medication">
+      </element>
+        <element id="pharmaceutical_product.product_specifications.medication">
+         <path value="pharmaceutical_product.product_specifications.medication"/>
+         <short value="Medication">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -202,7 +200,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="There is no code for medication entered in free text. In these cases, enter the complete description.">
+         <definition value="There is no code for medication entered in free text. In these cases, enter the complete description.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -212,21 +210,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pharmaceutical_product.product_specifications.medication"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.7.19784--20200901000000">
-            <path value="pharmaceutical_product.product_specifications.description"/>
-            <short value="Description">
+      </element>
+        <element id="pharmaceutical_product.product_specifications.description">
+         <path value="pharmaceutical_product.product_specifications.description"/>
+         <short value="Description">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -236,7 +233,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A textual description of the type of medication (including relevant properties of the composition and preparation method if possible), which is only used if no coded indication from the G Standard is available (magistral preparation).">
+         <definition value="A textual description of the type of medication (including relevant properties of the composition and preparation method if possible), which is only used if no coded indication from the G Standard is available (magistral preparation).">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -246,20 +243,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pharmaceutical_product.product_specifications.description"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.7.19932--20200901000000">
-            <path value="pharmaceutical_product.product_specifications.ingredient"/>
-            <short value="Ingredient">
+      </element>
+        <element id="pharmaceutical_product.product_specifications.ingredient">
+         <path value="pharmaceutical_product.product_specifications.ingredient"/>
+         <short value="Ingredient">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -269,7 +266,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the Ingredient concept. This container contains all data elements of the Ingredient concept. &#xD;&#xA;&#xD;&#xA;A product contains one or more active substances and excipients. These are usually determined by the product code. For medication prepared or compounded by the local pharmacy, each ingredient must be entered separately. &#xD;&#xA;&#xD;&#xA;The active substances play an important role, as they: &#xD;&#xA;a) determine the pharmacotherapeutic effect of the medication and &#xD;&#xA;b) serve as the basis for the indication of the strength of the medication (e.g. 200mg).&#xD;&#xA;">
+         <definition value="Container of the Ingredient concept. This container contains all data elements of the Ingredient concept. &#xD;&#xA;&#xD;&#xA;A product contains one or more active substances and excipients. These are usually determined by the product code. For medication prepared or compounded by the local pharmacy, each ingredient must be entered separately. &#xD;&#xA;&#xD;&#xA;The active substances play an important role, as they: &#xD;&#xA;a) determine the pharmacotherapeutic effect of the medication and &#xD;&#xA;b) serve as the basis for the indication of the strength of the medication (e.g. 200mg).&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -279,20 +276,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="pharmaceutical_product.product_specifications.ingredient"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.7.19934--20200901000000">
-            <path value="pharmaceutical_product.product_specifications.ingredient.substance_code"/>
-            <short value="SubstanceCode">
+      </element>
+        <element id="pharmaceutical_product.product_specifications.ingredient.substance_code">
+         <path value="pharmaceutical_product.product_specifications.ingredient.substance_code"/>
+         <short value="SubstanceCode">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -302,7 +299,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Active substance or excipient. &#xD;&#xA;Here, the same codes can be used as for the ProductCode (for dilutions and compounds in particular), but now, the ATC, SSK and SNK codes can also be used to indicate a substance (to list ingredients of local products prepared by the pharmacy). &#xD;&#xA;&#xD;&#xA;* GTIN International Article Number &#xD;&#xA;&#xD;&#xA;* KNMP article number &#xD;&#xA;&#xD;&#xA;* Trade product code (HPK) &#xD;&#xA;&#xD;&#xA;* Prescription code (PRK) &#xD;&#xA;&#xD;&#xA;* Generic product code (GPK) &#xD;&#xA;&#xD;&#xA;* ATC (anatomic therapeutic classification) &#xD;&#xA;&#xD;&#xA;* SSK (substance name code with route of administration) &#xD;&#xA;&#xD;&#xA;* SNK (substance name code) &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;For further explanation about ATC see https://www.whocc.no/atc/structure_and_principles/">
+         <definition value="Active substance or excipient. &#xD;&#xA;Here, the same codes can be used as for the ProductCode (for dilutions and compounds in particular), but now, the ATC, SSK and SNK codes can also be used to indicate a substance (to list ingredients of local products prepared by the pharmacy). &#xD;&#xA;&#xD;&#xA;* GTIN International Article Number &#xD;&#xA;&#xD;&#xA;* KNMP article number &#xD;&#xA;&#xD;&#xA;* Trade product code (HPK) &#xD;&#xA;&#xD;&#xA;* Prescription code (PRK) &#xD;&#xA;&#xD;&#xA;* Generic product code (GPK) &#xD;&#xA;&#xD;&#xA;* ATC (anatomic therapeutic classification) &#xD;&#xA;&#xD;&#xA;* SSK (substance name code with route of administration) &#xD;&#xA;&#xD;&#xA;* SNK (substance name code) &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;For further explanation about ATC see https://www.whocc.no/atc/structure_and_principles/">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -312,18 +309,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pharmaceutical_product.product_specifications.ingredient.substance_code"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-        </element>
+      </element>
         
         
         
@@ -333,9 +329,9 @@
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.7.19933--20200901000000">
-            <path value="pharmaceutical_product.product_specifications.ingredient.concentration"/>
-            <short value="Concentration">
+        <element id="pharmaceutical_product.product_specifications.ingredient.concentration">
+         <path value="pharmaceutical_product.product_specifications.ingredient.concentration"/>
+         <short value="Concentration">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -345,7 +341,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The relative amount of this ingredient in this product. &#xD;&#xA;Calculation of Concentration = Ingredient Amount ÷ Product Amount. &#xD;&#xA;&#xD;&#xA;This could be a concentration if the medication is dissolved in liquid, for example. ">
+         <definition value="The relative amount of this ingredient in this product. &#xD;&#xA;Calculation of Concentration = Ingredient Amount ÷ Product Amount. &#xD;&#xA;&#xD;&#xA;This could be a concentration if the medication is dissolved in liquid, for example. ">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -355,20 +351,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pharmaceutical_product.product_specifications.ingredient.concentration"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.7.22277--20200901000000">
-            <path value="pharmaceutical_product.product_specifications.ingredient.concentration.ingredient_amount"/>
-            <short value="IngredientAmount">
+      </element>
+        <element id="pharmaceutical_product.product_specifications.ingredient.concentration.ingredient_amount">
+         <path value="pharmaceutical_product.product_specifications.ingredient.concentration.ingredient_amount"/>
+         <short value="IngredientAmount">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -378,7 +374,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The amount and unit of this ingredient. This is the numerator for the calculation of the concentration. The unit should be selected from the G-Standard (Table 902).">
+         <definition value="The amount and unit of this ingredient. This is the numerator for the calculation of the concentration. The unit should be selected from the G-Standard (Table 902).">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -388,21 +384,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pharmaceutical_product.product_specifications.ingredient.concentration.ingredient_amount"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.7.22278--20200901000000">
-            <path value="pharmaceutical_product.product_specifications.ingredient.concentration.product_amount"/>
-            <short value="ProductAmount">
+      </element>
+        <element id="pharmaceutical_product.product_specifications.ingredient.concentration.product_amount">
+         <path value="pharmaceutical_product.product_specifications.ingredient.concentration.product_amount"/>
+         <short value="ProductAmount">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -412,7 +407,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Amount of the product. This is the denominator for the calculation of the concentration. Optionally a translation to NHG table Gebruiksvoorschriften(Table 25) is also allowed.&#xD;&#xA;">
+         <definition value="Amount of the product. This is the denominator for the calculation of the concentration. Optionally a translation to NHG table Gebruiksvoorschriften(Table 25) is also allowed.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -422,17 +417,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pharmaceutical_product.product_specifications.ingredient.concentration.product_amount"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

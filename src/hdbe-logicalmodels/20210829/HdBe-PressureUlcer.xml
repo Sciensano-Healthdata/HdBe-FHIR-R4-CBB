@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.1.1--20200901000000">
-            <path value="pressure_ulcer"/>
-            <short value="PressureUlcer">
+        <element id="pressure_ulcer">
+         <path value="pressure_ulcer"/>
+         <short value="PressureUlcer">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the DecubitusWound information model. This root concept contains all data elements of the DecubitusWound information model.">
+         <definition value="Root concept of the DecubitusWound information model. This root concept contains all data elements of the DecubitusWound information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="pressure_ulcer"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.1.2--20200901000000">
-            <path value="pressure_ulcer.decubitus_category"/>
-            
-            <short value="DecubitusCategory">
+      </element>
+        <element id="pressure_ulcer.decubitus_category">
+         <path value="pressure_ulcer.decubitus_category"/>
+         <short value="DecubitusCategory">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Description of the condition of the pressure ulcer, ranging from category 1 - 4.">
+         <definition value="Description of the condition of the pressure ulcer, ranging from category 1 - 4.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,26 +99,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="pressure_ulcer.decubitus_category"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="DecubitusCategory codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/DecubitusCategorie"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.1.3--20200901000000">
-            <path value="pressure_ulcer.date_of_onset"/>
-            <short value="DateOfOnset">
+      </element>
+        <element id="pressure_ulcer.date_of_onset">
+         <path value="pressure_ulcer.date_of_onset"/>
+         <short value="DateOfOnset">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -129,7 +127,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date on which the pressure ulcer appeared.">
+         <definition value="The date on which the pressure ulcer appeared.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -139,19 +137,18 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pressure_ulcer.date_of_onset"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.1.14--20200901000000">
+      </element>
+        <element id="pressure_ulcer.anatomical_location">
          <path value="pressure_ulcer.anatomical_location"/>
          <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
@@ -185,9 +182,9 @@
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.1.8--20200901000000">
-            <path value="pressure_ulcer.date_of_last_dressing_change"/>
-            <short value="DateOfLastDressingChange">
+        <element id="pressure_ulcer.date_of_last_dressing_change">
+         <path value="pressure_ulcer.date_of_last_dressing_change"/>
+         <short value="DateOfLastDressingChange">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -197,7 +194,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date on which the dressing was last changed.">
+         <definition value="The date on which the dressing was last changed.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -207,21 +204,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pressure_ulcer.date_of_last_dressing_change"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.1.9--20200901000000">
-            <path value="pressure_ulcer.wound_length"/>
-            
-            <short value="WoundLength">
+      </element>
+        <element id="pressure_ulcer.wound_length">
+         <path value="pressure_ulcer.wound_length"/>
+         <short value="WoundLength">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -231,7 +227,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The length of the decubitus wound.">
+         <definition value="The length of the decubitus wound.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -241,22 +237,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pressure_ulcer.wound_length"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.1.10--20200901000000">
-            <path value="pressure_ulcer.wound_width"/>
-            
-            <short value="WoundWidth">
+      </element>
+        <element id="pressure_ulcer.wound_width">
+         <path value="pressure_ulcer.wound_width"/>
+         <short value="WoundWidth">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -266,7 +260,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The width of the decubitus wound.">
+         <definition value="The width of the decubitus wound.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -276,22 +270,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pressure_ulcer.wound_width"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.1.11--20200901000000">
-            <path value="pressure_ulcer.wound_depth"/>
-            
-            <short value="WoundDepth">
+      </element>
+        <element id="pressure_ulcer.wound_depth">
+         <path value="pressure_ulcer.wound_depth"/>
+         <short value="WoundDepth">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -301,7 +293,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The depth of the decubitus wound.">
+         <definition value="The depth of the decubitus wound.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -311,22 +303,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pressure_ulcer.wound_depth"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.1.12--20200901000000">
-            <path value="pressure_ulcer.wound_image"/>
-            
-            <short value="WoundImage">
+      </element>
+        <element id="pressure_ulcer.wound_image">
+         <path value="pressure_ulcer.wound_image"/>
+         <short value="WoundImage">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -336,7 +326,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A photo of the decubitus wound as visual information.">
+         <definition value="A photo of the decubitus wound as visual information.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -346,21 +336,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="pressure_ulcer.wound_image"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="base64Binary"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.1.5--20200901000000">
-            <path value="pressure_ulcer.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="pressure_ulcer.comment">
+         <path value="pressure_ulcer.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -370,7 +359,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A comment of the decubitus wound.">
+         <definition value="A comment of the decubitus wound.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -380,16 +369,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pressure_ulcer.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

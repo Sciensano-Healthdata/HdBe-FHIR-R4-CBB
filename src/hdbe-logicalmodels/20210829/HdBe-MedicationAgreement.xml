@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.6.9580--20200901000000">
-            <path value="medication_agreement"/>
-            <short value="MedicationAgreement">
+        <element id="medication_agreement">
+         <path value="medication_agreement"/>
+         <short value="MedicationAgreement">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the MedicationAgreement information model. This root concept contains all data elements of the MedicationAgreement information model.">
+         <definition value="Root concept of the MedicationAgreement information model. This root concept contains all data elements of the MedicationAgreement information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,17 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="medication_agreement"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.6.1030--20200901000000">
-            <path value="medication_agreement.prescriber"/>
-            <short value="Prescriber">
+      </element>
+        <element id="medication_agreement.prescriber">
+         <path value="medication_agreement.prescriber"/>
+         <short value="Prescriber">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -89,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The health professional that entered the medication agreement with the patient.">
+         <definition value="The health professional that entered the medication agreement with the patient.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -99,21 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_agreement.prescriber"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.181--20200901000000">
-            <path value="medication_agreement.prescriber.health_professional"/>
-            
-            <short value="HealthProfessional">
+      </element>
+        <element id="medication_agreement.prescriber.health_professional">
+         <path value="medication_agreement.prescriber.health_professional"/>
+         <short value="HealthProfessional">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -123,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the HealthProfessional information model. This root concept contains all data elements of the HealthProfessional information model.&#xD;&#xA;When referring to this information model the role the health professional fulfils in the healthcare process can be addressed additionally. For health professionals, this could be for example main practitioner or referrer.">
+         <definition value="Root concept of the HealthProfessional information model. This root concept contains all data elements of the HealthProfessional information model.&#xD;&#xA;When referring to this information model the role the health professional fulfils in the healthcare process can be addressed additionally. For health professionals, this could be for example main practitioner or referrer.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -133,22 +132,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_agreement.prescriber.health_professional"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.6.23133--20200901000000">
-            <path value="medication_agreement.prescription_reason"/>
-            
-            <short value="PrescriptionReason">
+      </element>
+        <element id="medication_agreement.prescription_reason">
+         <path value="medication_agreement.prescription_reason"/>
+         <short value="PrescriptionReason">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -158,7 +156,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The medical reason for the prescription or for use of the medication. This can be used to enter a medical indication which was the direct cause for prescription or for use of the medication in question. &#xD;&#xA;&#xD;&#xA;It can concern every type of problem (or condition) of the patient, almost all diagnoses, complaints or symptoms. &#xD;&#xA;&#xD;&#xA;Please note: The BST401T file of the G standard contains a “special reference” to indicate that “exchange of the reason for prescription is essential”.&#xD;&#xA;">
+         <definition value="The medical reason for the prescription or for use of the medication. This can be used to enter a medical indication which was the direct cause for prescription or for use of the medication in question. &#xD;&#xA;&#xD;&#xA;It can concern every type of problem (or condition) of the patient, almost all diagnoses, complaints or symptoms. &#xD;&#xA;&#xD;&#xA;Please note: The BST401T file of the G standard contains a “special reference” to indicate that “exchange of the reason for prescription is essential”.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -168,20 +166,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_agreement.prescription_reason"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.182--20200901000000">
-            <path value="medication_agreement.prescription_reason.problem"/>
-            <short value="Problem">
+      </element>
+        <element id="medication_agreement.prescription_reason.problem">
+         <path value="medication_agreement.prescription_reason.problem"/>
+         <short value="Problem">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -191,7 +189,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Problem information model.&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient himselve (in the form of a complaint) or by their healthprofessional (in the form of a diagnosis, for example). &#xD;&#xA;">
+         <definition value="Root concept of the Problem information model.&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient himselve (in the form of a complaint) or by their healthprofessional (in the form of a diagnosis, for example). &#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -201,21 +199,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_agreement.prescription_reason.problem"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.6.19925--20200901000000">
-            <path value="medication_agreement.agreed_medicine"/>
-            <short value="AgreedMedicine">
+      </element>
+        <element id="medication_agreement.agreed_medicine">
+         <path value="medication_agreement.agreed_medicine"/>
+         <short value="AgreedMedicine">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -225,7 +223,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The medicine agreed upon to be used.">
+         <definition value="The medicine agreed upon to be used.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -235,20 +233,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_agreement.agreed_medicine"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.183--20200901000000">
-            <path value="medication_agreement.agreed_medicine.pharmaceutical_product"/>
-            <short value="PharmaceuticalProduct">
+      </element>
+        <element id="medication_agreement.agreed_medicine.pharmaceutical_product">
+         <path value="medication_agreement.agreed_medicine.pharmaceutical_product"/>
+         <short value="PharmaceuticalProduct">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -258,7 +256,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the PharmaceuticalProduct partial information model.This root concept contains all data elements of the PharmaceuticalProduct partial information model.&#xD;&#xA;&#xD;&#xA;The prescribed product is usually a medicine. However, medical aids and bandages can also be prescribed and supplied via the pharmacy. Strictly speaking, food and blood products do not belong in the medication category, but can be prescribed and supplied by a pharmacy as well. &#xD;&#xA;&#xD;&#xA;A type of medication can be indicated with **a single code**. That code can be chosen from several possible coding systems (concretely: GPK, PRK, HPK or article numbers). Correct use of these codes in the software systems will sufficiently record the composition of the product used, making a complete product specification unnecessary. &#xD;&#xA;&#xD;&#xA;In addition to a primary code, **alternative codes **from other coding systems can also be entered (so that the GPK can be sent along in the event that the patient was registered based on PRK, for example). &#xD;&#xA;&#xD;&#xA;Entering multiple ingredients will enable you to display a compound product. &#xD;&#xA;In that case, the **composition of the medication** can be specified implicitly (with the use of a medication code) or explicitly, for example by listing the (active) substance(s) of the medication. &#xD;&#xA;**Prescriptions to be prepared by the pharmacy** can be entered as well. This can be done by means of the option listed above to enter coded ingredients and/or by entering the composition and preparation method as free text.">
+         <definition value="Root concept of the PharmaceuticalProduct partial information model.This root concept contains all data elements of the PharmaceuticalProduct partial information model.&#xD;&#xA;&#xD;&#xA;The prescribed product is usually a medicine. However, medical aids and bandages can also be prescribed and supplied via the pharmacy. Strictly speaking, food and blood products do not belong in the medication category, but can be prescribed and supplied by a pharmacy as well. &#xD;&#xA;&#xD;&#xA;A type of medication can be indicated with **a single code**. That code can be chosen from several possible coding systems (concretely: GPK, PRK, HPK or article numbers). Correct use of these codes in the software systems will sufficiently record the composition of the product used, making a complete product specification unnecessary. &#xD;&#xA;&#xD;&#xA;In addition to a primary code, **alternative codes **from other coding systems can also be entered (so that the GPK can be sent along in the event that the patient was registered based on PRK, for example). &#xD;&#xA;&#xD;&#xA;Entering multiple ingredients will enable you to display a compound product. &#xD;&#xA;In that case, the **composition of the medication** can be specified implicitly (with the use of a medication code) or explicitly, for example by listing the (active) substance(s) of the medication. &#xD;&#xA;**Prescriptions to be prepared by the pharmacy** can be entered as well. This can be done by means of the option listed above to enter coded ingredients and/or by entering the composition and preparation method as free text.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -268,19 +266,19 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_agreement.agreed_medicine.pharmaceutical_product"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.6.23240--20200901000000">
+      </element>
+        <element id="medication_agreement.instructions_for_use">
          <path value="medication_agreement.instructions_for_use"/>
          <short value="InstructionsForUse">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
@@ -341,9 +339,9 @@
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.6.19757--20200901000000">
-            <path value="medication_agreement.medication_agreement_date_time"/>
-            <short value="MedicationAgreementDateTime">
+        <element id="medication_agreement.medication_agreement_date_time">
+         <path value="medication_agreement.medication_agreement_date_time"/>
+         <short value="MedicationAgreementDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -353,7 +351,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The time at which the agreement was made. &#xD;&#xA;Appointment date + time are required (order of the appointments must be clear in cases with multiple appointments on one day)">
+         <definition value="The time at which the agreement was made. &#xD;&#xA;Appointment date + time are required (order of the appointments must be clear in cases with multiple appointments on one day)">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -363,20 +361,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_agreement.medication_agreement_date_time"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.6.19936--20200901000000">
-            <path value="medication_agreement.period_of_use"/>
-            <short value="PeriodOfUse">
+      </element>
+        <element id="medication_agreement.period_of_use">
+         <path value="medication_agreement.period_of_use"/>
+         <short value="PeriodOfUse">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -386,7 +384,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Start date: This is the time at which the agreement was to take effect (or took effect or will take effect). This is the time at which the instructions for use in this agreement start. In the case of an agreement to discontinue use, this is the start date of the original medication agreement. The end date indicates from when the medication is to be discontinued. &#xD;&#xA;&#xD;&#xA;**Duration:** The intended duration of use. E.g. 5 days or 8 weeks. It is not allowed to indicate the duration in months, because different months have a variable duration in days. &#xD;&#xA;&#xD;&#xA;**End date:** The time at which the period of use ends (or ended or will end). In the case of an agreement to discontinue use, this is the time at which the medication is to be discontinued. To avoid confusion between 'to' and 'up to', the submission of time is always mandatory for the end date. &#xD;&#xA;&#xD;&#xA;With medication for an indefinite period only a start date is indicated.&#xD;&#xA;">
+         <definition value="Start date: This is the time at which the agreement was to take effect (or took effect or will take effect). This is the time at which the instructions for use in this agreement start. In the case of an agreement to discontinue use, this is the start date of the original medication agreement. The end date indicates from when the medication is to be discontinued. &#xD;&#xA;&#xD;&#xA;**Duration:** The intended duration of use. E.g. 5 days or 8 weeks. It is not allowed to indicate the duration in months, because different months have a variable duration in days. &#xD;&#xA;&#xD;&#xA;**End date:** The time at which the period of use ends (or ended or will end). In the case of an agreement to discontinue use, this is the time at which the medication is to be discontinued. To avoid confusion between 'to' and 'up to', the submission of time is always mandatory for the end date. &#xD;&#xA;&#xD;&#xA;With medication for an indefinite period only a start date is indicated.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -396,20 +394,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_agreement.period_of_use"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.216--20200901000000">
-            <path value="medication_agreement.period_of_use.start_date_time"/>
-            <short value="startDateTime">
+      </element>
+        <element id="medication_agreement.period_of_use.start_date_time">
+         <path value="medication_agreement.period_of_use.start_date_time"/>
+         <short value="startDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -419,7 +417,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The start date and time of the interval">
+         <definition value="The start date and time of the interval">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -429,20 +427,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_agreement.period_of_use.start_date_time"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.217--20200901000000">
-            <path value="medication_agreement.period_of_use.end_date_time"/>
-            <short value="endDateTime">
+      </element>
+        <element id="medication_agreement.period_of_use.end_date_time">
+         <path value="medication_agreement.period_of_use.end_date_time"/>
+         <short value="endDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -452,7 +450,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The end date and time of the interval">
+         <definition value="The end date and time of the interval">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -462,20 +460,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_agreement.period_of_use.end_date_time"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.218--20200901000000">
-            <path value="medication_agreement.period_of_use.duration"/>
-            <short value="Duration">
+      </element>
+        <element id="medication_agreement.period_of_use.duration">
+         <path value="medication_agreement.period_of_use.duration"/>
+         <short value="Duration">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -485,7 +483,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The duration of the interval in appropriate units of time (*e.g.* days or hours, etc.">
+         <definition value="The duration of the interval in appropriate units of time (*e.g.* days or hours, etc.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -495,21 +493,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_agreement.period_of_use.duration"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.6.19954--20200901000000">
-            <path value="medication_agreement.medication_agreement_stop_type"/>
-            
-            <short value="MedicationAgreementStopType">
+      </element>
+        <element id="medication_agreement.medication_agreement_stop_type">
+         <path value="medication_agreement.medication_agreement_stop_type"/>
+         <short value="MedicationAgreementStopType">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -519,7 +516,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Stop type, the manner in which this medication is discontinued (temporary or definitive).">
+         <definition value="Stop type, the manner in which this medication is discontinued (temporary or definitive).">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -529,26 +526,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_agreement.medication_agreement_stop_type"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="MedicationAgreementStopType codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieafspraakStopType"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.6.22094--20200901000000">
-            <path value="medication_agreement.reason_medication_agreement"/>
-            
-            <short value="ReasonMedicationAgreement">
+      </element>
+        <element id="medication_agreement.reason_medication_agreement">
+         <path value="medication_agreement.reason_medication_agreement"/>
+         <short value="ReasonMedicationAgreement">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -558,7 +554,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Reason for this agreement. This can be the reason to start, change or stop the medication treatment.">
+         <definition value="Reason for this agreement. This can be the reason to start, change or stop the medication treatment.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -568,25 +564,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_agreement.reason_medication_agreement"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="ReasonMedicationAgreement codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/RedenMedicatieafspraak"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.6.23283--20200901000000">
-            <path value="medication_agreement.medication_agreement_additional_information"/>
-            <short value="MedicationAgreementAdditionalInformation">
+      </element>
+        <element id="medication_agreement.medication_agreement_additional_information">
+         <path value="medication_agreement.medication_agreement_additional_information"/>
+         <short value="MedicationAgreementAdditionalInformation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -596,7 +592,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Additional information includes details on the structure of the agreement made that are relevant for pharmacovigilance and fulfillment by the pharmacist. This can be used e.g. to indicate that there was a conscious decision to deviate from the norm or that the agreement is to be structured in a certain way.&#xD;&#xA;See also the Instructions section for more information about use of the element.">
+         <definition value="Additional information includes details on the structure of the agreement made that are relevant for pharmacovigilance and fulfillment by the pharmacist. This can be used e.g. to indicate that there was a conscious decision to deviate from the norm or that the agreement is to be structured in a certain way.&#xD;&#xA;See also the Instructions section for more information about use of the element.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -606,26 +602,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="medication_agreement.medication_agreement_additional_information"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="MedicationAgreementAdditionalInformation codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieafspraakAanvullendeInformatie"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.9.6.22273--20200901000000">
-            <path value="medication_agreement.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="medication_agreement.comment">
+         <path value="medication_agreement.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -635,7 +630,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Comments regarding to the medication agreement. For example: in consultation with the medical specialist.">
+         <definition value="Comments regarding to the medication agreement. For example: in consultation with the medical specialist.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -645,16 +640,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="medication_agreement.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>
