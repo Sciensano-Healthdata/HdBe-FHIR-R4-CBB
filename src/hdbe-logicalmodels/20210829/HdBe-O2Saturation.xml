@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.10.1--20200901000000">
-            <path value="o2saturation"/>
-            <short value="O2Saturation">
+        <element id="o2saturation">
+         <path value="o2saturation"/>
+         <short value="O2Saturation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the O2Saturation information model. This root concept contains all data elements of the O2Saturation information model.">
+         <definition value="Root concept of the O2Saturation information model. This root concept contains all data elements of the O2Saturation information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="o2saturation"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.10.2--20200901000000">
-            <path value="o2saturation.sp_o2value"/>
-            
-            <short value="SpO2Value">
+      </element>
+        <element id="o2saturation.sp_o2value">
+         <path value="o2saturation.sp_o2value"/>
+         <short value="SpO2Value">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The element contains the value of the indirect, peripheral measured O2 saturation. &#xD;&#xA;The O2 saturation gives a percentage expressing the extent to which the blood’s hemoglobin is saturated with oxygen, the ratio of oxygen-saturated hemoglobin to hemoglobin. &#xD;&#xA;The measurement is done in places where sufficient light can get through the skin, such as a finger, toe or earlobe.&#xD;&#xA;">
+         <definition value="The element contains the value of the indirect, peripheral measured O2 saturation. &#xD;&#xA;The O2 saturation gives a percentage expressing the extent to which the blood’s hemoglobin is saturated with oxygen, the ratio of oxygen-saturated hemoglobin to hemoglobin. &#xD;&#xA;The measurement is done in places where sufficient light can get through the skin, such as a finger, toe or earlobe.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,21 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="o2saturation.sp_o2value"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.10.3--20200901000000">
-            <path value="o2saturation.o2saturation_date_time"/>
-            <short value="O2SaturationDateTime">
+      </element>
+        <element id="o2saturation.o2saturation_date_time">
+         <path value="o2saturation.o2saturation_date_time"/>
+         <short value="O2SaturationDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -124,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The moment (date and time) of the SpO2 measurement.">
+         <definition value="The moment (date and time) of the SpO2 measurement.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -134,21 +132,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="o2saturation.o2saturation_date_time"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.10.4--20200901000000">
-            <path value="o2saturation.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="o2saturation.comment">
+         <path value="o2saturation.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -158,7 +155,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Comment on the saturation measurement.">
+         <definition value="Comment on the saturation measurement.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -168,21 +165,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="o2saturation.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.10.5--20200901000000">
-            <path value="o2saturation.extra_oxygen_administration"/>
-            <short value="ExtraOxygenAdministration">
+      </element>
+        <element id="o2saturation.extra_oxygen_administration">
+         <path value="o2saturation.extra_oxygen_administration"/>
+         <short value="ExtraOxygenAdministration">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -192,7 +188,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Indication stating whether the measurement was done in a situation in which extra oxygen was administered.">
+         <definition value="Indication stating whether the measurement was done in a situation in which extra oxygen was administered.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -202,16 +198,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="o2saturation.extra_oxygen_administration"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="boolean"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

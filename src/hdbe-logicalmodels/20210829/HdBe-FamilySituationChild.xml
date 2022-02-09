@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.16.1--20200901000000">
-            <path value="family_situation_child"/>
-            <short value="FamilySituationChild">
+        <element id="family_situation_child">
+         <path value="family_situation_child"/>
+         <short value="FamilySituationChild">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the FamilySituationChild information model. This concept contains all data elements of the FamilySituationChild information model.">
+         <definition value="Root concept of the FamilySituationChild information model. This concept contains all data elements of the FamilySituationChild information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="family_situation_child"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.16.2--20200901000000">
-            <path value="family_situation_child.family_composition"/>
-            
-            <short value="FamilyComposition">
+      </element>
+        <element id="family_situation_child.family_composition">
+         <path value="family_situation_child.family_composition"/>
+         <short value="FamilyComposition">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The family composition describes the cjhild’s home situation and the form of cohabitation. &#xD;&#xA;A family can consist of one or more people.">
+         <definition value="The family composition describes the cjhild’s home situation and the form of cohabitation. &#xD;&#xA;A family can consist of one or more people.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,25 +99,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="family_situation_child.family_composition"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="FamilyComposition codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/GezinssamenstellingKind"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.16.3--20200901000000">
-            <path value="family_situation_child.parent_carer"/>
-            <short value="ParentCarer">
+      </element>
+        <element id="family_situation_child.parent_carer">
+         <path value="family_situation_child.parent_carer"/>
+         <short value="ParentCarer">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -128,7 +127,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Person who has taken on the role of the child's caregiver in the family situation involved. This could be a parent or other family member.">
+         <definition value="Person who has taken on the role of the child's caregiver in the family situation involved. This could be a parent or other family member.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -138,21 +137,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="family_situation_child.parent_carer"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.144--20200901000000">
-            <path value="family_situation_child.parent_carer.contact"/>
-            
-            <short value="Contact">
+      </element>
+        <element id="family_situation_child.parent_carer.contact">
+         <path value="family_situation_child.parent_carer.contact"/>
+         <short value="Contact">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -162,7 +160,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Contact information model. This root concept contains all data elements of the Contact information model.">
+         <definition value="Root concept of the Contact information model. This root concept contains all data elements of the Contact information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -172,22 +170,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="family_situation_child.parent_carer.contact"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Contact"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.16.4--20200901000000">
-            <path value="family_situation_child.child"/>
-            
-            <short value="Child">
+      </element>
+        <element id="family_situation_child.child">
+         <path value="family_situation_child.child"/>
+         <short value="Child">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -197,7 +194,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the Child concept. This container contains all data elements of the Child concept.">
+         <definition value="Container of the Child concept. This container contains all data elements of the Child concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -207,20 +204,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="family_situation_child.child"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.16.5--20200901000000">
-            <path value="family_situation_child.child.contact_person"/>
-            <short value="ContactPerson">
+      </element>
+        <element id="family_situation_child.child.contact_person">
+         <path value="family_situation_child.child.contact_person"/>
+         <short value="ContactPerson">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -230,7 +227,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Child of the child receiving care">
+         <definition value="Child of the child receiving care">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -240,21 +237,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="family_situation_child.child.contact_person"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.145--20200901000000">
-            <path value="family_situation_child.child.contact_person.contact"/>
-            
-            <short value="Contact">
+      </element>
+        <element id="family_situation_child.child.contact_person.contact">
+         <path value="family_situation_child.child.contact_person.contact"/>
+         <short value="Contact">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -264,7 +260,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Contact information model. This root concept contains all data elements of the Contact information model.">
+         <definition value="Root concept of the Contact information model. This root concept contains all data elements of the Contact information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -274,22 +270,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="family_situation_child.child.contact_person.contact"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Contact"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.16.6--20200901000000">
-            <path value="family_situation_child.child.date_of_birth"/>
-            
-            <short value="DateOfBirth">
+      </element>
+        <element id="family_situation_child.child.date_of_birth">
+         <path value="family_situation_child.child.date_of_birth"/>
+         <short value="DateOfBirth">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -299,7 +294,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The child’s date of birth.">
+         <definition value="The child’s date of birth.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -309,22 +304,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="family_situation_child.child.date_of_birth"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.16.7--20200901000000">
-            <path value="family_situation_child.number_of_siblings"/>
-            
-            <short value="NumberOfSiblings">
+      </element>
+        <element id="family_situation_child.number_of_siblings">
+         <path value="family_situation_child.number_of_siblings"/>
+         <short value="NumberOfSiblings">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -334,7 +327,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Number of brothers and sisters of the child, living at the same house. Children in this context can be biological and adopted children, stepchildren and foster children.">
+         <definition value="Number of brothers and sisters of the child, living at the same house. Children in this context can be biological and adopted children, stepchildren and foster children.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -344,20 +337,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="family_situation_child.number_of_siblings"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.16.8--20200901000000">
-            <path value="family_situation_child.sibling"/>
-            <short value="Sibling">
+      </element>
+        <element id="family_situation_child.sibling">
+         <path value="family_situation_child.sibling"/>
+         <short value="Sibling">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -367,7 +360,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the Sibling concept. This container contains all data elements of the Sibling concept.">
+         <definition value="Container of the Sibling concept. This container contains all data elements of the Sibling concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -377,21 +370,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="family_situation_child.sibling"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.16.9--20200901000000">
-            <path value="family_situation_child.sibling.contact_person"/>
-            
-            <short value="ContactPerson">
+      </element>
+        <element id="family_situation_child.sibling.contact_person">
+         <path value="family_situation_child.sibling.contact_person"/>
+         <short value="ContactPerson">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -401,7 +393,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Sister or brother, which is also part of concerning household. This includes not only biological siblings, but also half, step, foster and adoptive siblings ">
+         <definition value="Sister or brother, which is also part of concerning household. This includes not only biological siblings, but also half, step, foster and adoptive siblings ">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -411,21 +403,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="family_situation_child.sibling.contact_person"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.146--20200901000000">
-            <path value="family_situation_child.sibling.contact_person.contact"/>
-            
-            <short value="Contact">
+      </element>
+        <element id="family_situation_child.sibling.contact_person.contact">
+         <path value="family_situation_child.sibling.contact_person.contact"/>
+         <short value="Contact">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -435,7 +426,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Contact information model. This root concept contains all data elements of the Contact information model.">
+         <definition value="Root concept of the Contact information model. This root concept contains all data elements of the Contact information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -445,22 +436,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="family_situation_child.sibling.contact_person.contact"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Contact"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.16.10--20200901000000">
-            <path value="family_situation_child.sibling.date_of_birth_sibling"/>
-            
-            <short value="DateOfBirthSibling">
+      </element>
+        <element id="family_situation_child.sibling.date_of_birth_sibling">
+         <path value="family_situation_child.sibling.date_of_birth_sibling"/>
+         <short value="DateOfBirthSibling">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -470,7 +460,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Date of birth of the sister or brother.">
+         <definition value="Date of birth of the sister or brother.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -480,21 +470,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="family_situation_child.sibling.date_of_birth_sibling"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.16.11--20200901000000">
-            <path value="family_situation_child.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="family_situation_child.comment">
+         <path value="family_situation_child.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -504,7 +493,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A comment on the childs family situation.">
+         <definition value="A comment on the childs family situation.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -514,16 +503,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="family_situation_child.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

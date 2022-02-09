@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.16.1--20200901000000">
-            <path value="visual_function"/>
-            <short value="VisualFunction">
+        <element id="visual_function">
+         <path value="visual_function"/>
+         <short value="VisualFunction">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the VisualFunction information model. This concept contains all data elements of the VisualFunction information model.">
+         <definition value="Root concept of the VisualFunction information model. This concept contains all data elements of the VisualFunction information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="visual_function"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.16.3--20200901000000">
-            <path value="visual_function.visual_function"/>
-            
-            <short value="VisualFunction">
+      </element>
+        <element id="visual_function.visual_function">
+         <path value="visual_function.visual_function"/>
+         <short value="VisualFunction">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The ability to see as a result of response to stimuli of visual organs">
+         <definition value="The ability to see as a result of response to stimuli of visual organs">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,27 +99,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="visual_function.visual_function"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="VisualFunction codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/VisueleFunctie"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.16.4--20200901000000">
-            <path value="visual_function.visual_aid"/>
-            
-            <short value="VisualAid">
+      </element>
+        <element id="visual_function.visual_aid">
+         <path value="visual_function.visual_aid"/>
+         <short value="VisualAid">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -130,7 +127,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The medical aids used to support the visual function.">
+         <definition value="The medical aids used to support the visual function.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -140,20 +137,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="visual_function.visual_aid"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.125--20200901000000">
-            <path value="visual_function.visual_aid.medical_device"/>
-            <short value="MedicalDevice">
+      </element>
+        <element id="visual_function.visual_aid.medical_device">
+         <path value="visual_function.visual_aid.medical_device"/>
+         <short value="MedicalDevice">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -163,7 +160,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the MedicalDevice information model. This root concept contains all data elements of the MedicalDevice information model.">
+         <definition value="Root concept of the MedicalDevice information model. This root concept contains all data elements of the MedicalDevice information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -173,20 +170,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="visual_function.visual_aid.medical_device"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.126--20200901000000">
-            <path value="visual_function.visual_aid.medical_device.product"/>
-            <short value="Product">
+      </element>
+        <element id="visual_function.visual_aid.medical_device.product">
+         <path value="visual_function.visual_aid.medical_device.product"/>
+         <short value="Product">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -196,7 +193,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The medical device (internally or externally).">
+         <definition value="The medical device (internally or externally).">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -206,20 +203,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="visual_function.visual_aid.medical_device.product"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.127--20200901000000">
-            <path value="visual_function.visual_aid.medical_device.product.product_id"/>
-            <short value="ProductID">
+      </element>
+        <element id="visual_function.visual_aid.medical_device.product.product_id">
+         <path value="visual_function.visual_aid.medical_device.product.product_id"/>
+         <short value="ProductID">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -229,7 +226,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Unique identification of the product, such as the serial number. &#xD;&#xA;Frequently used coding systems are HIBC and GTIN.&#xD;&#xA;If the law requires this to be registered on the basis of a UDI (Unique Device Identifier), the unique identification must consist of a UDI-DI (Device Identifier) and a UDI-PI (Production Identifier(s)). See http://www.gs1.org/healthcare/udi for more information. &#xD;&#xA;&#xD;&#xA;The UDI-DI must be recorded in reference to GS1 GTIN (01) encryptions, with which for example a firm is linked to the product type. The UDI-PI must consist of the following: application identifier (AI); expiration date (17) and serial number (21) and/or batch or lot number (10).&#xD;&#xA;">
+         <definition value="Unique identification of the product, such as the serial number. &#xD;&#xA;Frequently used coding systems are HIBC and GTIN.&#xD;&#xA;If the law requires this to be registered on the basis of a UDI (Unique Device Identifier), the unique identification must consist of a UDI-DI (Device Identifier) and a UDI-PI (Production Identifier(s)). See http://www.gs1.org/healthcare/udi for more information. &#xD;&#xA;&#xD;&#xA;The UDI-DI must be recorded in reference to GS1 GTIN (01) encryptions, with which for example a firm is linked to the product type. The UDI-PI must consist of the following: application identifier (AI); expiration date (17) and serial number (21) and/or batch or lot number (10).&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -239,24 +236,23 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="visual_function.visual_aid.medical_device.product.product_id"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-        </element>
+      </element>
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.128--20200901000000">
-            <path value="visual_function.visual_aid.medical_device.product.product_type"/>
-            <short value="ProductType">
+        <element id="visual_function.visual_aid.medical_device.product.product_type">
+         <path value="visual_function.visual_aid.medical_device.product.product_type"/>
+         <short value="ProductType">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -266,7 +262,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The type of product used to help the patient see.">
+         <definition value="The type of product used to help the patient see.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -276,26 +272,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="visual_function.visual_aid.medical_device.product.product_type"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="ProductType codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/ZienHulpmiddelType"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.129--20200901000000">
-            <path value="visual_function.visual_aid.medical_device.product_description"/>
-            <short value="ProductDescription">
+      </element>
+        <element id="visual_function.visual_aid.medical_device.product_description">
+         <path value="visual_function.visual_aid.medical_device.product_description"/>
+         <short value="ProductDescription">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -305,7 +300,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Textual description of the product.">
+         <definition value="Textual description of the product.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -315,18 +310,18 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="visual_function.visual_aid.medical_device.product_description"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.130--20200901000000">
+      </element>
+        <element id="visual_function.visual_aid.medical_device.anatomical_location">
          <path value="visual_function.visual_aid.medical_device.anatomical_location"/>
          <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
@@ -360,9 +355,9 @@
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.133--20200901000000">
-            <path value="visual_function.visual_aid.medical_device.indication"/>
-            <short value="Indication">
+        <element id="visual_function.visual_aid.medical_device.indication">
+         <path value="visual_function.visual_aid.medical_device.indication"/>
+         <short value="Indication">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -372,7 +367,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The medical reason for use of the medical device.">
+         <definition value="The medical reason for use of the medical device.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -382,20 +377,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="visual_function.visual_aid.medical_device.indication"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.134--20200901000000">
-            <path value="visual_function.visual_aid.medical_device.indication.problem"/>
-            <short value="Problem">
+      </element>
+        <element id="visual_function.visual_aid.medical_device.indication.problem">
+         <path value="visual_function.visual_aid.medical_device.indication.problem"/>
+         <short value="Problem">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -405,7 +400,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Problem information model.&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient himselve (in the form of a complaint) or by their healthprofessional (in the form of a diagnosis, for example). &#xD;&#xA;">
+         <definition value="Root concept of the Problem information model.&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient himselve (in the form of a complaint) or by their healthprofessional (in the form of a diagnosis, for example). &#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -415,21 +410,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="visual_function.visual_aid.medical_device.indication.problem"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.135--20200901000000">
-            <path value="visual_function.visual_aid.medical_device.start_date"/>
-            <short value="StartDate">
+      </element>
+        <element id="visual_function.visual_aid.medical_device.start_date">
+         <path value="visual_function.visual_aid.medical_device.start_date"/>
+         <short value="StartDate">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -439,7 +434,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The start date of the first use or implant of the medical device. A ‘vague’ date, such as only the year, is permitted.">
+         <definition value="The start date of the first use or implant of the medical device. A ‘vague’ date, such as only the year, is permitted.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -449,20 +444,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="visual_function.visual_aid.medical_device.start_date"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.136--20200901000000">
-            <path value="visual_function.visual_aid.medical_device.eind_datum"/>
-            <short value="EindDatum">
+      </element>
+        <element id="visual_function.visual_aid.medical_device.eind_datum">
+         <path value="visual_function.visual_aid.medical_device.eind_datum"/>
+         <short value="EindDatum">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -472,7 +467,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The end date of the last use or explant of the medical device. A ‘vague’ date, such as only the year, is permitted.">
+         <definition value="The end date of the last use or explant of the medical device. A ‘vague’ date, such as only the year, is permitted.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -482,22 +477,21 @@
                     </extension>
                 </extension>
             </definition>
-            <alias value="EndDate"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <alias value="EndDate"/>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="visual_function.visual_aid.medical_device.eind_datum"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.137--20200901000000">
-            <path value="visual_function.visual_aid.medical_device.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="visual_function.visual_aid.medical_device.comment">
+         <path value="visual_function.visual_aid.medical_device.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -507,7 +501,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Comment about use or information on the medical device used.">
+         <definition value="Comment about use or information on the medical device used.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -517,20 +511,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="visual_function.visual_aid.medical_device.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.138--20200901000000">
-            <path value="visual_function.visual_aid.medical_device.location"/>
-            <short value="Location">
+      </element>
+        <element id="visual_function.visual_aid.medical_device.location">
+         <path value="visual_function.visual_aid.medical_device.location"/>
+         <short value="Location">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -540,7 +534,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The healthcare provider at which use of the medical device was initiated or where the aid was implanted.">
+         <definition value="The healthcare provider at which use of the medical device was initiated or where the aid was implanted.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -550,21 +544,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="visual_function.visual_aid.medical_device.location"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.139--20200901000000">
-            <path value="visual_function.visual_aid.medical_device.location.healthcare_provider"/>
-            
-            <short value="HealthcareProvider">
+      </element>
+        <element id="visual_function.visual_aid.medical_device.location.healthcare_provider">
+         <path value="visual_function.visual_aid.medical_device.location.healthcare_provider"/>
+         <short value="HealthcareProvider">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -574,7 +567,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Healthcare Provider information model. This root concept contains all data elements of the Healthcare Provider information model.">
+         <definition value="Root concept of the Healthcare Provider information model. This root concept contains all data elements of the Healthcare Provider information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -584,21 +577,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="visual_function.visual_aid.medical_device.location.healthcare_provider"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.140--20200901000000">
-            <path value="visual_function.visual_aid.medical_device.health_professional"/>
-            <short value="HealthProfessional">
+      </element>
+        <element id="visual_function.visual_aid.medical_device.health_professional">
+         <path value="visual_function.visual_aid.medical_device.health_professional"/>
+         <short value="HealthProfessional">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -608,7 +601,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The healthcare provider involved in the indication for use of the medical device implant.">
+         <definition value="The healthcare provider involved in the indication for use of the medical device implant.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -618,22 +611,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="visual_function.visual_aid.medical_device.health_professional"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.16.2--20200901000000">
-            <path value="visual_function.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="visual_function.comment">
+         <path value="visual_function.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -643,7 +635,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A comment on the visual function.">
+         <definition value="A comment on the visual function.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -653,17 +645,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="visual_function.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

@@ -35,11 +35,29 @@ URL: url
   </div>
 
   <div id="Example" class="tabcontent">
-      {{render:logical model/[CBB-Name].example}}
+      {{render:logical models/[CBB-ID].example.md}}
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:logical model/[CBB-Name].doc}}
+      {{render:logical models/[CBB-ID].doc.md}}
   </div>
 
 </div>
+
+<br/><br/> 
+
+## Terminology Bindings
+
+@```
+from StructureDefinition
+where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/[CBB-ID]'
+for differential.element
+select
+Path: path.substring((1 + path.indexOf('.'))),
+join binding.where(valueSet.exists())
+{
+	Name: valueSet.substring((9 + valueSet.indexOf('ValueSet/'))),
+	Strength: strength,
+	URL: valueSet
+	}
+```  

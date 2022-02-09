@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.5.1--20200901000000">
-            <path value="treatment_objective"/>
-            <short value="TreatmentObjective">
+        <element id="treatment_objective">
+         <path value="treatment_objective"/>
+         <short value="TreatmentObjective">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the TreatmentObjective information model. This root concept contains all data elements of the TreatmentObjective information model**.**">
+         <definition value="Root concept of the TreatmentObjective information model. This root concept contains all data elements of the TreatmentObjective information model**.**">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="treatment_objective"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.5.5--20200901000000">
-            <path value="treatment_objective.desired_healthcare_result"/>
-            
-            <short value="DesiredHealthcareResult">
+      </element>
+        <element id="treatment_objective.desired_healthcare_result">
+         <path value="treatment_objective.desired_healthcare_result"/>
+         <short value="DesiredHealthcareResult">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The textual account of the treatment objective. This concept provides the option to define a treatment objective which cannot be described as a measurement value or functional/mental status.">
+         <definition value="The textual account of the treatment objective. This concept provides the option to define a treatment objective which cannot be described as a measurement value or functional/mental status.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,20 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="treatment_objective.desired_healthcare_result"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.5.3--20200901000000">
-            <path value="treatment_objective.desired_health_condition"/>
-            <short value="DesiredHealthCondition">
+      </element>
+        <element id="treatment_objective.desired_health_condition">
+         <path value="treatment_objective.desired_health_condition"/>
+         <short value="DesiredHealthCondition">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -123,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The desired health condition is a target value which can be expressed as the patient’s functional or mental status.">
+         <definition value="The desired health condition is a target value which can be expressed as the patient’s functional or mental status.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -133,20 +132,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="treatment_objective.desired_health_condition"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.23--20200901000000">
-            <path value="treatment_objective.desired_health_condition.functional_or_mental_status"/>
-            <short value="FunctionalOrMentalStatus">
+      </element>
+        <element id="treatment_objective.desired_health_condition.functional_or_mental_status">
+         <path value="treatment_objective.desired_health_condition.functional_or_mental_status"/>
+         <short value="FunctionalOrMentalStatus">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -156,7 +155,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of FunctionalOrMentalStatus. This concept contains all data elements of the FunctionalOrMentalStatus information model.">
+         <definition value="Root concept of FunctionalOrMentalStatus. This concept contains all data elements of the FunctionalOrMentalStatus information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -166,21 +165,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="treatment_objective.desired_health_condition.functional_or_mental_status"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FunctionalOrMentalStatus"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.5.4--20200901000000">
-            <path value="treatment_objective.problem"/>
-            <short value="Problem">
+      </element>
+        <element id="treatment_objective.problem">
+         <path value="treatment_objective.problem"/>
+         <short value="Problem">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -190,7 +189,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Description of the problem to which the treatment objective applies.">
+         <definition value="Description of the problem to which the treatment objective applies.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -200,17 +199,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="treatment_objective.problem"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
          </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>
