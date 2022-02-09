@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.6.1--20200901000000">
-            <path value="nationality_rc"/>
-            <short value="NationalityRC">
+        <element id="nationality_rc">
+         <path value="nationality_rc"/>
+         <short value="NationalityRC">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Nationality information model. This concept contains all data elements of the Nationality information model.">
+         <definition value="Root concept of the Nationality information model. This concept contains all data elements of the Nationality information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="nationality_rc"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.6.3--20200901000000">
-            <path value="nationality_rc.nationality"/>
-            
-            <short value="Nationality">
+      </element>
+        <element id="nationality_rc.nationality">
+         <path value="nationality_rc.nationality"/>
+         <short value="Nationality">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Indicates the country of citizenship.">
+         <definition value="Indicates the country of citizenship.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,21 +99,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="nationality_rc.nationality"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="Nationality codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Nationaliteit"/>
          </binding>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

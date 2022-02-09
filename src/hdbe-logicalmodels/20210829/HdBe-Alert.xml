@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.3.1--20200901000000">
-            <path value="alert"/>
-            <short value="Alert">
+        <element id="alert">
+         <path value="alert"/>
+         <short value="Alert">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Alert information model. This root concept contains all data elements of the Alert information model.">
+         <definition value="Root concept of the Alert information model. This root concept contains all data elements of the Alert information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,32 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="alert"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <constraint>
-                <key value="NL-CM-8.3.1-1"/>
-                <severity value="error"/>
-                <human value="One concept must be selected in this selection box [AlertNaam | Conditie]">
-                    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                        <extension url="lang">
-                            <valueCode value="nl-NL"/>
-                        </extension>
-                        <extension url="content">
-                            <valueMarkdown value="Precies één concept in deze keuze box moet gekozen worden [AlertNaam | Conditie]"/>
-                        </extension>
-                    </extension>
-                </human>
-                <expression value="alert.where(alert_name or condition).count() = 1"/>
-            </constraint>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.3.8--20200901000000">
-            <path value="alert.end_date_time"/>
-            <short value="EndDateTime">
+      </element>
+        <element id="alert.end_date_time">
+         <path value="alert.end_date_time"/>
+         <short value="EndDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -104,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date and time at which the described condition was retracted as a warning. &#xD;&#xA;This can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year).&#xD;&#xA;">
+         <definition value="The date and time at which the described condition was retracted as a warning. &#xD;&#xA;This can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year).&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -114,22 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="alert.end_date_time"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-            
-            <condition value="NL-CM-8.3.3-1"/>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.3.3--20200901000000">
-            <path value="alert.condition"/>
-            <short value="Condition">
+      </element>
+        <element id="alert.condition">
+         <path value="alert.condition"/>
+         <short value="Condition">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -139,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The patient’s health problem or condition that is the subject of the alert. This could involve a patient’s problem, condition or diagnosis that is seen as a contraindication in prescribing medication or which has to be taken into account when shaping diagnostic and therapeutic policy. This can be in the patient’s own interest, or it can involve a problem or disorder that can make the patient a risk to their surroundings, such as an infection hazard. These are references to conditions included on the patient’s problem list.&#xD;&#xA;">
+         <definition value="The patient’s health problem or condition that is the subject of the alert. This could involve a patient’s problem, condition or diagnosis that is seen as a contraindication in prescribing medication or which has to be taken into account when shaping diagnostic and therapeutic policy. This can be in the patient’s own interest, or it can involve a problem or disorder that can make the patient a risk to their surroundings, such as an infection hazard. These are references to conditions included on the patient’s problem list.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -149,21 +132,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="alert.condition"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-            <condition value="NL-CM-8.3.3-1"/>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.18--20200901000000">
-            <path value="alert.condition.problem"/>
-            <short value="Problem">
+      </element>
+        <element id="alert.condition.problem">
+         <path value="alert.condition.problem"/>
+         <short value="Problem">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -173,7 +155,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Problem information model.&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient himselve (in the form of a complaint) or by their healthprofessional (in the form of a diagnosis, for example). &#xD;&#xA;">
+         <definition value="Root concept of the Problem information model.&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient himselve (in the form of a complaint) or by their healthprofessional (in the form of a diagnosis, for example). &#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -183,21 +165,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="alert.condition.problem"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.3.4--20200901000000">
-            <path value="alert.alert_name"/>
-            <short value="AlertName">
+      </element>
+        <element id="alert.alert_name">
+         <path value="alert.alert_name"/>
+         <short value="AlertName">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -207,7 +189,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A warning, other than a condition or problem. For example, a patient can be given an ‘Aggressive patient' alert. &#xD;&#xA;The warning can be entered in code (there are codes for frequently used alerts), but seeing the dynamic nature of the warnings cf. SARS and Ebola, these alerts will often be entered as free text.&#xD;&#xA;">
+         <definition value="A warning, other than a condition or problem. For example, a patient can be given an ‘Aggressive patient' alert. &#xD;&#xA;The warning can be entered in code (there are codes for frequently used alerts), but seeing the dynamic nature of the warnings cf. SARS and Ebola, these alerts will often be entered as free text.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -217,26 +199,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="alert.alert_name"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <condition value="NL-CM-8.3.3-1"/>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="AlertName codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/AlertNaam"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.3.5--20200901000000">
-            <path value="alert.start_date_time"/>
-            <short value="StartDateTime">
+      </element>
+        <element id="alert.start_date_time">
+         <path value="alert.start_date_time"/>
+         <short value="StartDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -246,7 +227,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date and time at which the described condition was entered as a warning. &#xD;&#xA;This can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year).&#xD;&#xA;">
+         <definition value="The date and time at which the described condition was entered as a warning. &#xD;&#xA;This can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year).&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -256,22 +237,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="alert.start_date_time"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-            
-            <condition value="NL-CM-8.3.3-1"/>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.3.6--20200901000000">
-            <path value="alert.alert_type"/>
-            <short value="AlertType">
+      </element>
+        <element id="alert.alert_type">
+         <path value="alert.alert_type"/>
+         <short value="AlertType">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -281,7 +260,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Indicates the type of alert, meaning a rough description of the cause or origin of the warning.">
+         <definition value="Indicates the type of alert, meaning a rough description of the cause or origin of the warning.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -291,28 +270,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="alert.alert_type"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <condition value="NL-CM-8.3.3-1"/>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="AlertType codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/AlertType"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.3.7--20200901000000">
-            <path value="alert.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="alert.comment">
+         <path value="alert.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -322,7 +298,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Explanatory comments to the alert that can not be expressed in any of the other elements.">
+         <definition value="Explanatory comments to the alert that can not be expressed in any of the other elements.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -332,17 +308,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="alert.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            <condition value="NL-CM-8.3.3-1"/>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>
