@@ -2,7 +2,7 @@
 
 @```
 from StructureDefinition
-where url in ('https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-EmailAddresses' or 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers')
+where url in ('https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-EmailAddresses'| 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers')
 select 
 Name: name,
 Description: description,
@@ -69,44 +69,33 @@ URL: url
 
 ## HdBe-ContactInformation-TelephoneNumbers
 
-@```
-from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers'
-select 
-Name: name,
-Description: description,
-Version: version,
-Status: status,
-URL: url
-```
-
 <div>
   <div class="tab">
-     <button class="tablinks active" onclick="openTab(event, 'Snapshot view')">Snapshot view</button>
-     <button class="tablinks" onclick="openTab(event, 'Hybrid view')">Hybrid view</button>
-     <button class="tablinks" onclick="openTab(event, 'Diff view')">Diff view</button>
-     <button class="tablinks" onclick="openTab(event, 'Mapping')">Mapping</button>
-     <button class="tablinks" onclick="openTab(event, 'JSON example')">JSON example</button>
-     <button class="tablinks" onclick="openTab(event, 'XML example')">XML example</button>
-     <button class="tablinks" onclick="openTab(event, 'Zib diff')">Zib-profile diff</button>
+     <button class="tablinks active" onclick="openTab(event, 'Snapshot view2')">Snapshot view</button>
+     <button class="tablinks" onclick="openTab(event, 'Hybrid view2')">Hybrid view</button>
+     <button class="tablinks" onclick="openTab(event, 'Diff view2')">Diff view</button>
+     <button class="tablinks" onclick="openTab(event, 'Mapping2')">Mapping</button>
+     <button class="tablinks" onclick="openTab(event, 'JSON example2')">JSON example</button>
+     <button class="tablinks" onclick="openTab(event, 'XML example2')">XML example</button>
+     <button class="tablinks" onclick="openTab(event, 'Zib diff2')">Zib-profile diff</button>
   </div>
 
-  <div id="Snapshot view" class="tabcontent" style="display:block">
+  <div id="Snapshot view2" class="tabcontent" style="display:block">
     <br>
       {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers, snapshot}}
   </div>
 
-  <div id="Hybrid view" class="tabcontent">
+  <div id="Hybrid view2" class="tabcontent">
     <br>
       {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers, hybrid}}
   </div>
 
-  <div id="Diff view" class="tabcontent">
+  <div id="Diff view2" class="tabcontent">
     <br>
       {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers, diff}}
   </div>
 
-  <div id="Mapping" class="tabcontent">      
+  <div id="Mapping2" class="tabcontent">      
       <h3> Mapping FHIR profile to logical model</h3>
       <div>
       @```
@@ -120,14 +109,14 @@ URL: url
     </div>
   </div>
 
-  <div id="JSON example" class="tabcontent">
+  <div id="JSON example2" class="tabcontent">
       <p> HdBe-ContactInformation-TelephoneNumbers is a datatype profile and can therefore not have an example of its own. Rather, an example is provided within the example of the HdBe-profile(s) that use this datatype profile. </p>
   </div>
-  <div id="XML example" class="tabcontent">
+  <div id="XML example2" class="tabcontent">
       <p> HdBe-ContactInformation-TelephoneNumbers is a datatype profile and can therefore not have an example of its own. Rather, an example is provided within the example of the HdBe-profile(s) that use this datatype profile. </p>
   </div>
 
-  <div id="Zib diff" class="tabcontent">
+  <div id="Zib diff2" class="tabcontent">
       {{render:resources/HdBe-ContactInformation-TelephoneNumbers.doc.md}}
   </div>
 
