@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.3.1--20200901000000">
-            <path value="mobility"/>
-            <short value="Mobility">
+        <element id="mobility">
+         <path value="mobility"/>
+         <short value="Mobility">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Mobility information model. This concept contains all data elements of the Mobility information model.">
+         <definition value="Root concept of the Mobility information model. This concept contains all data elements of the Mobility information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="mobility"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.3.3--20200901000000">
-            <path value="mobility.walking"/>
-            
-            <short value="Walking">
+      </element>
+        <element id="mobility.walking">
+         <path value="mobility.walking"/>
+         <short value="Walking">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Walking is moving body from one place to another by moving legs stepwise by self, capacity to bear weight of body and walk with effective gait within the range of speed from slow, moderate and fast pace.">
+         <definition value="Walking is moving body from one place to another by moving legs stepwise by self, capacity to bear weight of body and walk with effective gait within the range of speed from slow, moderate and fast pace.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,27 +99,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="mobility.walking"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="Walking codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Lopen"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.3.18--20200901000000">
-            <path value="mobility.climbing_stairs"/>
-            
-            <short value="ClimbingStairs">
+      </element>
+        <element id="mobility.climbing_stairs">
+         <path value="mobility.climbing_stairs"/>
+         <short value="ClimbingStairs">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -130,7 +127,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="ClimbingStairs indicates the extent to which a patient is capable of going up and down stairs independently.">
+         <definition value="ClimbingStairs indicates the extent to which a patient is capable of going up and down stairs independently.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -140,26 +137,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="mobility.climbing_stairs"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="ClimbingStairs codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Traplopen"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.3.8--20200901000000">
-            <path value="mobility.changing_position"/>
-            
-            <short value="ChangingPosition">
+      </element>
+        <element id="mobility.changing_position">
+         <path value="mobility.changing_position"/>
+         <short value="ChangingPosition">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -169,7 +165,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Changing position entails the body going from one position to another and going from one location to the next, such as getting out of a chair and into bed, or kneeling or crouching and getting back up.">
+         <definition value="Changing position entails the body going from one position to another and going from one location to the next, such as getting out of a chair and into bed, or kneeling or crouching and getting back up.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -179,27 +175,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="mobility.changing_position"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="ChangingPosition codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/HoudingVeranderen"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.3.12--20200901000000">
-            <path value="mobility.maintaining_position"/>
-            
-            <short value="MaintainingPosition">
+      </element>
+        <element id="mobility.maintaining_position">
+         <path value="mobility.maintaining_position"/>
+         <short value="MaintainingPosition">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -209,7 +203,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Maintaining position is staying in the same position, such as sitting in a chair or standing, when required.">
+         <definition value="Maintaining position is staying in the same position, such as sitting in a chair or standing, when required.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -219,27 +213,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="mobility.maintaining_position"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="MaintainingPosition codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/HoudingHandhaven"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.3.5--20200901000000">
-            <path value="mobility.transfer"/>
-            
-            <short value="Transfer">
+      </element>
+        <element id="mobility.transfer">
+         <path value="mobility.transfer"/>
+         <short value="Transfer">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -249,7 +241,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A transfer is moving from one surface to another without changing the body’s position, such as sliding across a couch or moving from the bed to a chair.">
+         <definition value="A transfer is moving from one surface to another without changing the body’s position, such as sliding across a couch or moving from the bed to a chair.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -259,26 +251,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="mobility.transfer"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="Transfer codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/UitvoerenTransfer"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.3.4--20200901000000">
-            <path value="mobility.medical_device"/>
-            <short value="MedicalDevice">
+      </element>
+        <element id="mobility.medical_device">
+         <path value="mobility.medical_device"/>
+         <short value="MedicalDevice">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -288,7 +279,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Description of medical aids that can be used for limitations in mobility.">
+         <definition value="Description of medical aids that can be used for limitations in mobility.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -298,22 +289,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="mobility.medical_device"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicalDevice"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.3.16--20200901000000">
-            <path value="mobility.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="mobility.comment">
+         <path value="mobility.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -323,7 +313,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A comment on the patient’s mobility.">
+         <definition value="A comment on the patient’s mobility.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -333,16 +323,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="mobility.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

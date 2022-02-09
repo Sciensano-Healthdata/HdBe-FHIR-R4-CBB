@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.1--20200901000000">
-            <path value="allergy_intolerance"/>
-            <short value="AllergyIntolerance">
+        <element id="allergy_intolerance">
+         <path value="allergy_intolerance"/>
+         <short value="AllergyIntolerance">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the AllergyIntolerance information model. This root concept contains all data elements of the AllergyIntolerance information model.">
+         <definition value="Root concept of the AllergyIntolerance information model. This root concept contains all data elements of the AllergyIntolerance information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,17 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="allergy_intolerance"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.2--20200901000000">
-            <path value="allergy_intolerance.causative_agent"/>
-            <short value="CausativeAgent">
+      </element>
+        <element id="allergy_intolerance.causative_agent">
+         <path value="allergy_intolerance.causative_agent"/>
+         <short value="CausativeAgent">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -89,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Substance, group of substances or environmental factor to which the patient is allergic or hypersensitive.">
+         <definition value="Substance, group of substances or environmental factor to which the patient is allergic or hypersensitive.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -99,26 +99,26 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="allergy_intolerance.causative_agent"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-        </element>
+      </element>
         
         
         
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.4--20200901000000">
-            <path value="allergy_intolerance.allergy_category"/>
-            <short value="AllergyCategory">
+        <element id="allergy_intolerance.allergy_category">
+         <path value="allergy_intolerance.allergy_category"/>
+         <short value="AllergyCategory">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -128,7 +128,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Identifies the allergy category such as medication, food or environment.">
+         <definition value="Identifies the allergy category such as medication, food or environment.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -138,25 +138,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="allergy_intolerance.allergy_category"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="AllergyCategory codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/AllergieCategorie"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.5--20200901000000">
-            <path value="allergy_intolerance.allergy_status"/>
-            <short value="AllergyStatus">
+      </element>
+        <element id="allergy_intolerance.allergy_status">
+         <path value="allergy_intolerance.allergy_status"/>
+         <short value="AllergyStatus">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -166,7 +166,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Statement on the status of the patient’s hypersensitivity.">
+         <definition value="Statement on the status of the patient’s hypersensitivity.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -176,25 +176,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="allergy_intolerance.allergy_status"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="AllergyStatus codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/AllergieStatus"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.6--20200901000000">
-            <path value="allergy_intolerance.start_date_time"/>
-            <short value="StartDateTime">
+      </element>
+        <element id="allergy_intolerance.start_date_time">
+         <path value="allergy_intolerance.start_date_time"/>
+         <short value="StartDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -204,7 +204,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date and time at which the allergy or undesired reaction was determined. &#xD;&#xA;This can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year).&#xD;&#xA;">
+         <definition value="The date and time at which the allergy or undesired reaction was determined. &#xD;&#xA;This can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year).&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -214,22 +214,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="allergy_intolerance.start_date_time"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.7--20200901000000">
-            <path value="allergy_intolerance.criticality"/>
-            
-            <short value="Criticality">
+      </element>
+        <element id="allergy_intolerance.criticality">
+         <path value="allergy_intolerance.criticality"/>
+         <short value="Criticality">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -239,7 +237,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Critical extent is defined as “the potential severity of future reactions.” &#xD;&#xA;This represents a clinical evaluation of the worst case scenario for a future reaction. It can be based on the severity of past reactions, the dose and manner of exposure which caused reactions in the past, and the life-threatening potential of the type of reaction. Critical extent is a property of the allergy, and not of the reaction itself.&#xD;&#xA;">
+         <definition value="Critical extent is defined as “the potential severity of future reactions.” &#xD;&#xA;This represents a clinical evaluation of the worst case scenario for a future reaction. It can be based on the severity of past reactions, the dose and manner of exposure which caused reactions in the past, and the life-threatening potential of the type of reaction. Critical extent is a property of the allergy, and not of the reaction itself.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -249,25 +247,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="allergy_intolerance.criticality"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="Criticality codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/MateVanKritiekZijn"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.8--20200901000000">
-            <path value="allergy_intolerance.last_reaction_date_time"/>
-            <short value="LastReactionDateTime">
+      </element>
+        <element id="allergy_intolerance.last_reaction_date_time">
+         <path value="allergy_intolerance.last_reaction_date_time"/>
+         <short value="LastReactionDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -277,7 +275,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Entry of the last time a hypersensitive reaction took place.">
+         <definition value="Entry of the last time a hypersensitive reaction took place.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -287,21 +285,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="allergy_intolerance.last_reaction_date_time"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.9--20200901000000">
-            <path value="allergy_intolerance.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="allergy_intolerance.comment">
+         <path value="allergy_intolerance.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -311,7 +308,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Textual explanation of the hypersensitivity which cannot be entered in any of the other fields.">
+         <definition value="Textual explanation of the hypersensitivity which cannot be entered in any of the other fields.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -321,20 +318,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="allergy_intolerance.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.10--20200901000000">
-            <path value="allergy_intolerance.reaction"/>
-            <short value="Reaction">
+      </element>
+        <element id="allergy_intolerance.reaction">
+         <path value="allergy_intolerance.reaction"/>
+         <short value="Reaction">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -344,7 +341,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the Reaction concept. This container contains all data elements of the Reaction concept.">
+         <definition value="Container of the Reaction concept. This container contains all data elements of the Reaction concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -354,20 +351,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="allergy_intolerance.reaction"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.11--20200901000000">
-            <path value="allergy_intolerance.reaction.symptom"/>
-            <short value="Symptom">
+      </element>
+        <element id="allergy_intolerance.reaction.symptom">
+         <path value="allergy_intolerance.reaction.symptom"/>
+         <short value="Symptom">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -377,7 +374,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The content specifications of the reaction that takes place when the patient is exposed to the causative substance.">
+         <definition value="The content specifications of the reaction that takes place when the patient is exposed to the causative substance.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -387,26 +384,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="*"/>
-            <base>
+         <min value="1"/>
+         <max value="*"/>
+         <base>
                 <path value="allergy_intolerance.reaction.symptom"/>
                 <min value="1"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="Symptom codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Symptoom"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.12--20200901000000">
-            <path value="allergy_intolerance.reaction.specific_substance"/>
-            <short value="SpecificSubstance">
+      </element>
+        <element id="allergy_intolerance.reaction.specific_substance">
+         <path value="allergy_intolerance.reaction.specific_substance"/>
+         <short value="SpecificSubstance">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -416,7 +412,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="More specific indication of the substance that caused the reaction. This can be a specific substance from a group of substances to which the patient is allergic or hypersensitive.">
+         <definition value="More specific indication of the substance that caused the reaction. This can be a specific substance from a group of substances to which the patient is allergic or hypersensitive.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -426,26 +422,26 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="allergy_intolerance.reaction.specific_substance"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-        </element>
+      </element>
         
         
         
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.13--20200901000000">
-            <path value="allergy_intolerance.reaction.reaction_description"/>
-            <short value="ReactionDescription">
+        <element id="allergy_intolerance.reaction.reaction_description">
+         <path value="allergy_intolerance.reaction.reaction_description"/>
+         <short value="ReactionDescription">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -455,7 +451,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Textual description of the reaction as a whole.">
+         <definition value="Textual description of the reaction as a whole.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -465,20 +461,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="allergy_intolerance.reaction.reaction_description"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.14--20200901000000">
-            <path value="allergy_intolerance.reaction.severity"/>
-            <short value="Severity">
+      </element>
+        <element id="allergy_intolerance.reaction.severity">
+         <path value="allergy_intolerance.reaction.severity"/>
+         <short value="Severity">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -488,7 +484,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The severity of the reaction as a result of exposure to the causative substance.">
+         <definition value="The severity of the reaction as a result of exposure to the causative substance.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -498,26 +494,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="allergy_intolerance.reaction.severity"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="Severity codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Ernst"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.15--20200901000000">
-            <path value="allergy_intolerance.reaction.route_of_exposure"/>
-            <short value="RouteOfExposure">
+      </element>
+        <element id="allergy_intolerance.reaction.route_of_exposure">
+         <path value="allergy_intolerance.reaction.route_of_exposure"/>
+         <short value="RouteOfExposure">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -527,7 +522,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Way in which the patient came into contact with the causative agent or the way in which the agent was administered.">
+         <definition value="Way in which the patient came into contact with the causative agent or the way in which the agent was administered.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -537,25 +532,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="allergy_intolerance.reaction.route_of_exposure"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="RouteOfExposure codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/WijzeVanBlootstelling"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.8.2.17--20200901000000">
-            <path value="allergy_intolerance.reaction.reaction_time"/>
-            <short value="ReactionTime">
+      </element>
+        <element id="allergy_intolerance.reaction.reaction_time">
+         <path value="allergy_intolerance.reaction.reaction_time"/>
+         <short value="ReactionTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -565,7 +560,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Date and time at which the reaction took place. This may also be just the date or a partial date, in the event that the exact date is unknown.">
+         <definition value="Date and time at which the reaction took place. This may also be just the date or a partial date, in the event that the exact date is unknown.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -575,16 +570,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="allergy_intolerance.reaction.reaction_time"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.14.1--20200901000000">
-            <path value="head_circumference"/>
-            <short value="HeadCircumference">
+        <element id="head_circumference">
+         <path value="head_circumference"/>
+         <short value="HeadCircumference">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the HeadCircumference information model. This root concept contains all data elements of the HeadCircumference information model.">
+         <definition value="Root concept of the HeadCircumference information model. This root concept contains all data elements of the HeadCircumference information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="head_circumference"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.14.5--20200901000000">
-            <path value="head_circumference.head_circumference_measuring_method"/>
-            
-            <short value="HeadCircumferenceMeasuringMethod">
+      </element>
+        <element id="head_circumference.head_circumference_measuring_method">
+         <path value="head_circumference.head_circumference_measuring_method"/>
+         <short value="HeadCircumferenceMeasuringMethod">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="There are different methods to measure the head circumference: prenatal measurement using ultrasound or postnatal measurement using a measuring tape by measuring from the backside of the head (occiput) to above the eyes (supraorbital).">
+         <definition value="There are different methods to measure the head circumference: prenatal measurement using ultrasound or postnatal measurement using a measuring tape by measuring from the backside of the head (occiput) to above the eyes (supraorbital).">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,26 +99,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="head_circumference.head_circumference_measuring_method"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="HeadCircumferenceMeasuringMethod codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/SchedelomvangMeetmethode"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.14.4--20200901000000">
-            <path value="head_circumference.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="head_circumference.comment">
+         <path value="head_circumference.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -129,7 +127,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Comment on the head circumference.">
+         <definition value="Comment on the head circumference.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -139,21 +137,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="head_circumference.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.14.3--20200901000000">
-            <path value="head_circumference.head_circumference_measurement"/>
-            
-            <short value="HeadCircumferenceMeasurement">
+      </element>
+        <element id="head_circumference.head_circumference_measurement">
+         <path value="head_circumference.head_circumference_measurement"/>
+         <short value="HeadCircumferenceMeasurement">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -163,7 +160,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The value of the head circumference as measured in millimeters or centimeters.">
+         <definition value="The value of the head circumference as measured in millimeters or centimeters.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -173,21 +170,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="head_circumference.head_circumference_measurement"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.14.2--20200901000000">
-            <path value="head_circumference.head_circumference_date"/>
-            <short value="HeadCircumferenceDate">
+      </element>
+        <element id="head_circumference.head_circumference_date">
+         <path value="head_circumference.head_circumference_date"/>
+         <short value="HeadCircumferenceDate">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -197,7 +193,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date on which the head circumference was measured.">
+         <definition value="The date on which the head circumference was measured.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -207,16 +203,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="head_circumference.head_circumference_date"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

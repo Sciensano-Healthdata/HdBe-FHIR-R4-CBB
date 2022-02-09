@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.1--20200901000000">
-            <path value="tnmtumor_classification"/>
-            <short value="TNMTumorClassification">
+        <element id="tnmtumor_classification">
+         <path value="tnmtumor_classification"/>
+         <short value="TNMTumorClassification">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the TNMTumorClassification information model.This root concept contains all data elements of the TNMTumorClassification information model.">
+         <definition value="Root concept of the TNMTumorClassification information model.This root concept contains all data elements of the TNMTumorClassification information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="tnmtumor_classification"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.12--20200901000000">
-            <path value="tnmtumor_classification.primary_tumor"/>
-            
-            <short value="PrimaryTumor">
+      </element>
+        <element id="tnmtumor_classification.primary_tumor">
+         <path value="tnmtumor_classification.primary_tumor"/>
+         <short value="PrimaryTumor">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the PrimaryTumor concept.This container contains all data elements of the PrimaryTumor concept.">
+         <definition value="Container of the PrimaryTumor concept.This container contains all data elements of the PrimaryTumor concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,21 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.primary_tumor"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.13--20200901000000">
-            <path value="tnmtumor_classification.primary_tumor.m_number_of_primary_tumors"/>
-            
-            <short value="m_NumberOfPrimaryTumors">
+      </element>
+        <element id="tnmtumor_classification.primary_tumor.m_number_of_primary_tumors">
+         <path value="tnmtumor_classification.primary_tumor.m_number_of_primary_tumors"/>
+         <short value="m_NumberOfPrimaryTumors">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -124,27 +122,26 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="-"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <definition value="-"/>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.primary_tumor.m_number_of_primary_tumors"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="m-NumberOfPrimaryTumors codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/m_AantalPrimaireTumoren"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.14--20200901000000">
-            <path value="tnmtumor_classification.primary_tumor.t_primary_tumor"/>
-            
-            <short value="T_PrimaryTumor">
+      </element>
+        <element id="tnmtumor_classification.primary_tumor.t_primary_tumor">
+         <path value="tnmtumor_classification.primary_tumor.t_primary_tumor"/>
+         <short value="T_PrimaryTumor">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -154,7 +151,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Staging result of the size extension of the primary tumor, the T-category of the TNM classification including the prefix and suffix.">
+         <definition value="Staging result of the size extension of the primary tumor, the T-category of the TNM classification including the prefix and suffix.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -164,18 +161,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.primary_tumor.t_primary_tumor"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-        </element>
+      </element>
         
         
         
@@ -184,10 +180,9 @@
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.15--20200901000000">
-            <path value="tnmtumor_classification.primary_tumor.abnormality"/>
-            
-            <short value="Abnormality">
+        <element id="tnmtumor_classification.primary_tumor.abnormality">
+         <path value="tnmtumor_classification.primary_tumor.abnormality"/>
+         <short value="Abnormality">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -197,7 +192,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the Abnormality concept.This container contains all data elements of the Abnormality concept.">
+         <definition value="Container of the Abnormality concept.This container contains all data elements of the Abnormality concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -207,20 +202,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="*"/>
-            <base>
+         <min value="1"/>
+         <max value="*"/>
+         <base>
                 <path value="tnmtumor_classification.primary_tumor.abnormality"/>
                 <min value="1"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.16--20200901000000">
-            <path value="tnmtumor_classification.primary_tumor.abnormality.abnormality_number"/>
-            <short value="AbnormalityNumber">
+      </element>
+        <element id="tnmtumor_classification.primary_tumor.abnormality.abnormality_number">
+         <path value="tnmtumor_classification.primary_tumor.abnormality.abnormality_number"/>
+         <short value="AbnormalityNumber">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -230,7 +225,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The number assigned to the abnormality, which is necessary in order to be able to clearly indicate to which abnormality the information relates in various examinations.&#xD;&#xA;In the case of multiple primary tumors in one organ, the tumor with the highest T category should be classified.">
+         <definition value="The number assigned to the abnormality, which is necessary in order to be able to clearly indicate to which abnormality the information relates in various examinations.&#xD;&#xA;In the case of multiple primary tumors in one organ, the tumor with the highest T category should be classified.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -240,21 +235,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.primary_tumor.abnormality.abnormality_number"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.17--20200901000000">
-            <path value="tnmtumor_classification.primary_tumor.abnormality.morphology"/>
-            
-            <short value="Morphology">
+      </element>
+        <element id="tnmtumor_classification.primary_tumor.abnormality.morphology">
+         <path value="tnmtumor_classification.primary_tumor.abnormality.morphology"/>
+         <short value="Morphology">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -264,7 +258,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Behavior of a tumor and cell type expressed in ICD-O-3 morphological or histology code. Describes the cell type (or histology) of the tumor, together with the behavior (malignant or benign). This is determined by a pathologist.">
+         <definition value="Behavior of a tumor and cell type expressed in ICD-O-3 morphological or histology code. Describes the cell type (or histology) of the tumor, together with the behavior (malignant or benign). This is determined by a pathologist.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -274,26 +268,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.primary_tumor.abnormality.morphology"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="Morphology codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Morfologie"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.18--20200901000000">
-            <path value="tnmtumor_classification.primary_tumor.abnormality.g_histopathological_grading"/>
-            
-            <short value="G_HistopathologicalGrading">
+      </element>
+        <element id="tnmtumor_classification.primary_tumor.abnormality.g_histopathological_grading">
+         <path value="tnmtumor_classification.primary_tumor.abnormality.g_histopathological_grading"/>
+         <short value="G_HistopathologicalGrading">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -303,7 +296,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Staging result of the histopathological grading, the G-category of theTNM classification. The differentiation grade of a tumor is determined by a pathologist.">
+         <definition value="Staging result of the histopathological grading, the G-category of theTNM classification. The differentiation grade of a tumor is determined by a pathologist.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -313,27 +306,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.primary_tumor.abnormality.g_histopathological_grading"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="G-HistopathologicalGrading codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/G_DifferentiatiegraadTumor"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.19--20200901000000">
-            <path value="tnmtumor_classification.primary_tumor.abnormality.tumor_localization"/>
-            
-            <short value="TumorLocalization">
+      </element>
+        <element id="tnmtumor_classification.primary_tumor.abnormality.tumor_localization">
+         <path value="tnmtumor_classification.primary_tumor.abnormality.tumor_localization"/>
+         <short value="TumorLocalization">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -343,7 +334,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the TumorLocalization concept.This container contains all data elements of the TumorLocalization concept.">
+         <definition value="Container of the TumorLocalization concept.This container contains all data elements of the TumorLocalization concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -353,18 +344,18 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="tnmtumor_classification.primary_tumor.abnormality.tumor_localization"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.20--20200901000000">
+      </element>
+        <element id="tnmtumor_classification.primary_tumor.abnormality.tumor_localization.anatomical_location">
          <path value="tnmtumor_classification.primary_tumor.abnormality.tumor_localization.anatomical_location"/>
          <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
@@ -398,10 +389,9 @@
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.21--20200901000000">
-            <path value="tnmtumor_classification.regional_lymphnodes"/>
-            
-            <short value="RegionalLymphnodes">
+        <element id="tnmtumor_classification.regional_lymphnodes">
+         <path value="tnmtumor_classification.regional_lymphnodes"/>
+         <short value="RegionalLymphnodes">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -411,7 +401,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the RegionalLymphnodes concept.This container contains all data elements of the RegionalLymphnodes concept.">
+         <definition value="Container of the RegionalLymphnodes concept.This container contains all data elements of the RegionalLymphnodes concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -421,21 +411,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.regional_lymphnodes"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.22--20200901000000">
-            <path value="tnmtumor_classification.regional_lymphnodes.n_regional_lymphnodes"/>
-            
-            <short value="N_RegionalLymphnodes">
+      </element>
+        <element id="tnmtumor_classification.regional_lymphnodes.n_regional_lymphnodes">
+         <path value="tnmtumor_classification.regional_lymphnodes.n_regional_lymphnodes"/>
+         <short value="N_RegionalLymphnodes">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -445,7 +434,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Staging result of the presence or absence of regional lymph nodes metastasis, the N-category of the TNM classification.&#xD;&#xA;">
+         <definition value="Staging result of the presence or absence of regional lymph nodes metastasis, the N-category of the TNM classification.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -455,17 +444,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.regional_lymphnodes.n_regional_lymphnodes"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-        </element>
+      </element>
         
         
         
@@ -474,10 +463,9 @@
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.23--20200901000000">
-            <path value="tnmtumor_classification.regional_lymphnodes.regional_lymph_nodes_localization"/>
-            
-            <short value="RegionalLymphNodesLocalization">
+        <element id="tnmtumor_classification.regional_lymphnodes.regional_lymph_nodes_localization">
+         <path value="tnmtumor_classification.regional_lymphnodes.regional_lymph_nodes_localization"/>
+         <short value="RegionalLymphNodesLocalization">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -487,7 +475,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the RegionalLymphNodesLocalization concept.This container contains all data elements of the RegionalLymphNodesLocalization concept.">
+         <definition value="Container of the RegionalLymphNodesLocalization concept.This container contains all data elements of the RegionalLymphNodesLocalization concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -497,18 +485,18 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="tnmtumor_classification.regional_lymphnodes.regional_lymph_nodes_localization"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.24--20200901000000">
+      </element>
+        <element id="tnmtumor_classification.regional_lymphnodes.regional_lymph_nodes_localization.anatomical_location">
          <path value="tnmtumor_classification.regional_lymphnodes.regional_lymph_nodes_localization.anatomical_location"/>
          <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
@@ -542,10 +530,9 @@
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.25--20200901000000">
-            <path value="tnmtumor_classification.distant_metastasis"/>
-            
-            <short value="DistantMetastasis">
+        <element id="tnmtumor_classification.distant_metastasis">
+         <path value="tnmtumor_classification.distant_metastasis"/>
+         <short value="DistantMetastasis">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -555,7 +542,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the DistantMetastasis concept.This container contains all data elements of the DistantMetastasis concept.">
+         <definition value="Container of the DistantMetastasis concept.This container contains all data elements of the DistantMetastasis concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -565,21 +552,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.distant_metastasis"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.26--20200901000000">
-            <path value="tnmtumor_classification.distant_metastasis.m_distant_metastasis"/>
-            
-            <short value="M_DistantMetastasis">
+      </element>
+        <element id="tnmtumor_classification.distant_metastasis.m_distant_metastasis">
+         <path value="tnmtumor_classification.distant_metastasis.m_distant_metastasis"/>
+         <short value="M_DistantMetastasis">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -589,7 +575,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Staging result of the presence or absence of distant metastasis, the M-category of the TNM classification.&#xD;&#xA;">
+         <definition value="Staging result of the presence or absence of distant metastasis, the M-category of the TNM classification.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -599,25 +585,24 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.distant_metastasis.m_distant_metastasis"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-        </element>
+      </element>
         
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.27--20200901000000">
-            <path value="tnmtumor_classification.distant_metastasis.distant_metastasis_localization"/>
-            
-            <short value="DistantMetastasisLocalization">
+        <element id="tnmtumor_classification.distant_metastasis.distant_metastasis_localization">
+         <path value="tnmtumor_classification.distant_metastasis.distant_metastasis_localization"/>
+         <short value="DistantMetastasisLocalization">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -627,7 +612,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the DistantMetastasisLocalization concept.This container contains all data elements of the DistantMetastasisLocalization concept.">
+         <definition value="Container of the DistantMetastasisLocalization concept.This container contains all data elements of the DistantMetastasisLocalization concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -637,18 +622,18 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="tnmtumor_classification.distant_metastasis.distant_metastasis_localization"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.28--20200901000000">
+      </element>
+        <element id="tnmtumor_classification.distant_metastasis.distant_metastasis_localization.anatomical_location">
          <path value="tnmtumor_classification.distant_metastasis.distant_metastasis_localization.anatomical_location"/>
          <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
@@ -682,10 +667,9 @@
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.2--20200901000000">
-            <path value="tnmtumor_classification.date_of_tnmclassification"/>
-            
-            <short value="DateOfTNMClassification">
+        <element id="tnmtumor_classification.date_of_tnmclassification">
+         <path value="tnmtumor_classification.date_of_tnmclassification"/>
+         <short value="DateOfTNMClassification">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -695,7 +679,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date at which the TNM Classification (the value) has been assigned.">
+         <definition value="The date at which the TNM Classification (the value) has been assigned.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -705,22 +689,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.date_of_tnmclassification"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.3--20200901000000">
-            <path value="tnmtumor_classification.tnmversion"/>
-            
-            <short value="TNMVersion">
+      </element>
+        <element id="tnmtumor_classification.tnmversion">
+         <path value="tnmtumor_classification.tnmversion"/>
+         <short value="TNMVersion">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -730,7 +712,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value=" TNM classification version (AJCC or UICC) and edition used (7th, 8th etc.). ">
+         <definition value=" TNM classification version (AJCC or UICC) and edition used (7th, 8th etc.). ">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -740,27 +722,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.tnmversion"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="TNMVersion codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/TNMVersie"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.4--20200901000000">
-            <path value="tnmtumor_classification.integrated_tnmvalue"/>
-            
-            <short value="IntegratedTNMValue">
+      </element>
+        <element id="tnmtumor_classification.integrated_tnmvalue">
+         <path value="tnmtumor_classification.integrated_tnmvalue"/>
+         <short value="IntegratedTNMValue">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -770,7 +750,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The assigned TNM classification (the value), based on each T, N and M category (optional incl. multiple primary tumors (m) and/or the localization of M).">
+         <definition value="The assigned TNM classification (the value), based on each T, N and M category (optional incl. multiple primary tumors (m) and/or the localization of M).">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -780,22 +760,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.integrated_tnmvalue"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.5--20200901000000">
-            <path value="tnmtumor_classification.explanation"/>
-            
-            <short value="Explanation">
+      </element>
+        <element id="tnmtumor_classification.explanation">
+         <path value="tnmtumor_classification.explanation"/>
+         <short value="Explanation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -805,7 +783,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Remark regarding interpretation of the integrated TNM value as is classified.&#xD;&#xA;">
+         <definition value="Remark regarding interpretation of the integrated TNM value as is classified.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -815,22 +793,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.explanation"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.6--20200901000000">
-            <path value="tnmtumor_classification.tl_lymphatic_invasion"/>
-            
-            <short value="TL_LymphaticInvasion">
+      </element>
+        <element id="tnmtumor_classification.tl_lymphatic_invasion">
+         <path value="tnmtumor_classification.tl_lymphatic_invasion"/>
+         <short value="TL_LymphaticInvasion">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -840,7 +816,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Presence or absence of tissue invasion absence of lymphatic invasion, the L-category. It concerns an additional description within the TNM classification that is determined by a pathologist.">
+         <definition value="Presence or absence of tissue invasion absence of lymphatic invasion, the L-category. It concerns an additional description within the TNM classification that is determined by a pathologist.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -850,27 +826,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.tl_lymphatic_invasion"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="TL-LymphaticInvasion codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/L_LymfatischeInvasie"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.7--20200901000000">
-            <path value="tnmtumor_classification.pn_perineural_invasion"/>
-            
-            <short value="Pn_PerineuralInvasion">
+      </element>
+        <element id="tnmtumor_classification.pn_perineural_invasion">
+         <path value="tnmtumor_classification.pn_perineural_invasion"/>
+         <short value="Pn_PerineuralInvasion">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -880,7 +854,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Presence or absence of perineural invasion, the Pn-category. It concerns an additional description within the TNM classification that is determined by a pathologist.">
+         <definition value="Presence or absence of perineural invasion, the Pn-category. It concerns an additional description within the TNM classification that is determined by a pathologist.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -890,26 +864,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.pn_perineural_invasion"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="Pn-PerineuralInvasion codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Pn_PerineuraleInvasie"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.8--20200901000000">
-            <path value="tnmtumor_classification.v_venous_invasion"/>
-            
-            <short value="V_VenousInvasion">
+      </element>
+        <element id="tnmtumor_classification.v_venous_invasion">
+         <path value="tnmtumor_classification.v_venous_invasion"/>
+         <short value="V_VenousInvasion">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -919,7 +892,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Presence or absence of venous invasion, the V-category. It concerns an additional description within the TNM classification that is determined by a pathologist.">
+         <definition value="Presence or absence of venous invasion, the V-category. It concerns an additional description within the TNM classification that is determined by a pathologist.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -929,26 +902,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.v_venous_invasion"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="V-VenousInvasion codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/V_VeneuzeInvasie"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.9--20200901000000">
-            <path value="tnmtumor_classification.anatomical_stage"/>
-            
-            <short value="AnatomicalStage">
+      </element>
+        <element id="tnmtumor_classification.anatomical_stage">
+         <path value="tnmtumor_classification.anatomical_stage"/>
+         <short value="AnatomicalStage">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -958,7 +930,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The stage of the disease is the grouping based on the anatomical extent of the disease.">
+         <definition value="The stage of the disease is the grouping based on the anatomical extent of the disease.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -968,26 +940,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.anatomical_stage"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="AnatomicalStage codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/AnatomischStadium"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.10--20200901000000">
-            <path value="tnmtumor_classification.prognostic_stage"/>
-            
-            <short value="PrognosticStage">
+      </element>
+        <element id="tnmtumor_classification.prognostic_stage">
+         <path value="tnmtumor_classification.prognostic_stage"/>
+         <short value="PrognosticStage">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -997,7 +968,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The Prognostic Stage group of the disease. Next to the anatomic extent of the disease additional prognostic factors are included in the grouping.">
+         <definition value="The Prognostic Stage group of the disease. Next to the anatomic extent of the disease additional prognostic factors are included in the grouping.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1007,26 +978,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.prognostic_stage"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="PrognosticStage codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/PrognostischStadium"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.27.11--20200901000000">
-            <path value="tnmtumor_classification.r_residual_tumor"/>
-            
-            <short value="R_ResidualTumor">
+      </element>
+        <element id="tnmtumor_classification.r_residual_tumor">
+         <path value="tnmtumor_classification.r_residual_tumor"/>
+         <short value="R_ResidualTumor">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1036,7 +1006,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Presence or absence of Residual Tumor after treatment, the R-category.">
+         <definition value="Presence or absence of Residual Tumor after treatment, the R-category.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1046,21 +1016,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="tnmtumor_classification.r_residual_tumor"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="R-ResidualTumor codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/R_ResidueleTumor"/>
          </binding>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>
