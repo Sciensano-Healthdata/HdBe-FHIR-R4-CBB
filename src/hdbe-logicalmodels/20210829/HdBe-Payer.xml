@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.1--20200901000000">
-            <path value="payer"/>
-            <short value="Payer">
+        <element id="payer">
+         <path value="payer"/>
+         <short value="Payer">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Payer information model. This root concept contains all data elements of the Payer information model.">
+         <definition value="Root concept of the Payer information model. This root concept contains all data elements of the Payer information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,32 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="payer"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <constraint>
-                <key value="NL-CM-1.1.1-1"/>
-                <severity value="error"/>
-                <human value="One concept must be selected in this selection box. [BetalerPersoon | Verzekeraar]">
-                    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                        <extension url="lang">
-                            <valueCode value="nl-NL"/>
-                        </extension>
-                        <extension url="content">
-                            <valueMarkdown value="Precies één concept uit deze keuze box moet geselecteerd worden [BetalerPersoon | Verzekeraar]"/>
-                        </extension>
-                    </extension>
-                </human>
-                <expression value="payer.where(insurance_company or payer_person).count() = 1"/>
-            </constraint>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.2--20200901000000">
-            <path value="payer.payer_person"/>
-            <short value="PayerPerson">
+      </element>
+        <element id="payer.payer_person">
+         <path value="payer.payer_person"/>
+         <short value="PayerPerson">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -104,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the PayerPerson concept. This container contains all data elements of the PayerPerson concept.&#xD;&#xA;In this a person is a natural person or a juridical person, such as an organization, municipality, etc.">
+         <definition value="Container of the PayerPerson concept. This container contains all data elements of the PayerPerson concept.&#xD;&#xA;In this a person is a natural person or a juridical person, such as an organization, municipality, etc.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -114,21 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="payer.payer_person"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-            <condition value="NL-CM-1.1.2-1"/>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.5--20200901000000">
-            <path value="payer.payer_person.payer_name"/>
-            <short value="PayerName">
+      </element>
+        <element id="payer.payer_person.payer_name">
+         <path value="payer.payer_person.payer_name"/>
+         <short value="PayerName">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -138,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Full name of the paying person or organization (legal entity).">
+         <definition value="Full name of the paying person or organization (legal entity).">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -148,20 +132,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.payer_person.payer_name"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.4--20200901000000">
-            <path value="payer.payer_person.bank_information"/>
-            <short value="BankInformation">
+      </element>
+        <element id="payer.payer_person.bank_information">
+         <path value="payer.payer_person.bank_information"/>
+         <short value="BankInformation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -171,7 +155,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the BankInformation concept. This container contains all data elements of the BankInformation concept.">
+         <definition value="Container of the BankInformation concept. This container contains all data elements of the BankInformation concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -181,20 +165,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="payer.payer_person.bank_information"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.9--20200901000000">
-            <path value="payer.payer_person.bank_information.bank_name"/>
-            <short value="BankName">
+      </element>
+        <element id="payer.payer_person.bank_information.bank_name">
+         <path value="payer.payer_person.bank_information.bank_name"/>
+         <short value="BankName">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -204,7 +188,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Name of the financial organization.">
+         <definition value="Name of the financial organization.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -214,21 +198,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.payer_person.bank_information.bank_name"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.10--20200901000000">
-            <path value="payer.payer_person.bank_information.bank_code"/>
-            <short value="BankCode">
+      </element>
+        <element id="payer.payer_person.bank_information.bank_code">
+         <path value="payer.payer_person.bank_information.bank_code"/>
+         <short value="BankCode">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -238,7 +221,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Code indicating the bank and branch. For European countries, this is the organization’s BIC or SWIFT code.">
+         <definition value="Code indicating the bank and branch. For European countries, this is the organization’s BIC or SWIFT code.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -248,21 +231,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.payer_person.bank_information.bank_code"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.11--20200901000000">
-            <path value="payer.payer_person.bank_information.account_number"/>
-            <short value="AccountNumber">
+      </element>
+        <element id="payer.payer_person.bank_information.account_number">
+         <path value="payer.payer_person.bank_information.account_number"/>
+         <short value="AccountNumber">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -272,7 +254,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The payer’s bank account number at the listed organization. For European countries, this is the IBAN.">
+         <definition value="The payer’s bank account number at the listed organization. For European countries, this is the IBAN.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -282,21 +264,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.payer_person.bank_information.account_number"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.3--20200901000000">
-            <path value="payer.insurance_company"/>
-            <short value="InsuranceCompany">
+      </element>
+        <element id="payer.insurance_company">
+         <path value="payer.insurance_company"/>
+         <short value="InsuranceCompany">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -306,7 +287,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the InsuranceCompany concept. This container contains all data elements of the InsuranceCompany concept.">
+         <definition value="Container of the InsuranceCompany concept. This container contains all data elements of the InsuranceCompany concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -316,21 +297,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="payer.insurance_company"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-            <condition value="NL-CM-1.1.2-1"/>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.8--20200901000000">
-            <path value="payer.insurance_company.insurance"/>
-            <short value="Insurance">
+      </element>
+        <element id="payer.insurance_company.insurance">
+         <path value="payer.insurance_company.insurance"/>
+         <short value="Insurance">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -340,7 +320,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the Insurance concept. This container contains all data elements of the Insurance concept.">
+         <definition value="Container of the Insurance concept. This container contains all data elements of the Insurance concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -350,20 +330,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="*"/>
-            <base>
+         <min value="1"/>
+         <max value="*"/>
+         <base>
                 <path value="payer.insurance_company.insurance"/>
                 <min value="1"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.13--20200901000000">
-            <path value="payer.insurance_company.insurance.start_date_time"/>
-            <short value="StartDateTime">
+      </element>
+        <element id="payer.insurance_company.insurance.start_date_time">
+         <path value="payer.insurance_company.insurance.start_date_time"/>
+         <short value="StartDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -373,7 +353,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Date from which the insurance policy coverage applies.">
+         <definition value="Date from which the insurance policy coverage applies.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -383,21 +363,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.insurance_company.insurance.start_date_time"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.14--20200901000000">
-            <path value="payer.insurance_company.insurance.end_date_time"/>
-            <short value="EndDateTime">
+      </element>
+        <element id="payer.insurance_company.insurance.end_date_time">
+         <path value="payer.insurance_company.insurance.end_date_time"/>
+         <short value="EndDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -407,7 +386,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Date until which the insurance policy coverage applies. &#xD;&#xA;This item maps the *‘Expiry date’* on EHIC field 9.&#xD;&#xA;">
+         <definition value="Date until which the insurance policy coverage applies. &#xD;&#xA;This item maps the *‘Expiry date’* on EHIC field 9.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -417,20 +396,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.insurance_company.insurance.end_date_time"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.15--20200901000000">
-            <path value="payer.insurance_company.insurance.insurance_type"/>
-            <short value="InsuranceType">
+      </element>
+        <element id="payer.insurance_company.insurance.insurance_type">
+         <path value="payer.insurance_company.insurance.insurance_type"/>
+         <short value="InsuranceType">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -440,7 +419,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Type of insurance policy. Codes as returned in the Check for Right to Insurance">
+         <definition value="Type of insurance policy. Codes as returned in the Check for Right to Insurance">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -450,26 +429,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.insurance_company.insurance.insurance_type"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="InsuranceType codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Verzekeringssoort"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.7--20200901000000">
-            <path value="payer.insurance_company.identification_number"/>
-            <short value="IdentificationNumber">
+      </element>
+        <element id="payer.insurance_company.identification_number">
+         <path value="payer.insurance_company.identification_number"/>
+         <short value="IdentificationNumber">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -479,7 +457,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Unique healthcare insurance company identification (the UZOVI number).">
+         <definition value="Unique healthcare insurance company identification (the UZOVI number).">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -489,21 +467,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.insurance_company.identification_number"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Identifier"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.16--20200901000000">
-            <path value="payer.insurance_company.organization_name"/>
-            <short value="OrganizationName">
+      </element>
+        <element id="payer.insurance_company.organization_name">
+         <path value="payer.insurance_company.organization_name"/>
+         <short value="OrganizationName">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -513,7 +490,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Full, official name of the healthcare insurance company. If the UZOVI number is entered as an identification number, this will be the name as listed in the UZOVI register and the name which is returned in the Check for Right to Insurance (COV).">
+         <definition value="Full, official name of the healthcare insurance company. If the UZOVI number is entered as an identification number, this will be the name as listed in the UZOVI register and the name which is returned in the Check for Right to Insurance (COV).">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -523,21 +500,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.insurance_company.organization_name"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.6--20200901000000">
-            <path value="payer.insurance_company.insurant_number"/>
-            <short value="InsurantNumber">
+      </element>
+        <element id="payer.insurance_company.insurant_number">
+         <path value="payer.insurance_company.insurant_number"/>
+         <short value="InsurantNumber">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -547,7 +523,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Number under which the insured person is registered at the insurance company &#xD;&#xA;This item maps the *‘Identification number of the card’* on EHIC field 8&#xD;&#xA;">
+         <definition value="Number under which the insured person is registered at the insurance company &#xD;&#xA;This item maps the *‘Identification number of the card’* on EHIC field 8&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -557,21 +533,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.insurance_company.insurant_number"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.17--20200901000000">
-            <path value="payer.address_information"/>
-            <short value="AddressInformation">
+      </element>
+        <element id="payer.address_information">
+         <path value="payer.address_information"/>
+         <short value="AddressInformation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -581,7 +556,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The payer’s address information.">
+         <definition value="The payer’s address information.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -591,21 +566,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="payer.address_information"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-            <condition value="NL-CM-1.1.2-1"/>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.25--20200901000000">
-            <path value="payer.address_information.street"/>
-            <short value="Street">
+      </element>
+        <element id="payer.address_information.street">
+         <path value="payer.address_information.street"/>
+         <short value="Street">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -615,7 +589,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Street name of the address.">
+         <definition value="Street name of the address.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -625,21 +599,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.address_information.street"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.26--20200901000000">
-            <path value="payer.address_information.house_number"/>
-            <short value="HouseNumber">
+      </element>
+        <element id="payer.address_information.house_number">
+         <path value="payer.address_information.house_number"/>
+         <short value="HouseNumber">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -649,7 +622,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="House number of the address. ">
+         <definition value="House number of the address. ">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -659,21 +632,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.address_information.house_number"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.27--20200901000000">
-            <path value="payer.address_information.house_number_letter"/>
-            <short value="HouseNumberLetter">
+      </element>
+        <element id="payer.address_information.house_number_letter">
+         <path value="payer.address_information.house_number_letter"/>
+         <short value="HouseNumberLetter">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -683,7 +655,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A letter following the house number as assigned by the municipal authorities.">
+         <definition value="A letter following the house number as assigned by the municipal authorities.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -693,21 +665,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.address_information.house_number_letter"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.28--20200901000000">
-            <path value="payer.address_information.house_number_addition"/>
-            <short value="HouseNumberAddition">
+      </element>
+        <element id="payer.address_information.house_number_addition">
+         <path value="payer.address_information.house_number_addition"/>
+         <short value="HouseNumberAddition">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -717,7 +688,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The letters or signs needed to locate the mailbox, in addition to the house number and letter.">
+         <definition value="The letters or signs needed to locate the mailbox, in addition to the house number and letter.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -727,22 +698,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.address_information.house_number_addition"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.29--20200901000000">
-            <path value="payer.address_information.house_number_indication"/>
-            <short value="HouseNumberIndication">
+      </element>
+        <element id="payer.address_information.house_number_indication">
+         <path value="payer.address_information.house_number_indication"/>
+         <short value="HouseNumberIndication">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -752,7 +721,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The indication used for addresses which do not consist of the usual street name and house number.">
+         <definition value="The indication used for addresses which do not consist of the usual street name and house number.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -762,25 +731,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.address_information.house_number_indication"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="HouseNumberIndication codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/AanduidingBijNummer"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.30--20200901000000">
-            <path value="payer.address_information.postcode"/>
-            <short value="Postcode">
+      </element>
+        <element id="payer.address_information.postcode">
+         <path value="payer.address_information.postcode"/>
+         <short value="Postcode">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -790,7 +759,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Postcode of the address. &#xD;&#xA;In Dutch addresses, preferably use the postcode from the Postcode table (OID: 2.16.840.1.113883.2.4.4.15).&#xD;&#xA;">
+         <definition value="Postcode of the address. &#xD;&#xA;In Dutch addresses, preferably use the postcode from the Postcode table (OID: 2.16.840.1.113883.2.4.4.15).&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -800,21 +769,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.address_information.postcode"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.31--20200901000000">
-            <path value="payer.address_information.place_of_residence"/>
-            <short value="PlaceOfResidence">
+      </element>
+        <element id="payer.address_information.place_of_residence">
+         <path value="payer.address_information.place_of_residence"/>
+         <short value="PlaceOfResidence">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -824,7 +792,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A geographically determined area which forms part of the municipal area. &#xD;&#xA;For Dutch places of residence, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14).&#xD;&#xA;">
+         <definition value="A geographically determined area which forms part of the municipal area. &#xD;&#xA;For Dutch places of residence, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14).&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -834,21 +802,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.address_information.place_of_residence"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.32--20200901000000">
-            <path value="payer.address_information.municipality"/>
-            <short value="Municipality">
+      </element>
+        <element id="payer.address_information.municipality">
+         <path value="payer.address_information.municipality"/>
+         <short value="Municipality">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -858,7 +825,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Municipality of residence. &#xD;&#xA;For Dutch municipalities, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14).&#xD;&#xA;">
+         <definition value="Municipality of residence. &#xD;&#xA;For Dutch municipalities, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14).&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -868,21 +835,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.address_information.municipality"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.33--20200901000000">
-            <path value="payer.address_information.country"/>
-            <short value="Country">
+      </element>
+        <element id="payer.address_information.country">
+         <path value="payer.address_information.country"/>
+         <short value="Country">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -892,7 +858,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Country in which the address is located.">
+         <definition value="Country in which the address is located.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -902,24 +868,23 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.address_information.country"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-        </element>
+      </element>
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.34--20200901000000">
-            <path value="payer.address_information.additional_information"/>
-            <short value="AdditionalInformation">
+        <element id="payer.address_information.additional_information">
+         <path value="payer.address_information.additional_information"/>
+         <short value="AdditionalInformation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -929,7 +894,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Extra information such as the building name, building number, entrance, route number.">
+         <definition value="Extra information such as the building name, building number, entrance, route number.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -939,21 +904,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.address_information.additional_information"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.35--20200901000000">
-            <path value="payer.address_information.address_type"/>
-            <short value="AddressType">
+      </element>
+        <element id="payer.address_information.address_type">
+         <path value="payer.address_information.address_type"/>
+         <short value="AddressType">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -963,7 +927,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The type of address in question, such as a home address or mailing address.">
+         <definition value="The type of address in question, such as a home address or mailing address.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -973,26 +937,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.address_information.address_type"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="AddressType codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/AdresSoort"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.1.1.12--20200901000000">
-            <path value="payer.contact_information"/>
-            <short value="ContactInformation">
+      </element>
+        <element id="payer.contact_information">
+         <path value="payer.contact_information"/>
+         <short value="ContactInformation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1002,7 +965,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The payer’s telephone number and/or e-mail address.">
+         <definition value="The payer’s telephone number and/or e-mail address.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1012,21 +975,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="payer.contact_information"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-            <condition value="NL-CM-1.1.2-1"/>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.36--20200901000000">
-            <path value="payer.contact_information.telephone_numbers"/>
-            <short value="TelephoneNumbers">
+      </element>
+        <element id="payer.contact_information.telephone_numbers">
+         <path value="payer.contact_information.telephone_numbers"/>
+         <short value="TelephoneNumbers">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1036,7 +998,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the TelephoneNumbers concept. This container contains all data elements of the TelephoneNumbers concept.">
+         <definition value="Container of the TelephoneNumbers concept. This container contains all data elements of the TelephoneNumbers concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1046,20 +1008,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="payer.contact_information.telephone_numbers"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.37--20200901000000">
-            <path value="payer.contact_information.telephone_numbers.telephone_number"/>
-            <short value="TelephoneNumber">
+      </element>
+        <element id="payer.contact_information.telephone_numbers.telephone_number">
+         <path value="payer.contact_information.telephone_numbers.telephone_number"/>
+         <short value="TelephoneNumber">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1069,7 +1031,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The person's telephone number.">
+         <definition value="The person's telephone number.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1079,21 +1041,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.contact_information.telephone_numbers.telephone_number"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.38--20200901000000">
-            <path value="payer.contact_information.telephone_numbers.telecom_type"/>
-            <short value="TelecomType">
+      </element>
+        <element id="payer.contact_information.telephone_numbers.telecom_type">
+         <path value="payer.contact_information.telephone_numbers.telecom_type"/>
+         <short value="TelecomType">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1103,7 +1064,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The telecom or device type that the telephone number is connected to.">
+         <definition value="The telecom or device type that the telephone number is connected to.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1113,25 +1074,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.contact_information.telephone_numbers.telecom_type"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="TelecomType codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/TelecomType"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.39--20200901000000">
-            <path value="payer.contact_information.telephone_numbers.number_type"/>
-            <short value="NumberType">
+      </element>
+        <element id="payer.contact_information.telephone_numbers.number_type">
+         <path value="payer.contact_information.telephone_numbers.number_type"/>
+         <short value="NumberType">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1141,7 +1102,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="NumberType indicates whether the number is a landline, temporary, work telephone number.">
+         <definition value="NumberType indicates whether the number is a landline, temporary, work telephone number.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1151,27 +1112,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.contact_information.telephone_numbers.number_type"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="NumberType codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/NummerSoort"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.40--20200901000000">
-            <path value="payer.contact_information.telephone_numbers.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="payer.contact_information.telephone_numbers.comment">
+         <path value="payer.contact_information.telephone_numbers.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1181,7 +1140,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Explanation about the telephone number and how to use it. It can be indicated, for example, that it is a department number (for healthcare professionnels) or that availability by phone is only possible during a specified part of the day.">
+         <definition value="Explanation about the telephone number and how to use it. It can be indicated, for example, that it is a department number (for healthcare professionnels) or that availability by phone is only possible during a specified part of the day.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1191,20 +1150,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.contact_information.telephone_numbers.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.41--20200901000000">
-            <path value="payer.contact_information.email_addresses"/>
-            <short value="EmailAddresses">
+      </element>
+        <element id="payer.contact_information.email_addresses">
+         <path value="payer.contact_information.email_addresses"/>
+         <short value="EmailAddresses">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1214,7 +1173,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the E-mailAddresses concept. This container contains all data elements of the E-mailAddresses concept.">
+         <definition value="Container of the E-mailAddresses concept. This container contains all data elements of the E-mailAddresses concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1224,20 +1183,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="payer.contact_information.email_addresses"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.42--20200901000000">
-            <path value="payer.contact_information.email_addresses.email_address"/>
-            <short value="EmailAddress">
+      </element>
+        <element id="payer.contact_information.email_addresses.email_address">
+         <path value="payer.contact_information.email_addresses.email_address"/>
+         <short value="EmailAddress">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1247,7 +1206,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The person's e-mail address">
+         <definition value="The person's e-mail address">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1257,20 +1216,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.contact_information.email_addresses.email_address"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.43--20200901000000">
-            <path value="payer.contact_information.email_addresses.email_address_type"/>
-            <short value="EmailAddressType">
+      </element>
+        <element id="payer.contact_information.email_addresses.email_address_type">
+         <path value="payer.contact_information.email_addresses.email_address_type"/>
+         <short value="EmailAddressType">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1280,7 +1239,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="E-mailAddressType indicates whether it is a private or business e-mail address.">
+         <definition value="E-mailAddressType indicates whether it is a private or business e-mail address.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1290,22 +1249,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="payer.contact_information.email_addresses.email_address_type"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="EmailAddressType codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/EmailSoort"/>
          </binding>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

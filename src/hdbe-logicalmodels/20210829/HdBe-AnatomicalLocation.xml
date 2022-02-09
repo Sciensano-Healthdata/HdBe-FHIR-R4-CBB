@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.7.1--20200901000000">
-            <path value="anatomical_location"/>
-            <short value="AnatomicalLocation">
+        <element id="anatomical_location">
+         <path value="anatomical_location"/>
+         <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the AnatomicalLocation partial information model.This root concept contains all data elements of the AnatomicalLocation partial information model.">
+         <definition value="Root concept of the AnatomicalLocation partial information model.This root concept contains all data elements of the AnatomicalLocation partial information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="anatomical_location"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.7.4--20200901000000">
-            <path value="anatomical_location.location"/>
-            
-            <short value="Location">
+      </element>
+        <element id="anatomical_location.location">
+         <path value="anatomical_location.location"/>
+         <short value="Location">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Localisation on/in the body.">
+         <definition value="Localisation on/in the body.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,24 +99,23 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="anatomical_location.location"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-        </element>
+      </element>
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.20.7.3--20200901000000">
-            <path value="anatomical_location.laterality"/>
-            
-            <short value="Laterality">
+        <element id="anatomical_location.laterality">
+         <path value="anatomical_location.laterality"/>
+         <short value="Laterality">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -127,7 +125,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
+         <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -137,22 +135,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="anatomical_location.laterality"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="Laterality codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
          </binding>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

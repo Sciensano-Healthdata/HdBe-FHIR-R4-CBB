@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.15.1.1--20200901000000">
-            <path value="encounter"/>
-            <short value="Encounter">
+        <element id="encounter">
+         <path value="encounter"/>
+         <short value="Encounter">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Contact information model. This concept contains all data elements of the Contact information model.">
+         <definition value="Root concept of the Contact information model. This concept contains all data elements of the Contact information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,17 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="encounter"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.15.1.2--20200901000000">
-            <path value="encounter.contact_type"/>
-            <short value="ContactType">
+      </element>
+        <element id="encounter.contact_type">
+         <path value="encounter.contact_type"/>
+         <short value="ContactType">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -89,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The type of contact.">
+         <definition value="The type of contact.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -99,25 +99,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="encounter.contact_type"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="ContactType codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/ContactType"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.15.1.7--20200901000000">
-            <path value="encounter.contact_with"/>
-            <short value="ContactWith">
+      </element>
+        <element id="encounter.contact_with">
+         <path value="encounter.contact_with"/>
+         <short value="ContactWith">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -127,7 +127,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The health professional with whom the contact took or will take place. The specialty and role of the health professional can be entered in the HealthProfessional information model.">
+         <definition value="The health professional with whom the contact took or will take place. The specialty and role of the health professional can be entered in the HealthProfessional information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -137,21 +137,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="encounter.contact_with"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.65--20200901000000">
-            <path value="encounter.contact_with.health_professional"/>
-            
-            <short value="HealthProfessional">
+      </element>
+        <element id="encounter.contact_with.health_professional">
+         <path value="encounter.contact_with.health_professional"/>
+         <short value="HealthProfessional">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -161,7 +160,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the HealthProfessional information model. This root concept contains all data elements of the HealthProfessional information model.&#xD;&#xA;When referring to this information model the role the health professional fulfils in the healthcare process can be addressed additionally. For health professionals, this could be for example main practitioner or referrer.">
+         <definition value="Root concept of the HealthProfessional information model. This root concept contains all data elements of the HealthProfessional information model.&#xD;&#xA;When referring to this information model the role the health professional fulfils in the healthcare process can be addressed additionally. For health professionals, this could be for example main practitioner or referrer.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -171,21 +170,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="encounter.contact_with.health_professional"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.15.1.8--20200901000000">
-            <path value="encounter.location"/>
-            <short value="Location">
+      </element>
+        <element id="encounter.location">
+         <path value="encounter.location"/>
+         <short value="Location">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -195,7 +194,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The physical location at which the contact took or will take place.">
+         <definition value="The physical location at which the contact took or will take place.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -205,21 +204,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="encounter.location"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.66--20200901000000">
-            <path value="encounter.location.healthcare_provider"/>
-            
-            <short value="HealthcareProvider">
+      </element>
+        <element id="encounter.location.healthcare_provider">
+         <path value="encounter.location.healthcare_provider"/>
+         <short value="HealthcareProvider">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -229,7 +227,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Healthcare Provider information model. This root concept contains all data elements of the Healthcare Provider information model.">
+         <definition value="Root concept of the Healthcare Provider information model. This root concept contains all data elements of the Healthcare Provider information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -239,21 +237,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="encounter.location.healthcare_provider"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.15.1.3--20200901000000">
-            <path value="encounter.start_date_time"/>
-            <short value="StartDateTime">
+      </element>
+        <element id="encounter.start_date_time">
+         <path value="encounter.start_date_time"/>
+         <short value="StartDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -263,7 +261,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date and time at which the contact took or will take place.">
+         <definition value="The date and time at which the contact took or will take place.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -273,20 +271,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="encounter.start_date_time"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.15.1.4--20200901000000">
-            <path value="encounter.end_date_time"/>
-            <short value="EndDateTime">
+      </element>
+        <element id="encounter.end_date_time">
+         <path value="encounter.end_date_time"/>
+         <short value="EndDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -296,7 +294,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date and time at which the contact ended or will end. If the contact takes place over a period of time, this indicates the end of the period, in the case of an admission, for example.">
+         <definition value="The date and time at which the contact ended or will end. If the contact takes place over a period of time, this indicates the end of the period, in the case of an admission, for example.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -306,20 +304,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="encounter.end_date_time"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.15.1.13--20200901000000">
-            <path value="encounter.contact_reason"/>
-            <short value="ContactReason">
+      </element>
+        <element id="encounter.contact_reason">
+         <path value="encounter.contact_reason"/>
+         <short value="ContactReason">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -329,7 +327,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the ContactReason concept. This container contains all data elements of the ContactReason concept.">
+         <definition value="Container of the ContactReason concept. This container contains all data elements of the ContactReason concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -339,35 +337,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="encounter.contact_reason"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-            <constraint>
-                <key value="NL-CM-15.1.13-1"/>
-                <severity value="error"/>
-                <human value="One concept must be selected in this selection box. [AfwijkendeUitslag | Verrichting | Probleem]">
-                    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                        <extension url="lang">
-                            <valueCode value="nl-NL"/>
-                        </extension>
-                        <extension url="content">
-                            <valueMarkdown value="Precies één concept uit deze keuze box moet geselecteerd worden [AfwijkendeUitslag | Verrichting | Probleem]"/>
-                        </extension>
-                    </extension>
-                </human>
-                <expression value="encounter.contact_reason.where(deviating_result or problem or procedure).count() = 1"/>
-            </constraint>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.15.1.6--20200901000000">
-            <path value="encounter.contact_reason.problem"/>
-            <short value="Problem">
+      </element>
+        <element id="encounter.contact_reason.problem">
+         <path value="encounter.contact_reason.problem"/>
+         <short value="Problem">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -377,7 +360,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The problem that is the reason for the contact.">
+         <definition value="The problem that is the reason for the contact.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -387,22 +370,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="encounter.contact_reason.problem"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
          </type>
-            <condition value="NL-CM-15.1.6-1"/>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.15.1.11--20200901000000">
-            <path value="encounter.contact_reason.procedure"/>
-            <short value="Procedure">
+      </element>
+        <element id="encounter.contact_reason.procedure">
+         <path value="encounter.contact_reason.procedure"/>
+         <short value="Procedure">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -412,7 +394,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The procedure carried out or will be carried out during the contact.">
+         <definition value="The procedure carried out or will be carried out during the contact.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -422,22 +404,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="encounter.contact_reason.procedure"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Procedure"/>
          </type>
-            <condition value="NL-CM-15.1.6-1"/>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.15.1.12--20200901000000">
-            <path value="encounter.contact_reason.deviating_result"/>
-            <short value="DeviatingResult">
+      </element>
+        <element id="encounter.contact_reason.deviating_result">
+         <path value="encounter.contact_reason.deviating_result"/>
+         <short value="DeviatingResult">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -447,7 +428,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A deviating result which serves as the reason for the contact.">
+         <definition value="A deviating result which serves as the reason for the contact.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -457,22 +438,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="encounter.contact_reason.deviating_result"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            <condition value="NL-CM-15.1.6-1"/>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.15.1.17--20200901000000">
-            <path value="encounter.contact_reason.comment_contact_reason"/>
-            
-            <short value="CommentContactReason">
+      </element>
+        <element id="encounter.contact_reason.comment_contact_reason">
+         <path value="encounter.contact_reason.comment_contact_reason"/>
+         <short value="CommentContactReason">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -482,7 +461,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Explanation of the reason for the contact">
+         <definition value="Explanation of the reason for the contact">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -492,21 +471,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="encounter.contact_reason.comment_contact_reason"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            <condition value="NL-CM-15.1.6-1"/>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.15.1.14--20200901000000">
-            <path value="encounter.origin"/>
-            <short value="Origin">
+      </element>
+        <element id="encounter.origin">
+         <path value="encounter.origin"/>
+         <short value="Origin">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -516,7 +494,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Location from which the patient comes before the encounter. In most cases this will only be used when the patient is admitted.">
+         <definition value="Location from which the patient comes before the encounter. In most cases this will only be used when the patient is admitted.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -526,25 +504,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="encounter.origin"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="Origin codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Herkomst"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.15.1.16--20200901000000">
-            <path value="encounter.destination"/>
-            <short value="Destination">
+      </element>
+        <element id="encounter.destination">
+         <path value="encounter.destination"/>
+         <short value="Destination">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -554,7 +532,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Location to which the patient will go after the encounter. In most cases this will only be used when the patient is discharged.">
+         <definition value="Location to which the patient will go after the encounter. In most cases this will only be used when the patient is discharged.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -564,21 +542,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="encounter.destination"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="Destination codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Bestemming"/>
          </binding>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

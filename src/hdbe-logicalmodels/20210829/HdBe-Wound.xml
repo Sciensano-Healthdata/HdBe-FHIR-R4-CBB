@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.2.1--20200901000000">
-            <path value="wound"/>
-            <short value="Wound">
+        <element id="wound">
+         <path value="wound"/>
+         <short value="Wound">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Wound information model. This root concept contains all data elements of the Wound information model.">
+         <definition value="Root concept of the Wound information model. This root concept contains all data elements of the Wound information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,17 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="wound"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.2.5--20200901000000">
-            <path value="wound.wound_type"/>
-            <short value="WoundType">
+      </element>
+        <element id="wound.wound_type">
+         <path value="wound.wound_type"/>
+         <short value="WoundType">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -89,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Description of the type of wound.">
+         <definition value="Description of the type of wound.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -99,26 +99,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.wound_type"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="WoundType codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/WondSoort"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.2.4--20200901000000">
-            <path value="wound.wound_tissue"/>
-            <short value="WoundTissue">
+      </element>
+        <element id="wound.wound_tissue">
+         <path value="wound.wound_tissue"/>
+         <short value="WoundTissue">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -128,7 +127,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Description of the tissue of the wound. For this, the WCS model can be used. A different classification is used for oncological ulcers.">
+         <definition value="Description of the tissue of the wound. For this, the WCS model can be used. A different classification is used for oncological ulcers.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -138,25 +137,23 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.wound_tissue"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-        </element>
+      </element>
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.2.7--20200901000000">
-            <path value="wound.wound_infection"/>
-            
-            <short value="WoundInfection">
+        <element id="wound.wound_infection">
+         <path value="wound.wound_infection"/>
+         <short value="WoundInfection">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -166,7 +163,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Indication stating whether the wound is infected.">
+         <definition value="Indication stating whether the wound is infected.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -176,21 +173,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.wound_infection"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="boolean"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.2.6--20200901000000">
-            <path value="wound.wound_moisture"/>
-            
-            <short value="WoundMoisture">
+      </element>
+        <element id="wound.wound_moisture">
+         <path value="wound.wound_moisture"/>
+         <short value="WoundMoisture">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -200,7 +196,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Description of the moisture in the wound.">
+         <definition value="Description of the moisture in the wound.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -210,27 +206,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.wound_moisture"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="WoundMoisture codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/WondVochtigheid"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.2.11--20200901000000">
-            <path value="wound.wound_edge"/>
-            
-            <short value="WoundEdge">
+      </element>
+        <element id="wound.wound_edge">
+         <path value="wound.wound_edge"/>
+         <short value="WoundEdge">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -240,7 +234,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Description of the condition of the outer edges of the wound.">
+         <definition value="Description of the condition of the outer edges of the wound.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -250,26 +244,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.wound_edge"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="WoundEdge codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/WondRand"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.2.12--20200901000000">
-            <path value="wound.wound_length"/>
-            
-            <short value="WoundLength">
+      </element>
+        <element id="wound.wound_length">
+         <path value="wound.wound_length"/>
+         <short value="WoundLength">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -279,7 +272,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The length of the wound.">
+         <definition value="The length of the wound.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -289,22 +282,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.wound_length"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.2.13--20200901000000">
-            <path value="wound.wound_width"/>
-            
-            <short value="WoundWidth">
+      </element>
+        <element id="wound.wound_width">
+         <path value="wound.wound_width"/>
+         <short value="WoundWidth">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -314,7 +305,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The width of the wound.">
+         <definition value="The width of the wound.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -324,22 +315,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.wound_width"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.2.14--20200901000000">
-            <path value="wound.wound_depth"/>
-            
-            <short value="WoundDepth">
+      </element>
+        <element id="wound.wound_depth">
+         <path value="wound.wound_depth"/>
+         <short value="WoundDepth">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -349,7 +338,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The depth of the wound.">
+         <definition value="The depth of the wound.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -359,19 +348,18 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.wound_depth"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.2.19--20200901000000">
+      </element>
+        <element id="wound.anatomical_location">
          <path value="wound.anatomical_location"/>
          <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
@@ -405,9 +393,9 @@
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.2.2--20200901000000">
-            <path value="wound.wound_date_of_onset"/>
-            <short value="WoundDateOfOnset">
+        <element id="wound.wound_date_of_onset">
+         <path value="wound.wound_date_of_onset"/>
+         <short value="WoundDateOfOnset">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -417,7 +405,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date on which the wound appeared.">
+         <definition value="The date on which the wound appeared.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -427,21 +415,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.wound_date_of_onset"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.2.3--20200901000000">
-            <path value="wound.date_of_last_dressing_change"/>
-            <short value="DateOfLastDressingChange">
+      </element>
+        <element id="wound.date_of_last_dressing_change">
+         <path value="wound.date_of_last_dressing_change"/>
+         <short value="DateOfLastDressingChange">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -451,7 +438,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Date on which the dressing was last changed.">
+         <definition value="Date on which the dressing was last changed.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -461,21 +448,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.date_of_last_dressing_change"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.2.17--20200901000000">
-            <path value="wound.drain"/>
-            
-            <short value="Drain">
+      </element>
+        <element id="wound.drain">
+         <path value="wound.drain"/>
+         <short value="Drain">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -485,7 +471,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A drain is a medical aid placed to drain blood and exudate from the wound area.">
+         <definition value="A drain is a medical aid placed to drain blood and exudate from the wound area.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -495,20 +481,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.drain"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.447--20200901000000">
-            <path value="wound.drain.medical_device"/>
-            <short value="MedicalDevice">
+      </element>
+        <element id="wound.drain.medical_device">
+         <path value="wound.drain.medical_device"/>
+         <short value="MedicalDevice">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -518,7 +504,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the MedicalDevice information model. This root concept contains all data elements of the MedicalDevice information model.">
+         <definition value="Root concept of the MedicalDevice information model. This root concept contains all data elements of the MedicalDevice information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -528,20 +514,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.drain.medical_device"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.448--20200901000000">
-            <path value="wound.drain.medical_device.product"/>
-            <short value="Product">
+      </element>
+        <element id="wound.drain.medical_device.product">
+         <path value="wound.drain.medical_device.product"/>
+         <short value="Product">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -551,7 +537,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The medical device (internally or externally).">
+         <definition value="The medical device (internally or externally).">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -561,20 +547,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.drain.medical_device.product"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.449--20200901000000">
-            <path value="wound.drain.medical_device.product.product_id"/>
-            <short value="ProductID">
+      </element>
+        <element id="wound.drain.medical_device.product.product_id">
+         <path value="wound.drain.medical_device.product.product_id"/>
+         <short value="ProductID">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -584,7 +570,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Unique identification of the product, such as the serial number. &#xD;&#xA;Frequently used coding systems are HIBC and GTIN.&#xD;&#xA;If the law requires this to be registered on the basis of a UDI (Unique Device Identifier), the unique identification must consist of a UDI-DI (Device Identifier) and a UDI-PI (Production Identifier(s)). See http://www.gs1.org/healthcare/udi for more information. &#xD;&#xA;&#xD;&#xA;The UDI-DI must be recorded in reference to GS1 GTIN (01) encryptions, with which for example a firm is linked to the product type. The UDI-PI must consist of the following: application identifier (AI); expiration date (17) and serial number (21) and/or batch or lot number (10).&#xD;&#xA;">
+         <definition value="Unique identification of the product, such as the serial number. &#xD;&#xA;Frequently used coding systems are HIBC and GTIN.&#xD;&#xA;If the law requires this to be registered on the basis of a UDI (Unique Device Identifier), the unique identification must consist of a UDI-DI (Device Identifier) and a UDI-PI (Production Identifier(s)). See http://www.gs1.org/healthcare/udi for more information. &#xD;&#xA;&#xD;&#xA;The UDI-DI must be recorded in reference to GS1 GTIN (01) encryptions, with which for example a firm is linked to the product type. The UDI-PI must consist of the following: application identifier (AI); expiration date (17) and serial number (21) and/or batch or lot number (10).&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -594,24 +580,23 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.drain.medical_device.product.product_id"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-        </element>
+      </element>
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.450--20200901000000">
-            <path value="wound.drain.medical_device.product.product_type"/>
-            <short value="ProductType">
+        <element id="wound.drain.medical_device.product.product_type">
+         <path value="wound.drain.medical_device.product.product_type"/>
+         <short value="ProductType">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -621,7 +606,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Type of drain applied to the wound.">
+         <definition value="Type of drain applied to the wound.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -631,25 +616,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="wound.drain.medical_device.product.product_type"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="ProductType codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/WondDrainType"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.451--20200901000000">
-            <path value="wound.drain.medical_device.product_description"/>
-            <short value="ProductDescription">
+      </element>
+        <element id="wound.drain.medical_device.product_description">
+         <path value="wound.drain.medical_device.product_description"/>
+         <short value="ProductDescription">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -659,7 +644,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Textual description of the product.">
+         <definition value="Textual description of the product.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -669,18 +654,18 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.drain.medical_device.product_description"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.452--20200901000000">
+      </element>
+        <element id="wound.drain.medical_device.anatomical_location">
          <path value="wound.drain.medical_device.anatomical_location"/>
          <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
@@ -714,9 +699,9 @@
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.455--20200901000000">
-            <path value="wound.drain.medical_device.indication"/>
-            <short value="Indication">
+        <element id="wound.drain.medical_device.indication">
+         <path value="wound.drain.medical_device.indication"/>
+         <short value="Indication">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -726,7 +711,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The medical reason for use of the medical device.">
+         <definition value="The medical reason for use of the medical device.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -736,20 +721,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="wound.drain.medical_device.indication"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.456--20200901000000">
-            <path value="wound.drain.medical_device.indication.problem"/>
-            <short value="Problem">
+      </element>
+        <element id="wound.drain.medical_device.indication.problem">
+         <path value="wound.drain.medical_device.indication.problem"/>
+         <short value="Problem">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -759,7 +744,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Problem information model.&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient himselve (in the form of a complaint) or by their healthprofessional (in the form of a diagnosis, for example). &#xD;&#xA;">
+         <definition value="Root concept of the Problem information model.&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient himselve (in the form of a complaint) or by their healthprofessional (in the form of a diagnosis, for example). &#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -769,21 +754,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.drain.medical_device.indication.problem"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.457--20200901000000">
-            <path value="wound.drain.medical_device.start_date"/>
-            <short value="StartDate">
+      </element>
+        <element id="wound.drain.medical_device.start_date">
+         <path value="wound.drain.medical_device.start_date"/>
+         <short value="StartDate">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -793,7 +778,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The start date of the first use or implant of the medical device. A ‘vague’ date, such as only the year, is permitted.">
+         <definition value="The start date of the first use or implant of the medical device. A ‘vague’ date, such as only the year, is permitted.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -803,20 +788,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.drain.medical_device.start_date"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.458--20200901000000">
-            <path value="wound.drain.medical_device.eind_datum"/>
-            <short value="EindDatum">
+      </element>
+        <element id="wound.drain.medical_device.eind_datum">
+         <path value="wound.drain.medical_device.eind_datum"/>
+         <short value="EindDatum">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -826,7 +811,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The end date of the last use or explant of the medical device. A ‘vague’ date, such as only the year, is permitted.">
+         <definition value="The end date of the last use or explant of the medical device. A ‘vague’ date, such as only the year, is permitted.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -836,22 +821,21 @@
                     </extension>
                 </extension>
             </definition>
-            <alias value="EndDate"/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <alias value="EndDate"/>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.drain.medical_device.eind_datum"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.459--20200901000000">
-            <path value="wound.drain.medical_device.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="wound.drain.medical_device.comment">
+         <path value="wound.drain.medical_device.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -861,7 +845,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Comment about use or information on the medical device used.">
+         <definition value="Comment about use or information on the medical device used.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -871,20 +855,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.drain.medical_device.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.460--20200901000000">
-            <path value="wound.drain.medical_device.location"/>
-            <short value="Location">
+      </element>
+        <element id="wound.drain.medical_device.location">
+         <path value="wound.drain.medical_device.location"/>
+         <short value="Location">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -894,7 +878,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The healthcare provider at which use of the medical device was initiated or where the aid was implanted.">
+         <definition value="The healthcare provider at which use of the medical device was initiated or where the aid was implanted.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -904,21 +888,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.drain.medical_device.location"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.461--20200901000000">
-            <path value="wound.drain.medical_device.location.healthcare_provider"/>
-            
-            <short value="HealthcareProvider">
+      </element>
+        <element id="wound.drain.medical_device.location.healthcare_provider">
+         <path value="wound.drain.medical_device.location.healthcare_provider"/>
+         <short value="HealthcareProvider">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -928,7 +911,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Healthcare Provider information model. This root concept contains all data elements of the Healthcare Provider information model.">
+         <definition value="Root concept of the Healthcare Provider information model. This root concept contains all data elements of the Healthcare Provider information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -938,21 +921,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.drain.medical_device.location.healthcare_provider"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.462--20200901000000">
-            <path value="wound.drain.medical_device.health_professional"/>
-            <short value="HealthProfessional">
+      </element>
+        <element id="wound.drain.medical_device.health_professional">
+         <path value="wound.drain.medical_device.health_professional"/>
+         <short value="HealthProfessional">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -962,7 +945,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The healthcare provider involved in the indication for use of the medical device implant.">
+         <definition value="The healthcare provider involved in the indication for use of the medical device implant.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -972,21 +955,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.drain.medical_device.health_professional"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.2.15--20200901000000">
-            <path value="wound.wound_image"/>
-            <short value="WoundImage">
+      </element>
+        <element id="wound.wound_image">
+         <path value="wound.wound_image"/>
+         <short value="WoundImage">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -996,7 +979,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A photo of the wound.">
+         <definition value="A photo of the wound.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1006,21 +989,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="wound.wound_image"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="base64Binary"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.19.2.9--20200901000000">
-            <path value="wound.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="wound.comment">
+         <path value="wound.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1030,7 +1012,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Comment on the wound.">
+         <definition value="Comment on the wound.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -1040,16 +1022,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="wound.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

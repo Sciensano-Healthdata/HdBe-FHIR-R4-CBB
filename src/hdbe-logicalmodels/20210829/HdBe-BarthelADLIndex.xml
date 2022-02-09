@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.2.1--20200901000000">
-            <path value="barthel_adlindex"/>
-            <short value="BarthelADLIndex">
+        <element id="barthel_adlindex">
+         <path value="barthel_adlindex"/>
+         <short value="BarthelADLIndex">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the BarthelADLIndex information model. This root concept contains all data elements of the BarthelADLIndex information model.">
+         <definition value="Root concept of the BarthelADLIndex information model. This root concept contains all data elements of the BarthelADLIndex information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,17 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="barthel_adlindex"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.2.4--20200901000000">
-            <path value="barthel_adlindex.bowels"/>
-            <short value="Bowels">
+      </element>
+        <element id="barthel_adlindex.bowels">
+         <path value="barthel_adlindex.bowels"/>
+         <short value="Bowels">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -89,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The bowel function describes the extent of fecal incontinence. &#xD;&#xA;&#xD;&#xA;The measurement takes the condition as measured in the preceding week. &#xD;&#xA;In this scale, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Incontinent: incontinent or enema required.&#xD;&#xA;* Accident: max. 1 accident per week.&#xD;&#xA;* Continent: continent for the entire week.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+         <definition value="The bowel function describes the extent of fecal incontinence. &#xD;&#xA;&#xD;&#xA;The measurement takes the condition as measured in the preceding week. &#xD;&#xA;In this scale, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Incontinent: incontinent or enema required.&#xD;&#xA;* Accident: max. 1 accident per week.&#xD;&#xA;* Continent: continent for the entire week.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -99,25 +99,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="barthel_adlindex.bowels"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="Bowels codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Darm"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.2.3--20200901000000">
-            <path value="barthel_adlindex.bladder"/>
-            <short value="Bladder">
+      </element>
+        <element id="barthel_adlindex.bladder">
+         <path value="barthel_adlindex.bladder"/>
+         <short value="Bladder">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -127,7 +127,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The bladder function describes the extent of urinary incontinence. &#xD;&#xA;&#xD;&#xA;The measurement takes the condition as measured in the preceding week. &#xD;&#xA;In this scale, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Incontinent: incontinent or catheter required.&#xD;&#xA;* Accident: max. 1 accident per 24 hours.&#xD;&#xA;* Continent: continent for the entire week or patients who can attend to their own catheter.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+         <definition value="The bladder function describes the extent of urinary incontinence. &#xD;&#xA;&#xD;&#xA;The measurement takes the condition as measured in the preceding week. &#xD;&#xA;In this scale, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Incontinent: incontinent or catheter required.&#xD;&#xA;* Accident: max. 1 accident per 24 hours.&#xD;&#xA;* Continent: continent for the entire week or patients who can attend to their own catheter.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -137,25 +137,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="barthel_adlindex.bladder"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="Bladder codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Blaas"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.2.5--20200901000000">
-            <path value="barthel_adlindex.grooming"/>
-            <short value="Grooming">
+      </element>
+        <element id="barthel_adlindex.grooming">
+         <path value="barthel_adlindex.grooming"/>
+         <short value="Grooming">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -165,7 +165,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Grooming indicates the extent to which a patient is capable of maintaining their hygiene and appearance. This refers to personal hygiene such as brushing teeth, brushing hair, shaving and washing. &#xD;&#xA;&#xD;&#xA;The measurement takes the condition as measured in the preceding 24-48 hours. &#xD;&#xA;In this scale, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Dependent: not capable of grooming independently.&#xD;&#xA;* Independent: capable of brushing teeth, brushing hair, shaving and washing independently.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+         <definition value="Grooming indicates the extent to which a patient is capable of maintaining their hygiene and appearance. This refers to personal hygiene such as brushing teeth, brushing hair, shaving and washing. &#xD;&#xA;&#xD;&#xA;The measurement takes the condition as measured in the preceding 24-48 hours. &#xD;&#xA;In this scale, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Dependent: not capable of grooming independently.&#xD;&#xA;* Independent: capable of brushing teeth, brushing hair, shaving and washing independently.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -175,25 +175,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="barthel_adlindex.grooming"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="Grooming codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/UiterlijkeVerzorging"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.2.6--20200901000000">
-            <path value="barthel_adlindex.toilet_use"/>
-            <short value="ToiletUse">
+      </element>
+        <element id="barthel_adlindex.toilet_use">
+         <path value="barthel_adlindex.toilet_use"/>
+         <short value="ToiletUse">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -203,7 +203,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Toilet use indicates the extent to which a patient is capable of using the toilet independently. &#xD;&#xA;&#xD;&#xA;In this scale, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Dependent: dependent.&#xD;&#xA;* Help: needs some help but can do certain things themselves, like wiping.&#xD;&#xA;* Independent: capable of using the toilet, sufficiently undressing, cleaning, getting dressed and leaving.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+         <definition value="Toilet use indicates the extent to which a patient is capable of using the toilet independently. &#xD;&#xA;&#xD;&#xA;In this scale, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Dependent: dependent.&#xD;&#xA;* Help: needs some help but can do certain things themselves, like wiping.&#xD;&#xA;* Independent: capable of using the toilet, sufficiently undressing, cleaning, getting dressed and leaving.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -213,25 +213,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="barthel_adlindex.toilet_use"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="ToiletUse codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Toiletgebruik"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.2.7--20200901000000">
-            <path value="barthel_adlindex.feeding"/>
-            <short value="Feeding">
+      </element>
+        <element id="barthel_adlindex.feeding">
+         <path value="barthel_adlindex.feeding"/>
+         <short value="Feeding">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -241,7 +241,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Feeding indicates the extent to which a patient is capable of eating independently. &#xD;&#xA;&#xD;&#xA;In this scale, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Not independent: not capable of eating independently.&#xD;&#xA;* Help: food is puréed; patient does feed themselves, but needs help cutting food, spreading butter, et cetera.&#xD;&#xA;* Independent: capable of eating normal food (including hard food). The food can be cooked and served by others, but is not to be puréed.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+         <definition value="Feeding indicates the extent to which a patient is capable of eating independently. &#xD;&#xA;&#xD;&#xA;In this scale, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Not independent: not capable of eating independently.&#xD;&#xA;* Help: food is puréed; patient does feed themselves, but needs help cutting food, spreading butter, et cetera.&#xD;&#xA;* Independent: capable of eating normal food (including hard food). The food can be cooked and served by others, but is not to be puréed.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -251,25 +251,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="barthel_adlindex.feeding"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="Feeding codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Eten"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.2.8--20200901000000">
-            <path value="barthel_adlindex.transfers"/>
-            <short value="Transfers">
+      </element>
+        <element id="barthel_adlindex.transfers">
+         <path value="barthel_adlindex.transfers"/>
+         <short value="Transfers">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -279,7 +279,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Transfers indicates the extent to which a patient is capable of independently getting from a chair to the bed and vice versa. &#xD;&#xA;&#xD;&#xA;In this scale, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Not independent: not capable of sitting up; the use of a patient hoist is required.&#xD;&#xA;* Major help: help from a strong, trained individual or 2 regular individuals, but the patient can sit up by themselves.&#xD;&#xA;* Minor help: a person to supervise or provide some help, either verbally or physically.&#xD;&#xA;* Independent: does not need help. &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+         <definition value="Transfers indicates the extent to which a patient is capable of independently getting from a chair to the bed and vice versa. &#xD;&#xA;&#xD;&#xA;In this scale, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Not independent: not capable of sitting up; the use of a patient hoist is required.&#xD;&#xA;* Major help: help from a strong, trained individual or 2 regular individuals, but the patient can sit up by themselves.&#xD;&#xA;* Minor help: a person to supervise or provide some help, either verbally or physically.&#xD;&#xA;* Independent: does not need help. &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -289,25 +289,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="barthel_adlindex.transfers"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="Transfers codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Transfers"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.2.9--20200901000000">
-            <path value="barthel_adlindex.mobility"/>
-            <short value="Mobility">
+      </element>
+        <element id="barthel_adlindex.mobility">
+         <path value="barthel_adlindex.mobility"/>
+         <short value="Mobility">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -317,7 +317,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Mobility indicates the extent to which a patient is capable of moving independently. &#xD;&#xA;&#xD;&#xA;In this scale, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Dependent: cannot move themselves.&#xD;&#xA;* Independent with wheelchair: uses a wheelchair, with the ability to go around corners or open doors without help.&#xD;&#xA;* Assisted walking: help from one person, for example verbally or physically.&#xD;&#xA;* Independent: can move within the home or department; aids may be used.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+         <definition value="Mobility indicates the extent to which a patient is capable of moving independently. &#xD;&#xA;&#xD;&#xA;In this scale, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Dependent: cannot move themselves.&#xD;&#xA;* Independent with wheelchair: uses a wheelchair, with the ability to go around corners or open doors without help.&#xD;&#xA;* Assisted walking: help from one person, for example verbally or physically.&#xD;&#xA;* Independent: can move within the home or department; aids may be used.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -327,25 +327,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="barthel_adlindex.mobility"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="Mobility codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Mobiliteit"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.2.10--20200901000000">
-            <path value="barthel_adlindex.dressing"/>
-            <short value="Dressing">
+      </element>
+        <element id="barthel_adlindex.dressing">
+         <path value="barthel_adlindex.dressing"/>
+         <short value="Dressing">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -355,7 +355,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Dressing indicates the extent to which a patient is capable of dressing and undressing themselves independently. &#xD;&#xA;In this scale, the following interpretations are used:&#xD;&#xA;&#xD;&#xA;* &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;* Dependent: dependent.&#xD;&#xA;* Help: needs help but can do about half themselves, such as only needing help with buttons and/or zippers.&#xD;&#xA;* Independent: capable of selecting and putting on clothes.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+         <definition value="Dressing indicates the extent to which a patient is capable of dressing and undressing themselves independently. &#xD;&#xA;In this scale, the following interpretations are used:&#xD;&#xA;&#xD;&#xA;* &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;* Dependent: dependent.&#xD;&#xA;* Help: needs help but can do about half themselves, such as only needing help with buttons and/or zippers.&#xD;&#xA;* Independent: capable of selecting and putting on clothes.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -365,25 +365,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="barthel_adlindex.dressing"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="Dressing codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/AanUitkleden"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.2.11--20200901000000">
-            <path value="barthel_adlindex.managing_stairs"/>
-            <short value="ManagingStairs">
+      </element>
+        <element id="barthel_adlindex.managing_stairs">
+         <path value="barthel_adlindex.managing_stairs"/>
+         <short value="ManagingStairs">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -393,7 +393,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Managing stairs indicates the extent to which a patient is capable of going up and down stairs independently. &#xD;&#xA;In this scale, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Dependent: not capable of going up and down stairs.&#xD;&#xA;* Help: needs help, for example verbally, physically or in the form of an aid.&#xD;&#xA;* Independent: capable of going up and down stairs independently, and if necessary can carry their own aid.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+         <definition value="Managing stairs indicates the extent to which a patient is capable of going up and down stairs independently. &#xD;&#xA;In this scale, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Dependent: not capable of going up and down stairs.&#xD;&#xA;* Help: needs help, for example verbally, physically or in the form of an aid.&#xD;&#xA;* Independent: capable of going up and down stairs independently, and if necessary can carry their own aid.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -403,25 +403,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="barthel_adlindex.managing_stairs"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="ManagingStairs codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/TrappenLopen"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.2.12--20200901000000">
-            <path value="barthel_adlindex.bathing"/>
-            <short value="Bathing">
+      </element>
+        <element id="barthel_adlindex.bathing">
+         <path value="barthel_adlindex.bathing"/>
+         <short value="Bathing">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -431,7 +431,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Bathing indicates the extent to which a patient is capable of independently taking a bath or shower. &#xD;&#xA;&#xD;&#xA;In this scale, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Dependent: not capable of bathing independently.&#xD;&#xA;* Independent: capable of getting in and out of the bath or shower and bathing without help or supervision.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+         <definition value="Bathing indicates the extent to which a patient is capable of independently taking a bath or shower. &#xD;&#xA;&#xD;&#xA;In this scale, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Dependent: not capable of bathing independently.&#xD;&#xA;* Independent: capable of getting in and out of the bath or shower and bathing without help or supervision.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -441,25 +441,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="barthel_adlindex.bathing"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="Bathing codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/BadenDouchen"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.2.2--20200901000000">
-            <path value="barthel_adlindex.total_score"/>
-            <short value="TotalScore">
+      </element>
+        <element id="barthel_adlindex.total_score">
+         <path value="barthel_adlindex.total_score"/>
+         <short value="TotalScore">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -469,7 +469,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The Barthel ADL index is the sum of the scores of the individual variables. &#xD;&#xA;The interpretation of this total score is 0-9 for serious dependence, 10-19 for slight dependence and &#xD;&#xA;20 for independence. Twenty is the maximum score.&#xD;&#xA;">
+         <definition value="The Barthel ADL index is the sum of the scores of the individual variables. &#xD;&#xA;The interpretation of this total score is 0-9 for serious dependence, 10-19 for slight dependence and &#xD;&#xA;20 for independence. Twenty is the maximum score.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -479,22 +479,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="barthel_adlindex.total_score"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-            <minValueQuantity>
-                <value value="0"/>
-            </minValueQuantity>
-            <maxValueQuantity>
-                <value value="20"/>
-            </maxValueQuantity>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>
