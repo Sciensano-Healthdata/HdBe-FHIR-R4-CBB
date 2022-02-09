@@ -43,3 +43,21 @@ URL: url
   </div>
 
 </div>
+
+<br/><br/> 
+
+## Terminology Bindings
+
+@```
+from StructureDefinition
+where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Patient'
+for differential.element
+select
+Path: path.substring((1 + path.indexOf('.'))),
+join binding.where(valueSet.exists())
+{
+	Name: valueSet.substring((9 + valueSet.indexOf('ValueSet/'))),
+	Strength: strength,
+	URL: valueSet
+	}
+```  
