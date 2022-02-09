@@ -53,12 +53,11 @@ from StructureDefinition
 where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation'
 for differential.element
 select
-Path: path,
+Path: path.substring((1 + path.indexOf('.'))),
 join binding.where(valueSet.exists())
 {
 	Name: valueSet.substring((9 + valueSet.indexOf('ValueSet/'))),
 	Strength: strength,
-	URL: valueSet,
-	ConceptMap: iif(valueSet.extension.where(url='http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap').exists().not(), 'No bound ConceptMap', valueSet.extension.valueCanonical)
+	URL: valueSet
 	}
 ```  
