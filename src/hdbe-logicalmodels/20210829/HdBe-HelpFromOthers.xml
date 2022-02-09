@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.3.2.1--20200901000000">
-            <path value="help_from_others"/>
-            <short value="HelpFromOthers">
+        <element id="help_from_others">
+         <path value="help_from_others"/>
+         <short value="HelpFromOthers">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the HelpFromOthers information model. This root concept contains all data elements of the HelpFromOthers information model.">
+         <definition value="Root concept of the HelpFromOthers information model. This root concept contains all data elements of the HelpFromOthers information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,17 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="help_from_others"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.3.2.5--20200901000000">
-            <path value="help_from_others.care_aid"/>
-            <short value="CareAid">
+      </element>
+        <element id="help_from_others.care_aid">
+         <path value="help_from_others.care_aid"/>
+         <short value="CareAid">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -89,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the Aid concept. This container contains all data elements of the Aid concept. &#xD;&#xA;An aid can be a health professional such as nurses, carers and helpers but also a caregiver or healthcare provider such as a home care organization.&#xD;&#xA;">
+         <definition value="Container of the Aid concept. This container contains all data elements of the Aid concept. &#xD;&#xA;An aid can be a health professional such as nurses, carers and helpers but also a caregiver or healthcare provider such as a home care organization.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -99,20 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="help_from_others.care_aid"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.3.2.6--20200901000000">
-            <path value="help_from_others.care_aid.health_professional"/>
-            <short value="HealthProfessional">
+      </element>
+        <element id="help_from_others.care_aid.health_professional">
+         <path value="help_from_others.care_aid.health_professional"/>
+         <short value="HealthProfessional">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -122,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Details of the health professional involved in the patient’s care.">
+         <definition value="Details of the health professional involved in the patient’s care.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -132,21 +132,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="help_from_others.care_aid.health_professional"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.3.2.7--20200901000000">
-            <path value="help_from_others.care_aid.caregiver"/>
-            <short value="Caregiver">
+      </element>
+        <element id="help_from_others.care_aid.caregiver">
+         <path value="help_from_others.care_aid.caregiver"/>
+         <short value="Caregiver">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -156,7 +156,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Details of the caregiver involved in the patient’s support.">
+         <definition value="Details of the caregiver involved in the patient’s support.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -166,21 +166,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="help_from_others.care_aid.caregiver"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.151--20200901000000">
-            <path value="help_from_others.care_aid.caregiver.contact"/>
-            
-            <short value="Contact">
+      </element>
+        <element id="help_from_others.care_aid.caregiver.contact">
+         <path value="help_from_others.care_aid.caregiver.contact"/>
+         <short value="Contact">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -190,7 +189,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Contact information model. This root concept contains all data elements of the Contact information model.">
+         <definition value="Root concept of the Contact information model. This root concept contains all data elements of the Contact information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -200,21 +199,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="help_from_others.care_aid.caregiver.contact"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Contact"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.3.2.8--20200901000000">
-            <path value="help_from_others.care_aid.healthcare_provider"/>
-            <short value="HealthcareProvider">
+      </element>
+        <element id="help_from_others.care_aid.healthcare_provider">
+         <path value="help_from_others.care_aid.healthcare_provider"/>
+         <short value="HealthcareProvider">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -224,7 +223,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Details of the organization the health professional/aid works for in the event that it is not entered as a person.">
+         <definition value="Details of the organization the health professional/aid works for in the event that it is not entered as a person.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -234,21 +233,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="help_from_others.care_aid.healthcare_provider"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.3.2.3--20200901000000">
-            <path value="help_from_others.nature"/>
-            <short value="Nature">
+      </element>
+        <element id="help_from_others.nature">
+         <path value="help_from_others.nature"/>
+         <short value="Nature">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -258,7 +257,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The nature of the help/support provided to the patient.">
+         <definition value="The nature of the help/support provided to the patient.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -268,22 +267,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="help_from_others.nature"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.3.2.2--20200901000000">
-            <path value="help_from_others.frequency"/>
-            
-            <short value="Frequency">
+      </element>
+        <element id="help_from_others.frequency">
+         <path value="help_from_others.frequency"/>
+         <short value="Frequency">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -293,7 +290,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The frequency of the provided support, e.g. daily/weekly.">
+         <definition value="The frequency of the provided support, e.g. daily/weekly.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -303,21 +300,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="help_from_others.frequency"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.3.2.9--20200901000000">
-            <path value="help_from_others.type_of_help"/>
-            <short value="TypeOfHelp">
+      </element>
+        <element id="help_from_others.type_of_help">
+         <path value="help_from_others.type_of_help"/>
+         <short value="TypeOfHelp">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -327,7 +323,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The type of help offered by the person in question.">
+         <definition value="The type of help offered by the person in question.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -337,26 +333,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="help_from_others.type_of_help"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="TypeOfHelp codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/SoortHulp"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.3.2.4--20200901000000">
-            <path value="help_from_others.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="help_from_others.comment">
+         <path value="help_from_others.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -366,7 +361,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A comment on the help/support the patient receives from others.">
+         <definition value="A comment on the help/support the patient receives from others.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -376,16 +371,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="help_from_others.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

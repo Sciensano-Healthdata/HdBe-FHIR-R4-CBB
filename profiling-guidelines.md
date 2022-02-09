@@ -65,17 +65,17 @@ When slicing, the mapping is made on the ''content'' of the slice, not the slice
 On the root element of the StructureDefinition, the mapping should thus be defined as:
 ``` xml
 <mapping>
-    <identity value="hdbe-patient" />
+    <identity value="HdBe-Patient" />
     <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Patient" />
     <name value="HdBe logical model Patient" />
 </mapping>
 ```
 A specific element can then be mapped using:
 ``` xml
-<element id="Patient.name">
-    <path value="Patient.name" />
+<element id="Patient.identifier">
+    <path value="Patient.identifier" />
     <mapping>
-        <identity value="hdbe-patient" />
+        <identity value="HdBe-Patient" />
         <map value="patient_identification_number" />
     </mapping>
 </element>
@@ -110,7 +110,7 @@ Example:
 |textual| Textual changes (e.g. typo's) to the zib's definition. This may also contain changes that affect the definition and scope of the zib concept. |`.definition`, `.comment`, `.binding.description`
 |naming| Changes to zibs concept names. |`.short`, `.path`, `.alias`
 |terminology| Adjusted binding strenght of a ValueSet, replaced, removed or added a ValueSet binding | `.binding.strength`, `.binding.valueSet`, 
-|definition codes| Changes to the zib definition codes, e.g. another code/codesystem or removal.| `.code`
+|slicing | Added, removed, or changed a slice. | `.slicing`, `.element.slicename` 
 |cardinality| Cardinality changes, e.g. relaxing or restricing a concept. |`.min`, `.max`
 |type| Usage of a different datatype, e.g. an Identifier instead of a Coded concept. | `.type`
 |reference| Added, removed or changed a reference, e.g. a reference to Location instead of Organization. | `.type.targetProfile`

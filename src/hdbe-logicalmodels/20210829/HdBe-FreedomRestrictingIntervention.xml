@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.6.1--20200901000000">
-            <path value="freedomrestricting_intervention"/>
-            <short value="FreedomrestrictingIntervention">
+        <element id="freedomrestricting_intervention">
+         <path value="freedomrestricting_intervention"/>
+         <short value="FreedomrestrictingIntervention">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the FreedomrestrictingIntervention information model. This root concept contains all data elements of the FreedomrestrictingIntervention information model.">
+         <definition value="Root concept of the FreedomrestrictingIntervention information model. This root concept contains all data elements of the FreedomrestrictingIntervention information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,17 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="freedomrestricting_intervention"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.6.2--20200901000000">
-            <path value="freedomrestricting_intervention.legally_capable"/>
-            <short value="LegallyCapable">
+      </element>
+        <element id="freedomrestricting_intervention.legally_capable">
+         <path value="freedomrestricting_intervention.legally_capable"/>
+         <short value="LegallyCapable">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -89,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Indicator stating whether the patient is deemed capable of overseeing the consequences of a certain procedure, situation or decision.">
+         <definition value="Indicator stating whether the patient is deemed capable of overseeing the consequences of a certain procedure, situation or decision.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -99,22 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="freedomrestricting_intervention.legally_capable"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="boolean"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.6.3--20200901000000">
-            <path value="freedomrestricting_intervention.legally_capable_comment"/>
-            
-            <short value="LegallyCapableComment">
+      </element>
+        <element id="freedomrestricting_intervention.legally_capable_comment">
+         <path value="freedomrestricting_intervention.legally_capable_comment"/>
+         <short value="LegallyCapableComment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -124,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Comment on the decisions which the patient is legally capable of making.">
+         <definition value="Comment on the decisions which the patient is legally capable of making.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -134,22 +132,20 @@
                     </extension>
                 </extension>
             </definition>
-            <comment value="* 0..1 If the patient is not legally capable, an explanation must be provided."/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="freedomrestricting_intervention.legally_capable_comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.6.4--20200901000000">
-            <path value="freedomrestricting_intervention.legal_situation"/>
-            <short value="LegalSituation">
+      </element>
+        <element id="freedomrestricting_intervention.legal_situation">
+         <path value="freedomrestricting_intervention.legal_situation"/>
+         <short value="LegalSituation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -159,7 +155,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The legal situation that applies to the patient during the intervention.">
+         <definition value="The legal situation that applies to the patient during the intervention.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -169,22 +165,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="freedomrestricting_intervention.legal_situation"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LegalSituation"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.6.5--20200901000000">
-            <path value="freedomrestricting_intervention.type_of_intervention"/>
-            
-            <short value="TypeOfIntervention">
+      </element>
+        <element id="freedomrestricting_intervention.type_of_intervention">
+         <path value="freedomrestricting_intervention.type_of_intervention"/>
+         <short value="TypeOfIntervention">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -194,7 +189,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The type of intervention describes the kind of freedom-restricting intervention/involuntary care.">
+         <definition value="The type of intervention describes the kind of freedom-restricting intervention/involuntary care.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -204,25 +199,24 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="freedomrestricting_intervention.type_of_intervention"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-        </element>
+      </element>
         
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.6.6--20200901000000">
-            <path value="freedomrestricting_intervention.reason_for_use"/>
-            <short value="ReasonForUse">
+        <element id="freedomrestricting_intervention.reason_for_use">
+         <path value="freedomrestricting_intervention.reason_for_use"/>
+         <short value="ReasonForUse">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -232,7 +226,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The reason for use provides the justification for applying involuntary care">
+         <definition value="The reason for use provides the justification for applying involuntary care">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -242,26 +236,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="freedomrestricting_intervention.reason_for_use"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="ReasonForUse codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/RedenVanToepassen"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.6.7--20200901000000">
-            <path value="freedomrestricting_intervention.assent"/>
-            
-            <short value="Assent">
+      </element>
+        <element id="freedomrestricting_intervention.assent">
+         <path value="freedomrestricting_intervention.assent"/>
+         <short value="Assent">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -271,7 +264,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The assent given to the health professional(s) by legal representative to implement the involuntary care.">
+         <definition value="The assent given to the health professional(s) by legal representative to implement the involuntary care.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -281,26 +274,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="freedomrestricting_intervention.assent"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="Assent codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Instemming"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.6.8--20200901000000">
-            <path value="freedomrestricting_intervention.start"/>
-            <short value="Start">
+      </element>
+        <element id="freedomrestricting_intervention.start">
+         <path value="freedomrestricting_intervention.start"/>
+         <short value="Start">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -310,7 +302,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date and time on which the intervention was carried out for point in time registrations or the date and time on which the intervention was started for duration registrations.">
+         <definition value="The date and time on which the intervention was carried out for point in time registrations or the date and time on which the intervention was started for duration registrations.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -320,20 +312,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="freedomrestricting_intervention.start"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.14.6.9--20200901000000">
-            <path value="freedomrestricting_intervention.end"/>
-            <short value="End">
+      </element>
+        <element id="freedomrestricting_intervention.end">
+         <path value="freedomrestricting_intervention.end"/>
+         <short value="End">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -343,7 +335,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date and time at which the intervention ended.">
+         <definition value="The date and time at which the intervention ended.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -353,17 +345,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="freedomrestricting_intervention.end"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-            
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

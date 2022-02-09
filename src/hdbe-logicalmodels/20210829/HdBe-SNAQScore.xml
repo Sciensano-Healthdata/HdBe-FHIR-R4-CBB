@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.6.1--20200901000000">
-            <path value="snaqscore"/>
-            <short value="SNAQScore">
+        <element id="snaqscore">
+         <path value="snaqscore"/>
+         <short value="SNAQScore">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the SNAQScore information model. This root concept contains all data elements of the SNAQScore information model.">
+         <definition value="Root concept of the SNAQScore information model. This root concept contains all data elements of the SNAQScore information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="snaqscore"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.6.3--20200901000000">
-            <path value="snaqscore.weight_loss_score"/>
-            
-            <short value="WeightLossScore">
+      </element>
+        <element id="snaqscore.weight_loss_score">
+         <path value="snaqscore.weight_loss_score"/>
+         <short value="WeightLossScore">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The score based on undesired weight loss over the past month(s).">
+         <definition value="The score based on undesired weight loss over the past month(s).">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,26 +99,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="snaqscore.weight_loss_score"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="WeightLossScore codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/SNAQGewichtsverliesScore"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.6.4--20200901000000">
-            <path value="snaqscore.appetite_score"/>
-            
-            <short value="AppetiteScore">
+      </element>
+        <element id="snaqscore.appetite_score">
+         <path value="snaqscore.appetite_score"/>
+         <short value="AppetiteScore">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -129,7 +127,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The score based on a reduced appetite over the past month.">
+         <definition value="The score based on a reduced appetite over the past month.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -139,26 +137,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="snaqscore.appetite_score"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="AppetiteScore codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/EetlustScore"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.6.5--20200901000000">
-            <path value="snaqscore.nutrition_score"/>
-            
-            <short value="NutritionScore">
+      </element>
+        <element id="snaqscore.nutrition_score">
+         <path value="snaqscore.nutrition_score"/>
+         <short value="NutritionScore">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -168,7 +165,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The score based on the use of fluid or enteral nutrition over the past month.">
+         <definition value="The score based on the use of fluid or enteral nutrition over the past month.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -178,26 +175,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="snaqscore.nutrition_score"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="NutritionScore codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/VoedingsScore"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.6.2--20200901000000">
-            <path value="snaqscore.total_score"/>
-            
-            <short value="TotalScore">
+      </element>
+        <element id="snaqscore.total_score">
+         <path value="snaqscore.total_score"/>
+         <short value="TotalScore">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -207,7 +203,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The total score is the sum of all the individual scores. The total score has a range from 0 - 5.">
+         <definition value="The total score is the sum of all the individual scores. The total score has a range from 0 - 5.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -217,26 +213,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="snaqscore.total_score"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-            <minValueQuantity>
-                <value value="0"/>
-            </minValueQuantity>
-            <maxValueQuantity>
-                <value value="5"/>
-            </maxValueQuantity>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.6.6--20200901000000">
-            <path value="snaqscore.snaqscore_date_time"/>
-            <short value="SNAQScoreDateTime">
+      </element>
+        <element id="snaqscore.snaqscore_date_time">
+         <path value="snaqscore.snaqscore_date_time"/>
+         <short value="SNAQScoreDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -246,7 +236,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date and time at which the SNAQ score was determined.">
+         <definition value="The date and time at which the SNAQ score was determined.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -256,21 +246,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="snaqscore.snaqscore_date_time"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.6.7--20200901000000">
-            <path value="snaqscore.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="snaqscore.comment">
+         <path value="snaqscore.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -280,7 +269,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A comment on the circumstances during the measurement.">
+         <definition value="A comment on the circumstances during the measurement.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -290,16 +279,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="snaqscore.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>
