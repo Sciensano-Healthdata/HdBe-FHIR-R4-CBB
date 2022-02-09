@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.21.1.1--20200901000000">
-            <path value="measurement"/>
-            <short value="[Measurement]">
+        <element id="measurement">
+         <path value="measurement"/>
+         <short value="[Measurement]">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the [Measurement] information model.This root concept contains all data elements of the [Measurement] template.">
+         <definition value="Root concept of the [Measurement] information model.This root concept contains all data elements of the [Measurement] template.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,17 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="measurement"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.21.1.3--20200901000000">
-            <path value="measurement.measurement_name"/>
-            <short value="[MeasurementName]">
+      </element>
+        <element id="measurement.measurement_name">
+         <path value="measurement.measurement_name"/>
+         <short value="[MeasurementName]">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -89,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Name of the measurement as coded description (name and code). In single measurements, this value is assigned to the rootconcept. However, if there are several variations of the measurement that are carried out under the same circumstances (measurement method, conditions, etc.), a (mini) category HCIM can be created with the associated code list.">
+         <definition value="Name of the measurement as coded description (name and code). In single measurements, this value is assigned to the rootconcept. However, if there are several variations of the measurement that are carried out under the same circumstances (measurement method, conditions, etc.), a (mini) category HCIM can be created with the associated code list.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -99,26 +99,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="measurement.measurement_name"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="example"/>
             <description value="[MeasurementName] codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/MetingNaam"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.21.1.4--20200901000000">
-            <path value="measurement.measurement_value"/>
-            
-            <short value="[MeasurementValue]">
+      </element>
+        <element id="measurement.measurement_value">
+         <path value="measurement.measurement_value"/>
+         <short value="[MeasurementValue]">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -128,7 +127,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The result of the measurement. Depending on the type of measurement, this can be a numerical value, an ordinal value, a coded description or even a textual result. A measurement may result in more than one result or observation that may also differ in type, e.g. heart rate frequency and regularity.">
+         <definition value="The result of the measurement. Depending on the type of measurement, this can be a numerical value, an ordinal value, a coded description or even a textual result. A measurement may result in more than one result or observation that may also differ in type, e.g. heart rate frequency and regularity.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -138,20 +137,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="*"/>
-            <base>
+         <min value="1"/>
+         <max value="*"/>
+         <base>
                 <path value="measurement.measurement_value"/>
                 <min value="1"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.21.1.2--20200901000000">
-            <path value="measurement.measurement_method"/>
-            <short value="[MeasurementMethod]">
+      </element>
+        <element id="measurement.measurement_method">
+         <path value="measurement.measurement_method"/>
+         <short value="[MeasurementMethod]">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -161,7 +160,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The way in which the measurement was carried out and the method used.">
+         <definition value="The way in which the measurement was carried out and the method used.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -171,25 +170,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="measurement.measurement_method"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="example"/>
             <description value="[MeasurementMethod] codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/MeetMethode"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.21.1.17--20200901000000">
-            <path value="measurement.measurement_ancillary"/>
-            <short value="[MeasurementAncillary]">
+      </element>
+        <element id="measurement.measurement_ancillary">
+         <path value="measurement.measurement_ancillary"/>
+         <short value="[MeasurementAncillary]">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -199,7 +198,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Ancillary item that was used in the measurement. It describes a more detailed specification of the measurement method.">
+         <definition value="Ancillary item that was used in the measurement. It describes a more detailed specification of the measurement method.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -209,20 +208,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="measurement.measurement_ancillary"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.21.1.18--20200901000000">
-            <path value="measurement.measurement_condition"/>
-            <short value="[MeasurementCondition]">
+      </element>
+        <element id="measurement.measurement_condition">
+         <path value="measurement.measurement_condition"/>
+         <short value="[MeasurementCondition]">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -232,7 +231,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The circumstances under which the measurement was taken. This can relate to the patient as well as to the environment of the patient was.">
+         <definition value="The circumstances under which the measurement was taken. This can relate to the patient as well as to the environment of the patient was.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -242,20 +241,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="measurement.measurement_condition"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.21.1.15--20200901000000">
-            <path value="measurement.measurement_date_start_time"/>
-            <short value="[MeasurementDateStartTime]">
+      </element>
+        <element id="measurement.measurement_date_start_time">
+         <path value="measurement.measurement_date_start_time"/>
+         <short value="[MeasurementDateStartTime]">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -265,7 +264,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date and if applicable the time at which the execution of the measurement starts.">
+         <definition value="The date and if applicable the time at which the execution of the measurement starts.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -275,20 +274,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="measurement.measurement_date_start_time"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.21.1.19--20200901000000">
-            <path value="measurement.measurement_date_end_time"/>
-            <short value="[MeasurementDateEndTime]">
+      </element>
+        <element id="measurement.measurement_date_end_time">
+         <path value="measurement.measurement_date_end_time"/>
+         <short value="[MeasurementDateEndTime]">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -298,7 +297,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date and if applicable the time at which the execution of the measurement ends.">
+         <definition value="The date and if applicable the time at which the execution of the measurement ends.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -308,21 +307,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="measurement.measurement_date_end_time"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.21.1.16--20200901000000">
-            <path value="measurement.comment"/>
-            
-            <short value="[Comment]">
+      </element>
+        <element id="measurement.comment">
+         <path value="measurement.comment"/>
+         <short value="[Comment]">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -332,7 +330,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A comment about the result or the execution of the measurement. It may e.g. include statements about significant, unexpected or unreliable values, or information about the source of the value where this may be relevant to the interpretation of the result.">
+         <definition value="A comment about the result or the execution of the measurement. It may e.g. include statements about significant, unexpected or unreliable values, or information about the source of the value where this may be relevant to the interpretation of the result.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -342,21 +340,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="measurement.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.21.1.8--20200901000000">
-            <path value="measurement.anatomical_location_measurement"/>
-            
-            <short value="[AnatomicalLocationMeasurement]">
+      </element>
+        <element id="measurement.anatomical_location_measurement">
+         <path value="measurement.anatomical_location_measurement"/>
+         <short value="[AnatomicalLocationMeasurement]">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -366,7 +363,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Anatomical location and if applicable laterality as focus of the measurement, e.g. right arm.">
+         <definition value="Anatomical location and if applicable laterality as focus of the measurement, e.g. right arm.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -376,21 +373,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="measurement.anatomical_location_measurement"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.527--20200901000000">
-            <path value="measurement.anatomical_location_measurement.location"/>
-            
-            <short value="Location">
+      </element>
+        <element id="measurement.anatomical_location_measurement.location">
+         <path value="measurement.anatomical_location_measurement.location"/>
+         <short value="Location">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -400,7 +396,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Localisation on/in the body.">
+         <definition value="Localisation on/in the body.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -410,24 +406,23 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="measurement.anatomical_location_measurement.location"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-        </element>
+      </element>
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.528--20200901000000">
-            <path value="measurement.anatomical_location_measurement.laterality"/>
-            
-            <short value="Laterality">
+        <element id="measurement.anatomical_location_measurement.laterality">
+         <path value="measurement.anatomical_location_measurement.laterality"/>
+         <short value="Laterality">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -437,7 +432,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
+         <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -447,22 +442,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="measurement.anatomical_location_measurement.laterality"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="Laterality codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
          </binding>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>
