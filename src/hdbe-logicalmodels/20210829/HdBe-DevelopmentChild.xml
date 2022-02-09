@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.32.1--20200901000000">
-            <path value="development_child"/>
-            <short value="DevelopmentChild">
+        <element id="development_child">
+         <path value="development_child"/>
+         <short value="DevelopmentChild">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the DevelopmentChild information model. This root concept contains all data elements of the DevelopmentChild Einformation model.">
+         <definition value="Root concept of the DevelopmentChild information model. This root concept contains all data elements of the DevelopmentChild Einformation model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,17 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="development_child"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.32.2--20200901000000">
-            <path value="development_child.development_child_date_time"/>
-            <short value="DevelopmentChildDateTime">
+      </element>
+        <element id="development_child.development_child_date_time">
+         <path value="development_child.development_child_date_time"/>
+         <short value="DevelopmentChildDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -89,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date and time on which the status of the development of the child are registered.">
+         <definition value="The date and time on which the status of the development of the child are registered.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -99,21 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="development_child.development_child_date_time"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.32.4--20200901000000">
-            <path value="development_child.toilet_trainedness_urine"/>
-            
-            <short value="ToiletTrainednessUrine">
+      </element>
+        <element id="development_child.toilet_trainedness_urine">
+         <path value="development_child.toilet_trainedness_urine"/>
+         <short value="ToiletTrainednessUrine">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -123,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Degree of toilet trainedness for urine.">
+         <definition value="Degree of toilet trainedness for urine.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -133,27 +132,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="development_child.toilet_trainedness_urine"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="ToiletTrainednessUrine codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/ZindelijkheidUrine"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.32.5--20200901000000">
-            <path value="development_child.toilet_trainedness_feces"/>
-            
-            <short value="ToiletTrainednessFeces">
+      </element>
+        <element id="development_child.toilet_trainedness_feces">
+         <path value="development_child.toilet_trainedness_feces"/>
+         <short value="ToiletTrainednessFeces">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -163,7 +160,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Degree of toilet trainedness for feces.">
+         <definition value="Degree of toilet trainedness for feces.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -173,27 +170,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="development_child.toilet_trainedness_feces"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="ToiletTrainednessFeces codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/ZindelijkheidFeces"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.32.7--20200901000000">
-            <path value="development_child.age_first_menstruation"/>
-            
-            <short value="AgeFirstMenstruation">
+      </element>
+        <element id="development_child.age_first_menstruation">
+         <path value="development_child.age_first_menstruation"/>
+         <short value="AgeFirstMenstruation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -203,7 +198,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The age of the start of the first menstruation.">
+         <definition value="The age of the start of the first menstruation.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -213,21 +208,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="development_child.age_first_menstruation"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.32.6--20200901000000">
-            <path value="development_child.development_locomotion"/>
-            
-            <short value="DevelopmentLocomotion">
+      </element>
+        <element id="development_child.development_locomotion">
+         <path value="development_child.development_locomotion"/>
+         <short value="DevelopmentLocomotion">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -237,7 +231,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Milestones of locomotive development of a child.">
+         <definition value="Milestones of locomotive development of a child.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -247,27 +241,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="development_child.development_locomotion"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="DevelopmentLocomotion codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/OntwikkelingMotoriek"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.32.8--20200901000000">
-            <path value="development_child.development_social"/>
-            
-            <short value="DevelopmentSocial">
+      </element>
+        <element id="development_child.development_social">
+         <path value="development_child.development_social"/>
+         <short value="DevelopmentSocial">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -277,7 +269,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Milestones of social development of a child.">
+         <definition value="Milestones of social development of a child.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -287,27 +279,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="development_child.development_social"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="DevelopmentSocial codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/OntwikkelingSociaal"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.32.9--20200901000000">
-            <path value="development_child.development_linguistics"/>
-            
-            <short value="DevelopmentLinguistics">
+      </element>
+        <element id="development_child.development_linguistics">
+         <path value="development_child.development_linguistics"/>
+         <short value="DevelopmentLinguistics">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -317,7 +307,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Milestones of lingual development of a child.">
+         <definition value="Milestones of lingual development of a child.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -327,27 +317,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="development_child.development_linguistics"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="DevelopmentLinguistics codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/OntwikkelingTaal"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.32.10--20200901000000">
-            <path value="development_child.development_cognition"/>
-            
-            <short value="DevelopmentCognition">
+      </element>
+        <element id="development_child.development_cognition">
+         <path value="development_child.development_cognition"/>
+         <short value="DevelopmentCognition">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -357,7 +345,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Milestones of cognitive development of a child.">
+         <definition value="Milestones of cognitive development of a child.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -367,27 +355,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="development_child.development_cognition"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="DevelopmentCognition codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/OntwikkelingVerstandelijk"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.32.3--20200901000000">
-            <path value="development_child.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="development_child.comment">
+         <path value="development_child.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -397,7 +383,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Comment on the development of the child.">
+         <definition value="Comment on the development of the child.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -407,16 +393,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="development_child.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

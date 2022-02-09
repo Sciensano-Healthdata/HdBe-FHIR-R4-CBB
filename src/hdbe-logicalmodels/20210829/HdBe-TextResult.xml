@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.2.1--20200901000000">
-            <path value="text_result"/>
-            <short value="TextResult">
+        <element id="text_result">
+         <path value="text_result"/>
+         <short value="TextResult">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the TextResult information model. This root concept contains all data elements of the TextResult information model.">
+         <definition value="Root concept of the TextResult information model. This root concept contains all data elements of the TextResult information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="text_result"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.2.3--20200901000000">
-            <path value="text_result.text_result_date_time"/>
-            
-            <short value="TextResultDateTime">
+      </element>
+        <element id="text_result.text_result_date_time">
+         <path value="text_result.text_result_date_time"/>
+         <short value="TextResultDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Date and if possible time of the result report. ">
+         <definition value="Date and if possible time of the result report. ">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,21 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="text_result.text_result_date_time"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.2.5--20200901000000">
-            <path value="text_result.procedure"/>
-            <short value="Procedure">
+      </element>
+        <element id="text_result.procedure">
+         <path value="text_result.procedure"/>
+         <short value="Procedure">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -124,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Reference to the Procedure information model including the date of the procedure, requesting and executive specialty.">
+         <definition value="Reference to the Procedure information model including the date of the procedure, requesting and executive specialty.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -134,22 +132,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="text_result.procedure"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Procedure"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.2.6--20200901000000">
-            <path value="text_result.text_result_status"/>
-            
-            <short value="TextResultStatus">
+      </element>
+        <element id="text_result.text_result_status">
+         <path value="text_result.text_result_status"/>
+         <short value="TextResultStatus">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -159,7 +156,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The status of the result.">
+         <definition value="The status of the result.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -169,27 +166,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="text_result.text_result_status"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="TextResultStatus codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/TekstStatus"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.2.2--20200901000000">
-            <path value="text_result.text_result_report"/>
-            
-            <short value="TextResultReport">
+      </element>
+        <element id="text_result.text_result_report">
+         <path value="text_result.text_result_report"/>
+         <short value="TextResultReport">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -199,7 +194,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The text report detailing the actual results of the test or procedure.">
+         <definition value="The text report detailing the actual results of the test or procedure.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -209,21 +204,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="text_result.text_result_report"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.2.7--20200901000000">
-            <path value="text_result.visual_result"/>
-            
-            <short value="VisualResult">
+      </element>
+        <element id="text_result.visual_result">
+         <path value="text_result.visual_result"/>
+         <short value="VisualResult">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -233,7 +227,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Visual examination results that are the starting point and reason for the textual report. These results include visual material - e.g. radiological images, scopy images, medical photos and videos - as well as graphic recordings - e.g. ECGs, EEGs etc.">
+         <definition value="Visual examination results that are the starting point and reason for the textual report. These results include visual material - e.g. radiological images, scopy images, medical photos and videos - as well as graphic recordings - e.g. ECGs, EEGs etc.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -243,20 +237,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="text_result.visual_result"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="base64Binary"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.2.4--20200901000000">
-            <path value="text_result.text_result_type"/>
-            <short value="TextResultType">
+      </element>
+        <element id="text_result.text_result_type">
+         <path value="text_result.text_result_type"/>
+         <short value="TextResultType">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -266,7 +260,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The type of result.">
+         <definition value="The type of result.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -276,22 +270,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="text_result.text_result_type"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="TextResultType codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/TekstUitslagType"/>
          </binding>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.15.1--20200901000000">
-            <path value="bowel_function"/>
-            <short value="BowelFunction">
+        <element id="bowel_function">
+         <path value="bowel_function"/>
+         <short value="BowelFunction">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the BowelFunction information model. This root concept contains all data elements of the BowelFunction information model.">
+         <definition value="Root concept of the BowelFunction information model. This root concept contains all data elements of the BowelFunction information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="bowel_function"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.15.2--20200901000000">
-            <path value="bowel_function.fecal_continence"/>
-            
-            <short value="FecalContinence">
+      </element>
+        <element id="bowel_function.fecal_continence">
+         <path value="bowel_function.fecal_continence"/>
+         <short value="FecalContinence">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Fecal continence is the voluntary control over the excretion of feces.">
+         <definition value="Fecal continence is the voluntary control over the excretion of feces.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,25 +99,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="bowel_function.fecal_continence"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="FecalContinence codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/FecesContinentie"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.15.3--20200901000000">
-            <path value="bowel_function.stoma"/>
-            <short value="Stoma">
+      </element>
+        <element id="bowel_function.stoma">
+         <path value="bowel_function.stoma"/>
+         <short value="Stoma">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -128,7 +127,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Stoma describes the presence of an unnatural, surgically created opening. If the patient has a stoma, the type of stoma must be entered along with the date on and location at which the stoma and any stoma pouches were placed. An comment can also be entered.">
+         <definition value="Stoma describes the presence of an unnatural, surgically created opening. If the patient has a stoma, the type of stoma must be entered along with the date on and location at which the stoma and any stoma pouches were placed. An comment can also be entered.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -138,22 +137,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="bowel_function.stoma"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Stoma"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.15.4--20200901000000">
-            <path value="bowel_function.frequency"/>
-            
-            <short value="Frequency">
+      </element>
+        <element id="bowel_function.frequency">
+         <path value="bowel_function.frequency"/>
+         <short value="Frequency">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -163,7 +161,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The defecation frequency.">
+         <definition value="The defecation frequency.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -173,22 +171,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="bowel_function.frequency"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.15.9--20200901000000">
-            <path value="bowel_function.defecation_consistency"/>
-            
-            <short value="DefecationConsistency">
+      </element>
+        <element id="bowel_function.defecation_consistency">
+         <path value="bowel_function.defecation_consistency"/>
+         <short value="DefecationConsistency">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -198,7 +194,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The consistency of the feces indicates the hardness of the stool. The Bristol Stool scale is used to determine this.">
+         <definition value="The consistency of the feces indicates the hardness of the stool. The Bristol Stool scale is used to determine this.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -208,27 +204,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="bowel_function.defecation_consistency"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="DefecationConsistency codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/DefecatieConsistentie"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.15.10--20200901000000">
-            <path value="bowel_function.defecation_color"/>
-            
-            <short value="DefecationColor">
+      </element>
+        <element id="bowel_function.defecation_color">
+         <path value="bowel_function.defecation_color"/>
+         <short value="DefecationColor">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -238,7 +232,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The color of feces is possibly relevant for identifying underlying diseases, such as bleeding or biliary tract disease.">
+         <definition value="The color of feces is possibly relevant for identifying underlying diseases, such as bleeding or biliary tract disease.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -248,27 +242,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="bowel_function.defecation_color"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="DefecationColor codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/DefecatieKleur"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.15.6--20200901000000">
-            <path value="bowel_function.incontinence_material"/>
-            
-            <short value="IncontinenceMaterial">
+      </element>
+        <element id="bowel_function.incontinence_material">
+         <path value="bowel_function.incontinence_material"/>
+         <short value="IncontinenceMaterial">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -278,7 +270,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A description of the incontinence material used.">
+         <definition value="A description of the incontinence material used.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -288,21 +280,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="bowel_function.incontinence_material"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.100--20200901000000">
-            <path value="bowel_function.incontinence_material.medical_device"/>
-            
-            <short value="MedicalDevice">
+      </element>
+        <element id="bowel_function.incontinence_material.medical_device">
+         <path value="bowel_function.incontinence_material.medical_device"/>
+         <short value="MedicalDevice">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -312,7 +303,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the MedicalDevice information model. This root concept contains all data elements of the MedicalDevice information model.">
+         <definition value="Root concept of the MedicalDevice information model. This root concept contains all data elements of the MedicalDevice information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -322,22 +313,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="bowel_function.incontinence_material.medical_device"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicalDevice"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.15.7--20200901000000">
-            <path value="bowel_function.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="bowel_function.comment">
+         <path value="bowel_function.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -347,7 +337,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A comment on the BowelFunction.">
+         <definition value="A comment on the BowelFunction.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -357,16 +347,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="bowel_function.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

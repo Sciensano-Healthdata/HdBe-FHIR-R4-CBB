@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.5.2.1--20200901000000">
-            <path value="stoma"/>
-            <short value="Stoma">
+        <element id="stoma">
+         <path value="stoma"/>
+         <short value="Stoma">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Stoma information model. This root concept contains all data elements of the Stoma information model.">
+         <definition value="Root concept of the Stoma information model. This root concept contains all data elements of the Stoma information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="stoma"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.5.2.2--20200901000000">
-            <path value="stoma.stoma_type"/>
-            
-            <short value="StomaType">
+      </element>
+        <element id="stoma.stoma_type">
+         <path value="stoma.stoma_type"/>
+         <short value="StomaType">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Stoma type indicates which body cavity the stoma is in and the kind of stoma used.">
+         <definition value="Stoma type indicates which body cavity the stoma is in and the kind of stoma used.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,26 +99,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="stoma.stoma_type"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="StomaType codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/StomaType"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.5.2.3--20200901000000">
-            <path value="stoma.stoma_material"/>
-            
-            <short value="StomaMaterial">
+      </element>
+        <element id="stoma.stoma_material">
+         <path value="stoma.stoma_material"/>
+         <short value="StomaMaterial">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -129,7 +127,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Stoma material describes the medical aids used, such as a skin plate (the adhesive part around the stoma), the stoma pouch (to catch the stoma output) and other stoma aids for caring for the stoma. For tracheostomies, it also describes aids such as voice prostheses and stoma filters. &#xD;&#xA;Catheters inserted through the stoma such as tracheal cannulas are not described in this concept. These aids must be modeled in a higher information model describing the catheter and referring to the stoma.&#xD;&#xA;">
+         <definition value="Stoma material describes the medical aids used, such as a skin plate (the adhesive part around the stoma), the stoma pouch (to catch the stoma output) and other stoma aids for caring for the stoma. For tracheostomies, it also describes aids such as voice prostheses and stoma filters. &#xD;&#xA;Catheters inserted through the stoma such as tracheal cannulas are not described in this concept. These aids must be modeled in a higher information model describing the catheter and referring to the stoma.&#xD;&#xA;">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -139,21 +137,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="stoma.stoma_material"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.349--20200901000000">
-            <path value="stoma.stoma_material.medical_device"/>
-            
-            <short value="MedicalDevice">
+      </element>
+        <element id="stoma.stoma_material.medical_device">
+         <path value="stoma.stoma_material.medical_device"/>
+         <short value="MedicalDevice">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -163,7 +160,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the MedicalDevice information model. This root concept contains all data elements of the MedicalDevice information model.">
+         <definition value="Root concept of the MedicalDevice information model. This root concept contains all data elements of the MedicalDevice information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -173,19 +170,19 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="stoma.stoma_material.medical_device"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicalDevice"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.5.2.9--20200901000000">
+      </element>
+        <element id="stoma.anatomical_location">
          <path value="stoma.anatomical_location"/>
          <short value="AnatomicalLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
@@ -219,9 +216,9 @@
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.5.2.5--20200901000000">
-            <path value="stoma.creation_date"/>
-            <short value="CreationDate">
+        <element id="stoma.creation_date">
+         <path value="stoma.creation_date"/>
+         <short value="CreationDate">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -231,7 +228,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date on which the stoma was created in the patient. A vague date, such as only the year, is permitted.">
+         <definition value="The date on which the stoma was created in the patient. A vague date, such as only the year, is permitted.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -241,21 +238,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="stoma.creation_date"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.5.2.7--20200901000000">
-            <path value="stoma.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="stoma.comment">
+         <path value="stoma.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -265,7 +261,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="A comment on the stoma.">
+         <definition value="A comment on the stoma.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -275,16 +271,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="stoma.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

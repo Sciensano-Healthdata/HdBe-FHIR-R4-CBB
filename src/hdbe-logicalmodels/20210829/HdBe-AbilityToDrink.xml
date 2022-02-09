@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.8.1--20200901000000">
-            <path value="ability_to_drink"/>
-            <short value="AbilityToDrink">
+        <element id="ability_to_drink">
+         <path value="ability_to_drink"/>
+         <short value="AbilityToDrink">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the AbilityToDrink information model. This concept contains all data elements of the AbilityToDrink information model.">
+         <definition value="Root concept of the AbilityToDrink information model. This concept contains all data elements of the AbilityToDrink information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="ability_to_drink"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.8.3--20200901000000">
-            <path value="ability_to_drink.drinking"/>
-            
-            <short value="Drinking">
+      </element>
+        <element id="ability_to_drink.drinking">
+         <path value="ability_to_drink.drinking"/>
+         <short value="Drinking">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Taking fluids during meals and during the day or when thirsty.">
+         <definition value="Taking fluids during meals and during the day or when thirsty.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,27 +99,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="ability_to_drink.drinking"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="Drinking codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Drinken"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.8.4--20200901000000">
-            <path value="ability_to_drink.drinking_limitations"/>
-            
-            <short value="DrinkingLimitations">
+      </element>
+        <element id="ability_to_drink.drinking_limitations">
+         <path value="ability_to_drink.drinking_limitations"/>
+         <short value="DrinkingLimitations">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -130,7 +127,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="DrinkingConstraints specifies the patient’s constraints in drinking.">
+         <definition value="DrinkingConstraints specifies the patient’s constraints in drinking.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -140,22 +137,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="ability_to_drink.drinking_limitations"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="DrinkingLimitations codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/DrinkBeperkingen"/>
          </binding>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

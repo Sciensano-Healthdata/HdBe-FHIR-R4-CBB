@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.5.1--20200901000000">
-            <path value="illness_perception"/>
-            <short value="IllnessPerception">
+        <element id="illness_perception">
+         <path value="illness_perception"/>
+         <short value="IllnessPerception">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the IllnessPerception information model. This root concept contains all data elements of the IllnessPerception information model.">
+         <definition value="Root concept of the IllnessPerception information model. This root concept contains all data elements of the IllnessPerception information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="illness_perception"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.5.3--20200901000000">
-            <path value="illness_perception.patient_illness_insight"/>
-            
-            <short value="PatientIllnessInsight">
+      </element>
+        <element id="illness_perception.patient_illness_insight">
+         <path value="illness_perception.patient_illness_insight"/>
+         <short value="PatientIllnessInsight">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The patient’s illness insight describes their awareness of having an illness or health problem and what that means for their daily life.">
+         <definition value="The patient’s illness insight describes their awareness of having an illness or health problem and what that means for their daily life.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,22 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="illness_perception.patient_illness_insight"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.5.4--20200901000000">
-            <path value="illness_perception.coping_with_illness_by_patient"/>
-            
-            <short value="CopingWithIllnessByPatient">
+      </element>
+        <element id="illness_perception.coping_with_illness_by_patient">
+         <path value="illness_perception.coping_with_illness_by_patient"/>
+         <short value="CopingWithIllnessByPatient">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -125,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The description of how the patient deals with their illness or health problem.">
+         <definition value="The description of how the patient deals with their illness or health problem.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -135,22 +132,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="illness_perception.coping_with_illness_by_patient"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.5.5--20200901000000">
-            <path value="illness_perception.coping_with_illness_by_family"/>
-            
-            <short value="CopingWithIllnessByFamily">
+      </element>
+        <element id="illness_perception.coping_with_illness_by_family">
+         <path value="illness_perception.coping_with_illness_by_family"/>
+         <short value="CopingWithIllnessByFamily">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -160,7 +155,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The description of how the family deals with the patient’s illness or health problem.">
+         <definition value="The description of how the family deals with the patient’s illness or health problem.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -170,17 +165,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="illness_perception.coping_with_illness_by_family"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
+      </element>
     </differential>
 </StructureDefinition>
