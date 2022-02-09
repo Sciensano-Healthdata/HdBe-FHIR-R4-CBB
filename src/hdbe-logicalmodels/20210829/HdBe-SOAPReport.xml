@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.6.1--20200901000000">
-            <path value="soapreport"/>
-            <short value="SOAPReport">
+        <element id="soapreport">
+         <path value="soapreport"/>
+         <short value="SOAPReport">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the SOAPReport information model.This root concept contains all data elements of the SOAPReport information model.">
+         <definition value="Root concept of the SOAPReport information model.This root concept contains all data elements of the SOAPReport information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,17 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="soapreport"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.6.2--20200901000000">
-            <path value="soapreport.soapreport_date_time"/>
-            <short value="SOAPReportDateTime">
+      </element>
+        <element id="soapreport.soapreport_date_time">
+         <path value="soapreport.soapreport_date_time"/>
+         <short value="SOAPReportDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -89,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Date and time when the report was recorded">
+         <definition value="Date and time when the report was recorded">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -99,20 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="soapreport.soapreport_date_time"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.6.3--20200901000000">
-            <path value="soapreport.author"/>
-            <short value="Author">
+      </element>
+        <element id="soapreport.author">
+         <path value="soapreport.author"/>
+         <short value="Author">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -122,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The healthcare provider who prepared the report and who is responsible for its content.">
+         <definition value="The healthcare provider who prepared the report and who is responsible for its content.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -132,21 +132,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="soapreport.author"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.121.2.329--20200901000000">
-            <path value="soapreport.author.health_professional"/>
-            
-            <short value="HealthProfessional">
+      </element>
+        <element id="soapreport.author.health_professional">
+         <path value="soapreport.author.health_professional"/>
+         <short value="HealthProfessional">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -156,7 +155,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the HealthProfessional information model. This root concept contains all data elements of the HealthProfessional information model.&#xD;&#xA;When referring to this information model the role the health professional fulfils in the healthcare process can be addressed additionally. For health professionals, this could be for example main practitioner or referrer.">
+         <definition value="Root concept of the HealthProfessional information model. This root concept contains all data elements of the HealthProfessional information model.&#xD;&#xA;When referring to this information model the role the health professional fulfils in the healthcare process can be addressed additionally. For health professionals, this could be for example main practitioner or referrer.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -166,21 +165,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="soapreport.author.health_professional"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
          </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.6.4--20200901000000">
-            <path value="soapreport.soapline"/>
-            <short value="SOAPLine">
+      </element>
+        <element id="soapreport.soapline">
+         <path value="soapreport.soapline"/>
+         <short value="SOAPLine">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -190,7 +189,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the SOAPLine concept.This container contains all data elements of the SOAPLine concept.">
+         <definition value="Container of the SOAPLine concept.This container contains all data elements of the SOAPLine concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -200,20 +199,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="4"/>
-            <base>
+         <min value="1"/>
+         <max value="4"/>
+         <base>
                 <path value="soapreport.soapline"/>
                 <min value="1"/>
                 <max value="4"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.6.5--20200901000000">
-            <path value="soapreport.soapline.soapline_code"/>
-            <short value="SOAPLineCode">
+      </element>
+        <element id="soapreport.soapline.soapline_code">
+         <path value="soapreport.soapline.soapline_code"/>
+         <short value="SOAPLineCode">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -223,7 +222,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Coded values can be added to a line that describe essential aspects of the line.&#xD;&#xA;In a SOAP report an ICPC code may be assigned, but only to the S and E line.">
+         <definition value="Coded values can be added to a line that describe essential aspects of the line.&#xD;&#xA;In a SOAP report an ICPC code may be assigned, but only to the S and E line.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -233,26 +232,25 @@
                     </extension>
                 </extension>
             </definition>
-            <comment value="* 0..1 In a SOAP report, an ICPC code may be assigned, but only to the S and E line."/>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="soapreport.soapline.soapline_code"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="SOAPLineCode codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/SOEPRegelCode"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.6.6--20200901000000">
-            <path value="soapreport.soapline.soapline_header"/>
-            <short value="SOAPLineHeader">
+      </element>
+        <element id="soapreport.soapline.soapline_header">
+         <path value="soapreport.soapline.soapline_header"/>
+         <short value="SOAPLineHeader">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -262,7 +260,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The name of the SOAP line as an coded description. In a SOAP report this can be one of the following: subjective, objective, assessment or plan.">
+         <definition value="The name of the SOAP line as an coded description. In a SOAP report this can be one of the following: subjective, objective, assessment or plan.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -272,26 +270,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="soapreport.soapline.soapline_header"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="SOAPLineHeader codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/SOEPRegelNaam"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.13.6.7--20200901000000">
-            <path value="soapreport.soapline.soapline_text"/>
-            
-            <short value="SOAPLineText">
+      </element>
+        <element id="soapreport.soapline.soapline_text">
+         <path value="soapreport.soapline.soapline_text"/>
+         <short value="SOAPLineText">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -301,7 +298,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The actual content of the section as free formatted text.">
+         <definition value="The actual content of the section as free formatted text.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -311,16 +308,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="soapreport.soapline.soapline_text"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

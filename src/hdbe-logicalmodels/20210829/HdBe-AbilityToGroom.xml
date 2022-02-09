@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.33.1--20200901000000">
-            <path value="ability_to_groome"/>
-            <short value="AbilityToGroome">
+        <element id="ability_to_groome">
+         <path value="ability_to_groome"/>
+         <short value="AbilityToGroome">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the AbilityToGroom information model. This root concept contains all data elements of the AbilityToGroom information model.">
+         <definition value="Root concept of the AbilityToGroom information model. This root concept contains all data elements of the AbilityToGroom information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="ability_to_groome"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.4.33.2--20200901000000">
-            <path value="ability_to_groome.grooming"/>
-            
-            <short value="Grooming">
+      </element>
+        <element id="ability_to_groome.grooming">
+         <path value="ability_to_groome.grooming"/>
+         <short value="Grooming">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Personal grooming includes tending to hair and facial hair, such as combing it, or shaving and/or trimming facial hair; skincare, *e.g.* using make-up; nailcare .">
+         <definition value="Personal grooming includes tending to hair and facial hair, such as combing it, or shaving and/or trimming facial hair; skincare, *e.g.* using make-up; nailcare .">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,22 +99,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="ability_to_groome.grooming"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="Grooming codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/UiterlijkeVerzorging"/>
          </binding>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

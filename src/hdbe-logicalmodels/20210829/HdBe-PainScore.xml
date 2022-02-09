@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.9.1--20200901000000">
-            <path value="pain_score"/>
-            <short value="PainScore">
+        <element id="pain_score">
+         <path value="pain_score"/>
+         <short value="PainScore">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the PainScore information model. This root concept contains all data elements of the PainScore information model.">
+         <definition value="Root concept of the PainScore information model. This root concept contains all data elements of the PainScore information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="pain_score"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.9.2--20200901000000">
-            <path value="pain_score.pain_score_value"/>
-            
-            <short value="PainScoreValue">
+      </element>
+        <element id="pain_score.pain_score_value">
+         <path value="pain_score.pain_score_value"/>
+         <short value="PainScoreValue">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The score is a general measurement of pain experience, not a description of specific, localized pain. &#xD;&#xA;&#xD;&#xA;Depending on the measuring method used, it indicates the level of pain experienced by the patient on a scale of 0 to 10: 0 = no pain and 10 = the worst pain imaginable. No descriptions are used for the intermediate values, so that the value is displayed as a number and not as a code. &#xD;&#xA;&#xD;&#xA;Sometimes a value range of 0-100 is used instead of 0-10. ">
+         <definition value="The score is a general measurement of pain experience, not a description of specific, localized pain. &#xD;&#xA;&#xD;&#xA;Depending on the measuring method used, it indicates the level of pain experienced by the patient on a scale of 0 to 10: 0 = no pain and 10 = the worst pain imaginable. No descriptions are used for the intermediate values, so that the value is displayed as a number and not as a code. &#xD;&#xA;&#xD;&#xA;Sometimes a value range of 0-100 is used instead of 0-10. ">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,21 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="pain_score.pain_score_value"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.9.3--20200901000000">
-            <path value="pain_score.pain_score_date_time"/>
-            <short value="PainScoreDateTime">
+      </element>
+        <element id="pain_score.pain_score_date_time">
+         <path value="pain_score.pain_score_date_time"/>
+         <short value="PainScoreDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -124,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date and time at which the pain score was measured.">
+         <definition value="The date and time at which the pain score was measured.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -134,20 +132,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="pain_score.pain_score_date_time"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.9.4--20200901000000">
-            <path value="pain_score.pain_measuring_method"/>
-            <short value="PainMeasuringMethod">
+      </element>
+        <element id="pain_score.pain_measuring_method">
+         <path value="pain_score.pain_measuring_method"/>
+         <short value="PainMeasuringMethod">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -157,7 +155,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The measuring method describes the method used to determine the pain score. The measurement involves a visualization of the pain scale. ">
+         <definition value="The measuring method describes the method used to determine the pain score. The measurement involves a visualization of the pain scale. ">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -167,27 +165,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="pain_score.pain_measuring_method"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="PainMeasuringMethod codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/PijnMeetmethode"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.9.5--20200901000000">
-            <path value="pain_score.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="pain_score.comment">
+         <path value="pain_score.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -197,7 +193,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Comment on the pain score measurement, including comments on for example the circumstances and/or disruptive factors that may influence the result.">
+         <definition value="Comment on the pain score measurement, including comments on for example the circumstances and/or disruptive factors that may influence the result.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -207,16 +203,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="pain_score.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.17.1--20200901000000">
-            <path value="legal_situation"/>
-            <short value="LegalSituation">
+        <element id="legal_situation">
+         <path value="legal_situation"/>
+         <short value="LegalSituation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the LegalSituation information model. This root concept contains all data elements of the LegalSituation information model.">
+         <definition value="Root concept of the LegalSituation information model. This root concept contains all data elements of the LegalSituation information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,33 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="legal_situation"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <constraint>
-                <key value="NL-CM-7.17.1-1"/>
-                <severity value="error"/>
-                <human value="One concept must be selected in this selection box [Vertegenwoordiging | JuridischeStatus]">
-                    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                        <extension url="lang">
-                            <valueCode value="nl-NL"/>
-                        </extension>
-                        <extension url="content">
-                            <valueMarkdown value="Precies één concept in deze keuze box moet gekozen worden [Vertegenwoordiging | JuridischeStatus]"/>
-                        </extension>
-                    </extension>
-                </human>
-                <expression value="legal_situation.where(legal_status or representation).count() = 1"/>
-            </constraint>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.17.2--20200901000000">
-            <path value="legal_situation.legal_status"/>
-            
-            <short value="LegalStatus">
+      </element>
+        <element id="legal_situation.legal_status">
+         <path value="legal_situation.legal_status"/>
+         <short value="LegalStatus">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -105,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The legal status that applies to the patient. The legal status indicates the basis on which the patient is staying in a healthcare organization. This can be either voluntary or involuntary, however the legal status is always determined by a judge. A patient can also receive healthcare based on a forensic status.">
+         <definition value="The legal status that applies to the patient. The legal status indicates the basis on which the patient is staying in a healthcare organization. This can be either voluntary or involuntary, however the legal status is always determined by a judge. A patient can also receive healthcare based on a forensic status.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -115,27 +99,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="legal_situation.legal_status"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <condition value="NL-CM-7.17.2-1"/>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="LegalStatus codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/JuridischeStatus"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.17.5--20200901000000">
-            <path value="legal_situation.representation"/>
-            <short value="Representation">
+      </element>
+        <element id="legal_situation.representation">
+         <path value="legal_situation.representation"/>
+         <short value="Representation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -145,7 +127,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="In some situations, a person is legally not competent to give permission and/or factually (partly) incapable of doing so. A representative supports and takes decisions in the interest of the representee when they cannot do so themselves (temporarily or permanently). The representative should involve the patient as much as possible in the fulfillment of their tasks and the factual capability of the patient must be honored as much as possible. The Wgbo (Dutch law) determines who are able to become representatives as well as an enforced order.">
+         <definition value="In some situations, a person is legally not competent to give permission and/or factually (partly) incapable of doing so. A representative supports and takes decisions in the interest of the representee when they cannot do so themselves (temporarily or permanently). The representative should involve the patient as much as possible in the fulfillment of their tasks and the factual capability of the patient must be honored as much as possible. The Wgbo (Dutch law) determines who are able to become representatives as well as an enforced order.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -155,26 +137,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="legal_situation.representation"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <condition value="NL-CM-7.17.2-1"/>
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="Representation codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/Vertegenwoordiging"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.17.3--20200901000000">
-            <path value="legal_situation.date_start"/>
-            <short value="DateStart">
+      </element>
+        <element id="legal_situation.date_start">
+         <path value="legal_situation.date_start"/>
+         <short value="DateStart">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -184,7 +165,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date on which the legal situation of the patient starts.">
+         <definition value="The date on which the legal situation of the patient starts.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -194,21 +175,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="legal_situation.date_start"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-            <condition value="NL-CM-7.17.2-1"/>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.7.17.4--20200901000000">
-            <path value="legal_situation.date_stop"/>
-            <short value="DateStop">
+      </element>
+        <element id="legal_situation.date_stop">
+         <path value="legal_situation.date_stop"/>
+         <short value="DateStop">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -218,7 +198,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date on which the legal situation of the patient ends.">
+         <definition value="The date on which the legal situation of the patient ends.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -228,17 +208,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="legal_situation.date_stop"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-            <condition value="NL-CM-7.17.2-1"/>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

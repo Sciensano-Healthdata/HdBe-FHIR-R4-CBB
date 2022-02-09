@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.7.1--20200901000000">
-            <path value="dosscore"/>
-            <short value="DOSScore">
+        <element id="dosscore">
+         <path value="dosscore"/>
+         <short value="DOSScore">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the DOSScore information model. This root concept contains all data elements of the DOSScore information model.">
+         <definition value="Root concept of the DOSScore information model. This root concept contains all data elements of the DOSScore information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,17 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="dosscore"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.7.3--20200901000000">
-            <path value="dosscore.dosscore_total"/>
-            <short value="DOSScoreTotal">
+      </element>
+        <element id="dosscore.dosscore_total">
+         <path value="dosscore.dosscore_total"/>
+         <short value="DOSScoreTotal">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -89,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Per shift a total score is calculated (minimum 0 and maximum 13). The total scores of three shifts (day, evening and night shifts) are summed to the total score of the day (minimum 0 and maximum 39).&#xD;&#xA;&#xD;&#xA;The DOS scale final score is calculated by dividing the total score of the day by 3 (minimum 0 and maximum 13).&#xD;&#xA;&#xD;&#xA;A DOS scale final score &lt; 3 means that the patient is probably not delirious. A DOS scale final score &gt; 3 means that the patiënt is probably delirious.">
+         <definition value="Per shift a total score is calculated (minimum 0 and maximum 13). The total scores of three shifts (day, evening and night shifts) are summed to the total score of the day (minimum 0 and maximum 39).&#xD;&#xA;&#xD;&#xA;The DOS scale final score is calculated by dividing the total score of the day by 3 (minimum 0 and maximum 13).&#xD;&#xA;&#xD;&#xA;A DOS scale final score &lt; 3 means that the patient is probably not delirious. A DOS scale final score &gt; 3 means that the patiënt is probably delirious.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -99,26 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="dosscore.dosscore_total"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-            <minValueQuantity>
-                <value value="0"/>
-            </minValueQuantity>
-            <maxValueQuantity>
-                <value value="13"/>
-            </maxValueQuantity>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.7.5--20200901000000">
-            <path value="dosscore.dosscore_date_time"/>
-            <short value="DOSScoreDateTime">
+      </element>
+        <element id="dosscore.dosscore_date_time">
+         <path value="dosscore.dosscore_date_time"/>
+         <short value="DOSScoreDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -128,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The date on which the DOS score is registered.">
+         <definition value="The date on which the DOS score is registered.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -138,20 +132,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="dosscore.dosscore_date_time"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.7.6--20200901000000">
-            <path value="dosscore.dozes_off"/>
-            <short value="DozesOff">
+      </element>
+        <element id="dosscore.dozes_off">
+         <path value="dosscore.dozes_off"/>
+         <short value="DozesOff">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -161,7 +155,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="DOS observation: patient dozes off during conversation or activities.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
+         <definition value="DOS observation: patient dozes off during conversation or activities.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -171,20 +165,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="dosscore.dozes_off"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.7.7--20200901000000">
-            <path value="dosscore.easily_distracted"/>
-            <short value="EasilyDistracted">
+      </element>
+        <element id="dosscore.easily_distracted">
+         <path value="dosscore.easily_distracted"/>
+         <short value="EasilyDistracted">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -194,7 +188,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="DOS observation: patient is easily distracted by stimuli from the environment.&#xD;&#xA;&#xD;&#xA;Someone is easily distracted by stimuli from the environment when he/she responds verbally or non-verbally to sounds or movements that have no relation to him/her and the nature of which does not make you expect a reaction from him/her.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
+         <definition value="DOS observation: patient is easily distracted by stimuli from the environment.&#xD;&#xA;&#xD;&#xA;Someone is easily distracted by stimuli from the environment when he/she responds verbally or non-verbally to sounds or movements that have no relation to him/her and the nature of which does not make you expect a reaction from him/her.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -204,20 +198,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="dosscore.easily_distracted"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.7.8--20200901000000">
-            <path value="dosscore.maintains_attention"/>
-            <short value="MaintainsAttention">
+      </element>
+        <element id="dosscore.maintains_attention">
+         <path value="dosscore.maintains_attention"/>
+         <short value="MaintainsAttention">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -227,7 +221,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="DOS observation: patient maintains attention to conversation or action.&#xD;&#xA;&#xD;&#xA;Someone is maintaining attention to a conversation or action if he/she verbally or non-verbally shows that they are following the conversation or action.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;1: never&#xD;&#xA;0: sometimes-always&#xD;&#xA;-: don't know">
+         <definition value="DOS observation: patient maintains attention to conversation or action.&#xD;&#xA;&#xD;&#xA;Someone is maintaining attention to a conversation or action if he/she verbally or non-verbally shows that they are following the conversation or action.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;1: never&#xD;&#xA;0: sometimes-always&#xD;&#xA;-: don't know">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -237,20 +231,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="dosscore.maintains_attention"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.7.9--20200901000000">
-            <path value="dosscore.unfinished_question_answer"/>
-            <short value="UnfinishedQuestionAnswer">
+      </element>
+        <element id="dosscore.unfinished_question_answer">
+         <path value="dosscore.unfinished_question_answer"/>
+         <short value="UnfinishedQuestionAnswer">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -260,7 +254,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="DOS observation: patient does not finish question or answer.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
+         <definition value="DOS observation: patient does not finish question or answer.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -270,20 +264,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="dosscore.unfinished_question_answer"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.7.10--20200901000000">
-            <path value="dosscore.answers_no_fit"/>
-            <short value="AnswersNoFit">
+      </element>
+        <element id="dosscore.answers_no_fit">
+         <path value="dosscore.answers_no_fit"/>
+         <short value="AnswersNoFit">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -293,7 +287,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="DOS observation: patient gives answers that do not fit the question.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
+         <definition value="DOS observation: patient gives answers that do not fit the question.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -303,20 +297,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="dosscore.answers_no_fit"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.7.11--20200901000000">
-            <path value="dosscore.reacts_slowly"/>
-            <short value="ReactsSlowly">
+      </element>
+        <element id="dosscore.reacts_slowly">
+         <path value="dosscore.reacts_slowly"/>
+         <short value="ReactsSlowly">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -326,7 +320,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="DOS observation: patient reacts slowly to instructions.&#xD;&#xA;&#xD;&#xA;Someone reacts slowly to instructions when acting is delayed and/or there are moments of stillness/inactivity before moving into action.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
+         <definition value="DOS observation: patient reacts slowly to instructions.&#xD;&#xA;&#xD;&#xA;Someone reacts slowly to instructions when acting is delayed and/or there are moments of stillness/inactivity before moving into action.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -336,20 +330,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="dosscore.reacts_slowly"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.7.12--20200901000000">
-            <path value="dosscore.thinks_somewhere_else"/>
-            <short value="ThinksSomewhereElse">
+      </element>
+        <element id="dosscore.thinks_somewhere_else">
+         <path value="dosscore.thinks_somewhere_else"/>
+         <short value="ThinksSomewhereElse">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -359,7 +353,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="DOS observation: patient thinks they are somewhere else.&#xD;&#xA;&#xD;&#xA;Someone thinks they are somewhere else when he/she shows this in words or actions.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
+         <definition value="DOS observation: patient thinks they are somewhere else.&#xD;&#xA;&#xD;&#xA;Someone thinks they are somewhere else when he/she shows this in words or actions.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -369,20 +363,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="dosscore.thinks_somewhere_else"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.7.13--20200901000000">
-            <path value="dosscore.knows_part_day"/>
-            <short value="KnowsPartDay">
+      </element>
+        <element id="dosscore.knows_part_day">
+         <path value="dosscore.knows_part_day"/>
+         <short value="KnowsPartDay">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -392,7 +386,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="DOS observation: patient knows which part of the day it is.&#xD;&#xA;&#xD;&#xA;Someone knows what part of the day it is when he/she shows such in words or actions.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;1: never&#xD;&#xA;0: sometimes-always&#xD;&#xA;-: don't know">
+         <definition value="DOS observation: patient knows which part of the day it is.&#xD;&#xA;&#xD;&#xA;Someone knows what part of the day it is when he/she shows such in words or actions.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;1: never&#xD;&#xA;0: sometimes-always&#xD;&#xA;-: don't know">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -402,20 +396,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="dosscore.knows_part_day"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.7.14--20200901000000">
-            <path value="dosscore.remembers_recent"/>
-            <short value="RemembersRecent">
+      </element>
+        <element id="dosscore.remembers_recent">
+         <path value="dosscore.remembers_recent"/>
+         <short value="RemembersRecent">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -425,7 +419,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="DOS observation: patient remembers recent events.&#xD;&#xA;&#xD;&#xA;Someone remembers recent events when he/she can for example tell whether they had visitors or what he/she ate.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;1: never&#xD;&#xA;0: sometimes-always&#xD;&#xA;-: don't know">
+         <definition value="DOS observation: patient remembers recent events.&#xD;&#xA;&#xD;&#xA;Someone remembers recent events when he/she can for example tell whether they had visitors or what he/she ate.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;1: never&#xD;&#xA;0: sometimes-always&#xD;&#xA;-: don't know">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -435,20 +429,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="dosscore.remembers_recent"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.7.15--20200901000000">
-            <path value="dosscore.restless"/>
-            <short value="Restless">
+      </element>
+        <element id="dosscore.restless">
+         <path value="dosscore.restless"/>
+         <short value="Restless">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -458,7 +452,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="DOS observation: patient is picking, disorderly, restless.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
+         <definition value="DOS observation: patient is picking, disorderly, restless.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -468,20 +462,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="dosscore.restless"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.7.16--20200901000000">
-            <path value="dosscore.pulls_wires"/>
-            <short value="PullsWires">
+      </element>
+        <element id="dosscore.pulls_wires">
+         <path value="dosscore.pulls_wires"/>
+         <short value="PullsWires">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -491,7 +485,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="DOS observation: patient pulls IV tubing, feeding tubes, catheters, etc.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
+         <definition value="DOS observation: patient pulls IV tubing, feeding tubes, catheters, etc.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -501,20 +495,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="dosscore.pulls_wires"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.7.17--20200901000000">
-            <path value="dosscore.easily_emotional"/>
-            <short value="EasilyEmotional">
+      </element>
+        <element id="dosscore.easily_emotional">
+         <path value="dosscore.easily_emotional"/>
+         <short value="EasilyEmotional">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -524,7 +518,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="DOS observation: patient is easily or suddenly emotional.&#xD;&#xA;&#xD;&#xA;Someone is easily or suddenly emotional when he/she responds with a fierce emotion without provocation or when the fierceness of the emotion does not seem to match the provocation.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
+         <definition value="DOS observation: patient is easily or suddenly emotional.&#xD;&#xA;&#xD;&#xA;Someone is easily or suddenly emotional when he/she responds with a fierce emotion without provocation or when the fierceness of the emotion does not seem to match the provocation.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -534,20 +528,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="dosscore.easily_emotional"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.7.18--20200901000000">
-            <path value="dosscore.hallucinations"/>
-            <short value="Hallucinations">
+      </element>
+        <element id="dosscore.hallucinations">
+         <path value="dosscore.hallucinations"/>
+         <short value="Hallucinations">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -557,7 +551,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="DOS observation: patient sees/hears things which are not there.&#xD;&#xA;&#xD;&#xA;Someone sees/hears things which are not there when he/she shows this verbally (ask!) or non-verbally.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
+         <definition value="DOS observation: patient sees/hears things which are not there.&#xD;&#xA;&#xD;&#xA;Someone sees/hears things which are not there when he/she shows this verbally (ask!) or non-verbally.&#xD;&#xA;&#xD;&#xA;Score:&#xD;&#xA;0: never&#xD;&#xA;1: sometimes-always&#xD;&#xA;-: don't know">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -567,21 +561,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="dosscore.hallucinations"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.18.7.2--20200901000000">
-            <path value="dosscore.comment"/>
-            
-            <short value="Comment">
+      </element>
+        <element id="dosscore.comment">
+         <path value="dosscore.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -591,7 +584,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Comment on the DOS score.">
+         <definition value="Comment on the DOS score.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -601,16 +594,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="dosscore.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

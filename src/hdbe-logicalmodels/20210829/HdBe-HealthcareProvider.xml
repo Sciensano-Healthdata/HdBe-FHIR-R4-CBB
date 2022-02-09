@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.2.1--20200901000000">
-            <path value="healthcare_provider"/>
-            <short value="HealthcareProvider">
+        <element id="healthcare_provider">
+         <path value="healthcare_provider"/>
+         <short value="HealthcareProvider">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the Healthcare Provider information model. This root concept contains all data elements of the Healthcare Provider information model.">
+         <definition value="Root concept of the Healthcare Provider information model. This root concept contains all data elements of the Healthcare Provider information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,17 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="healthcare_provider"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.2.2--20200901000000">
-            <path value="healthcare_provider.healthcare_provider_identification_number"/>
-            <short value="HealthcareProviderIdentificationNumber">
+      </element>
+        <element id="healthcare_provider.healthcare_provider_identification_number">
+         <path value="healthcare_provider.healthcare_provider_identification_number"/>
+         <short value="HealthcareProviderIdentificationNumber">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -89,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The organization’s identification number. For Dutch healthcare providers, the URA number or the AGB number is used, if possible. Depending on the context other ID's are also possible. For foreign or non-affiliated healthcare providers, another unique identification number can be used. This must be accompanied by the name and/or code of the issuing organization.">
+         <definition value="The organization’s identification number. For Dutch healthcare providers, the URA number or the AGB number is used, if possible. Depending on the context other ID's are also possible. For foreign or non-affiliated healthcare providers, another unique identification number can be used. This must be accompanied by the name and/or code of the issuing organization.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -99,21 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="healthcare_provider.healthcare_provider_identification_number"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-            <type>
+         <type>
                 <code value="Identifier"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.2.3--20200901000000">
-            <path value="healthcare_provider.organization_name"/>
-            <short value="OrganizationName">
+      </element>
+        <element id="healthcare_provider.organization_name">
+         <path value="healthcare_provider.organization_name"/>
+         <short value="OrganizationName">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -123,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Name of the organization. If an identification number is given, the name must match the name that corresponds to the identification number.">
+         <definition value="Name of the organization. If an identification number is given, the name must match the name that corresponds to the identification number.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -133,21 +132,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="healthcare_provider.organization_name"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.2.7--20200901000000">
-            <path value="healthcare_provider.department_specialty"/>
-            <short value="DepartmentSpecialty">
+      </element>
+        <element id="healthcare_provider.department_specialty">
+         <path value="healthcare_provider.department_specialty"/>
+         <short value="DepartmentSpecialty">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -157,7 +155,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The specialty of the healthcare provider’s department. The departmental specialty can be filled in if further indication of the healthcare provider is needed. This refers to the recognized medical specialties as stated in the BIG Act.">
+         <definition value="The specialty of the healthcare provider’s department. The departmental specialty can be filled in if further indication of the healthcare provider is needed. This refers to the recognized medical specialties as stated in the BIG Act.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -167,24 +165,23 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="healthcare_provider.department_specialty"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="required"/>
             <description value="DepartmentSpecialty codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/AfdelingSpecialisme"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.2.6--20200901000000">
+      </element>
+        <element id="healthcare_provider.contact_information">
          <path value="healthcare_provider.contact_information"/>
          <short value="ContactInformation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
@@ -221,7 +218,7 @@
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.2.5--20200901000000">
+        <element id="healthcare_provider.address_information">
          <path value="healthcare_provider.address_information"/>
          <short value="AddressInformation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
@@ -264,9 +261,9 @@
         
         
         
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.2.4--20200901000000">
-            <path value="healthcare_provider.organization_type"/>
-            <short value="OrganizationType">
+        <element id="healthcare_provider.organization_type">
+         <path value="healthcare_provider.organization_type"/>
+         <short value="OrganizationType">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -276,7 +273,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The type of healthcare provider, such as general hospital, or nursing home. If this field is filled in and an AGB code is used for the HealthcareProviderIdentificationNumber, the type must match the type implicitly contained in the AGB code.">
+         <definition value="The type of healthcare provider, such as general hospital, or nursing home. If this field is filled in and an AGB code is used for the HealthcareProviderIdentificationNumber, the type must match the type implicitly contained in the AGB code.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -286,26 +283,25 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="healthcare_provider.organization_type"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="OrganizationType codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/OrganisatieType"/>
          </binding>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.2.9--20200901000000">
-            <path value="healthcare_provider.organization_location"/>
-            <short value="OrganizationLocation">
+      </element>
+        <element id="healthcare_provider.organization_location">
+         <path value="healthcare_provider.organization_location"/>
+         <short value="OrganizationLocation">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -315,7 +311,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Container of the OrganizationLocation concept.This container contains all data elements of the OrganizationLocation concept.">
+         <definition value="Container of the OrganizationLocation concept.This container contains all data elements of the OrganizationLocation concept.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -325,20 +321,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="healthcare_provider.organization_location"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="BackboneElement"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.2.8--20200901000000">
-            <path value="healthcare_provider.organization_location.location_name"/>
-            <short value="LocationName">
+      </element>
+        <element id="healthcare_provider.organization_location.location_name">
+         <path value="healthcare_provider.organization_location.location_name"/>
+         <short value="LocationName">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -348,7 +344,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Name of the location, in case a healthcare organization has more than one location.">
+         <definition value="Name of the location, in case a healthcare organization has more than one location.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -358,21 +354,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="healthcare_provider.organization_location.location_name"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.17.2.10--20200901000000">
-            <path value="healthcare_provider.organization_location.location_number"/>
-            <short value="LocationNumber">
+      </element>
+        <element id="healthcare_provider.organization_location.location_number">
+         <path value="healthcare_provider.organization_location.location_number"/>
+         <short value="LocationNumber">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -382,7 +377,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Number of the location Number, if a numerical location identification is used next to or instead of a location name.">
+         <definition value="Number of the location Number, if a numerical location identification is used next to or instead of a location name.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -392,16 +387,16 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="healthcare_provider.organization_location.location_number"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Count"/>
             </type>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>

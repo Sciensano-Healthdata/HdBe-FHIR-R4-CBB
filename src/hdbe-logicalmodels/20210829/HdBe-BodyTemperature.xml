@@ -47,9 +47,9 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.6.1--20200901000000">
-            <path value="body_temperature"/>
-            <short value="BodyTemperature">
+        <element id="body_temperature">
+         <path value="body_temperature"/>
+         <short value="BodyTemperature">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -59,7 +59,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Root concept of the BodyTemperature information model. This root concept contains all data elements of the BodyTemperature information model.">
+         <definition value="Root concept of the BodyTemperature information model. This root concept contains all data elements of the BodyTemperature information model.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -69,18 +69,17 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
                 <path value="body_temperature"/>
                 <min value="0"/>
                 <max value="*"/>
             </base>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.6.2--20200901000000">
-            <path value="body_temperature.temperature_value"/>
-            
-            <short value="TemperatureValue">
+      </element>
+        <element id="body_temperature.temperature_value">
+         <path value="body_temperature.temperature_value"/>
+         <short value="TemperatureValue">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -90,7 +89,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Body temperature is the temperature inside the body, measured in °C (degrees Celsius). The measurement method must be specified for a correct interpretation of the measurement value.">
+         <definition value="Body temperature is the temperature inside the body, measured in °C (degrees Celsius). The measurement method must be specified for a correct interpretation of the measurement value.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -100,21 +99,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="body_temperature.temperature_value"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="Quantity"/>
             </type>
-            
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.6.4--20200901000000">
-            <path value="body_temperature.temperature_date_time"/>
-            <short value="TemperatureDateTime">
+      </element>
+        <element id="body_temperature.temperature_date_time">
+         <path value="body_temperature.temperature_date_time"/>
+         <short value="TemperatureDateTime">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -124,7 +122,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Date and time of measurement.">
+         <definition value="Date and time of measurement.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -134,20 +132,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
                 <path value="body_temperature.temperature_date_time"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="dateTime"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.6.3--20200901000000">
-            <path value="body_temperature.comment"/>
-            <short value="Comment">
+      </element>
+        <element id="body_temperature.comment">
+         <path value="body_temperature.comment"/>
+         <short value="Comment">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -157,7 +155,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="Comments or details that may be of importance in interpreting the measurement value.">
+         <definition value="Comments or details that may be of importance in interpreting the measurement value.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -167,20 +165,20 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="body_temperature.comment"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="string"/>
             </type>
-        </element>
-        <element id="2.16.840.1.113883.2.4.3.11.60.40.1.12.6.5--20200901000000">
-            <path value="body_temperature.temperature_type"/>
-            <short value="TemperatureType">
+      </element>
+        <element id="body_temperature.temperature_type">
+         <path value="body_temperature.temperature_type"/>
+         <short value="TemperatureType">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -190,7 +188,7 @@
                     </extension>
                 </extension>
             </short>
-            <definition value="The TemperatureType indicates the way and place the measurement (temperature) has been performed.">
+         <definition value="The TemperatureType indicates the way and place the measurement (temperature) has been performed.">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -200,21 +198,21 @@
                     </extension>
                 </extension>
             </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
                 <path value="body_temperature.temperature_type"/>
                 <min value="0"/>
                 <max value="1"/>
             </base>
-            <type>
+         <type>
                 <code value="CodeableConcept"/>
             </type>
-            <binding>
+         <binding>
             <strength value="extensible"/>
             <description value="TemperatureType codes"/>
             <valueSet value="https://fhir.healthdata.be/ValueSet/TemperatuurType"/>
          </binding>
-        </element>
+      </element>
     </differential>
 </StructureDefinition>
