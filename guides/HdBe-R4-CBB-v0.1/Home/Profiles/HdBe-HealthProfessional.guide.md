@@ -49,7 +49,7 @@ URL: url
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-HealthProfessional-Practitioner') { map, comment }
+        join mapping.where(identity = 'HdBe-HealthProfessional') { map, comment }
       ```
     </div>
   </div>
@@ -106,7 +106,7 @@ URL: url
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-HealthProfessional-PractitionerRole') { map, comment }
+        join mapping.where(identity = 'HdBe-HealthProfessional') { map, comment }
       ```
     </div>
   </div>
