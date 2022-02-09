@@ -67,6 +67,8 @@ URL: url
 </div>
 
 
+<br/><br/> 
+
 ## HdBe-ContactInformation-TelephoneNumbers
 
 <div>
@@ -121,3 +123,24 @@ URL: url
   </div>
 
 </div>
+
+
+<br/><br/> 
+
+## Terminology Bindings
+
+@```
+from StructureDefinition
+where url in ('https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-EmailAddresses'| 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers')
+
+for differential.element
+select
+Path: path,
+join binding.where(valueSet.exists())
+{
+	Name: valueSet.substring((9 + valueSet.indexOf('ValueSet/'))),
+	Strength: strength,
+	URL: valueSet,
+	ConceptMap: iif(valueSet.extension.where(url='http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap').exists().not(), 'No bound ConceptMap', valueSet.extension.valueCanonical)
+	}
+```  
