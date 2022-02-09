@@ -52,10 +52,10 @@ URL: url
   </div>
 
   <div id="JSON example" class="tabcontent">
-      {{json:examples/HdBe-Patient-01.xml}}
+      <p> HdBe-NameInformation is a datatype profile and can therefore not have an example of its own. Rather, an example is provided within the example of the HdBe-profile(s) that use this datatype profile. </p>
   </div>
   <div id="XML example" class="tabcontent">
-      {{xml:examples/HdBe-Patient-01.xml}}
+      <p> HdBe-NameInformation is a datatype profile and can therefore not have an example of its own. Rather, an example is provided within the example of the HdBe-profile(s) that use this datatype profile. </p>
   </div>
 
   <div id="Zib diff" class="tabcontent">
@@ -63,3 +63,23 @@ URL: url
   </div>
 
 </div>
+
+<br/><br/> 
+
+## Terminology Bindings
+
+@```
+from StructureDefinition
+where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation'
+
+for differential.element
+select
+Path: path,
+join binding.where(valueSet.exists())
+{
+	Name: valueSet.substring((9 + valueSet.indexOf('ValueSet/'))),
+	Strength: strength,
+	URL: valueSet,
+	ConceptMap: iif(valueSet.extension.where(url='http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap').exists().not(), 'No bound ConceptMap', valueSet.extension.valueCanonical)
+	}
+```  
