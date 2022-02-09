@@ -2,4 +2,8 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+|`identifier` | slicing | Replaced (URA, AGB) slices with NIDHI and CBE.|
+|`department_specialty` | textual | Removed the Dutch context. |
+|`department_specialty` | terminology | Replaced ValueSet DepartmentSpecialty with c80-practice-codes - Needs to be confirmed as the correct ValueSet. |
+|`organization_type` | textual | Removed the Dutch context. | 
+|`organization_type` | terminology| Replaced Dutch ValueSet OrganizationType temporarily with original FHIR valueSet - Correct ValueSet needs to be determined. | 
