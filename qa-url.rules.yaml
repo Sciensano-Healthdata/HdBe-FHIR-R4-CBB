@@ -4,7 +4,7 @@
     - logical models/*.xml
     - resources/*.xml
     - terminology/*.xml
-  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
+  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or ConceptMap).exists()
   unique: url
   # custom error messages for unique checks do not work.
 
@@ -14,7 +14,7 @@
     - logical models/*.xml
     - resources/*.xml
     - terminology/*.xml
-  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or NamingSystem or ConceptMap).exists()
+  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or ConceptMap).exists()
   predicate: url.exists() and url.startsWith('https://fhir.healthdata.be/')
   error-message: "Resource canonical URL doesn't start with 'https://fhir.healthdata.be/'"  
 
