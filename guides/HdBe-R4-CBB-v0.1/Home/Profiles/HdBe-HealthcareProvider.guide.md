@@ -54,9 +54,24 @@ URL: url
   </div>
 
   <div id="JSON example" class="tabcontent">
+    <h3>List of examples </h3>
+      <ul>
+        <li>{{link:examples/HdBe-HealthcareProvider-01.xml}}</li>
+        <li>{{link:examples/HdBe-HealthcareProvider-02.xml}}</li>
+        <li>{{link:examples/HdBe-HealthcareProvider-03.xml}}</li>
+      </ul>
+    <h3>First example</h3>
       {{json:examples/HdBe-HealthcareProvider-01.xml}}
   </div>
+
   <div id="XML example" class="tabcontent">
+    <h3>List of examples </h3>
+      <ul>
+        <li>{{link:examples/HdBe-HealthcareProvider-01.xml}}</li>
+        <li>{{link:examples/HdBe-HealthcareProvider-02.xml}}</li>
+        <li>{{link:examples/HdBe-HealthcareProvider-03.xml}}</li>
+      </ul>
+    <h3>First example</h3>
       {{xml:examples/HdBe-HealthcareProvider-01.xml}}
   </div>
 
@@ -111,9 +126,21 @@ URL: url
   </div>
 
   <div id="JSON example2" class="tabcontent">
+  <h3>List of examples </h3>
+      <ul>
+        <li>{{link:examples/HdBe-HealthcareProvider-Organization-01.xml}}</li>
+        <li>{{link:examples/HdBe-HealthcareProvider-Organization-02.xml}}</li>
+      </ul>
+    <h3>First example</h3>
       {{json:examples/HdBe-HealthcareProvider-Organization-01.xml}}
   </div>
   <div id="XML example2" class="tabcontent">
+    <h3>List of examples </h3>
+      <ul>
+        <li>{{link:examples/HdBe-HealthcareProvider-Organization-01.xml}}</li>
+        <li>{{link:examples/HdBe-HealthcareProvider-Organization-02.xml}}</li>
+      </ul>
+    <h3>First example</h3>
       {{xml:examples/HdBe-HealthcareProvider-Organization-01.xml}}
   </div>
 
