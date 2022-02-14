@@ -29,7 +29,7 @@
     <name value="zib Patient-v3.2(2020EN)" />
   </mapping>
   <mapping>
-    <identity value="hdbe-nationality" />
+    <identity value="HdBe-Nationality" />
     <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Nationality" />
     <name value="HdBe logical model Nationality" />
   </mapping>
@@ -39,7 +39,7 @@
     <name value="zib Nationality-v3.0(2020EN)" />
   </mapping>
   <mapping>
-    <identity value="hdbe-MaritalStatus" />
+    <identity value="HdBe-MaritalStatus" />
     <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MaritalStatus" />
     <name value="HdBe logical model MaritalStatus" />
   </mapping>
@@ -49,7 +49,7 @@
     <name value="zib MaritalStatus-v3.1(2020EN)" />
   </mapping>
   <mapping>
-    <identity value="hdbe-LanguageProficiency" />
+    <identity value="HdBe-LanguageProficiency" />
     <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LanguageProficiency" />
     <name value="HdBe logical model LanguageProficiency" />
   </mapping>
@@ -69,7 +69,7 @@
     <name value="zib ContactInformation-v1.2(2020EN)" />
   </mapping>
   <mapping>
-    <identity value="hdbe-ContactPerson" />
+    <identity value="HdBe-ContactPerson" />
     <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson" />
     <name value="HdBe logical model ContactPerson" />
   </mapping>
@@ -98,6 +98,60 @@
         <map value="patient" />
       </mapping>
     </element>
+    <element id="Patient.extension">
+            <path value="Patient.extension" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="url" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+        </element>
+        <element id="Patient.extension:nationality">
+            <path value="Patient.extension" />
+            <sliceName value="nationality" />
+            <comment value="Due to the nature of the nationality core extension (which allows for a period to be placed next to the nationality and thus allows for different nationalities over time), the cardinality of the extension is left at 0..* instead of the zib cardinality of 0..1." />
+            <type>
+                <code value="Extension" />
+                <profile value="http://hl7.org/fhir/StructureDefinition/patient-nationality" />
+            </type>
+        </element>
+        <element id="Patient.extension:nationality.extension">
+            <path value="Patient.extension.extension" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="url" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+        </element>
+        <element id="Patient.extension:nationality.extension:code">
+            <path value="Patient.extension.extension" />
+            <sliceName value="code" />
+        </element>
+        <element id="Patient.extension:nationality.extension:code.value[x]">
+            <path value="Patient.extension.extension.value[x]" />
+            <short value="Nationality" />
+            <definition value="Indicates the country of citizenship." />
+            <alias value="Nationaliteit" />
+            <binding>
+                <strength value="extensible" />
+                <description value="Iso 3166 Part 1: 2 Letter Codes" />
+                <valueSet value="http://hl7.org/fhir/ValueSet/iso3166-1-2" />
+            </binding>
+            <mapping>
+                <identity value="zib-nationality-v3.0-2020EN" />
+                <map value="NL-CM:7.6.3" />
+                <comment value="Nationality" />
+            </mapping>
+             <mapping>
+                <identity value="zib-nationality-v3.0-2020EN" />
+                <map value="NL-CM:7.6.3" />
+                <comment value="Nationality" />
+            </mapping>
+        </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
       <slicing>
