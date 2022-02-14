@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-HealthcareProvider" />
   <meta>
-    <lastUpdated value="2022-02-03T13:48:24.1625349+00:00" />
+    <lastUpdated value="2022-02-14T08:48:19.0872358+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider" />
   <name value="HdBeHealthcareProvider" />
@@ -71,6 +71,28 @@
         <map value="organization_location" />
       </mapping>
     </element>
+    <element id="Location.identifier">
+      <path value="Location.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Location.identifier:locationNumber">
+      <path value="Location.identifier" />
+      <sliceName value="locationNumber" />
+      <max value="1" />
+      <patternIdentifier>
+        <system value="https://fhir.healthdata.be/NamingSystem/FOD-CampusNumber" />
+      </patternIdentifier>
+      <mapping>
+        <identity value="HdBe-HealthcareProvider" />
+        <map value="organization_location.location_number" />
+      </mapping>
+    </element>
     <element id="Location.name">
       <path value="Location.name" />
       <short value="LocationName" />
@@ -134,10 +156,8 @@
     </element>
     <element id="Location.address">
       <path value="Location.address" />
-      <short value="AddressInformation" />
       <definition value="The physical address of the healthcare provider’s location." />
       <comment value="The cardinality mismatch with the zib (0..1 versus 0..*) is explained by the restriction of FHIR to limit the `Location.address` to a physical address while the zib allows for other types of addresses (e.g. a postal address). Other types of addresses than a physical address are given in `Organization.address` which is referenced by `Location.managingOrganization`." />
-      <alias value="Adresgegevens" />
       <type>
         <code value="Address" />
         <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation" />
