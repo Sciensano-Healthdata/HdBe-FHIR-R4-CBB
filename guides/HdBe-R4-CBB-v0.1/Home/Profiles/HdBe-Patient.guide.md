@@ -12,13 +12,12 @@ URL: url
 ```
 
 ### Introduction
-
-The Patient profile hosts the following CBBs:
-- {{link:guides/HdBe-R4-CBB-v0.1/Home/LogicalModels/HdBe-Patient.guide.md}}
-- {{link:guides/HdBe-R4-CBB-v0.1/Home/LogicalModels/HdBe-Nationality.guide.md}}
-- {{link:guides/HdBe-R4-CBB-v0.1/Home/LogicalModels/HdBe-MaritalStatus.guide.md}}
-- {{link:guides/HdBe-R4-CBB-v0.1/Home/LogicalModels/HdBe-LanguageProficiency.guide.md}}
-- {{link:guides/HdBe-R4-CBB-v0.1/Home/LogicalModels/HdBe-ContactPerson.guide.md}}
+This Patient profile contains mappings to the following CBBs:
+- {{pagelink:guides/HdBe-R4-CBB-v0.1/Home/LogicalModels/HdBe-Patient.guide.md}}
+- {{pagelink:guides/HdBe-R4-CBB-v0.1/Home/LogicalModels/HdBe-Nationality.guide.md}}
+- {{pagelink:guides/HdBe-R4-CBB-v0.1/Home/LogicalModels/HdBe-MaritalStatus.guide.md}}
+- {{pagelink:guides/HdBe-R4-CBB-v0.1/Home/LogicalModels/HdBe-LanguageProficiency.guide.md}}
+- {{pagelink:guides/HdBe-R4-CBB-v0.1/Home/LogicalModels/HdBe-ContactPerson.guide.md}}
 
 <div>
   <div class="tab">
