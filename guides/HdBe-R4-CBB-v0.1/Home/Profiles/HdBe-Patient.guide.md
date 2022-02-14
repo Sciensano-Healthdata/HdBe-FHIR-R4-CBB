@@ -11,6 +11,15 @@ Status: status,
 URL: url
 ```
 
+### Introduction
+
+The Patient profile hosts the following CBBs:
+- {{link:guides\HdBe-R4-CBB-v0.1\Home\LogicalModels\HdBe-Patient.guide.md}}
+- {{link:guides\HdBe-R4-CBB-v0.1\Home\LogicalModels\HdBe-Nationality.guide.md}}
+- {{link:guides\HdBe-R4-CBB-v0.1\Home\LogicalModels\HdBe-MaritalStatus.guide.md}}
+- {{link:guides\HdBe-R4-CBB-v0.1\Home\LogicalModels\HdBe-LanguageProficiency.guide.md}}
+- {{link:guides\HdBe-R4-CBB-v0.1\Home\LogicalModels\HdBe-ContactPerson.guide.md}}
+
 <div>
   <div class="tab">
      <button class="tablinks active" onclick="openTab(event, 'Snapshot view')">Snapshot view</button>
@@ -46,16 +55,31 @@ URL: url
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-Patient') { map, comment }
+        join mapping.where(identity in ('HdBe-Patient'|'HdBe-Nationality'|'HdBe-MaritalStatus'|'HdBe-LanguageProficiency'|'HdBe-ContactPerson')) { map, CBB: identity, comment  }
       ```
+     
     </div>
   </div>
 
   <div id="JSON example" class="tabcontent">
+      <h3>List of examples </h3>
+      <ul>
+        <li>{{link:examples/HdBe-Patient-01.xml}}</li>
+        <li>{{link:examples/HdBe-Patient-02.xml}}</li>
+      </ul>
+    <h3>First example</h3>
       {{json:examples/HdBe-Patient-01.xml}}
+
   </div>
   <div id="XML example" class="tabcontent">
+      <h3>List of examples </h3>
+      <ul>
+        <li>{{link:examples/HdBe-Patient-01.xml}}</li>
+        <li>{{link:examples/HdBe-Patient-02.xml}}</li>
+      </ul>
+    <h3>First example</h3>
       {{xml:examples/HdBe-Patient-01.xml}}
+
   </div>
 
   <div id="Zib diff" class="tabcontent">
