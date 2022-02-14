@@ -1,7 +1,7 @@
 ## Example instances
 
 | HealthProfessional    |                   |
-|-----------------|-------------------|
+|-----------------------|-------------------|
 | health_professional_identifier | 10079938  
 | name_information |  see CBB NameInformation 
 | specialty | Dermatologie

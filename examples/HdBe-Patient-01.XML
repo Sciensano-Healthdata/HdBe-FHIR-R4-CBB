@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-
 <Patient xmlns="http://hl7.org/fhir"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/patient.xsd">
-
-
     <id value="HdBe-Patient-01"/>
     <meta>
         <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
     </meta>
     <identifier>
         <system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin" />
-        <value value="41.07.21.00.284" />       
+        <value value="41072100284" />       
     </identifier>
     <name>
         <use value="official" />
@@ -86,5 +82,10 @@
         </country>
     </address>
     <multipleBirthBoolean value="false" />
+    <generalPractitioner>
+        <reference value="Practitioner/HdBe-HealthProfessional-Practitioner-01" />
+        <type value="Practitioner" />
+        <display value="Healthcare professional (person), E. Penninx" />
+    </generalPractitioner>
 </Patient>
     

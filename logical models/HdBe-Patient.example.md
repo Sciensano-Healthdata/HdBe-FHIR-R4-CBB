@@ -1,6 +1,6 @@
 ## Example instances
-| patient      |                   |
-|----------------------|-------------------|
+| patient          |                   |
+|------------------|-------------------|
 | name_information | see CBB NameInformation   
 | address_information | see CBB AddressInformation
 | contact_information | see CBB ContactInformation

@@ -1,7 +1,7 @@
 ## Example instances
 
-| Nationality      |                   |
-|-----------------|-------------------|
+| Nationality |       |
+|-------------|-------|
 | nationality | BE  
 
 

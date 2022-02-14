@@ -1,6 +1,6 @@
 
 ## Example instances
-| anatomical_location     |                   |
+| anatomical_location                      |
 |----------------------|-------------------|
 | location | nier   
 | laterality | links 
