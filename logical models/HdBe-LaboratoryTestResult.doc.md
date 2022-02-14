@@ -8,9 +8,9 @@
 |`laboratory_test_result.specimen.microorganism` | terminology | Replaced Dutch reference set for Microorganism by chanching the SNOMED hierarchy 2581000146104 (Dutch microorganism simple reference set) to 410607006 (Organism). |
 |`specimen.received_date_time`| textual | Removed sentence 'This is the issue...' ([zib ticket #1551](https://bits.nictiz.nl/browse/ZIB-1551))|
 |`laboratory_test_result.laboratory_test.test_code` | terminology | Removed bound valuesets. Need to be replaced by a ReTam valueset.|
-|`laboratory_test_result.laboratory_test.test_code` | example | Replaced unstructured example with a LOINC code.| 
 |`laboratory_test.test_result`| type | The zib datatype 'ANY' was incorrectly exported as only a 'string', likely because Forge was giving an (incorrect) warning. The element has been made polymorphic by allowing all the `Observation.value[x]` datatype options. | 
 |`laboratory_test.test_result`| textual | Added textual guidance to include the unit for quantitative results. | 
-|`laboratory_test.test_result`| example | Removed example because it incorrectly used a quantative result as a string datatype. It cannot contain an example because the element is now polymorphic.  | 
 |`laboratory_test_result.result_status`| terminology | Deduplicated ValueSet binding. Replaced valueset binding from TestResult to TestResultStatus which is bound on `.test_result_status` too.
 |`laboratory_test.test_result_status` | textual | Changed 'an panel/cluster' to 'a panel/cluster' ([zib ticket #1551](https://bits.nictiz.nl/browse/ZIB-1551))|
+|`laboratory_test.reference_range_upper_limit`| type | The zib datatype 'ANY' was incorrectly exported as only a 'string', likely because Forge was giving an (incorrect) warning. The element has been made polymorphic by allowing the datatype options string and SimpleQuantity. These are most commonly used for this concept. | 
+|`laboratory_test.reference_range_lower_limit`| type | The zib datatype 'ANY' was incorrectly exported as only a 'string', likely because Forge was giving an (incorrect) warning. The element has been made polymorphic by allowing the datatype options string and SimpleQuantity. These are most commonly used for this concept. | 
