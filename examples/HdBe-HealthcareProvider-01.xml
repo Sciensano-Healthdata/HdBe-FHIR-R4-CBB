@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Location xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/location.xsd">
+   <id value="HdBe-HealthcareProvider-01"/>
+   <meta>
+      <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider"/>
+   </meta>
+   <identifier>
+      <system value="https://fhir.healthdata.be/NamingSystem/FPS-CampusNumber"/>
+      <value value="3170"/>
+   </identifier>
+   <name value="GRAND HOPITAL DE CHARLEROI - SAINT-JOSEPH"/>
+   <telecom>
+      <system value="phone"/>
+      <value value="071102111"/>
+      <use value="work"/>
+   </telecom>
+   <telecom>
+      <system value="email"/>
+      <value value="info@example.be"/>
+      <use value="work"/>
+   </telecom>
+   <address>
+      <extension url="http://hl7.org/fhir/StructureDefinition/language">
+         <valueCode value="fr" />
+      </extension>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType">
+         <valueCodeableConcept>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+               <code value="WP"/>
+               <display value="Work Place"/>
+            </coding>
+         </valueCodeableConcept>
+      </extension>
+      <use value="work"/>
+      <text value="6, Rue Marguerite Depasse, 6060 Gilly" />
+      <line value="RUE MARGUERITE DEPASSE">
+         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+            <valueString value="RUE MARGUERITE DEPASSE"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+            <valueString value="6"/>
+         </extension>
+      </line>
+      <city value="GILLY"/>
+      <postalCode value="6060"/>
+      <country value="BE" />
+   </address>
+   <managingOrganization>
+      <reference value="Organization/HdBe-HealthcareProvider-Organization-01"/>
+      <type value="Organization"/>
+      <display value="Healthcare provider (organization), GRAND HOPITAL DE CHARLEROI"/>
+   </managingOrganization>
+</Location>
