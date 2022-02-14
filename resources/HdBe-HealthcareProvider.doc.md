@@ -2,4 +2,5 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+|`Location.identifier` | Element | Added a slice of identifier to map LocationNumber which isn't mapped in the Nictiz profiles.
+|`TO DO` | Element | Added DepartmentNumber concept.
