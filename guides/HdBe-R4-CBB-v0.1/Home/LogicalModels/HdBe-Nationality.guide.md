@@ -44,6 +44,8 @@ URL: url
 
 </div>
 
+<br/><br/> 
+
 @```
 from StructureDefinition
 where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Nationality'

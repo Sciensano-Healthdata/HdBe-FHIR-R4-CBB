@@ -52,10 +52,10 @@ URL: url
   </div>
 
   <div id="JSON example" class="tabcontent">
-      <p> The HdBe-AnatomicalLocation is a CodeableConcept and an example will be provided within other HdBe profiles it is used. </p>
+      <p> The HdBe-AnatomicalLocation is a datatype profile and can therefore not have an example of its own. Rather, an example is provided within the example of the HdBe-profile(s) that use this datatype profile. </p>
   </div>
   <div id="XML example" class="tabcontent">
-      <p> The HdBe-AnatomicalLocation is a CodeableConcept and an example will be provided within other HdBe profiles it is used. </p>
+      <p> The HdBe-AnatomicalLocation is a datatype profile and can therefore not have an example of its own. Rather, an example is provided within the example of the HdBe-profile(s) that use this datatype profile.</p>
   </div>
 
   <div id="Zib diff" class="tabcontent">
