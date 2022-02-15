@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult" />
   <meta>
-    <lastUpdated value="2022-02-15T14:37:37.9523073+00:00" />
+    <lastUpdated value="2022-02-15T15:24:43.9687566+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult" />
   <name value="HdBeLaboratoryTestResult" />
@@ -292,6 +292,11 @@
       <binding>
         <strength value="extensible" />
         <description value="Use ConceptMap 'ResultFlags-to-ObservationInterpretation' to translate CBB terminology to profile terminology in ValueSet 'Observation-interpretation'" />
+        <valueSet value="http://hl7.org/fhir/valueset-observation-interpretation">
+          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
+            <valueCanonical value="https://fhir.healthdata.be/ConceptMap/ResultFlags-to-ObservationInterpretation" />
+          </extension>
+        </valueSet>
       </binding>
       <mapping>
         <identity value="zib-laboratorytestresult-v4.6-2020EN" />
