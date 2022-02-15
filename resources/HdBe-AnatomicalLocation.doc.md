@@ -2,4 +2,5 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`extension:laterality` | mapping | Moved mapping from extension to host profile.
+|purpose | textual | Adjusted purpose to HdBe context. |
+|`extension:laterality` | mapping | Moved mapping from extension to host profile.|
