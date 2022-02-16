@@ -17,7 +17,7 @@ from
 	StructureDefinition
 	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation'
 select
-	Instructions: differential.element[0].comment
+	Instructions: differential.element[0].definition
 ```
 
 <div>

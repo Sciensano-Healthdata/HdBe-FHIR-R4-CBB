@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-HealthcareProvider" />
   <meta>
-    <lastUpdated value="2022-02-16T11:57:10.2647925+00:00" />
+    <lastUpdated value="2022-02-16T16:58:14.0156482+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider" />
   <name value="HdBeHealthcareProvider" />
@@ -17,7 +17,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This Location profile acts as the focal resource of the CBB HealthcareProvider because most references to this CBB are concerned about the recording of the physical location where the care to patient/client takes place rather than the organizational information. For the latter, the profile on Organization is used which is referenced using the `managingOrganization` element.&#xD;&#xA;&#xD;&#xA;Healthcare providers usually consist of multiple organizational levels and physical locations. The hierarchical structure may be captured by using multiple instances of this HealthcareProvider profile using the `Location.partOf` element to refer to their parent Location. Each instance refers the HdBe-HealthcareProvider-Organization at the appropriate level in the hierarchy." />
+  <description value="The physical location of a healthcare provider. A healthcare provider is an organization that offers and provides medical, paramedic and/or nursing care to patients/clients. Examples include: hospitals, nursing homes, doctor’s offices." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -49,7 +49,7 @@
     <element id="Location">
       <path value="Location" />
       <short value="HealthcareProvider / OrganizationLocation" />
-      <comment value="HealthcareProvider is mapped to this Location profile and a profile on Organization (&amp;lt;https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider-Organization&amp;gt;). This Location profile acts as the focal resource of the HealthcareProvider because most references to this CBB are concerned about the recording of the physical location where the care to patient/client takes place rather than the organizational information. For the latter, the profile on Organization is used which is referenced using the `managingOrganization` element.&#xD;&#xA;&#xD;&#xA;Healthcare providers usually consist of multiple organizational levels and physical locations. The hierarchical structure may be captured by using multiple instances of this HealthcareProvider profile using the `Location.partOf` element to refer to their parent Location. Each instance refers the HdBe-HealthcareProvider-Organization at the appropriate level in the hierarchy." />
+      <comment value="HealthcareProvider is mapped to this Location profile and a profile on Organization (HdBe-HealthcareProvider-Organization). This Location profile acts as the focal resource of HealthcareProvider because most references to this CBB are concerned about the recording of the physical location where the care to patient takes place rather than the organizational information. For the latter, the profile on Organization is used which is referenced using the `Location.managingOrganization` element.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Healthcare providers usually consist of multiple organizational levels and physical locations. The hierarchical structure may be captured by using multiple instances of this HealthcareProvider profile using the `Location.partOf` element to refer to their parent Location. Each instance refers the HdBe-HealthcareProvider-Organization at the appropriate level in the hierarchy." />
       <alias value="OrganisatieLocatie" />
       <alias value="Zorgaanbieder" />
       <mapping>
