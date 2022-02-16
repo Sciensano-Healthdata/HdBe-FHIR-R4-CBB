@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult" />
   <meta>
-    <lastUpdated value="2022-02-15T15:24:43.9687566+00:00" />
+    <lastUpdated value="2022-02-16T08:31:39.7073875+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult" />
   <name value="HdBeLaboratoryTestResult" />
@@ -405,6 +405,7 @@
       <comment value="When this resource is used to represent the overall result of a panel/cluster of laboratory tests, the individual test resultss SHOULD be referenced here. See the root of this profile for guidance." />
       <type>
         <code value="Reference" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/MolecularSequence" />
