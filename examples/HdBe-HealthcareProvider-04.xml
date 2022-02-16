@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Location xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/location.xsd">
+    <id value="HdBe-HealthcareProvider-05"/>
+    <meta>
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider"/>
+    </meta>
+    <name value="004-C - Chirugie "/>
+    <type>
+        <coding>
+            <system value="http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType"/>
+            <code value="SU"/>
+            <display value="Surgery clinic"/>
+        </coding>
+    </type>
+    <physicalType> 
+        <coding> 
+            <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/> 
+            <code value="wa"/> 
+            <display value="Ward"/>      
+        </coding> 
+    </physicalType> 
+    <managingOrganization>
+        <reference value="Organization/HdBe-HealthcareProvider-Organization-02"/>
+        <type value="Organization"/>
+        <display value="Healthcare provider (organization), Enterprise Hospital Ziekenhuis"/>
+    </managingOrganization>
+    <partOf>
+        <reference value="Location/HdBe-HealthcareProvider-04"/>
+        <display value="Enterprise Hospital Ziekenhuis"/>
+    </partOf>
+</Location>
