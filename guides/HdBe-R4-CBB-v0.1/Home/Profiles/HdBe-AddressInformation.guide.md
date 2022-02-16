@@ -4,7 +4,7 @@
 from StructureDefinition
 where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation'
 select 
-Name: name,
+Profile: id,
 Description: description,
 Version: version,
 Status: status,

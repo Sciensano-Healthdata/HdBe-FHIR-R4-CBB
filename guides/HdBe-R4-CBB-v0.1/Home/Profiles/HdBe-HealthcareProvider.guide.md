@@ -4,7 +4,7 @@
 from StructureDefinition
 where url in ( 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider' | 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider-Organization' )
 select 
-Name: name,
+Profile: id,
 Description: description,
 Version: version,
 Status: status,

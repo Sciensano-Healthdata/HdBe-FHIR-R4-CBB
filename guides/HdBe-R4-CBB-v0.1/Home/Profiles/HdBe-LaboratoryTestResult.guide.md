@@ -4,7 +4,7 @@
 from StructureDefinition
 where url in ('https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult'| 'https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen' | 'https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen.Microorganism' )
 select 
-Name: name,
+Profile: id,
 Description: description,
 Version: version,
 Status: status,
@@ -12,6 +12,15 @@ URL: url
 ```
 
 ## HdBe-LaboratoryTestResult
+
+@```
+from
+	StructureDefinition
+	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult'
+select
+	Instructions: differential.element[0].comment
+
+```
 
 <div>
   <div class="tab">
