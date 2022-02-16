@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="HdBe-LaboratoryTestResult.Specimen.Microorganism" />
+  <meta>
+    <lastUpdated value="2022-02-16T07:12:43.6997215+00:00" />
+  </meta>
+  <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen.Microorganism" />
+  <name value="HdBeLaboratoryTestResultSpecimenMicroorganism" />
+  <title value="HdBe LaboratoryTestResult.Specimen.Microorganism" />
+  <status value="draft" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Healthdata.be (Sciensano)" />
+    <telecom>
+      <system value="email" />
+      <value value="fhir.healthdata@sciensano.be" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Specimen.microorganism contains all details regarding a microorganism on which the test was carried out. When this microorganism is isolated from a substance, the substance needs to be referred to." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="HdBe-LaboratoryTestResult" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LaboratoryTestResult" />
+    <name value="HdBe logical model LaboratoryTestResult" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Specimen" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Specimen" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Specimen.type">
+      <path value="Specimen.type" />
+      <binding>
+        <strength value="required" />
+        <description value="Microorganism codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/Microorganism" />
+      </binding>
+      <mapping>
+        <identity value="HdBe-LaboratoryTestResult" />
+        <map value="specimen_microorganism" />
+      </mapping>
+    </element>
+    <element id="Specimen.parent">
+      <path value="Specimen.parent" />
+      <type>
+        <code value="Reference" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
