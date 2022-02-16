@@ -117,7 +117,7 @@ URL: url
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-HdBe-LaboratoryTestResult') { map, comment }
+        join mapping.where(identity = 'HdBe-LaboratoryTestResult') { map, comment }
       ```
     </div>
   </div>
@@ -154,31 +154,31 @@ URL: url
 
 <div>
   <div class="tab">
-     <button class="tablinks active" onclick="openTab(event, 'Snapshot view2')">Snapshot view</button>
-     <button class="tablinks" onclick="openTab(event, 'Hybrid view2')">Hybrid view</button>
-     <button class="tablinks" onclick="openTab(event, 'Diff view2')">Diff view</button>
-     <button class="tablinks" onclick="openTab(event, 'Mapping2')">Mapping</button>
-     <button class="tablinks" onclick="openTab(event, 'JSON example2')">JSON example</button>
-     <button class="tablinks" onclick="openTab(event, 'XML example2')">XML example</button>
-     <button class="tablinks" onclick="openTab(event, 'Zib diff2')">Zib-profile diff</button>
+     <button class="tablinks active" onclick="openTab(event, 'Snapshot view3')">Snapshot view</button>
+     <button class="tablinks" onclick="openTab(event, 'Hybrid view3')">Hybrid view</button>
+     <button class="tablinks" onclick="openTab(event, 'Diff view3')">Diff view</button>
+     <button class="tablinks" onclick="openTab(event, 'Mapping3')">Mapping</button>
+     <button class="tablinks" onclick="openTab(event, 'JSON example3')">JSON example</button>
+     <button class="tablinks" onclick="openTab(event, 'XML example3')">XML example</button>
+     <button class="tablinks" onclick="openTab(event, 'Zib diff3')">Zib-profile diff</button>
   </div>
 
-  <div id="Snapshot view2" class="tabcontent" style="display:block">
+  <div id="Snapshot view3" class="tabcontent" style="display:block">
     <br>
       {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen.Microorganism, snapshot}}
   </div>
 
-  <div id="Hybrid view2" class="tabcontent">
+  <div id="Hybrid view3" class="tabcontent">
     <br>
       {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen.Microorganism, hybrid}}
   </div>
 
-  <div id="Diff view2" class="tabcontent">
+  <div id="Diff view3" class="tabcontent">
     <br>
       {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen.Microorganism, diff}}
   </div>
 
-  <div id="Mapping2" class="tabcontent">      
+  <div id="Mapping3" class="tabcontent">      
       <h3> Mapping FHIR profile to logical model</h3>
       <div>
       @```
@@ -187,12 +187,12 @@ URL: url
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-HdBe-LaboratoryTestResult') { map, comment }
+        join mapping.where(identity = 'HdBe-LaboratoryTestResult') { map, comment }
       ```
     </div>
   </div>
 
-  <div id="JSON example2" class="tabcontent">
+  <div id="JSON example3" class="tabcontent">
       <h3>List of examples </h3>
       <ul>
         <li>{{link:examples/HdBe-LaboratoryTestResult.Specimen.Microorganism-01.xml}}</li>
@@ -201,7 +201,7 @@ URL: url
     <h3>First example</h3>
       {{json:examples/HdBe-LaboratoryTestResult.Specimen.Microorganism-01.xml}}
   </div>
-  <div id="XML example2" class="tabcontent">
+  <div id="XML example3" class="tabcontent">
       <h3>List of examples </h3>
       <ul>
         <li>{{link:examples/HdBe-LaboratoryTestResult.Specimen.Microorganism-01.xml}}</li>
@@ -211,7 +211,7 @@ URL: url
       {{json:examples/HdBe-LaboratoryTestResult.Specimen.Microorganism-01.xml}}
   </div>
 
-  <div id="Zib diff2" class="tabcontent">
+  <div id="Zib diff3" class="tabcontent">
       {{render:resources/HdBe-LaboratoryTestResult.Specimen.Microorganism.doc.md}}
   </div>
 
