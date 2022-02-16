@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult" />
   <meta>
-    <lastUpdated value="2022-02-16T08:31:39.7073875+00:00" />
+    <lastUpdated value="2022-02-16T14:25:01.3961819+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult" />
   <name value="HdBeLaboratoryTestResult" />
@@ -40,7 +40,7 @@
       <path value="Observation" />
       <short value="LaboratoryTestResult / LaboratoryTest" />
       <definition value="An instance of CBB LaboratoryTestResult or of a single LaboratoryTest within this CBB." />
-      <comment value="The CBB LaboratoryTestResult captures both singular laboratory tests and panels/clusters of multiple related tests requested together (e.g. blood gases and EBV serology)*. This profile should be used slightly different in these two situations:&#xD;&#xA;&#xD;&#xA;* For singlular laboratory test results&#xD;&#xA;    * A single instance of this profile is to be used.&#xD;&#xA;    * `Observation.code` represents CBB concept test_code  while CBB concept panel_or_battery is not expected to be present.&#xD;&#xA;    * `Observation.status` represents CBB concept test_result_status. Result_status is redundant in this situation and not expected to be present.&#xD;&#xA;* For a panel or cluster:&#xD;&#xA;    * There is a single instance for the overall result plus an instance for each individual test result.&#xD;&#xA;    * For the instance representing the overall result:&#xD;&#xA;      * `Observation.code` represents CBB concept panel_or_battery, which is required for panels/clusters.&#xD;&#xA;      * `Observation.status` represents CBB concept result_status. This status should be in accordance with the statuses of each individual test.&#xD;&#xA;      * The instances respresenting the individual test results are referenced using `Observation.hasMember`.&#xD;&#xA;    * For the instances representing the individual test results:&#xD;&#xA;      * `Observation.code` represents CBB concept test_code for that particular test.&#xD;&#xA;      * `Observation.status` represents CBB concept test_result_status for that particular test.&#xD;&#xA;&#xD;&#xA;*) Please note the the CBB also recognizes the related_result concept. This is unrelated to the use of panels/clusters. This concept is represented either using `Observation.derivedFrom` or `Observation.extension:relatedResult`." />
+      <comment value="The CBB LaboratoryTestResult captures both singular laboratory tests and panels/clusters of multiple related tests requested together (e.g. blood gases and EBV serology)*. This profile should be used slightly different in these two situations:&#xD;&#xA;&#xD;&#xA;* For singlular laboratory test results&#xD;&#xA;    * A single instance of this profile is to be used.&#xD;&#xA;    * `Observation.code` represents CBB concept test_code while panel_or_battery is not expected to be present.&#xD;&#xA;    * `Observation.status` represents CBB concept test_result_status. Result_status is redundant in this situation and not expected to be present.&#xD;&#xA;* For a panel or cluster:&#xD;&#xA;    * There is a single instance for the overall result plus an instance for each individual test result.&#xD;&#xA;    * For the instance representing the overall result:&#xD;&#xA;      * `Observation.code` represents CBB concept panel_or_battery, which is required for panels/clusters.&#xD;&#xA;      * `Observation.status` represents CBB concept result_status. This status should be in accordance with the statuses of each individual test.&#xD;&#xA;      * The instances respresenting the individual test results are referenced using `Observation.hasMember`.&#xD;&#xA;    * For the instances representing the individual test results:&#xD;&#xA;      * `Observation.code` represents CBB concept test_code for that particular test.&#xD;&#xA;      * `Observation.status` represents CBB concept test_result_status for that particular test.&#xD;&#xA;&#xD;&#xA;*) Please note the the CBB also recognizes the related_result concept. This is unrelated to the use of panels/clusters. This concept is represented either using `Observation.derivedFrom` or `Observation.extension:relatedResult`." />
       <alias value="LaboratoriumUitslag" />
       <alias value="LaboratoriumTest" />
       <mapping>
@@ -370,6 +370,19 @@
         <map value="laboratory_test.test_method" />
       </mapping>
     </element>
+    <element id="Observation.specimen">
+      <path value="Observation.specimen" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Specimen" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen.Microorganism" />
+      </type>
+      <mapping>
+        <identity value="HdBe-LaboratoryTestResult" />
+        <map value="specimen" />
+      </mapping>
+    </element>
     <element id="Observation.referenceRange.low">
       <path value="Observation.referenceRange.low" />
       <short value="ReferenceRangeLowerLimit" />
@@ -402,10 +415,9 @@
     </element>
     <element id="Observation.hasMember">
       <path value="Observation.hasMember" />
-      <comment value="When this resource is used to represent the overall result of a panel/cluster of laboratory tests, the individual test resultss SHOULD be referenced here. See the root of this profile for guidance." />
+      <comment value="When this resource is used to represent the overall result of a panel/cluster of laboratory tests, the individual test results SHOULD be referenced here. See the root of this profile for guidance." />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/MolecularSequence" />

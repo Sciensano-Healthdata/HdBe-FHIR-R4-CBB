@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult" />
+  <meta>
+    <lastUpdated value="2022-02-16T14:10:39.4699254+00:00" />
+  </meta>
   <language value="en-US" />
   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
     <valuePeriod>
@@ -190,8 +193,8 @@
         <code value="dateTime" />
       </type>
     </element>
-    <element id="laboratory_test_result.laboratory_test.test_result">
-      <path value="laboratory_test_result.laboratory_test.test_result" />
+    <element id="laboratory_test_result.laboratory_test.test_result[x]">
+      <path value="laboratory_test_result.laboratory_test.test_result[x]" />
       <short value="TestResult">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
@@ -293,8 +296,8 @@
         <valueSet value="https://fhir.healthdata.be/ValueSet/TestResultStatus" />
       </binding>
     </element>
-    <element id="laboratory_test_result.laboratory_test.reference_range_upper_limit">
-      <path value="laboratory_test_result.laboratory_test.reference_range_upper_limit" />
+    <element id="laboratory_test_result.laboratory_test.reference_range_upper_limit[x]">
+      <path value="laboratory_test_result.laboratory_test.reference_range_upper_limit[x]" />
       <short value="ReferenceRangeUpperLimit">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
@@ -327,8 +330,8 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity" />
       </type>
     </element>
-    <element id="laboratory_test_result.laboratory_test.reference_range_lower_limit">
-      <path value="laboratory_test_result.laboratory_test.reference_range_lower_limit" />
+    <element id="laboratory_test_result.laboratory_test.reference_range_lower_limit[x]">
+      <path value="laboratory_test_result.laboratory_test.reference_range_lower_limit[x]" />
       <short value="ReferenceRangeLowerLimit">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
