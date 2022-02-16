@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-HealthcareProvider-Organization" />
   <meta>
-    <lastUpdated value="2022-02-14T10:19:06.6842789+00:00" />
+    <lastUpdated value="2022-02-16T09:55:21.9411654+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider-Organization" />
   <name value="HdBeHealthcareProviderOrganization" />
@@ -17,7 +17,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A healthcare provider is an organization that offers and provides medical, paramedic and/or nursing care to patients/clients. Examples include: hospitals, nursing homes, doctor’s offices.&#xD;&#xA;&#xD;&#xA;The CBB HealthcareProvider is mapped to this Organization profile and a profile on Location(&amp;lt;https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider&amp;gt;). The Location profile acts as the focal resource of the HealthcareProvider because most references to this zib are concerned about the recording of the physical location where the care to patient/client takes place rather than the organizational information. Often there's no clear distinction between an organizational structure and a physical location. As a rule of thumb, locations are always used for recording where a service occurs, and hence where encounters and observations take place.&#xD;&#xA;&#xD;&#xA;Healthcare providers usually consist of multiple organizational levels and physical locations. The hierarchical structure may be captured by using multiple instances of this profile, using the `Organization.partOf` element to refer to their parent organization. The physical location is captured using the HdBe-HealthcareProvider profile, which refers this profile at the appropriate level in the hierarchy." />
+  <description value="A healthcare provider is an organization that offers and provides medical, paramedic and/or nursing care to patients/clients. Examples include: hospitals, nursing homes, doctor’s offices.&#xD;&#xA;&#xD;&#xA;The CBB HealthcareProvider is mapped to this Organization profile and a profile on Location(&amp;lt;https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider&amp;gt;). The Location profile acts as the focal resource of the HealthcareProvider because most references to this CBB are concerned about the recording of the physical location where the care to patient/client takes place rather than the organizational information. Often there's no clear distinction between an organizational structure and a physical location. As a rule of thumb, locations are always used for recording where a service occurs, and hence where encounters and observations take place.&#xD;&#xA;&#xD;&#xA;Healthcare providers usually consist of multiple organizational levels and physical locations. The hierarchical structure may be captured by using multiple instances of this profile, using the `Organization.partOf` element to refer to their parent organization. The physical location is captured using the HdBe-HealthcareProvider profile, which refers this profile at the appropriate level in the hierarchy." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -39,7 +39,7 @@
     <element id="Organization">
       <path value="Organization" />
       <short value="HealthcareProvider" />
-      <comment value="The zib HealthcareProvider is mapped to this Organization profile and a profile on Location(&amp;lt;https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider&amp;gt;). The Location profile acts as the focal resource of the HealthcareProvider because most references to this zib are concerned about the recording of the physical location where the care to patient/client takes place rather than the organizational information. Often there's no clear distinction between an organizational structure and a physical location. As a rule of thumb, locations are always used for recording where a service occurs, and hence where encounters and observations take place.&#xD;&#xA;&#xD;&#xA;Healthcare providers usually consist of multiple organizational levels and physical locations. The hierarchical structure may be captured by using multiple instances of this profile, using the `Organization.partOf` element to refer to their parent organization. The physical location is captured using the zib-HealthcareProvider profile, which refers this profile at the appropriate level in the hierarchy." />
+      <comment value="HealthcareProvider is mapped to this Organization profile and a profile on Location(&amp;lt;https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider&amp;gt;). The Location profile acts as the focal resource of HealthcareProvider because most references to this CBB are concerned about the recording of the physical location where the care to patient/client takes place rather than the organizational information. Often there's no clear distinction between an organizational structure and a physical location. As a rule of thumb, locations are always used for recording where a service occurs, and hence where encounters and observations take place.&#xD;&#xA;&#xD;&#xA;Healthcare providers usually consist of multiple organizational levels and physical locations. The hierarchical structure may be captured by using multiple instances of this profile, using the `Organization.partOf` element to refer to their parent organization. The physical location is captured using the HdBe-HealthcareProvider profile, which refers this profile at the appropriate level in the hierarchy." />
       <alias value="Zorgaanbieder" />
       <mapping>
         <identity value="zib-healthcareprovider-v3.4-2020EN" />
@@ -61,7 +61,7 @@
         <rules value="open" />
       </slicing>
       <short value="HealthcareProviderIdentificationNumber" />
-      <definition value="The organization’s identification number. For Dutch healthcare providers, the URA number or the AGB number is used, if possible. Depending on the context other ID's are also possible. For foreign or non-affiliated healthcare providers, another unique identification number can be used. This must be accompanied by the name and/or code of the issuing organization." />
+      <definition value="The organization’s identification number." />
       <alias value="ZorgaanbiederIdentificatienummer" />
       <mapping>
         <identity value="zib-healthcareprovider-v3.4-2020EN" />
@@ -102,7 +102,7 @@
       <sliceName value="departmentSpecialty" />
       <short value="DepartmentSpecialty" />
       <definition value="The specialty of the healthcare provider’s department. The departmental specialty can be filled in if further indication of the healthcare provider is needed." />
-      <comment value="The ValueSet binding strenght deviates from the zib because the binding strenght must be set to required in order to make the discriminator work. However, the open slice definition allows to extend codes." />
+      <comment value="The ValueSet binding strenght deviates from the CBB because the binding strenght must be set to required in order to make the discriminator work. However, the open slice definition allows to extend codes." />
       <alias value="AfdelingSpecialisme" />
       <max value="1" />
       <binding>
@@ -124,7 +124,7 @@
       <sliceName value="organizationType" />
       <short value="OrganizationType" />
       <definition value="The type of healthcare provider, such as general hospital, or nursing home." />
-      <comment value="The ValueSet binding strenght deviates from the zib because the binding strenght must be set to required in order to make the discriminator work. However, the open slice definition allows to extend codes." />
+      <comment value="The ValueSet binding strenght deviates from the CBB because the binding strenght must be set to required in order to make the discriminator work. However, the open slice definition allows to extend codes." />
       <alias value="OrganisatieType" />
       <max value="1" />
       <binding>
