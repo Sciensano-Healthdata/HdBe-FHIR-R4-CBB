@@ -59,6 +59,7 @@ URL: url
         <li>{{link:examples/HdBe-HealthcareProvider-01.xml}}</li>
         <li>{{link:examples/HdBe-HealthcareProvider-02.xml}}</li>
         <li>{{link:examples/HdBe-HealthcareProvider-03.xml}}</li>
+        <li>{{link:examples/HdBe-HealthcareProvider-04.xml}}</li>
       </ul>
     <h3>First example</h3>
       {{json:examples/HdBe-HealthcareProvider-01.xml}}
@@ -70,6 +71,7 @@ URL: url
         <li>{{link:examples/HdBe-HealthcareProvider-01.xml}}</li>
         <li>{{link:examples/HdBe-HealthcareProvider-02.xml}}</li>
         <li>{{link:examples/HdBe-HealthcareProvider-03.xml}}</li>
+        <li>{{link:examples/HdBe-HealthcareProvider-04.xml}}</li>
       </ul>
     <h3>First example</h3>
       {{xml:examples/HdBe-HealthcareProvider-01.xml}}

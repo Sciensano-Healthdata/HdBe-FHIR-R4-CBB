@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-Patient" />
+  <meta>
+    <lastUpdated value="2022-02-16T13:02:08.7320772+00:00" />
+  </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
   <name value="HdBePatient" />
   <title value="HdBe Patient" />
@@ -99,58 +102,62 @@
       </mapping>
     </element>
     <element id="Patient.extension">
-            <path value="Patient.extension" />
-            <slicing>
-                <discriminator>
-                    <type value="value" />
-                    <path value="url" />
-                </discriminator>
-                <rules value="open" />
-            </slicing>
-        </element>
-        <element id="Patient.extension:nationality">
-            <path value="Patient.extension" />
-            <sliceName value="nationality" />
-            <comment value="Due to the nature of the nationality core extension (which allows for a period to be placed next to the nationality and thus allows for different nationalities over time), the cardinality of the extension is left at 0..* instead of the zib cardinality of 0..1." />
-            <type>
-                <code value="Extension" />
-                <profile value="http://hl7.org/fhir/StructureDefinition/patient-nationality" />
-            </type>
-        </element>
-        <element id="Patient.extension:nationality.extension">
-            <path value="Patient.extension.extension" />
-            <slicing>
-                <discriminator>
-                    <type value="value" />
-                    <path value="url" />
-                </discriminator>
-                <rules value="open" />
-            </slicing>
-        </element>
-        <element id="Patient.extension:nationality.extension:code">
-            <path value="Patient.extension.extension" />
-            <sliceName value="code" />
-        </element>
-        <element id="Patient.extension:nationality.extension:code.value[x]">
-            <path value="Patient.extension.extension.value[x]" />
-            <short value="Nationality" />
-            <definition value="Indicates the country of citizenship." />
-            <alias value="Nationaliteit" />
-            <binding>
-                <strength value="extensible" />
-                <description value="Iso 3166 Part 1: 2 Letter Codes" />
-                <valueSet value="http://hl7.org/fhir/ValueSet/iso3166-1-2" />
-            </binding>
-            <mapping>
-                <identity value="zib-nationality-v3.0-2020EN" />
-                <map value="NL-CM:7.6.3" />
-                <comment value="Nationality" />
-            </mapping>
-             <mapping>
-                <identity value="HdBe-Nationality" />
-                <map value="nationality" />
-            </mapping>
-        </element>
+      <path value="Patient.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Patient.extension:nationality">
+      <path value="Patient.extension" />
+      <sliceName value="nationality" />
+      <comment value="Due to the nature of the nationality core extension (which allows for a period to be placed next to the nationality and thus allows for different nationalities over time), the cardinality of the extension is left at 0..* instead of the CBB cardinality of 0..1." />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/patient-nationality" />
+      </type>
+    </element>
+    <element id="Patient.extension:nationality.extension">
+      <path value="Patient.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Patient.extension:nationality.extension:code">
+      <path value="Patient.extension.extension" />
+      <sliceName value="code" />
+      <min value="0" />
+    </element>
+    <element id="Patient.extension:nationality.extension:code.value[x]">
+      <path value="Patient.extension.extension.value[x]" />
+      <short value="Nationality" />
+      <definition value="Indicates the country of citizenship." />
+      <alias value="Nationaliteit" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Iso 3166 Part 1: 2 Letter Codes" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/iso3166-1-2" />
+      </binding>
+      <mapping>
+        <identity value="zib-nationality-v3.0-2020EN" />
+        <map value="NL-CM:7.6.3" />
+        <comment value="Nationality" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-Nationality" />
+        <map value="nationality" />
+      </mapping>
+    </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
       <slicing>
@@ -210,7 +217,7 @@
       </slicing>
       <short value="ContactInformation" />
       <definition value="Patient’s telephone number(s) or e-mail address(es)." />
-      <comment value="The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the containers inside the ContactInformation model which are 0..*. FHIR ContactPoint does not have these containers." />
+      <comment value="The cardinality mismatch between the CBB (0..1) and FHIR (0..*) is explained by the containers inside the ContactInformation model which are 0..*. FHIR ContactPoint does not have these containers." />
       <alias value="Contactgegevens" />
       <mapping>
         <identity value="HdBe-Patient" />
@@ -250,7 +257,7 @@
       <alias value="Geslacht" />
       <binding>
         <strength value="required" />
-        <description value="Use ConceptMap 'GenderCodelijst-to-AdministrativeGender' to translate zib terminology to profile terminology in ValueSet 'AdministrativeGender'" />
+        <description value="Use ConceptMap 'GenderCodelijst-to-AdministrativeGender' to translate CBB terminology to profile terminology in ValueSet 'AdministrativeGender'" />
         <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
             <valueCanonical value="https://fhir.healthdata.be/ConceptMap/Geslacht-to-AdministrativeGender" />
@@ -357,7 +364,7 @@
       <sliceName value="deceasedDateTime" />
       <short value="DateOfDeath" />
       <definition value="The date on which the patient died. A ‘vague’ date, such as only the year, is permitted." />
-      <comment value="The zib recognizes both the DeathIndicator (boolean) and DateOfDeath (datetime) concepts, whereas in FHIR only one of these concepts may be present. Therefore, if deceasedDateTime is present and has a value, its value can be mapped to DateOfDeath and DeathIndicator is assumed to be true." />
+      <comment value="The CBB recognizes both the DeathIndicator (boolean) and DateOfDeath (datetime) concepts, whereas in FHIR only one of these concepts may be present. Therefore, if deceasedDateTime is present and has a value, its value can be mapped to DateOfDeath and DeathIndicator is assumed to be true." />
       <alias value="DatumOverlijden" />
       <alias value="OverlijdensIndicator" />
       <type>
