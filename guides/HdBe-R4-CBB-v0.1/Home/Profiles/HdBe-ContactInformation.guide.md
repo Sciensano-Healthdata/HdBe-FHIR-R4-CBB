@@ -13,6 +13,14 @@ URL: url
 
 ## HdBe-ContactInformation-EmailAddresses
 
+@```
+from
+	StructureDefinition
+	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-EmailAddresses'
+select
+	Instructions: differential.element[0].comment
+```
+
 <div>
   <div class="tab">
     <button class="tablinks active" onclick="openTab(event, 'Snapshot view')">Snapshot view</button>
@@ -69,6 +77,14 @@ URL: url
 <br/><br/> 
 
 ## HdBe-ContactInformation-TelephoneNumbers
+
+@```
+from
+	StructureDefinition
+	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers'
+select
+	Instructions: differential.element[0].comment
+```
 
 <div>
   <div class="tab">

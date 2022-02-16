@@ -14,6 +14,14 @@ URL: url
 
 ## HdBe-HealthProfessional-Practitioner
 
+@```
+from
+	StructureDefinition
+	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner'
+select
+	Instructions: differential.element[0].comment
+```
+
 <div>
   <div class="tab">
      <button class="tablinks active" onclick="openTab(event, 'Snapshot view')">Snapshot view</button>
@@ -70,6 +78,15 @@ URL: url
 <br/><br/> 
 
 ## HdBe-HealthProfessional-PractitionerRole
+
+@```
+from
+	StructureDefinition
+	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole'
+select
+	Instructions: differential.element[0].comment
+```
+
 
 <div>
   <div class="tab">
