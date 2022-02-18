@@ -9,4 +9,4 @@
 | `test_method` | terminology | TO-DO: Check if the ValueSet needs to be replaced with the SNOMED-CT code for Procedure. |
 | `has_member` | reference | Added reference to HdBe-LaboratoryTestResult.Specimen (seems missing in the current zib profile implementation). |
 | `derived_from` | reference | Added reference to HdBe-LaboratoryTestResult (seems missing in the current zib profile implementation). |
-| `specimen` | mapping | Added mapping to specimen (seems missing in the current zib profile)
+
