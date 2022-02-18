@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/Observation.xsd">
+   <id value="HdBe-LaboratoryTestResult-01"/>
+   <meta>
+      <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult"/>
+   </meta>
+   <status value="final"></status>
+   <category>
+      <coding>
+         <system value="http://snomed.info/sct" />
+         <code value="275711006" />
+         <display value="Serum chemistry test" />
+      </coding>
+   </category>
+   <code>
+      <coding>
+         <system value="http://loinc.org" />
+         <code value="2069-3" />
+         <display value="Chloride [Moles/volume] in Blood" />
+      </coding>
+   </code>
+   <subject>
+      <reference value="Patient/HdBe-Patient-01" />
+      <type value="Patient" />
+      <display value="Belle Ulijn" />
+   </subject>
+   <effectiveDateTime value="2022-01-13T12:00:00+02:00" />
+   <performer>
+      <reference value="PractitionerRole/HdBe-HealthProfessional-PractitionerRole-01" />
+      <type value="PractitionerRole" />
+      <display value="Healthcare professional (role)" />
+   </performer>
+   <valueQuantity>
+      <value value="109" />
+      <unit value="mmol/l" />
+      <system value="http://unitsofmeasure.org" />
+      <code value="mmol/L" />
+   </valueQuantity>
+   <interpretation>
+      <coding>
+         <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+         <code value="H" />
+         <display value="Hoog" />
+      </coding>
+      <coding>
+         <system value="http://snomed.info/sct" />
+         <code value="281302008" />
+         <display value="Above reference range" />
+      </coding>
+   </interpretation>
+   <specimen>
+      <reference value="Specimen/HdBe-LaboratoryTestResult.Specimen-01" />
+      <display value="Blood (substance)" />
+   </specimen>
+   <referenceRange>
+      <low>
+         <value value="99" />
+         <unit value="mmol/l" />
+         <system value="http://unitsofmeasure.org" />
+         <code value="mmol/L" />
+      </low>
+      <high>
+         <value value="108" />
+         <unit value="mmol/l" />
+         <system value="http://unitsofmeasure.org" />
+         <code value="mmol/L" />
+      </high>
+   </referenceRange>
+ </Observation>

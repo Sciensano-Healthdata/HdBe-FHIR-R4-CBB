@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Specimen xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/Specimen.xsd">
+    <id value="HdBe-LaboratoryTestResult.Specimen-01"/>
+    <meta>
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen"/>
+    </meta>
+    <identifier>
+        <value value="123456"/>
+    </identifier>
+    <type>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="119297000" />
+            <display value="Blood specimen" />
+        </coding>
+    </type>
+    <collection>
+        <collectedDateTime value="2012-05-23T08:08:00+01:00" />
+        <method>
+            <coding>
+                <system value="http://snomed.info/sct" />
+                <code value="82078001" />
+                <display value="Collection of blood specimen for laboratory" />
+            </coding>            
+        </method>
+        <bodySite>
+            <extension url="https://fhir.healthdata.be/StructureDefinition/ext-AnatomicalLocation.Laterality">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct" />
+                        <code value="7771000" />
+                        <display value="Left" /> 
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <coding>
+                <system value="http://snomed.info/sct" />
+                <code value="53120007" />
+                <display value="Upper limb structure" /> 
+            </coding>
+        </bodySite>
+    </collection>
+</Specimen>
+
