@@ -2,7 +2,7 @@
 
 @```
 from StructureDefinition
-where url in ('https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult'| 'https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen' | 'https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen.Microorganism' )
+where url in ('https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult'| 'https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen' )
 select 
 Profile: id,
 Description: description,
@@ -21,6 +21,7 @@ select
 	Instructions: differential.element[0].comment
 
 ```
+
 
 <div>
   <div class="tab">
@@ -159,80 +160,11 @@ select
 <br/><br/> 
 
 
-## HdBe-LaboratoryTestResult.Specimen.Microorganism
-
-<div>
-  <div class="tab">
-     <button class="tablinks active" onclick="openTab(event, 'Snapshot view3')">Snapshot view</button>
-     <button class="tablinks" onclick="openTab(event, 'Hybrid view3')">Hybrid view</button>
-     <button class="tablinks" onclick="openTab(event, 'Diff view3')">Diff view</button>
-     <button class="tablinks" onclick="openTab(event, 'Mapping3')">Mapping</button>
-     <button class="tablinks" onclick="openTab(event, 'JSON example3')">JSON example</button>
-     <button class="tablinks" onclick="openTab(event, 'XML example3')">XML example</button>
-     <button class="tablinks" onclick="openTab(event, 'Zib diff3')">Zib-profile diff</button>
-  </div>
-
-  <div id="Snapshot view3" class="tabcontent" style="display:block">
-    <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen.Microorganism, snapshot}}
-  </div>
-
-  <div id="Hybrid view3" class="tabcontent">
-    <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen.Microorganism, hybrid}}
-  </div>
-
-  <div id="Diff view3" class="tabcontent">
-    <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen.Microorganism, diff}}
-  </div>
-
-  <div id="Mapping3" class="tabcontent">      
-      <h3> Mapping FHIR profile to logical model</h3>
-      <div>
-      @```
-      from StructureDefinition
-      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen.Microorganism'
-      for differential.element 
-      select 
-        Path: id,
-        join mapping.where(identity = 'HdBe-LaboratoryTestResult') { map, comment }
-      ```
-    </div>
-  </div>
-
-  <div id="JSON example3" class="tabcontent">
-      <h3>List of examples </h3>
-      <ul>
-        <li>{{link:examples/HdBe-LaboratoryTestResult.Specimen.Microorganism-01.xml}}</li>
-        <li>{{link:examples/HdBe-LaboratoryTestResult.Specimen.Microorganism-02.xml}}</li>
-      </ul>
-    <h3>First example</h3>
-      {{json:examples/HdBe-LaboratoryTestResult.Specimen.Microorganism-01.xml}}
-  </div>
-  <div id="XML example3" class="tabcontent">
-      <h3>List of examples </h3>
-      <ul>
-        <li>{{link:examples/HdBe-LaboratoryTestResult.Specimen.Microorganism-01.xml}}</li>
-        <li>{{link:examples/HdBe-LaboratoryTestResult.Specimen.Microorganism-02.xml}}</li>
-      </ul>
-    <h3>First example</h3>
-      {{json:examples/HdBe-LaboratoryTestResult.Specimen.Microorganism-01.xml}}
-  </div>
-
-  <div id="Zib diff3" class="tabcontent">
-      {{render:resources/HdBe-LaboratoryTestResult.Specimen.Microorganism.doc.md}}
-  </div>
-
-</div>
-
-<br/><br/> 
-
 ## Terminology Bindings
 
 @```
 from StructureDefinition
-where url in ('https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult'| 'https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen' | 'https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen.Microorganism')
+where url in ('https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult'| 'https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen' )
 
 for differential.element
 select
