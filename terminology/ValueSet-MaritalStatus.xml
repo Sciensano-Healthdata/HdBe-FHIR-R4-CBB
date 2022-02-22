@@ -36,14 +36,10 @@
         value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
     <compose>
         <include>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+            <system value="http://snomed.info/sct"/>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Gescheiden (huwelijk/geregistreerd partnerschap ontbonden)"
-                    />
-                </extension>
-                <code value="D"/>
-                <display value="Divorced"/>
+                <code value="125681006"/>
+                <display value="Single person"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -51,7 +47,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Divorced"/>
+                    <value value="Single person"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -60,11 +56,11 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Gescheiden"/>
+                    <value value="Ongehuwd"/>
                 </designation>
             </concept>
             <concept>
-                <code value="M"/>
+                <code value="87915002"/>
                 <display value="Married"/>
                 <designation>
                     <language value="en-US"/>
@@ -86,11 +82,8 @@
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Niet gehuwd"/>
-                </extension>
-                <code value="U"/>
-                <display value="Unmarried"/>
+                <code value="20295000"/>
+                <display value="Divorced"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -98,7 +91,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Unmarried"/>
+                    <value value="Divorced"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -107,39 +100,11 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Niet gehuwd"/>
+                    <value value="Gescheiden"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Geregistreerd partnerschap"/>
-                </extension>
-                <code value="T"/>
-                <display value="Domestic partner"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Domestic partner"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Geregistreerd partnerschap"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Weduwe/weduwnaar"/>
-                </extension>
-                <code value="W"/>
+                <code value="33553000"/>
                 <display value="Widowed"/>
                 <designation>
                     <language value="en-US"/>
@@ -157,7 +122,29 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Weduwe/weduwnaar"/>
+                    <value value="Verweduwd"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="160504008"/>
+                <display value="Marital state unknown"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Domestic partner"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Burgerlijke staat onbekend"/>
                 </designation>
             </concept>
         </include>
