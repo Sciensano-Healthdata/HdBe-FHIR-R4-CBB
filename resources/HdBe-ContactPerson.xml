@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-ContactPerson" />
   <meta>
-    <lastUpdated value="2022-02-22T11:29:18.8287881+00:00" />
+    <lastUpdated value="2022-02-22T16:48:52.9228549+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson" />
   <name value="HdBeContactPerson" />
@@ -55,6 +55,10 @@
         <identity value="zib-contactperson-v3.4-2020EN" />
         <map value="NL-CM:3.1.1" />
         <comment value="Contact" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-ContactPerson" />
+        <map value="contact" />
       </mapping>
     </element>
     <element id="RelatedPerson.patient">
@@ -134,16 +138,6 @@
         <identity value="HdBe-ContactInformation" />
         <map value="name_information" />
       </mapping>
-    </element>
-    <element id="RelatedPerson.name.given">
-      <path value="RelatedPerson.name.given" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="extension('http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier').value" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
     </element>
     <element id="RelatedPerson.telecom">
       <path value="RelatedPerson.telecom" />
