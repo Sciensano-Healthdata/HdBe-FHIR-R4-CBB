@@ -231,23 +231,18 @@
     </element>
     <element id="Observation.performer">
       <path value="Observation.performer" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="resolve()" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.performer:performer">
-      <path value="Observation.performer" />
-      <sliceName value="performer" />
       <short value="Performer" />
       <definition value="The healthcare provider and/or organization where or by whom the LaboratoryTestResult was performed." />
       <alias value="Uitvoerder" />
       <max value="1" />
       <type>
         <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider-Organization" />
