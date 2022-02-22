@@ -1,0 +1,25 @@
+@startuml
+set namespaceSeparator none
+
+class "HdBe-LaboratoryTestResult" << Observation >>
+{
+  hasMember
+  specimen
+}
+  "HdBe-LaboratoryTestResult" <-- "HdBe-LaboratoryTestResult::hasMember" : for panels
+  
+  "HdBe-LaboratoryTestResult::specimen" --> "HdBe-LaboratoryTestResult.Specimen as Material"
+  "HdBe-LaboratoryTestResult::specimen" --> "HdBe-LaboratoryTestResult.Specimen as Microorganism"
+
+class "HdBe-LaboratoryTestResult.Specimen as Material" << Specimen >>
+{
+  type = material code
+}
+class "HdBe-LaboratoryTestResult.Specimen as Microorganism" << Specimen >>
+{
+  type = microorganism code
+  parent
+}
+  "HdBe-LaboratoryTestResult.Specimen as Microorganism::parent" -->  "HdBe-LaboratoryTestResult.Specimen as Material"
+
+@enduml

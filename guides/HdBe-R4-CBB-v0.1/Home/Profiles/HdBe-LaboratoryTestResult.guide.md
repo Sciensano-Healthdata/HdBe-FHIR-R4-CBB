@@ -11,6 +11,11 @@ Status: status,
 URL: url
 ```
 
+## UML overview profiles
+
+{{render:uml/HdBe-LaboratoryTestResult-UML-GREY.png}}
+
+<br/><br/> 
 
 
 @```
@@ -21,9 +26,6 @@ select
 	Instructions: differential.element[0].comment
 
 ```
-
-
-
 
 ## HdBe-LaboratoryTestResult
 <div>
