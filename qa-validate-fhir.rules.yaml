@@ -1,0 +1,25 @@
+# Validate logical models
+- action: validate
+  name: validate-logical-models
+  status: "Validating logical models"
+  files: 
+    - logical models/*.xml
+  filter: StructureDefinition.exists() and StructureDefinition.kind = 'logical'
+    
+# Validate all resources
+- action: validate
+  name: validate-resources
+  status: "Validating all resources"
+  files: 
+    - resources/*.xml
+    - terminology/*.xml
+
+# Validate examples
+- action: validate
+  name: validate-examples
+  status: "Validating all examples"
+  files: 
+    - /examples/*.xml
+
+
+ 
