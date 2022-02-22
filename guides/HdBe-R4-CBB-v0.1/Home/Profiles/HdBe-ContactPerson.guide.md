@@ -11,6 +11,15 @@ Status: status,
 URL: url
 ```
 
+@```
+from
+	StructureDefinition
+	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson'
+select
+	Instructions: differential.element[0].comment
+
+```
+
 <div>
   <div class="tab">
      <button class="tablinks active" onclick="openTab(event, 'Snapshot view')">Snapshot view</button>
@@ -52,10 +61,23 @@ URL: url
   </div>
 
   <div id="JSON example" class="tabcontent">
+      <h3>List of examples </h3>
+      <ul>
+        <li>{{link:examples/HdBe-ContactPerson-01.xml}}</li>
+        <li>{{link:examples/HdBe-ContactPerson-02.xml}}</li>
+      </ul>
+    <h3>First example</h3>
       {{json:examples/HdBe-ContactPerson-01.xml}}
   </div>
   <div id="XML example" class="tabcontent">
+      <h3>List of examples </h3>
+      <ul>
+        <li>{{link:examples/HdBe-ContactPerson-01.xml}}</li>
+        <li>{{link:examples/HdBe-ContactPerson-02.xml}}</li>
+      </ul>
+    <h3>First example</h3>
       {{xml:examples/HdBe-ContactPerson-01.xml}}
+
   </div>
 
   <div id="Zib diff" class="tabcontent">
