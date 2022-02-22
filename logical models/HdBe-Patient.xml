@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="HdBe-Patient" />
+  <language value="en-US" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+02:00" />
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Patient" />
+  <name value="HdBePatient">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="HdBe-Patient" />
+      </extension>
+    </extension>
+  </name>
+  <title value="HdBe Patient" />
+  <status value="draft" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Healthdata.be (Sciensano)" />
+    <telecom>
+      <system value="email" />
+      <value value="fhir.healthdata@sciensano.be" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="**Concept**&#xD;&#xA;A person who receives medical, psychological, paramedical or nursing care. In some care settings, the term client or participant is used instead of the term patient.&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;Recording relevant information to identify the patient for administrative purposes and process support.&#xD;&#xA;&#xD;&#xA;**Evidence Base**&#xD;&#xA;Although the term Patient is not used in all care settings, it has been decided not to change the name to Person as the overall name for Patient, Client, Participant, etc. because the concept Person is broader than the concept referred to here. Healthprofessionals and contact persons are ultimately also Persons.&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;If both a name and an identification number are given, the name must match the name registered under that identification number, for verification purposes.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="**Concept**&#xD;&#xA;Een persoon die medische, psychische, paramedische of verpleegkundige zorg ontvangt. In sommige zorgsectoren wordt in plaats van de term patient de term client of deelnemer gebruikt.&#xD;&#xA;**Purpose**&#xD;&#xA;Het vastleggen van de relevante gegevens ten behoeve van identificatie van de patiënt, voor administratieve doeleinden en procesondersteuning.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Hoewel de term Patiënt niet in alle zorgsectoren gebruikt wordt, is er niet voor gekozen de naam te wijzigen in Persoon als overkoepelende aanduiding voor patiënt, cliënt, deelnemer, etc. omdat het begrip Persoon breder is dan het hier bedoelde concept. Zorgverleners en Contactpersonen zijn uiteindelijk ook personen.&#xD;&#xA;&#xD;&#xA;" />
+      </extension>
+    </extension>
+  </description>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="true" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/patient" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="patient">
+      <path value="patient" />
+      <short value="Patient">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Patient" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Root concept of the Patient information model. This root concept contains all data elements of the Patient information model.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+    </element>
+    <element id="patient.name_information">
+      <path value="patient.name_information" />
+      <short value="NameInformation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Naamgegevens" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Patient's full name.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De naamgegevens van de patiënt." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="HumanName" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NameInformation" />
+      </type>
+    </element>
+    <element id="patient.address_information">
+      <path value="patient.address_information" />
+      <short value="AddressInformation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Adresgegevens" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Patient's address information.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Adresgegevens van de patiënt." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Address" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AddressInformation" />
+      </type>
+    </element>
+    <element id="patient.contact_information">
+      <path value="patient.contact_information" />
+      <short value="ContactInformation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Contactgegevens" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Patient’s telephone number(s) or e-mail address(es).">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Telefoonnummer(s) of e-mailadres(sen) van de patiënt." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation" />
+      </type>
+    </element>
+    <element id="patient.patient_identification_number">
+      <path value="patient.patient_identification_number" />
+      <short value="PatientIdentificationNumber">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Identificatienummer" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The patient’s identification number. Typically, when an social security identification number (NISS-INSZ), is available it is used. A local identifier may be provided when this is desired.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Identificatienummer van de patiënt. Als een identificatienummer van de sociale zekerheid (INSZ) beschikbaar is, dan wordt het gebruikt. Indien gewenst kan een lokaal identificatienummer ook meegegeven worden." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Identifier" />
+      </type>
+    </element>
+    <element id="patient.date_of_birth">
+      <path value="patient.date_of_birth" />
+      <short value="DateOfBirth">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Geboortedatum" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Geboortedatum van de patiënt. Bij een patiënt is de geboortedatum verplicht. Vage datum (bv. alleen jaar) is toegestaan." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="patient.gender">
+      <path value="patient.gender" />
+      <short value="Gender">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Geslacht" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Patient’s administrative gender - the gender that the patient is considered to have for administration and record keeping purposes. Note that the gender might not match the biological sex as determined by genetics or the individual's preferred identification. The Observation resource can deal with specific sex or gender aspect of interest.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Administratief geslacht van de patiënt. Het geslacht dat geregistreerd staat voor administratieve en dossiervormende doeleinden." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="Gender codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/Gender" />
+      </binding>
+    </element>
+    <element id="patient.multiple_birth_indicator">
+      <path value="patient.multiple_birth_indicator" />
+      <short value="MultipleBirthIndicator">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="MeerlingIndicator" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="An indication stating whether the patient is of a multiple birth.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Indicator die aangeeft of de patiënt één van een meerling is." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="patient.multiple_birth_order">
+      <path value="patient.multiple_birth_order" />
+      <short value="MultipleBirthOrder" />
+      <definition value="An indication of the birth order in case the patient is of a multiple birth.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Indicator die de volgorde van geboorte aangeeft als de patiënt één van een meerling is." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="integer" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/integer" />
+      </type>
+    </element>
+    <element id="patient.death_indicator">
+      <path value="patient.death_indicator" />
+      <short value="DeathIndicator">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="OverlijdensIndicator" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="An indication stating whether the patient has died.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Indicator die aangeeft of de patiënt overleden is." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="patient.date_of_death">
+      <path value="patient.date_of_death" />
+      <short value="DateOfDeath">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="DatumOverlijden" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The date on which the patient died. A ‘vague’ date, such as only the year, is permitted.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De datum waarop de patiënt overleden is. Een vage datum, b.v. alleen jaartal is toegestaan." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

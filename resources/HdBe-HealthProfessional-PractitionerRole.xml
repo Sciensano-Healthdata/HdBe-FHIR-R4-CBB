@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="HdBe-HealthProfessional-PractitionerRole" />
+  <meta>
+    <lastUpdated value="2022-02-16T17:09:31.6397757+00:00" />
+  </meta>
+  <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole" />
+  <name value="HdBeHealthProfessionalPractitionerRole" />
+  <title value="HdBe HealthProfessional PractitionerRole" />
+  <status value="draft" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Healthdata.be (Sciensano)" />
+    <telecom>
+      <system value="email" />
+      <value value="fhir.healthdata@sciensano.be" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="The types of services and locations that a health professionals are able to provide for a HealthcareProvider." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-healthprofessional-v3.5-2020EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v3.5(2020EN)" />
+    <name value="zib HealthProfessional-v3.5(2020EN)" />
+  </mapping>
+  <mapping>
+    <identity value="zib-contactinformation-v1.2-2020EN" />
+    <uri value="https://zibs.nl/wiki/ContactInformation-v1.2(2020EN)" />
+    <name value="zib ContactInformation-v1.2(2020EN)" />
+  </mapping>
+  <mapping>
+    <identity value="HdBe-HealthProfessional" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional" />
+    <name value="HdBe logical model HealthProfessional" />
+  </mapping>
+  <mapping>
+    <identity value="HdBe-ContactInformation" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation" />
+    <name value="HdBe logical model ContactInformation" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="PractitionerRole" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="PractitionerRole">
+      <path value="PractitionerRole" />
+      <comment value="HealthProfessional is mapped for all but one concept (HealthProfessionalRole) to a profile on Practitioner (HdBe-HealthProfessional-Practitioner) and this PractitionerRole profile. The PractitionerRole resource covers the recording of the location and types of services that HealthProfessionals are able to provide for a HealthcareProvider. The concepts Specialty and HealthcareProvider are therefore mapped onto PractitionerRole.&#xD;&#xA;&#xD;&#xA;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;&#xD;&#xA;&#xD;&#xA;Although the concept name HealthProfessionalRole superficially seems to match the PractitionerRole resource, this is not the case based on the definition and values of that concept. In FHIR, the role that a HealthProfessional fulfills is captured as part as the clinical resource for that specific case, for example in the `Procedure.performer.role` element. This prevents the creation of duplicate HealthProfessional instances for each clinical situation where the HealthProfessional performs a different role in the process." />
+    </element>
+    <element id="PractitionerRole.practitioner">
+      <path value="PractitionerRole.practitioner" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner" />
+      </type>
+    </element>
+    <element id="PractitionerRole.organization">
+      <path value="PractitionerRole.organization" />
+      <short value="HealthcareProvider" />
+      <definition value="The organization the health professional works for." />
+      <comment value="A HealthcareProvider in CBB terms is primarily a location where care is provided, and so the CBB concept HealthcareProvider (NL-CM:17.1.6) would normally be fulfilled using a reference to a Location resource (profile HdBe-HealthcareProvider). However, this particular context refers to the organizational aspects of a HealthcareProvider rather than its physical location. Therefore, this concept is fulfilled using a reference to the Organization resource (profile HdBe-HealthcareProvider-Organization) and mapped onto `PractitionerRole.organization` instead of `PractitionerRole.location`." />
+      <alias value="Zorgaanbieder" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider-Organization" />
+      </type>
+      <mapping>
+        <identity value="zib-healthprofessional-v3.5-2020EN" />
+        <map value="NL-CM:17.1.6" />
+        <comment value="HealthcareProvider" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-HealthProfessional" />
+        <map value="healthcare_provider" />
+      </mapping>
+    </element>
+    <element id="PractitionerRole.specialty">
+      <path value="PractitionerRole.specialty" />
+      <mapping>
+        <identity value="HdBe-HealthProfessional" />
+        <map value="specialty" />
+      </mapping>
+    </element>
+    <element id="PractitionerRole.telecom">
+      <path value="PractitionerRole.telecom" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="ContactInformation" />
+      <definition value="Health professional’s telephone number(s) or e-mail address(es) that are specific to the role/location/service." />
+      <alias value="Contactgegevens" />
+      <mapping>
+        <identity value="zib-healthprofessional-v3.5-2020EN" />
+        <map value="NL-CM:17.1.8" />
+        <comment value="ContactInformation" />
+      </mapping>
+      <mapping>
+        <identity value="zib-contactinformation-v1.2-2020EN" />
+        <map value="NL-CM:20.6.1" />
+        <comment value="ContactInformation" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-HealthProfessional" />
+        <map value="contact_information" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-ContactInformation" />
+        <map value="contact_information" />
+      </mapping>
+    </element>
+    <element id="PractitionerRole.telecom:telephoneNumbers">
+      <path value="PractitionerRole.telecom" />
+      <sliceName value="telephoneNumbers" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers" />
+      </type>
+    </element>
+    <element id="PractitionerRole.telecom:emailAddresses">
+      <path value="PractitionerRole.telecom" />
+      <sliceName value="emailAddresses" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-EmailAddresses" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

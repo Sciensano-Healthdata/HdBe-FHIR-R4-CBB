@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelatedPerson xmlns="http://hl7.org/fhir"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/RelatedPerson.xsd">
+    <id value="HdBe-ContactPerson-02"/>
+    <meta>
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson" />
+    </meta>
+    <patient>
+        <reference value="Patient/HdBe-Patient-02" />
+        <type value="Patient" />
+        <display value="Johanna Petronella Maria (Jo) van Putten-van der Giessen" />
+    </patient>
+    <relationship>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="8601000146109" />
+            <display value="Holder of enduring power of attorney" />
+        </coding>
+    </relationship>
+    <relationship>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="66089001" />
+            <display value="Daughter" />
+        </coding>
+    </relationship>
+     <name>
+      <use value="official"/>
+      <text value="Ella van der Giessen"/>
+      <family value="van der Giessen">
+         <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix">
+            <valueString value="van der"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
+            <valueString value="Giessen"/>
+         </extension>
+      </family>
+      <given value="Ella">
+         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+            <valueCode value="BR"/>
+         </extension>
+      </given>
+   </name>
+   <name>
+      <use value="usual"/>
+      <given value="Ella"/>
+   </name>
+    <telecom>
+        <system value="phone" >
+            <extension url="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification">
+                <valueCodeableConcept>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+                    <code value="MC"/>
+                    <display value="Mobile Phone"/>
+                </coding>
+                </valueCodeableConcept>
+            </extension>
+         </system>
+        <value value="+322432713951" />
+        <use value="mobile" />
+    </telecom>
+</RelatedPerson>
+    

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PractitionerRole xmlns="http://hl7.org/fhir"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/PractitionerRole.xsd">
+    <id value="HdBe-HealthProfessional-PractitionerRole-01"/>
+    <meta>
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole"/>
+    </meta>
+    <practitioner>
+        <reference value="Practitioner/HdBe-HealthProfessional-Practitioner-01" />
+        <type value="Practitioner" />
+        <display value="Healthcare professional (person), E. Penninx" />
+    </practitioner>
+    <organization>
+        <reference value="Organization/HdBe-HealthcareProvider-Organization-01" />
+        <type value="Organization" />
+        <display value="HealthcareProvider (Organisation), GRAND HOPITAL DE CHARLEROI" />
+    </organization>
+    <specialty>
+        <coding>
+            <system value="http://snomed.info/sct"/> 
+            <code value="394582007"/> 
+            <display value="Dermatology"/> 
+        </coding>
+    </specialty>
+    <telecom>
+        <system value="phone">
+            <extension url="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification" >
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1" />
+                        <code value="LL" />
+                        <display value="Land Line" />
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+        </system>
+        <value value="+3204945729" />
+    </telecom>
+</PractitionerRole>

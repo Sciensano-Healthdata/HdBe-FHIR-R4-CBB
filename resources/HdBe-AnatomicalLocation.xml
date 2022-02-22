@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="HdBe-AnatomicalLocation" />
+  <meta>
+    <lastUpdated value="2022-02-15T13:53:18.2841656+00:00" />
+  </meta>
+  <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-AnatomicalLocation" />
+  <name value="HdBeAnatomicalLocation" />
+  <title value="HdBe AnatomicalLocation" />
+  <status value="draft" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Healthdata.be (Sciensano)" />
+    <telecom>
+      <system value="email" />
+      <value value="fhir.healthdata@sciensano.be" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An anatomical location specifies the location (e.g. foot) and laterality (e.g. links) of a bodypart." />
+  <purpose value="This CodeableConcept resource represents the CBB AnatomicalLocation.&#xD;&#xA;&#xD;&#xA;Profilers can use this profile in places where zib AnatomicalLocation is instantiated. In addition to using this profile, the binding should be set to ValueSet &quot;Location&quot; (&lt;https://fhir.healthdata.be/ValueSet/Location&gt;) with a binding strength of _required_." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-anatomicallocation-v1.0-2020EN" />
+    <uri value="https://zibs.nl/wiki/AnatomicalLocation-v1.0(2020EN)" />
+    <name value="zib AnatomicalLocation-v1.0(2020EN)" />
+  </mapping>
+  <mapping>
+    <identity value="HdBe-AnatomicalLocation" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation" />
+    <name value="HdBe logical model AnatomicalLocation" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="CodeableConcept" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="CodeableConcept">
+      <path value="CodeableConcept" />
+      <short value="Location" />
+      <definition value="Localisation on/in the body." />
+      <alias value="Locatie" />
+      <mapping>
+        <identity value="zib-anatomicallocation-v1.0-2020EN" />
+        <map value="NL-CM:20.7.4" />
+        <comment value="Location" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-AnatomicalLocation" />
+        <map value="location" />
+      </mapping>
+    </element>
+    <element id="CodeableConcept.extension">
+      <path value="CodeableConcept.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="CodeableConcept.extension:laterality">
+      <path value="CodeableConcept.extension" />
+      <sliceName value="laterality" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/ext-AnatomicalLocation.Laterality" />
+      </type>
+    </element>
+    <element id="CodeableConcept.extension:laterality.value[x]">
+      <path value="CodeableConcept.extension.value[x]" />
+      <mapping>
+        <identity value="zib-anatomicallocation-v1.0-2020EN" />
+        <map value="NL-CM:20.7.3" />
+        <comment value="Laterality" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-AnatomicalLocation" />
+        <map value="laterality" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

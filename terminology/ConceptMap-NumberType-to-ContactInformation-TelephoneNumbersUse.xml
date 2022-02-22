@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConceptMap xmlns="http://hl7.org/fhir">
+   <id value="NumberType-to-ContactInformation-TelephoneNumbersUse"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+        <valueBoolean value="true"/>
+    </extension>
+   <url value="https://fhir.healthdata.be/ConceptMap/NumberType-to-ContactInformation-TelephoneNumbersUse"/>
+   <name value="NumberType_to_ContactInformation_TelephoneNumbersUse"/>
+   <title value="NumberType_to_ContactInformation_TelephoneNumbersUse"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="Maps NumberType codes as found in hdBe logical model ContactInformation  to `ContactPoint.use` codes as found in FHIR R4"/>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <sourceCanonical value="https://fhir.healthdata.be/ValueSet/NumberType"/>
+   <targetCanonical value="https://fhir.healthdata.be/ValueSet/ContactInformation-TelephoneNumbersUse"/>
+   <group>
+        <source value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+        <target value="http://hl7.org/fhir/contact-point-use"/>
+        <element>
+            <code value="HP"/>
+            <target>
+                <code value="home"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="TMP"/>
+            <target>
+                <code value="temp"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="WP"/>
+            <target>
+                <code value="work"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+    </group>
+</ConceptMap>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConceptMap xmlns="http://hl7.org/fhir">
+    <id value="MaritalStatus-to-MaritalStatus"/>
+    <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+        <valueBoolean value="true"/>
+    </extension>
+    <url value="https://fhir.healthdata.be/ConceptMap/MaritalStatus-to-MaritalStatus"/>
+    <name value="MaritalStatus_to_MaritalStatus"/>
+    <title value="MaritalStatus_to_MaritalStatus"/>
+    <status value="draft"/>
+    <publisher value="Healthdata.be (Sciensano)"/>
+    <contact>
+        <name value="Healthdata.be (Sciensano)"/>
+        <telecom>
+            <system value="email"/>
+            <value value="fhir.healthdata@sciensano.be"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <description
+        value="Maps marital status codes as found in the CBB MaritalStatus to &lt;http://hl7.org/fhir/ValueSet/marital-status&gt; as found in `Patient.maritalStatus` in FHIR R4.&#xD;&#xA;&#xD;&#xA;"/>
+    <copyright
+        value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+    <sourceCanonical value="https://fhir.healthdata.be/ValueSet/MaritalStatus"/>
+    <targetCanonical value="http://hl7.org/fhir/ValueSet/marital-status"/>
+    <group>
+        <source value="http://snomed.info/sct"/>
+        <target value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+        <element>
+            <code value="125681006"/>
+            <display value="Single person"/>
+            <target>
+                <code value="U"/>
+                <display value="unmarried"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="87915002"/>
+            <display value="Married"/>
+            <target>
+                <code value="M"/>
+                <display value="Married"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="20295000"/>
+            <display value="Divorced"/>
+            <target>
+                <code value="D"/>
+                <display value="Divorced"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="33553000"/>
+            <display value="Widowed"/>
+            <target>
+                <code value="W"/>
+                <display value="Widowed"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://snomed.info/sct"/>
+        <target value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+        <element>
+            <code value="160504008"/>
+            <display value="Marital state unknown"/>
+            <target>
+                <code value="unknown"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+    </group>
+</ConceptMap>

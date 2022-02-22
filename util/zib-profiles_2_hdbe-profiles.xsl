@@ -313,7 +313,7 @@
                 <xsl:when test="f:sourceCanonical[starts-with(@value,'http://decor.nictiz.nl/fhir/ValueSet/')]">
                     <xsl:variable name="valueSetName" select="substring-before($id,'-to-')"/>
                     <sourceCanonical>
-                        <xsl:attribute name="value" select="concat($urlBase,$urlConceptMap,$valueSetName)"/>
+                        <xsl:attribute name="value" select="concat($urlBase,$urlValueSet,$valueSetName)"/>
                     </sourceCanonical>
                 </xsl:when>
             </xsl:choose>
