@@ -11,7 +11,7 @@ Status: status,
 URL: url
 ```
 
-## HdBe-LaboratoryTestResult
+
 
 @```
 from
@@ -23,6 +23,9 @@ select
 ```
 
 
+
+
+## HdBe-LaboratoryTestResult
 <div>
   <div class="tab">
     <button class="tablinks active" onclick="openTab(event, 'Snapshot view')">Snapshot view</button>
@@ -67,7 +70,7 @@ select
       <h3>List of examples </h3>
       <ul>
         <li>{{link:examples/HdBe-LaboratoryTestResult-01.xml}}</li>
-        <li>{{link:examples/HdBe-LaboratoryTestResult-02.xml}}</li>
+        <!--<li>{{link:examples/HdBe-LaboratoryTestResult-02.xml}}</li> TO ADD-->
       </ul>
     <h3>First example</h3>
       {{json:examples/HdBe-LaboratoryTestResult-01.xml}}
@@ -76,10 +79,10 @@ select
       <h3>List of examples </h3>
       <ul>
         <li>{{link:examples/HdBe-LaboratoryTestResult-01.xml}}</li>
-        <li>{{link:examples/HdBe-LaboratoryTestResult-02.xml}}</li>
+        <!--<li>{{link:examples/HdBe-LaboratoryTestResult-02.xml}}</li> TO ADD-->
       </ul>
     <h3>First example</h3>
-      {{json:examples/HdBe-LaboratoryTestResult-01.xml}}
+      {{xml:examples/HdBe-LaboratoryTestResult-01.xml}}
   </div>
 
   <div id="Zib diff" class="tabcontent">
@@ -148,7 +151,7 @@ select
         <li>{{link:examples/HdBe-LaboratoryTestResult.Specimen-02.xml}}</li>
       </ul>
     <h3>First example</h3>
-      {{json:examples/HdBe-LaboratoryTestResult.Specimen-01.xml}}
+      {{xml:examples/HdBe-LaboratoryTestResult.Specimen-01.xml}}
   </div>
 
   <div id="Zib diff2" class="tabcontent">
