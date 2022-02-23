@@ -101,7 +101,7 @@ select
 @```
 from
 	StructureDefinition
-	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult'
+	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen'
 select
 	Instructions: differential.element[0].definition
 
