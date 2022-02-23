@@ -170,6 +170,7 @@
       <short value="PatientIdentificationNumber" />
       <definition value="The patient’s identification number. Typically, when an social security identification number (NISS-INSZ), is available it is used. A local identifier may be provided when this is desired." />
       <alias value="Identificatienummer" />
+      <max value="0" />
       <mapping>
         <identity value="HdBe-Patient" />
         <map value="patient_identification_number" />
@@ -192,6 +193,7 @@
       <path value="Patient.name" />
       <definition value="Patient's full name.&#xD;&#xA;The cardinality differs from the CBB to allow including several name elements with a different name.use each." />
       <comment value="The cardinality mismatch between the CBB (0..1) and FHIR (0..*) is explained by the presence of the HumanName.use element. A full name can be broken into parts using multiple instances of HumanName that have its own value for use." />
+      <max value="0" />
       <type>
         <code value="HumanName" />
         <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation" />
@@ -205,6 +207,16 @@
         <map value="NL-CM:0.1.6" />
         <comment value="NameInformation" />
       </mapping>
+    </element>
+    <element id="Patient.name.given">
+      <path value="Patient.name.given" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="extension('http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier').value" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Patient.telecom">
       <path value="Patient.telecom" />
@@ -255,9 +267,9 @@
       <short value="Gender" />
       <definition value="Patient’s administrative gender. The gender that that the patient is considered to have for administration and record keeping purposes. Note that the gender might not match the biological sex as determined by genetics or the individual's preferred identification. The Observation resource can deal with specific sex or gender aspect of interest." />
       <alias value="Geslacht" />
+      <max value="0" />
       <binding>
         <strength value="required" />
-        <description value="Use ConceptMap 'GenderCodelijst-to-AdministrativeGender' to translate CBB terminology to profile terminology in ValueSet 'AdministrativeGender'" />
         <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
             <valueCanonical value="https://fhir.healthdata.be/ConceptMap/Gender-to-AdministrativeGender" />
@@ -602,6 +614,16 @@
         <identity value="hdbe-ContactInformation" />
         <map value="name_information" />
       </mapping>
+    </element>
+    <element id="Patient.contact.name.given">
+      <path value="Patient.contact.name.given" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="extension('http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier').value" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Patient.contact.telecom">
       <path value="Patient.contact.telecom" />
