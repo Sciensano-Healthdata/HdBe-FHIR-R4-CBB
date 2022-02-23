@@ -17,6 +17,7 @@ URL: url
 
 <br/><br/> 
 
+## HdBe-LaboratoryTestResult
 
 @```
 from
@@ -27,7 +28,6 @@ select
 
 ```
 
-## HdBe-LaboratoryTestResult
 <div>
   <div class="tab">
     <button class="tablinks active" onclick="openTab(event, 'Snapshot view')">Snapshot view</button>
@@ -96,6 +96,15 @@ select
 <br/><br/> 
 
 ## HdBe-LaboratoryTestResult.Specimen
+
+@```
+from
+	StructureDefinition
+	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen'
+select
+	Instructions: differential.element[0].definition
+
+```
 
 <div>
   <div class="tab">
