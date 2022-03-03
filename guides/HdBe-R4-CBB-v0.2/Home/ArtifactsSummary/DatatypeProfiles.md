@@ -8,8 +8,6 @@
 	Title: title, 
 	Description: description, 
 	Status: status, 
-	Canonical_URL: url,
-	Kind: kind,
-	Type: type
+	Canonical_URL: url
 	order by Name
 ```
