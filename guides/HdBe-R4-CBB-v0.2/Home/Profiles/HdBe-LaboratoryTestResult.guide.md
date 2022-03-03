@@ -17,6 +17,7 @@ URL: url
 
 <br/><br/> 
 
+
 ## HdBe-LaboratoryTestResult
 
 @```

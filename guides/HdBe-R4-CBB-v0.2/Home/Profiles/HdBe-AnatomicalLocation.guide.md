@@ -70,7 +70,7 @@ URL: url
 
 @```
 from StructureDefinition
-where url in ( 'https://fhir.healthdata.be/StructureDefinition/HdBe-AnatomicalLocation' | 'https://fhir.healthdata.be/StructureDefinition/ext-AnatomicalLocation.Laterality' )
+where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-AnatomicalLocation'
 
 for differential.element
 select

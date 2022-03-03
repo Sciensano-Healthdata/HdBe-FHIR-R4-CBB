@@ -3,7 +3,7 @@
 
 @```
 	from StructureDefinition
-	where type != 'Extension' and kind != 'logical' and kind ='complex-type'
+	where type != 'Extension' and kind != 'logical' and kind !='complex-type'
 	select 
 	Title: title, 
 	Description: description, 
