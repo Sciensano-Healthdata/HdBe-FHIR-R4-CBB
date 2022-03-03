@@ -50,7 +50,7 @@ The basis for most clinical buildig blocks are formed by the Dutch 'zibs' ('Zorg
 
 #### Healthdata.be CBB <a name="healthdatacbb"></a>
 The zibs are used as a starting point to create a clinical building block that represents the Belgium and healthdata.be context. Unfortunately, a technical dependency is not possible because many of the required changes for the Belgium context are not compatible with the zibs which primarily describe use within the Dutch Realm.
-Changes to the zib are recorded in a [changelog file](#changelog) for every CBB. Substantial changes are discussed with Nictiz and logged in their issue management system and logged in the changelog.
+Changes to the zib are recorded in a [changelog file](#changelog) for every CBB. Dutch specific text is removed or rewritten at the developers interpretation. Mentions of zibs are replaced with CBBs. Substantial changes are discussed with Nictiz and logged in their issue management system and logged in the changelog.
 The FHIR conformance resources will be created based on the healthdata.be CBBs.
 
 #### Use case specific models<a name="usecasespecificmodels"></a>
@@ -80,6 +80,8 @@ A specific element can then be mapped using:
     </mapping>
 </element>
 ```
+
+Mappings should only be added. There is no need to replace existing mappings as they still are valid mappings, and this provides the relation between the zib and HdBe mappings.
 
 ## Changelog of changes to zibs and zib-profiles<a name="changelog"></a>
 Every CBB logical model and profile will have an accompanying documentation file that contains a changelog/differential to the zib or zib-profile. The documentation file has the same name as the CBB-profile and ends with `.doc.md`. For example `HdBe-Patient.xml` <-> `HdBe-Patient.doc.md`.
@@ -176,11 +178,13 @@ Examples are not conformance resources and lack the `.url`, `.name` and `.title`
 - extensions
     - `resources/[id].xml`
 - valuesets
-    - `terminology/ValueSet-[id]`
+    - `terminology/ValueSet-[id].xml`
 - codesystems
-    - `terminology/CodeSystem-[name]`    
-- conceptsmaps
-    - `terminology/ConceptMaps-[id]`
+    - `terminology/CodeSystem-[name].xml`    
+- conceptmaps
+    - `terminology/ConceptMaps-[id].xml`
+- namingsystems
+    - `terminology/NamingSystem-[name].xml`  
 - examples
     - `examples/[profile id]-[serial number, two digits].xml`
 ##	Metadata <a name="metadata"></a>
@@ -232,7 +236,7 @@ For some concepts within a zib, examples are available in the export to FHIR log
 
 However, the quality of these examples is poor which is likely the result of storage as free text per concept within ART-DECOR. The `ElementDefinition.example` should ideally be using the concept's datatype. Often the example value of a coded concept is mapped to a `CodeableConcept.text` with the concept's DefinitionCode to `CodeadbleConcept.coding.` This might be very confusing for the readers as this does not represent how such a concept will be exchanged. Therefore, `ElementDefinition.example` is not used with the pre-populated values for the zib export. 
 
-The method of providing examples for the logical CBBs needs to be investigated. This might potentially be done by adding example values manually per concept or providing examples of a CBBs in table format in the CBBs implementation guide.  
+The method of providing examples for the logical CBBs can be improved. Currently this is done by adding example values manually per concept in separate files so it shows in table format in the CBBs implementation guide.  
 
 ##	Miscellaneous <a name="miscellaneous"></a>
 To add.
