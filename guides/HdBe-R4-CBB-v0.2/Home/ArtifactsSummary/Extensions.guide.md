@@ -4,10 +4,10 @@
 	from StructureDefinition
 	where type = 'Extension'
 	select 
-	Title: title, 
-	Description: description, 
-	Status: status, 
+	Name: title.substring((4 + title.indexOf('ext- '))),
 	Context: context.expression, 
-	Canonical_URL: url
-	order by Title
+	Description: description, 
+	Canonical_URL: url,
+	Status: status
+	order by Name
 ```

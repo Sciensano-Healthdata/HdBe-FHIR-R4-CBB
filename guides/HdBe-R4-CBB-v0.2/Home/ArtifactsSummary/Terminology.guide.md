@@ -5,7 +5,7 @@
 	select 
 	Name: name, 
 	Description: description, 
-	Status: status, 
-	Canonical_URL: url
+	Canonical_URL: url,
+	Status: status
 	order by Name
 ```
