@@ -5,9 +5,10 @@
 	from StructureDefinition
 	where type != 'Extension' and kind != 'logical' and kind ='complex-type'
 	select 
-	Title: title, 
+	Name: title.substring((5 + title.indexOf('HdBe- '))), 
+	DataType: type,
 	Description: description, 
-	Status: status, 
-	Canonical_URL: url
+	Canonical_URL: url,
+	Status: status
 	order by Name
 ```

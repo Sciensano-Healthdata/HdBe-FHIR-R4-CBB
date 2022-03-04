@@ -10,5 +10,5 @@
 	Description: description, 
 	Canonical_URL: url,
 	Status: status 
-	order by Title
+	order by Name
 ```
