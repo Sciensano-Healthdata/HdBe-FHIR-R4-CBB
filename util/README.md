@@ -34,5 +34,3 @@ Converts Nictiz's zib-profiles in R4 for the zib 2020 release (StructureDefiniti
 
 > **_Note:_** executing the zib-converter.bat overwrites the existing output, hence every version needs to be in it's own folder. The output is meant as starting point for creation of the definitive hdbe resources. After manual edits have been made, newer version of the output can not be automatically copied because this will loose the manual work. A diff tool can be used to incorporate the changes from newer output versions to the definitive hdbe resources.  
 
-## qaAutomation
-This folder contains the pieces to run (automated) QA tools. These tools may eventually also be configured in Github actions (configured in .github/actions/*.yml from the root of this repo) but can also be used manually. 
