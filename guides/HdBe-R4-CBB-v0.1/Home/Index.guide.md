@@ -15,3 +15,9 @@ This guide contains clinical building blocks (CBBs) and their related HL7 FHIR R
 | {{pagelink:guides/HdBe-R4-CBB-v0.1/Home/LogicalModels/HdBe-NameInformation.guide.md, text:NameInformation}} | See Patient, ContactPerson, HealthProfessional, HealthcareProvider |
 | {{pagelink:guides/HdBe-R4-CBB-v0.1/Home/LogicalModels/HdBe-Nationality.guide.md, text:Nationality}} | See Patient |
 | {{pagelink:guides/HdBe-R4-CBB-v0.1/Home/LogicalModels/HdBe-Patient.guide.md, text:Patient}} | {{pagelink:guides/HdBe-R4-CBB-v0.1/Home/Profiles/HdBe-Patient.guide.md, text:Patient}} |
+
+
+<!--|{{pagelink:guides/HdBe-R4-CBB-v0.1/Home/LogicalModels/[CBB-ID].guide.md, text:[CBB-name]}} | {{pagelink:guides/HdBe-R4-CBB-v0.1/Home/Profiles/[CBB-ID].guide.md, text:[CBB-name]}} | -->
+
+
+
