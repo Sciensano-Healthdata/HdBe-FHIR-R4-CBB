@@ -27,8 +27,7 @@ select
      <button class="tablinks" onclick="openTab(event, 'Hybrid view')">Hybrid view</button>
      <button class="tablinks" onclick="openTab(event, 'Diff view')">Diff view</button>
      <button class="tablinks" onclick="openTab(event, 'Mapping')">Mapping</button>
-     <button class="tablinks" onclick="openTab(event, 'JSON example')">JSON example</button>
-     <button class="tablinks" onclick="openTab(event, 'XML example')">XML example</button>
+     <button class="tablinks" onclick="openTab(event, 'Examples')">Examples</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff')">Zib-profile diff</button>
   </div>
 
@@ -61,28 +60,13 @@ select
     </div>
   </div>
 
-  <div id="JSON example" class="tabcontent">
-    <h3>List of examples </h3>
+  <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{link:examples/HdBe-HealthcareProvider-01.xml}}</li>
-        <li>{{link:examples/HdBe-HealthcareProvider-02.xml}}</li>
-        <li>{{link:examples/HdBe-HealthcareProvider-03.xml}}</li>
-        <li>{{link:examples/HdBe-HealthcareProvider-04.xml}}</li>
+        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HealthcareProvider-01.guide.md}}</li>
+        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HealthcareProvider-02.guide.md}}</li>
+        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HealthcareProvider-03.guide.md}}</li>
+        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HealthcareProvider-04.guide.md}}</li>
       </ul>
-    <h3>First example</h3>
-      {{json:examples/HdBe-HealthcareProvider-01.xml}}
-  </div>
-
-  <div id="XML example" class="tabcontent">
-    <h3>List of examples </h3>
-      <ul>
-        <li>{{link:examples/HdBe-HealthcareProvider-01.xml}}</li>
-        <li>{{link:examples/HdBe-HealthcareProvider-02.xml}}</li>
-        <li>{{link:examples/HdBe-HealthcareProvider-03.xml}}</li>
-        <li>{{link:examples/HdBe-HealthcareProvider-04.xml}}</li>
-      </ul>
-    <h3>First example</h3>
-      {{xml:examples/HdBe-HealthcareProvider-01.xml}}
   </div>
 
   <div id="Zib diff" class="tabcontent">
@@ -109,8 +93,7 @@ select
      <button class="tablinks" onclick="openTab(event, 'Hybrid view2')">Hybrid view</button>
      <button class="tablinks" onclick="openTab(event, 'Diff view2')">Diff view</button>
      <button class="tablinks" onclick="openTab(event, 'Mapping2')">Mapping</button>
-     <button class="tablinks" onclick="openTab(event, 'JSON example2')">JSON example</button>
-     <button class="tablinks" onclick="openTab(event, 'XML example2')">XML example</button>
+     <button class="tablinks" onclick="openTab(event, 'Examples2')">Examples</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff2')">Zib-profile diff</button>
   </div>
 
@@ -143,23 +126,11 @@ select
     </div>
   </div>
 
-  <div id="JSON example2" class="tabcontent">
-  <h3>List of examples </h3>
+  <div id="Examples2" class="tabcontent">
       <ul>
-        <li>{{link:examples/HdBe-HealthcareProvider-Organization-01.xml}}</li>
-        <li>{{link:examples/HdBe-HealthcareProvider-Organization-02.xml}}</li>
+        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HealthcareProvider-Organization-01.guide.md}}</li>
+        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HealthcareProvider-Organization-02.guide.md}}</li>
       </ul>
-    <h3>First example</h3>
-      {{json:examples/HdBe-HealthcareProvider-Organization-01.xml}}
-  </div>
-  <div id="XML example2" class="tabcontent">
-    <h3>List of examples </h3>
-      <ul>
-        <li>{{link:examples/HdBe-HealthcareProvider-Organization-01.xml}}</li>
-        <li>{{link:examples/HdBe-HealthcareProvider-Organization-02.xml}}</li>
-      </ul>
-    <h3>First example</h3>
-      {{xml:examples/HdBe-HealthcareProvider-Organization-01.xml}}
   </div>
 
   <div id="Zib diff2" class="tabcontent">

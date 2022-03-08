@@ -27,8 +27,7 @@ select
     <button class="tablinks" onclick="openTab(event, 'Hybrid view')">Hybrid view</button>
     <button class="tablinks" onclick="openTab(event, 'Diff view')">Diff view</button>
     <button class="tablinks" onclick="openTab(event, 'Mapping')">Mapping</button>
-    <button class="tablinks" onclick="openTab(event, 'JSON example')">JSON example</button>
-    <button class="tablinks" onclick="openTab(event, 'XML example')">XML example</button>
+     <button class="tablinks" onclick="openTab(event, 'Examples')">Examples</button>
     <button class="tablinks" onclick="openTab(event, 'Zib diff')">Zib-profile diff</button>
   </div>
 
@@ -61,11 +60,8 @@ select
     </div>
   </div>
 
-  <div id="JSON example" class="tabcontent">
-      <p> HdBe-ContactInformation-EmailAddresses is a datatype profile and can therefore not have an example of its own. Rather, an example is provided within the example of the HdBe-profile(s) that use this datatype profile. </p>
-  </div>
-  <div id="XML example" class="tabcontent">
-      <p> HdBe-ContactInformation-EmailAddresses is a datatype profile and can therefore not have an example of its own. Rather, an example is provided within the example of the HdBe-profile(s) that use this datatype profile. </p>
+  <div id="Examples" class="tabcontent">
+      <p> HdBe-NameInformation is a datatype profile and can therefore not have an example of its own. Rather, an example is provided within the example of the HdBe-profile(s) that use this datatype profile. </p>
   </div>
 
   <div id="Zib diff" class="tabcontent">
