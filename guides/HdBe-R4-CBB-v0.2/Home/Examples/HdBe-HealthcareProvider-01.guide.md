@@ -1,4 +1,4 @@
-# {{page-title}} example
+# {{page-title.xml}} example
 
 <div>
   <div class="tab">
@@ -9,16 +9,16 @@
   </div>
 
   <div id="JSON example" class="tabcontent" style="display:block">
-      {{json:examples/HdBe-HealthcareProvider-01}}
+      {{json:examples/HdBe-HealthcareProvider-01.xml}}
   </div>
   <div id="XML example" class="tabcontent">
-      {{xml:examples/HdBe-HealthcareProvider-01}}
+      {{xml:examples/HdBe-HealthcareProvider-01.xml}}
   </div>
   <div id="Tree view" class="tabcontent">
-      {{tree:examples/HdBe-HealthcareProvider-01}}
+      {{tree:examples/HdBe-HealthcareProvider-01.xml}}
   </div>
   <div id="Table view" class="tabcontent">
-      {{table:examples/HdBe-HealthcareProvider-01}}
+      {{table:examples/HdBe-HealthcareProvider-01.xml}}
   </div>
 
 </div>
