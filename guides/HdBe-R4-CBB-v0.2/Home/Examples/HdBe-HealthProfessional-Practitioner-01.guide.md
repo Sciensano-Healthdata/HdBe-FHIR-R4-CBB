@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Practitioner xmlns="http://hl7.org/fhir"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/Practitioner.xsd">
+    <id value="HdBe-HealthProfessional-Practitioner-01"/>
+    <meta>
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner"/>
+    </meta>
+    <identifier>
+        <system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi" />
+        <value value="10079938" />
+    </identifier>
+    <name>
+        <use value="official" />
+        <text value="Enrico Penninx" />
+        <family value="Penninx">
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                <valueString value="Penninx" />
+            </extension>
+        </family>
+        <given value="Enrico">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                <valueCode value="BR" />
+            </extension>
+        </given>
+    </name>
+    <telecom>
+        <system value="phone">
+            <extension url="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification" >
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1" />
+                        <code value="LL" />
+                        <display value="Land Line" />
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+        </system>
+        <value value="+32488171462" />
+    </telecom>
+    <telecom>
+        <system value="email" />
+        <value value="EnricoPenninx@hospital.be" />
+        <use value="work" />
+    </telecom>
+    <address>
+        <extension url="http://hl7.org/fhir/StructureDefinition/language">
+            <valueCode value="nl" />
+        </extension>
+        <extension url="https://fhir.healthdata.be/StructureDefinition/ext-AddressInformation.AddressType">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse" />
+                    <code value="HP" />
+                    <display value="Primary Home" />
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <use value="home" />
+        <type value="both" />
+        <line value="Blekersdijk 264">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Blekersdijk" />
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="264" />
+            </extension>
+        </line>
+        <city value="Doel" />
+        <postalCode value="9130" />
+        <country value="Belgium">
+            <extension url="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:iso:std:iso:3166" />
+                        <code value="BE" />
+                        <display value="Belgium" />
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+        </country>
+    </address>
+    <gender value="male" />    
+</Practitioner>
