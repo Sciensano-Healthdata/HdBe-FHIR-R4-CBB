@@ -25,8 +25,7 @@ This Patient profile contains mappings to the following CBBs:
      <button class="tablinks" onclick="openTab(event, 'Hybrid view')">Hybrid view</button>
      <button class="tablinks" onclick="openTab(event, 'Diff view')">Diff view</button>
      <button class="tablinks" onclick="openTab(event, 'Mapping')">Mapping</button>
-     <button class="tablinks" onclick="openTab(event, 'JSON example')">JSON example</button>
-     <button class="tablinks" onclick="openTab(event, 'XML example')">XML example</button>
+     <button class="tablinks" onclick="openTab(event, 'Examples')">Examples</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff')">Zib-profile diff</button>
   </div>
 
@@ -60,25 +59,11 @@ This Patient profile contains mappings to the following CBBs:
     </div>
   </div>
 
-  <div id="JSON example" class="tabcontent">
-      <h3>List of examples </h3>
+  <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{link:examples/HdBe-Patient-01.xml}}</li>
-        <li>{{link:examples/HdBe-Patient-02.xml}}</li>
+        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HdBe-Patient-01.guide.md}}</li>
+        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HdBe-Patient-02.guide.md}}</li>
       </ul>
-    <h3>First example</h3>
-      {{json:examples/HdBe-Patient-01.xml}}
-
-  </div>
-  <div id="XML example" class="tabcontent">
-      <h3>List of examples </h3>
-      <ul>
-        <li>{{link:examples/HdBe-Patient-01.xml}}</li>
-        <li>{{link:examples/HdBe-Patient-02.xml}}</li>
-      </ul>
-    <h3>First example</h3>
-      {{xml:examples/HdBe-Patient-01.xml}}
-
   </div>
 
   <div id="Zib diff" class="tabcontent">
