@@ -1,4 +1,4 @@
-# {{page-title.xml}} example
+# {{page-title}} example
 
 <div>
   <div class="tab">

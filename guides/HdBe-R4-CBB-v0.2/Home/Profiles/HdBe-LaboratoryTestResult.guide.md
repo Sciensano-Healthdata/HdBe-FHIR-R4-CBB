@@ -35,8 +35,7 @@ select
     <button class="tablinks" onclick="openTab(event, 'Hybrid view')">Hybrid view</button>
     <button class="tablinks" onclick="openTab(event, 'Diff view')">Diff view</button>
     <button class="tablinks" onclick="openTab(event, 'Mapping')">Mapping</button>
-    <button class="tablinks" onclick="openTab(event, 'JSON example')">JSON example</button>
-    <button class="tablinks" onclick="openTab(event, 'XML example')">XML example</button>
+    <button class="tablinks" onclick="openTab(event, 'Examples')">Examples</button>
     <button class="tablinks" onclick="openTab(event, 'Zib diff')">Zib-profile diff</button>
   </div>
 
@@ -69,24 +68,12 @@ select
     </div>
   </div>
 
-  <div id="JSON example" class="tabcontent">
-      <h3>List of examples </h3>
+  <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{link:examples/HdBe-LaboratoryTestResult-01.xml}}</li>
-        <!--<li>{{link:examples/HdBe-LaboratoryTestResult-02.xml}}</li> TO ADD-->
+        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HdBe-LaboratoryTestResult-01.guide.md}}</li>
       </ul>
-    <h3>First example</h3>
-      {{json:examples/HdBe-LaboratoryTestResult-01.xml}}
   </div>
-  <div id="XML example" class="tabcontent">
-      <h3>List of examples </h3>
-      <ul>
-        <li>{{link:examples/HdBe-LaboratoryTestResult-01.xml}}</li>
-        <!--<li>{{link:examples/HdBe-LaboratoryTestResult-02.xml}}</li> TO ADD-->
-      </ul>
-    <h3>First example</h3>
-      {{xml:examples/HdBe-LaboratoryTestResult-01.xml}}
-  </div>
+ 
 
   <div id="Zib diff" class="tabcontent">
       {{render:resources/HdBe-LaboratoryTestResult.doc.md}}
@@ -113,8 +100,7 @@ select
      <button class="tablinks" onclick="openTab(event, 'Hybrid view2')">Hybrid view</button>
      <button class="tablinks" onclick="openTab(event, 'Diff view2')">Diff view</button>
      <button class="tablinks" onclick="openTab(event, 'Mapping2')">Mapping</button>
-     <button class="tablinks" onclick="openTab(event, 'JSON example2')">JSON example</button>
-     <button class="tablinks" onclick="openTab(event, 'XML example2')">XML example</button>
+     <button class="tablinks" onclick="openTab(event, 'Examples2')">Examples</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff2')">Zib-profile diff</button>
   </div>
 
@@ -147,23 +133,11 @@ select
     </div>
   </div>
 
-  <div id="JSON example2" class="tabcontent">
-      <h3>List of examples </h3>
+  <div id="Examples2" class="tabcontent">
       <ul>
-        <li>{{link:examples/HdBe-LaboratoryTestResult.Specimen-01.xml}}</li>
-        <li>{{link:examples/HdBe-LaboratoryTestResult.Specimen-02.xml}}</li>
+        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HdBe-LaboratoryTestResult.Specimen-01.guide.md}}</li>
+        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HdBe-LaboratoryTestResult.Specimen-02.guide.md}}</li>
       </ul>
-    <h3>First example</h3>
-      {{json:examples/HdBe-LaboratoryTestResult.Specimen-01.xml}}
-  </div>
-  <div id="XML example2" class="tabcontent">
-      <h3>List of examples </h3>
-      <ul>
-        <li>{{link:examples/HdBe-LaboratoryTestResult.Specimen-01.xml}}</li>
-        <li>{{link:examples/HdBe-LaboratoryTestResult.Specimen-02.xml}}</li>
-      </ul>
-    <h3>First example</h3>
-      {{xml:examples/HdBe-LaboratoryTestResult.Specimen-01.xml}}
   </div>
 
   <div id="Zib diff2" class="tabcontent">
