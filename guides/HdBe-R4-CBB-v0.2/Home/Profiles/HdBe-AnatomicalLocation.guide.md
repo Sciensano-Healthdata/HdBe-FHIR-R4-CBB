@@ -37,7 +37,7 @@ URL: url
   </div>
 
   <div id="Mapping" class="tabcontent">      
-      <h3> Mapping FHIR profile to logical model</h3>
+      <h3>Mapping FHIR profile to CBB</h3>
       <div>
       @```
       from StructureDefinition
