@@ -42,4 +42,4 @@ The basic requirements for using references in this context are:
 - A short description of the target resource SHOULD be included using the `.display` element.
 
 ## Narrative
-HdBe-profiles do not require the usage of `Resource.text` unless specified by a specific profile or profile page. However, any profile MAY include a human-readable narrative that contains a summary of the resource and may be used to represent the content of the resource to a human.
+HdBe-profiles do not require the usage of `Resource.text` unless specified otherwise. Any resources MAY, however, include a human-readable narrative that contains a summary of the resource and may be used to represent the content of the resource to a human.
