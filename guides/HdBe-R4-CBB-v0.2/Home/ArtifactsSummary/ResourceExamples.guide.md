@@ -15,3 +15,4 @@
 - {{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HdBe-LaboratoryTestResult.Specimen-02.guide.md}}
 - {{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HdBe-Patient-01.guide.md}}
 - {{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HdBe-Patient-02.guide.md}}
+<!-- - {{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/[CBB-ID]-[number].guide.md}} --> 
