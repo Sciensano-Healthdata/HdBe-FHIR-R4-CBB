@@ -45,13 +45,9 @@ As of now, Quality Assurance on Simplifier is still in Beta and is not as sensit
 
 ## Quality Assurance outcomes
 
-Depending on what Quality Assurence rules are chosen, there could be various results. Errors or warnings usually contain the file name and an explanation of the issue. 
+Depending on what Quality Assurance rules are chosen, there could be various results. Errors or warnings usually contain the file name and an explanation of the issue. 
 
-
-To expand.
-
-
-
+To expand when this will be used more.
 
 
 ## How to set up Quality Assurance
