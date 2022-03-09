@@ -131,24 +131,6 @@
             }
         </script>
 
-        <!-- Ensures footer is at the bottom of the page -->
-        <script>
-            $(function () {
-                updateFooterPosition();
-            });
-
-            $(window).resize(function () {
-                updateFooterPosition();
-            });
-
-            function updateFooterPosition() {
-                var bottomOfFooter = $('footer').offset().top + $('footer').outerHeight(true);
-                var heightShortage = $(document).height() - bottomOfFooter;
-                if (heightShortage < 0) heightShortage = 0;
-                $('footer').css('margin-top', heightShortage);
-            }
-        </script>
-
     </body>
 
 </html>
