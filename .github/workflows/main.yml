@@ -53,7 +53,9 @@ jobs:
 #          SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
 
       - name: Remove .md files from to execute Java validation
-        run: ./.github/scripts/GetValidationFiles.sh
+        run: |
+           chmod +x ./.github/scripts/GetValidationFiles.sh
+           .github/scripts/GetValidationFiles.sh
 
       - name: Java validation
         uses: FirelyTeam/firely-terminal-pipeline@v0.3.2
