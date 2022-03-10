@@ -7,8 +7,12 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main, QA, integration ]
+    paths-ignore:
+      - '**.md'
   pull_request:
     branches: [ main ]
+  paths-ignore:
+      - '**.md'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -48,16 +52,19 @@ jobs:
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
 
-#      - name: Java validation
-#        uses: FirelyTeam/firely-terminal-pipeline@v0.3.2
-#        with:
-#          PATH_TO_CONFORMANCE_RESOURCES: resources terminology
-#          PATH_TO_EXAMPLES: examples
-#          PATH_TO_QUALITY_CONTROL_RULES: qa-validate-all
-#          DOTNET_VALIDATION_ENABLED: FALSE
-#          JAVA_VALIDATION_ENABLED: TRUE
-#          JAVA_VALIDATION_OPTIONS: /HdBe-*.xml
-#          OUTPUT_FORMAT: RAW
-#          SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
-#          SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
+      - name: Remove .md files from to execute Java validation
+        run: ./scripts/GetValidationFiles.sh
+
+      - name: Java validation
+        uses: FirelyTeam/firely-terminal-pipeline@v0.3.2
+        with:
+          PATH_TO_CONFORMANCE_RESOURCES: ValidationFiles/resources ValidationFiles/terminology
+          PATH_TO_EXAMPLES: ValidationFiles/examples
+          PATH_TO_QUALITY_CONTROL_RULES: qa-validate-all
+          DOTNET_VALIDATION_ENABLED: FALSE
+          JAVA_VALIDATION_ENABLED: TRUE
+          JAVA_VALIDATION_OPTIONS: -output ./validation-output.xml
+          OUTPUT_FORMAT: RAW
+          SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
+          SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
 
