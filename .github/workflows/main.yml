@@ -69,23 +69,21 @@ jobs:
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
 
-      - name: Java validation of examples
-        uses: FirelyTeam/firely-terminal-pipeline@v0.3.2
-        with:
-          PATH_TO_CONFORMANCE_RESOURCES: ValidationFiles/resources ValidationFiles/terminology
-          PATH_TO_EXAMPLES: ValidationFiles/examples
-          PATH_TO_QUALITY_CONTROL_RULES: qa-validate-examples
-          DOTNET_VALIDATION_ENABLED: FALSE
-          JAVA_VALIDATION_ENABLED: TRUE
-          JAVA_VALIDATION_OPTIONS: -html-output ./validation-output-examples.html
-          OUTPUT_FORMAT: RAW
-          SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
-          SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
+#      - name: Java validation of examples
+#        uses: FirelyTeam/firely-terminal-pipeline@v0.3.2
+#        with:
+#          PATH_TO_CONFORMANCE_RESOURCES: ValidationFiles/resources ValidationFiles/terminology
+#          PATH_TO_EXAMPLES: ValidationFiles/examples
+#          PATH_TO_QUALITY_CONTROL_RULES: qa-validate-examples
+#          DOTNET_VALIDATION_ENABLED: FALSE
+#          JAVA_VALIDATION_ENABLED: TRUE
+#          JAVA_VALIDATION_OPTIONS: -html-output ./validation-output-examples.html
+#          OUTPUT_FORMAT: RAW
+#          SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
+#          SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
 
       - name: Create validation results file
         uses: actions/upload-artifact@v3
         with:
           name: FHIR-validation-results
-          path: |
-            ./validation-output-resources.html
-            ./validation-output-examples.html          
+          path: ./validation-output-resources.html         
