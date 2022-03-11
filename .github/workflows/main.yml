@@ -52,7 +52,7 @@ jobs:
 #          SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
 #          SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
 
-      - name: Remove .md files from to execute Java validation
+      - name: Gather files to validate
         run: |
            chmod +x ./.github/scripts/GetValidationFiles.sh
            .github/scripts/GetValidationFiles.sh
@@ -70,3 +70,8 @@ jobs:
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
 
+      - name: Create validation results file
+        uses: actions/upload-artifact@v3
+        with:
+          name: FHIR-validation-results
+          path: ./validation-output.xml
