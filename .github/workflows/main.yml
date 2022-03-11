@@ -57,6 +57,20 @@ jobs:
            chmod +x ./.github/scripts/GetValidationFiles.sh
            .github/scripts/GetValidationFiles.sh
 
+      - name: Fetch action
+        id: pl
+        uses: Rishabh510/Path-lister-action@master
+        with:
+          path: ".ValidationFiles/"
+          type: ".xml"
+
+      - name: Show files to validate
+        run: |
+          echo "Found ${{ steps.pl.outputs.path_count }} file(s) to validate:"
+          for i in ${{ steps.pl.outputs.paths }}; do
+          echo $i
+          done
+
       - name: Java validation of resources and terminology
         uses: FirelyTeam/firely-terminal-pipeline@v0.3.2
         with:
@@ -64,7 +78,7 @@ jobs:
           PATH_TO_QUALITY_CONTROL_RULES: qa-validate-all
           DOTNET_VALIDATION_ENABLED: FALSE
           JAVA_VALIDATION_ENABLED: TRUE
-          JAVA_VALIDATION_OPTIONS: -html-output ./validation-output-resources.html
+          #JAVA_VALIDATION_OPTIONS: -html-output ./validation-output-resources.html
           OUTPUT_FORMAT: RAW
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
