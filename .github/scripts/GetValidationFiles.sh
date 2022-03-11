@@ -4,9 +4,9 @@
 
 mkdir ValidationFiles
 
-cp -R resources ValidationFiles/resources
-cp -R examples ValidationFiles/examples
-cp -R terminology ValidationFiles/terminology
+cp -R resources/. ValidationFiles
+cp -R examples/. ValidationFiles
+cp -R terminology/. ValidationFiles
 
 # Go to the folder 
 cd ValidationFiles
