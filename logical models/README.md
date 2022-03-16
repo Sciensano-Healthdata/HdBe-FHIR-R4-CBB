@@ -10,7 +10,7 @@ Every CBB logical model will also have an example file that contains example val
 2. Use the _HdBe-[zib-name]_ templates to make a `.doc.md` and an .`example.md` file.
 3. Adjust the logical model (for example with Forge) according to the Excel sheet.
 4. Keep the changes in the `.doc.md` changelog file.
-5. Check if the valueSets, NamingSystems e.d. that are used in the logical model are already in the `../Terminology`folder. If they are not there, a guide is provided there on how to add them. 
+5. Check if the valueSets, NamingSystems e.d. that are used in the logical model are already in the `../terminology`folder. If they are not there, a guide is provided there on how to add them. 
 6. If all changes are incorporated, walk through the flat .xml file to see it there are no outstanding or odd parts. For example compare the adjusted logical model file with the  transformed logical model. Check if all changes are in the changelog.
 7. Fill the `.example.md` with each of the elements in the logical model and give examples accordingly.
 8. Add an implementation guide page in the `../guides/HdBe-R4-CBB-v0.x/LogicalModels` folder. 

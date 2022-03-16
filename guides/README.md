@@ -18,22 +18,22 @@ This folder contains all required files for implementation guides that are hoste
 *If there is uncertainty about how to implement this, just look at one of the other guides for guidance.
 
 ### Help
-- If a valueSet does not appear under the Terminology tab in a guide, it could be the case that the valueSet is part of an extension. To solve the missing valueSet, it is the easiest to add the url of the StructureDefinition in the Terminology list. See the _HdBe-AnatomicalLocation_ for an example.
+- If a valueSet does not appear under the Terminology tab in a guide, it could be the case that the valueSet is part of an extension or located in the base profile. The terminology table shows only the bound ValueSet in the differential of the profile in context. To make the valueSet visible in the guide, it is the easiest to add the url of the StructureDefinition in the Terminology list. See the _HdBe-AnatomicalLocation_ for an example.
 
 ## Versioning of guides
-It is only possible to have one URL key attached to a project in Simplifier. The URL key is the link for the implementation guide (IG) between GitHub and Simplifier. To keep a stable IG on Simplifier that is attached to the main branch, but also be able to expand and improve on the IG of the integration branch, we use two versions and also two folder structures. 
+The URL key is the link for the implementation guide (IG) between GitHub and Simplifier. To keep a stable IG on Simplifier that is attached to the main branch, but also be able to expand and improve on the IG of the integration branch, we use two versions and also two folder structures to have two URL keys. 
 
-- The **stable IG** (currently `v0.1`). The version with the URL key attached to the main project. No edits should be made to this IG and subfolders anymore. 
-- The **integration IG** (currently `v0.2`). The version with the URL key attached to the integration branch. *All edits and new pages should be in this folder structure*.
+- The **stable IG** (e.g. `v0.1`). The version with the URL key attached to the main project. No edits should be made to this IG and subfolders anymore. 
+- The **integration IG** (e.g. `v0.2`). The version with the URL key attached to the integration branch. *All edits and new pages should be in this folder structure*.
 
-### Incorporating a new version
-When a package is released, it is also time to update the implementation guide to a new stable IG. Take the following steps into account to do this:
+### Upgrading the implementation guide on Simplifier
+When a package is released, it is also time to update the implementation guide to a new stable IG. Take the following steps into account to do this, start with this before integration is released into main.
 
-*Prerequisite*: The integration branch is already released into the main branch.
-- Update the URL key of the main project to the new IG (e.g. from v0.1 to v0.2).
-- Copy-paste the complete guide version folder and update the version number (e.g from v0.2 to v0.3). 
-- Merge the main branch into the integration branch, which provides the integration branch with the new IG version.
-- Update the URL key of the integration project to the new version (e.g. from v0.2 to v0.3).
+- In the integration branch: Copy-paste the complete guide version folder and update the version number (e.g from v0.2 to v0.3). Also update the version number within the files with Search-and-Replace.
+- Merge the integration branch into the main branch.
+- Update the URL key of the main project to the new IG (e.g. from v0.1 to v0.2) in Simplifier.
+- Update the URL key of the integration project to the newest version (e.g. from v0.2 to v0.3) in Simplifier.
+- Re
 - Continue working in the newest version folder (e.g. v0.3).
 
-What should be done with old versions of the IG is still under consideration.
+Older versions of the IG on the integration branch can be removed. Older versions of the IG on the main branch should be retained. For clarity purposes, it is useful to rename old versions.
