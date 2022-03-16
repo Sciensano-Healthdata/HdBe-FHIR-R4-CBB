@@ -7,3 +7,21 @@ This folder contains all required files for implementation guides that are hoste
 3. For every profile do the same as logicl models but in the `../Profiles` folder.
     - For datatype or pattern profiles (e.g. HdBe-NameInformation, HdBe-AddressInformation, etc.) replace the examples (`{{json:examples/[CBB-ID]-01}}` and `{{xml:examples/[CBB-ID]-01}}`) with an explanatory text that these profile do not live on their own and examples are given by the profiles that host these datatype or pattern profiles. Template text: _"HdBe-[name] is a datatype profile and can therefore not have an example of its own. Rather, an example is provided within the example of the HdBe-profile(s) that use this datatype profile."_ 
 4. If adjustments need to be made to the general structure, or CSS, this should happen within the main branch and be merged from their to any branch. 
+
+
+## Versioning of guides
+It is only possible to have one URL key attached to a project in Simplifier. The URL key is the link for the implementation guide (IG) between GitHub and Simplifier. To keep a stable IG on Simplifier that is attached to the main branch, but also be able to expand and improve on the IG of the integration branch, we use two versions and also two folder structures. 
+- The **stable IG** (currently `v0.1`). The version with the URL key attached to the main project. No edits should be made to this IG and subfolders anymore. 
+- The **integration IG** (currently `v0.2)`. The version with the URL key attached to the integration branch. *All edits and new pages should be in this folder structure*.
+
+### Incorporating a new version
+When a package is released, it is also time to update the implementation guide to a new stable IG. Take the following steps into account to do this:
+
+*Prerequisite*: The integration branch is already released into the main branch.
+- Update the URL key of the main project to the new IG (e.g. from v0.1 to v0.2).
+- Copy-paste the complete guide version folder and update the version number (e.g from v0.2 to v0.3). 
+- Merge the main branch into the integration branch, which provides the integration branch with the new IG version.
+- Update the URL key of the integration project to the new version (e.g. from v0.2 to v0.3).
+- Continue working in the newest version folder (e.g. v0.3).
+
+What should be done with old versions of the IG is still under consideration.

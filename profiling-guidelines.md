@@ -9,8 +9,10 @@
         2. [Healthdata.be CBBs](#healthdatacbb)
         3. [Use case specific models](#usecasespecificmodels)
     2. [Associating the logical definition to StructureDefinitions](#associatingthelogicaldefinitiontostructuredefinitions)
-4. [Changelog of changes to zibs and zib-profiles](#changelog)
-5. [Practical guidelines](#practicalguidelines)
+4. [Versioning](#Versioning)
+5. [Changelog of changes to zibs and zib-profiles](#changelog)
+6. [Extensions](#Extensions)
+7. [Practical guidelines](#practicalguidelines)
     1. [Identity of artifacts](#identityofartifacts)
         1. [Canonical URL, id, name and title](#CanonicalURLIdNameTitle)
         2. [Folder structure and file name](FolderStructureAndFileName)
@@ -20,7 +22,7 @@
     3.  [ElementDefinition](#elementdefinintion)
         1. [Usage of DefinitionCodes](#DefinitionCodes)
         2. [Usage of zib concept examples](#ZibConceptExamples)
-6. [Miscellaneous](#miscellaneous)
+8. [Miscellaneous](#miscellaneous)
 
 
 ## Introduction <a name="introduction"></a>
@@ -81,6 +83,20 @@ A specific element can then be mapped using:
 </element>
 ```
 
+## Versioning<a name="Versioning"></a>
+In general terms, FHIR conformance resources could be affected at several different layers:
+
+1. The version of the package that the conformance resources reside in: versioned according to SemVer 2.0.
+2. The version of the conformance resource themselves (`StructureDefinition.version`): used to indicate the business version to the user, without strict specifications.
+3. The FHIR version (`StructureDefinition.fhirVersion`): this document is specifically aimed at FHIR R4, meaning this element will be fixed on 4.x.
+4. The version of the underlying data model (CBB).
+
+Regarding points 1 and 2: Healthdata.be uses the package level as the main versioning mechanism. As a result, the conformance resources within the package are not individually versioned; they should be regarded as a consistent set. To identify the package version a conformance resource, its version number MAY be set to the package version.
+
+Regarding point 4: the life cycle of the underlying data model is not reflected directly in the version number of the conformance resources, but a change in de the underlying data could result in a change in one or more of the conformance resources. In this case, the normal SemVer rules will determine what happens; if some of the conformance resources need to be changed in a backwards-compatible way, a new patch release of the package should be made, if major functionality is added, a new minor version of the package should be released, etc. When a new version of the underlying data model reflects a fundamental change, the choice can be made to create a new package under a different name rather than a new version.
+
+Version updates of conformance resources normally do not affect their canonical URI. Any resource that references another resource normally does so without a version indicator (uri|version). Instead, this is handled at the package level; reference targets either reside within the same package or in a versioned package that has been added as a dependency.
+
 ## Changelog of changes to zibs and zib-profiles<a name="changelog"></a>
 Every CBB logical model and profile will have an accompanying documentation file that contains a changelog/differential to the zib or zib-profile. The documentation file has the same name as the CBB-profile and ends with `.doc.md`. For example `HdBe-Patient.xml` <-> `HdBe-Patient.doc.md`.
 
@@ -117,6 +133,16 @@ Example:
 |constraint|  Added, removed or changed to constraints that span multiple concepts. |`.constraint`
 |mapping| Relocated, removed or added mapping elements. | `.mapping`
 |example| Changes to examples which are not reflected in other catergories as these should be adjusted in the examples too when applicable. |`.example`
+
+## Extensions<a name="Extensions"></a>
+Sometimes a concept cannot be implemented using the building blocks FHIR offers by default. In this case, an extension might be used to implement such a concept. Keep in mind that extensions are often seen as a burden for implementers:
+
+- If it possible to model the concept (cleanly) without an extension, this is usually the preferred way.
+- If that's not possible, check if HL7 or other reliable standardisation organizations provide an extension to implement the concept.
+- If that's not possible and after discussing the concept with the HL7 FHIR community (on chat.fhir.org), try to create an extension in a reusable way (or reuse a previously defined extension).
+- If that's not possible, create an extension specific for the resource/profile.
+
+Usually, mappings for the concept, bindings to specific ValueSets and any functional descriptions will be added when the extension is used within a profile. When the extension pertains to a particular profile or resource, this information SHALL be added to the extension. To aid rendering purposes, functional descriptions and implementation guidance are placed on the extension root rather than the `Extension.value[x]` (except for terminology bindings). Without constraints, most snapshots generators will only include the root element into the profile that hosts the extension. So placing the information on extension makes sure the information is visible in the profile without  the need to navigate into the extension by the implementer.
 
 #	Practical guidelines <a name="practicalguidelines"></a>
 ##	Identity of artifacts <a name="identityofartifacts"></a>

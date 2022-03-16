@@ -1,4 +1,4 @@
-## {{page-title}}
+# {{page-title}}
 
 @```
 from StructureDefinition
@@ -28,8 +28,7 @@ select
      <button class="tablinks" onclick="openTab(event, 'Hybrid view')">Hybrid view</button>
      <button class="tablinks" onclick="openTab(event, 'Diff view')">Diff view</button>
      <button class="tablinks" onclick="openTab(event, 'Mapping')">Mapping</button>
-     <button class="tablinks" onclick="openTab(event, 'JSON example')">JSON example</button>
-     <button class="tablinks" onclick="openTab(event, 'XML example')">XML example</button>
+     <button class="tablinks" onclick="openTab(event, 'Examples')">Examples</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff')">Zib-profile diff</button>
   </div>
 
@@ -49,7 +48,7 @@ select
   </div>
 
   <div id="Mapping" class="tabcontent">      
-      <h3> Mapping FHIR profile to logical model</h3>
+      <h3>Mapping FHIR profile to CBB</h3>
       <div>
       @```
       from StructureDefinition
@@ -62,11 +61,10 @@ select
     </div>
   </div>
 
-  <div id="JSON example" class="tabcontent">
-      {{json:examples/HdBe-HealthProfessional-Practitioner-01.xml}}
-  </div>
-  <div id="XML example" class="tabcontent">
-      {{xml:examples/HdBe-HealthProfessional-Practitioner-01.xml}}
+  <div id="Examples" class="tabcontent">
+      <ul>
+        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HdBe-HealthProfessional-Practitioner-01.guide.md}}</li>
+      </ul>
   </div>
 
   <div id="Zib diff" class="tabcontent">
@@ -94,8 +92,7 @@ select
      <button class="tablinks" onclick="openTab(event, 'Hybrid view2')">Hybrid view</button>
      <button class="tablinks" onclick="openTab(event, 'Diff view2')">Diff view</button>
      <button class="tablinks" onclick="openTab(event, 'Mapping2')">Mapping</button>
-     <button class="tablinks" onclick="openTab(event, 'JSON example2')">JSON example</button>
-     <button class="tablinks" onclick="openTab(event, 'XML example2')">XML example</button>
+     <button class="tablinks" onclick="openTab(event, 'Examples2')">Examples</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff2')">Zib-profile diff</button>
   </div>
 
@@ -115,7 +112,7 @@ select
   </div>
 
   <div id="Mapping2" class="tabcontent">      
-      <h3> Mapping FHIR profile to logical model</h3>
+      <h3>Mapping FHIR profile to CBB</h3>
       <div>
       @```
       from StructureDefinition
@@ -128,11 +125,10 @@ select
     </div>
   </div>
 
-  <div id="JSON example2" class="tabcontent">
-      {{json:examples/HdBe-HealthProfessional-PractitionerRole-01.xml}}
-  </div>
-  <div id="XML example2" class="tabcontent">
-      {{xml:examples/HdBe-HealthProfessional-PractitionerRole-01.xml}}
+  <div id="Examples2" class="tabcontent">
+      <ul>
+        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HdBe-HealthProfessional-PractitionerRole-01.guide.md}}</li>
+      </ul>
   </div>
 
   <div id="Zib diff2" class="tabcontent">
