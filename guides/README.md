@@ -33,7 +33,8 @@ When a package is released, it is also time to update the implementation guide t
 - Merge the integration branch into the main branch.
 - Update the URL key of the main project to the new IG (e.g. from v0.1 to v0.2) in Simplifier.
 - Update the URL key of the integration project to the newest version (e.g. from v0.2 to v0.3) in Simplifier.
-- Re
+- On Simplifier, in the Implementation Guide Editor of both versions. Change the *Style* to Custom. This will give the IG the custom made Sciensano style.
+- On Simplifier, for the Implementation Guide Editor of the main branch. Change the *Scope* to the Package it belongs to. This will make the IG stable on this Package. 
 - Continue working in the newest version folder (e.g. v0.3).
 
 Older versions of the IG on the integration branch can be removed. Older versions of the IG on the main branch should be retained. For clarity purposes, it is useful to rename old versions.
