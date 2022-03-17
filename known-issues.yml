@@ -2,9 +2,8 @@
 # The issues here are deliberate deviations from the guidelines, as flagged by the qa tooling.
 # For each issue documented, a reason for deviating from the guidelines is given.
 
-
 HdBe-Patient:
-  HdBe-deviations:
-    Patient.name*:
-      - datatype: HumanName
+  ignored issues:
+    Patient.name:
+      - message: "The error message (may be just the first part)"
         reason: A name in FHIR is represented using the HumanName datatype, not as a separate resource.
