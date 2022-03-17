@@ -4,7 +4,7 @@ This repository contains HL7 FHIR R4 compliant profiles and related conformance 
 
 ## Official releases
 
-Resources in this repository should be considered unstable and not suited for immediate implementation. Stable versions will be released using the FHIR package mechanism on [Simplifier](https://simplifier.net/packages). At the moment, no package has been released for the current project.
+Resources in this repository should be considered unstable and not suited for immediate implementation. Stable versions will be released using the FHIR package mechanism on [Simplifier](https://simplifier.net/packages). The most recently released package can be found [here](https://simplifier.net/HdBe-R4-CBB/~packages).
 
 ## Profiling guidelines
 
@@ -59,6 +59,18 @@ Things to note:
 * Topic branches may be branched from a release branch (# 50) or a stable branch (# 57) at the developer's discretion.
 * Topic branches may have a life cycle independent from the releases (# 57).
 
+## Releasing of packages
+
+Packages are released using the following settings.
+- Versioning is done according to the SemVer specifications.
+- Author is *Healthdata.be (Sciensano)*.
+- Release notes describe changes of the package, if possible, add the GitHub issue number.
+- Package description can be equal to the project description.
+- Under content, select the following boxes:
+    - Convert all resources to **json**.
+    - Include all **non-resource** files in the package.
+    - Move all resources to the **packages folder**.
+    - Move examples to the **examples** folder.
 
 ## Quality Assurance 
 
