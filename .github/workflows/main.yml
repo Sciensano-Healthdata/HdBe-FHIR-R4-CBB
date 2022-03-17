@@ -82,9 +82,6 @@ jobs:
             global success, github_report, markdown_report
             global steps_data
             step_data = steps_data[key]
-            if step_data["outputs"]["was-skipped"] == 'true':
-              out_str = f'Test "{name}" was skipped'
-              return
             step_success = (step_data["outcome"] == "success")
             success = success and step_success
             with open(step_data["outputs"]["stats-file"], 'r') as sf:
