@@ -51,7 +51,6 @@ jobs:
   JAVA_FHIR_VALIDATION:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    continue-on-error: true
       # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Checkout code
@@ -64,6 +63,8 @@ jobs:
 
       - name: Run the validator against the CBBs
         id: validate_CBBs
+        ACTIONS_STEP_DEBUG: true
+        continue-on-error: true
         uses: pieter-edelman-nictiz/hl7-validator-action@v0.14
         with:
           version: "4.0"
