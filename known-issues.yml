@@ -2,8 +2,15 @@
 # The issues here are deliberate deviations from the guidelines, as flagged by the qa tooling.
 # For each issue documented, a reason for deviating from the guidelines is given.
 
-HdBe-Patient:
+---
+# The following issues are not "real" deviations stemming from design choices, but rather problems that pop up due to
+# shortcomings in tooling, the used terminology server, etc.
+# These might occur in one or more profiles, or in none if they have been fixed in the meantime. 
+
+issues should occur: false
+
+HdBe-Patient-01:
   ignored issues:
-    Patient.name:
-      - message: "The error message (may be just the first part)"
-        reason: A name in FHIR is represented using the HumanName datatype, not as a separate resource.
+    CareTeam.participant[*]:
+      - message: Slicing cannot be evaluated
+        reason: To check slicing in instances, the referenced resources need to be inspected, but this is not supported by the HL7 Validator.
