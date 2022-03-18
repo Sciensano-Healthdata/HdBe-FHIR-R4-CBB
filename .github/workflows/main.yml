@@ -6,7 +6,7 @@ name: Firely Validation
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main, QA, integration ]
+    branches: [ main, QA, QA-v0.19, integration ]
     # Only ignores the files on push, does not ignore files that are already in the repo. 
     paths-ignore:
       - '**.md'
@@ -64,7 +64,7 @@ jobs:
       - name: Run the validator against the CBBs
         id: validate_CBBs
         continue-on-error: true
-        uses: pieter-edelman-nictiz/hl7-validator-action@v0.14
+        uses: pieter-edelman-nictiz/hl7-validator-action@v0.19
         with:
           version: "4.0"
           ig: ValidationFiles/resources/
@@ -81,7 +81,7 @@ jobs:
           def printStatistics(name, key):
             global success, github_report, markdown_report
             global steps_data
-            step_data = steps_data[key]
+            step_data = "key"
             step_success = (step_data["outcome"] == "success")
             success = success and step_success
             with open(step_data["outputs"]["stats-file"], 'r') as sf:
