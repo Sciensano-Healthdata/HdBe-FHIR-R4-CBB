@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="HdBe-AlcoholUse" />
+  <language value="en-US" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+02:00" />
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AlcoholUse" />
+  <name value="HdBeAlcoholUse">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="HdBe-AlcoholGebruik" />
+      </extension>
+    </extension>
+  </name>
+  <title value="HdBe AlcoholUse" />
+  <status value="draft" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Healthdata.be (Sciensano)" />
+    <telecom>
+      <system value="email" />
+      <value value="fhir.healthdata@sciensano.be" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="**Concept**&#xD;&#xA;In the context of this information model, alcohol is the collective term for alcoholic beverages consumed as a leisure product. This information model describes the information asked of the patient about their alcohol use.&#xD;&#xA;**Purpose**&#xD;&#xA;During the social anamnesis, the patient is frequently asked about their alcohol consumption. Excessive (episodic) alcohol consumption may influence the current treatment and diagnostics. Alcohol-related problems are diagnosed as secondary diagnoses more and more often. Source: Guidelines - Multidisciplinary guidelines for Disorders in alcohol use (CBO, 2009) &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;If the exchange of information on past alcohol consumption is desired in the event that the patient has by now stopped or significantly reduced their alcohol intake, then this can be done by applying the information model a second time with an entered stop date, so that it is clear that the amount of units per day is the past amount. &#xD;&#xA;&#xD;&#xA;If desired, the sender can include the type of alcohol used in the ‘Comment’ field.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="**Concept**&#xD;&#xA;Alcohol is in de context van deze bouwsteen de verzamelnaam voor alcoholische dranken die als genotsmiddel genuttigd worden. Deze bouwsteen beschrijft de bij de patiënt uitgevraagde gegevens over het gebruik van alcohol.&#xD;&#xA;**Purpose**&#xD;&#xA;Tijdens de sociale anamnese wordt frequent gevraagd naar het gebruik van alcohol. Overmatig of excessief (episodisch) alcoholgebruik kan van invloed zijn op de huidige behandeling en diagnostiek. Ook wordt alcoholproblematiek steeds vaker als nevendiagnose gesteld. Bron: Richtlijn - Multidisciplinaire richtlijn Stoornissen in het gebruik van alcohol (CBO, 2009)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;Als het wenselijk is om ook informatie over alcohol consumptie in het verleden uit te wisselen wanneer de patiënt inmiddels is gestopt of sterk is geminderd dan kan dit door de bouwsteen een tweede maal toe te passen met daarbij een ingevulde stopdatum zodat het duidelijk is dat het de hoeveelheid eenheden per dag in het verleden betreft. &#xD;&#xA;&#xD;&#xA;Indien gewenst kan de verzender het soort alcohol, dat gebruikt wordt, vermelden in het 'Toelichting' veld." />
+      </extension>
+    </extension>
+  </description>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="true" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/alcohol_use" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="alcohol_use">
+      <path value="alcohol_use" />
+      <short value="AlcoholUse">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="AlcoholGebruik" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Root concept of the AlcoholUse information model. This concept contains all data elements of the AlcoholUse information model.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de bouwsteen AlcoholGebruik. Dit concept bevat alle gegevenselementen van de bouwsteen AlcoholGebruik." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+    </element>
+    <element id="alcohol_use.comment">
+      <path value="alcohol_use.comment" />
+      <short value="Comment">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toelichting" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Relevant comments on the alcohol consumption.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Relevante opmerkingen over het gebruik." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="alcohol_use.alcohol_use_status">
+      <path value="alcohol_use.alcohol_use_status" />
+      <short value="AlcoholUseStatus">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="AlcoholGebruikStatus" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The status of the patient’s alcohol use.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De status van het alcoholgebruik van de patiënt." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="AlcoholUseStatus codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/AlcoholUseStatus" />
+      </binding>
+    </element>
+    <element id="alcohol_use.observation_of_use">
+      <path value="alcohol_use.observation_of_use" />
+      <short value="ObservationOfUse">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="WaarnemingGebruik" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Container of the ObservationOfUse concept. This container contains all data elements of the observation of alcohol use.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Container van het concept WaarnemingGebruik. Deze container bevat alle gegevenselementen over de waarneming van het gebruik van alcohol." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="alcohol_use.observation_of_use.start_date">
+      <path value="alcohol_use.observation_of_use.start_date" />
+      <short value="StartDate">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="StartDatum" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The date on which the patient started using alcohol.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De datum waarop is gestart met het gebruik." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="alcohol_use.observation_of_use.stop_date">
+      <path value="alcohol_use.observation_of_use.stop_date" />
+      <short value="StopDate">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="StopDatum" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The date on which the patient stopped consuming alcohol.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De datum waarop is gestopt met het gebruik." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="alcohol_use.observation_of_use.amount">
+      <path value="alcohol_use.observation_of_use.amount" />
+      <short value="Amount">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Hoeveelheid" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The extent of the patient’s alcohol use in units of alcohol per time period.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Omvang van het alcoholgebruik van de patiënt in eenheden alcoholische drank per tijdseenheid." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
