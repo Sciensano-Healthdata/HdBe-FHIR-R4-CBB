@@ -21,36 +21,33 @@ on:
 jobs:
 
 #  Validate all conformance resources using Firely Terminal 
-#  CI_FHIR_VALIDATION:
-#    # The type of runner that the job will run on
-#    runs-on: ubuntu-latest
-#    
-#    # Steps represent a sequence of tasks that will be executed as part of the job
-#    steps:
-#      - name: Checkout code
-#        uses: actions/checkout@v2
-#        
-#      # Install .NET runtime
-#      - name: Setup .NET Core SDK
-#        uses: actions/setup-dotnet@v1.7.2
-#        with:
-#          dotnet-version: 3.1.x    
-#        
-#      - name: Firely.Terminal validation
-#        uses: FirelyTeam/firely-terminal-pipeline@v0.3.2
-#        with:
-#          PATH_TO_CONFORMANCE_RESOURCES: resources terminology
-#          PATH_TO_EXAMPLES: examples
-#          PATH_TO_QUALITY_CONTROL_RULES: qa-validate-all
-#          OUTPUT_FORMAT: SUMMARY
-#          SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
-#          SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
+  FirelyTerminal_FHIR_VALIDATION:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Install .NET runtime
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v1.7.2
+        with:
+          dotnet-version: 3.1.x    
+
+      - name: Firely.Terminal validation
+        uses: FirelyTeam/firely-terminal-pipeline@v0.3.2
+        with:
+          PATH_TO_CONFORMANCE_RESOURCES: resources terminology
+          PATH_TO_EXAMPLES: examples
+          PATH_TO_QUALITY_CONTROL_RULES: qa-validate-all
+          OUTPUT_FORMAT: SUMMARY
+          SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
+          SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
      
 
   JAVA_FHIR_VALIDATION:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-      # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
