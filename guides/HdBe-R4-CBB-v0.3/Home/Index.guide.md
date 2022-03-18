@@ -9,6 +9,7 @@ This guide contains clinical building blocks (CBBs) and their related HL7 FHIR R
 | {{pagelink:guides/HdBe-R4-CBB-v0.3/Home/LogicalModels/HdBe-AddressInformation.guide.md, text:AddressInformation}} | {{pagelink:guides/HdBe-R4-CBB-v0.3/Home/Profiles/HdBe-AddressInformation.guide.md, text:AddressInformation}} | 
 | {{pagelink:guides/HdBe-R4-CBB-v0.3/Home/LogicalModels/HdBe-AlcoholUse.guide.md, text:AlcoholUse}} | In Progress | 
 | {{pagelink:guides/HdBe-R4-CBB-v0.3/Home/LogicalModels/HdBe-AnatomicalLocation.guide.md, text:AnatomicalLocation}} | {{pagelink:guides/HdBe-R4-CBB-v0.3/Home/Profiles/HdBe-AnatomicalLocation.guide.md, text:AnatomicalLocation}} | 
+| {{pagelink:guides/HdBe-R4-CBB-v0.3/Home/LogicalModels/HdBe-BodyHeight.guide.md, text:BodyHeight}} | In Progress | 
 | {{pagelink:guides/HdBe-R4-CBB-v0.3/Home/LogicalModels/HdBe-ContactInformation.guide.md, text:ContactInformation}} | {{pagelink:guides/HdBe-R4-CBB-v0.3/Home/Profiles/HdBe-ContactInformation.guide.md, text:ContactInformation}}| 
 | {{pagelink:guides/HdBe-R4-CBB-v0.3/Home/LogicalModels/HdBe-ContactPerson.guide.md, text:ContactPerson}} | {{pagelink:guides/HdBe-R4-CBB-v0.3/Home/Profiles/HdBe-ContactPerson.guide.md, text:ContactPerson}} and Patient   | 
 | {{pagelink:guides/HdBe-R4-CBB-v0.3/Home/LogicalModels/HdBe-HealthcareProvider.guide.md, text:HealthcareProvider}} | {{pagelink:guides/HdBe-R4-CBB-v0.3/Home/Profiles/HdBe-HealthcareProvider.guide.md, text:HealthcareProvider}} | 
