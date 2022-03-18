@@ -97,7 +97,7 @@ jobs:
                   github_report   += f"\033[1;32mOk:\033[0m {out_str}%0A"
 
           steps_data = json.loads("""${{ toJSON(steps) }}""")
-          printStatistics("Validate CBBs, Profiles and examples with the JAVA validator", "java_validate")
+          printStatistics("Validation", "java_validate")
           print(f'::set-output name=result_status::{0 if success else 1}')
           print(f'::set-output name=github_report::{github_report}')
 
