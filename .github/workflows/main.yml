@@ -81,18 +81,24 @@ jobs:
             global success, github_report, markdown_report
             global steps_data
             step_data = "key"
+            print(step_data)
             step_success = (step_data["outcome"] == "success")
             success = success and step_success
             with open(step_data["outputs"]["stats-file"], 'r') as sf:
               stats = json.load(sf)
             
-              out_str = f'"{name}" {"succeeded" if step_success else "failed"} with {stats["fatal"]} fatal messages, {stats["error"]} errors, {stats["warning"]} warnings and {stats["information"]} information messages.'
-              if not step_success:
+               if "fatal" not in stats:
+                out_str = f'"{name}" failed to run.'
                 github_report   += f"::error::{out_str}%0A"
-              elif stats["warning"] > 0:
-                github_report   += f"::warning::{out_str}%0A"
               else:
-                github_report   += f"\033[1;32mOk:\033[0m {out_str}%0A"
+                out_str = f'"{name}" {"succeeded" if step_success else "failed"} with {stats["fatal"]} fatal messages, {stats["error"]} errors, {stats["warning"]} warnings and {stats["information"]} information messages.'
+                if not step_success:
+                  github_report   += f"::error::{out_str}%0A"
+                elif stats["warning"] > 0:
+                  github_report   += f"::warning::{out_str}%0A"
+                else:
+                  github_report   += f"\033[1;32mOk:\033[0m {out_str}%0A"
+
           steps_data = json.loads("""${{ toJSON(steps) }}""")
           printStatistics("Validate resources", "validate_CBBs")
           print(f'::set-output name=result_status::{0 if success else 1}')
