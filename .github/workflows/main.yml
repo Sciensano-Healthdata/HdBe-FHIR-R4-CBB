@@ -87,7 +87,7 @@ jobs:
             with open(step_data["outputs"]["stats-file"], 'r') as sf:
               stats = json.load(sf)
             
-               if "fatal" not in stats:
+              if "fatal" not in stats:
                 out_str = f'"{name}" failed to run.'
                 github_report   += f"::error::{out_str}%0A"
               else:
