@@ -6,7 +6,7 @@ Every CBB logical model will have an accompanying documentation file that contai
 Every CBB logical model will also have an example file that contains example values for the elements. The example is shown in the implementation guide. The example file has the same name as the CBB-logical model and ends with `.example.md`. For example `HdBe-Patient.xml` <-> `HdBe-Patient.example.md`.
 
 ## Workflow
-1. Obtain the transformed `HdBe-[zib-name].xml` you want to work on from `..src/hdbe-logicalmodels`. and place it in the current `../logical models` folder. 
+1. Obtain the transformed `HdBe-[zib-name].xml` you want to work on from `src/hdbe-logicalmodels`. and place it in this folder. 
 2. Use the _HdBe-[zib-name]_ templates to make a `.doc.md` and an .`example.md` file.
 3. Adjust the logical model (for example with Forge) according to the Excel sheet.
 4. Keep the changes in the `.doc.md` changelog file.

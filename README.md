@@ -121,7 +121,3 @@ Depending on what Quality Assurance rules are chosen, there could be various res
 To expand when this will be used more.
 
 
-### How to set up Quality Assurance
-
-
-To do...
