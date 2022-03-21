@@ -19,9 +19,8 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-
 #  Validate all conformance resources using Firely Terminal 
-  FirelyTerminal_FHIR_VALIDATION:
+  Temp_FirelyTerminal_JAVA_VALIDATION:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -35,74 +34,109 @@ jobs:
         with:
           dotnet-version: 3.1.x    
 
-      - name: Firely.Terminal validation
+      # Install Java runtime (only needed if you want to run the offical HL7 Java validator)
+      - name: Setup Java JDK
+        uses: actions/setup-java@v1.4.3
+        with:
+          java-version: 1.8
+        
+      - name: Java validation
         uses: FirelyTeam/firely-terminal-pipeline@v0.3.2
         with:
           PATH_TO_CONFORMANCE_RESOURCES: resources terminology
           PATH_TO_EXAMPLES: examples
           PATH_TO_QUALITY_CONTROL_RULES: qa-validate-all
-          OUTPUT_FORMAT: SUMMARY
+          DOTNET_VALIDATION_ENABLED: FALSE
+          JAVA_VALIDATION_ENABLED: TRUE
+          OUTPUT_FORMAT: RAW
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
-     
 
-  JAVA_FHIR_VALIDATION:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
 
-      - name: Gather files to validate
-        run: |
-           chmod +x ./.github/scripts/GetValidationFiles.sh
-           .github/scripts/GetValidationFiles.sh
 
-      - name: JAVA validation
-        id: java_validate
-        continue-on-error: true
-        uses: pieter-edelman-nictiz/hl7-validator-action@v0.20
-        with:
-          version: "4.0"
-          ig: ValidationFiles/resources/
-          recurse: true
-          source: ValidationFiles/examples/*
-
-      - name: Collect results
-        id: collect-statistics
-        shell: python
-        run: |
-          import json, sys
-          success = True
-          github_report   = ""
-          def printStatistics(name, key):
-            global success, github_report, markdown_report
-            global steps_data
-            step_data = steps_data[key]
-            print(step_data)
-            step_success = (step_data["outcome"] == "success")
-            success = success and step_success
-            with open(step_data["outputs"]["stats-file"], 'r') as sf:
-              stats = json.load(sf)
-            
-              if "fatal" not in stats:
-                out_str = f'"{name}" failed to run.'
-                github_report   += f"::error::{out_str}%0A"
-              else:
-                out_str = f'"{name}" {"succeeded" if step_success else "failed"} with {stats["fatal"]} fatal messages, {stats["error"]} errors, {stats["warning"]} warnings and {stats["information"]} information messages.'
-                if not step_success:
-                  github_report   += f"::error::{out_str}%0A"
-                elif stats["warning"] > 0:
-                  github_report   += f"::warning::{out_str}%0A"
-                else:
-                  github_report   += f"\033[1;32mOk:\033[0m {out_str}%0A"
-
-          steps_data = json.loads("""${{ toJSON(steps) }}""")
-          printStatistics("Validation", "java_validate")
-          print(f'::set-output name=result_status::{0 if success else 1}')
-          print(f'::set-output name=github_report::{github_report}')
-
-      - name: Print results
-        run: |
-          echo "${{ steps.collect-statistics.outputs.github_report }}"
-          exit ${{ steps.collect-statistics.outputs.result_status }}
+##  Validate all conformance resources using Firely Terminal 
+#  FirelyTerminal_FHIR_VALIDATION:
+#    # The type of runner that the job will run on
+#    runs-on: ubuntu-latest
+#    # Steps represent a sequence of tasks that will be executed as part of the job
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v2
+#
+#      # Install .NET runtime
+#      - name: Setup .NET Core SDK
+#        uses: actions/setup-dotnet@v1.7.2
+#        with:
+#          dotnet-version: 3.1.x    
+#
+#      - name: Firely.Terminal validation
+#        uses: FirelyTeam/firely-terminal-pipeline@v0.3.2
+#        with:
+#          PATH_TO_CONFORMANCE_RESOURCES: resources terminology
+#          PATH_TO_EXAMPLES: examples
+#          PATH_TO_QUALITY_CONTROL_RULES: qa-validate-all
+#          OUTPUT_FORMAT: SUMMARY
+#          SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
+#          SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
+#     
+#
+#  JAVA_FHIR_VALIDATION:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v2
+#
+#      - name: Gather files to validate
+#        run: |
+#           chmod +x ./.github/scripts/GetValidationFiles.sh
+#           .github/scripts/GetValidationFiles.sh
+#
+#      - name: JAVA validation
+#        id: java_validate
+#        continue-on-error: true
+#        uses: pieter-edelman-nictiz/hl7-validator-action@v0.20
+#        with:
+#          version: "4.0"
+#          ig: ValidationFiles/resources/
+#          recurse: true
+#          source: ValidationFiles/examples/*
+#
+#      - name: Collect results
+#        id: collect-statistics
+#        shell: python
+#        run: |
+#          import json, sys
+#          success = True
+#          github_report   = ""
+#          def printStatistics(name, key):
+#            global success, github_report, markdown_report
+#            global steps_data
+#            step_data = steps_data[key]
+#            print(step_data)
+#            step_success = (step_data["outcome"] == "success")
+#            success = success and step_success
+#            with open(step_data["outputs"]["stats-file"], 'r') as sf:
+#              stats = json.load(sf)
+#            
+#              if "fatal" not in stats:
+#                out_str = f'"{name}" failed to run.'
+#                github_report   += f"::error::{out_str}%0A"
+#              else:
+#                out_str = f'"{name}" {"succeeded" if step_success else "failed"} with {stats["fatal"]} fatal messages, {stats["error"]} errors, {stats["warning"]} warnings and {stats["information"]} information messages.'
+#                if not step_success:
+#                  github_report   += f"::error::{out_str}%0A"
+#                elif stats["warning"] > 0:
+#                  github_report   += f"::warning::{out_str}%0A"
+#                else:
+#                  github_report   += f"\033[1;32mOk:\033[0m {out_str}%0A"
+#
+#          steps_data = json.loads("""${{ toJSON(steps) }}""")
+#          printStatistics("Validation", "java_validate")
+#          print(f'::set-output name=result_status::{0 if success else 1}')
+#          print(f'::set-output name=github_report::{github_report}')
+#
+#      - name: Print results
+#        run: |
+#          echo "${{ steps.collect-statistics.outputs.github_report }}"
+#          exit ${{ steps.collect-statistics.outputs.result_status }}
 
