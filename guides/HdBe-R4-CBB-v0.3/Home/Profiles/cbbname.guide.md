@@ -52,7 +52,7 @@ URL: url
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:guides/HdBe-R4-CBB-v0.3/Home/Examples/[CBB-ID]-01.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/[CBB-ID]-01.guide.md}}</li>
         
       </ul>
   </div>

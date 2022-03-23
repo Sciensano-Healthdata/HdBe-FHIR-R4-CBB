@@ -13,11 +13,11 @@ URL: url
 
 ### Introduction
 This Patient profile contains mappings to the following CBBs:
-- {{pagelink:guides/HdBe-R4-CBB-v0.2/Home/LogicalModels/HdBe-Patient.guide.md}}
-- {{pagelink:guides/HdBe-R4-CBB-v0.2/Home/LogicalModels/HdBe-Nationality.guide.md}}
-- {{pagelink:guides/HdBe-R4-CBB-v0.2/Home/LogicalModels/HdBe-MaritalStatus.guide.md}}
-- {{pagelink:guides/HdBe-R4-CBB-v0.2/Home/LogicalModels/HdBe-LanguageProficiency.guide.md}}
-- {{pagelink:guides/HdBe-R4-CBB-v0.2/Home/LogicalModels/HdBe-ContactPerson.guide.md}}
+- {{pagelink:Home/LogicalModels/HdBe-Patient.guide.md}}
+- {{pagelink:Home/LogicalModels/HdBe-Nationality.guide.md}}
+- {{pagelink:Home/LogicalModels/HdBe-MaritalStatus.guide.md}}
+- {{pagelink:Home/LogicalModels/HdBe-LanguageProficiency.guide.md}}
+- {{pagelink:Home/LogicalModels/HdBe-ContactPerson.guide.md}}
 
 <div>
   <div class="tab">
@@ -61,8 +61,8 @@ This Patient profile contains mappings to the following CBBs:
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HdBe-Patient-01.guide.md}}</li>
-        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HdBe-Patient-02.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-Patient-01.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-Patient-02.guide.md}}</li>
       </ul>
   </div>
 

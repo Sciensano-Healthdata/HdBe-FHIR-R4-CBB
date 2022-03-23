@@ -62,10 +62,10 @@ select
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HdBe-HealthcareProvider-01.guide.md}}</li>
-        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HdBe-HealthcareProvider-02.guide.md}}</li>
-        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HdBe-HealthcareProvider-03.guide.md}}</li>
-        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HdBe-HealthcareProvider-04.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-HealthcareProvider-01.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-HealthcareProvider-02.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-HealthcareProvider-03.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-HealthcareProvider-04.guide.md}}</li>
       </ul>
   </div>
 
@@ -128,8 +128,8 @@ select
 
   <div id="Examples2" class="tabcontent">
       <ul>
-        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HdBe-HealthcareProvider-Organization-01.guide.md}}</li>
-        <li>{{pagelink:guides/HdBe-R4-CBB-v0.2/Home/Examples/HdBe-HealthcareProvider-Organization-02.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-HealthcareProvider-Organization-01.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-HealthcareProvider-Organization-02.guide.md}}</li>
       </ul>
   </div>
 
