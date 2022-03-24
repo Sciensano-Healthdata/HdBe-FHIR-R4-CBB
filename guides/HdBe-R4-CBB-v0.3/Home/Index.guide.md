@@ -9,6 +9,7 @@ This guide contains clinical building blocks (CBBs) and their related HL7 FHIR R
 | {{pagelink:Home/LogicalModels/HdBe-AddressInformation.guide.md, text:AddressInformation}} | {{pagelink:Home/Profiles/HdBe-AddressInformation.guide.md, text:AddressInformation}} | 
 | {{pagelink:Home/LogicalModels/HdBe-AlcoholUse.guide.md, text:AlcoholUse}} | In Progress | 
 | {{pagelink:Home/LogicalModels/HdBe-AnatomicalLocation.guide.md, text:AnatomicalLocation}} | {{pagelink:Home/Profiles/HdBe-AnatomicalLocation.guide.md, text:AnatomicalLocation}} | 
+| {{pagelink:Home/LogicalModels/HdBe-BodyTemperature.guide.md, text:BodyTemperature}} | In Progress | 
 | {{pagelink:Home/LogicalModels/HdBe-ContactInformation.guide.md, text:ContactInformation}} | {{pagelink:Home/Profiles/HdBe-ContactInformation.guide.md, text:ContactInformation}}| 
 | {{pagelink:Home/LogicalModels/HdBe-ContactPerson.guide.md, text:ContactPerson}} | {{pagelink:Home/Profiles/HdBe-ContactPerson.guide.md, text:ContactPerson}} and Patient   | 
 | {{pagelink:Home/LogicalModels/HdBe-HealthcareProvider.guide.md, text:HealthcareProvider}} | {{pagelink:Home/Profiles/HdBe-HealthcareProvider.guide.md, text:HealthcareProvider}} | 
