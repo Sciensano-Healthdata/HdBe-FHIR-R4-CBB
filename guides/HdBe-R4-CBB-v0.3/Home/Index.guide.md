@@ -11,6 +11,7 @@ This guide contains clinical building blocks (CBBs) and their related HL7 FHIR R
 | {{pagelink:Home/LogicalModels/HdBe-AnatomicalLocation.guide.md, text:AnatomicalLocation}} | {{pagelink:Home/Profiles/HdBe-AnatomicalLocation.guide.md, text:AnatomicalLocation}} | 
 | {{pagelink:Home/LogicalModels/HdBe-ContactInformation.guide.md, text:ContactInformation}} | {{pagelink:Home/Profiles/HdBe-ContactInformation.guide.md, text:ContactInformation}}| 
 | {{pagelink:Home/LogicalModels/HdBe-ContactPerson.guide.md, text:ContactPerson}} | {{pagelink:Home/Profiles/HdBe-ContactPerson.guide.md, text:ContactPerson}} and Patient   | 
+| {{pagelink:Home/LogicalModels/HdBe-DrugUse.guide.md, text:DrugUse}} | In Progress | 
 | {{pagelink:Home/LogicalModels/HdBe-HealthcareProvider.guide.md, text:HealthcareProvider}} | {{pagelink:Home/Profiles/HdBe-HealthcareProvider.guide.md, text:HealthcareProvider}} | 
 | {{pagelink:Home/LogicalModels/HdBe-HealthProfessional.guide.md, text:HealthProfessional}} | {{pagelink:Home/Profiles/HdBe-HealthProfessional.guide.md, text:HealthProfessional}} | 
 | {{pagelink:Home/LogicalModels/HdBe-LaboratoryTestResult.guide.md, text:LaboratoryTestResult}} | {{pagelink:Home/Profiles/HdBe-LaboratoryTestResult.guide.md, text:LaboratoryTestResult}} | 
