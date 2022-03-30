@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBe-TreatmentDirective2"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-TreatmentDirective2"/>
+   <name value="HdBeTreatmentDirective2">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-BehandelAanwijzing2"/>
+         </extension>
+      </extension>
+   </name>
+   <title value="HdBe TreatmentDirective2"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;A treatment directive contains a joint decision between a health professional (for example a general practitioner) and a patient or his representative(s) about the desirability of performing a certain treatment, such as resuscitation, before this treatment becomes (acute) necessary. &#xD;&#xA;When the need arises and the treatment cannot be discussed with the patient or representative (s), that decision is an important indication for the treating health professional (for example an ER doctor). &#xD;&#xA;The term treatment limit is a synonym of the term treatment directive.&#xD;&#xA;**Purpose**&#xD;&#xA;A good overview of treatment instructions based on the wishes of the patient or their authorized representative on (un)desired treatments is important in a patient’s care. A concise, orderly list is of particular importance in acute care situations. Due to the large variety of symptoms, the situation concerns not only a CPR setting, but also cases in which the patient’s condition rapidly worsens as a result of existing symptoms. &#xD;&#xA;A healthcare provider consulting this information can discuss these existing treatment instructions with the patient, the patient’s family or the patient’s authorized representative and possibly include the instructions in their policy.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Explanation for TreatmentCodeList: &#xD;&#xA;In discussions on constraints in the therapeutic treatment of patients with a chronic neurological or respiratory condition, respiration is sometimes included as a separate restriction. The ‘Respiration’ item is to be seen separately from the decisions on CPR.&#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Een behandelaanwijzing bevat een gezamenlijk besluit tussen een zorgverlener (bijvoorbeeld een huisarts) en een patiënt of diens vertegenwoordiger(s) over de wenselijkheid van het uitvoeren van een bepaalde behandeling, zoals een reanimatie, voordat deze behandeling (acuut) noodzakelijk wordt.&#xD;&#xA;Wanneer de noodzaak zich aandient en de behandeling niet kan worden besproken met de patiënt of vertegenwoordiger(s), is dat besluit een zwaarwegende aanwijzing voor de behandelend zorgverlener (bijvoorbeeld een SEH arts).&#xD;&#xA;De term Behandelgrens is een synoniem van de term BehandelAanwijzing.&#xD;&#xA;**Purpose**&#xD;&#xA;Een goed overzicht behandelaanwijzingen gebaseerd op de wensen van de patiënt of diens gevolmachtigde over (on)gewenste behandelingen is belangrijk bij de zorg voor de patiënt. Vooral in de acute situatie is een beknopte en overzichtelijke lijst van belang. Door de grote verscheidenheid van ziektebeelden gaat het niet alleen om een reanimatie setting maar ook om situaties waar ten gevolge van een bestaand ziektebeeld de conditie van de patiënt zeer snel achteruit gaat.&#xD;&#xA;Een zorgverlener die deze gegevens raadpleegt kan deze bestaande behandelaanwijzingen met de patiënt, zijn familie of gevolmachtigde bespreken en eventueel in het beleid opnemen.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Toelichting bij BehandelingCodelijst: &#xD;&#xA;Bij het overleg over beperkingen in het therapeutisch beleid voor patiënten met chronische neurologische of longaandoeningen, wordt beademing soms als aparte restrictie opgenomen. Het item ‘Beademen’ dient los gezien te worden van de beslissingen rond reanimeren. &#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (01-09-2020)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/treatment_directive"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="treatment_directive">
+         <path value="treatment_directive"/>
+         <short value="TreatmentDirective">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="BehandelAanwijzing"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Root concept of the TreatmentDirective2 information model. This concept contains all data elements of the TreatmentDirective2 information model. ">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen BehandelAanwijzing2. Dit concept bevat alle gegevenselementen van de bouwsteen BehandelAanwijzing2."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="treatment_directive"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+      </element>
+        <element id="treatment_directive.treatment_decision">
+         <path value="treatment_directive.treatment_decision"/>
+         <short value="TreatmentDecision">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="BehandelBesluit"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The joint decision taken with regard to the desirability of performing the indicated treatment.&#xD;&#xA;If the agreement is 'Other', 'Specification Other' shall contain the instructions for whether or not to carry out the treatment.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het gezamenlijk genomen besluit ten aanzien van de wenselijkheid van het uitvoeren van de aangegeven behandeling.&#xD;&#xA;Bij een besluit 'Anders' moet 'SpecificatieAnders' de aanwijzingen bevatten voor het al of niet uitvoeren van de behandeling."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="treatment_directive.treatment_decision"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="required"/>
+            <description value="TreatmentDecision codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/BehandelBesluit"/>
+         </binding>
+      </element>
+        <element id="treatment_directive.treatment">
+         <path value="treatment_directive.treatment"/>
+         <short value="Treatment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Behandeling"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The medical treatment to which the treatment instruction applies.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De medische behandeling waarop de behandelaanwijzing betrekking heeft."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="treatment_directive.treatment"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="required"/>
+            <description value="Treatment codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Behandeling"/>
+         </binding>
+      </element>
+        <element id="treatment_directive.specification_other">
+         <path value="treatment_directive.specification_other"/>
+         <short value="SpecificationOther">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="SpecificatieAnders"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Specification of the treatment decision when the decision is 'Other'.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Specificatie van het behandelbesluit indien het behandelbesluit 'Anders' is."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="treatment_directive.specification_other"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="string"/>
+            </type>
+      </element>
+        <element id="treatment_directive.most_recent_review_date">
+         <path value="treatment_directive.most_recent_review_date"/>
+         <short value="MostRecentReviewDate">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="MeestRecenteBespreekdatum"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The date on which the treatment directive has been agreed is with the patient and / or his representative (s). This can be the first time that the treatment directive have been discussed, but an existing treatment directive may also have been discussed again. The content of the treatment directive may have changed or remained the same.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De datum waarop de behandelaanwijzing is afgesproken is met de patiënt en/of zijn vertegenwoordiger(s). Dit kan de eerste keer zijn dat de behandelaanwijzing is besproken, maar ook kan de reeds bestaande behandelaanwijzing opnieuw besproken zijn. De inhoud van de behandelaanwijzing kan hierbij gewijzigd zijn of hetzelfde gebleven."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="treatment_directive.most_recent_review_date"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="dateTime"/>
+            </type>
+      </element>
+        <element id="treatment_directive.date_expired">
+         <path value="treatment_directive.date_expired"/>
+         <short value="DateExpired">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="DatumBeeindigd"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The date on which the treatment directive has been withdrawn and therefore no longer applies. An explicit decision must be taken about the 'date expired', in consultation between the responsible care provider and the patient or his representative(s).&#xD;&#xA;Any future termination can only be entered as a condition. Often this will be linked to 1 or more events.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De datum waarop de de behandelaanwijzing ingetrokken en dus niet meer van kracht is. Over de 'datum beëindigd' moet een expliciet besluit genomen worden in een overleg tussen verantwoordelijk zorgverlener en patiënt of diens vertegenwoordiger(s).&#xD;&#xA;Een eventuele beëindiging in de toekomst kan alleen worden ingevoerd als een voorwaarde. Vaak zal dit gekoppeld zijn aan 1 of meer gebeurtenissen."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="treatment_directive.date_expired"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="dateTime"/>
+            </type>
+      </element>
+        <element id="treatment_directive.reason_for_ending">
+         <path value="treatment_directive.reason_for_ending"/>
+         <short value="ReasonForEnding">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="RedenBeeindigd"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Reason why the agreement on a treatment directive no longer applies.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Reden waarom de afspraak over een behandel aanwijzing niet meer van toepassing is."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="treatment_directive.reason_for_ending"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="string"/>
+            </type>
+      </element>
+        <element id="treatment_directive.advance_directive">
+         <path value="treatment_directive.advance_directive"/>
+         <short value="AdvanceDirective">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Wilsverklaring"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="A (written) statement in which a person indicates wishes concerning future medical action, in the event that this person is at that point no longer (deemed) capable of taking decisions on the matter.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een (schriftelijke) verklaring waarin een persoon wensen aangeeft met betrekking tot toekomstig medisch handelen, voor het geval deze persoon op dat moment niet meer in staat is (of wordt geacht) hierover beslissingen te nemen."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="treatment_directive.advance_directive"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AdvanceDirective"/>
+         </type>
+      </element>
+        <element id="treatment_directive.agreement_party">
+         <path value="treatment_directive.agreement_party"/>
+         <short value="AgreementParty">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="AfspraakPartij"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Container of the Agreement concept.This container contains all data elements of the Agreement concept.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Container van het concept AfspraakPartij. Deze container bevat alle gegevenselementen van het concept AfspraakPartij."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="2"/>
+         <max value="*"/>
+         <base>
+                <path value="treatment_directive.agreement_party"/>
+                <min value="2"/>
+                <max value="*"/>
+            </base>
+         <type>
+                <code value="BackboneElement"/>
+            </type>
+      </element>
+        <element id="treatment_directive.agreement_party.patient">
+         <path value="treatment_directive.agreement_party.patient"/>
+         <short value="Patient">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Patient"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Patient as the person with whom the agreement was made.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Patiënt als de persoon met wie de afspraak gemaakt is."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="treatment_directive.agreement_party.patient"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Patient"/>
+         </type>
+      </element>
+        <element id="treatment_directive.agreement_party.representative">
+         <path value="treatment_directive.agreement_party.representative"/>
+         <short value="Representative">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Vertegenwoordiger"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Person who represents the patient in health care matters and with whom the agreement has been made (too).">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Persoon die de patiënt in gezondheidszorg zaken vertegenwoordigt en met wie de afspraak (mede) gemaakt is."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="treatment_directive.agreement_party.representative"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+         <type>
+                <code value="BackboneElement"/>
+            </type>
+      </element>
+        <element id="treatment_directive.agreement_party.representative.contact">
+         <path value="treatment_directive.agreement_party.representative.contact"/>
+         <short value="Contact">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Contactpersoon"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Root concept of the Contact information model. This root concept contains all data elements of the Contact information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Contactpersoon. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Contactpersoon."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="treatment_directive.agreement_party.representative.contact"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Contact"/>
+         </type>
+      </element>
+        <element id="treatment_directive.agreement_party.health_professional">
+         <path value="treatment_directive.agreement_party.health_professional"/>
+         <short value="HealthProfessional">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Zorgverlener"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="HealthProfessional who has made de agreement regarding the treatement directive.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Zorgverlener die de afspraak ten aanzien van de behandelaanwijzing heeft gemaakt"/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="treatment_directive.agreement_party.health_professional"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
+         </type>
+      </element>
+        <element id="treatment_directive.comment">
+         <path value="treatment_directive.comment"/>
+         <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The comment may include further information such as the reason why a treatment directive has been drawn up, persons who assisted the patient in agreeing the treatment directive but who are not otherwise involved in the agreement as a representative, etc.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="In de toelichting kan nadere informatie worden opgenomen zoals de reden waarom een behandelaanwijzing is opgesteld, personen die de patiënt hebben bijgestaan bij het afspreken van de behandelaanwijzing maar verder niet als vertegenwoordiger bij de afspraak zijn betrokken, enzovoort."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="treatment_directive.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="string"/>
+            </type>
+      </element>
+    </differential>
+</StructureDefinition>

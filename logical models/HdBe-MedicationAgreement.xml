@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBe-MedicationAgreement"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationAgreement"/>
+   <name value="HdBeMedicationAgreement">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-Medicatieafspraak"/>
+         </extension>
+      </extension>
+   </name>
+   <title value="HdBe MedicationAgreement"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;A medication agreement is a prescriber’s proposal for a patient to use medication. An agreement to discontinue the use of medication is also a medication agreement.&#xD;&#xA;**Purpose**&#xD;&#xA;The goal of the medication agreement is to provide insight into the agreements reached between the prescriber and the patient on the use of medication.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;**MedicationAgreementAdditionalInformation:**&#xD;&#xA;When choosing a medicine, you can deviate from what is expected or from what the standard is. For example, when the hospital uses a different formulary than the community pharmacy. For reasons of efficiency, for example, one gastric acid inhibitor has been chosen in the hospital: pantoprazole.&#xD;&#xA;Upon admission, a patient with omeprazole is converted to pantoprazole for the duration of the stay. When discharged, the patient goes back to omeprazole.&#xD;&#xA;It is clear that something can go wrong here and that the patient takes both omeprazole and pantoprazole when there is no intervention. In the hospital's medication agreement for pantoprazole a remark can be made about the deviation so that it is clear that pantoprazole is the substitute for omeprazole or that it should be used in addition to omeprazole.&#xD;&#xA;Another example are the half strengths. The hospital sometimes stocks tablets with half the strength of the normal trade preparation (own production). Where&#xA;                    the patient enters the hospital on 25 mg chlortalidone, half a tablet once a day, he receives 12.5 mg intramural chlortalidone, one tablet once a day. Then the nursing does not have to break tablets in this case. Here there is a risk that the patient will use the 25 mg again at home, but then a whole tablet at a time in stead of half a tablet. By means of an explanation in the medication agreement (Additional information) of the last chlortalidone 25 mg, it can be indicated whether this has been a intended increase.&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Een medicatieafspraak is het voorstel van een voorschrijver tot gebruik van medicatie door een patiënt. &#xD;&#xA;Ook de afspraak om het medicatiegebruik te staken is een medicatieafspraak. &#xD;&#xA;**Purpose**&#xD;&#xA;Het doel van de medicatieafspraak is inzicht te geven in de afspraken die zijn gemaakt tussen voorschrijver en patiënt over het gebruik van medicatie.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;**MedicatieafspraakAanvullendeInformatie:**&#xD;&#xA;Bij het kiezen van een geneesmiddel kan er worden afgeweken van wat er verwacht wordt of van wat de standaard is. Bijvoorbeeld wanneer het ziekenhuis een ander formularium hanteert dan de openbare apotheek. Uit efficiencyoverwegingen is in het ziekenhuis bijvoorbeeld gekozen voor één maagzuurremmer: pantoprazol. &#xD;&#xA;Bij opname wordt een patiënt met omeprazol omgezet naar pantoprazol voor de duur van het verblijf. Bij ontslag gaat de patiënt weer terug naar omeprazol.&#xD;&#xA;Het is duidelijk dat hier nog weleens wat mis kan gaan en dat de patiënt zowel omeprazol als pantoprazol slikt als er niet ingegrepen wordt. In de medicatieafspraak van het ziekenhuis voor pantoprazol kan een opmerking worden gemaakt over de afwijking zodat duidelijk is dat pantoprazol de vervanger is van omeprazol of juist naast omeprazol moet worden gebruikt.&#xD;&#xA;Ander voorbeeld zijn de halve sterktes. Het ziekenhuis heeft soms de beschikking over tabletten met de halve sterkte van het&#xA;                    normale handelspreparaat (eigen productie). Waar de patiënt het ziekenhuis ingaat met chlortalidon 25 mg, een maal daags een halve tablet krijgt hij intramuraal chlortalidon 12,5 mg, eenmaal daags één tablet. Dan hoeft de verpleging in dit geval geen tabletten te breken. Hier bestaat het risico dat de patiënt bij thuiskomst weer de 25 mg gaat gebruiken, maar dan een hele tablet per keer. Door een toelichting in de medicatieafspraak (Aanvullende informatie) van de laatste chlortalidon 25 mg kan worden aangegeven of dit een bewuste verhoging is geweest.&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (04-09-2017)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.1 (31-12-2017)&#xD;&#xA;Bevat: [ZIB-618](https://bits.nictiz.nl/browse/ZIB-618), [ZIB-643](https://bits.nictiz.nl/browse/ZIB-643).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (31-01-2020)&#xD;&#xA;Bevat: [ZIB-888](https://bits.nictiz.nl/browse/ZIB-888). &#xD;&#xA;&#xD;&#xA;Publicatieversie 1.2 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-911](https://bits.nictiz.nl/browse/ZIB-911), [ZIB-1020](https://bits.nictiz.nl/browse/ZIB-1020), [ZIB-1021](https://bits.nictiz.nl/browse/ZIB-1021).&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/medication_agreement"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="medication_agreement">
+         <path value="medication_agreement"/>
+         <short value="MedicationAgreement">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Medicatieafspraak"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Root concept of the MedicationAgreement information model. This root concept contains all data elements of the MedicationAgreement information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Medicatieafspraak. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Medicatieafspraak. "/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="medication_agreement"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+      </element>
+        <element id="medication_agreement.prescriber">
+         <path value="medication_agreement.prescriber"/>
+         <short value="Prescriber">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Voorschrijver"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The health professional that entered the medication agreement with the patient.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De zorgverlener die de medicatieafspraak met de patiënt heeft vastgelegd. "/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_agreement.prescriber"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="BackboneElement"/>
+            </type>
+      </element>
+        <element id="medication_agreement.prescriber.health_professional">
+         <path value="medication_agreement.prescriber.health_professional"/>
+         <short value="HealthProfessional">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Zorgverlener"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Root concept of the HealthProfessional information model. This root concept contains all data elements of the HealthProfessional information model.&#xD;&#xA;When referring to this information model the role the health professional fulfils in the healthcare process can be addressed additionally. For health professionals, this could be for example main practitioner or referrer.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Zorgverlener. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgverlener. &#xD;&#xA;Bij verwijzing naar deze bouwsteen kan tevens de rol die de zorgverlener in het zorgproces vervult, worden meegegeven. Voor zorgverleners kan dit bijvoorbeeld hoofdbehandelaar of verwijzer zijn"/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_agreement.prescriber.health_professional"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
+         </type>
+      </element>
+        <element id="medication_agreement.prescription_reason">
+         <path value="medication_agreement.prescription_reason"/>
+         <short value="PrescriptionReason">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="RedenVanVoorschrijven"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The medical reason for the prescription or for use of the medication. This can be used to enter a medical indication which was the direct cause for prescription or for use of the medication in question. &#xD;&#xA;&#xD;&#xA;It can concern every type of problem (or condition) of the patient, almost all diagnoses, complaints or symptoms. &#xD;&#xA;&#xD;&#xA;Please note: The BST401T file of the G standard contains a “special reference” to indicate that “exchange of the reason for prescription is essential”.&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De medische reden voor het voorschrijven of gebruik van de medicatie. Hiermee kan een medische indicatie worden doorgegeven die de directe aanleiding vormde voor het voorschrijven of het gebruik van de betreffende medicatie.&#xD;&#xA;&#xD;&#xA;Het kan gaan om ieder type probleem (of conditie) van de patiënt, vrijwel steeds een diagnose, een klacht of een symptoom.&#xD;&#xA;&#xD;&#xA;NB: Het bestand BST401T van de G-standaard bevat een &#34;bijzonder kenmerk&#34; om aan te geven dat het &#34;uitwisselen van de reden van voorschrijven noodzakelijk is&#34;."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_agreement.prescription_reason"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="BackboneElement"/>
+            </type>
+      </element>
+        <element id="medication_agreement.prescription_reason.problem">
+         <path value="medication_agreement.prescription_reason.problem"/>
+         <short value="Problem">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Probleem"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Root concept of the Problem information model.&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient himselve (in the form of a complaint) or by their healthprofessional (in the form of a diagnosis, for example). &#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Probleem.&#xD;&#xA;Een probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de patiënt zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose). "/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_agreement.prescription_reason.problem"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
+         </type>
+      </element>
+        <element id="medication_agreement.agreed_medicine">
+         <path value="medication_agreement.agreed_medicine"/>
+         <short value="AgreedMedicine">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Afgesprokengeneesmiddel"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The medicine agreed upon to be used.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het afgesproken te gebruiken geneesmiddel."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_agreement.agreed_medicine"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="BackboneElement"/>
+            </type>
+      </element>
+        <element id="medication_agreement.agreed_medicine.pharmaceutical_product">
+         <path value="medication_agreement.agreed_medicine.pharmaceutical_product"/>
+         <short value="PharmaceuticalProduct">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="FarmaceutischProduct"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Root concept of the PharmaceuticalProduct partial information model.This root concept contains all data elements of the PharmaceuticalProduct partial information model.&#xD;&#xA;&#xD;&#xA;The prescribed product is usually a medicine. However, medical aids and bandages can also be prescribed and supplied via the pharmacy. Strictly speaking, food and blood products do not belong in the medication category, but can be prescribed and supplied by a pharmacy as well. &#xD;&#xA;&#xD;&#xA;A type of medication can be indicated with **a single code**. That code can be chosen from several possible coding systems (concretely: GPK, PRK, HPK or article numbers). Correct use of these codes in the software systems will sufficiently record the composition of the product used, making a complete product specification unnecessary. &#xD;&#xA;&#xD;&#xA;In addition to a primary code, **alternative codes **from other coding systems can also be entered (so that the GPK can be sent along in the event that the patient was registered based on PRK, for example). &#xD;&#xA;&#xD;&#xA;Entering multiple ingredients will enable you to display a compound product. &#xD;&#xA;In that case, the **composition of the medication** can be specified implicitly (with the use of a medication code) or explicitly, for example by listing the (active) substance(s) of the medication. &#xD;&#xA;**Prescriptions to be prepared by the pharmacy** can be entered as well. This can be done by means of the option listed above to enter coded ingredients and/or by entering the composition and preparation method as free text.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de subbouwsteen FarmaceutischProduct. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen FarmaceutischProduct.&#xD;&#xA;&#xD;&#xA;Het voorgeschreven middel is vrijwel steeds een geneesmiddel. Hulp- en verbandmiddelen kunnen echter ook voorgeschreven en via de apotheek geleverd worden. Voedingsmiddelen en bloedproducten vallen strikt genomen niet onder de categorie geneesmiddelen, maar kunnen worden voorgeschreven, en door een apotheek geleverd worden.&#xD;&#xA;&#xD;&#xA;Het is mogelijk om met **één enkele code **een medicatiesoort aan te duiden, waarbij die code gekozen kan zijn uit meerdere mogelijke coderingssystemen (concreet GPK, PRK, HPK of artikelnummers). Door een juiste toepassing van deze codes in de softwaresystemen leggen deze codes de samenstelling van het gebruikte middel voldoende vast en is een complete productspecificatie niet nodig.&#xD;&#xA;&#xD;&#xA;Het is mogelijk om naast een primaire code ook **alternatieve codes **uit andere coderingssystemen aan te duiden (zodat bijvoorbeeld de GPK kan worden meegestuurd als is geregistreerd op basis van PRK). &#xD;&#xA;&#xD;&#xA;Door meerdere ingrediënten op te geven wordt het mogelijk om een samengesteld product weer te geven. &#xD;&#xA;&#xD;&#xA;Het is dan mogelijk om zowel impliciet te specificeren (door een medicatiecode te gebruiken) als expliciet de **samenstelling van de medicatie **aan te duiden, bijvoorbeeld door de (actieve) ingrediënt(en) van de medicatie te benoemen. &#xD;&#xA;&#xD;&#xA;Het is mogelijk om **magistrale receptuur **door te geven. Dit kan door bovenbedoelde mogelijkheid om gecodeerd ingrediënten aan te duiden en/of door de samenstelling en bereidingswijze als vrije tekst door te geven."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_agreement.agreed_medicine.pharmaceutical_product"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct"/>
+         </type>
+      </element>
+        <element id="medication_agreement.instructions_for_use">
+         <path value="medication_agreement.instructions_for_use"/>
+         <short value="InstructionsForUse">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Gebruiksinstructie"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Instructions for the use of the medication, e.g. dose and route of administration.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Aanwijzingen voor het gebruik van de medicatie, bijvoorbeeld dosering en toedieningsweg. "/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="Dosage"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-InstructionsForUse"/>
+         </type>
+      </element>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <element id="medication_agreement.medication_agreement_date_time">
+         <path value="medication_agreement.medication_agreement_date_time"/>
+         <short value="MedicationAgreementDateTime">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="MedicatieafspraakDatumTijd"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The time at which the agreement was made. &#xD;&#xA;Appointment date + time are required (order of the appointments must be clear in cases with multiple appointments on one day)">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het tijdstip waarop de afspraak gemaakt is.&#xD;&#xA;Afspraakdatum + tijd verplicht meegeven (er moet volgordelijkheid van de afspraken kunnen worden afgeleid bij meerdere medicatieafspraken op één dag)&#xD;&#xA;"/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_agreement.medication_agreement_date_time"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="dateTime"/>
+            </type>
+      </element>
+        <element id="medication_agreement.period_of_use">
+         <path value="medication_agreement.period_of_use"/>
+         <short value="PeriodOfUse">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Gebruiksperiode"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Start date: This is the time at which the agreement was to take effect (or took effect or will take effect). This is the time at which the instructions for use in this agreement start. In the case of an agreement to discontinue use, this is the start date of the original medication agreement. The end date indicates from when the medication is to be discontinued. &#xD;&#xA;&#xD;&#xA;**Duration:** The intended duration of use. E.g. 5 days or 8 weeks. It is not allowed to indicate the duration in months, because different months have a variable duration in days. &#xD;&#xA;&#xD;&#xA;**End date:** The time at which the period of use ends (or ended or will end). In the case of an agreement to discontinue use, this is the time at which the medication is to be discontinued. To avoid confusion between 'to' and 'up to', the submission of time is always mandatory for the end date. &#xD;&#xA;&#xD;&#xA;With medication for an indefinite period only a start date is indicated.&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="**Ingangsdatum**: Dit is het tijdstip waarop de afspraak ingaat (of is ingegaan of zal ingaan). Dit betreft het tijdstip waarop de in deze afspraak vastgelegde gebruiksinstructie ingaat. In geval van een afspraak om te stoppen betreft dit de ingangsdatum van de originele medicatieafspraak. De einddatum geeft aan vanaf wanneer de medicatie gestaakt moet worden.&#xD;&#xA;&#xD;&#xA;**Gebruiksduur**: De beoogde gebruiksduur. Bijvoorbeeld 5 dagen of 8 weken. Het is niet toegestaan om de gebruiksduur in maanden aan te geven, omdat verschillende maanden een variable duur in dagen hebben. &#xD;&#xA;&#xD;&#xA;**Einddatum**: Het tijdstip waarop de gebruiksperiode eindigt (of geëindigd is of zal eindigen). In het geval van een afspraak om het gebruik te staken betreft dit het tijdstip waarop de medicatie gestaakt moet worden. Om verwarring te voorkomen tussen 'tot' en 'tot en met' is het meegeven van de tijd altijd verplicht bij einddatum. &#xD;&#xA;Bij medicatie voor onbepaalde duur wordt er alleen een ingangsdatum aangegeven.&#xD;&#xA;"/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_agreement.period_of_use"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="BackboneElement"/>
+            </type>
+      </element>
+        <element id="medication_agreement.period_of_use.start_date_time">
+         <path value="medication_agreement.period_of_use.start_date_time"/>
+         <short value="startDateTime">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="startDatumTijd"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The start date and time of the interval">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De begindatum en tijd van het interval"/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_agreement.period_of_use.start_date_time"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="dateTime"/>
+            </type>
+      </element>
+        <element id="medication_agreement.period_of_use.end_date_time">
+         <path value="medication_agreement.period_of_use.end_date_time"/>
+         <short value="endDateTime">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="eindDatumTijd"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The end date and time of the interval">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De einddatum en tijd van het interval"/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_agreement.period_of_use.end_date_time"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="dateTime"/>
+            </type>
+      </element>
+        <element id="medication_agreement.period_of_use.duration">
+         <path value="medication_agreement.period_of_use.duration"/>
+         <short value="Duration">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="tijdsDuur"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The duration of the interval in appropriate units of time (*e.g.* days or hours, etc.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De tijdsduur van het interval in een gewenste tijdseenheid (bv. dagen of uren, etc.)."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_agreement.period_of_use.duration"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="Quantity"/>
+            </type>
+      </element>
+        <element id="medication_agreement.medication_agreement_stop_type">
+         <path value="medication_agreement.medication_agreement_stop_type"/>
+         <short value="MedicationAgreementStopType">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="MedicatieafspraakStopType"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Stop type, the manner in which this medication is discontinued (temporary or definitive).">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Stop type, de manier waarop gestopt wordt met deze medicatie (tijdelijk of definitief)."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_agreement.medication_agreement_stop_type"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="required"/>
+            <description value="MedicationAgreementStopType codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieafspraakStopType"/>
+         </binding>
+      </element>
+        <element id="medication_agreement.reason_medication_agreement">
+         <path value="medication_agreement.reason_medication_agreement"/>
+         <short value="ReasonMedicationAgreement">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="RedenMedicatieafspraak"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Reason for this agreement. This can be the reason to start, change or stop the medication treatment.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Reden voor het maken van deze medicatieafspraak. Dit kan de reden zijn om de medicatie te starten, te wijzigen of te stoppen."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_agreement.reason_medication_agreement"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="required"/>
+            <description value="ReasonMedicationAgreement codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/RedenMedicatieafspraak"/>
+         </binding>
+      </element>
+        <element id="medication_agreement.medication_agreement_additional_information">
+         <path value="medication_agreement.medication_agreement_additional_information"/>
+         <short value="MedicationAgreementAdditionalInformation">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="MedicatieafspraakAanvullendeInformatie"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Additional information includes details on the structure of the agreement made that are relevant for pharmacovigilance and fulfillment by the pharmacist. This can be used e.g. to indicate that there was a conscious decision to deviate from the norm or that the agreement is to be structured in a certain way.&#xD;&#xA;See also the Instructions section for more information about use of the element.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Aanvullende informatie bevat een lijst van bijzonderheden over de gemaakte afspraak die van belang zijn voor de medicatiebewaking en invulling door de apotheker. Hiermee kan bijvoorbeeld worden aangegeven dat er bewust is afgeweken van wat gebruikelijk is of dat de afspraak op een bepaalde manier moet worden ingevuld. &#xD;&#xA;Zie ook de sectie Instructions voor meer informatie over het gebruik."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="medication_agreement.medication_agreement_additional_information"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="required"/>
+            <description value="MedicationAgreementAdditionalInformation codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieafspraakAanvullendeInformatie"/>
+         </binding>
+      </element>
+        <element id="medication_agreement.comment">
+         <path value="medication_agreement.comment"/>
+         <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Comments regarding to the medication agreement. For example: in consultation with the medical specialist.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Opmerkingen met betrekking tot de medicatieafspraak. Bijvoorbeeld: in overleg met de specialist. "/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_agreement.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="string"/>
+            </type>
+      </element>
+    </differential>
+</StructureDefinition>
