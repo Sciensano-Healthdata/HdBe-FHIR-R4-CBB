@@ -195,7 +195,24 @@ Where:
 - The title will be constructed as: `[source ValueSet.name] to [target ValueSet.name]`
 
 #### Examples
-Examples are not conformance resources and lack the `.url`, `.name` and `.title` elements. However, to ensure consistency, the `.id` is standardized in the following way:
+Examples are provided as part of the logical models and the profiles. The goal of the example of a logical model is to provide functional information about the elements of a CBB. The goal of an example of the profile is to provide technical information on how an profile is implemented and should be represented.
+
+Examples of logical models are not offered as part of FHIR. Therefor, examples are provided as a markdown file. The file has the same name as the CBB-profile and ends with `.example.md.` For example `HdBe-BodyHeight.xml` <-> `HdBe-BodyHeight.example.md`.
+They have the following conventions:
+- For elements that represent a quantity, also provide the unit.
+- For elements that refer to a ValueSet, provide the code, the preferred name and the CodeSystem.
+
+*Example*:
+```
+| body_height      |                   |
+|------------------|-------------------|
+| height_value     |165 cm             |
+| height_date_time |2022-01-02         |
+| comment          |                   |
+| position |10904000 - Orthostatic body position (SNOMED CT)  |
+```
+
+Examples of profiles are not conformance resources and lack the `.url`, `.name` and `.title` elements. However, to ensure consistency, the `.id` is standardized in the following way:
 - `[profile id]-[unique string]`, capped to 64 characters where the unique string is usualy two digits.
 
 ### Folder structure and file name <a name="FolderStructureAndFileName"></a> 
@@ -263,8 +280,6 @@ However, for the CBB's we have decided to not take over these DefintionCodes bec
 For some concepts within a zib, examples are available in the export to FHIR logical models. These are mapped to `ElementDefinition.example`. 
 
 However, the quality of these examples is poor which is likely the result of storage as free text per concept within ART-DECOR. The `ElementDefinition.example` should ideally be using the concept's datatype. Often the example value of a coded concept is mapped to a `CodeableConcept.text` with the concept's DefinitionCode to `CodeadbleConcept.coding.` This might be very confusing for the readers as this does not represent how such a concept will be exchanged. Therefore, `ElementDefinition.example` is not used with the pre-populated values for the zib export. 
-
-To provide an example of the logical model, it should be added manually per concept in separate files so it shows in table format in the implementation guide.  
 
 ##	Miscellaneous <a name="miscellaneous"></a>
 To add.
