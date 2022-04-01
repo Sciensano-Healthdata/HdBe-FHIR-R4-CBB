@@ -1,5 +1,6 @@
 # {{page-title}}
 
+- {{pagelink:Home/Examples/HdBe-AlcoholUse-01.guide.md}} 
 - {{pagelink:Home/Examples/HdBe-ContactPerson-01.guide.md}}
 - {{pagelink:Home/Examples/HdBe-ContactPerson-02.guide.md}}
 - {{pagelink:Home/Examples/HdBe-HealthcareProvider-01.guide.md}}
