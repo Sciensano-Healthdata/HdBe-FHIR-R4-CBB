@@ -1,37 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<RelatedPerson xmlns="http://hl7.org/fhir">
-    <id value="HdBe-ContactPerson-01"/>
+<Practitioner xmlns="http://hl7.org/fhir">
+    <id value="HdBe-HealthProfessional-Practitioner-01"/>
     <meta>
-        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner"/>
     </meta>
-    <patient>
-        <reference value="Patient/HdBe-Patient-01" />
-        <type value="Patient" />
-        <display value="Belle Ulijn" />
-    </patient>
-    <relationship>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="70862002" />
-            <display value="Contact person" />
-        </coding>
-    </relationship>
-    <relationship>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="127849001" />
-            <display value="Husband" />
-        </coding>
-    </relationship>
+    <identifier>
+        <system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi" />
+        <value value="10079938" />
+    </identifier>
     <name>
         <use value="official" />
-        <text value="Berend Ulijn" />
-        <family value="Ulijn">
+        <text value="Enrico Penninx" />
+        <family value="Penninx">
             <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
-                <valueString value="Ulijn" />
+                <valueString value="Penninx" />
             </extension>
         </family>
-        <given value="Berend">
+        <given value="Enrico">
             <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
                 <valueCode value="BR" />
             </extension>
@@ -42,21 +27,24 @@
             <extension url="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification" >
                 <valueCodeableConcept>
                     <coding>
-                        <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse" />
-                        <code value="MC" />
-                        <display value="Mobile Phone" />
+                        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1" />
+                        <code value="LL" />
+                        <display value="Land Line" />
                     </coding>
                 </valueCodeableConcept>
             </extension>
         </system>
-        <value value="+3246258140" />
+        <value value="+32488171462" />
     </telecom>
     <telecom>
         <system value="email" />
-        <value value="BerendUlijn@mail.be" />
-        <use value="home" />    
+        <value value="EnricoPenninx@hospital.be" />
+        <use value="work" />
     </telecom>
     <address>
+        <extension url="http://hl7.org/fhir/StructureDefinition/language">
+            <valueCode value="nl" />
+        </extension>
         <extension url="https://fhir.healthdata.be/StructureDefinition/ext-AddressInformation.AddressType">
             <valueCodeableConcept>
                 <coding>
@@ -68,16 +56,16 @@
         </extension>
         <use value="home" />
         <type value="both" />
-        <line value="Rue de Boneffe 422">
+        <line value="Blekersdijk 264">
             <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
-                <valueString value="Rue de Boneffe" />
+                <valueString value="Blekersdijk" />
             </extension>
             <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
-                <valueString value="422" />
+                <valueString value="264" />
             </extension>
         </line>
-        <city value="Opont" />
-        <postalCode value="6852" />
+        <city value="Doel" />
+        <postalCode value="9130" />
         <country value="Belgium">
             <extension url="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification">
                 <valueCodeableConcept>
@@ -90,5 +78,5 @@
             </extension>
         </country>
     </address>
-</RelatedPerson>
-    
+    <gender value="male" />    
+</Practitioner>
