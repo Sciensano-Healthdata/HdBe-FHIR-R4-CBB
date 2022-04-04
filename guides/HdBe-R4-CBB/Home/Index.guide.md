@@ -23,9 +23,9 @@ This guide is divided into several pages which are listed at the top of each pag
     - _Table_: a tabular view of the example.
 - Artifacts Summary: These pages provide lists and overview pages per category for all relevant artefacts defined in this guide.
 
-## Index CBBs and CBB profiles
+## Index of CBBs and their related profiles
 
-| **CBB Logical Model** | **CBB Profiles** |  
+| **CBB Logical Model** | **FHIR Profiles** |  
 |---|---|
 | {{pagelink:Home/LogicalModels/HdBe-AddressInformation.guide.md, text:AddressInformation}} | {{pagelink:Home/Profiles/HdBe-AddressInformation.guide.md, text:AddressInformation}} |  
 | {{pagelink:Home/LogicalModels/HdBe-AnatomicalLocation.guide.md, text:AnatomicalLocation}} | {{pagelink:Home/Profiles/HdBe-AnatomicalLocation.guide.md, text:AnatomicalLocation}} | 
@@ -40,7 +40,7 @@ This guide is divided into several pages which are listed at the top of each pag
 | {{pagelink:Home/LogicalModels/HdBe-Patient.guide.md, text:Patient}} | {{pagelink:Home/Profiles/HdBe-Patient.guide.md, text:Patient}} | 
 
 ## Index of draft CBBs 
-The table below contains all CBBs that will be converted to the Belgium context. The CBBs listed here are the raw output of a conversion script are **have not** been worked on by Healthdate.be. Please also note that bound terminology is not yet available in this verion of the guide. Terminology artifacts and their binding to the CBBs have not yet been translated to English. This is a manual step that happens during the manual conversion of CBBs to the Belgium context.
+The table below contains all CBBs that will be fully converted to the Belgium context.CBBs listed here are the raw output of conversion scripts and **have not** been worked on by Healthdate.be. Please note that bound terminology is not yet available in this verion of the guide because terminology artifacts and their binding in the CBBs have not been translated to English yet. This is a manual step that happens during the manual conversion of CBBs to the Belgium context. Over time, this table will deminish as CBBs are added to the table above.
 
 | A-C | D-I | I-P | P-T |  
 |---|---|---|---|

@@ -2,7 +2,7 @@
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/[CBB-ID]'
+where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FamilyHistory'
 select 
 Profile: id,
 Version: version,
@@ -21,25 +21,25 @@ URL: url
 
   <div id="Rendered view" class="tabcontent" style="display:block">
     <br>
-      {{render:https://fhir.healthdata.be/StructureDefinition/LogicalModel/[CBB-ID], snapshot}}
+      {{render:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FamilyHistory, snapshot}}
   </div>
 
   <div id="Table view" class="tabcontent">
     <br>
-      {{table:https://fhir.healthdata.be/StructureDefinition/LogicalModel/[CBB-ID]}}
+      {{table:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FamilyHistory}}
   </div>
 
   <div id="Detailed descriptions" class="tabcontent">
    <br>
-      {{dict:https://fhir.healthdata.be/StructureDefinition/LogicalModel/[CBB-ID]}}
+      {{dict:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FamilyHistory}}
   </div>
 
   <div id="Example" class="tabcontent">
-      {{render:logical models/[CBB-ID].example.md}}
+      {{render:logical models/HdBe-FamilyHistory.example.md}}
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:logical models/[CBB-ID].doc.md}}
+      {{render:logical models/HdBe-FamilyHistory.doc.md}}
   </div>
 
 </div>
@@ -50,7 +50,7 @@ URL: url
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/[CBB-ID]'
+where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FamilyHistory'
 for differential.element
 select
 Path: path.substring((1 + path.indexOf('.'))),
