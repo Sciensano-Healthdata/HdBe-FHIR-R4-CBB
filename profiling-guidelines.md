@@ -22,6 +22,9 @@
     3.  [ElementDefinition](#elementdefinintion)
         1. [Usage of DefinitionCodes](#DefinitionCodes)
         2. [Usage of zib concept examples](#ZibConceptExamples)
+    4.  [Examples](#Examples)
+        1. [Logical mdel examples](#LogicalModelExamples)
+        2. [FHIR profile examples](#FHIRProfileExamples)
 8. [Miscellaneous](#miscellaneous)
 
 
@@ -195,7 +198,7 @@ Where:
 - The title will be constructed as: `[source ValueSet.name] to [target ValueSet.name]`
 
 #### Examples
-Examples are not conformance resources and lack the `.url`, `.name` and `.title` elements. However, to ensure consistency, the `.id` is standardized in the following way:
+Examples of profiles are not conformance resources and lack the `.url`, `.name` and `.title` elements. However, to ensure consistency, the `.id` is standardized in the following way:
 - `[profile id]-[unique string]`, capped to 64 characters where the unique string is usualy two digits.
 
 ### Folder structure and file name <a name="FolderStructureAndFileName"></a> 
@@ -264,7 +267,28 @@ For some concepts within a zib, examples are available in the export to FHIR log
 
 However, the quality of these examples is poor which is likely the result of storage as free text per concept within ART-DECOR. The `ElementDefinition.example` should ideally be using the concept's datatype. Often the example value of a coded concept is mapped to a `CodeableConcept.text` with the concept's DefinitionCode to `CodeadbleConcept.coding.` This might be very confusing for the readers as this does not represent how such a concept will be exchanged. Therefore, `ElementDefinition.example` is not used with the pre-populated values for the zib export. 
 
-To provide an example of the logical model, it should be added manually per concept in separate files so it shows in table format in the implementation guide.  
+### Examples <a name="Examples"></a>
+Examples are a vital part of any specification as they will allow the reader to easier understand the expectations. Every logical model and profile shall have at least one example. 
+Logical models examples are functional in nature: they provide examples of what kind of information belongs to a CBB in a non-technical format. FHIR profile examples are technical in nature. The logical model examples are primarily aimed at researchers and non-technical people. They provide an example of how a CBB  is initialized in the FHIR standard, in XML or JSON format, that conforms to the FHIR-profile for the respective CBB. These examples are aimed at developers and implementers of the technical specifications.   
+
+#### Logical mdel examples <a name="LogicalModelExamples"></a>
+Examples of logical models are not conformant to FHIR, and are therefore not represented in XML or JSON. Examples are provided in  table format in a seperate markdown file. The file has the same name as the CBB logical model but ends with `.example.md.` For example `HdBe-BodyHeight.xml` <-> `HdBe-BodyHeight.example.md`.
+The following conventions exist:
+- For elements that represent a quantity also provide the unit.
+- For elements that hold coded values: provide a code, the preferred display name and the CodeSystem. This format is used: '[code] - [display name] ([CodeSysem]).
+
+*Example*:
+```
+| body_height      |                   |
+|------------------|-------------------|
+| height_value     |165 cm             |
+| height_date_time |2022-01-02         |
+| comment          |                   |
+| position |10904000 - Orthostatic body position (SNOMED CT)  |
+```
+
+#### FHIR profile examples <a name="FHIRProfileExamples"></a>
+Examples of FHIR profiles are provided in either XML or JSON format and need to be a valid instance of the profile. Every example shall have at least one profile URL in the `.meta.profile` element to claim conformance. Examples are stored in the /examples folder.
 
 ##	Miscellaneous <a name="miscellaneous"></a>
 To add.
