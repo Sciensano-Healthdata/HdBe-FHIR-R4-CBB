@@ -12,6 +12,6 @@ Every CBB logical model will also have an example file that contains example val
 4. Keep the changes in the `.doc.md` changelog file.
 5. Check if the valueSets, NamingSystems e.d. that are used in the logical model are already in the `../terminology`folder. If they are not there, a guide is provided there on how to add them. 
 6. If all changes are incorporated, walk through the flat .xml file to see it there are no outstanding or odd parts. For example compare the adjusted logical model file with the  transformed logical model. Check if all changes are in the changelog.
-7. Fill the `.example.md` with each of the elements in the logical model.
+7. Fill the `.example.md` with at least one functional example containing preferrable all concepts of the logical model.
 8. Add an implementation guide page in the `../guides/HdBe-R4-CBB/LogicalModels` folder. 
 

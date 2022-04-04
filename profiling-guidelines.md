@@ -22,6 +22,9 @@
     3.  [ElementDefinition](#elementdefinintion)
         1. [Usage of DefinitionCodes](#DefinitionCodes)
         2. [Usage of zib concept examples](#ZibConceptExamples)
+    4.  [Examples](#Examples)
+        1. [Logical mdel examples](#LogicalModelExamples)
+        2. [FHIR profile examples](#FHIRProfileExamples)
 8. [Miscellaneous](#miscellaneous)
 
 
@@ -195,23 +198,6 @@ Where:
 - The title will be constructed as: `[source ValueSet.name] to [target ValueSet.name]`
 
 #### Examples
-Examples are provided as part of the logical models and the profiles. The goal of the example of a logical model is to provide functional information about the elements of a CBB. The goal of an example of the profile is to provide technical information on how an profile is implemented and should be represented.
-
-Examples of logical models are not offered as part of FHIR. Therefor, examples are provided as a markdown file. The file has the same name as the CBB-profile and ends with `.example.md.` For example `HdBe-BodyHeight.xml` <-> `HdBe-BodyHeight.example.md`.
-They have the following conventions:
-- For elements that represent a quantity, also provide the unit.
-- For elements that refer to a ValueSet, provide the code, the preferred name and the CodeSystem.
-
-*Example*:
-```
-| body_height      |                   |
-|------------------|-------------------|
-| height_value     |165 cm             |
-| height_date_time |2022-01-02         |
-| comment          |                   |
-| position |10904000 - Orthostatic body position (SNOMED CT)  |
-```
-
 Examples of profiles are not conformance resources and lack the `.url`, `.name` and `.title` elements. However, to ensure consistency, the `.id` is standardized in the following way:
 - `[profile id]-[unique string]`, capped to 64 characters where the unique string is usualy two digits.
 
@@ -280,6 +266,29 @@ However, for the CBB's we have decided to not take over these DefintionCodes bec
 For some concepts within a zib, examples are available in the export to FHIR logical models. These are mapped to `ElementDefinition.example`. 
 
 However, the quality of these examples is poor which is likely the result of storage as free text per concept within ART-DECOR. The `ElementDefinition.example` should ideally be using the concept's datatype. Often the example value of a coded concept is mapped to a `CodeableConcept.text` with the concept's DefinitionCode to `CodeadbleConcept.coding.` This might be very confusing for the readers as this does not represent how such a concept will be exchanged. Therefore, `ElementDefinition.example` is not used with the pre-populated values for the zib export. 
+
+### Examples <a name="Examples"></a>
+Examples are a vital part of any specification as they will allow the reader to easier understand the expectations. Every logical model and profile shall have at least one example. 
+Logical models examples are functional in nature: they provide examples of what kind of information belongs to a CBB in a non-technical format. FHIR profile examples are technical in nature. The logical model examples are primarily aimed at researchers and non-technical people. They provide an example of how a CBB  is initialized in the FHIR standard, in XML or JSON format, that conforms to the FHIR-profile for the respective CBB. These examples are aimed at developers and implementers of the technical specifications.   
+
+#### Logical mdel examples <a name="LogicalModelExamples"></a>
+Examples of logical models are not conformant to FHIR, and are therefore not represented in XML or JSON. Examples are provided in  table format in a seperate markdown file. The file has the same name as the CBB logical model but ends with `.example.md.` For example `HdBe-BodyHeight.xml` <-> `HdBe-BodyHeight.example.md`.
+The following conventions exist:
+- For elements that represent a quantity also provide the unit.
+- For elements that hold coded values: provide a code, the preferred display name and the CodeSystem. This format is used: '[code] - [display name] ([CodeSysem]).
+
+*Example*:
+```
+| body_height      |                   |
+|------------------|-------------------|
+| height_value     |165 cm             |
+| height_date_time |2022-01-02         |
+| comment          |                   |
+| position |10904000 - Orthostatic body position (SNOMED CT)  |
+```
+
+#### FHIR profile examples <a name="FHIRProfileExamples"></a>
+Examples of FHIR profiles are provided in either XML or JSON format and need to be a valid instance of the profile. Every example shall have at least one profile URL in the `.meta.profile` element to claim conformance. Examples are stored in the /examples folder.
 
 ##	Miscellaneous <a name="miscellaneous"></a>
 To add.
