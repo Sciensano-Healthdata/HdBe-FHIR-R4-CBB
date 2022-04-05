@@ -1,4 +1,5 @@
 # Clinical Building Blocks (CBB)
+The table below contains links to CBBs as logical models that have undergone manual adaptation to the national landscape by the healthdata.be team and their stakeholders. This table will be updated when CBBs are fully converted and gone through a propper review.
 
 | A - C | C - I | I - P | P - T |
 |---|---|---|---|
