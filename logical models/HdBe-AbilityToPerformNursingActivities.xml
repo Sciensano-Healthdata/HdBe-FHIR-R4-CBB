@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBe-AbilityToPerformNursingActivities"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AbilityToPerformNursingActivities"/>
+   <name value="HdBeAbilityToPerformNursingActivities">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-VermogenTotVerpleegtechnischeHandelingen"/>
+         </extension>
+      </extension>
+   </name>
+   <title value="HdBe AbilityToPerformNursingActivities"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;When taking care of a patient with a disease or disability, parents, children and other caretakers often carry out nursing interventions. Adults and older children may carry out nursing interventions by themselves. Therefore skills training is needed for caregivers/ children. Qualification is required for correct performing of an intervention and also knowledge about what to do in case of complications. &#xD;&#xA;The assessment of the degree to which the intervention can be performed independently refers only to the indicated intervention.&#xD;&#xA;**Purpose**&#xD;&#xA;Information about the qualification of skill for performing a specific nursing intervention is necessary to provide parents, children and other caregivers appropriate support for the care of the patient.&#xD;&#xA;**Evidence Base**&#xD;&#xA;In order to indicate to whom the defined skills relate, use is made of one of the implicit concepts of the information model: the subject of the data. Usually, this is the patient in which case it will not be explicitly mentioned. If the data relates to a different person, this can be indicated by means of a reference to e.g. the information model Contactperson.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Bij de zorg voor een patiënt met een bepaalde aandoening of beperking worden vaak ‘verpleegtechnische’ handelingen door ouders, kinderen en/of mantelzorgers uitgevoerd. Volwassenen en oudere kinderen kunnen soms zelf ook bepaalde handelingen moeten uitvoeren. Het leren om handelingen uit te voeren vraagt om gerichte training/scholing. Bekwaamheid betreft niet alleen de correcte uitvoer van een bepaalde handeling, maar ook kennis over wat te doen bij complicaties. De beoordeling van de mate waarin de handeling zelfstandig uitgevoerd kan worden heeft uitsluitend betrekking op de aangegeven handeling.&#xD;&#xA;**Purpose**&#xD;&#xA;Informatie over de mate van bekwaamheid van het uitvoeren van een bepaalde verpleegtechnische handeling is nodig om ouders, kinderen en/of mantelzorgers passende ondersteuning te bieden bij de verzorging van de patiënt.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Om aan te duiden op wie de vastgelegde bekwaamheid betrekking heeft, wordt gebruikt gemaakt van één van de impliciete concepten van de bouwsteen, namelijk het subject van de gegevens. Meestal is dit de patient en zal deze niet expliciet vermeld worden. Indien de gegevens betrekking hebben op een ander kan dit worden aangegeven door middel van een verwijzing naar b.v. de bouwsteen contactpersoon.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (04-09-2017)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.1 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-1115](https://bits.nictiz.nl/browse/ZIB-1115).&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/ability_to_perform_nursing_activities"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="ability_to_perform_nursing_activities">
+         <path value="ability_to_perform_nursing_activities"/>
+         <short value="AbilityToPerformNursingActivities">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VermogenTotVerpleegtechnischeHandelingen"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Root concept of the AbilityToPerformNursingActivities information model. This root concept contains all data elements of the AbilityToPerformNursingActivities information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen VermogenTotVerpleegtechnischeHandelingen. Dit rootconcept bevat alle gegevenselementen van de bouwsteen VermogenTotVerpleegtechnischeHandelingen."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="ability_to_perform_nursing_activities"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+      </element>
+        <element id="ability_to_perform_nursing_activities.nursing_intervention">
+         <path value="ability_to_perform_nursing_activities.nursing_intervention"/>
+         <short value="NursingIntervention">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VerpleegkundigeInterventie"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Specification of nursing interventions where the skills relate to.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Specificatie van de verpleegkundige handelingen waar bekwaamheid betrekking op heeft"/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="ability_to_perform_nursing_activities.nursing_intervention"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NursingIntervention"/>
+         </type>
+      </element>
+        <element id="ability_to_perform_nursing_activities.perform_nursing_activity">
+         <path value="ability_to_perform_nursing_activities.perform_nursing_activity"/>
+         <short value="PerformNursingActivity">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VerrichtenVPKHandeling"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Qualification of the degree of independence when performing certain (nursing) interventions.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Kwalificatie vanmate van onafhankelijkheid bij de uitvoer van bepaalde (verpleegtechnische) handelingen."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="ability_to_perform_nursing_activities.perform_nursing_activity"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="required"/>
+            <description value="PerformNursingActivity codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/VerrichtenVPKHandeling"/>
+         </binding>
+      </element>
+    </differential>
+</StructureDefinition>

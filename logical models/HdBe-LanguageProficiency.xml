@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBe-LanguageProficiency"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LanguageProficiency"/>
+   <name value="HdBeLanguageProficiency">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-Taalvaardigheid"/>
+         </extension>
+      </extension>
+   </name>
+   <title value="HdBe LanguageProficiency"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Linguistic proficiency is the ability to express oneself in a certain language and understand statements made in that language. This includes both oral and written communication.&#xD;&#xA;**Purpose**&#xD;&#xA;Patients who are not fluent in the language of communication often have trouble asking for help and understanding the aids. Recording and communicating language problems offers other health professionals this knowledge. This informs them of any possible communication problems. &#xD;&#xA;Furthermore, you can record whether the patient is fluent in another language, so that a translator can be called in to communicate with the patient if needed.&#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Taalvaardigheid is het vermogen zich uit te drukken in een taal en mededelingen gedaan in die taal te begrijpen. Het gaat daarbij zowel om mondelinge als schriftelijke communicatie.&#xD;&#xA;**Purpose**&#xD;&#xA;Patiënten die de communicatie taal niet of niet goed beheersen hebben vaak moeite met het vragen om hulp en het begrijpen van de hulpverlening. Het vastleggen en communiceren van taalproblemen biedt andere zorgverleners hiervan kennis te nemen. Hierdoor zijn zij geattendeerd op mogelijke communicatieproblemen.&#xD;&#xA;Bovendien kan vastgelegd worden of er een andere taal is die de patiënt wel beheerst, zodat voor de communicatie met de patiënt eventueel de hulp van een tolk ingeroepen kan worden.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (01-07-2015)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.1 (04-09-2017)&#xD;&#xA;Bevat: [ZIB-530](https://bits.nictiz.nl/browse/ZIB-530), [ZIB-538](https://bits.nictiz.nl/browse/ZIB-538), [ZIB-549](https://bits.nictiz.nl/browse/ZIB-549)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.2 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-983](https://bits.nictiz.nl/browse/ZIB-983), [ZIB-1192](https://bits.nictiz.nl/browse/ZIB-1192).&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/language_proficiency"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="language_proficiency">
+         <path value="language_proficiency"/>
+         <short value="LanguageProficiency">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Taalvaardigheid"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Root concept of the LanguageProficiency information model. This concept contains all data elements of the LanguageProficiency information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Taalvaardigheid. Dit concept bevat alle gegevenselementen van de bouwsteen Taalvaardigheid."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="language_proficiency"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+      </element>
+        <element id="language_proficiency.communication_language">
+         <path value="language_proficiency.communication_language"/>
+         <short value="CommunicationLanguage">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="CommunicatieTaal"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The language of communication.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De taal waarin de communicatie plaatsvindt."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="language_proficiency.communication_language"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="required"/>
+            <description value="CommunicationLanguage codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/CommunicatieTaal"/>
+         </binding>
+      </element>
+        <element id="language_proficiency.language_control_listening">
+         <path value="language_proficiency.language_control_listening"/>
+         <short value="LanguageControlListening">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="TaalvaardigheidBegrijpen"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The ability to understand spoken text in the language in question.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het vermogen om in de betreffende taal uitgesproken tekst te verstaan en begrijpen. Het gaat hierbij om het taaltechnische aspect"/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="language_proficiency.language_control_listening"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="required"/>
+            <description value="LanguageControlListening codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/TaalvaardigheidBegrijpen"/>
+         </binding>
+      </element>
+        <element id="language_proficiency.language_control_speaking">
+         <path value="language_proficiency.language_control_speaking"/>
+         <short value="LanguageControlSpeaking">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="TaalvaardigheidSpreken"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The ability to express oneself in spoken language.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het vermogen om zich in de betreffende taal mondeling uit te kunnen drukken."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="language_proficiency.language_control_speaking"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="required"/>
+            <description value="LanguageControlSpeaking codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/TaalvaardigheidSpreken"/>
+         </binding>
+      </element>
+        <element id="language_proficiency.language_control_reading">
+         <path value="language_proficiency.language_control_reading"/>
+         <short value="LanguageControlReading">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="TaalvaardigheidLezen"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The ability to understand written text in he language in question.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het vermogen om in de betreffende taal geschreven tekst te kunnen lezen en begrijpen. Het gaat hierbij om het taaltechnische aspect"/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="language_proficiency.language_control_reading"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="required"/>
+            <description value="LanguageControlReading codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/TaalvaardigheidLezen"/>
+         </binding>
+      </element>
+        <element id="language_proficiency.communication_details">
+         <path value="language_proficiency.communication_details"/>
+         <short value="CommunicationDetails">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="CommunicatieBijzonderheden"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Additional ways or tools that the person uses to communicate, such as braille, sign language, etc.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Additionele wijzen of hulpmiddelen die de persoon gebruikt om te kunnen communiceren, zoals brailleschrift, gebarentaal etc."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="language_proficiency.communication_details"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="extensible"/>
+            <description value="CommunicationDetails codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/CommunicatieBijzonderheden"/>
+         </binding>
+      </element>
+        <element id="language_proficiency.comment">
+         <path value="language_proficiency.comment"/>
+         <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="A comment on the linguistic proficiency. When using sign language, this field can be used to clarify, for example, which sign language is used. This can be informative, as there is not always a one-to-one relationship between the spoken language and sign language.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een toelichting op de taalvaardigheid. Bij gebruik van gebarentaal kan dit veld worden gebruikt om bijvoorbeeld te verduidelijken welke gebarentaal wordt gebruikt. Dit kan informatief zijn, omdat er niet altijd een één-op-één-relatie is tussen de gesproken taal en gebarentaal."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="language_proficiency.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="string"/>
+            </type>
+      </element>
+    </differential>
+</StructureDefinition>
