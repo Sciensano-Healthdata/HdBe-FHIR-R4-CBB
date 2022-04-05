@@ -40,7 +40,8 @@ This guide is divided into several pages which are listed at the top of each pag
 | {{pagelink:Home/LogicalModels/HdBe-Patient.guide.md, text:Patient}} | {{pagelink:Home/Profiles/HdBe-Patient.guide.md, text:Patient}} | 
 
 ## Index of draft CBBs 
-The table below contains all CBBs that will be fully converted to the Belgium context.CBBs listed here are the raw output of conversion scripts and **have not** been worked on by Healthdate.be. Please note that bound terminology is not yet available in this verion of the guide because terminology artifacts and their binding in the CBBs have not been translated to English yet. This is a manual step that happens during the manual conversion of CBBs to the Belgium context. Over time, this table will deminish as CBBs are added to the table above.
+The table below contains all CBBs, as raw output of conversion scripts, that will be reviewed and adapted to the national landscape by the healthdata.be team and their stakeholders.The CBBs **have not** been worked on yet. They are merely added for informative use. Over time, this table will diminish as CBBs are added to the table above.
+
 
 | A-C | D-I | I-P | P-T |  
 |---|---|---|---|
