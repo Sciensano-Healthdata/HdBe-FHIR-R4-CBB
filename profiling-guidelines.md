@@ -29,17 +29,17 @@
 
 
 ## Introduction <a name="introduction"></a>
-This document is titled "profiling guidelines", but actually addresses all conformance resources (profiles, extensions, value sets, code systems, CapabilityStatements) and associated examples. We use these terms somewhat interchangeably throughout this document; 'profile' can usually be read as 'the whole set of conformance resources'.
+This document is titled "profiling guidelines" but actually addresses all conformance resources (profiles, extensions, value sets, code systems, CapabilityStatements) and associated examples. We use these terms somewhat interchangeably throughout this document; 'profile' can usually be read as 'the whole set of conformance resources'.
 
 ### Language <a name="language"></a>
-FHIR conformance materials will be created in English in order to encourage adoption. A method to include translations to French and Dutch will be investigated and described in a future version.
+FHIR conformance materials will be created in English to encourage adoption. A method to include translations to French and Dutch will be investigated and described in a future version.
 
 ## Open vs. closed world modeling <a name="openvsclosedworldmodeling"></a>
-When profiling, a "closed world" or an "open world" model can be chosen. The former means that the profile only allows the elements to be used specified by the logical model, with all the restrictions from the logical model. The latter means that the profile can accommodate the elements specified by the logical model, but doesn't impose further restrictions.
+When profiling, a "closed world" or an "open-world" model can be chosen. The former means that the profile only allows the elements to be used specified by the logical model, with all the restrictions from the logical model. The latter means that the profile can accommodate the elements specified by the logical model, but doesn't impose further restrictions.
 
-We adopt the "open world" modeling approach to aid re-usability beyond the known use cases. When restrictions are deemed necessary for a specific use case, it will be added to the use case specific profiles. We only profile elements, cardinalities and bindings that require profiling. We leave other elements, cardinalities and bindings as-is.
+We adopt the "open world" modelling approach to aid re-usability beyond the known use cases. We only profile elements, cardinalities and bindings that require profiling. We leave other elements, cardinalities and bindings as-is. When restrictions are deemed necessary for a specific use case, we will add to the use-case specific profiles.
 
-The following table from the [Nictiz profiling guidelines](https://informatiestandaarden.nictiz.nl/wiki/FHIR:V1.0_FHIR_Profiling_Guidelines_R4#Open_vs._closed_world_modeling) provides an overview of the pro's and cons: 
+The following table from the [Nictiz profiling guidelines](https://informatiestandaarden.nictiz.nl/wiki/FHIR:V1.0_FHIR_Profiling_Guidelines_R4#Open_vs._closed_world_modeling) provides an overview of the pros and cons: 
 
 |   ×  |  Open       |        Closed      |
 |:-----|:------------|:-------------------|
@@ -51,21 +51,21 @@ Most, if not all, conformance resources are based on an underlying logical model
 
 ### Layering: zibs, healthdata.be CBB and use case specific models<a name="layering"></a>
 #### zibs <a name="zibs"></a>
-The basis for most clinical buildig blocks are formed by the Dutch 'zibs' ('Zorginformatiebouwstenen'), in English also known as are Clinical Information Models (CIMs), Health and Care Information Models (HCIMs) or Clinical Building Blocks (CBB) -- we will use the Dutch term 'zib' for all profiling work as it has become a recognizable term over the past years. The zibs are defined by the program ‘Registratie aan de bron’ (Data capture at the point of care) and provide a foundation of use case neutral building blocks from which use cases can be built. The formal definition of the zibs can be found on the [zibs wiki](https://zibs.nl/) and are also imported into [ART-DECOR](https://decor.nictiz.nl/art-decor/decor-project--zib2020bbr-). Next, these zibs are exported as logical models in FHIR format using StructureDefinition, ValueSet and CodeSystem resources.
+The basis for most clinical building blocks is formed by the Dutch 'zibs' ('Zorginformatiebouwstenen'), in English, also known as are Clinical Information Models (CIMs), Health and Care Information Models (HCIMs) or Clinical Building Blocks (CBB) -- we will use the Dutch term 'zib' for all profiling work as it has become a recognizable term over the past years. The program 'Registratie aan de bron' (Data capture at the point of care) defines and maintains the zib. These zibs provide a foundation of use case neutral building blocks from which use cases can be built. The formal definition of the zibs can be found on the [zibs wiki](https://zibs.nl/) and is also imported into [ART-DECOR](https://decor.nictiz.nl/art-decor/decor-project--zib2020bbr-). Next, these zibs are exported as logical models in FHIR format using StructureDefinition, ValueSet and CodeSystem resources.
 
 #### Healthdata.be CBB <a name="healthdatacbb"></a>
-The zibs are used as a starting point to create a clinical building block that represents the Belgium and healthdata.be context. Unfortunately, a technical dependency is not possible because many of the required changes for the Belgium context are not compatible with the zibs which primarily describe use within the Dutch Realm.
-Changes to the zib are recorded in a [changelog file](#changelog) for every CBB. Dutch specific text is removed or rewritten at the authors interpretation. Mentions of zibs are replaced with CBBs. Substantial changes are discussed with Nictiz and logged in their issue management system and logged in the changelog.
+The zibs are used as a starting point to create a clinical building block that represents the Belgium and healthdata.be context. Unfortunately, a technical dependency is not possible because many of the required changes for the Belgium context are not compatible with the zibs, which primarily describe use within the Dutch Realm.
+Changes to the zib are recorded in a [changelog file](#changelog) for every CBB. Dutch specific text is removed or rewritten at the author's interpretation. Mentions of zibs are replaced with CBBs. Substantial changes are discussed with Nictiz, logged in their issue management system, and logged in the changelog.
 The FHIR conformance resources will be created based on the healthdata.be CBBs.
 
 #### Use case specific models<a name="usecasespecificmodels"></a>
 Use cases and exchange patterns use and potentially refine the healthdata.be CBBs information model to specific situations or applications.
 
 ### Associating the logical definition to StructureDefinitions <a name="associatingthelogicaldefinitiontostructuredefinitions"></a>
-Any StructureDefinition that profiles a Resource does so because there is some kind of logical definition ''dictating'' how. Profiles SHALL have a traceable relationship with their logical counterpart(s).
-`ElementDefinition.mapping`: is a free text mapping ''inside'' the profile. We use the mapping elements in profiles to map logical elements to resource elements. Logical elements are referenced based on their `element.path` in the logical model. The mapping SHALL resolve to the logical model.
+Any StructureDefinition that profiles a Resource does so because there is some kind of logical definition "dictating" how. Profiles SHALL have a traceable relationship with their logical counterpart(s).
+`ElementDefinition.mapping`: is a free text mapping "inside" the profile. We use the mapping elements in profiles to map logical elements to resource elements. Logical elements are referenced based on their `element.path` in the logical model. The mapping SHALL resolve to the logical model.
 
-When slicing, the mapping is made on the ''content'' of the slice, not the slice itself. 
+When slicing, the mapping is made on the "content" of the slice, not the slice itself. 
 
 On the root element of the StructureDefinition, the mapping should thus be defined as:
 ``` xml
@@ -99,7 +99,7 @@ In general terms, FHIR conformance resources could be affected at several differ
 
 Regarding points 1 and 2: Healthdata.be uses the package level as the main versioning mechanism. As a result, the conformance resources within the package are not individually versioned; they should be regarded as a consistent set. To identify the package version a conformance resource, its version number MAY be set to the package version.
 
-Regarding point 4: the life cycle of the underlying data model is not reflected directly in the version number of the conformance resources, but a change in de the underlying data could result in a change in one or more of the conformance resources. In this case, the normal SemVer rules will determine what happens; if some of the conformance resources need to be changed in a backwards-compatible way, a new patch release of the package should be made, if major functionality is added, a new minor version of the package should be released, etc. When a new version of the underlying data model reflects a fundamental change, the choice can be made to create a new package under a different name rather than a new version.
+Regarding point 4: the life cycle of the underlying data model is not reflected directly in the version number of the conformance resources, but a change in de the underlying data could result in a change in one or more of the conformance resources. In this case, the normal SemVer rules will determine what happens; if some of the conformance resources need to be changed in a backwards-compatible way, a new patch release of the package should be made. If major functionality is added, a new minor version of the package should be released, etc. When a new version of the underlying data model reflects a fundamental change, the choice can be made to create a new package under a different name rather than a new version.
 
 Version updates of conformance resources normally do not affect their canonical URI. Any resource that references another resource normally does so without a version indicator (uri|version). Instead, this is handled at the package level; reference targets either reside within the same package or in a versioned package that has been added as a dependency.
 
@@ -145,15 +145,15 @@ Example:
 Sometimes a concept cannot be implemented using the building blocks FHIR offers by default. In this case, an extension might be used to implement such a concept. Keep in mind that extensions are often seen as a burden for implementers:
 
 - If it possible to model the concept (cleanly) without an extension, this is usually the preferred way.
-- If that's not possible, check if HL7 or other reliable standardisation organizations provide an extension to implement the concept.
+- If that's not possible, check if HL7 or other reliable standardization organizations provide an extension to implement the concept.
 - If that's not possible and after discussing the concept with the HL7 FHIR community (on chat.fhir.org), try to create an extension in a reusable way (or reuse a previously defined extension).
 - If that's not possible, create an extension specific for the resource/profile.
 
-Usually, mappings for the concept, bindings to specific ValueSets and any functional descriptions will be added when the extension is used within a profile. When the extension pertains to a particular profile or resource, this information SHALL be added to the extension. To aid rendering purposes, functional descriptions and implementation guidance are placed on the extension root rather than the `Extension.value[x]` (except for terminology bindings). Without constraints, most snapshots generators will only include the root element into the profile that hosts the extension. So placing the information on extension makes sure the information is visible in the profile without  the need to navigate into the extension by the implementer.
+Usually, mappings for the concept, bindings to specific ValueSets and any functional descriptions will be added when the extension is used within a profile. When the extension pertains to a particular profile or resource, this information SHALL be added to the extension. To aid rendering purposes, functional descriptions and implementation guidance are placed on the extension root rather than the `Extension.value[x]` (except for terminology bindings). Without constraints, most snapshots generators will only include the root element in the profile that hosts the extension. So placing the information on the extension makes sure the information is visible in the profile without the need to navigate into the extension by the implementer.
 
-#	Practical guidelines <a name="practicalguidelines"></a>
-##	Identity of artifacts <a name="identityofartifacts"></a>
-###	Canonical URL, id, name and title <a name="CanonicalURLIdNameTitle"></a>  
+#   Practical guidelines <a name="practicalguidelines"></a>
+##  Identity of artifacts <a name="identityofartifacts"></a>
+### Canonical URL, id, name and title <a name="CanonicalURLIdNameTitle"></a>  
 Conformance resources can have multiple types of identifying information, which are related at some level:
 - `.url`   The canonical URL, which is the external identifier for conformance resources. All conformance resources SHALL have a canonical URL. This URL is preferably resolvable but does not have to be processable. Canonical URL's are about the identity of artifacts, not necessarily about retrieval location. Canonical URLs aren't meant to be human recognizable.
 - `.id` This should align with the latter part of the canonical URL.
@@ -199,7 +199,7 @@ Where:
 
 #### Examples
 Examples of profiles are not conformance resources and lack the `.url`, `.name` and `.title` elements. However, to ensure consistency, the `.id` is standardized in the following way:
-- `[profile id]-[unique string]`, capped to 64 characters where the unique string is usualy two digits.
+- `[profile id]-[unique string]`, capped to 64 characters where the unique string is usually two digits.
 
 ### Folder structure and file name <a name="FolderStructureAndFileName"></a> 
 - logical models
@@ -218,7 +218,7 @@ Examples of profiles are not conformance resources and lack the `.url`, `.name` 
     - `terminology/NamingSystem-[name].xml`  
 - examples
     - `examples/[profile id]-[serial number, two digits].xml`
-##	Metadata <a name="metadata"></a>
+##  Metadata <a name="metadata"></a>
 ### StructureDefinition <a name="StructureDefinition"></a> 
 - version: none
 - status: as applicable (normally draft or active)
@@ -242,7 +242,7 @@ Examples of profiles are not conformance resources and lack the `.url`, `.name` 
         - For extension representing a specific concept: "This extension represents the [concept name] of [name of the building block]]", followed by a link to the functional description.
         - For other extensions this will usually be absent.
         - Note: for extensions and datatype profiles, guidance for profilers may be placed here as well.
-- copyright: "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."
+- copyright: "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example, a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third-party IP in connection with the specification or otherwise."
 
 ### ValueSets <a name="ValueSets"></a>
 
@@ -254,27 +254,27 @@ The zib export and Nictiz FHIR profiles contain Dutch naming for ValueSets becau
 
 Practically, this means that the ValueSets elements `.id`, `.url`, `.name`, `.title` and `.description` and the file name are translated. These changes are not recorded in the changelog files.
 
-##	ElementDefinition <a name="ElementDefinintion"></a>
+##  ElementDefinition <a name="ElementDefinintion"></a>
 Logical models and FHIR profiles are represented using [StructureDefinition resources](https://www.hl7.org/fhir/R4/structuredefinition.html). Every StructureDefinition has 1..* elements of the [ElementDefinition type](https://www.hl7.org/fhir/R4/elementdefinition.html#ElementDefinition). One element describes exactly one concept. Every zib and CBB concept is mapped and described by an ElementDefinition. 
 
 ### Usage of DefinitionCodes <a name="DefinitionCodes"></a>
 For some concepts within a zib, a DefinitionCode is assigned. A DefinitionCode matches with the meaning of a concept. The export of zibs to FHIR logical models rightfully maps the DefinitionCode to `ElementDefinition.code`.
 
-However, for the CBB's we have decided to not take over these DefintionCodes because they are often not well suited or outdated. Furthermore, they are not of much value inside profiles because the element's definition provides sufficient meaning: the semantics of concepts are made clear by their definition and when mapped to FHIR resources, they are backed up by those definitions.
+However, for the CBBs, we have decided not to take over these DefintionCodes because they are often not well suited or outdated. Furthermore, they are not of much value inside profiles because the element's definition provides sufficient meaning: the semantics of concepts are made clear by their definition, and when mapped to FHIR resources, they are backed up by those definitions.
 
 ### Usage of zib concept examples <a name="ZibConceptExamples"></a>
 For some concepts within a zib, examples are available in the export to FHIR logical models. These are mapped to `ElementDefinition.example`. 
 
-However, the quality of these examples is poor which is likely the result of storage as free text per concept within ART-DECOR. The `ElementDefinition.example` should ideally be using the concept's datatype. Often the example value of a coded concept is mapped to a `CodeableConcept.text` with the concept's DefinitionCode to `CodeadbleConcept.coding.` This might be very confusing for the readers as this does not represent how such a concept will be exchanged. Therefore, `ElementDefinition.example` is not used with the pre-populated values for the zib export. 
+The `ElementDefinition.example` should use the concept's datatype. However, the quality of these examples is poor, which is likely the result of storage as free text per concept within ART-DECOR. Often the example value of a coded concept is mapped to a `CodeableConcept.text` with the concept's DefinitionCode to `CodeadbleConcept.coding.` This might be very confusing for the readers as this does not represent how such a concept will be exchanged. Therefore, the `ElementDefinition.example` is not used with the pre-populated values for the zib export. 
 
 ### Examples <a name="Examples"></a>
 Examples are a vital part of any specification as they will allow the reader to easier understand the expectations. Every logical model and profile shall have at least one example. 
-Logical models examples are functional in nature: they provide examples of what kind of information belongs to a CBB in a non-technical format. FHIR profile examples are technical in nature. The logical model examples are primarily aimed at researchers and non-technical people. They provide an example of how a CBB  is initialized in the FHIR standard, in XML or JSON format, that conforms to the FHIR-profile for the respective CBB. These examples are aimed at developers and implementers of the technical specifications.   
+Logical models examples are functional in nature: they provide examples of what kind of information belongs to a CBB in a non-technical format. FHIR profile examples are technical in nature. The logical model examples are primarily aimed at researchers and non-technical people. They provide an example of how a CBB  is initialized in the FHIR standard, in XML or JSON format, conforming to the FHIR-profile for the respective CBB. These examples are aimed at developers and implementers of the technical specifications.   
 
 #### Logical mdel examples <a name="LogicalModelExamples"></a>
 Examples of logical models are not conformant to FHIR, and are therefore not represented in XML or JSON. Examples are provided in  table format in a seperate markdown file. The file has the same name as the CBB logical model but ends with `.example.md.` For example `HdBe-BodyHeight.xml` <-> `HdBe-BodyHeight.example.md`.
 The following conventions exist:
-- For elements that represent a quantity also provide the unit.
+- For elements that represent a quantity, also provide the unit.
 - For elements that hold coded values: provide a code, the preferred display name and the CodeSystem. This format is used: '[code] - [display name] ([CodeSysem]).
 
 *Example*:
@@ -288,7 +288,7 @@ The following conventions exist:
 ```
 
 #### FHIR profile examples <a name="FHIRProfileExamples"></a>
-Examples of FHIR profiles are provided in either XML or JSON format and need to be a valid instance of the profile. Every example shall have at least one profile URL in the `.meta.profile` element to claim conformance. Examples are stored in the /examples folder.
+Examples of FHIR profiles are provided in either XML or JSON format and must be a valid profile instance. Every example shall have at least one profile URL in the `.meta.profile` element. Examples are stored in the /examples folder.
 
-##	Miscellaneous <a name="miscellaneous"></a>
+##  Miscellaneous <a name="miscellaneous"></a>
 To add.
