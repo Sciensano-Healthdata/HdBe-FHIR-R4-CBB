@@ -6,3 +6,4 @@
 |`place_of_residence` | textual | Removed Dutch context.|
 |`municipality` | textual | Removed Dutch context. |
 |`country` | terminology | Removed GBA country codes ValueSet so only ISO country codes are used.|
+|`address_type` | terminology | Removed the code HV - "Vacation Home" from the ValueSet because this is not used and would require a specific extension in FHIR.|
