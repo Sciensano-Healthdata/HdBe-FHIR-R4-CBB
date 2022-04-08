@@ -1,5 +1,9 @@
-## zib [zib name + version](https://zibs.nl/wiki/[zib name + version(release)]) difference
+## zib [BloodPressure-v3.2.1](https://zibs.nl/wiki/BloodPressure-v3.2.1(2020EN)) difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+|`cuff_type` | terminology | Modified ValueSet to descendant of SNOMED CT values. ([zib ticket #1719](https://bits.nictiz.nl/browse/ZIB-1719)) |
+| `systolic_blood_pressure`  | textual| Added mm[Hg] as a unit to the definition. |
+| `diastolic_blood_pressure` | textual |Added mm[Hg] as a unit to the definition. |
+| `average_blood_pressure` |  textual | Added mm[Hg] as a unit to the definition. |
+|`position` | terminology |  Changed name of ValueSet Position to MeasuringPosition because of duplicate Position ValueSet names. ([zib ticket #892](https://bits.nictiz.nl/browse/ZIB-892)) |
