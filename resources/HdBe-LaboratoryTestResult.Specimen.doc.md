@@ -1,4 +1,4 @@
-## zib LaboratoryTestResult-Specimen difference
+## zib LaboratoryTestResult.Specimen difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
