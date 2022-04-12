@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult" />
   <meta>
-    <lastUpdated value="2022-04-12T16:38:41.2287667+00:00" />
+    <lastUpdated value="2022-04-12T17:46:24.2470153+00:00" />
   </meta>
   <language value="en-US" />
   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
@@ -130,6 +130,11 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <binding>
+        <strength value="preferred" />
+        <description value="ReTaM lab codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/ReTaM" />
+      </binding>
     </element>
     <element id="laboratory_test_result.laboratory_test.test_result[x]">
       <path value="laboratory_test_result.laboratory_test.test_result[x]" />
@@ -1012,9 +1017,9 @@
         <code value="CodeableConcept" />
       </type>
       <binding>
-        <strength value="required" />
-        <description value="PanelOrBattery codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/PanelOrBattery" />
+        <strength value="preferred" />
+        <description value="ReTaM lab codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/ReTaM" />
       </binding>
     </element>
     <element id="laboratory_test_result.result_status">
