@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult" />
   <meta>
-    <lastUpdated value="2022-04-12T16:18:41.695272+00:00" />
+    <lastUpdated value="2022-04-12T16:38:41.2287667+00:00" />
   </meta>
   <language value="en-US" />
   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
@@ -376,7 +376,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="The method used to determine interpretation flags. An example of this is EUCAST, for determining clinical breakpoints in microbiological susceptibility tests">
+      <definition value="The method used to determine interpretation flags. An example of this is EUCAST, for determining clinical breakpoints in microbiological susceptibility tests.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -386,16 +386,12 @@
           </extension>
         </extension>
       </definition>
+      <comment value="A ValueSet is not yet available for this concept." />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="CodeableConcept" />
       </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="InterpretationMethod codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/InterpretationMethod" />
-      </binding>
     </element>
     <element id="laboratory_test_result.laboratory_test.result_flags">
       <path value="laboratory_test_result.laboratory_test.result_flags" />

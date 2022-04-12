@@ -11,7 +11,8 @@
 |`laboratory_test.test_result`| type | The zib datatype 'ANY' was incorrectly exported as only a 'string', likely because Forge was giving an (incorrect) warning. The element has been made polymorphic by allowing all the `Observation.value[x]` datatype options. | 
 |`laboratory_test.test_result`| textual | Added textual guidance to include the unit for quantitative results. | 
 |`result_status`| terminology | Deduplicated ValueSet binding. Replaced valueset binding from ResultStatus to TestResultStatus which is bound on `.test_result_status` too.
-|`laboratory_test.test_result_status` | textual | Changed 'an panel/cluster' to 'a panel/cluster' ([zib ticket #1551](https://bits.nictiz.nl/browse/ZIB-1551))|
+|`laboratory_test.test_result_status` | textual | Changed 'an panel/cluster' to 'a panel/cluster'. ([zib ticket #1551](https://bits.nictiz.nl/browse/ZIB-1551))|
+| `laboratory_test.interpretation_method`| terminology | Removed bound ValuSet because it is invalid. ([zib ticket #1292](https://bits.nictiz.nl/browse/ZIB-1292)) and ([zib ticket #677](https://bits.nictiz.nl/browse/ZIB-677))
 |`laboratory_test.result_flags` | terminology | Removed concepts 'Resistent', 'Intermediate' and 'Susceptible' from the ValueSet. These codes are seen as a quantitative result. ([zib ticket #1555](https://bits.nictiz.nl/browse/ZIB-1555))
 |`laboratory_test.result_flags` | textual | Removed notion of 'Resistent', 'Intermediate' and 'Susceptible' codes in definition.
 |`laboratory_test.reference_range_upper_limit`| type | The zib datatype 'ANY' was incorrectly exported as only a 'string', likely because Forge was giving an (incorrect) warning. The element has been made polymorphic by allowing the data type options string and SimpleQuantity. These are most commonly used for this concept. | 
