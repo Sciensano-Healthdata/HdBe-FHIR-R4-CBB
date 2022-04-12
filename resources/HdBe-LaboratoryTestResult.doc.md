@@ -2,7 +2,7 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-| `code` | terminology | Replaced ValueSet by a ValueSet that includes ReTam codes. |
+| `code` | terminology | Replaced ValueSet by a ValueSet that includes Loinc and Albert codes as defined in the ReTaM code set. |
 | `performer` | reference | Added reference to HdBe-HealthcareProvider-Organization (seems missing in the current zib profile implementation). |
 | `performer` | slicing | Removed slicing because this caused an error in the FHIR validator. |
 | `value[x]`| textual | Added textual guidance to include the unit for quantitative results. | 
@@ -12,4 +12,3 @@
 | `test_method` | terminology | TO-DO: Check if the ValueSet needs to be replaced with the SNOMED-CT code for Procedure. |
 | `has_member` | reference | Added reference to HdBe-LaboratoryTestResult.Specimen (seems missing in the current zib profile implementation). |
 | `derived_from` | reference | Added reference to HdBe-LaboratoryTestResult (seems missing in the current zib profile implementation). |
-

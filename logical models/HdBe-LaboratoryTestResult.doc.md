@@ -7,7 +7,7 @@
 |`specimen.anatomical_location`| textual | Changed anatomic to anatomical in the definition. ([zib ticket #1551](https://bits.nictiz.nl/browse/ZIB-1551))| 
 |`specimen.microorganism` | terminology | Replaced Dutch reference set for Microorganism by changing the SNOMED hierarchy 2581000146104 (Dutch microorganism simple reference set) to 410607006 (Organism). |
 |`specimen.received_date_time`| textual | Removed sentence 'This is the issue...' ([zib ticket #1551](https://bits.nictiz.nl/browse/ZIB-1551))|
-|`laboratory_test.test_code` | terminology | Replaced ValueSet by a ValueSet that includes ReTam codes. |
+|`laboratory_test.test_code` | terminology | Replaced ValueSet by a ValueSet that includes Loinc and Albert codes as defined in the ReTaM code set. |
 |`laboratory_test.test_result`| type | The zib datatype 'ANY' was incorrectly exported as only a 'string', likely because Forge was giving an (incorrect) warning. The element has been made polymorphic by allowing all the `Observation.value[x]` datatype options. | 
 |`laboratory_test.test_result`| textual | Added textual guidance to include the unit for quantitative results. | 
 |`result_status`| terminology | Deduplicated ValueSet binding. Replaced valueset binding from ResultStatus to TestResultStatus which is bound on `.test_result_status` too.
