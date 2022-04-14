@@ -2,4 +2,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-| `value[x]| terminology | Added display values to BodyWeightUnits valueSet | 
+| `value[x]| terminology | Added display values to BodyWeightUnits valueSet. | 
