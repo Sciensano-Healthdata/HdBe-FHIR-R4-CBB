@@ -2,4 +2,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-| temperature_type | terminology | Changed some ValueSet concepts to measure temperature. |
+| temperature_type | terminology | Added Unknown and Other values to ValueSet TemperatureType |
