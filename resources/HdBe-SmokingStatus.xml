@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="HdBe-TobaccoUse" />
-  <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-TobaccoUse" />
-  <name value="HdBeTobaccoUse" />
-  <title value="HdBe TobaccoUse" />
+  <id value="HdBe-SmokingStatus" />
+  <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-SmokingStatus" />
+  <name value="HdBeSmokingStatus" />
+  <title value="HdBe SmokingStatus" />
   <status value="draft" />
   <publisher value="Healthdata.be (Sciensano)" />
   <contact>
@@ -14,13 +14,18 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Tobacco is a product that comes from the leaves of the tobacco plant, which is smoked as a drug. Smokable forms of tobacco include rolling tobacco, cigarettes, cigars and pipe tobacco. This information model describes the information asked of the patient about their use of tobacco." />
+  <description value="Tobacco is a product that comes from the leaves of the tobacco plant, which is smoked as a drug. Smokable forms of tobacco include rolling tobacco, cigarettes, cigars and pipe tobacco. This information model describes the information asked of the patient about their smoking behaviour and use of tobacco." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="zib-tobaccouse-v3.2-2020EN" />
     <uri value="https://zibs.nl/wiki/TobaccoUse-v3.2(2020EN)" />
     <name value="zib TobaccoUse-v3.2(2020EN)" />
+  </mapping>
+  <mapping>
+    <identity value="HdBe-SmokingStatus" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-SmokingStatus" />
+    <name value="HdBe logical model SmokingStatus" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
@@ -46,6 +51,17 @@
           <code value="365980008" />
         </coding>
       </patternCodeableConcept>
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
+      </type>
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
@@ -74,6 +90,10 @@
         <map value="NL-CM:7.2.4" />
         <comment value="StartDate" />
       </mapping>
+      <mapping>
+        <identity value="HdBe-SmokingStatus" />
+        <map value="observation_of_use.start_date" />
+      </mapping>
     </element>
     <element id="Observation.effective[x]:effectivePeriod.end">
       <path value="Observation.effective[x].end" />
@@ -84,6 +104,10 @@
         <identity value="zib-tobaccouse-v3.2-2020EN" />
         <map value="NL-CM:7.2.5" />
         <comment value="StopDate" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-SmokingStatus" />
+        <map value="observation_of_use.stop_date" />
       </mapping>
     </element>
     <element id="Observation.value[x]">
@@ -99,20 +123,24 @@
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
-      <short value="TobaccoUseStatus" />
-      <definition value="The status of the patient’s tobacco use." />
-      <alias value="TabakGebruikStatus" />
+      <short value="SmokingStatus" />
+      <definition value="The patient’s smoking status or usage of (smokeless) tobacco." />
+      <alias value="RookStatus" />
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="extensible" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/TobaccoUseStatus" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/SmokingStatus" />
       </binding>
       <mapping>
         <identity value="zib-tobaccouse-v3.2-2020EN" />
         <map value="NL-CM:7.2.10" />
         <comment value="TobaccoUseStatus" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-SmokingStatus" />
+        <map value="smoking_status" />
       </mapping>
     </element>
     <element id="Observation.note">
@@ -140,12 +168,12 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.component:typeOfTobaccoUsed">
+    <element id="Observation.component:typeOfSmokingOrTobacco">
       <path value="Observation.component" />
-      <sliceName value="typeOfTobaccoUsed" />
+      <sliceName value="typeOfSmokingOrTobacco" />
       <max value="1" />
     </element>
-    <element id="Observation.component:typeOfTobaccoUsed.code">
+    <element id="Observation.component:typeOfSmokingOrTobacco.code">
       <path value="Observation.component.code" />
       <patternCodeableConcept>
         <coding>
@@ -154,22 +182,26 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:typeOfTobaccoUsed.value[x]">
+    <element id="Observation.component:typeOfSmokingOrTobacco.value[x]">
       <path value="Observation.component.value[x]" />
-      <short value="TypeOfTobaccoUsed" />
-      <definition value="Type of tobacco the patient uses." />
-      <alias value="SoortTabakGebruik" />
+      <short value="TypeOfSmokingOrTobacco" />
+      <definition value="The patient's type of smoking or tobacco use." />
+      <alias value="SoortRokenOfTabak" />
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="extensible" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/TypeOfTobaccoUsed" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/TypeOfSmokingOrTobacco" />
       </binding>
       <mapping>
         <identity value="zib-tobaccouse-v3.2-2020EN" />
         <map value="NL-CM:7.2.9" />
         <comment value="TypeOfTobaccoUsed" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-SmokingStatus" />
+        <map value="type_of_smoking_or_tobacco" />
       </mapping>
     </element>
     <element id="Observation.component:amount">
