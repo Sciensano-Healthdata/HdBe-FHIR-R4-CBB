@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="TypeOfTobaccoUsed"/>
+    <id value="TypeOfSmokingOrTobacco"/>
    <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
@@ -10,15 +10,15 @@
             <start value="2020-09-01T00:00:00+01:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/ValueSet/TypeOfTobaccoUsed"/>
+    <url value="https://fhir.healthdata.be/ValueSet/TypeOfSmokingOrTobacco"/>
    <identifier>
         <use value="official"/>
         <system value="urn:ietf:rfc:3986"/>
         <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.7.2.3"/>
     </identifier>
    <version value="2020-09-01T00:00:00"/>
-   <name value="TypeOfTobaccoUsed"/>
-   <title value="TypeOfTobaccoUsed"/>
+    <name value="TypeOfSmokingOrTobacco"/>
+    <title value="TypeOfSmokingOrTobacco"/>
    <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Healthdata.be (Sciensano)"/>
@@ -30,35 +30,10 @@
       <use value="work" />
     </telecom>
   </contact>
-   <description value="TypeOfTobaccoUsed codes"/>
+    <description value="TypeOfSmokingOrTobacco codes"/>
    <immutable value="false"/>
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
-        <include>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
-            <concept>
-                <code value="OTH"/>
-                <display value="Other"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Other"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Anders"/>
-                </designation>
-            </concept>
-        </include>
         <include>
             <system value="http://snomed.info/sct"/>
             <concept>
@@ -234,6 +209,94 @@
                         <display value="Synonym"/>
                     </use>
                     <value value="gebruikt snuiftabak"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="785889008"/>
+                <display value="Nicotine-filled electronic cigarette user"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Nicotine-filled electronic cigarette user"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="gebruiker van elektronische sigaret met nicotine"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="786063001"/>
+                <display value="Non-nicotine-filled electronic cigarette user"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Non-nicotine-filled electronic cigarette user"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="gebruiker van elektronische sigaret zonder nicotine"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="261665006"/>
+                <display value="Unknown"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Unknown"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Onbekend"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="74964007"/>
+                <display value="Other"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Other"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Ander"/>
                 </designation>
             </concept>
         </include>
