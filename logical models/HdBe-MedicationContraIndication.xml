@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBe-MedicationContraIndication"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationContraIndication"/>
+   <name value="HdBeMedicationContraIndication">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-MedicatieContraIndicatie"/>
+         </extension>
+      </extension>
+   </name>
+   <title value="HdBe MedicationContraIndication"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;A contra-indication (CI) for medication safety is a condition or characteristic of a patient where healthcare professionals are not allowed to subscribe certain medicines, or only under certain conditions.&#xD;&#xA;**Purpose**&#xD;&#xA;Contraindications should be taken into account with drug treatement. These are important for medication safety monitoring.&#xD;&#xA;**Evidence Base**&#xD;&#xA;A number of contraindications for medication safety are disorders that are also recorded as a problem (HCIM Problem) and/or as a warning (HCIM Alert) and not only as a medication contraindication . &#xD;&#xA;In the Netherlands it is important to also capture these via the G standard (thesaurus 40) as a contra-indication. Contraindications are used for medication safety. Through its use in these applications, important warnings / signals are given to healthcare providers.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;In the G-standard Thesaurus 40, Z-Index uses 2 terms. &#xD;&#xA;&#xD;&#xA;1. The contraindication nature: the list of items referred to from MedicationContraIndicationName) and &#xD;&#xA;&#xD;&#xA;1. the contraindication: the combination of recorded contraindication nature + the medicine (the contraindication codes from file 655). &#xD;&#xA;&#xD;&#xA;This last combination between contraindication nature and medication is made via this MedicationContraIndication HCIM and one or more of the other medication HCIMs. For example in a medication process use-case ePrescription and/or dispense of medication.&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA; Een contra-indicatie (CI) voor medicatieveiligheid is een aandoening of kenmerk van een patiënt waarbij zorgverleners bepaalde geneesmiddelen niet, of alleen onder bepaalde voorwaarden, mogen toepassen. &#xD;&#xA;**Purpose**&#xD;&#xA; Bij medicamenteuze behandeling moet rekening worden gehouden met contra-indicaties. Deze zijn belangrijk voor medicatiebewaking&#xD;&#xA;**Evidence Base**&#xD;&#xA;Een aantal contra-indicaties voor medicatieveiligheid zijn aandoeningen die ook als probleem vastgelegd worden (zib Probleem) en/of als waarschuwing (zib Alert) en niet alleen als medicatie contra-indicatie. &#xD;&#xA;Het is in Nederland belangrijk deze ook conform de G-standaard (thesaurus 40) als contra-indicatie vast te leggen. Deze bestanden worden namelijk gebruikt t.b.v medicatiebewaking. Door het gebruik ervan in deze applicaties worden belangrijke waarschuwingen/signalen gegeven aan zorgverleners.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;In de G-standaard Thesaurus 40 hanteert Z-Index 2 begrippen. &#xD;&#xA;&#xD;&#xA;1. de contra-indicatie aard: de lijst met items waar naar wordt verwezen vanuit MedicatieContraIndicatieNaam) en &#xD;&#xA;&#xD;&#xA;1. de contra-indicatie: de combinatie van vastgelegde contra-indicatie aard + het geneesmiddel (de contra-indicatiecodes uit bestand 655) &#xD;&#xA;&#xD;&#xA;Deze laatste combinatie tussen contra-indicatie aard en medicatie wordt gelegd via deze zib MedicatieContraIndicatie met één of meer van de andere medicatie zibs. Bijvoorbeeld in een medicatie proces use-case rondom het voorschrijven en/of verstrekken van medicatie.&#xD;&#xA;**References**&#xD;&#xA;1. Medicatiebewaking [online] beschikbaar op https://www.z-index.nl/documentatie [Geraadpleegd: 19 juni 2020]&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (01-09-2020)&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/medication_contra_indication"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="medication_contra_indication">
+         <path value="medication_contra_indication"/>
+         <short value="MedicationContraIndication">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="MedicatieContraIndicatie"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Root concept of the MedicationContraIndication information model.This root concept contains all data elements of the MedicationContraIndication information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen MedicatieContraIndicatie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedicatieContraIndicatie."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="medication_contra_indication"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+      </element>
+        <element id="medication_contra_indication.start_date">
+         <path value="medication_contra_indication.start_date"/>
+         <short value="StartDate">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="BeginDatum"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The date and possibly time when the contra-indication for medication was identified.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De datum en eventueel tijd waarop de contra-indicatie voor medicatiebewaking is vastgesteld. "/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_contra_indication.start_date"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="dateTime"/>
+            </type>
+      </element>
+        <element id="medication_contra_indication.end_date">
+         <path value="medication_contra_indication.end_date"/>
+         <short value="EndDate">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="EindDatum"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The date and, if applicable, time when the contraindication for medication monitoring is considered no longer applicable. &#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De datum en eventueel tijd waarop de contra-indicatie voor medicatiebewaking is aangemerkt als niet meer van toepassing. &#xD;&#xA;"/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_contra_indication.end_date"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="dateTime"/>
+            </type>
+      </element>
+        <element id="medication_contra_indication.reason_closure">
+         <path value="medication_contra_indication.reason_closure"/>
+         <short value="ReasonClosure">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="RedenVanAfsluiten"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value=" Reason for closing the medication contraindication. ">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Reden waarom de medicatie contra-indicatie is afgesloten. "/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_contra_indication.reason_closure"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="string"/>
+            </type>
+      </element>
+        <element id="medication_contra_indication.reporter">
+         <path value="medication_contra_indication.reporter"/>
+         <short value="Reporter">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Melder"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The healthcare provider who takes responsibility for registering the contraindication ">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De zorgverlener die de verantwoordelijkheid neemt voor wat is vastgelegd als contra-indicatie."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_contra_indication.reporter"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="BackboneElement"/>
+            </type>
+      </element>
+        <element id="medication_contra_indication.reporter.health_professional">
+         <path value="medication_contra_indication.reporter.health_professional"/>
+         <short value="HealthProfessional">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Zorgverlener"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Root concept of the HealthProfessional information model. This root concept contains all data elements of the HealthProfessional information model.&#xD;&#xA;When referring to this information model the role the health professional fulfils in the healthcare process can be addressed additionally. For health professionals, this could be for example main practitioner or referrer.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Zorgverlener. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgverlener. &#xD;&#xA;Bij verwijzing naar deze bouwsteen kan tevens de rol die de zorgverlener in het zorgproces vervult, worden meegegeven. Voor zorgverleners kan dit bijvoorbeeld hoofdbehandelaar of verwijzer zijn"/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_contra_indication.reporter.health_professional"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
+         </type>
+      </element>
+        <element id="medication_contra_indication.medication_contra_indication_name">
+         <path value="medication_contra_indication.medication_contra_indication_name"/>
+         <short value="MedicationContraIndicationName">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="MedicatieContraIndicatieNaam"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The name and code of the contraindication from the Dutch National Contra-indication list (G-standard Thesaurus 40).">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De naam en code van de contra-indicatie uit de Nationale Contra-indicatielijst (G-standaard Thesaurus 40)."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_contra_indication.medication_contra_indication_name"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="required"/>
+            <description value="MedicationContraIndicationName codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieContraIndicatieNaam"/>
+         </binding>
+      </element>
+        <element id="medication_contra_indication.comment">
+         <path value="medication_contra_indication.comment"/>
+         <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Comment on the contraindication important for interpretation which cannot be captured in any of the other data items. For example, a comment on a contraindication with an end date in the future. &#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting op de contra-indicatie die belangrijk is voor de interpretatie ervan en die niet in een van de andere elementen uitgedrukt kan worden. Bijvoorbeeld een toelichting op een einddatum van een contra-indicatie in de toekomst."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="medication_contra_indication.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="string"/>
+            </type>
+      </element>
+    </differential>
+</StructureDefinition>

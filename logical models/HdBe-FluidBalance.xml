@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBe-FluidBalance"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FluidBalance"/>
+   <name value="HdBeFluidBalance">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-Vochtbalans"/>
+         </extension>
+      </extension>
+   </name>
+   <title value="HdBe FluidBalance"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;The total water intake and water excretion within a certain time period: a disbalance can lead to for example dehydration or overfilling.&#xD;&#xA;**Purpose**&#xD;&#xA;Information about the water balance provides insight in the care plan for drinking and possibly administering extra fluids, when the balance is disrupted such as dehydration or overfilling.&#xD;&#xA;**Evidence Base**&#xD;&#xA;The definitions of the concepts were (partly) based on the guideline Dehydration by the VvOV.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;De totale vochtinname en totale vochtuitscheiding binnen een bepaalde tijdsperiode: een disbalans kan leiden tot bijvoorbeeld uitdroging of overvulling.&#xD;&#xA;**Purpose**&#xD;&#xA;Het vastleggen van de vochtbalans geeft inzage in het beleid rondom het drinken en eventueel extra toedienen van vocht, wanneer het evenwicht verstoord is zoals bij uitdroging of overvulling.&#xD;&#xA;**Evidence Base**&#xD;&#xA;De definities van de concepten zijn (deels) gebaseerd op de richtlijn Vochttekort van de VvOV.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (04-09-2017)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.1 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-1188](https://bits.nictiz.nl/browse/ZIB-1188).&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/fluid_balance"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="fluid_balance">
+         <path value="fluid_balance"/>
+         <short value="FluidBalance">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Vochtbalans"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Root concept of the FluidBalance information model. This root concept contains all data elements of the FluidBalance information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Vochtbalans. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Vochtbalans."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="fluid_balance"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+      </element>
+        <element id="fluid_balance.comment">
+         <path value="fluid_balance.comment"/>
+         <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Comment on the fluid balance.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De toelichting op de vochtbalans."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="fluid_balance.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="string"/>
+            </type>
+      </element>
+        <element id="fluid_balance.fluid_total_in">
+         <path value="fluid_balance.fluid_total_in"/>
+         <short value="FluidTotalIn">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VochtTotaalIn"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The total of fluid intake (e.g. by mouth, drip or tube feeding) in mL.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het totaal aan vochtinname (o.a. per os, infuus, sonde) in mL."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="fluid_balance.fluid_total_in"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="Quantity"/>
+            </type>
+      </element>
+        <element id="fluid_balance.fluid_total_out">
+         <path value="fluid_balance.fluid_total_out"/>
+         <short value="FluidTotalOut">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VochtTotaalUit"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The total of fluid excretion (e.g. urine production, drain, watery defecation) in mL.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het totaal aan vochtuitscheiding (o.a. urineproductie, drain, waterdunne ontlasting) in mL."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="fluid_balance.fluid_total_out"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="Quantity"/>
+            </type>
+      </element>
+        <element id="fluid_balance.fluid_balance_start_time">
+         <path value="fluid_balance.fluid_balance_start_time"/>
+         <short value="FluidBalanceStartTime">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VochtbalansStarttijd"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The time at which the measurement of the fluid balance was started.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het tijdstip waarop gestart is met de vochtbalans meting."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="fluid_balance.fluid_balance_start_time"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="dateTime"/>
+            </type>
+      </element>
+        <element id="fluid_balance.fluid_balance_stop_time">
+         <path value="fluid_balance.fluid_balance_stop_time"/>
+         <short value="FluidBalanceStopTime">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VochtbalansStoptijd"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The time at which the measurement of the fluid balance was stopped.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het tijdstip waarop gestopt is met de vochtbalans meting."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="fluid_balance.fluid_balance_stop_time"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="dateTime"/>
+            </type>
+      </element>
+    </differential>
+</StructureDefinition>

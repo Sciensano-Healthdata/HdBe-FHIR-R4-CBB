@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="Huilen"/>
+   <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+01:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/ValueSet/Huilen"/>
+   <identifier>
+        <use value="official"/>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.12.13.4"/>
+    </identifier>
+   <version value="2020-09-01T00:00:00"/>
+   <name value="Huilen"/>
+   <title value="Huilen"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+   <description value="HuilenCodelijst"/>
+   <immutable value="false"/>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.21.4"/>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+                    <valueDecimal value="0"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Huilt niet (wakker of slapend)"/>
+                </extension>
+                <code value="Cry0"/>
+                <display value="No cry"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="No cry"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+                    <valueDecimal value="1"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Kreunt, kermt of jengelt; klaagt af en toe"/>
+                </extension>
+                <code value="Cry1"/>
+                <display value="Moans"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Moans"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/ordinalValue">
+                    <valueDecimal value="2"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Huilt voortdurend, schreeuwt of jammert, klaagt veelvuldig"/>
+                </extension>
+                <code value="Cry2"/>
+                <display value="Crying constantly"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Crying constantly"/>
+                </designation>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

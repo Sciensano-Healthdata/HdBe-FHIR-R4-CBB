@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBe-HelpFromOthers"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HelpFromOthers"/>
+   <name value="HdBeHelpFromOthers">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-HulpVanAnderen"/>
+         </extension>
+      </extension>
+   </name>
+   <title value="HdBe HelpFromOthers"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;There are often multiple people or parties involved in the care for a patient with a disorder or disability, particularly in the event of home care. Their efforts enable the patient to function more or less independently. This includes not only caregivers, but also professional help such as that offered by home care organizations, nurses, aids and helpers. &#xD;&#xA;Current doctors and staff from the facility to which a patient is admitted do not fall under this concept.&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;Information on help from others can provide a good estimate of the availability of the care required by the patient. If this care is not sufficiently available, measures can be taken to facilitate the required care. &#xD;&#xA;This plays a particularly important role in for example discharges from the hospital or from a nursing home.&#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Bij de zorg voor een patiënt met een aandoening of beperking zijn, met name in de thuissituatie, vaak meerdere personen of instanties betrokken. Hun inzet maakt het voor de patiënt mogelijk in meer of mindere mate zelfstandig te functioneren. Het gaat hierbij niet alleen om mantelzorgers, maar ook om professionele hulp zoals geboden door thuiszorg instanties, verpleegkundigen, verzorgenden en helpenden.&#xD;&#xA;Behandelende artsen en personeel van de organisatie waarin een patiënt is opgenomen vallen niet onder dit concept.&#xD;&#xA;**Purpose**&#xD;&#xA;Met informatie over hulp van anderen is het mogelijk een goede inschatting te maken over de beschikbaarheid van de voor de patiënt noodzakelijke zorg. Indien deze zorg onvoldoende aanwezig is, kunnen maatregelen genomen worden om dit te regelen.&#xD;&#xA;Met name bij ontslag uit ziekenhuis of verpleeghuis speelt dit een belangrijke rol.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (01-07-2015)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.01 (26-02-2019)&#xD;&#xA;Bevat: [ZIB-695](https://bits.nictiz.nl/browse/ZIB-695), [ZIB-696](https://bits.nictiz.nl/browse/ZIB-696).&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/help_from_others"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="help_from_others">
+         <path value="help_from_others"/>
+         <short value="HelpFromOthers">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="HulpVanAnderen"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Root concept of the HelpFromOthers information model. This root concept contains all data elements of the HelpFromOthers information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van bouwsteen HulpVanAnderen. Dit rootconcept bevat alle gegevenselementen van de bouwsteen HulpVanAnderen."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="help_from_others"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+      </element>
+        <element id="help_from_others.care_aid">
+         <path value="help_from_others.care_aid"/>
+         <short value="CareAid">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Hulpverlener"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Container of the Aid concept. This container contains all data elements of the Aid concept. &#xD;&#xA;An aid can be a health professional such as nurses, carers and helpers but also a caregiver or healthcare provider such as a home care organization.&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Container van het concept Hulpverlener. Deze container bevat alle gegevenselementen van het concept Hulpverlener.&#xD;&#xA;Een hulpverlener kan zijn een professionele zorgverlener zoals verpleegkundigen, zorgenden en helpenden maar ook een mantelzorger of een zorgaanbieder zoals een thuiszorgorganisatie."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="help_from_others.care_aid"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="BackboneElement"/>
+            </type>
+      </element>
+        <element id="help_from_others.care_aid.health_professional">
+         <path value="help_from_others.care_aid.health_professional"/>
+         <short value="HealthProfessional">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Zorgverlener"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Details of the health professional involved in the patient’s care.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De gegevens van de zorgverlener die betrokken is bij de zorg."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="help_from_others.care_aid.health_professional"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
+         </type>
+      </element>
+        <element id="help_from_others.care_aid.caregiver">
+         <path value="help_from_others.care_aid.caregiver"/>
+         <short value="Caregiver">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Mantelzorger"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Details of the caregiver involved in the patient’s support.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De gegevens van de mantelzorger die betrokken is bij de ondersteuning van patiënt."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="help_from_others.care_aid.caregiver"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="BackboneElement"/>
+            </type>
+      </element>
+        <element id="help_from_others.care_aid.caregiver.contact">
+         <path value="help_from_others.care_aid.caregiver.contact"/>
+         <short value="Contact">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Contactpersoon"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Root concept of the Contact information model. This root concept contains all data elements of the Contact information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Contactpersoon. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Contactpersoon."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="help_from_others.care_aid.caregiver.contact"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Contact"/>
+         </type>
+      </element>
+        <element id="help_from_others.care_aid.healthcare_provider">
+         <path value="help_from_others.care_aid.healthcare_provider"/>
+         <short value="HealthcareProvider">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Zorgaanbieder"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Details of the organization the health professional/aid works for in the event that it is not entered as a person.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De gegevens van de organisatie waar de zorgverlener/hulpverlener voor werkt als deze niet als persoon wordt opgegegven."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="help_from_others.care_aid.healthcare_provider"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
+         </type>
+      </element>
+        <element id="help_from_others.nature">
+         <path value="help_from_others.nature"/>
+         <short value="Nature">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Aard"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The nature of the help/support provided to the patient.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De aard van de hulp/ondersteuning die geboden wordt aan de patiënt."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="help_from_others.nature"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="string"/>
+            </type>
+      </element>
+        <element id="help_from_others.frequency">
+         <path value="help_from_others.frequency"/>
+         <short value="Frequency">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Frequentie"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The frequency of the provided support, e.g. daily/weekly.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De frequentie van de geboden ondersteuning, bijvoorbeeld dagelijks/wekelijks."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="help_from_others.frequency"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="string"/>
+            </type>
+      </element>
+        <element id="help_from_others.type_of_help">
+         <path value="help_from_others.type_of_help"/>
+         <short value="TypeOfHelp">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="SoortHulp"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The type of help offered by the person in question.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het type hulp dat de betrokken persoon biedt."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="help_from_others.type_of_help"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="extensible"/>
+            <description value="TypeOfHelp codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/SoortHulp"/>
+         </binding>
+      </element>
+        <element id="help_from_others.comment">
+         <path value="help_from_others.comment"/>
+         <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="A comment on the help/support the patient receives from others.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een toelichting op de hulp/ondersteuning die de patiënt ontvangt van anderen."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="help_from_others.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="string"/>
+            </type>
+      </element>
+    </differential>
+</StructureDefinition>
