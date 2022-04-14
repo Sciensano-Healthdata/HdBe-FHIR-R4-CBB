@@ -2,7 +2,7 @@
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-TobaccoUse'
+where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-SmokingStatus'
 select 
 Profile: id,
 Description: description,
@@ -23,17 +23,17 @@ URL: url
 
   <div id="Snapshot view" class="tabcontent" style="display:block">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-TobaccoUse, snapshot}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-SmokingStatus, snapshot}}
   </div>
 
   <div id="Hybrid view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-TobaccoUse, hybrid}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-SmokingStatus, hybrid}}
   </div>
 
   <div id="Diff view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-TobaccoUse, diff}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-SmokingStatus, diff}}
   </div>
 
   <div id="Mapping" class="tabcontent">      
@@ -41,7 +41,7 @@ URL: url
       <div>
       @```
       from StructureDefinition
-      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-TobaccoUse'
+      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-SmokingStatus'
       for differential.element 
       select 
         Path: id,
@@ -52,13 +52,13 @@ URL: url
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-TobaccoUse-01.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-SmokingStatus-01.guide.md}}</li>
         
       </ul>
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:resources/HdBe-TobaccoUse.doc.md}}
+      {{render:resources/HdBe-SmokingStatus.doc.md}}
   </div>
 
 </div>
@@ -69,7 +69,7 @@ URL: url
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-TobaccoUse'
+where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-SmokingStatus'
 
 for differential.element
 select

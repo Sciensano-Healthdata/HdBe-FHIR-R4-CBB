@@ -2,7 +2,7 @@
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-TobaccoUse'
+where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-SmokingStatus'
 select 
 Profile: id,
 Version: version,
@@ -21,25 +21,25 @@ URL: url
 
   <div id="Rendered view" class="tabcontent" style="display:block">
     <br>
-      {{render:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-TobaccoUse, snapshot}}
+      {{render:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-SmokingStatus, snapshot}}
   </div>
 
   <div id="Table view" class="tabcontent">
     <br>
-      {{table:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-TobaccoUse}}
+      {{table:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-SmokingStatus}}
   </div>
 
   <div id="Detailed descriptions" class="tabcontent">
    <br>
-      {{dict:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-TobaccoUse}}
+      {{dict:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-SmokingStatus}}
   </div>
 
   <div id="Example" class="tabcontent">
-      {{render:logical models/HdBe-TobaccoUse.example.md}}
+      {{render:logical models/HdBe-SmokingStatus.example.md}}
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:logical models/HdBe-TobaccoUse.doc.md}}
+      {{render:logical models/HdBe-SmokingStatus.doc.md}}
   </div>
 
 </div>
@@ -50,7 +50,7 @@ URL: url
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-TobaccoUse'
+where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-SmokingStatus'
 for differential.element
 select
 Path: path.substring((1 + path.indexOf('.'))),
