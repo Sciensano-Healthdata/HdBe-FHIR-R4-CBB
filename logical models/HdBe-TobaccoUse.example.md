@@ -1,24 +1,12 @@
 ## Example instances
 
-| [CBB name]      |                   |
+| TobaccoUse      |                   |
 |-----------------|-------------------|
-| [Concept name ] | [example value]   |
-
-
-// example of NameInformation
-```
-## Example instances
-
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```
+| comment |   |
+| type_of_tobacco_used |   |
+| tobacco_use_status |   |
+| observation_of_use |   |
+| observation_of_use.start_date	 |   |
+| observation_of_use.stop_date |   |
+| observation_of_use.amount	Quantity |   |
+| observation_of_use.pack_years	Count |   |
