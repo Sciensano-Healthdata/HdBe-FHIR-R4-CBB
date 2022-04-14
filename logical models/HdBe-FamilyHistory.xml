@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBe-FamilyHistory"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FamilyHistory"/>
+   <name value="HdBeFamilyHistory">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-Familieanamnese"/>
+         </extension>
+      </extension>
+   </name>
+   <title value="HdBe FamilyHistory"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;The family history describes any health problems of biological relatives that may be relevant. The family history contains information on the medical disorders of the family member and the biological relationship between the patient and the described family member.&#xD;&#xA;**Purpose**&#xD;&#xA;Recording the patient’s family members’ health problems. This component can be relevant in estimating the risk of these health problems occurring in the patient. This component can also partially influence the decision determining which diagnostics are or are not to be run: a high-risk patient might be more likely to receive extensive diagnostics, while a simpler test could suffice for a low-risk patient.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;The age at which a family member developed a disorder or the age at which the family member died can be included in the ‘explanation’ field if desired. &#xD;&#xA;&#xD;&#xA;The value list *BiologicalRelationshipCodeList* contains a number of concepts which can be used for both biological and non-biological relatives: a step-father’s brother can be listed as an uncle for lack of specific codes for step-uncle and real uncles. Therefore, when compiling the family history, make sure that only the biological relatives are considered.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;De familieanamnese beschrijft de gezondheidsproblemen van biologische verwanten die relevant zijn. De familieanamnese bevat informatie over de medische aandoeningen van het familielid en de biologische relatie tussen de patiënt en het beschreven familielid.&#xD;&#xA;**Purpose**&#xD;&#xA;Het vastleggen van gezondheidsproblemen bij familieleden van de patiënt. Dit gegeven kan relevant zijn bij het inschatten van het risico op het optreden van deze gezondheidsproblemen bij patiënt zelf. Ook kan dit gegeven mede van invloed zijn op de keuze welke diagnostiek wel of niet gedaan hoeft te worden: bij een hoog-risico patiënt zal bijvoorbeeld eerder uitgebreide diagnostiek gedaan worden, terwijl bij een laag-risico patiënt volstaan kan worden met een eenvoudigere test.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;De leeftijd waarop een familielid een aandoening heeft gekregen of de leeftijd bij overlijden kan indien gewenst in het 'toelichting' veld vermeld worden.&#xD;&#xA;&#xD;&#xA;De waardelijst *BiologischeRelatieCodelijst* bevat een aantal concepten die zowel voor biologische als voor niet biologische relaties gebruikt kunnen worden: een broer van een stiefvader zal bijvoorbeeld als oom vermeld staan bij gebrek aan specifieke codes voor stiefoom en echte oom. Bij het opstellen van de familieanamnese zal er dus op toegezien moeten worden dat uitsluitend de biologische relaties beschouwd worden.&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (15-02-2013)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (01-07-2013)&#xD;&#xA;&#xD;&#xA;Publicatieversie 2.0 (01-04-2015)&#xD;&#xA;Bevat: [ZIB-73](https://bits.nictiz.nl/browse/ZIB-73), [ZIB-308](https://bits.nictiz.nl/browse/ZIB-308).&#xD;&#xA;&#xD;&#xA;Incl. algemene wijzigingsverzoeken: &#xD;&#xA;[ZIB-94](https://bits.nictiz.nl/browse/ZIB-94), [ZIB-154](https://bits.nictiz.nl/browse/ZIB-154), [ZIB-200](https://bits.nictiz.nl/browse/ZIB-200), [ZIB-201](https://bits.nictiz.nl/browse/ZIB-201), [ZIB-309](https://bits.nictiz.nl/browse/ZIB-309), [ZIB-324](https://bits.nictiz.nl/browse/ZIB-324), [ZIB-326](https://bits.nictiz.nl/browse/ZIB-326).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-444](https://bits.nictiz.nl/browse/ZIB-444), [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.1 (04-09-2017)&#xD;&#xA;Bevat: [ZIB-443](https://bits.nictiz.nl/browse/ZIB-443), [ZIB-564](https://bits.nictiz.nl/browse/ZIB-564), [ZIB-574](https://bits.nictiz.nl/browse/ZIB-574).&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/family_history"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="family_history">
+         <path value="family_history"/>
+         <short value="FamilyHistory">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Familieanamnese"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Root concept of the FamilyHistory information model. This root concept contains all data elements of the FamilyHistory information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Familieanamnese. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Familieanamnese."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="family_history"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+      </element>
+        <element id="family_history.date">
+         <path value="family_history.date"/>
+         <short value="Date">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Datum"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Date on which the family history was entered. A ‘vague’ date is permitted.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Datum van afname van de familieanamnese. Een vage datum is toegestaan."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="family_history.date"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="dateTime"/>
+            </type>
+      </element>
+        <element id="family_history.family_member">
+         <path value="family_history.family_member"/>
+         <short value="FamilyMember">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Familielid"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Container of the FamilyMember concept. This container contains all data elements of the FamilyMember concept.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Container van het concept familielid. Deze container bevat alle gegevenselementen van het concept familielid. "/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="*"/>
+         <base>
+                <path value="family_history.family_member"/>
+                <min value="1"/>
+                <max value="*"/>
+            </base>
+         <type>
+                <code value="BackboneElement"/>
+            </type>
+      </element>
+        <element id="family_history.family_member.biological_relationship">
+         <path value="family_history.family_member.biological_relationship"/>
+         <short value="BiologicalRelationship">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="BiologischeRelatie"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Indicates the biological relationship of the family member to the patient.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Geeft de biologische relatie van het familielid tot de patiënt. "/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="family_history.family_member.biological_relationship"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="extensible"/>
+            <description value="BiologicalRelationship codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/BiologischeRelatie"/>
+         </binding>
+      </element>
+        <element id="family_history.family_member.comment">
+         <path value="family_history.family_member.comment"/>
+         <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Comment with information on the family member which might be relevant to the family history.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting met, voor de familieanamnese relevante, informatie betreffende het familielid."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="family_history.family_member.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="string"/>
+            </type>
+      </element>
+        <element id="family_history.family_member.death_indicator">
+         <path value="family_history.family_member.death_indicator"/>
+         <short value="DeathIndicator">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="OverlijdensIndicator"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="An indication stating whether the family member has died.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Indicator die aangeeft of het familielid overleden is."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="family_history.family_member.death_indicator"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="boolean"/>
+            </type>
+      </element>
+        <element id="family_history.family_member.age_at_death">
+         <path value="family_history.family_member.age_at_death"/>
+         <short value="AgeAtDeath">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="LeeftijdBijOverlijden"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The age at which the family member died.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De leeftijd waarop het familielid overleden is."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="family_history.family_member.age_at_death"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="Count"/>
+            </type>
+      </element>
+        <element id="family_history.family_member.disorder">
+         <path value="family_history.family_member.disorder"/>
+         <short value="Disorder">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Aandoening"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Container of the Disorder concept. This container contains all data elements of the Disorder concept.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Container van het concept Aandoening. Deze container bevat alle gegevenselementen van het concept Aandoening."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="*"/>
+         <base>
+                <path value="family_history.family_member.disorder"/>
+                <min value="1"/>
+                <max value="*"/>
+            </base>
+         <type>
+                <code value="BackboneElement"/>
+            </type>
+      </element>
+        <element id="family_history.family_member.disorder.problem">
+         <path value="family_history.family_member.disorder.problem"/>
+         <short value="Problem">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Probleem"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The health problem of the family member in question, which is recorded for the family history.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het gezondheidsprobleem van het betreffende familielid dat in het kader van de familieanamnese wordt vastgelegd."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="family_history.family_member.disorder.problem"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
+         </type>
+      </element>
+        <element id="family_history.family_member.disorder.is_cause_of_death">
+         <path value="family_history.family_member.disorder.is_cause_of_death"/>
+         <short value="IsCauseOfDeath">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="IsDoodsoorzaak"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Indication stating whether the described health problem was the cause of death of the family member.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Aanduiding of het beschreven gezondheidsprobleem de doodsoorzaak is van het familielid."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="family_history.family_member.disorder.is_cause_of_death"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="boolean"/>
+            </type>
+      </element>
+    </differential>
+</StructureDefinition>

@@ -1,0 +1,373 @@
+html, body {
+    padding: 0;
+    margin: 0; }
+  
+  #ig-viewer {
+    position: relative;
+    height: 100%;
+  }
+  
+  #ig-viewer .ig-view-content {
+      overflow: hidden;
+      min-height: 100%;
+      position: relative;
+      height: auto !important;
+      margin-bottom: -155px;
+      padding-bottom: 155px; 
+      background: #fcfcfc;}
+    
+      #ig-viewer .ig-view-content #ig-view-twolevelmenu .header {
+        background: #fcfcfc;
+        border-bottom: 4px solid #69aa41;         
+        }
+    
+        #ig-viewer .ig-view-content #ig-view-twolevelmenu .header .navbar {
+          background: #ffffff; /* #EDEDED #63C1D8 #FFDC36 !important;  */
+          margin-bottom: 0px; 
+          }
+  
+          /* Change menu bar font color (title, menu & submenu) */
+          #ig-viewer .ig-view-content #ig-view-twolevelmenu .header .navbar a {
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important; 
+              font-size: 1.2em;
+            }
+  
+          /* Change menu bar font color (only menu) */
+          #ig-viewer .ig-view-content #ig-view-twolevelmenu .header .navbar-nav > li > a {
+              color: #777780;
+              margin-left: 0px;
+          }
+          
+          /* Change menu bar item background color and font color (only menu) */
+          #ig-viewer .ig-view-content #ig-view-twolevelmenu .header .navbar-nav > li > a:hover {
+              background-color: #FAFAFA;
+              color: #69aa41;
+          }
+  
+          /* Change menu bar font color (only submenu) */
+          #ig-viewer .ig-view-content #ig-view-twolevelmenu .header .navbar .dropdown-menu a {
+              color: #777780;
+          }
+  
+          #ig-viewer .ig-view-content #ig-view-twolevelmenu .header .navbar .dropdown-menu a:hover {
+              color: #69aa41;
+          }
+          
+          /* Change menu background color (only submenu) */
+          #ig-viewer .ig-view-content #ig-view-twolevelmenu .header .navbar .dropdown-menu {
+              background-color: white;
+              color: #69aa41;
+              font-size: 14;
+          }
+  
+          #ig-viewer .ig-view-content #ig-view-twolevelmenu .header .navbar .navbar-header {
+            margin-bottom: 0; }
+    
+          #ig-viewer .ig-view-content #ig-view-twolevelmenu .header .navbar .navbar-nav > li > a {
+            padding-top: 15px; }
+    
+       #ig-viewer .ig-view-content #ig-view-twolevelmenu .header .navbar-collapse {
+        padding-right: 0px;
+        padding-left: 0px;
+          }
+   
+      #ig-viewer .ig-view-content #ig-view-twolevelmenu .content .nav-pills > li > a {
+          overflow: hidden;
+          text-overflow: ellipsis;
+            }
+  
+      #ig-viewer .ig-view-content #ig-view-twolevelmenu .content .nav-pills > li > a:hover {
+  
+    color: #69aa41; }
+  
+    #ig-viewer .ig-view-footer {
+      background-color: #4D4D4D;
+      color: #eee;
+      height: 115px;
+      margin-top: 40px;
+      padding-top: 40px;
+      position: relative;
+  
+       }
+  
+  .roundbox {
+      border: 2px solid #BDBDBD;
+      border-radius: 20px;
+      padding: 20px;
+      background-color: #FAFAFA;
+      list-style-position:inside;
+      /* outline: black solid 5px;*/
+      /* outline-offset: 5px;*/
+  }
+  
+  blockquote ol:last-child, blockquote p:last-child, blockquote ul:last-child, ol ol, ol ul, ul ol, ul ul {
+      margin-bottom: 5px;
+  }
+  
+/* numbered table of context, e.g:
+     1.
+      1.1 
+      1.1.1 ect. /*/
+      ol {
+        list-style-type: none;
+        counter-reset: item;
+        margin: 0;
+        padding: 0;
+        }
+    
+        ol > li {
+        display: table;
+        counter-increment: item;
+        margin-bottom: 0.6em;
+        }
+    
+        ol > li:before {
+        content: counters(item, ".") ". ";
+        display: table-cell;
+        padding-right: 0.6em;    
+        }
+    
+        li ol > li {
+        margin: 0;
+        }
+    
+        li ol > li:before {
+        content: counters(item, ".") " ";
+        }
+    
+    /* numbered table headers that correspond with table of context /*/
+        #preview-content h1[id*="profiling-guidelines"] { counter-reset: h2counter; }
+        #preview-content h1[id*="profiling-guidelines"] ~ h2 { counter-reset: h3counter; }
+        #preview-content h1[id*="profiling-guidelines"] ~ h3 { counter-reset: h4counter; }
+        #preview-content h1[id*="profiling-guidelines"] ~ h4 { counter-reset: h5counter; }
+        #preview-content h1[id*="profiling-guidelines"] ~ h5 { counter-reset: h6counter; }
+    
+    
+        #preview-content h1[id*="profiling-guidelines"] ~ h2:before {
+            counter-increment: h2counter;
+            content: counter(h2counter) ".\0000a0\0000a0";
+        }
+    
+        #preview-content h1[id*="profiling-guidelines"] ~ h3:before {
+            counter-increment: h3counter;
+            content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+        }
+    
+        #preview-content h1[id*="profiling-guidelines"] ~ h4:before {
+            counter-increment: h4counter;
+            content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) ".\0000a0\0000a0";
+        }
+    
+        #preview-content h1[id*="profiling-guidelines"] ~ h5:before {
+            counter-increment: h5counter;
+            content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) ".\0000a0\0000a0";
+        }
+    
+    
+
+  a {
+      color: #69aa41;
+  } 
+  
+  p {
+      margin: 0 0 5px;
+  }
+  
+  .highlight {
+      color: blue;
+      font-family:    "Courier New"
+                      Courier
+                      monospace;
+  }
+  
+  h1, h2, {
+      color: #69aa41;
+  }
+  
+  h3, h4, {
+      color: #757575;
+  }
+  h1{
+      color: #69aa41;
+      font-family: Fira Sans Medium,sans-serif;
+      background-color: #EDEDED;
+      font-weight: bold;
+      padding: 0.5em;
+      font-size: 1.65em;
+      line-height: 80%;
+  }
+  
+  h2{
+      color: #69aa41;
+      font-family: Fira Sans Medium,sans-serif;
+      font-weight: bolder;
+      font-size: 1.4em;
+      line-height: 70%;
+      
+  }
+  
+  h3{
+      color: #BDCF00;
+      font-family: Fira Sans Medium,sans-serif;
+      font-weight: bolder;
+      font-size: 1.2em;
+      line-height: 50%; 
+  }
+  
+  h4{
+      color: black;
+      font-family: Fira Sans Medium,sans-serif;
+      font-weight: bold;
+      font-size: 1.0em;
+  }
+  
+  h5{
+      color: black;
+      font-family: Fira Sans Medium,sans-serif;
+      font-size: 0.9em;
+      font-weight: bold;
+  }
+  
+  /*standard table class for tables in html code*/
+  table.standard-html{
+      table-layout: fixed;
+      width: 100%;
+  }
+  
+  /*standard table class for cells in tables in html code*/
+  th.standard-html, td.standard-html, tr.standard-html{
+      border-style: solid;
+      /*border-width: 1.5px 0.5px 1.5px;*/
+      border-width: 0.5px 0.5px 0.5px;
+      border-color: #eeecec;
+      font-size: 14;
+      padding: 0.5em;
+      /*w3-hoverable*/
+  }
+  
+  /*standard table class for tables in markdown*/
+  .standard table{
+      table-layout: fixed;
+      width: 100%;
+  }
+  
+  /*fitcontent table class for tables in markdown*/
+  .fitcontent table{
+      table-layout: auto;
+      white-space:nowrap;
+  }
+  
+  /*fitcontent table class for cells in tables in html code*/
+  th.fitcontent, td.fitcontent, tr.fitcontent{
+      border-style: solid;
+      border-width: 1.5px 0.5px 1.5px;
+      border-color: #eeecec;
+      font-size: 14;
+      padding: 0.5em;
+      /*w3-hoverable*/
+  }
+  
+  th {
+      background-color: #FAFAFA;
+  }
+  
+  pre {
+    background-color: #EEE9E2;
+    font-family:     "Courier New"
+                      Courier
+                      monospace;
+  }
+  
+   /*background of {{render */
+  .stu3-treetable {
+    background-color: #fcfcfc;
+  }
+  
+   /*text color of {{render */
+  /*
+  .stu3-treetable .treetable-wrapper.hybrid a:not(.constraints), .stu3-treetable .treetable-wrapper.hybrid span:not(.constraints) {
+      color: #4D4D4D;
+  }
+  */
+  
+  .scrollbalk{
+      max-height: 450px;
+      overflow: auto;
+  }
+  
+  .content.container{
+  padding-left: 2%;
+  padding-right: 6%;
+  }
+
+  /* Style for the box with snapshot/diff/example view */
+  .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+  }
+  /* Style the buttons inside the tab */
+  .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 8px 10px;
+      transition: 0.3s;
+      font-size: 14px;
+  }
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+      background-color: #ddd;
+  }
+  /* Create an active/current tablink class */
+  .tab button.active {
+      background-color: #69aa41;
+      color: #fff;
+  }
+  /* Style the tab content */
+  .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+  }  
+  
+    /* back to top button - renders when scrolling */
+    #back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        display: none;
+    }
+    /* remove the padding on pages under the header */
+    #preview-content {
+        padding-top: 0px !important;
+    }
+    /* bootstrap overrides */
+    .btn-fhir {
+        background: #69aa41;
+        color: #fff;
+    }
+
+  body
+  {
+      background: no-repeat top left;
+      background-size: cover;
+      clear:both;
+      padding:0px;
+      margin:0px;
+  }
+  
+   body header .guide-title {
+    
+      color: #757575;
+      font-family: Fira Sans Medium,sans-serif;
+      font-size: 1.35em;
+      font-weight: bold;
+      line-height: 80%;
+      margin-top: 20px;
+}
+  
