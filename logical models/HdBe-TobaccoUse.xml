@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="HdBe-TobaccoUse" />
+  <id value="HdBe-SmokingStatus" />
   <language value="en-US" />
   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
     <valuePeriod>
       <start value="2020-09-01T00:00:00+02:00" />
     </valuePeriod>
   </extension>
-  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-TobaccoUse" />
-  <name value="HdBeTobaccoUse">
+  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-SmokingStatus" />
+  <name value="HdBeSmokingStatus">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
         <valueCode value="nl-NL" />
@@ -18,7 +18,7 @@
       </extension>
     </extension>
   </name>
-  <title value="HdBe TobaccoUse" />
+  <title value="HdBe SmokingStatus" />
   <status value="draft" />
   <publisher value="Healthdata.be (Sciensano)" />
   <contact>
@@ -29,7 +29,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="**Concept**&#xD;&#xA;Tobacco is a product that comes from the leaves of the tobacco plant, which is smoked as a drug. Smokable forms of tobacco include rolling tobacco, cigarettes, cigars and pipe tobacco. This information model describes the information asked of the patient about their use of tobacco.&#xD;&#xA;**Purpose**&#xD;&#xA;During the social anamnesis, the patient is frequently asked about their use of tobacco or exposure to tobacco smoke at home or elsewhere. Information on tobacco use can be important for treatment and diagnostics.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Exposure to tobacco is an important risk factor for things like neoplasms, degenerative diseases and vascular incidents. During the anamnesis, the patient is often asked about their current smoking pattern and number of pack years. The number of pack years is the unit that describes the total exposure to tobacco smoke, which is the number of smoked packs of cigarettes per day (one pack = 20 cigarettes) times the number of years of smoking. A different formula is often used for rolling tobacco and pipes, with one of the parameters being the number of grams per week. &#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;The pack year is a measure for smokers’ exposure to tobacco smoke. The *calculation* is not included in the model. It is entered in the EPD and/or during the anamnesis and is only entered if known. This should not be calculated based on the other values in this clinical information model.">
+  <description value="**Concept**&#xD;&#xA;Tobacco is a product that comes from the leaves of the tobacco plant, which is smoked as a drug. Smokable forms of tobacco include rolling tobacco, cigarettes, cigars and pipe tobacco. This information model describes the information asked of the patient about their smoking behaviour and use of tobacco.&#xD;&#xA;**Purpose**&#xD;&#xA;During the social anamnesis, the patient is frequently asked about their smoking behaviour, use of tobacco or exposure to tobacco smoke at home or elsewhere. Information on tobacco use can be important for treatment and diagnostics.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Exposure to tobacco is an important risk factor for things like neoplasms, degenerative diseases and vascular incidents. During the anamnesis, the patient is often asked about their current smoking pattern and number of pack years. The number of pack years is the unit that describes the total exposure to tobacco smoke, which is the number of smoked packs of cigarettes per day (one pack = 20 cigarettes) times the number of years of smoking. A different formula is often used for rolling tobacco and pipes, with one of the parameters being the number of grams per week. &#xD;&#xA;**Instructions**&#xD;&#xA;The pack year is a measure for smokers’ exposure to tobacco smoke. The *calculation* is not included in the model. It is entered in the EPD and/or during the anamnesis and is only entered if known. This should not be calculated based on the other values in this clinical information model.">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
         <valueCode value="nl-NL" />
@@ -43,13 +43,13 @@
   <fhirVersion value="4.0.1" />
   <kind value="logical" />
   <abstract value="true" />
-  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/tobacco_use" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/smoking_status" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
   <derivation value="specialization" />
   <differential>
-    <element id="tobacco_use">
-      <path value="tobacco_use" />
-      <short value="TobaccoUse">
+    <element id="smoking_status">
+      <path value="smoking_status" />
+      <short value="SmokingStatus">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -59,7 +59,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="Root concept of the TobaccoUse information model. This concept contains all data elements of the TobaccoUse information model.">
+      <definition value="Root concept of the SmokingStatus information model. This concept contains all data elements of the SmokingStatus information model.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -72,70 +72,9 @@
       <min value="0" />
       <max value="*" />
     </element>
-    <element id="tobacco_use.comment">
-      <path value="tobacco_use.comment" />
-      <short value="Comment">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Toelichting" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Relevant comments on the patient’s use of tobacco.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Relevante opmerkingen over het gebruik." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="tobacco_use.type_of_tobacco_used">
-      <path value="tobacco_use.type_of_tobacco_used" />
-      <short value="TypeOfTobaccoUsed">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="SoortTabakGebruik" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Type of tobacco the patient uses.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Soort tabak die de patiënt gebruikt." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="TypeOfTobaccoUsed codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/TypeOfTobaccoUsed" />
-      </binding>
-    </element>
-    <element id="tobacco_use.tobacco_use_status">
-      <path value="tobacco_use.tobacco_use_status" />
-      <short value="TobaccoUseStatus">
+    <element id="smoking_status.smoking_status">
+      <path value="smoking_status.smoking_status" />
+      <short value="SmokingStatus">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -145,7 +84,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="The status of the patient’s tobacco use.">
+      <definition value="The patient’s smoking status or usage of (smokeless) tobacco.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -162,12 +101,45 @@
       </type>
       <binding>
         <strength value="extensible" />
-        <description value="TobaccoUseStatus codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/TobaccoUseStatus" />
+        <description value="SmokingStatus codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/SmokingStatus" />
       </binding>
     </element>
-    <element id="tobacco_use.observation_of_use">
-      <path value="tobacco_use.observation_of_use" />
+    <element id="smoking_status.type_of_smoking_or_tobacco">
+      <path value="smoking_status.type_of_smoking_or_tobacco" />
+      <short value="TypeOfSmokingOrTobacco">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="SoortTabakGebruik" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The patient's type of smoking or tobacco use.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Soort tabak die de patiënt gebruikt." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="TypeOfSmokingOrTobacco codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/TypeOfSmokingOrTobacco" />
+      </binding>
+    </element>
+    <element id="smoking_status.observation_of_use">
+      <path value="smoking_status.observation_of_use" />
       <short value="ObservationOfUse">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
@@ -194,8 +166,8 @@
         <code value="BackboneElement" />
       </type>
     </element>
-    <element id="tobacco_use.observation_of_use.start_date">
-      <path value="tobacco_use.observation_of_use.start_date" />
+    <element id="smoking_status.observation_of_use.start_date">
+      <path value="smoking_status.observation_of_use.start_date" />
       <short value="StartDate">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
@@ -222,8 +194,8 @@
         <code value="dateTime" />
       </type>
     </element>
-    <element id="tobacco_use.observation_of_use.stop_date">
-      <path value="tobacco_use.observation_of_use.stop_date" />
+    <element id="smoking_status.observation_of_use.stop_date">
+      <path value="smoking_status.observation_of_use.stop_date" />
       <short value="StopDate">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
@@ -250,8 +222,24 @@
         <code value="dateTime" />
       </type>
     </element>
-    <element id="tobacco_use.observation_of_use.amount">
-      <path value="tobacco_use.observation_of_use.amount" />
+    <element id="smoking_status.observation_of_use.frequency">
+      <path value="smoking_status.observation_of_use.frequency" />
+      <short value="Frequency" />
+      <definition value="The frequency of smoking or tobacco use." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Frequency qualifier values" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/Frequency" />
+      </binding>
+    </element>
+    <element id="smoking_status.observation_of_use.amount">
+      <path value="smoking_status.observation_of_use.amount" />
       <short value="Amount">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
@@ -278,8 +266,8 @@
         <code value="Quantity" />
       </type>
     </element>
-    <element id="tobacco_use.observation_of_use.pack_years">
-      <path value="tobacco_use.observation_of_use.pack_years" />
+    <element id="smoking_status.observation_of_use.pack_years">
+      <path value="smoking_status.observation_of_use.pack_years" />
       <short value="PackYears">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
@@ -304,6 +292,34 @@
       <max value="1" />
       <type>
         <code value="Count" />
+      </type>
+    </element>
+    <element id="smoking_status.comment">
+      <path value="smoking_status.comment" />
+      <short value="Comment">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toelichting" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Relevant comments on the patient’s use of tobacco.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Relevante opmerkingen over het gebruik." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
       </type>
     </element>
   </differential>
