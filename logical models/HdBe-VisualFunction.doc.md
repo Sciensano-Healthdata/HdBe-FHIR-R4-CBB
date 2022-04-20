@@ -2,4 +2,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+|`visual_aid.medical_device.produc_type` | terminology | Replaced *geen* and *other* in VisualAidType ValueSet with SNOMED CT values and added a value for Unknown. |
