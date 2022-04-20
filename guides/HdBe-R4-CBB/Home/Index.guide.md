@@ -61,6 +61,7 @@ The table below contains links to CBBs as logical models that have undergone man
 | BodyTemperature <!--{{pagelink:Home/LogicalModels/HdBe-BodyTemperature.guide.md,     text:BodyTemperature}--> | {{pagelink:Home/LogicalModels/HdBe-HealthProfessional.guide.md,   text:HealthProfessional}} | O2Saturation   <!--{{pagelink:Home/LogicalModels/HdBe-O2Saturation.guide.md,   text:O2Saturation}}--> | TreatmentDirective2   <!--{{pagelink:Home/LogicalModels/HdBe-TreatmentDirective2.guide.md,   text:TreatmentDirective2}}--> |
 | BodyWeight <!--{{pagelink:Home/LogicalModels/HdBe-BodyWeight.guide.md,     text:BodyWeight}}--> | HearingFunction   <!--{{pagelink:Home/LogicalModels/HdBe-HearingFunction.guide.md,   text:HearingFunction}}--> | OutcomeOfCare   <!--{{pagelink:Home/LogicalModels/HdBe-OutcomeOfCare.guide.md,   text:OutcomeOfCare}}--> | TreatmentObjective   <!--{{pagelink:Home/LogicalModels/HdBe-TreatmentObjective.guide.md,   text:TreatmentObjective}}--> |
 | Burnwound   <!--{{pagelink:Home/LogicalModels/HdBe-Burnwound.guide.md,   text:Burnwound}}--> | HeartRate   <!--{{pagelink:Home/LogicalModels/HdBe-HeartRate.guide.md,   text:HeartRate}}--> | PainCharacteristics   <!--{{pagelink:Home/LogicalModels/HdBe-PainCharacteristics.guide.md,   text:PainCharacteristics}}--> |  |
+| {{pagelink:Home/LogicalModels/HdBe-Vaccination.guide.md,   text:Vaccination}}  | | | | 
 
 
 ## Index of draft CBBs<a name="IndexOfDraftCBB"></a> 
@@ -93,4 +94,5 @@ The table below contains all CBBs, as raw output of conversion scripts, that wil
 |  {{pagelink:Home/LogicalModels/draft/HdBe-BodyTemperature.guide.md,     text:BodyTemperature}}   |  HealthProfessional  | {{pagelink:Home/LogicalModels/draft/HdBe-O2Saturation.guide.md, text:O2Saturation}}  | {{pagelink:Home/LogicalModels/draft/HdBe-TreatmentDirective2.guide.md, text:TreatmentDirective2}} |
 |  {{pagelink:Home/LogicalModels/draft/HdBe-BodyWeight.guide.md,     text:BodyWeight}}   | {{pagelink:Home/LogicalModels/draft/HdBe-HearingFunction.guide.md, text:HearingFunction}}  | {{pagelink:Home/LogicalModels/draft/HdBe-OutcomeOfCare.guide.md, text:OutcomeOfCare}}  | {{pagelink:Home/LogicalModels/draft/HdBe-TreatmentObjective.guide.md, text:TreatmentObjective}} |
 | {{pagelink:Home/LogicalModels/draft/HdBe-Burnwound.guide.md, text:Burnwound}}  | {{pagelink:Home/LogicalModels/draft/HdBe-HeartRate.guide.md, text:HeartRate}}  | {{pagelink:Home/LogicalModels/draft/HdBe-PainCharacteristics.guide.md, text:PainCharacteristics}}  |  |
+| Vaccination  | | | | 
 
