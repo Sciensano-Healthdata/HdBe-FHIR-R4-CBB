@@ -5,6 +5,6 @@
 | description | textual | Widend the scope of the CBB to smoking status to include the use of e-Sigarate smoking. 
 |`smoking_status` | element | Renamed element from TobaccoUseStatus to SmokingStatus. 
 |`smoking_status` | terminology | Added codes to define electronic cigarette users. Removed codes that contained frequency information because this is replaced by the `observation_of_use.frequency`element. Added Unkown and Other qualifier codes.  
-|`type_of_smoking_or_tobacco` | element | Renamed element from TypeOfTobaccoUsed to accomodate e-sigarettes.
-|`type_of_smoking_or_tobacco` | terminology | Added type of e-cigarette codes and Unkown and Other qualifier codes.
+|`type_of_use` | element | Renamed element from TypeOfTobaccoUsed to accomodate e-sigarettes.
+|`type_of_use` | terminology | Added type of e-cigarette codes and Unkown and Other qualifier codes.
 |`observation_of_use.frequency ` | element | Added element to capture the frequency of the smoking or tobacco use. This may have some overlap with amount.
