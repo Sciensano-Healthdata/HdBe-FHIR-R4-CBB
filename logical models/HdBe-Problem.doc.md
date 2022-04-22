@@ -7,3 +7,4 @@
 | `problem_name` | terminology | Replaced all possible Codesystems in ValueSet ProblemName with SNOMED CT and loosened binding to `extensible`. |
 | `problem_name` | textual | Removed all content about the multiple CodeSystems. |
 | `problem_status` | cardinality | Loosened the cardinality from obligatory (1) to optional (0..1). |
+| `verification_status` | terminology | Replaced UNK value from ValueSet VerificationStatusCodelist with SNOMED CT equivalent for Unknown (261665006). |
