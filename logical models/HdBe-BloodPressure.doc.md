@@ -2,7 +2,7 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`cuff_type` | terminology | Modified ValueSet to descendant of SNOMED CT values. ([zib ticket #1719](https://bits.nictiz.nl/browse/ZIB-1719)) |
+|`cuff_type` | terminology | Modified ValueSet to descendant of SNOMED CT values and added Unknown and Other value. ([zib ticket #1719](https://bits.nictiz.nl/browse/ZIB-1719)) |
 | `systolic_blood_pressure`  | textual| Added mm[Hg] as a unit to the definition. |
 | `diastolic_blood_pressure` | textual |Added mm[Hg] as a unit to the definition. |
 | `average_blood_pressure` |  textual | Added mm[Hg] as a unit to the definition. |

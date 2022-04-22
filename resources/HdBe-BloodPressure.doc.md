@@ -2,4 +2,6 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+| `Observation.component.DiastolicBP.value[x]`  | textual| Added mm[Hg] as a unit to the definition. |
+| `Observation.component.SystolicBP.value[x]`  | textual |Added mm[Hg] as a unit to the definition. |
+| `Observation.component.averageBloodPressure.value[x]`  |  textual | Added mm[Hg] as a unit to the definition. 
