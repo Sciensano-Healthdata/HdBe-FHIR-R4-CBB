@@ -43,6 +43,35 @@
         <comment value="TobaccoUse" />
       </mapping>
     </element>
+    <element id="Observation.extension">
+      <path value="Observation.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Observation.extension:frequency">
+      <path value="Observation.extension" />
+      <sliceName value="frequency" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/ext-SmokingStatus.FrequencyQualifier" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Observation.extension:frequency.value[x]">
+      <path value="Observation.extension.value[x]" />
+      <mapping>
+        <identity value="HdBe-SmokingStatus" />
+        <map value="observation_of_use.frequency" />
+      </mapping>
+    </element>
     <element id="Observation.code">
       <path value="Observation.code" />
       <patternCodeableConcept>
@@ -121,7 +150,7 @@
       </slicing>
     </element>
     <element id="Observation.value[x]:valueCodeableConcept">
-      <path value="Observation.valueCodeableConcept" />
+      <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
       <short value="SmokingStatus" />
       <definition value="The patient’s smoking status or usage of (smokeless) tobacco." />
