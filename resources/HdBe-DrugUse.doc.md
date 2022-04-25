@@ -1,4 +1,4 @@
-## zib DrugUse difference (package 0.2.0-beta1)
+## zib DrugUse difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
