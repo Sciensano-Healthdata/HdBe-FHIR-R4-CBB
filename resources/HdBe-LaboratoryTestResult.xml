@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult" />
   <meta>
-    <lastUpdated value="2022-04-12T20:07:40.9234565+00:00" />
+    <lastUpdated value="2022-04-25T09:38:44.7639539+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult" />
   <name value="HdBeLaboratoryTestResult" />
@@ -75,7 +75,7 @@
     </element>
     <element id="Observation.extension:sequelTo">
       <path value="Observation.extension" />
-      <sliceName value="sequelTo"/>
+      <sliceName value="sequelTo" />
       <min value="0" />
       <type>
         <code value="Extension" />
@@ -85,7 +85,7 @@
     <element id="Observation.extension:sequelTo.value[x]">
       <path value="Observation.extension.value[x]" />
       <short value="RelatedResult" />
-      <definition value="This is one of the two mechanisms to represent concept RelatedResult. The other mechanism is `Observation.derivedFrom`."/>
+      <definition value="This is one of the two mechanisms to represent concept RelatedResult. The other mechanism is `Observation.derivedFrom`." />
       <alias value="GerelateerdeUitslag" />
       <type>
         <code value="Reference" />
@@ -163,6 +163,7 @@
       <path value="Observation.code" />
       <short value="PanelOrBattery / TestCode" />
       <definition value="The name and code of the executed test. For laboratory tests comprising multiple subtests and often requested together as a whole, this concept contains the name and code of the compound request (often indicated as a ‘panel’, ‘battery’ or ‘cluster’). Examples include: blood gases and EBV serology." />
+      <comment value="The codification to be used SHOULD be LOINC as per the subset defined by the FPS Health, for the majority of commonly used lab measurements and demands. This subset is available on the [website of the FPS Health](https://www.vas.ehealth.fgov.be/webretam/retam/home.htm).&#xD;&#xA;&#xD;&#xA;It is allowed to use multiple codes within the FHIR CodeableConcept datatype. But the code given must follow the following rules.&#xD;&#xA;&#xD;&#xA;1. The actual observation is coded in LOINC (subset as defined by FPS Health).&#xD;&#xA;  * ``` &quot;code&quot;:{&#xD;&#xA; &quot;coding&quot;:[&#xD;&#xA;  {&#xD;&#xA;   &quot;system&quot;: &quot;http://loinc.org&quot;,&#xD;&#xA;   &quot;code&quot;: &quot;30341-2&quot;,&#xD;&#xA;   &quot;display&quot;: &quot;Erythrocyte sedimentation rate&quot;&#xD;&#xA;  }&#xD;&#xA;  ]&#xD;&#xA; } ```&#xD;&#xA;2. If above not possible , ALBERT codes are used (subset as defined by FPS Health). &#xD;&#xA;   *   ``` &quot;code&quot;:{&#xD;&#xA; &quot;coding&quot;:[&#xD;&#xA;  {&#xD;&#xA;   &quot;system&quot;: &quot;https://www.ehealth.fgov.be/standards/fhir/lab/CodeSystem/albert&quot;,&#xD;&#xA;   &quot;code&quot;: &quot;26224&quot;,&#xD;&#xA;   &quot;display&quot;: &quot;Glucose (urine 24h)&quot;&#xD;&#xA;  }&#xD;&#xA;  ]&#xD;&#xA; }```&#xD;&#xA;3. If above not possible, it is possible to sends own codes plus obligatory a text element to further explain.&#xD;&#xA;   * ``` &quot;code&quot;:{&#xD;&#xA; &quot;coding&quot;:[&#xD;&#xA;  {&#xD;&#xA;   &quot;system&quot;: &quot;OWNSYSTEM&quot;,&#xD;&#xA;   &quot;code&quot;: &quot;OWNCODE&quot;,&#xD;&#xA;   &quot;display&quot;: &quot;DISPLAYOWNCODE&quot;&#xD;&#xA;  }&#xD;&#xA;  ],&#xD;&#xA; &quot;text&quot;: &quot;TEXTEXPLAINING&quot;&#xD;&#xA; } ```&#xD;&#xA;4. If above not possible the kind of observation is expressed only in text (allowed but not recommended)." />
       <alias value="Onderzoek" />
       <alias value="TestCode" />
       <binding>
@@ -436,7 +437,7 @@
     </element>
     <element id="Observation.hasMember">
       <path value="Observation.hasMember" />
-      <comment value="When this resource is used to represent the overall result of a panel/cluster of laboratory tests, the individual test results SHOULD be referenced here. See the root of this profile for guidance."/>
+      <comment value="When this resource is used to represent the overall result of a panel/cluster of laboratory tests, the individual test results SHOULD be referenced here. See the root of this profile for guidance." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
@@ -448,7 +449,7 @@
     <element id="Observation.derivedFrom">
       <path value="Observation.derivedFrom" />
       <short value="RelatedResult" />
-      <definition value="The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.&#xD;&#xA;&#xD;&#xA;This is one of the two mechanisms to represent concept RelatedResult. The other mechanism is `Observation.extension:sequelTo`."/>
+      <definition value="The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.&#xD;&#xA;&#xD;&#xA;This is one of the two mechanisms to represent concept RelatedResult. The other mechanism is `Observation.extension:sequelTo`." />
       <alias value="GerelateerdeUitslag" />
       <type>
         <code value="Reference" />

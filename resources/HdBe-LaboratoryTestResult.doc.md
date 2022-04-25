@@ -2,7 +2,7 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-| `code` | terminology | Replaced ValueSet by a ValueSet that includes Loinc and Albert codes as defined in the ReTaM code set. |
+| `code` | terminology | Removed ValueSet binding and described in the comment the use of Loinc and Albert codes as per the subset defined by the FPS Health (ReTaM). Added a reference to the subset on the website of the FPS Health. The ReTaM codes are not duplicated in a FHIR ValueSet because this would require extensive maintenance in keeping the ValueSet up-to-date. |
 | `performer` | reference | Added reference to HdBe-HealthcareProvider-Organization (seems missing in the current zib profile implementation). |
 | `performer` | slicing | Removed slicing because this caused an error in the FHIR validator. |
 | `value[x]`| textual | Added textual guidance to include the unit for quantitative results. | 
