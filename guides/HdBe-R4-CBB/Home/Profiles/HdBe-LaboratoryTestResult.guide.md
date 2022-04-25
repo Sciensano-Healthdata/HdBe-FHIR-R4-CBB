@@ -28,6 +28,14 @@ select
 	Instructions: differential.element[0].comment
 
 ```
+@```
+from
+	StructureDefinition
+	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult'
+select
+	Observation.code: differential.element.where(id = 'Observation.code').comment
+
+```
 
 <div>
   <div class="tab">
