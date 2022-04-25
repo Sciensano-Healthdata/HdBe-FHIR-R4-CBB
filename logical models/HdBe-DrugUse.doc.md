@@ -2,4 +2,6 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`route_of_administration` | terminology | Changed ValueSet content of RouteOfAdministration to use SNOMED codes.  |
+|`drug_use_status` | terminology | Replaced 'Other' from HL7 NullFlavor CodeSystem with equivalent SNOMED code. |
+|`drug_or_medication_type` | terminology | Replaced 'Other' from HL7 NullFlavor CodeSystem with equivalent SNOMED code. |
+|`route_of_administration` | terminology | Replaced ValueSet content of RouteOfAdministration with SNOMED codes.  |

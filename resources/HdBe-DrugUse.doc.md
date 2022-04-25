@@ -2,4 +2,6 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`component.routeOfAdministration` | terminology | Changed ValueSet content of RouteOfAdministration to use SNOMED codes. |
+|`value[x]` | terminology | Replaced 'Other' from HL7 NullFlavor CodeSystem with equivalent SNOMED code. |
+|`component:drugOrMedicationType.value[x]` | terminology | Replaced 'Other' from HL7 NullFlavor CodeSystem with equivalent SNOMED code. |
+|`component.routeOfAdministration.value[x]` | terminology | Replaced ValueSet content of RouteOfAdministration with SNOMED codes. |
