@@ -2,7 +2,7 @@
 
 @```
 from StructureDefinition
-where url in ('https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction', 'https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction.HearingAid','https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction.HearingAid.Product')
+where url in ('https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction' | 'https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction.HearingAid' | 'https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction.HearingAid.Product')
 select 
 Profile: id,
 Description: description,
@@ -185,7 +185,7 @@ TODO
 
 @```
 from StructureDefinition
-where url in ('https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction', 'https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction.HearingAid','https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction.HearingAid.Product')
+where url in ('https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction' | 'https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction.HearingAid' | 'https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction.HearingAid.Product')
 
 for differential.element
 select
