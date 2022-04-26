@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceUseStatement xmlns="http://hl7.org/fhir">
+   <id value="HdBe-HearingFunction.HearingAid-01"/>
+    <meta>
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction.HearingAid" />
+    </meta>
+   <status value="active"/>
+   <subject>
+      <reference value="Patient/HdBe-Patient-01" />
+      <type value="Patient" />
+      <display value="Belle Ulijn" />
+   </subject>
+   <device>
+      <reference value="Device/HdBe-HearingFunction.HearingAid.Product-01"/>
+      <type value="Device"/>
+      <display value="Gehoorapparaat"/>
+   </device>
+   <reasonReference>
+      <reference value="Observation/HdBe-HearingFunction-01"/>
+      <type value="Observation"/>
+      <display value="Hearing function observation, Gehoorverlies"/>
+   </reasonReference>
+   <bodySite>
+      <coding>
+         <system value="http://snomed.info/sct"/>
+         <code value="89644007"/>
+         <display value="Structuur van linker oor"/>
+      </coding>
+   </bodySite>
+</DeviceUseStatement>
