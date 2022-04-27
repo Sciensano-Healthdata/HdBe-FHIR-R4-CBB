@@ -1,5 +1,6 @@
 # {{page-title}}
-- {{pagelink:Home/Examples/HdBe-AlcoholUse-01.guide.md}} 
+- {{pagelink:Home/Examples/HdBe-AlcoholUse-01.guide.md}}
+- {{pagelink:Home/Examples/HdBe-Alert-01.guide.md}} 
 - {{pagelink:Home/Examples/HdBe-BodyWeight-01.guide.md}}  
 - {{pagelink:Home/Examples/HdBe-BodyHeight-01.guide.md}} 
 - {{pagelink:Home/Examples/HdBe-BodyTemperature-01.guide.md}}
