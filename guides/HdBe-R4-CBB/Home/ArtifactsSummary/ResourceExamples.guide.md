@@ -3,6 +3,7 @@
 - {{pagelink:Home/Examples/HdBe-BodyWeight-01.guide.md}}  
 - {{pagelink:Home/Examples/HdBe-ContactPerson-01.guide.md}}
 - {{pagelink:Home/Examples/HdBe-ContactPerson-02.guide.md}}
+- {{pagelink:Home/Examples/HdBe-DrugUse-01.guide.md}}
 - {{pagelink:Home/Examples/HdBe-HealthcareProvider-01.guide.md}}
 - {{pagelink:Home/Examples/HdBe-HealthcareProvider-02.guide.md}}
 - {{pagelink:Home/Examples/HdBe-HealthcareProvider-03.guide.md}}
