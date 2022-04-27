@@ -4,7 +4,7 @@
 from StructureDefinition
 where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson'
 select 
-Profile: id,
+CBB: id,
 Version: version,
 Status: status,
 URL: url
