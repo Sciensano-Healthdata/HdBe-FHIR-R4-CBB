@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="MeetLocatie"/>
+   <id value="TypeOfDrugOrMedication"/>
    <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
@@ -10,27 +10,27 @@
             <start value="2020-09-01T00:00:00+01:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/ValueSet/MeetLocatie"/>
+   <url value="https://fhir.healthdata.be/ValueSet/TypeOfDrugOrMedication"/>
    <identifier>
         <use value="official"/>
         <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.12.4.4"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.7.4.1"/>
     </identifier>
    <version value="2020-09-01T00:00:00"/>
-   <name value="MeetLocatie"/>
-   <title value="MeetLocatie"/>
+   <name value="TypeOfDrugOrMedication"/>
+   <title value="TypeOfDrugOrMedication"/>
    <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Healthdata.be (Sciensano)"/>
    <contact>
-    <name value="Service portal – healthdata.be" />
-    <telecom>
-      <system value="url" />
-      <value value="https://sciensano.service-now.com/sp" />
-      <use value="work" />
-    </telecom>
-  </contact>
-   <description value="MeetLocatieCodelijst"/>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="TypeOfDrugOrMedicationCodelist"/>
    <immutable value="false"/>
    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
@@ -38,10 +38,10 @@
             <system value="http://snomed.info/sct"/>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Bovenarm"/>
+                    <valueString value="Heroïne"/>
                 </extension>
-                <code value="40983000"/>
-                <display value="structuur van bovenarm"/>
+                <code value="387341002"/>
+                <display value="heroïne"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -49,7 +49,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Upper arm structure"/>
+                    <value value="Diamorphine"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -58,24 +58,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="structuur van bovenarm"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="bovenarm"/>
+                    <value value="heroïne"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Rechter bovenarm"/>
+                    <valueString value="Benzodiazepine"/>
                 </extension>
-                <code value="368209003"/>
-                <display value="structuur van rechter bovenarm"/>
+                <code value="372664007"/>
+                <display value="benzodiazepine"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -83,7 +74,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Right upper arm structure"/>
+                    <value value="Benzodiazepine"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -92,15 +83,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="structuur van rechter bovenarm"/>
+                    <value value="benzodiazepine"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Linker bovenarm"/>
+                    <valueString value="Methadon"/>
                 </extension>
-                <code value="368208006"/>
-                <display value="structuur van linker bovenarm"/>
+                <code value="387286002"/>
+                <display value="methadon"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -108,7 +99,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Left upper arm structure"/>
+                    <value value="Methadone"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -117,15 +108,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="structuur van linker bovenarm"/>
+                    <value value="methadon"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Bovenbeen"/>
+                    <valueString value="GHB"/>
                 </extension>
-                <code value="68367000"/>
-                <display value="structuur van bovenbeen"/>
+                <code value="62821004"/>
+                <display value="gammahydroxyboterzuur"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -133,7 +124,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Thigh structure"/>
+                    <value value="Hydroxybutyric acid"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -142,7 +133,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="bovenbeen"/>
+                    <value value="gammahydroxyboterzuur"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -151,15 +142,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="structuur van bovenbeen"/>
+                    <value value="GHB"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Rechter bovenbeen"/>
+                    <valueString value="Cocaïne"/>
                 </extension>
-                <code value="11207009"/>
-                <display value="structuur van rechter bovenbeen"/>
+                <code value="387085005"/>
+                <display value="cocaïne"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -167,7 +158,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Structure of right thigh"/>
+                    <value value="Cocaine"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -176,15 +167,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="structuur van rechter bovenbeen"/>
+                    <value value="cocaïne"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Linker bovenbeen"/>
+                    <valueString value="Crack, base coke"/>
                 </extension>
-                <code value="61396006"/>
-                <display value="structuur van linker bovenbeen"/>
+                <code value="229003004"/>
+                <display value="crack"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -192,7 +183,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Structure of left thigh"/>
+                    <value value="Cocaine freebase"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -201,15 +192,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="structuur van linker bovenbeen"/>
+                    <value value="crack"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Pols"/>
+                    <valueString value="MDMA"/>
                 </extension>
-                <code value="8205005"/>
-                <display value="structuur van polsregio"/>
+                <code value="288459003"/>
+                <display value="methyleendioxymethamfetamine"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -217,7 +208,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Wrist region structure"/>
+                    <value value="Methylenedioxymethamphetamine"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -226,7 +217,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="structuur van polsregio"/>
+                    <value value="methyleendioxymethamfetamine"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -235,15 +226,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="pols"/>
+                    <value value="xtc"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Rechterpols"/>
+                    <valueString value="Amfetamine, speed"/>
                 </extension>
-                <code value="9736006"/>
-                <display value="structuur van rechter pols"/>
+                <code value="703842006"/>
+                <display value="amfetamine"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -251,7 +242,16 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Structure of right wrist"/>
+                    <value value="Amfetamine"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Amphetamine"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -260,15 +260,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="structuur van rechter pols"/>
+                    <value value="amfetamine"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Linkerpols"/>
+                    <valueString value="Cannabis, wiet marihuana, hasj"/>
                 </extension>
-                <code value="5951000"/>
-                <display value="structuur van linker pols"/>
+                <code value="398705004"/>
+                <display value="cannabis"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -276,7 +276,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Structure of left wrist"/>
+                    <value value="Cannabis"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -285,15 +285,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="structuur van linker pols"/>
+                    <value value="cannabis"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Vinger"/>
+                    <valueString value="Paddo''s"/>
                 </extension>
-                <code value="7569003"/>
-                <display value="structuur van digitus van hand, exclusief digitus I"/>
+                <code value="229006007"/>
+                <display value="paddo"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -301,7 +301,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Finger structure"/>
+                    <value value="Hallucinogenic mushrooms"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -310,15 +310,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="structuur van digitus van hand, exclusief digitus I"/>
+                    <value value="paddo"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Enkel"/>
+                    <valueString value="LSD"/>
                 </extension>
-                <code value="344001"/>
-                <display value="structuur van regio van enkel"/>
+                <code value="15698006"/>
+                <display value="lyserginezuurdi-ethylamide"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -326,7 +326,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Ankle region structure"/>
+                    <value value="Lysergic acid diethylamide"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -335,7 +335,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="structuur van regio van enkel"/>
+                    <value value="lsd"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -344,15 +344,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="enkel"/>
+                    <value value="lyserginezuurdi-ethylamide"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Rechterenkel"/>
+                    <valueString value="Ketamine"/>
                 </extension>
-                <code value="6685009"/>
-                <display value="structuur van rechter enkel"/>
+                <code value="373464007"/>
+                <display value="ketamine"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -360,7 +360,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Structure of right ankle"/>
+                    <value value="Ketamine"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -369,15 +369,15 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="structuur van rechter enkel"/>
+                    <value value="ketamine"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Linkerenkel"/>
+                    <valueString value="PCP"/>
                 </extension>
-                <code value="51636004"/>
-                <display value="structuur van linker enkel"/>
+                <code value="9721008"/>
+                <display value="fencyclidine"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -385,7 +385,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Structure of left ankle"/>
+                    <value value="Phencyclidine"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -394,9 +394,208 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="structuur van linker enkel"/>
+                    <value value="fencyclidine"/>
                 </designation>
             </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Crystal meth, methamfetamine"/>
+                </extension>
+                <code value="387499002"/>
+                <display value="methamfetamine"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Methamphetamine"/>
+                </designation>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Metamfetamine"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="methamfetamine"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Anabole steroïde"/>
+                </extension>
+                <code value="111151007"/>
+                <display value="anabool steroïd"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Anabolic androgenic steroid"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="anabool steroïd"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="anabolicum"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Laxans"/>
+                </extension>
+                <code value="372800002"/>
+                <display value="laxans"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Laxative"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="laxeermiddel"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="laxans"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Buprenorfine"/>
+                </extension>
+                <code value="387173000"/>
+                <display value="buprenorfine"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Buprenorphine"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="buprenorfine"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Fentanyl"/>
+                </extension>
+                <code value="373492002"/>
+                <display value="fentanyl"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Fentanyl"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="fentanyl"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Barbituraat"/>
+                </extension>
+                <code value="372798009"/>
+                <display value="barbituraat"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Barbiturate"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="barbituraat"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="74964007"/>
+                <display value="Other"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Other"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="ander"/>
+                </designation>
+            </concept> 
         </include>
     </compose>
 </ValueSet>

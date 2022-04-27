@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="Kleding"/>
+   <id value="RouteOfAdministration"/>
    <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
@@ -10,35 +10,35 @@
             <start value="2020-09-01T00:00:00+01:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/ValueSet/Kleding"/>
+   <url value="https://fhir.healthdata.be/ValueSet/RouteOfAdministration"/>
    <identifier>
         <use value="official"/>
         <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.12.1.1"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.7.4.3"/>
     </identifier>
    <version value="2020-09-01T00:00:00"/>
-   <name value="Kleding"/>
-   <title value="Kleding"/>
+   <name value="RouteOfAdministration"/>
+   <title value="RouteOfAdministration"/>
    <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Healthdata.be (Sciensano)"/>
    <contact>
-    <name value="Service portal – healthdata.be" />
-    <telecom>
-      <system value="url" />
-      <value value="https://sciensano.service-now.com/sp" />
-      <use value="work" />
-    </telecom>
-  </contact>
-   <description value="KledingCodelijst"/>
+      <name value="Healthdata.be (Sciensano)"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fhir.healthdata@sciensano.be"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="RouteOfAdministrationCodelist"/>
    <immutable value="false"/>
    <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
    <compose>
         <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.8.1"/>
+            <system value="http://snomed.info/sct"/>
             <concept>
-                <code value="UNDRESSED"/>
-                <display value="Undressed"/>
+                <code value="26643006"/>
+                <display value="Oral route"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -46,7 +46,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Undressed"/>
+                    <value value="oral route"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -55,15 +55,12 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Zonder kleding"/>
+                    <value value="orale route"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Lichte kleding/ondergoed [Kleding die niet significant het gewicht beïnvloedt.]"/>
-                </extension>
-                <code value="MINIMAL"/>
-                <display value="Minimal dressed"/>
+                <code value="46713006"/>
+                <display value="Nasal route"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -71,7 +68,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Minimal dressed"/>
+                    <value value="nasal route"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -80,15 +77,12 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Lichte kleding/ondergoed"/>
+                    <value value="nasale route"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Volledig gekleed, inclusief schoenen [Kleren die een significante bijdrage hebben aan het gewicht, inclusief schoenen.]"/>
-                </extension>
-                <code value="FULL"/>
-                <display value="Fully dressed"/>
+                <code value="447694001"/>
+                <display value="Respiratory tract route"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -96,7 +90,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Fully dressed"/>
+                    <value value="respiratory tract route"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -105,15 +99,12 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Volledig gekleed"/>
+                    <value value="via tractus respiratorius"/>
                 </designation>
-            </concept>
+            </concept>             
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Luier [Individu draagt alleen een luier - zou significant aan het gewicht kunnen bijdragen.]"/>
-                </extension>
-                <code value="DIAPER"/>
-                <display value="Diaper"/>
+                <code value="47625008"/>
+                <display value="Intravenous route"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -121,7 +112,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Diaper"/>
+                    <value value="Intravenous route"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -130,9 +121,31 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Luier"/>
+                    <value value="intraveneuze route"/>
                 </designation>
-            </concept>
+            </concept> 
+            <concept>
+                <code value="74964007"/>
+                <display value="Other"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Other"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="ander"/>
+                </designation>
+            </concept> 
         </include>
     </compose>
 </ValueSet>
