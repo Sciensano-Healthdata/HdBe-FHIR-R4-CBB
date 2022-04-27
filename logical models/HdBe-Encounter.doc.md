@@ -1,4 +1,4 @@
-## zib [zib name + version](https://zibs.nl/wiki/[zib name + version(release)]) difference
+## zib [Encounter-v4.0.1](https://zibs.nl/wiki/Encounter-v4.0.1(2020EN)) difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
