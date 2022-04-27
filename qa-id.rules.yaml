@@ -26,7 +26,7 @@
   files: 
     - logical models/*.xml
     - resources/*.xml
-  filter: (StructureDefinition.exists() and StructureDefinition.type != 'Extension')
+  filter: (StructureDefinition.exists() and StructureDefinition.type != 'Extension' and  id.startsWith('pattern') = false)
   predicate: id.startsWith('HdBe-')
   #error-message: "Resource id does not start with 'HdBe-'" 
 
@@ -42,7 +42,7 @@
   status: "Checking if all example ids starts with 'HdBe-'"
   files: 
     - examples/*.xml
-  filter: Resource
+  filter: Resource 
   predicate: id.startsWith('HdBe-')
   error-message: "Resource id does not start with 'HdBe-'" 
 
