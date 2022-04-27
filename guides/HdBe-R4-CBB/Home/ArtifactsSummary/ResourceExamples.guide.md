@@ -3,6 +3,7 @@
 - {{pagelink:Home/Examples/HdBe-BodyWeight-01.guide.md}}  
 - {{pagelink:Home/Examples/HdBe-BodyHeight-01.guide.md}} 
 - {{pagelink:Home/Examples/HdBe-BodyTemperature-01.guide.md}}
+- {{pagelink:Home/Examples/HdBe-BloodPressure-01.guide.md}}
 - {{pagelink:Home/Examples/HdBe-ContactPerson-01.guide.md}}
 - {{pagelink:Home/Examples/HdBe-ContactPerson-02.guide.md}}
 - {{pagelink:Home/Examples/HdBe-DrugUse-01.guide.md}}
