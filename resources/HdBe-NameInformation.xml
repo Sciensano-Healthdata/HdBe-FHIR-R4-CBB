@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-NameInformation" />
   <meta>
-    <lastUpdated value="2022-02-15T13:34:25.8807654+00:00" />
+    <lastUpdated value="2022-04-12T13:56:45.3303523+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation" />
   <name value="HdBeNameInformation" />
@@ -10,7 +10,7 @@
   <status value="draft" />
   <publisher value="Healthdata.be (Sciensano)" />
   <contact>
-    <name value="Service Portal - Sciensano" />
+    <name value="Service portal – healthdata.be" />
     <telecom>
       <system value="url" />
       <value value="https://sciensano.service-now.com/sp" />
@@ -181,7 +181,7 @@
     <element id="HumanName.family.extension:prefix.value[x]">
       <path value="HumanName.family.extension.value[x]" />
       <short value="Prefix" />
-      <definition value="Prefix to the person’s own last name." />
+      <definition value="Prefix to the person’s own last name if not provided in LastName." />
       <alias value="Voorvoegsels" />
       <mapping>
         <identity value="zib-nameinformation-v1.1-2020EN" />
@@ -229,7 +229,7 @@
     <element id="HumanName.family.extension:partnerPrefix.value[x]">
       <path value="HumanName.family.extension.value[x]" />
       <short value="PartnerPrefix" />
-      <definition value="Prefix to the partner’s last name." />
+      <definition value="Prefix to the partner’s last name if not provided in PartnerLastName." />
       <alias value="VoorvoegselsPartner" />
       <mapping>
         <identity value="zib-nameinformation-v1.1-2020EN" />
