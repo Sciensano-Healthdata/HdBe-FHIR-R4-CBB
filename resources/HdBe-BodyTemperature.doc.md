@@ -1,4 +1,4 @@
-## zib [BodyTemperature-v3.1.2](https://zibs.nl/wiki/BodyTemperature-v3.1.2(2020EN)) difference
+## zib BodyTemperature difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
