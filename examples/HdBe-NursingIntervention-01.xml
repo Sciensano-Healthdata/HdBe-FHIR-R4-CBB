@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CarePlan xmlns="http://hl7.org/fhir">
+   <id value="HdBe-NursingIntervention-01"/>
+   <meta>
+      <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NursingIntervention"/>
+   </meta>
+   <status value="active"/>
+   <intent value="plan"/>
+   <category>
+      <coding>
+         <system value="http://snomed.info/sct"/>
+         <code value="9632001"/>
+         <display value="verpleegkundige verrichting"/>
+      </coding>
+   </category>
+    <subject>
+        <reference value="Patient/HdBe-Patient-01" />
+        <type value="Patient" />
+        <display value="Belle Ulijn" />
+    </subject>
+   <period>
+      <start value="2015-08-10"/>
+      <end value="2015-08-15"/>
+   </period>
+   <contributor>
+      <extension url="https://fhir.healthdata.be/StructureDefinition/ext-NursingIntervention-ContributorIsRequester">
+         <valueBoolean value="true"/>
+      </extension>
+     <reference value="PractitionerRole/HdBe-HealthProfessional-PractitionerRole-01" />
+      <type value="PractitionerRole" />
+      <display value="Healthcare professional (person), E. Penninx" />
+   </contributor>
+   <addresses>
+      <reference value="Condition/nl-core-NursingIntervention-01-Condition-01"/>
+      <type value="Condition"/>
+      <display value="Problem"/>
+   </addresses>
+   <!--TO DO: .goal-->
+   <activity>
+      <detail>
+         <code>
+            <coding>
+               <system value="http://snomed.info/sct"/>
+               <code value="71388002"/>
+               <display value="voorlichten over pijnmanagement"/>
+            </coding>
+         </code>
+         <scheduledTiming>
+            <repeat>
+               <boundsPeriod>
+                  <start value="2015-08-10"/>
+                  <end value="2015-08-15"/>
+               </boundsPeriod>
+               <frequency value="1"/>
+               <period value="10"/>
+               <periodUnit value="min"/>
+            </repeat>
+         </scheduledTiming>
+         <performer>
+             <reference value="PractitionerRole/HdBe-HealthProfessional-PractitionerRole-01" />
+                 <type value="PractitionerRole" />
+                 <display value="Healthcare professional (person), E. Penninx" />
+         </performer>
+         <description value="Oefeningen"/>
+      </detail>
+   </activity>
+   <note>
+      <text value="Ondersteuning van de wond bij hoesten."/>
+   </note>
+</CarePlan>

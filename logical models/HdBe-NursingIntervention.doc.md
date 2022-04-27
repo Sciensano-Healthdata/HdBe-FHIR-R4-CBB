@@ -1,5 +1,5 @@
-## zib [zib name + version](https://zibs.nl/wiki/[zib name + version(release)]) difference
+## zib [NursingIntervention-v3.2](https://zibs.nl/wiki/NursingIntervention-v3.2(2020EN)) difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+|`intervention` | terminology | Removed ValueSet 'InterventionNICCodelist' so only the InterventionSnomed ValueSet remains. |
