@@ -15,4 +15,7 @@
 - {{pagelink:Home/Examples/HdBe-LaboratoryTestResult.Specimen-02.guide.md}}
 - {{pagelink:Home/Examples/HdBe-Patient-01.guide.md}}
 - {{pagelink:Home/Examples/HdBe-Patient-02.guide.md}}
+- {{pagelink:Home/Examples/HdBe-VisualFunction-01.guide.md}}
+- {{pagelink:Home/Examples/HdBe-VisualFunction.VisualAid-01.guide.md}}
+- {{pagelink:Home/Examples/HdBe-VisualFunction.VisualAid.Product-01.guide.md}}
 <!-- - {{pagelink:Home/Examples/[CBB-ID]-[number].guide.md}} --> 
