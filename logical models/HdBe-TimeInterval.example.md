@@ -2,7 +2,7 @@
 
 | time_interval     |                   |
 |-----------------|-------------------|
-| start_date_time |  |
-| end_date_time |   |
-| duration |
+| start_date_time | 14-04-2022 |
+| end_date_time |  17-04-2022 |
+| duration | 3 dagen | 
 
