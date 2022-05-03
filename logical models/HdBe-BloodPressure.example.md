@@ -1,24 +1,17 @@
 ## Example instances
 
-| [CBB name]      |                   |
+| blood_pressure      |                   |
 |-----------------|-------------------|
-| [Concept name ] | [example value]   |
+| measuring_method |    |
+| cuff_type |   |
+| measuring_location |      |
+| diastolic_endpoint |      |
+| systolic_blood_pressure |     |
+| diastolic_blood_pressure |    |
+| average_blood_pressure |      |
+| blood_pressure_date_time |    |
+| comment |     |
+| position |    |
 
 
-// example of NameInformation
-```
-## Example instances
 
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```

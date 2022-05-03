@@ -1,25 +1,13 @@
 ## Example instances
 
-| [CBB name]      |                   |
-|-----------------|-------------------|
-| [Concept name ] | [example value]   |
-| [Concept name with ValueSet]| [*code* - *preferred name* (*CodeSystem*)] |
+| drug_use                      |                   |
+|-------------------------------|-------------------|
+| observation_of_use.start_date | 1985-01-01        |
+| observation_of_use.stop_date  |                   |
+| observation_of_use.amount     | 2x per maand      |
+| comment                       | Uses at parties and on weekends. The patient used more in the past than the present.  |
+| drug_or_medication_type       | 288459003 - Methylenedioxymethamphetamine (SNOMED CT)                                 |
+| drug_use_status               | 417284009 - Current drug user (SNOMED CT)                                             |
+| route_of_administration       | 26643006 - Oral route (SNOMED CT), 46713006 - Nasal route (SNOMED CT)                 |
 
 
-// example of NameInformation
-```
-## Example instances
-
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```
