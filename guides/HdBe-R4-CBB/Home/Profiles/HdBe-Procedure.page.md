@@ -54,7 +54,7 @@ URL: url
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-Procedure-01.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-Procedure-01.page.md}}</li>
         
       </ul>
   </div>
@@ -110,7 +110,7 @@ URL: url
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-Procedure-01.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-Procedure-01.page.md}}</li>
         
       </ul>
   </div>

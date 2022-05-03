@@ -2,9 +2,9 @@
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-DrugUse'
+where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BloodPressure'
 select 
-Profile: id,
+CBB: id,
 Version: version,
 Status: status,
 URL: url
@@ -21,25 +21,25 @@ URL: url
 
   <div id="Rendered view" class="tabcontent" style="display:block">
     <br>
-      {{render:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-DrugUse, snapshot}}
+      {{render:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BloodPressure, snapshot}}
   </div>
 
   <div id="Table view" class="tabcontent">
     <br>
-      {{table:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-DrugUse}}
+      {{table:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BloodPressure}}
   </div>
 
   <div id="Detailed descriptions" class="tabcontent">
    <br>
-      {{dict:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-DrugUse}}
+      {{dict:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BloodPressure}}
   </div>
 
   <div id="Example" class="tabcontent">
-      {{render:logical models/HdBe-DrugUse.example.md}}
+      {{render:logical models/HdBe-BloodPressure.example.md}}
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:logical models/HdBe-DrugUse.doc.md}}
+      {{render:logical models/HdBe-BloodPressure.doc.md}}
   </div>
 
 </div>
@@ -50,7 +50,7 @@ URL: url
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-DrugUse'
+where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BloodPressure'
 for differential.element
 select
 Path: path.substring((1 + path.indexOf('.'))),

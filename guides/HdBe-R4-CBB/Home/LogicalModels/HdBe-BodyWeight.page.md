@@ -2,9 +2,9 @@
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BodyTemperature'
+where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BodyWeight'
 select 
-Profile: id,
+CBB: id,
 Version: version,
 Status: status,
 URL: url
@@ -21,25 +21,25 @@ URL: url
 
   <div id="Rendered view" class="tabcontent" style="display:block">
     <br>
-      {{render:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BodyTemperature, snapshot}}
+      {{render:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BodyWeight, snapshot}}
   </div>
 
   <div id="Table view" class="tabcontent">
     <br>
-      {{table:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BodyTemperature}}
+      {{table:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BodyWeight}}
   </div>
 
   <div id="Detailed descriptions" class="tabcontent">
    <br>
-      {{dict:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BodyTemperature}}
+      {{dict:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BodyWeight}}
   </div>
 
   <div id="Example" class="tabcontent">
-      {{render:logical models/HdBe-BodyTemperature.example.md}}
+      {{render:logical models/HdBe-BodyWeight.example.md}}
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:logical models/HdBe-BodyTemperature.doc.md}}
+      {{render:logical models/HdBe-BodyWeight.doc.md}}
   </div>
 
 </div>
@@ -50,7 +50,7 @@ URL: url
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BodyTemperature'
+where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BodyWeight'
 for differential.element
 select
 Path: path.substring((1 + path.indexOf('.'))),

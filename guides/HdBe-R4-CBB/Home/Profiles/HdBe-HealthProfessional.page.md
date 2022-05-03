@@ -63,7 +63,7 @@ select
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-HealthProfessional-Practitioner-01.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-HealthProfessional-Practitioner-01.page.md}}</li>
       </ul>
   </div>
 
@@ -127,7 +127,7 @@ select
 
   <div id="Examples2" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-HealthProfessional-PractitionerRole-01.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-HealthProfessional-PractitionerRole-01.page.md}}</li>
       </ul>
   </div>
 
