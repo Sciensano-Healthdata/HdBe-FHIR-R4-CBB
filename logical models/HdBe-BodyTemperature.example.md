@@ -1,25 +1,8 @@
 ## Example instances
 
-| [CBB name]      |                   |
-|-----------------|-------------------|
-| [Concept name ] | [example value]   |
-| [Concept name with ValueSet]| [*code* - *preferred name* (*CodeSystem*)] |
-
-
-// example of NameInformation
-```
-## Example instances
-
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```
+| body_temperature      |                                       |
+|-----------------------|---------------------------------------|
+| temperature_value     | 37.2 cel                              |
+| temperature_date_time | 2022-01-02                            |
+| comment               |                                       |
+| temperature_type      | 415945006 - Oral temperature (SNOMED) | 
