@@ -2,7 +2,7 @@
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-Patient'
+where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson'
 select 
 Profile: id,
 Description: description,
@@ -11,13 +11,14 @@ Status: status,
 URL: url
 ```
 
-### Introduction
-This Patient profile contains mappings to the following CBBs:
-- {{pagelink:Home/LogicalModels/HdBe-Patient.guide.md}}
-- {{pagelink:Home/LogicalModels/HdBe-Nationality.guide.md}}
-- {{pagelink:Home/LogicalModels/HdBe-MaritalStatus.guide.md}}
-- {{pagelink:Home/LogicalModels/HdBe-LanguageProficiency.guide.md}}
-- {{pagelink:Home/LogicalModels/HdBe-ContactPerson.guide.md}}
+@```
+from
+	StructureDefinition
+	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson'
+select
+	Instructions: differential.element[0].comment
+
+```
 
 <div>
   <div class="tab">
@@ -31,17 +32,17 @@ This Patient profile contains mappings to the following CBBs:
 
   <div id="Snapshot view" class="tabcontent" style="display:block">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-Patient, snapshot}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson, snapshot}}
   </div>
 
   <div id="Hybrid view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-Patient, hybrid}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson, hybrid}}
   </div>
 
   <div id="Diff view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-Patient, diff}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson, diff}}
   </div>
 
   <div id="Mapping" class="tabcontent">      
@@ -49,25 +50,24 @@ This Patient profile contains mappings to the following CBBs:
       <div>
       @```
       from StructureDefinition
-      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-Patient'
+      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson'
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity in ('HdBe-Patient'|'HdBe-Nationality'|'HdBe-MaritalStatus'|'HdBe-LanguageProficiency'|'HdBe-ContactPerson')) { map, CBB: identity, comment  }
+        join mapping.where(identity = 'HdBe-ContactPerson') { map, comment }
       ```
-     
     </div>
   </div>
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-Patient-01.guide.md}}</li>
-        <li>{{pagelink:Home/Examples/HdBe-Patient-02.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-ContactPerson-01.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-ContactPerson-02.page.md}}</li>
       </ul>
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:resources/HdBe-Patient.doc.md}}
+      {{render:resources/HdBe-ContactPerson.doc.md}}
   </div>
 
 </div>
@@ -78,7 +78,7 @@ This Patient profile contains mappings to the following CBBs:
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-Patient'
+where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson'
 
 for differential.element
 select
