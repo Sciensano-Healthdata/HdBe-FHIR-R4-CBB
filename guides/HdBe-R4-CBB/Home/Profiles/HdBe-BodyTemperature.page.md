@@ -2,7 +2,7 @@
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-BodyHeight'
+where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-BodyTemperature'
 select 
 Profile: id,
 Description: description,
@@ -23,17 +23,17 @@ URL: url
 
   <div id="Snapshot view" class="tabcontent" style="display:block">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-BodyHeight, snapshot}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-BodyTemperature, snapshot}}
   </div>
 
   <div id="Hybrid view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-BodyHeight, hybrid}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-BodyTemperature, hybrid}}
   </div>
 
   <div id="Diff view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-BodyHeight, diff}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-BodyTemperature, diff}}
   </div>
 
   <div id="Mapping" class="tabcontent">      
@@ -41,24 +41,24 @@ URL: url
       <div>
       @```
       from StructureDefinition
-      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-BodyHeight'
+      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-BodyTemperature'
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-BodyHeight') { map, comment }
+        join mapping.where(identity = 'HdBe-BodyTemperature') { map, comment }
       ```
     </div>
   </div>
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-BodyHeight-01.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-BodyTemperature-01.page.md}}</li>
         
       </ul>
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:resources/HdBe-BodyHeight.doc.md}}
+      {{render:resources/HdBe-BodyTemperature.doc.md}}
   </div>
 
 </div>
@@ -69,7 +69,7 @@ URL: url
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-BodyHeight'
+where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-BodyTemperature'
 
 for differential.element
 select
