@@ -63,7 +63,7 @@ select
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-VisualFunction-01.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-VisualFunction-01.page.md}}</li>
         
       </ul>
   </div>
@@ -127,7 +127,7 @@ select
 
   <div id="Examples2" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-VisualFunction.VisualAid-01.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-VisualFunction.VisualAid-01.page.md}}</li>
       </ul>
   </div>
 
@@ -190,7 +190,7 @@ select
 
   <div id="Examples3" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-VisualFunction.VisualAid.Product-01.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-VisualFunction.VisualAid.Product-01.page.md}}</li>
       </ul>
   </div>
 
