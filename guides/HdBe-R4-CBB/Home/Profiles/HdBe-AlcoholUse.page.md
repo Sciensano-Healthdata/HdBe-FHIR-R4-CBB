@@ -2,22 +2,13 @@
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson'
+where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-AlcoholUse'
 select 
 Profile: id,
 Description: description,
 Version: version,
 Status: status,
 URL: url
-```
-
-@```
-from
-	StructureDefinition
-	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson'
-select
-	Instructions: differential.element[0].comment
-
 ```
 
 <div>
@@ -32,17 +23,17 @@ select
 
   <div id="Snapshot view" class="tabcontent" style="display:block">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson, snapshot}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-AlcoholUse, snapshot}}
   </div>
 
   <div id="Hybrid view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson, hybrid}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-AlcoholUse, hybrid}}
   </div>
 
   <div id="Diff view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson, diff}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-AlcoholUse, diff}}
   </div>
 
   <div id="Mapping" class="tabcontent">      
@@ -50,24 +41,24 @@ select
       <div>
       @```
       from StructureDefinition
-      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson'
+      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-AlcoholUse'
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-ContactPerson') { map, comment }
+        join mapping.where(identity = 'HdBe-AlcoholUse') { map, comment }
       ```
     </div>
   </div>
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-ContactPerson-01.guide.md}}</li>
-        <li>{{pagelink:Home/Examples/HdBe-ContactPerson-02.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-AlcoholUse-01.page.md}}</li>
+        
       </ul>
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:resources/HdBe-ContactPerson.doc.md}}
+      {{render:resources/HdBe-AlcoholUse.doc.md}}
   </div>
 
 </div>
@@ -78,7 +69,7 @@ select
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson'
+where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-AlcoholUse'
 
 for differential.element
 select
