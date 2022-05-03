@@ -1,5 +1,6 @@
-## zib [zib name + version](https://zibs.nl/wiki/[zib name + version(release)]) difference
+## zib [BodyWeight-v3.2](https://zibs.nl/wiki/BodyWeight-v3.2(2020EN)) difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+| `clothing`| terminology | Replaced zib terminology with SNOMED and for codes not represented in SNOMED Sciensano internal codes. In the future, these codes will be replaced with SNOMED codes when they are available. | 
+
