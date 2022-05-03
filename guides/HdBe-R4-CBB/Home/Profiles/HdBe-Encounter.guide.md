@@ -52,7 +52,7 @@ URL: url
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-Encounter-01.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-Encounter-01.page.md}}</li>
         
       </ul>
   </div>
