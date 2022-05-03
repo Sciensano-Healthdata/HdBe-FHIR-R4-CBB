@@ -61,8 +61,8 @@ select
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-ContactPerson-01.guide.md}}</li>
-        <li>{{pagelink:Home/Examples/HdBe-ContactPerson-02.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-ContactPerson-01.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-ContactPerson-02.page.md}}</li>
       </ul>
   </div>
 
