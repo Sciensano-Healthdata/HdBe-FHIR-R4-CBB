@@ -1,24 +1,12 @@
 ## Example instances
 
-| [CBB name]      |                   |
+| advance_directive     |                   |
 |-----------------|-------------------|
-| [Concept name ] | [example value]   |
+| living_will_type |   |
+| living_will_date |    |
+| disorder.problem | See CBB Problem |
+| representative.contact_person | See CBB ContactPerson |
+| living_will_document |    |
+| comment |     |
 
 
-// example of NameInformation
-```
-## Example instances
-
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```
