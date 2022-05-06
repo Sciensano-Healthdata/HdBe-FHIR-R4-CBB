@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="WoningType"/>
+   <id value="TypeOfHome"/>
    <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
@@ -10,15 +10,15 @@
             <start value="2020-09-01T00:00:00+01:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/ValueSet/WoningType"/>
+   <url value="https://fhir.healthdata.be/ValueSet/TypeOfHome"/>
    <identifier>
         <use value="official"/>
         <system value="urn:ietf:rfc:3986"/>
         <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.7.8.1"/>
     </identifier>
    <version value="2020-09-01T00:00:00"/>
-   <name value="WoningType"/>
-   <title value="WoningType"/>
+   <name value="TypeOfHome"/>
+   <title value="TypeOfHome"/>
    <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Healthdata.be (Sciensano)"/>
@@ -30,18 +30,24 @@
       <use value="work" />
     </telecom>
   </contact>
-   <description value="WoningTypeCodelijst"/>
+   <description value="TypeOfHomeCodelist"/>
    <immutable value="false"/>
    <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
    <compose>
         <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.13.1"/>
+            <system value="http://snomed.info/sct"/>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Bovenwoning"/>
-                </extension>
-                <code value="BOVENW"/>
-                <display value="Bovenwoning"/>
+                <code value="257630004"/>
+                <display value="House"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="House"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -49,15 +55,21 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Bovenwoning"/>
+                    <value value="huis"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Benedenwoning"/>
-                </extension>
-                <code value="BENEDENW"/>
-                <display value="Benedenwoning"/>
+                <code value="257564005"/>
+                <display value="Apartment"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Residential flat"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -65,15 +77,21 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Benedenwoning"/>
+                    <value value="appartement"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Eengezinswoning"/>
-                </extension>
-                <code value="EENGEZW"/>
-                <display value="Eengezinswoning"/>
+                <code value="224670004"/>
+                <display value="Houseboat"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Houseboat"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -81,15 +99,21 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Eengezinswoning"/>
+                    <value value="woonboot"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Appartement of flatwoning"/>
-                </extension>
-                <code value="FLATW"/>
-                <display value="Appartement of flatwoning"/>
+                <code value="257641002"/>
+                <display value="Mobile home"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Mobile home"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -97,15 +121,21 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Appartement of flatwoning"/>
+                    <value value="woonwagen"/>
                 </designation>
-            </concept>
+            </concept> 
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Aanleunwoning"/>
-                </extension>
-                <code value="AANLW"/>
-                <display value="Aanleunwoning"/>
+                <code value="32911000"/>
+                <display value="Homeless"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Homeless"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -113,127 +143,12 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Aanleunwoning"/>
+                    <value value="dakloos"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Woonboot"/>
-                </extension>
-                <code value="WOONB"/>
-                <display value="Woonboot"/>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Woonboot"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Woonwagen"/>
-                </extension>
-                <code value="WOONW"/>
-                <display value="Woonwagen"/>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Woonwagen"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Instelling WLZ"/>
-                </extension>
-                <code value="WLZIN"/>
-                <display value="Instelling WLZ"/>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Instelling WLZ"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Instelling ZVW"/>
-                </extension>
-                <code value="ZVWIN"/>
-                <display value="Instelling ZVW"/>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Instelling ZVW"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Instelling WMO"/>
-                </extension>
-                <code value="WMOIN"/>
-                <display value="Instelling WMO"/>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Instelling WMO"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Asielzoekers-centrum"/>
-                </extension>
-                <code value="AZC"/>
-                <display value="Asielzoekers-centrum"/>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Asielzoekers-centrum"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Dakloos"/>
-                </extension>
-                <code value="DAKLOO"/>
-                <display value="Dakloos"/>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Dakloos"/>
-                </designation>
-            </concept>
-        </include>
-        <include>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
-            <concept>
-                <code value="OTH"/>
-                <display value="Anders"/>
+                <code value="74964007"/>
+                <display value="Other"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -250,9 +165,31 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Anders"/>
+                    <value value="Ander"/>
                 </designation>
-            </concept>
+            </concept> 
+            <concept>
+                <code value="261665006"/>
+                <display value="Unknown"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Unknown"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="onbekend"/>
+                </designation>
+            </concept>                              
         </include>
     </compose>
 </ValueSet>
