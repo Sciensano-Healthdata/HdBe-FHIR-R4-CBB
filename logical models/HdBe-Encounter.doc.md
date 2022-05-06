@@ -2,4 +2,5 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+|`contact_type` | terminology | Replaced codes with codes in use by Healthdata.be - Sciensano. | 
+|`destination` | terminology | Added SNOMED codes Unkown and Other to the ValueSet. | 
