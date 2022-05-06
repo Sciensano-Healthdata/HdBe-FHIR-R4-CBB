@@ -4,3 +4,4 @@
 |-----------------|-------------------|-----------------------------------------|
 |`contact_type` | terminology | Replaced codes with codes in use by Healthdata.be - Sciensano. | 
 |`destination` | terminology | Added SNOMED codes Unkown and Other to the ValueSet. | 
+|`origin` | terminology | Added SNOMED codes Unkown and Other to the ValueSet. | 
