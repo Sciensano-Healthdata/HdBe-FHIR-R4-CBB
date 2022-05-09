@@ -2,4 +2,8 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+| `code` | terminology | Replaced (Dutch) ValueSets with one ValueSet that includes all SNOMED child concepts of 71388002 |Procedure (procedure) and made it extensible. |
+| `orderDetail:procedureMethod` | terminology | Widened terminology from descendent of 129264002|Action to all of SNOMED. Changed the binding from required to extensible. | 
+| `locationReference` | textual | Replaced 'healthcare center' with 'healthcare provider' in the definition. |
+| `requester` | textual | Replaced 'healthcare provider' with 'healthcare professional' in the definition. |
+| `requester` | textual | Removed comment about the cardinality mismatch between FHIR and zib, because we already have fixed the cardinality of requester in our CBB. Therefore this comment was not relevant anymore. |

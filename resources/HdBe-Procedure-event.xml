@@ -41,12 +41,16 @@
       <element id="Procedure">
          <path value="Procedure"/>
          <short value="Procedure"/>
-         <comment value="The zib Procedure is mapped both to this Procedure profile and a profile on ServiceRequest (&lt;https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-request&gt;) to align with the intention of FHIR. All past procedures are covered using this Procedure resource, while all future procedures, including the advised procedures, are covered in the ServiceRequest resource. Both resources contain the zib mappings, with the exception of the Requester concept; this is not relevant for past procedures and has only been mapped to the ServiceRequest profile.&#xD;&#xA;&#xD;&#xA;The planned and performed procedures can be linked using `Procedure.basedOn`."/>
+         <comment value="The CBB Procedure is mapped both to this Procedure profile and a profile on ServiceRequest (&lt;https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-request&gt;) to align with the intention of FHIR. All past procedures are covered using this Procedure resource, while all future procedures, including the advised procedures, are covered in the ServiceRequest resource. Both resources contain the CBB mappings, with the exception of the Requester concept; this is not relevant for past procedures and has only been mapped to the ServiceRequest profile.&#xD;&#xA;&#xD;&#xA;The planned and performed procedures can be linked using `Procedure.basedOn`."/>
          <alias value="Verrichting"/>
          <mapping>
             <identity value="zib-procedure-v5.2-2020EN"/>
             <map value="NL-CM:14.1.1"/>
             <comment value="Procedure"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-Procedure" />
+            <map value="procedure" />
          </mapping>
       </element>
       <element id="Procedure.extension">
@@ -73,6 +77,10 @@
             <map value="NL-CM:14.1.12"/>
             <comment value="ProcedureMethod"/>
          </mapping>
+         <mapping>
+            <identity value="HdBe-Procedure" />
+            <map value="procedure_method" />
+         </mapping>
       </element>
       <element id="Procedure.basedOn">
          <path value="Procedure.basedOn"/>
@@ -93,9 +101,17 @@
             <comment value="ProcedureStartDate (implicit, main mapping is on Procedure.performedPeriod.start and Procedure.performedDateTime)"/>
          </mapping>
          <mapping>
+            <identity value="HdBe-Procedure" />
+            <map value="procedure_start_date (implicit, main mapping is on Procedure.performedPeriod.start and Procedure.performedDateTime)" />
+         </mapping>
+         <mapping>
             <identity value="zib-procedure-v5.2-2020EN"/>
             <map value="NL-CM:14.1.3"/>
             <comment value="ProcedureEndDate (implicit, main mapping is on Procedure.performedPeriod.end)"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-Procedure" />
+            <map value="procedure_end_date (implicit, main mapping is on Procedure.performedPeriod.end)" />
          </mapping>
       </element>
       <element id="Procedure.code">
@@ -104,13 +120,17 @@
          <definition value="The name of the procedure. Choices are the DHD procedure thesaurus, the procedures file (CBV), the Care activities file (NZa), the Dutch Mental Health and Addiction Care procedures list (GGZ) and the procedures list of the Dutch College of General Practitioners (NHG)."/>
          <alias value="VerrichtingType"/>
          <binding>
-            <strength value="required"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/VerrichtingType"/>
+            <strength value="extensible"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ProcedureType"/>
          </binding>
          <mapping>
             <identity value="zib-procedure-v5.2-2020EN"/>
             <map value="NL-CM:14.1.4"/>
             <comment value="ProcedureType"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-Procedure" />
+            <map value="procedure_type" />
          </mapping>
       </element>
       <element id="Procedure.performed[x]">
@@ -140,6 +160,10 @@
             <map value="NL-CM:14.1.2"/>
             <comment value="ProcedureStartDate"/>
          </mapping>
+         <mapping>
+            <identity value="HdBe-Procedure" />
+            <map value="procedure_start_date" />
+         </mapping>
       </element>
       <element id="Procedure.performed[x]:performedPeriod.end">
          <path value="Procedure.performed[x].end"/>
@@ -150,6 +174,10 @@
             <identity value="zib-procedure-v5.2-2020EN"/>
             <map value="NL-CM:14.1.3"/>
             <comment value="ProcedureEndDate"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-Procedure" />
+            <map value="procedure_end_date" />
          </mapping>
       </element>
       <element id="Procedure.performed[x]:performedDateTime">
@@ -166,11 +194,15 @@
             <map value="NL-CM:14.1.2"/>
             <comment value="ProcedureStartDate"/>
          </mapping>
+         <mapping>
+            <identity value="HdBe-Procedure" />
+            <map value="procedure_start_date" />
+         </mapping>
       </element>
       <element id="Procedure.performer.actor">
          <path value="Procedure.performer.actor"/>
          <short value="Performer"/>
-         <definition value="The healthcare provider who carried out or will carry out the procedure. In most cases, only the medical specialty is entered, and not the name of the healthcare provider."/>
+         <definition value="The health professional who carried out or will carry out the procedure. In most cases, only the medical specialty is entered, and not the name of the healthcare provider."/>
          <alias value="Uitvoerder"/>
          <type>
             <code value="Reference"/>
@@ -188,11 +220,15 @@
             <map value="NL-CM:14.1.6"/>
             <comment value="Performer"/>
          </mapping>
+         <mapping>
+            <identity value="HdBe-Procedure" />
+            <map value="performer" />
+         </mapping>
       </element>
       <element id="Procedure.location">
          <path value="Procedure.location"/>
          <short value="Location"/>
-         <definition value="The healthcare center where the procedure was, is or or will be carried out."/>
+         <definition value="The healthcare provider where the procedure was, is or or will be carried out."/>
          <alias value="Locatie"/>
          <type>
             <code value="Reference"/>
@@ -203,6 +239,10 @@
             <identity value="zib-procedure-v5.2-2020EN"/>
             <map value="NL-CM:14.1.5"/>
             <comment value="Location"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-Procedure" />
+            <map value="location" />
          </mapping>
       </element>
       <element id="Procedure.reasonReference">
@@ -224,6 +264,10 @@
             <map value="NL-CM:14.1.9"/>
             <comment value="Indication"/>
          </mapping>
+         <mapping>
+            <identity value="HdBe-Procedure" />
+            <map value="indication" />
+         </mapping>
       </element>
       <element id="Procedure.bodySite">
          <path value="Procedure.bodySite"/>
@@ -244,6 +288,10 @@
             <map value="NL-CM:14.1.13"/>
             <comment value="ProcedureAnatomicalLocation"/>
          </mapping>
+         <mapping>
+            <identity value="HdBe-Procedure" />
+            <map value="procedure_anatomical_location" />
+         </mapping>
       </element>
       <element id="Procedure.report">
          <path value="Procedure.report"/>
@@ -259,7 +307,7 @@
          <path value="Procedure.report"/>
          <sliceName value="textResult"/>
          <short value="TextResult"/>
-         <comment value="The direction of the reference between zibs TextResult and Procedure is reversed in FHIR. Therefore the concept Procedure (NL-CM:13.2.5) of zib TextResult is mapped to this element.&#xD;&#xA;&#xD;&#xA;Please note that on a functional level, zib TextResult references zib Procedure, but in FHIR this direction is reversed."/>
+         <comment value="The direction of the reference between CBBs TextResult and Procedure is reversed in FHIR. Therefore the concept Procedure of zib TextResult is mapped to this element.&#xD;&#xA;&#xD;&#xA;Please note that on a functional level, TextResult references Procedure, but in FHIR this direction is reversed."/>
          <alias value="TekstUitslag"/>
          <type>
             <code value="Reference"/>
@@ -285,6 +333,10 @@
             <identity value="zib-procedure-v5.2-2020EN"/>
             <map value="NL-CM:14.1.7"/>
             <comment value="MedicalDevice"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-Procedure" />
+            <map value="medical_device" />
          </mapping>
       </element>
    </differential>
