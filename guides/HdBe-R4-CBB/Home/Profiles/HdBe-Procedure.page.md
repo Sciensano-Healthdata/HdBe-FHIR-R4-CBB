@@ -142,7 +142,7 @@ select
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-request'
+where url in ( 'https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-event'| 'https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-request')
 
 for differential.element
 select
