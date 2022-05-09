@@ -28,6 +28,13 @@ select
 	Instructions: differential.element[0].comment
 
 ```
+@```
+from
+	StructureDefinition
+	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult'
+select
+	ReTaM: differential.element.where(id = 'Observation.code').comment
+```
 
 <div>
   <div class="tab">
@@ -70,7 +77,7 @@ select
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-LaboratoryTestResult-01.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-LaboratoryTestResult-01.page.md}}</li>
       </ul>
   </div>
  
@@ -135,8 +142,8 @@ select
 
   <div id="Examples2" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-LaboratoryTestResult.Specimen-01.guide.md}}</li>
-        <li>{{pagelink:Home/Examples/HdBe-LaboratoryTestResult.Specimen-02.guide.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-LaboratoryTestResult.Specimen-01.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-LaboratoryTestResult.Specimen-02.page.md}}</li>
       </ul>
   </div>
 
