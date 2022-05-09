@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="WoningType"/>
+    <id value="TypeOfSmokingOrTobacco"/>
    <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
@@ -10,15 +10,15 @@
             <start value="2020-09-01T00:00:00+01:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/ValueSet/WoningType"/>
+    <url value="https://fhir.healthdata.be/ValueSet/TypeOfSmokingOrTobacco"/>
    <identifier>
         <use value="official"/>
         <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.7.8.1"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.7.2.3"/>
     </identifier>
    <version value="2020-09-01T00:00:00"/>
-   <name value="WoningType"/>
-   <title value="WoningType"/>
+    <name value="TypeOfSmokingOrTobacco"/>
+    <title value="TypeOfSmokingOrTobacco"/>
    <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Healthdata.be (Sciensano)"/>
@@ -30,18 +30,27 @@
       <use value="work" />
     </telecom>
   </contact>
-   <description value="WoningTypeCodelijst"/>
+    <description value="TypeOfSmokingOrTobacco codes"/>
    <immutable value="false"/>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
    <compose>
         <include>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.13.1"/>
+            <system value="http://snomed.info/sct"/>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Bovenwoning"/>
+                    <valueString value="Rookt sigaretten"/>
                 </extension>
-                <code value="BOVENW"/>
-                <display value="Bovenwoning"/>
+                <code value="65568007"/>
+                <display value="rookt sigaretten"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Cigarette smoker"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -49,15 +58,24 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Bovenwoning"/>
+                    <value value="rookt sigaretten"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Benedenwoning"/>
+                    <valueString value="Rookt sigaren"/>
                 </extension>
-                <code value="BENEDENW"/>
-                <display value="Benedenwoning"/>
+                <code value="59978006"/>
+                <display value="rookt sigaren"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Cigar smoker"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -65,15 +83,24 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Benedenwoning"/>
+                    <value value="rookt sigaren"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Eengezinswoning"/>
+                    <valueString value="Rookt pijp"/>
                 </extension>
-                <code value="EENGEZW"/>
-                <display value="Eengezinswoning"/>
+                <code value="82302008"/>
+                <display value="pijproker"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Pipe smoker"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -81,15 +108,24 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Eengezinswoning"/>
+                    <value value="pijproker"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Appartement of flatwoning"/>
+                    <valueString value="Rookt shag"/>
                 </extension>
-                <code value="FLATW"/>
-                <display value="Appartement of flatwoning"/>
+                <code value="160619003"/>
+                <display value="rookt shag"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Rolls own cigarettes"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -97,15 +133,24 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Appartement of flatwoning"/>
+                    <value value="rookt shag"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Aanleunwoning"/>
+                    <valueString value="Rookt e-sigaret"/>
                 </extension>
-                <code value="AANLW"/>
-                <display value="Aanleunwoning"/>
+                <code value="722499006"/>
+                <display value="gebruiker van elektronische sigaret"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Electronic cigarette user"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -113,15 +158,24 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Aanleunwoning"/>
+                    <value value="gebruiker van elektronische sigaret"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Woonboot"/>
+                    <valueString value="Gebruikt kauwtabak"/>
                 </extension>
-                <code value="WOONB"/>
-                <display value="Woonboot"/>
+                <code value="81703003"/>
+                <display value="kauwt tabak"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Chews tobacco"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -129,15 +183,24 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Woonboot"/>
+                    <value value="kauwt tabak"/>
                 </designation>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Woonwagen"/>
+                    <valueString value="Gebruikt snuiftabak"/>
                 </extension>
-                <code value="WOONW"/>
-                <display value="Woonwagen"/>
+                <code value="228494002"/>
+                <display value="gebruikt snuiftabak"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Snuff user"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -145,15 +208,21 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Woonwagen"/>
+                    <value value="gebruikt snuiftabak"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Instelling WLZ"/>
-                </extension>
-                <code value="WLZIN"/>
-                <display value="Instelling WLZ"/>
+                <code value="785889008"/>
+                <display value="Nicotine-filled electronic cigarette user"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Nicotine-filled electronic cigarette user"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -161,15 +230,21 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Instelling WLZ"/>
+                    <value value="gebruiker van elektronische sigaret met nicotine"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Instelling ZVW"/>
-                </extension>
-                <code value="ZVWIN"/>
-                <display value="Instelling ZVW"/>
+                <code value="786063001"/>
+                <display value="Non-nicotine-filled electronic cigarette user"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Non-nicotine-filled electronic cigarette user"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -177,15 +252,21 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Instelling ZVW"/>
+                    <value value="gebruiker van elektronische sigaret zonder nicotine"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Instelling WMO"/>
-                </extension>
-                <code value="WMOIN"/>
-                <display value="Instelling WMO"/>
+                <code value="261665006"/>
+                <display value="Unknown"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Unknown"/>
+                </designation>
                 <designation>
                     <language value="nl-NL"/>
                     <use>
@@ -193,47 +274,12 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Instelling WMO"/>
+                    <value value="Onbekend"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Asielzoekers-centrum"/>
-                </extension>
-                <code value="AZC"/>
-                <display value="Asielzoekers-centrum"/>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Asielzoekers-centrum"/>
-                </designation>
-            </concept>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Dakloos"/>
-                </extension>
-                <code value="DAKLOO"/>
-                <display value="Dakloos"/>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Dakloos"/>
-                </designation>
-            </concept>
-        </include>
-        <include>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
-            <concept>
-                <code value="OTH"/>
-                <display value="Anders"/>
+                <code value="74964007"/>
+                <display value="Other"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -250,7 +296,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Anders"/>
+                    <value value="Ander"/>
                 </designation>
             </concept>
         </include>

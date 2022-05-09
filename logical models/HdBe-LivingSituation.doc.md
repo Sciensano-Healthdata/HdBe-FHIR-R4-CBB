@@ -1,5 +1,5 @@
-## zib [zib name + version](https://zibs.nl/wiki/[zib name + version(release)]) difference
+## zib [LivingSituation-v3.3](https://zibs.nl/wiki/LivingSituation-v3.3(2020EN)) difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+|`house_type` | terminology| Replaced TypeOfHome concepts with SNOMED terminology and removed concepts not relevant in the Belgium context. |
