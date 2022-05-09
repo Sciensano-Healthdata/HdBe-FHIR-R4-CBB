@@ -69,7 +69,7 @@ select
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-Procedure-01.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-Procedure-event-01.page.md}}</li>
         
       </ul>
   </div>
@@ -125,13 +125,13 @@ select
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-Procedure-01.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-Procedure-request-01.page.md}}</li>
         
       </ul>
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:resources/HdBe-Procedure-event.doc.md}}
+      {{render:resources/HdBe-Procedure-request.doc.md}}
   </div>
 
 </div>
@@ -142,7 +142,7 @@ select
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-event'
+where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-request'
 
 for differential.element
 select
