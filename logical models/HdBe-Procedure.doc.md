@@ -8,3 +8,4 @@
 | `location` | textual | Replaced 'healthcare center' with 'healthcare provider' in the definition. |
 | `performer` | textual | Replaced 'healthcare provider' with 'healthcare professional' in the definition. |
 | `requester` | textual | Replaced 'healthcare provider' with 'healthcare professional' in the definition. |
+| `requester` | cardinality | Restricted requester from 0..* to 0..1. This aligns with FHIR and a future version of the zib. [ZIB-1488](https://bits.nictiz.nl/browse/ZIB-1488) and [Nictiz-ticket #69](https://github.com/Nictiz/Nictiz-R4-zib2020/issues/69). |

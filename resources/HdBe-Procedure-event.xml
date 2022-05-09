@@ -68,6 +68,11 @@
             <code value="Extension"/>
             <profile value="https://fhir.healthdata.be/StructureDefinition/ext-Procedure.ProcedureMethod"/>
          </type>
+         <mapping>
+            <identity value="zib-procedure-v5.2-2020EN"/>
+            <map value="NL-CM:14.1.12"/>
+            <comment value="ProcedureMethod"/>
+         </mapping>
       </element>
       <element id="Procedure.basedOn">
          <path value="Procedure.basedOn"/>
@@ -169,7 +174,7 @@
          <alias value="Uitvoerder"/>
          <type>
             <code value="Reference"/>
-            <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-ZibHealthProfessionalReference"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/pattern-HealthProfessionalReference"/>
             <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
             <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
             <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
@@ -232,7 +237,7 @@
          </type>
          <binding>
             <strength value="required"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/VerrichtingAnatomischeLocatie"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Location"/>
          </binding>
          <mapping>
             <identity value="zib-procedure-v5.2-2020EN"/>

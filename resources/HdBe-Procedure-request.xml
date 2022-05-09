@@ -36,7 +36,7 @@
       <element id="ServiceRequest">
          <path value="ServiceRequest"/>
          <short value="Procedure"/>
-         <comment value="The zib Procedure is mapped both to this ServiceRequest profile and a profile on Procedure (&lt;https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-event&gt;) to align with the intention of FHIR. All past procedures are covered using this Procedure resource, while all future procedures, including the advised procedures, are covered in the ServiceRequest resource. Both resources contain the zib mappings.&#xD;&#xA;&#xD;&#xA;The planned and performed procedures can be linked using `Procedure.basedOn`."/>
+         <comment value="The CBB Procedure is mapped both to this ServiceRequest profile and a profile on Procedure (&lt;https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-event&gt;) to align with the intention of FHIR. All past procedures are covered using this Procedure resource, while all future procedures, including the advised procedures, are covered in the ServiceRequest resource. Both resources contain the CBB mappings.&#xD;&#xA;&#xD;&#xA;The planned and performed procedures can be linked using `Procedure.basedOn`."/>
          <alias value="Verrichting"/>
          <mapping>
             <identity value="zib-procedure-v5.2-2020EN"/>
@@ -176,11 +176,11 @@
          <path value="ServiceRequest.requester"/>
          <short value="Requester"/>
          <definition value="The healthcare provider who requested the procedure."/>
-         <comment value="The zib mapping contains a known cardinality difference (0..* versus 0..1). The zib will be aligned in a future version with the cardinality of FHIR, therefore this profile pre adopts the 0..1 cardinality for the requester. &#xD;&#xA;&#xD;&#xA;Each occurence of the zib HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [zib-HealthProfessional-PractitioneThe zib mapping contains a known cardinality mismatch (0..* versus 0..1). The zib will be aligned in a future version with the cardinality of FHIR, therefore this profile preadopts the 0..1 cardinality for requester. rRole](https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [zib-HealthProfessional-Practitioner](https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner)). The reference to the Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource.&#xD;&#xA;&#xD;&#xA;In rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the zib-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile."/>
+         <comment value="The CBB mapping contains a known cardinality difference (0..* versus 0..1). The CBB will be aligned in a future version with the cardinality of FHIR, therefore this profile pre adopts the 0..1 cardinality for the requester. &#xD;&#xA;&#xD;&#xA;Each occurence of the CBB HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [zib-HealthProfessional-PractitioneThe zib mapping contains a known cardinality mismatch (0..* versus 0..1). The zib will be aligned in a future version with the cardinality of FHIR, therefore this profile preadopts the 0..1 cardinality for requester. rRole](https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [zib-HealthProfessional-Practitioner](https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner)). The reference to the Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource.&#xD;&#xA;&#xD;&#xA;In rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the zib-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile."/>
          <alias value="Aanvrager"/>
          <type>
             <code value="Reference"/>
-            <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-ZibHealthProfessionalReference"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/pattern-HealthProfessionalReference"/>
             <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
             <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
             <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
@@ -203,7 +203,7 @@
          <alias value="Uitvoerder"/>
          <type>
             <code value="Reference"/>
-            <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-ZibHealthProfessionalReference"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/pattern-HealthProfessionalReference"/>
             <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
             <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
             <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
@@ -285,7 +285,7 @@
          </type>
          <binding>
             <strength value="required"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/VerrichtingAnatomischeLocatie"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Location"/>
          </binding>
          <mapping>
             <identity value="zib-procedure-v5.2-2020EN"/>
