@@ -11,6 +11,21 @@ Status: status,
 URL: url
 ```
 
+## UML overview profiles
+
+@```
+from
+	StructureDefinition
+	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-event'
+select
+	Instructions: differential.element[0].comment
+```
+
+
+{{render:uml/HdBe-Procedure-UML-GREY.png}}
+
+<br/><br/> 
+
 ## HdBe-Procedure-event
 
 <div>
