@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ConceptMap xmlns="http://hl7.org/fhir">
-    <id value="MaritalStatus-to-MaritalStatus"/>
+    <id value="BeCivilstate-to-MaritalStatus"/>
     <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
         <valueBoolean value="true"/>
     </extension>
-    <url value="https://fhir.healthdata.be/ConceptMap/MaritalStatus-to-MaritalStatus"/>
-    <name value="MaritalStatus_to_MaritalStatus"/>
-    <title value="MaritalStatus_to_MaritalStatus"/>
+    <url value="https://fhir.healthdata.be/ConceptMapBeCivilstate-to-MaritalStatus"/>
+    <name value="BeCivilstate_to_MaritalStatus"/>
+    <title value="BeCivilstate_to_MaritalStatus"/>
     <status value="draft"/>
     <publisher value="Healthdata.be (Sciensano)"/>
    <contact>
@@ -18,17 +18,17 @@
     </telecom>
   </contact>
     <description
-        value="Maps marital status codes as found in the CBB MaritalStatus to &lt;http://hl7.org/fhir/ValueSet/marital-status&gt; as found in `Patient.maritalStatus` in FHIR R4.&#xD;&#xA;&#xD;&#xA;"/>
+        value="Maps marital status codes as found in the CBB MaritalStatus, based on the BeCivilstate  to &lt;http://hl7.org/fhir/ValueSet/marital-status&gt; as found in `Patient.maritalStatus` in FHIR R4.&#xD;&#xA;&#xD;&#xA;"/>
     <copyright
         value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-    <sourceCanonical value="https://fhir.healthdata.be/ValueSet/MaritalStatus"/>
+    <sourceCanonical value="https://www.ehealth.fgov.be/standards/fhir/core/ValueSet/be-civilstate"/>
     <targetCanonical value="http://hl7.org/fhir/ValueSet/marital-status"/>
     <group>
-        <source value="http://snomed.info/sct"/>
+        <source value="https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-civilstate"/>
         <target value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
         <element>
-            <code value="125681006"/>
-            <display value="Single person"/>
+            <code value="10"/>
+            <display value="Unmarried"/>
             <target>
                 <code value="U"/>
                 <display value="unmarried"/>
@@ -36,7 +36,7 @@
             </target>
         </element>
         <element>
-            <code value="87915002"/>
+            <code value="20"/>
             <display value="Married"/>
             <target>
                 <code value="M"/>
@@ -45,7 +45,34 @@
             </target>
         </element>
         <element>
-            <code value="20295000"/>
+            <code value="25"/>
+            <display value="Annuled"/>
+            <target>
+                <code value="A"/>
+                <display value="Annuled"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="26"/>
+            <display value="Putative marriage"/>
+            <target>
+                <equivalence value="unmatched"/>
+                <comment value="No mapping exists for 'Putative marriage'. Therefore, considering the extensible binding on `Patient.maritalStatus`, usage of this code is possible."/>
+            </target>
+        </element>
+
+        <element>
+            <code value="30"/>
+            <display value="Widowed"/>
+            <target>
+                <code value="W"/>
+                <display value="Widowed"/>
+                <equivalence value="equal"/>
+            </target>
+        </element>
+        <element>
+            <code value="40"/>
             <display value="Divorced"/>
             <target>
                 <code value="D"/>
@@ -54,23 +81,65 @@
             </target>
         </element>
         <element>
-            <code value="33553000"/>
-            <display value="Widowed"/>
+            <code value="41"/>
+            <display value="Divorced since 1/10/1994"/>
             <target>
-                <code value="W"/>
-                <display value="Widowed"/>
-                <equivalence value="equal"/>
+                <code value="D"/>
+                <display value="Divorced"/>
+                <equivalence value="narrower"/>
+                <comment value="Divorced since 1/10/1994 is more specific than Divorced. Advice is to use both codes as two codings of `Patient.maritalStatus`."/>
             </target>
         </element>
+        <element>
+            <code value="50"/>
+            <display value="Legal separation"/>
+            <target>
+                <equivalence value="unmatched"/>
+                <comment value="No mapping exists for 'Legal separation'. Therefore, considering the extensible binding on `Patient.maritalStatus`, usage of this code is possible."/>
+            </target>
+        </element>
+        <element>
+            <code value="51"/>
+            <display value="Legal separation since 1/10/1994"/>
+            <target>
+                <equivalence value="unmatched"/>
+                <comment value="No mapping exists for 'Legal separation since 1/10/1994'. Therefore, considering the extensible binding on `Patient.maritalStatus`, usage of this code is possible."/>
+            </target>
+        </element>
+        <element>
+            <code value="60"/>
+            <display value="Repudiation"/>
+            <target>
+                <equivalence value="unmatched"/>
+                <comment value="No mapping exists for 'Repudiation'. Therefore, considering the extensible binding on `Patient.maritalStatus`, usage of this code is possible."/>
+            </target>
+        </element>	
+        <element>
+            <code value="80"/>
+            <display value="Partnership"/>
+            <target>
+                <equivalence value="unmatched"/>
+                <comment value="No mapping exists for 'Partnership'. Therefore, considering the extensible binding on `Patient.maritalStatus`, usage of this code is possible."/>
+            </target>
+        </element>
+        <element>
+            <code value="81"/>
+            <display value="End of partnership"/>
+            <target>
+                <equivalence value="unmatched"/>
+                <comment value="No mapping exists for 'End of partnership'. Therefore, considering the extensible binding on `Patient.maritalStatus`, usage of this code is possible."/>
+            </target>
+        </element>       
     </group>
     <group>
-        <source value="http://snomed.info/sct"/>
+        <source value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
         <target value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
         <element>
-            <code value="160504008"/>
-            <display value="Marital state unknown"/>
+            <code value="UNK"/>
+            <display value="Unknown"/>
             <target>
-                <code value="unknown"/>
+                <code value="UNK"/>
+                <display value="Unknown"/>
                 <equivalence value="equal"/>
             </target>
         </element>
