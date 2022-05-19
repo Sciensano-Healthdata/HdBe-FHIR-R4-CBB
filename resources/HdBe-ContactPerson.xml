@@ -17,7 +17,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A contact is a person not being a healthcare professional who is involved in the patient’s care, such as family members, caregivers, mental caretakers, guardians and legal representatives.&#xD;&#xA;&#xD;&#xA;In addition to identification information such as the name, address and contact information can also be entered. The relationship to the patient and the role this person has can be entered as well." />
+  <description value="A contact person is a person not being a healthcare professional who is involved in the patient’s care, such as family members, caregivers, mental caretakers, guardians and legal representatives.&#xD;&#xA;&#xD;&#xA;In addition to identification information such as the name, address and contact information can also be entered. The relationship to the patient and the role this person has can be entered as well." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -58,7 +58,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-ContactPerson" />
-        <map value="contact" />
+        <map value="contact_person" />
       </mapping>
     </element>
     <element id="RelatedPerson.patient">
@@ -83,7 +83,7 @@
       <path value="RelatedPerson.relationship" />
       <sliceName value="role" />
       <short value="Role" />
-      <definition value="Defines the role of the contact in relation to the patient." />
+      <definition value="Defines the role of the contact person in relation to the patient." />
       <alias value="Rol" />
       <binding>
         <strength value="required" />
@@ -104,7 +104,7 @@
       <path value="RelatedPerson.relationship" />
       <sliceName value="relationship" />
       <short value="Relationship" />
-      <definition value="Defines the contact’s familial relationship to the patient." />
+      <definition value="Defines the contact person’s familial relationship to the patient." />
       <alias value="Relatie" />
       <binding>
         <strength value="required" />
@@ -123,7 +123,7 @@
     </element>
     <element id="RelatedPerson.name">
       <path value="RelatedPerson.name" />
-      <definition value="Full name of the contact." />
+      <definition value="Full name of the contact person." />
       <comment value="The cardinality mismatch between the CBB (0..1) and FHIR (0..*) is explained by the presence of the HumanName.use element. A full name can be broken into parts using multiple instances of HumanName that have its own value for use." />
       <type>
         <code value="HumanName" />
@@ -149,7 +149,7 @@
         <rules value="open" />
       </slicing>
       <short value="ContactInformation" />
-      <definition value="The contact’s telephone number and/or e-mail address." />
+      <definition value="The contact person’s telephone number and/or e-mail address." />
       <comment value="The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the containers TelephoneNumbers (0..*) and EmailAddresses (0..*) inside the ContactInformation model. The FHIR datatype ContactPoint does not have these containers." />
       <alias value="Contactgegevens" />
       <mapping>
@@ -189,7 +189,7 @@
     </element>
     <element id="RelatedPerson.address">
       <path value="RelatedPerson.address" />
-      <definition value="Contact’s address information." />
+      <definition value="Contact person’s address information." />
       <type>
         <code value="Address" />
         <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation" />

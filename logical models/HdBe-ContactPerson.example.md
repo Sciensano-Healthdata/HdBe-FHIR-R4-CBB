@@ -1,6 +1,6 @@
 ## Example instances
 
-| ContactPerson     |                   |
+| contact_person     |                   |
 |-----------------|-------------------|
 | name_information | see CBB NameInformation   
 | address_information | see CBB AddressInformation
