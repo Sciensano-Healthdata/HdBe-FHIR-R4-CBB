@@ -20,4 +20,5 @@
 - {{pagelink:Home/Examples/HdBe-LaboratoryTestResult.Specimen-02.page.md}}
 - {{pagelink:Home/Examples/HdBe-Patient-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Patient-02.page.md}}
+- {{pagelink:Home/Examples/HdBe-Problem-01.page.md}}
 <!-- - {{pagelink:Home/Examples/[CBB-ID]-[number].page.md}} --> 
