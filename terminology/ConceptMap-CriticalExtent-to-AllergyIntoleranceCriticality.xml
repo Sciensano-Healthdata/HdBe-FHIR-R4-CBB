@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConceptMap xmlns="http://hl7.org/fhir">
+   <id value="CriticalExtent-to-AllergyIntoleranceCriticality"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+      <valueBoolean value="false"/>
+   </extension>
+   <url value="https://fhir.healthdata.be/ConceptMap/CriticalExtent-to-AllergyIntoleranceCriticality"/>
+   <version value="0.0.1"/>
+   <name value="CriticalExtent_to_AllergyIntoleranceCriticality"/>
+   <title value="CriticalExtent_to_AllergyIntoleranceCriticality"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Service portal – healthdata.be"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://sciensano.service-now.com/sp"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="Maps CriticalExtent codes as found in the CBB AllergyIntolerance to &lt; http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality&gt; as found in `AllergyIntolerance.reaction.severity` in FHIR R4."/>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <sourceCanonical value="https://fhir.healthdata.be/ValueSet/CriticalExtent"/>
+   <targetCanonical value="http://hl7.org/fhir/ValueSet/allergy-intolerance-CriticalExtent"/>
+   <group>
+      <source value="http://snomed.info/sct"/>
+      <target value="http://hl7.org/fhir/allergy-intolerance-criticality"/>
+      <element>
+         <code value="255604002"/>
+         <display value="Mild"/>
+         <target>
+            <code value="low"/>
+            <display value="Low"/>
+            <equivalence value="equal"/>
+         </target>
+      </element>
+      <element>
+         <code value="6736007"/>
+         <display value="Moderate"/>
+         <target>
+            <code value="high"/>
+            <display value="High"/>
+            <equivalence value="wider"/>
+         </target>
+      </element>
+      <element>
+         <code value="24484000"/>
+         <display value="Severe"/>
+         <target>
+            <code value="high"/>
+            <display value="High"/>
+            <equivalence value="equal"/>
+         </target>
+      </element>
+      <element>
+         <code value="399166001"/>
+         <display value="Fatal"/>
+         <target>
+            <code value="high"/>
+            <display value="High"/>
+            <equivalence value="wider"/>
+         </target>
+      </element>
+   </group>
+</ConceptMap>
