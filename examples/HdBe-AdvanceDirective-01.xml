@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Consent xmlns="http://hl7.org/fhir">
+    <id value="HdBe-AdvanceDirective-01"/>
+    <meta>
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AdvanceDirective" />
+    </meta>
+    <extension url="https://fhir.healthdata.be/StructureDefinition/ext-AdvanceDirective.Disorder">
+        <valueReference>
+            <reference value="Condition/HdBe-Condition-01" />
+            <type value="Condition" />
+            <display value="Problem" />
+        </valueReference>
+    </extension>
+    <extension url="https://fhir.healthdata.be/StructureDefinition/ext-Comment">
+        <valueString value="Wears a do not resuscitate bracelet." />
+    </extension>
+    <status value="active" />
+    <scope>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/consentscope" />
+            <code value="adr" />
+            <display value="Advanced Care Directive" />
+        </coding>
+    </scope>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/consentcategorycodes" />
+            <code value="acd" />
+            <display value="Advance Directive" />
+        </coding>
+    </category>
+    <patient>
+        <reference value="Patient/HdBe-Patient-01" />
+        <type value="Patient" />
+        <display value="Belle Ulijn" />
+    </patient>
+    <dateTime value="2018-02-05" />
+    <policy>
+        <uri value="https://wetten.overheid.nl/" />
+    </policy>
+    <provision>
+        <actor>
+            <role>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode" />
+                    <code value="RESPRSN" />
+                    <display value="responsible party" />
+                </coding>
+            </role>
+            <reference>
+                <reference value="RelatedPerson/HdBe-ContactPerson-01" />
+                <type value="RelatedPerson" />
+                <display value="Berend Ulijn" />
+            </reference>
+        </actor>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct" />
+                <code value="143021000119109" />
+                <display value="Do not resuscitate status with supporting documentation" />
+            </coding>
+        </code>
+    </provision>
+</Consent>
