@@ -2,7 +2,7 @@
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/AllergyIntolerance'
+where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-AllergyIntolerance'
 select 
 Profile: id,
 Description: description,
@@ -23,17 +23,17 @@ URL: url
 
   <div id="Snapshot view" class="tabcontent" style="display:block">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/AllergyIntolerance, snapshot}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-AllergyIntolerance, snapshot}}
   </div>
 
   <div id="Hybrid view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/AllergyIntolerance, hybrid}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-AllergyIntolerance, hybrid}}
   </div>
 
   <div id="Diff view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/AllergyIntolerance, diff}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-AllergyIntolerance, diff}}
   </div>
 
   <div id="Mapping" class="tabcontent">      
@@ -41,24 +41,24 @@ URL: url
       <div>
       @```
       from StructureDefinition
-      where url = 'https://fhir.healthdata.be/StructureDefinition/AllergyIntolerance'
+      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-AllergyIntolerance'
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'AllergyIntolerance') { map, comment }
+        join mapping.where(identity = 'HdBe-AllergyIntolerance') { map, comment }
       ```
     </div>
   </div>
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/AllergyIntolerance-01.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-AllergyIntolerance-01.page.md}}</li>
         
       </ul>
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:resources/AllergyIntolerance.doc.md}}
+      {{render:resources/HdBe-AllergyIntolerance.doc.md}}
   </div>
 
 </div>
@@ -69,7 +69,7 @@ URL: url
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/AllergyIntolerance'
+where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-AllergyIntolerance'
 
 for differential.element
 select
