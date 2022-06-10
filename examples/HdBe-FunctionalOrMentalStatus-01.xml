@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/observation.xsd">
+    <id value="HdBe-FunctionalOrMentalStatus-01"/>
+    <meta>
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-FunctionalOrMentalStatus" />
+    </meta>
+    <status value="final" />
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="118228005" />
+            <display value="Functional finding" />
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="365181006" />
+            <display value="Finding related to ability to wash self" />
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/HdBe-Patient-01" />
+        <type value="Patient" />
+        <display value="Belle Ulijn" />
+    </subject>
+    <effectiveDateTime value="2022-10-23" />
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="284790007" />
+            <display value=" Difficulty washing self" />
+        </coding>
+    </valueCodeableConcept>
+    <note>
+        <text value="Due to functional disability in arms." />
+    </note>
+</Observation>

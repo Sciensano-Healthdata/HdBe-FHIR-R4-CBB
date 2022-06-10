@@ -7,6 +7,7 @@
 - {{pagelink:Home/Examples/HdBe-ContactPerson-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-ContactPerson-02.page.md}}
 - {{pagelink:Home/Examples/HdBe-DrugUse-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-FunctionalOrMentalStatus-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-HealthcareProvider-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-HealthcareProvider-02.page.md}}
 - {{pagelink:Home/Examples/HdBe-HealthcareProvider-03.page.md}}
