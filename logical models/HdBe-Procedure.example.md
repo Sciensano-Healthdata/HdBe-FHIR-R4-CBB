@@ -8,7 +8,7 @@
 | procedure.procedure_method	                        | 73632009 - Laparoscopy (code by SNOMED CT)                  |
 | procedure.procedure_anatomical_location.location	    |  66754008 -  Appendix structure (code by SNOMED CT)                |
 | procedure.procedure_anatomical_location.laterality	|    24028007 - Right (code by SNOMED CT)               |
-| procedure.indication.problem	                        |                   |
+| procedure.indication.problem_name	                        |    74400008 - Appendicitis (code by SNOMED CT)|               |
 | procedure.medical_device                              |                   |
 | procedure.location.healthcare_provider	            |                   |
 | procedure.performer.health_professional	            |                   |
