@@ -35,11 +35,11 @@ URL: url
   </div>
 
   <div id="Example" class="tabcontent">
-      {{render:logical models/HdBe-AbilityToWashOneself.example.md}}
+      {{render:logical models/LogicalModel-HdBe-AbilityToWashOneself.example.md}}
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:logical models/HdBe-AbilityToWashOneself.doc.md}}
+      {{render:logical models/LogicalModel-HdBe-AbilityToWashOneself.doc.md}}
   </div>
 
 </div>
