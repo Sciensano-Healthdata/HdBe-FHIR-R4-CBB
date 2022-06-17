@@ -13,7 +13,7 @@ URL: url
 
 ## UML overview profiles
 
-{{render:uml/HdBe-LaboratoryTestResult-UML-GREY.png}}
+{{render:uml/HdBe-LaboratoryTestResult-UML.png}}
 
 <br/><br/> 
 
