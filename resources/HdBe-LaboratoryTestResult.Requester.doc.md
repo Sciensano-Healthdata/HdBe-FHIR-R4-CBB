@@ -1,4 +1,4 @@
-## zib LaboratoryTestResult-ServiceRequest difference
+## zib LaboratoryTestResult.Requester difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
