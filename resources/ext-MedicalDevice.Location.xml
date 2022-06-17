@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="ext-MedicalDevice.HealthProfessional" />
-  <url value="https://fhir.healthdata.be/StructureDefinition/ext-MedicalDevice.HealthProfessional" />
-  <name value="ExtMedicalDeviceHealthProfessional" />
-  <title value="ext MedicalDevice.HealthProfessional" />
+  <id value="ext-MedicalDevice.Location" />
+  <url value="https://fhir.healthdata.be/StructureDefinition/ext-MedicalDevice.Location" />
+  <name value="ExtMedicalDeviceLocation" />
+  <title value="ext MedicalDevice.Location" />
   <status value="draft" />
   <publisher value="Healthdata.be (Sciensano)" />
   <contact>
@@ -43,24 +43,25 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.healthdata.be/StructureDefinition/ext-MedicalDevice.HealthProfessional" />
+      <fixedUri value="https://fhir.healthdata.be/StructureDefinition/ext-MedicalDevice.Location" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
-      <short value="HealthProfessional" />
-      <definition value="The healthcare provider involved in the indication for use of the medical device implant." />
-      <comment value="Each occurence of the CBB HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [HdBe-HealthProfessional-PractitionerRole](https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [HdBe-HealthProfessional-Practitioner](https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner)). The reference to the Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Only in rare circumstances, there is just a Practitioner instance, in which case it is that instance which will be referenced here." />
-      <alias value="Zorgverlener" />
+      <short value="Location" />
+      <definition value="The healthcare provider at which use of the medical device was initiated or where the aid was implanted." />
+      <alias value="Locatie" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/pattern-HealthProfessionalReference" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider" />
       </type>
       <mapping>
         <identity value="zib-medicaldevice-v3.3.1-2020EN" />
-        <map value="NL-CM:10.1.9" />
-        <comment value="HealthProfessional" />
+        <map value="NL-CM:10.1.8" />
+        <comment value="Location" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-MedicalDevice" />
+        <map value="location" />
       </mapping>
     </element>
   </differential>

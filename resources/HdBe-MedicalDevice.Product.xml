@@ -51,19 +51,29 @@
     </element>
     <element id="Device.identifier">
       <path value="Device.identifier" />
-      <definition value="Additional unique identification code(s) of the product.&#xD;&#xA;&#xD;&#xA;The UDI (Unique Device Identifier) is the preferered identification code, consisting of a UDI-DI (Device Identifier) and a UDI-PI (Production Identifier(s)). This code should not be mapped here, but in the specified udiCarrier.&#xD;&#xA;&#xD;&#xA;Additionally, other codes can be registered here if needed. Such as:&#xD;&#xA;&#xD;&#xA;    - a serial number.&#xD;&#xA;    - a NIHDI notification code (medical devices on the Belgian market: https://www.vas.ehealth.fgov.be/registers/sadm/web/search/public).&#xD;&#xA;    - an identification code as indicated on the Nominative lists published by NIHDI: https://webappsa.riziv-inami.fgov.be/IRREQPublic/nl/Home/SearchNominative). Devices on these Nominative lists meet certain criteria for reimbursement." />
+      <definition value="Additional unique identification code(s) of the product.&#xD;&#xA;&#xD;&#xA;The UDI (Unique Device Identifier) is the preferred identification code, consisting of a UDI-DI (Device Identifier) and a UDI-PI (Production Identifier(s)). This code should not be mapped here, but in the specified udiCarrier.&#xD;&#xA;&#xD;&#xA;Additionally, other codes can be registered here if needed. Such as:&#xD;&#xA;&#xD;&#xA;    - a serial number.&#xD;&#xA;    - a NIHDI notification code (medical devices on the Belgian market: https://www.vas.ehealth.fgov.be/registers/sadm/web/search/public).&#xD;&#xA;    - an identification code as indicated on the Nominative lists published by NIHDI: https://webappsa.riziv-inami.fgov.be/IRREQPublic/nl/Home/SearchNominative). Devices on these Nominative lists meet certain criteria for reimbursement." />
       <mapping>
         <identity value="HdBe-MedicalDevice" />
         <map value="product_id" />
       </mapping>
+      <mapping>
+        <identity value="zib-medicaldevice-v3.3.1-2020EN" />
+        <map value="NL-CM:10.1.4" />
+        <comment value="ProductID" />
+      </mapping>
     </element>
     <element id="Device.udiCarrier">
       <path value="Device.udiCarrier" />
-      <definition value="Unique device identifier (UDI) assigned to device label or package. The UDI is the preferred identifier code. When having an UDI, it is preferred to note at least the deviceIdentifier, issuer and carrierHRF." />
+      <definition value="Unique device identifier (UDI) assigned to device label or package. The UDI is the preferred identifier code. When having an UDI, it is preferred to sent at least the deviceIdentifier, issuer and carrierHRF." />
       <max value="1" />
       <mapping>
         <identity value="HdBe-MedicalDevice" />
         <map value="product_id" />
+      </mapping>
+      <mapping>
+        <identity value="zib-medicaldevice-v3.3.1-2020EN" />
+        <map value="NL-CM:10.1.4" />
+        <comment value="ProductID" />
       </mapping>
     </element>
     <element id="Device.manufactureDate">
@@ -88,13 +98,17 @@
       <definition value="The code of the type of product." />
       <alias value="ProductType" />
       <binding>
-        <strength value="required" />
+        <strength value="extensible" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/ProductType" />
       </binding>
       <mapping>
         <identity value="zib-medicaldevice-v3.3.1-2020EN" />
         <map value="NL-CM:10.1.3" />
         <comment value="ProductType" />
+      </mapping>
+      <mapping>
+        <identity value="zib-medicaldevice-v3.3.1-2020EN" />
+        <map value="product_type" />
       </mapping>
     </element>
     <element id="Device.note">
@@ -110,6 +124,10 @@
         <identity value="zib-medicaldevice-v3.3.1-2020EN" />
         <map value="NL-CM:10.1.13" />
         <comment value="ProductDescription" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-MedicalDevice" />
+        <map value="product_description" />
       </mapping>
     </element>
   </differential>
