@@ -247,9 +247,9 @@
         <map value="indication" />
       </mapping>
     </element>
-    <element id="DeviceUseStatement.reasonReference:CBB-MedicalDeviceReference">
+    <element id="DeviceUseStatement.reasonReference:HdBe-MedicalDeviceReference">
       <path value="DeviceUseStatement.reasonReference" />
-      <sliceName value="CBB-MedicalDeviceReference" />
+      <sliceName value="HdBe-MedicalDeviceReference" />
       <short value="CBB MedicalDevice reference" />
       <definition value="The association between a CBB MedicalDevice and another zib or other functional model." />
       <comment value="There are several CBBs that reference CBB MedicalDevice on a functional level, but for which the direction of the reference in FHIR is reversed. Consult the mappings on this element for an overview of which zib concepts are mapped to this element. &#xD;&#xA;&#xD;&#xA;Note that some CBBs have a reference to MedicalDevice that is further constrained (e.g. with additional constraints on ProductType or AnatomicalLocation), such as HearingFunction and VisualFunction. For these CBBs separate DeviceUseStatement profiles have been created (based on this profile) which also include a specific slice on which their respective MedicalDevice concept mapping is present." />
@@ -278,7 +278,7 @@
       <mapping>
         <identity value="HdBe-Mobility" />
         <map value="medical_device" />
-        <comment value="Reversed reference for CBB FunctionalOrMentalStatus.medical_device" />
+        <comment value="Reversed reference for CBB Mobility.medical_device" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.bodySite">
