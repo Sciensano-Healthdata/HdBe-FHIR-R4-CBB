@@ -55,6 +55,7 @@ URL: url
   <div id="Examples" class="tabcontent">
       <ul>
         <li>{{pagelink:Home/Examples/HdBe-MedicalDevice-01.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-FunctionalOrMentalStatus-01-DeviceUseStatement-01.page.md}}</li>
         
       </ul>
   </div>
@@ -114,7 +115,7 @@ select
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-MedicalDevice.Product') { map, comment }
+        join mapping.where(identity = 'HdBe-MedicalDevice') { map, comment }
       ```
     </div>
   </div>
@@ -122,6 +123,7 @@ select
   <div id="Examples2" class="tabcontent">
       <ul>
         <li>{{pagelink:Home/Examples/HdBe-MedicalDevice.Product-01.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-FunctionalOrMentalStatus-01-Device-01.page.md}}</li>
       </ul>
   </div>
 
