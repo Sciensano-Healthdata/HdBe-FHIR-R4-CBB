@@ -53,7 +53,8 @@ URL: url
   <div id="Examples" class="tabcontent">
       <ul>
         <li>{{pagelink:Home/Examples/HdBe-FunctionalOrMentalStatus-01.page.md}}</li>
-        
+        <li>{{pagelink:Home/Examples/HdBe-FunctionalOrMentalStatus-01-Device-01.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-FunctionalOrMentalStatus-01-DeviceUseStatement-01.page.md}}</li>
       </ul>
   </div>
 
