@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult" />
   <meta>
-    <lastUpdated value="2022-02-16T14:10:39.4699254+00:00" />
+    <lastUpdated value="2022-04-25T09:47:18.7437563+00:00" />
   </meta>
   <language value="en-US" />
   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
@@ -115,7 +115,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="The name and code of the executed test.">
+      <definition value="The name and code of the executed test. &#xD;&#xA;&#xD;&#xA;The codification to be used SHOULD be LOINC as per the subset defined by the FPS Health, for the majority of commonly used lab measurements and demands. This subset is available on the [website of the FPS Health](https://www.vas.ehealth.fgov.be/webretam/retam/home.htm).">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -263,7 +263,6 @@
         <code value="dateTime" />
       </type>
     </element>
-
     <element id="laboratory_test_result.laboratory_test.test_result_status">
       <path value="laboratory_test_result.laboratory_test.test_result_status" />
       <short value="TestResultStatus">
@@ -319,7 +318,7 @@
           </extension>
         </extension>
       </definition>
-      <comment value="* 0..1 If the result has data type PQ and there are reference values, then the unit of the result and reference value must be the same.&#xA;* 0..1 If the result has reference values, then the data type of the result and reference values must be the same." />
+      <comment value="* If the result has data type PQ and there are reference values, then the unit of the result and reference value must be the same.&#xA;* If the result has reference values, then the data type of the result and reference values must be the same.&#xD;&#xA;* A string datatype may only be used if the reference range cannot be expressed as PQ." />
       <min value="0" />
       <max value="1" />
       <type>
@@ -353,7 +352,7 @@
           </extension>
         </extension>
       </definition>
-      <comment value="* 0..1 If the result has data type PQ and there are reference values, then the unit of the result and reference value must be the same.&#xA;* 0..1 If the result has reference values, then the data type of the result and reference values must be the same." />
+      <comment value="* If the result has data type PQ and there are reference values, then the unit of the result and reference value must be the same.&#xA;* If the result has reference values, then the data type of the result and reference values must be the same.&#xD;&#xA;* A string datatype may only be used if the reference range cannot be expressed as PQ." />
       <min value="0" />
       <max value="1" />
       <type>
@@ -377,7 +376,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="The method used to determine interpretation flags. An example of this is EUCAST, for determining clinical breakpoints in microbiological susceptibility tests">
+      <definition value="The method used to determine interpretation flags. An example of this is EUCAST, for determining clinical breakpoints in microbiological susceptibility tests.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -387,16 +386,12 @@
           </extension>
         </extension>
       </definition>
+      <comment value="A ValueSet is not yet available for this concept." />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="CodeableConcept" />
       </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="InterpretationMethod codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/InterpretationMethod" />
-      </binding>
     </element>
     <element id="laboratory_test_result.laboratory_test.result_flags">
       <path value="laboratory_test_result.laboratory_test.result_flags" />
@@ -410,7 +405,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="Attention codes indicating whether the result of a quantitative test is above or below certain reference values or interpreting the result otherwise.(Resistent). The values Resistant, Intermediate en Susceptible are used with microbiological test results.">
+      <definition value="Attention codes indicating whether the result of a quantitative test is above or below certain reference values or interpreting the result otherwise.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -1017,9 +1012,9 @@
         <code value="CodeableConcept" />
       </type>
       <binding>
-        <strength value="required" />
-        <description value="PanelOrBattery codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/PanelOrBattery" />
+        <strength value="extensible" />
+        <description value="ReTaM lab codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/ReTaM" />
       </binding>
     </element>
     <element id="laboratory_test_result.result_status">

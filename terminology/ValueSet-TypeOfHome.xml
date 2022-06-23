@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="WoningAanpassing"/>
+   <id value="TypeOfHome"/>
    <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
       <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
@@ -10,15 +10,15 @@
             <start value="2020-09-01T00:00:00+01:00"/>
         </valuePeriod>
     </extension>
-   <url value="https://fhir.healthdata.be/ValueSet/WoningAanpassing"/>
+   <url value="https://fhir.healthdata.be/ValueSet/TypeOfHome"/>
    <identifier>
         <use value="official"/>
         <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.7.8.2"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.7.8.1"/>
     </identifier>
    <version value="2020-09-01T00:00:00"/>
-   <name value="WoningAanpassing"/>
-   <title value="WoningAanpassing"/>
+   <name value="TypeOfHome"/>
+   <title value="TypeOfHome"/>
    <status value="draft"/>
    <experimental value="false"/>
    <publisher value="Healthdata.be (Sciensano)"/>
@@ -30,18 +30,15 @@
       <use value="work" />
     </telecom>
   </contact>
-   <description value="WoningAanpassingCodelijst"/>
+   <description value="TypeOfHomeCodelist"/>
    <immutable value="false"/>
-   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
    <compose>
         <include>
             <system value="http://snomed.info/sct"/>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Douchestoel"/>
-                </extension>
-                <code value="467158009"/>
-                <display value="badstoel en/of douchestoel"/>
+                <code value="257630004"/>
+                <display value="House"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -49,7 +46,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Bath/shower chair"/>
+                    <value value="House"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -58,15 +55,12 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="badstoel en/of douchestoel"/>
+                    <value value="huis"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Traplift"/>
-                </extension>
-                <code value="465153004"/>
-                <display value="traplift"/>
+                <code value="257564005"/>
+                <display value="Apartment"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -74,7 +68,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Stairlift, chair"/>
+                    <value value="Residential flat"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -83,15 +77,12 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="traplift"/>
+                    <value value="appartement"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Aangepast toilet"/>
-                </extension>
-                <code value="465302005"/>
-                <display value="aangepast toilet"/>
+                <code value="224670004"/>
+                <display value="Houseboat"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -99,7 +90,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Assistive toilet"/>
+                    <value value="Houseboat"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -108,15 +99,12 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="aangepast toilet"/>
+                    <value value="woonboot"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Aangepast bed"/>
-                </extension>
-                <code value="705401004"/>
-                <display value="aangepast bed"/>
+                <code value="257641002"/>
+                <display value="Mobile home"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -124,7 +112,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Assistive bed"/>
+                    <value value="Mobile home"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -133,15 +121,34 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="aangepast bed"/>
+                    <value value="woonwagen"/>
+                </designation>
+            </concept> 
+            <concept>
+                <code value="32911000"/>
+                <display value="Homeless"/>
+                <designation>
+                    <language value="en-US"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Homeless"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="dakloos"/>
                 </designation>
             </concept>
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Aangepaste woninginrichting"/>
-                </extension>
-                <code value="705390009"/>
-                <display value="aangepaste inrichting en/of aanpassing van huis en erf"/>
+                <code value="74964007"/>
+                <display value="Other"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -149,7 +156,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Home and premises assistive furnishing/adaptation"/>
+                    <value value="Other"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -158,15 +165,12 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="aangepaste inrichting en/of aanpassing van huis en erf"/>
+                    <value value="Ander"/>
                 </designation>
-            </concept>
+            </concept> 
             <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Wandbeugel"/>
-                </extension>
-                <code value="360303004"/>
-                <display value="wandbeugel"/>
+                <code value="261665006"/>
+                <display value="Unknown"/>
                 <designation>
                     <language value="en-US"/>
                     <use>
@@ -174,7 +178,7 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="Hand rail"/>
+                    <value value="Unknown"/>
                 </designation>
                 <designation>
                     <language value="nl-NL"/>
@@ -183,9 +187,9 @@
                         <code value="900000000000013009"/>
                         <display value="Synonym"/>
                     </use>
-                    <value value="wandbeugel"/>
+                    <value value="onbekend"/>
                 </designation>
-            </concept>
+            </concept>                              
         </include>
     </compose>
 </ValueSet>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceUseStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/deviceusestatement.xsd">
+    <id value="HdBe-MedicalDevice-01"/>
+    <meta>
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice" />
+    </meta>
+    <extension url="https://fhir.healthdata.be/StructureDefinition/ext-MedicalDevice.Location">
+        <valueReference>
+            <reference value="Location/HdBe-HealthcareProvider-01" />
+            <type value="Location" />
+            <display value="Healthcare provider (location), GRAND HOPITAL DE CHARLEROI - SAINT-JOSEPH" />
+        </valueReference>
+    </extension>
+    <status value="active" />
+    <subject>
+        <reference value="Patient/HdBe-Patient-01" />
+        <type value="Patient" />
+        <display value="Belle Ulijn" />
+    </subject>
+    <timingPeriod>
+        <start value="2022-05-01" />
+    </timingPeriod>
+    <device>
+        <reference value="Device/HdBe-MedicalDevice.Product-01" />
+        <type value="Device" />
+        <display value="Arterial stent" />
+    </device>
+    <reasonReference>
+        <reference value="Condition/HdBe-Problem-01" />
+        <type value="Condition" />
+        <display value="Problem" />
+    </reasonReference>
+    <note>
+        <text value="Might need replacement in the future" />
+    </note> 
+</DeviceUseStatement>
+

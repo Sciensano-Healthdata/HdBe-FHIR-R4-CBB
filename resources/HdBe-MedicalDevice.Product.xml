@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="HdBe-MedicalDevice.Product" />
+  <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice.Product" />
+  <name value="HdBeMedicalDeviceProduct" />
+  <title value="HdBe MedicalDevice.Product" />
+  <status value="draft" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Medical devices are any internally implanted and external devices and/or aids used by the patient (in the past) to reduce the effects of functional limitations in organ systems or to facilitate the treatment of a disease." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-medicaldevice-v3.3.1-2020EN" />
+    <uri value="https://zibs.nl/wiki/MedicalDevice-v3.3.1(2020EN)" />
+    <name value="zib MedicalDevice-v3.3.1(2020EN)" />
+  </mapping>
+  <mapping>
+    <identity value="HdBe-MedicalDevice" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicalDevice" />
+    <name value="HdBe logical model MedicalDevice" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Device" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Device" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Device">
+      <path value="Device" />
+      <short value="Product" />
+      <definition value="The medical device (internally or externally)." />
+      <alias value="Product" />
+      <mapping>
+        <identity value="zib-medicaldevice-v3.3.1-2020EN" />
+        <map value="NL-CM:10.1.2" />
+        <comment value="Product" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-MedicalDevice" />
+        <map value="Product" />
+      </mapping>
+    </element>
+    <element id="Device.identifier">
+      <path value="Device.identifier" />
+      <definition value="Additional unique identification code(s) of the product.&#xD;&#xA;&#xD;&#xA;The UDI (Unique Device Identifier) is the preferred identification code, consisting of a UDI-DI (Device Identifier) and a UDI-PI (Production Identifier(s)). This code should not be mapped here, but in the specified udiCarrier.&#xD;&#xA;&#xD;&#xA;Additionally, other codes can be registered here if needed. Such as:&#xD;&#xA;&#xD;&#xA;    - a serial number.&#xD;&#xA;    - a NIHDI notification code (medical devices on the Belgian market: https://www.vas.ehealth.fgov.be/registers/sadm/web/search/public).&#xD;&#xA;    - an identification code as indicated on the Nominative lists published by NIHDI: https://webappsa.riziv-inami.fgov.be/IRREQPublic/nl/Home/SearchNominative). Devices on these Nominative lists meet certain criteria for reimbursement." />
+      <mapping>
+        <identity value="HdBe-MedicalDevice" />
+        <map value="product_id" />
+      </mapping>
+      <mapping>
+        <identity value="zib-medicaldevice-v3.3.1-2020EN" />
+        <map value="NL-CM:10.1.4" />
+        <comment value="ProductID" />
+      </mapping>
+    </element>
+    <element id="Device.udiCarrier">
+      <path value="Device.udiCarrier" />
+      <definition value="Unique device identifier (UDI) assigned to device label or package. The UDI is the preferred identifier code. When having an UDI, it is preferred to sent at least the deviceIdentifier, issuer and carrierHRF." />
+      <max value="1" />
+      <mapping>
+        <identity value="HdBe-MedicalDevice" />
+        <map value="product_id" />
+      </mapping>
+      <mapping>
+        <identity value="zib-medicaldevice-v3.3.1-2020EN" />
+        <map value="NL-CM:10.1.4" />
+        <comment value="ProductID" />
+      </mapping>
+    </element>
+    <element id="Device.manufactureDate">
+      <path value="Device.manufactureDate" />
+      <definition value="The date a specific device was manufactured - which is a component of the production identifier (PI), a conditional, variable portion of a UDI. &#xD;&#xA;In the GS1 standard this element represents the Manufacture date - e.g. 250717 - as part of the Application Identifier (AI), namely AI(11)." />
+    </element>
+    <element id="Device.expirationDate">
+      <path value="Device.expirationDate" />
+      <definition value="The expiration date of a specific device - which is a component of the production identifier (PI), a conditional, variable portion of a UDI.&#xD;&#xA;In the GS1 standard this element represents the Expiration date - e.g. 141120 - as part of the Application Identifier (AI), namely AI(17)." />
+    </element>
+    <element id="Device.lotNumber">
+      <path value="Device.lotNumber" />
+      <definition value="The lot or batch number within which a device was manufactured - which is a component of the production identifier (PI), a conditional, variable portion of a UDI.&#xD;&#xA;In the GS1 standard this element represents the Lot/batch number - e.g. 1234AB - as part of the Application Identifier (AI), namely AI(10)." />
+    </element>
+    <element id="Device.serialNumber">
+      <path value="Device.serialNumber" />
+      <definition value="The serial number assigned by the organization when the device was manufactured.&#xD;&#xA;In the GS1 standard this element represents the Serial number - e.g. 12345XYZ - as part of the Application Identifier (AI), namely AI(21)." />
+    </element>
+    <element id="Device.type">
+      <path value="Device.type" />
+      <short value="ProductType" />
+      <definition value="The code of the type of product." />
+      <alias value="ProductType" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/ProductType" />
+      </binding>
+      <mapping>
+        <identity value="zib-medicaldevice-v3.3.1-2020EN" />
+        <map value="NL-CM:10.1.3" />
+        <comment value="ProductType" />
+      </mapping>
+      <mapping>
+        <identity value="zib-medicaldevice-v3.3.1-2020EN" />
+        <map value="product_type" />
+      </mapping>
+    </element>
+    <element id="Device.note">
+      <path value="Device.note" />
+      <max value="1" />
+    </element>
+    <element id="Device.note.text">
+      <path value="Device.note.text" />
+      <short value="ProductDescription" />
+      <definition value="Textual description of the product." />
+      <alias value="ProductOmschrijving" />
+      <mapping>
+        <identity value="zib-medicaldevice-v3.3.1-2020EN" />
+        <map value="NL-CM:10.1.13" />
+        <comment value="ProductDescription" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-MedicalDevice" />
+        <map value="product_description" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
