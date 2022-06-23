@@ -9,16 +9,17 @@
   </div>
 
   <div id="JSON" class="tabcontent" style="display:block">
-      {{json:examples/HdBe-HearingFunction-01.xml}}
+      {{json:examples/HdBe-HearingFunction.HearingAid-01.xml}}
   </div>
   <div id="XML" class="tabcontent">
-      {{xml:examples/HdBe-HearingFunction-01.xml}}
+      {{xml:examples/HdBe-HearingFunction.HearingAid-01.xml}}
   </div>
   <div id="Tree view" class="tabcontent">
-      {{tree:examples/HdBe-HearingFunction-01.xml}}
+      {{tree:examples/HdBe-HearingFunction.HearingAid-01.xml}}
   </div>
   <div id="Table view" class="tabcontent">
-      {{table:examples/HdBe-HearingFunction-01.xml}}
+      {{table:examples/HdBe-HearingFunction.HearingAid-01.xml}}
   </div>
 
 </div>
+

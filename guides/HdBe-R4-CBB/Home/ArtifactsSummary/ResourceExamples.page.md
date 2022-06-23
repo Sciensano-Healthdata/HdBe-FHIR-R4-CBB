@@ -10,6 +10,9 @@
 - {{pagelink:Home/Examples/HdBe-HealthcareProvider-Organization-02.page.md}}
 - {{pagelink:Home/Examples/HdBe-HealthProfessional-Practitioner-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-HealthProfessional-PractitionerRole-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-HearingFunction-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-HearingFunction.HearingAid-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-HearingFunction.HearingAid.Product-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-LaboratoryTestResult-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-LaboratoryTestResult.Specimen-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-LaboratoryTestResult.Specimen-02.page.md}}
