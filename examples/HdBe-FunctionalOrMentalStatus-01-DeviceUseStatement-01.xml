@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeviceUseStatement xmlns="http://hl7.org/fhir">
+    <id value="HdBe-FunctionalOrMentalStatus-01-DeviceUseStatement-01"/>
+    <meta>
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice" />
+    </meta>
+    <status value="active" />
+    <subject>
+        <reference value="Patient/HdBe-Patient-01" />
+        <type value="Patient" />
+        <display value="Belle Ulijn" />
+    </subject>
+    <timingPeriod>
+        <start value="2018-12-05" />
+    </timingPeriod>
+    <device>
+        <reference value="Device/HdBe-FunctionalOrMentalStatus-01-Device-01" />
+        <type value="Device" />
+        <display value="Assistive bathing washcloth" />
+    </device>
+    <reasonReference>
+        <reference value="Observation/HdBe-FunctionalOrMentalStatus-01" />
+        <type value="Observation" />
+        <display value="Finding related to ability to wash self" />
+    </reasonReference>
+</DeviceUseStatement>
+
