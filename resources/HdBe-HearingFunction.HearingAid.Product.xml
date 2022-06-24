@@ -1,45 +1,54 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBe-HearingFunction.HearingAid.Product"/>
-   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction.HearingAid.Product"/>
-   <name value="HdBeHearingFunctionHearingAidProduct"/>
-   <title value="HdBe HearingFunction.HearingAid.Product"/>
-   <status value="draft"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
-      <name value="Healthdata.be (Sciensano)"/>
-      <telecom>
-         <system value="email"/>
-         <value value="fhir.healthdata@sciensano.be"/>
-         <use value="work"/>
-      </telecom>
-   </contact>
-   <description value="Hearing is the ability to observe sound, with the purpose of communicating with others, localizing the source of the sound and recognizing certain sounds. This pertains to observing the sound waves, and not processing the sounds in the brain.&#xD;&#xA;A hearing disorder can lead to things including communication problems."/>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-   <fhirVersion value="4.0.1"/>
-   <mapping>
-      <identity value="zib-hearingfunction-v3.2-2020EN"/>
-      <uri value="https://zibs.nl/wiki/HearingFunction-v3.2(2020EN)"/>
-      <name value="zib HearingFunction-v3.2(2020EN)"/>
-   </mapping>
-   <kind value="resource"/>
-   <abstract value="false"/>
-   <type value="Device"/>
-   <baseDefinition value="https://fhir.healthdata.be/StructureDefinition/zib-MedicalDevice.Product"/>
-   <derivation value="constraint"/>
-   <differential>
-      <element id="Device.type">
-         <path value="Device.type"/>
-         <definition value="The type of product used to help the patient hear."/>
-         <binding>
-            <strength value="required"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/"/>
-         </binding>
-         <mapping>
-            <identity value="zib-hearingfunction-v3.2-2020EN"/>
-            <map value="NL-CM:10.1.3"/>
-            <comment value="ProductType"/>
-         </mapping>
-      </element>
-   </differential>
+  <id value="HdBe-HearingFunction.HearingAid.Product" />
+  <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction.HearingAid.Product" />
+  <name value="HdBeHearingFunctionHearingAidProduct" />
+  <title value="HdBe HearingFunction.HearingAid.Product" />
+  <status value="draft" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Hearing is the ability to observe sound, with the purpose of communicating with others, localizing the source of the sound and recognizing certain sounds. This pertains to observing the sound waves, and not processing the sounds in the brain.&#xD;&#xA;A hearing disorder can lead to things including communication problems." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-hearingfunction-v3.2-2020EN" />
+    <uri value="https://zibs.nl/wiki/HearingFunction-v3.2(2020EN)" />
+    <name value="zib HearingFunction-v3.2(2020EN)" />
+  </mapping>
+  <mapping>
+    <identity value="HdBe-HearingFunction" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HearingFunction" />
+    <name value="HdBe logical model HearingFunction" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Device" />
+  <baseDefinition value="https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice.Product" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Device.type">
+      <path value="Device.type" />
+      <definition value="The type of product used to help the patient hear." />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/HearingAidType" />
+      </binding>
+      <mapping>
+        <identity value="zib-hearingfunction-v3.2-2020EN" />
+        <map value="NL-CM:10.1.3" />
+        <comment value="ProductType" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-HearingFunction" />
+        <map value="hearing_aid.medical_device.product.product_type" />
+      </mapping>
+    </element>
+  </differential>
 </StructureDefinition>
