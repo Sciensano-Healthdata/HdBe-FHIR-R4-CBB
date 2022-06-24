@@ -113,7 +113,7 @@ TODO
 
   <div id="Examples2" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-HearingFunction-01.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-HearingFunction.HearingAid-01.page.md}}</li>
         
       </ul>
   </div>
@@ -168,7 +168,7 @@ TODO
 
   <div id="Examples3" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-HearingFunction-01.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-HearingFunction.HearingAid.Product-01.page.md}}</li>
         
       </ul>
   </div>
