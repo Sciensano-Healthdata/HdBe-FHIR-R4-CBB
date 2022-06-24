@@ -13,20 +13,10 @@ URL: url
 
 ## UML overview profiles
 
-@startuml
-class "HdBe-HearingFunction" <<Observation>> 
-class "HdBe-HearingFunction.HearingAid" <<DeviceUseStatement>> {
-  Specialization of HdBe-MedicalDevice
-}
-class "HdBe-HearingFunction.HearingAid.Product" <<Device>> {
-  Specialization of HdBe-MedicalDevice.Product
-}
+{{render:uml/HdBe-HearingFunction-UML.png}}
 
-"HdBe-HearingFunction.HearingAid"  --> "HdBe-HearingFunction": 0..* reasonReference: The medical aid \nused to help the patient hear. 
-note bottom on link: In CBB HearingFunction \nreferences CBB MedicalDevice \nbut in FHIR this reference \nis reversed.
-"HdBe-HearingFunction.HearingAid" --> "HdBe-HearingFunction.HearingAid.Product": 1..1 device
+<br/><br/> 
 
-@enduml
 
 ## HdBe-HearingFunction
 
