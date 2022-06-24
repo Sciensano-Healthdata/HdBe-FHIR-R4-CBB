@@ -33,9 +33,13 @@
   <baseDefinition value="https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice.Product" />
   <derivation value="constraint" />
   <differential>
+    <element id="Device">
+      <path value="Device" />
+      <comment value="This is a specialization of the [HdBe-MedicalDevice.Product](https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice.Product) profile to represent HearingAid devices within the context of HdBe-HearingFunction." />
+    </element>
     <element id="Device.type">
       <path value="Device.type" />
-      <definition value="The type of product used to help the patient hear. " />
+      <definition value="The type of product used to help the patient hear." />
       <binding>
         <strength value="extensible" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/HearingAidType" />
