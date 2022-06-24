@@ -33,11 +33,15 @@
   <baseDefinition value="https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice.Product" />
   <derivation value="constraint" />
   <differential>
+    <element id="Device">
+      <path value="Device" />
+      <comment value="This is a specialization of the [HdBe-MedicalDevice.Product](https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice.Product) profile to represent VisualAid devices within the context of HdBe VisualFunction." />
+    </element>
     <element id="Device.type">
       <path value="Device.type" />
       <definition value="The type of product used to help the patient see." />
       <binding>
-        <strength value="required" />
+        <strength value="extensible" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/VisualAidType" />
       </binding>
       <mapping>

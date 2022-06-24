@@ -11,6 +11,11 @@ Status: status,
 URL: url
 ```
 
+## UML overview profiles
+
+{{render:uml/HdBe-VisualFunction-UML.png}}
+
+<br/><br/> 
 
 ## HdBe-VisualFunction
 
@@ -120,7 +125,7 @@ select
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-HealthcareProvider') { map, comment }
+        join mapping.where(identity = 'HdBe-VisualFunction') { map, comment }
       ```
     </div>
   </div>
@@ -183,7 +188,7 @@ select
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-HealthcareProvider') { map, comment }
+        join mapping.where(identity = 'HdBe-VisualFunction') { map, comment }
       ```
     </div>
   </div>
