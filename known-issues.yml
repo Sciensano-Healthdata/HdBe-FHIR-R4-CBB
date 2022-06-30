@@ -2,11 +2,17 @@
 # The issues here are deliberate deviations from the guidelines, as flagged by the qa tooling.
 # For each issue documented, a reason for deviating from the guidelines is given.
 
-HdBe-HealthProfessional-Practitioner-01:
+HdBe-LaboratoryTestResult.Specimen-01:
   ignored issues:
-    Practitioner.telecom[0].system.extension[0].value.ofType(CodeableConcept):
-      - message: "[Code System URI 'urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1' is unknown so the code cannot be validated]"
-        reason: "Custom ZIB codesystem is not known to the JAVA validator. No CodeSystem exists."
+    Specimen.type:
+      - message: "None of the codings provided are in the value set 'SpecimenMaterial-and-Microorganism'"
+        reason: "JAVA validator does not support valueset that include other valuesets. Code exists."
+
+HdBe-LaboratoryTestResult.Specimen-02:
+  ignored issues:
+    Specimen.type:
+      - message: "None of the codings provided are in the value set 'SpecimenMaterial-and-Microorganism'"
+        reason: "JAVA validator does not support valueset that include other valuesets. Code exists."
 
 ---
 # The following issues are not "real" deviations stemming from design choices, but rather problems that pop up due to
