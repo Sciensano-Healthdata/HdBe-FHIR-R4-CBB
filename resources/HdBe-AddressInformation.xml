@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-AddressInformation" />
   <meta>
-    <lastUpdated value="2022-02-16T17:06:25.0420171+00:00" />
+    <lastUpdated value="2022-06-30T15:14:02.8777359+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation" />
   <name value="HdBeAddressInformation" />
@@ -60,7 +60,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="0" />
+      <min value="1" />
     </element>
     <element id="Address.extension:addressType">
       <path value="Address.extension" />
@@ -83,6 +83,17 @@
         <identity value="HdBe-AddressInformation" />
         <map value="address_type" />
       </mapping>
+    </element>
+    <element id="Address.extension:language">
+      <path value="Address.extension" />
+      <sliceName value="language" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/language" />
+      </type>
+      <isModifier value="false" />
     </element>
     <element id="Address.use">
       <path value="Address.use" />
@@ -253,7 +264,6 @@
         <severity value="error" />
         <human value="Must have value 'by' or 'to'" />
         <expression value="value in ('by' | 'to')" />
-        <source value="https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation" />
       </constraint>
       <mapping>
         <identity value="zib-addressinformation-v1.1-2020EN" />

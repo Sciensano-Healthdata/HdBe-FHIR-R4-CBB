@@ -29,7 +29,7 @@
       <use value="work"/>
     </telecom>
   </contact>
-  <description value="Defines the role of the contact in relation to the patient. Additional concepts that are not part of the current SNOMED-CT hierarchy could be added to the valueSet."/>
+  <description value="Defines the role of the contact in relation to the patient. Additional concepts that are not part of the current SNOMED-CT hierarchy could be added to this ValueSet later. This ValueSet excludes the 303071001 |Person in the family (person) hierarchy because these are used for the ConcatPerson.Relationship concept and ValueSet."/>
   <immutable value="false"/>
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
   <compose>
@@ -41,5 +41,13 @@
         <value value="125676002"/>
       </filter>
     </include>
+    <exlude>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="303071001"/>
+      </filter>
+    </exlude>
   </compose>
 </ValueSet>
