@@ -177,9 +177,9 @@
                 <code value="BackboneElement"/>
             </type>
       </element>
-        <element id="care_team.care_team_member.care_team_member">
-         <path value="care_team.care_team_member.care_team_member"/>
-         <short value="CareTeamMember">
+        <element id="care_team.care_team_member.contact">
+         <path value="care_team.care_team_member.contact"/>
+         <short value="Contact">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -200,43 +200,10 @@
                 </extension>
             </definition>
          <min value="0"/>
-         <max value="*"/>
+         <max value="1"/>
          <base>
                 <path value="care_team.care_team_member.care_team_member"/>
                 <min value="0"/>
-                <max value="*"/>
-            </base>
-         <type>
-                <code value="BackboneElement"/>
-            </type>
-      </element>
-        <element id="care_team.care_team_member.care_team_member.contact">
-         <path value="care_team.care_team_member.care_team_member.contact"/>
-         <short value="Contact">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Contactpersoon"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Root concept of the Contact information model. This root concept contains all data elements of the Contact information model.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Rootconcept van de bouwsteen Contactpersoon. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Contactpersoon."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <base>
-                <path value="care_team.care_team_member.care_team_member.contact"/>
-                <min value="1"/>
                 <max value="1"/>
             </base>
          <type>
@@ -244,9 +211,10 @@
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Contact"/>
          </type>
       </element>
-        <element id="care_team.care_team_member.care_team_member">
-         <path value="care_team.care_team_member.care_team_member"/>
-         <short value="CareTeamMember">
+        
+        <element id="care_team.care_team_member.patient">
+         <path value="care_team.care_team_member.patient"/>
+         <short value="Patient">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -267,43 +235,10 @@
                 </extension>
             </definition>
          <min value="0"/>
-         <max value="*"/>
+         <max value="1"/>
          <base>
                 <path value="care_team.care_team_member.care_team_member"/>
                 <min value="0"/>
-                <max value="*"/>
-            </base>
-         <type>
-                <code value="BackboneElement"/>
-            </type>
-      </element>
-        <element id="care_team.care_team_member.care_team_member.patient">
-         <path value="care_team.care_team_member.care_team_member.patient"/>
-         <short value="Patient">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Patient"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Root concept of the Patient information model. This root concept contains all data elements of the Patient information model.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt. "/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <base>
-                <path value="care_team.care_team_member.care_team_member.patient"/>
-                <min value="1"/>
                 <max value="1"/>
             </base>
          <type>
@@ -311,9 +246,9 @@
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Patient"/>
          </type>
       </element>
-        <element id="care_team.care_team_member.care_team_member">
-         <path value="care_team.care_team_member.care_team_member"/>
-         <short value="CareTeamMember">
+        <element id="care_team.care_team_member.health_professional">
+         <path value="care_team.care_team_member.health_professional"/>
+         <short value="HealthProfessional">
                 <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                     <extension url="lang">
                         <valueCode value="nl-NL"/>
@@ -334,43 +269,10 @@
                 </extension>
             </definition>
          <min value="0"/>
-         <max value="*"/>
+         <max value="1"/>
          <base>
                 <path value="care_team.care_team_member.care_team_member"/>
                 <min value="0"/>
-                <max value="*"/>
-            </base>
-         <type>
-                <code value="BackboneElement"/>
-            </type>
-      </element>
-        <element id="care_team.care_team_member.care_team_member.health_professional">
-         <path value="care_team.care_team_member.care_team_member.health_professional"/>
-         <short value="HealthProfessional">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Zorgverlener"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Root concept of the HealthProfessional information model. This root concept contains all data elements of the HealthProfessional information model.&#xD;&#xA;When referring to this information model the role the health professional fulfils in the healthcare process can be addressed additionally. For health professionals, this could be for example main practitioner or referrer.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Rootconcept van de bouwsteen Zorgverlener. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgverlener. &#xD;&#xA;Bij verwijzing naar deze bouwsteen kan tevens de rol die de zorgverlener in het zorgproces vervult, worden meegegeven. Voor zorgverleners kan dit bijvoorbeeld hoofdbehandelaar of verwijzer zijn"/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <base>
-                <path value="care_team.care_team_member.care_team_member.health_professional"/>
-                <min value="1"/>
                 <max value="1"/>
             </base>
          <type>

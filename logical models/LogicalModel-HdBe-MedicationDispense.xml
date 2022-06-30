@@ -107,39 +107,6 @@
                 <max value="1"/>
             </base>
          <type>
-                <code value="BackboneElement"/>
-            </type>
-      </element>
-        <element id="medication_dispense.supplier.healthcare_provider">
-         <path value="medication_dispense.supplier.healthcare_provider"/>
-         <short value="HealthcareProvider">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Zorgaanbieder"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Root concept of the Healthcare Provider information model. This root concept contains all data elements of the Healthcare Provider information model.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Rootconcept van de bouwsteen Zorgaanbieder. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgaanbieder. "/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_dispense.supplier.healthcare_provider"/>
-                <min value="1"/>
-                <max value="1"/>
-            </base>
-         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
          </type>
@@ -204,39 +171,6 @@
          <max value="1"/>
          <base>
                 <path value="medication_dispense.dispensed_medicine"/>
-                <min value="1"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="BackboneElement"/>
-            </type>
-      </element>
-        <element id="medication_dispense.dispensed_medicine.pharmaceutical_product">
-         <path value="medication_dispense.dispensed_medicine.pharmaceutical_product"/>
-         <short value="PharmaceuticalProduct">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="FarmaceutischProduct"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Root concept of the PharmaceuticalProduct partial information model.This root concept contains all data elements of the PharmaceuticalProduct partial information model.&#xD;&#xA;&#xD;&#xA;The prescribed product is usually a medicine. However, medical aids and bandages can also be prescribed and supplied via the pharmacy. Strictly speaking, food and blood products do not belong in the medication category, but can be prescribed and supplied by a pharmacy as well. &#xD;&#xA;&#xD;&#xA;A type of medication can be indicated with **a single code**. That code can be chosen from several possible coding systems (concretely: GPK, PRK, HPK or article numbers). Correct use of these codes in the software systems will sufficiently record the composition of the product used, making a complete product specification unnecessary. &#xD;&#xA;&#xD;&#xA;In addition to a primary code, **alternative codes **from other coding systems can also be entered (so that the GPK can be sent along in the event that the patient was registered based on PRK, for example). &#xD;&#xA;&#xD;&#xA;Entering multiple ingredients will enable you to display a compound product. &#xD;&#xA;In that case, the **composition of the medication** can be specified implicitly (with the use of a medication code) or explicitly, for example by listing the (active) substance(s) of the medication. &#xD;&#xA;**Prescriptions to be prepared by the pharmacy** can be entered as well. This can be done by means of the option listed above to enter coded ingredients and/or by entering the composition and preparation method as free text.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Rootconcept van de subbouwsteen FarmaceutischProduct. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen FarmaceutischProduct.&#xD;&#xA;&#xD;&#xA;Het voorgeschreven middel is vrijwel steeds een geneesmiddel. Hulp- en verbandmiddelen kunnen echter ook voorgeschreven en via de apotheek geleverd worden. Voedingsmiddelen en bloedproducten vallen strikt genomen niet onder de categorie geneesmiddelen, maar kunnen worden voorgeschreven, en door een apotheek geleverd worden.&#xD;&#xA;&#xD;&#xA;Het is mogelijk om met **één enkele code **een medicatiesoort aan te duiden, waarbij die code gekozen kan zijn uit meerdere mogelijke coderingssystemen (concreet GPK, PRK, HPK of artikelnummers). Door een juiste toepassing van deze codes in de softwaresystemen leggen deze codes de samenstelling van het gebruikte middel voldoende vast en is een complete productspecificatie niet nodig.&#xD;&#xA;&#xD;&#xA;Het is mogelijk om naast een primaire code ook **alternatieve codes **uit andere coderingssystemen aan te duiden (zodat bijvoorbeeld de GPK kan worden meegestuurd als is geregistreerd op basis van PRK). &#xD;&#xA;&#xD;&#xA;Door meerdere ingrediënten op te geven wordt het mogelijk om een samengesteld product weer te geven. &#xD;&#xA;&#xD;&#xA;Het is dan mogelijk om zowel impliciet te specificeren (door een medicatiecode te gebruiken) als expliciet de **samenstelling van de medicatie **aan te duiden, bijvoorbeeld door de (actieve) ingrediënt(en) van de medicatie te benoemen. &#xD;&#xA;&#xD;&#xA;Het is mogelijk om **magistrale receptuur **door te geven. Dit kan door bovenbedoelde mogelijkheid om gecodeerd ingrediënten aan te duiden en/of door de samenstelling en bereidingswijze als vrije tekst door te geven."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_dispense.dispensed_medicine.pharmaceutical_product"/>
                 <min value="1"/>
                 <max value="1"/>
             </base>

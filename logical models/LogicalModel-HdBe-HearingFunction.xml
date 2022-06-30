@@ -385,39 +385,6 @@
                 <max value="*"/>
             </base>
          <type>
-                <code value="BackboneElement"/>
-            </type>
-      </element>
-        <element id="hearing_function.hearing_aid.medical_device.indication.problem">
-         <path value="hearing_function.hearing_aid.medical_device.indication.problem"/>
-         <short value="Problem">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Probleem"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Root concept of the Problem information model.&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient himselve (in the form of a complaint) or by their healthprofessional (in the form of a diagnosis, for example). &#xD;&#xA;">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Rootconcept van de bouwsteen Probleem.&#xD;&#xA;Een probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de patiënt zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose). "/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <base>
-                <path value="hearing_function.hearing_aid.medical_device.indication.problem"/>
-                <min value="1"/>
-                <max value="1"/>
-            </base>
-         <type>
             <code value="Reference"/>
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
          </type>
@@ -551,42 +518,9 @@
                 <min value="0"/>
                 <max value="1"/>
             </base>
-         <type>
-                <code value="BackboneElement"/>
-            </type>
-      </element>
-        <element id="hearing_function.hearing_aid.medical_device.location.healthcare_provider">
-         <path value="hearing_function.hearing_aid.medical_device.location.healthcare_provider"/>
-         <short value="HealthcareProvider">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Zorgaanbieder"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Root concept of the Healthcare Provider information model. This root concept contains all data elements of the Healthcare Provider information model.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Rootconcept van de bouwsteen Zorgaanbieder. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgaanbieder. "/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <base>
-                <path value="hearing_function.hearing_aid.medical_device.location.healthcare_provider"/>
-                <min value="1"/>
-                <max value="1"/>
-            </base>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
+             <type>
+                <code value="Reference"/>
+                <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
          </type>
       </element>
         <element id="hearing_function.hearing_aid.medical_device.health_professional">
