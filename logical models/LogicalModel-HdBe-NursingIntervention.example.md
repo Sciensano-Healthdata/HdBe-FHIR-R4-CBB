@@ -1,24 +1,19 @@
 ## Example instances
 
-| [CBB name]      |                   |
-|-----------------|-------------------|
-| [Concept name ] | [example value]   |
-
-
-// example of NameInformation
-```
-## Example instances
-
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```
+| NursingIntervention |                   |
+|---------------------|-------------------| 
+|intervention | Ondersteunenbij wassen en/of persoonlijke hygiene
+|indication | Probleem met zichzelf wassen en drogen
+|treatment_objective | Wassen onafhankelijk
+|interval | 
+|frequency | 1/dag
+|procedure_start_date_time | 10-09-2021
+|procedure_end_date_time | 
+|medical_device | 
+|instruction | Let op: valrisico
+|performer | 
+|performer.healthcare_provider | 
+|performer.caregiver | 
+|performer.patient | 
+|requester | 
+|comment | 
