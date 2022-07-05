@@ -36,11 +36,11 @@ jobs:
           dotnet-version: 3.1.x    
 
       - name: Firely.Terminal validation
-        uses: FirelyTeam/firely-terminal-pipeline@v0.3.2
+        uses: FirelyTeam/firely-terminal-pipeline@v0.3.4
         with:
           PATH_TO_CONFORMANCE_RESOURCES: resources terminology
           PATH_TO_EXAMPLES: examples
-          PATH_TO_QUALITY_CONTROL_RULES: qa-validate-all
+          PATH_TO_QUALITY_CONTROL_RULES: qa/qa-validate-all
           OUTPUT_FORMAT: SUMMARY
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
@@ -66,6 +66,7 @@ jobs:
           ig: ValidationFiles/resources/
           recurse: true
           source: ValidationFiles/examples/*
+          ignored-issues: qa/known-issues.yml
 
       - name: Collect results
         id: collect-statistics
