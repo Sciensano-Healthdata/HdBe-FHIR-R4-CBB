@@ -1,226 +1,216 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <ValueSet xmlns="http://hl7.org/fhir">
-   <id value="HealthcareProviderRole"/>
-   <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
-      <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2020-09-01T00:00:00+01:00"/>
-        </valuePeriod>
-    </extension>
-   <url value="https://fhir.healthdata.be/ValueSet/HealthcareProviderRole"/>
-   <identifier>
-        <use value="official"/>
-        <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.17.1.5"/>
-    </identifier>
-   <version value="2020-09-01T00:00:00"/>
-   <name value="HealthcareProviderRole"/>
-   <title value="HealthcareProviderRole"/>
-   <status value="draft"/>
-   <experimental value="false"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
-    <name value="Service portal – healthdata.be" />
+  <id value="HealthcareProviderRole"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+01:00"/>
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/ValueSet/HealthcareProviderRole"/>
+  <identifier>
+    <use value="official"/>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.17.1.5"/>
+  </identifier>
+  <version value="2020-09-01T00:00:00"/>
+  <name value="HealthcareProviderRole"/>
+  <title value="HealthcareProviderRole"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="Healthdata.be (Sciensano)"/>
+  <contact>
+    <name value="Service portal – healthdata.be"/>
     <telecom>
-      <system value="url" />
-      <value value="https://sciensano.service-now.com/sp" />
-      <use value="work" />
+      <system value="url"/>
+      <value value="https://sciensano.service-now.com/sp"/>
+      <use value="work"/>
     </telecom>
   </contact>
-   <description value="HealthcareProviderRoleCodelist"/>
-   <immutable value="false"/>
-   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
-   <compose>
-        <include>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
-            <concept>
-                <code value="OTH"/>
-                <display value="Other"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Other"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Anders"/>
-                </designation>
-            </concept>
-        </include>
-        <include>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
-            <concept>
-                <code value="RESP"/>
-                <display value="Responsible Party"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Responsible Party"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Hoofdbehandelaar"/>
-                </designation>
-            </concept>
-            <concept>
-                <code value="REF"/>
-                <display value="Referrer"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Referrer"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Verwijzer"/>
-                </designation>
-            </concept>
-            <concept>
-                <code value="PRF"/>
-                <display value="Performer"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Performer"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Uitvoerder"/>
-                </designation>
-            </concept>
-            <concept>
-                <code value="SPRF"/>
-                <display value="Secondary Performer"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Secondary Performer"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Tweede uitvoerder"/>
-                </designation>
-            </concept>
-            <concept>
-                <code value="CON"/>
-                <display value="Consultant"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Consultant"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Consulent"/>
-                </designation>
-            </concept>
-            <concept>
-                <code value="ATND"/>
-                <display value="Attender"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Attender"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Behandelaar"/>
-                </designation>
-            </concept>
-        </include>
-        <include>
+  <description value="HealthcareProviderRoleCodelist"/>
+  <immutable value="false"/>
+  <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+  <compose>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+      <concept>
+        <code value="OTH"/>
+        <display value="Other"/>
+        <designation>
+          <language value="en-US"/>
+          <use>
             <system value="http://snomed.info/sct"/>
-            <concept>
-                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Case manager"/>
-                </extension>
-                <code value="768832004"/>
-                <display value="casemanager"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Case manager"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="casemanager"/>
-                </designation>
-            </concept>
-        </include>
-    </compose>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Other"/>
+        </designation>
+        <designation>
+          <language value="nl-NL"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Anders"/>
+        </designation>
+      </concept>
+    </include>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+      <concept>
+        <code value="RESP"/>
+        <display value="Responsible Party"/>
+        <designation>
+          <language value="en-US"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Responsible Party"/>
+        </designation>
+        <designation>
+          <language value="nl-NL"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Hoofdbehandelaar"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="REF"/>
+        <display value="Referrer"/>
+        <designation>
+          <language value="en-US"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Referrer"/>
+        </designation>
+        <designation>
+          <language value="nl-NL"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Verwijzer"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="PRF"/>
+        <display value="Performer"/>
+        <designation>
+          <language value="en-US"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Performer"/>
+        </designation>
+        <designation>
+          <language value="nl-NL"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Uitvoerder"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="SPRF"/>
+        <display value="Secondary Performer"/>
+        <designation>
+          <language value="en-US"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Secondary Performer"/>
+        </designation>
+        <designation>
+          <language value="nl-NL"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Tweede uitvoerder"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="CON"/>
+        <display value="Consultant"/>
+        <designation>
+          <language value="en-US"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Consultant"/>
+        </designation>
+        <designation>
+          <language value="nl-NL"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Consulent"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="ATND"/>
+        <display value="Attender"/>
+        <designation>
+          <language value="en-US"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Attender"/>
+        </designation>
+        <designation>
+          <language value="nl-NL"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Behandelaar"/>
+        </designation>
+      </concept>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+          <valueString value="Case manager"/>
+        </extension>
+        <code value="768832004"/>
+        <display value="casemanager"/>
+        <designation>
+          <language value="en"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Case manager"/>
+        </designation>
+      </concept>
+    </include>
+  </compose>
 </ValueSet>
