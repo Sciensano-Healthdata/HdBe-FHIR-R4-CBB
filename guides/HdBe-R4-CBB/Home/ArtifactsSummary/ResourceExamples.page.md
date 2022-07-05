@@ -32,4 +32,7 @@
 - {{pagelink:Home/Examples/HdBe-MedicalDevice.Product-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Patient-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Patient-02.page.md}}
+- {{pagelink:Home/Examples/HdBe-VisualFunction-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-VisualFunction.VisualAid-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-VisualFunction.VisualAid.Product-01.page.md}}
 <!-- - {{pagelink:Home/Examples/[CBB-ID]-[number].page.md}} --> 
