@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-Patient" />
   <meta>
-    <lastUpdated value="2022-02-22T12:27:21.5426696+00:00" />
+    <lastUpdated value="2022-05-09T13:55:05.3009671+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
   <name value="HdBePatient" />
@@ -205,6 +205,16 @@
         <map value="NL-CM:0.1.6" />
         <comment value="NameInformation" />
       </mapping>
+    </element>
+    <element id="Patient.name.given">
+      <path value="Patient.name.given" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="extension('http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier').value" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Patient.telecom">
       <path value="Patient.telecom" />
@@ -413,10 +423,10 @@
       <alias value="BurgerlijkeStaat" />
       <binding>
         <strength value="required" />
-        <description value="Use ConceptMap 'MaritalStatus-to-MaritalStatus' to translate CBB terminology to profile terminology in ValueSet 'MaritalStatus'" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/marital-status">
+        <description value="Use ConceptMap 'BeCivilstate-to-MaritalStatus' to translate CBB terminology to profile terminology in ValueSet 'MaritalStatus'" />
+        <valueSet value="https://www.ehealth.fgov.be/standards/fhir/core/ValueSet/be-civilstate">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="https://fhir.healthdata.be/ConceptMap/MaritalStatus-to-MaritalStatus" />
+            <valueCanonical value="https://fhir.healthdata.be/ConceptMap/BeCivilstate-to-MaritalStatus" />
           </extension>
         </valueSet>
       </binding>
@@ -602,6 +612,16 @@
         <identity value="hdbe-ContactInformation" />
         <map value="name_information" />
       </mapping>
+    </element>
+    <element id="Patient.contact.name.given">
+      <path value="Patient.contact.name.given" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="extension('http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier').value" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Patient.contact.telecom">
       <path value="Patient.contact.telecom" />
