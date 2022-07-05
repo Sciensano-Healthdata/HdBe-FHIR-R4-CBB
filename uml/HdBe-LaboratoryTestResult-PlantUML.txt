@@ -1,10 +1,18 @@
 @startuml
 set namespaceSeparator none
 
+class "HdBe-LaboratoryTestResult.Requester" << ServiceRequest>>
+{
+  requester
+}
+
+"HdBe-LaboratoryTestResult" --> "HdBe-LaboratoryTestResult.Requester::basedOn" 
+
 class "HdBe-LaboratoryTestResult" << Observation >>
 {
   hasMember
   specimen
+  basedOn
 }
   "HdBe-LaboratoryTestResult" <-- "HdBe-LaboratoryTestResult::hasMember" : for panels
   

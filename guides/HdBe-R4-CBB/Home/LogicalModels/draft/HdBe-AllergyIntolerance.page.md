@@ -17,6 +17,7 @@ URL: url
      <button class="tablinks" onclick="openTab(event, 'Detailed descriptions')">Detailed Descriptions</button>
      <button class="tablinks" onclick="openTab(event, 'Example')">Example</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff')">Zib diff</button>
+     <button class="tablinks">{{pagelink:Home/Profiles/HdBe-AllergyIntolerance.page.md, text:FHIR profile}}</button>
   </div>
 
   <div id="Rendered view" class="tabcontent" style="display:block">
@@ -35,11 +36,11 @@ URL: url
   </div>
 
   <div id="Example" class="tabcontent">
-      {{render:logical models/HdBe-AllergyIntolerance.example.md}}
+      {{render:logical models/LogicalModel-HdBe-AllergyIntolerance.example.md}}
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:logical models/HdBe-AllergyIntolerance.doc.md}}
+      {{render:logical models/LogicalModel-HdBe-AllergyIntolerance.doc.md}}
   </div>
 
 </div>
