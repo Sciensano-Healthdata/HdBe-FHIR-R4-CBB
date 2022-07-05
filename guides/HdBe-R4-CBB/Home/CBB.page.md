@@ -30,7 +30,11 @@ The table below contains links to CBBs as logical models that have undergone man
 | {{pagelink:Home/LogicalModels/HdBe-BloodPressure.page.md,   text:BloodPressure}} | GlasgowComaScale   <!--{{pagelink:Home/LogicalModels/HdBe-GlasgowComaScale.page.md,   text:GlasgowComaScale}}--> | {{pagelink:Home/LogicalModels/HdBe-NursingIntervention.page.md,   text:NursingIntervention}} | TNMTumorClassification   <!--{{pagelink:Home/LogicalModels/HdBe-TNMTumorClassification.page.md,   text:TNMTumorClassification}}--> |
 | {{pagelink:Home/LogicalModels/HdBe-BodyHeight.page.md,   text:BodyHeight}} | {{pagelink:Home/LogicalModels/HdBe-HealthcareProvider.page.md,   text:HealthcareProvider}} | NutritionAdvice   <!--{{pagelink:Home/LogicalModels/HdBe-NutritionAdvice.page.md,   text:NutritionAdvice}}--> | {{pagelink:Home/LogicalModels/HdBe-SmokingStatus.page.md,   text:SmokingStatus}} |
 | {{pagelink:Home/LogicalModels/HdBe-BodyTemperature.page.md,     text:BodyTemperature}} | {{pagelink:Home/LogicalModels/HdBe-HealthProfessional.page.md,   text:HealthProfessional}} | O2Saturation   <!--{{pagelink:Home/LogicalModels/HdBe-O2Saturation.page.md,   text:O2Saturation}}--> | TreatmentDirective2   <!--{{pagelink:Home/LogicalModels/HdBe-TreatmentDirective2.page.md,   text:TreatmentDirective2}}--> |
+<<<<<<< HEAD
+| {{pagelink:Home/LogicalModels/HdBe-BodyWeight.page.md,     text:BodyWeight}}| {{pagelink:Home/LogicalModels/HdBe-HearingFunction.page.md,   text:HearingFunction}} | OutcomeOfCare   <!--{{pagelink:Home/LogicalModels/HdBe-OutcomeOfCare.page.md,   text:OutcomeOfCare}}--> | {{pagelink:Home/LogicalModels/HdBe-TreatmentObjective.page.md,   text:TreatmentObjective}} |
+=======
 | {{pagelink:Home/LogicalModels/HdBe-BodyWeight.page.md,     text:BodyWeight}}| HearingFunction <!--{{pagelink:Home/LogicalModels/HdBe-HearingFunction.page.md,   text:HearingFunction}}-->| OutcomeOfCare   <!--{{pagelink:Home/LogicalModels/HdBe-OutcomeOfCare.page.md,   text:OutcomeOfCare}}--> | TreatmentObjective   <!--{{pagelink:Home/LogicalModels/HdBe-TreatmentObjective.page.md,   text:TreatmentObjective}}--> |
+>>>>>>> main
 | Burnwound   <!--{{pagelink:Home/LogicalModels/HdBe-Burnwound.page.md,   text:Burnwound}}--> | HeartRate   <!--{{pagelink:Home/LogicalModels/HdBe-HeartRate.page.md,   text:HeartRate}}--> | PainCharacteristics   <!--{{pagelink:Home/LogicalModels/HdBe-PainCharacteristics.page.md,   text:PainCharacteristics}}--> |  |
 
 ## Index of draft CBBs<a name="IndexOfDraftCBB"></a> 
@@ -60,5 +64,9 @@ The table below contains all CBBs, as raw output of conversion scripts, that wil
 | BloodPressure  | {{pagelink:Home/LogicalModels/draft/HdBe-GlasgowComaScale.page.md, text:GlasgowComaScale}}  | NursingIntervention | {{pagelink:Home/LogicalModels/draft/HdBe-TNMTumorClassification.page.md, text:TNMTumorClassification}} |
 | BodyHeight |  HealthcareProvider  | {{pagelink:Home/LogicalModels/draft/HdBe-NutritionAdvice.page.md, text:NutritionAdvice}}  | SmokingStatus |
 |  BodyTemperature   |  HealthProfessional  | {{pagelink:Home/LogicalModels/draft/HdBe-O2Saturation.page.md, text:O2Saturation}}  | {{pagelink:Home/LogicalModels/draft/HdBe-TreatmentDirective2.page.md, text:TreatmentDirective2}} |
+<<<<<<< HEAD
+| BodyWeight   | HearingFunction | {{pagelink:Home/LogicalModels/draft/HdBe-OutcomeOfCare.page.md, text:OutcomeOfCare}}  | TreatmentObjective |
+=======
 | BodyWeight   | {{pagelink:Home/LogicalModels/draft/HdBe-OutcomeOfCare.page.md, text:HearingFunction}}  | {{pagelink:Home/LogicalModels/draft/HdBe-OutcomeOfCare.page.md, text:OutcomeOfCare}}  | {{pagelink:Home/LogicalModels/draft/HdBe-TreatmentObjective.page.md, text:TreatmentObjective}} |
+>>>>>>> main
 | {{pagelink:Home/LogicalModels/draft/HdBe-Burnwound.page.md, text:Burnwound}}  | {{pagelink:Home/LogicalModels/draft/HdBe-HeartRate.page.md, text:HeartRate}}  | {{pagelink:Home/LogicalModels/draft/HdBe-PainCharacteristics.page.md, text:PainCharacteristics}}  |  |
