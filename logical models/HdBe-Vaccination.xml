@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="HdBe-Vaccination" />
+  <language value="en-US" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+02:00" />
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Vaccination" />
+  <name value="HdBeVaccination">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="HdBe-Vaccinatie" />
+      </extension>
+    </extension>
+  </name>
+  <title value="HdBe Vaccination" />
+  <status value="draft" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="**Concept**&#xD;&#xA;Immunization can be defined as “Generating natural immunity against pathogens by means of vaccination (active immunization) or by administering immunoglobulins (passive immunization)”. &#xD;&#xA;&#xD;&#xA;Only the administered vaccinations are included in this information model. Administering immunoglobulins is part of the medication overview. Vaccinations have lifelong relevance. &#xD;&#xA;&#xD;&#xA;Most vaccinations are carried out in the Netherlands as part of the RVP (Rijksvaccinatieprogramma, National Immunisation Program). RVP information is especially important for children. &#xD;&#xA;&#xD;&#xA;Vaccinations are also relevant for adult patients such as transplant patients, dialysis patients and patients with a post-splenectomy status. In addition, there are specific indications for the vaccination of risk groups, such as travelers, professionals who come into contact with blood or patients with wounds, weakened immune systems or heightened risk.&#xD;&#xA;**Purpose**&#xD;&#xA;Documenting vaccinations that have already taken place in a patient is important for things such as the diagnostics of infectious diseases and the indication and planning of (re)vaccinations.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Vaccination documentation contains far fewer data elements than medication documentation. Medication concerns a running order process with many participants (patient, prescriber, pharmacy, administrator) and complex, very diverse details. &#xD;&#xA;&#xD;&#xA;Vaccinations are only about what was administered and when.&#xD;&#xA;**Example Instances**">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="**Concept**&#xD;&#xA;Immunisatie kan worden gedefinieerd als “Het opwekken van natuurlijke immuniteit tegen ziekteverwekkers door middel van vaccinatie (actieve immunisatie) of door toediening van immunoglobulinen (passieve immunisatie)”.&#xD;&#xA;&#xD;&#xA;In deze bouwsteen worden alleen de toegediende vaccinaties opgenomen. De toediening van immunoglobulines maakt deel uit van het medicatieoverzicht. Vaccinaties hebben levenslang relevantie.&#xD;&#xA;&#xD;&#xA;De meeste vaccinaties worden in Nederland uitgevoerd in het kader van het Rijksvaccinatieprogramma (RVP). RVP informatie is vooral van belang bij kinderen. &#xD;&#xA;&#xD;&#xA;Vaccinaties zijn ook relevant bij volwassen patiënten zoals transplantatiepatiënten, dialysepatiënten en patiënten met een status na miltextirpatie. Daarnaast zijn er specifieke indicaties voor de vaccinatie van risicogroepen, zoals reizigers, professionals die met bloed in aanraking komen of patiënten met verwondingen, een verminderde afweer of verhoogd risico.&#xD;&#xA;**Purpose**&#xD;&#xA;Het vastleggen van reeds bij een patiënt uitgevoerde vaccinaties is o.a. van belang voor de diagnostiek van infectieziekten en de indicatiestelling en planning van (re)vaccinatie.&#xD;&#xA;**Evidence Base**&#xD;&#xA;De documentatie van vaccinaties bevat veel minder gegevenselementen dan die van medicatie. Bij medicatie gaat het om een lopend order proces met veel deelnemers (patiënt, voorschrijver, apotheek, toediener) en complexe, zeer gevarieerde details. &#xD;&#xA;&#xD;&#xA;Bij vaccinatie gaat het alleen om wat is toegediend en wanneer.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**References**&#xD;&#xA;1. G-standaard [Online] Beschikbaar op: http://www.z-index.nl/ [Geraadpleegd: 23 februari 2015].&#xD;&#xA;&#xD;&#xA;2. Rijksvaccinatieprogramma [Online] Beschikbaar op: http://www.rivm.nl/Onderwerpen/Onderwerpen/R/Rijksvaccinatieprogramma [Geraadpleegd: 23 februari 2015]." />
+      </extension>
+    </extension>
+  </description>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="true" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/vaccination" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="vaccination">
+      <path value="vaccination" />
+      <short value="Vaccination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Vaccinatie" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Root concept of the Vaccination information model. This root concept contains all data elements of the Vaccination information model.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de bouwsteen Vaccinatie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Vaccinatie." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+    </element>
+    <element id="vaccination.product_code">
+      <path value="vaccination.product_code" />
+      <short value="ProductCode">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="ProductCode" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The product code of the vaccine administered.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De productcode van het toegediende vaccin." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="preferred" />
+        <description value="Vaccine Products" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/VaccineProduct" />
+      </binding>
+    </element>
+    <element id="vaccination.dose">
+      <path value="vaccination.dose" />
+      <short value="Dose">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Dosis" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The amount of product administered shown in milliliters. In most cases, the entire product is administered; in some cases, a described part of the product is administered.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De hoeveelheid gegeven product weergegeven in milliliters. In de meeste gevallen wordt het gehele product toegediend, in sommige gevallen wordt een omschreven deel van het product toegediend." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="vaccination.vaccination_date">
+      <path value="vaccination.vaccination_date" />
+      <short value="VaccinationDate">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="VaccinatieDatum" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Date (and if possible time) that the vaccine was administered.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Datum (en eventueel tijd) dat het vaccin is toegediend." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="vaccination.administrator">
+      <path value="vaccination.administrator" />
+      <short value="Administrator">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toediener" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Container of the Administrator element. This container contains all data elements of the Administrator. The  HealthProfessional and/or HealthcareProvider where or by whom the immunization was done. Only one of the two concepts must be selected.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value=" 	Container van het concept Toediener. Deze container bevat alle gegevenselementen van het concept Toediener. De zorgverlener en/of organisatie waar of door wie de immunisatie werd. Slechts een van de twee concepten moet gebruikt worden." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="vaccination.administrator.health_professional">
+      <path value="vaccination.administrator.health_professional" />
+      <short value="HealthProfessional">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Zorgverlener" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Root concept of the HealthProfessional information model. This root concept contains all data elements of the HealthProfessional information model.&#xD;&#xA;When referring to this information model the role the health professional fulfils in the healthcare process can be addressed additionally. For health professionals, this could be for example main practitioner or referrer.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de bouwsteen Zorgverlener. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgverlener. &#xD;&#xA;Bij verwijzing naar deze bouwsteen kan tevens de rol die de zorgverlener in het zorgproces vervult, worden meegegeven. Voor zorgverleners kan dit bijvoorbeeld hoofdbehandelaar of verwijzer zijn" />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional" />
+      </type>
+    </element>
+    <element id="vaccination.administrator.healthcare_provider">
+      <path value="vaccination.administrator.healthcare_provider" />
+      <short value="HealthcareProvider" />
+      <definition value="Root concept of the Healthcare Provider information model. This root concept contains all data elements of the Healthcare Provider information model." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider" />
+      </type>
+    </element>
+    <element id="vaccination.comment">
+      <path value="vaccination.comment" />
+      <short value="Comment">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toelichting" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Free text explanation. &#xD;&#xA;&#xD;&#xA;Examples of commonly used explanations are: &#xD;&#xA;- &quot;Vaccination according to the National Immunisation Program&quot;. &#xD;&#xA;- &quot;Not according to the National Immunisation Program&quot;, followed by further explanation. &#xD;&#xA;- &quot;Unknown&quot;">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Vrije tekst als toelichting. &#xD;&#xA;&#xD;&#xA;Voorbeelden van veel gebruikte toelichtingen zijn: &#xD;&#xA;- &quot;Vaccinatie volgens Rijksvaccinatieprogramma&quot;. &#xD;&#xA;- &quot;Niet volgens Rijksvaccinatieprogramma&quot;, gevolgd door een verdere toelichting.&#xD;&#xA;- &quot;Onbekend&quot;" />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
