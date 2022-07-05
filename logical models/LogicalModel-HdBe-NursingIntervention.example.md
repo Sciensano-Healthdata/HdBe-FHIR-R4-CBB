@@ -2,7 +2,7 @@
 
 | NursingIntervention |                   |
 |---------------------|-------------------| 
-|intervention | Ondersteunenbij wassen en/of persoonlijke hygiene
+|intervention | Ondersteunen bij wassen en/of persoonlijke hygiene
 |indication | Probleem met zichzelf wassen en drogen
 |treatment_objective | Wassen onafhankelijk
 |interval | 

@@ -10,7 +10,7 @@
       <coding>
          <system value="http://snomed.info/sct"/>
          <code value="9632001"/>
-         <display value="verpleegkundige verrichting"/>
+         <display value="Nursing procedure"/>
       </coding>
    </category>
     <subject>
@@ -19,8 +19,7 @@
         <display value="Belle Ulijn" />
     </subject>
    <period>
-      <start value="2015-08-10"/>
-      <end value="2015-08-15"/>
+      <start value="2021-09-10"/>
    </period>
    <contributor>
       <extension url="https://fhir.healthdata.be/StructureDefinition/ext-NursingIntervention-ContributorIsRequester">
@@ -31,7 +30,7 @@
       <display value="Healthcare professional (person), E. Penninx" />
    </contributor>
    <addresses>
-      <reference value="Condition/nl-core-NursingIntervention-01-Condition-01"/>
+      <reference value="Condition/HdBe-Problem-01"/>
       <type value="Condition"/>
       <display value="Problem"/>
    </addresses>
@@ -41,30 +40,22 @@
          <code>
             <coding>
                <system value="http://snomed.info/sct"/>
-               <code value="71388002"/>
-               <display value="voorlichten over pijnmanagement"/>
+               <code value="386420003"/>
+               <display value="Self-care assistance: bathing/hygiene"/>
             </coding>
          </code>
+         <status value="in-progress"/>
          <scheduledTiming>
             <repeat>
                <boundsPeriod>
-                  <start value="2015-08-10"/>
-                  <end value="2015-08-15"/>
+                  <start value="2021-09-10"/>
                </boundsPeriod>
                <frequency value="1"/>
                <period value="10"/>
                <periodUnit value="min"/>
             </repeat>
          </scheduledTiming>
-         <performer>
-             <reference value="PractitionerRole/HdBe-HealthProfessional-PractitionerRole-01" />
-                 <type value="PractitionerRole" />
-                 <display value="Healthcare professional (person), E. Penninx" />
-         </performer>
-         <description value="Oefeningen"/>
+         <description value="Let op: valrisico"/>
       </detail>
    </activity>
-   <note>
-      <text value="Ondersteuning van de wond bij hoesten."/>
-   </note>
 </CarePlan>
