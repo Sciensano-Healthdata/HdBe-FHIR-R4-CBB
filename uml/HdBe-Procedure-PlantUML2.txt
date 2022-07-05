@@ -1,0 +1,37 @@
+@startuml
+set namespaceSeparator none
+
+class "HdBe-Procedure-event" <<Procedure>>
+{
+  basedOn
+  ----
+  Contains CBB concepts:
+  * procedure_type
+  * procedure_start_date
+  * procedure_end_date
+  * procedure_method
+  * procedure_anatomical_location 
+  * performer
+  * location
+  * indication
+  * medical_device
+}
+  "HdBe-Procedure-event::basedOn" --> "HdBe-Procedure-request" 
+  
+class "HdBe-Procedure-request" <<ServiceRequest>>
+{
+    Contains CBB concepts:
+  * procedure_type
+  * procedure_start_date
+  * procedure_end_date
+  * procedure_method
+  * procedure_anatomical_location 
+  * performer
+  * requester
+  * location
+  * indication
+  * medical_device
+}
+
+
+@enduml
