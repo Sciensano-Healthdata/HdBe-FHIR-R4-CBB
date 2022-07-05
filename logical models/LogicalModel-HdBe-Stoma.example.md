@@ -1,24 +1,15 @@
 ## Example instances
 
-| [CBB name]      |                   |
+| problem |                   |
 |-----------------|-------------------|
-| [Concept name ] | [example value]   |
+| problem_type |    |
+| problem_name |    |
+| further_specification_problem_name |  |
+| problem_anatomical_location  | see CBB AnatomicalLocation |
+| problem_start_date |
+| problem_end_date |
+| problem_status |
+| verification_status |
+| comment |
 
 
-// example of NameInformation
-```
-## Example instances
-
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```
