@@ -1,11 +1,24 @@
 ## Example instances
 
-| hearing_function     |                   |
+| [CBB name]      |                   |
 |-----------------|-------------------|
-| hearing_function |   |
-| **hearing_aid** |  --- |
-| hearing_aid.medical_device.product.product_type |   |
-| hearing_aid.medical_device.anatomical_location.location |   |
-| comment |    |
+| [Concept name ] | [example value]   |
 
 
+// example of NameInformation
+```
+## Example instances
+
+| name_information      |                   |
+|----------------------|-------------------|
+| first_names | Johanna Petronella Maria   
+| initials | J.P.M. 
+| given_name | Jo 
+| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
+| last_name.prefix | van
+| last_name.last_name | Putten
+| last_name_partner.partner_prefix | van der
+| last_name_partner.partner_last_name | Giessen
+| titles |
+
+```

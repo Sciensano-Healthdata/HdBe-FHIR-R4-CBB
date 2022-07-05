@@ -1,22 +1,24 @@
 ## Example instances
 
-| allergy_intolerance     |                   |
+| [CBB name]      |                   |
 |-----------------|-------------------|
-| causative_agent |    |
-| allergy_category |    | 
-| allergy_status |      |
-| start_date_time |    |
-| criticality   |       |
-| last_reaction_date_time |     | 
-| comment |     | 
-| **reaction** | ---   |
-| reaction.symptom |    |
-| reaction.specific_substance |     |
-| reaction.reaction_description |   |
-| reaction.severity |       |
-| reaction.route_of_exposure |     |
-| reaction.reaction_time |      |
+| [Concept name ] | [example value]   |
 
 
+// example of NameInformation
+```
+## Example instances
 
+| name_information      |                   |
+|----------------------|-------------------|
+| first_names | Johanna Petronella Maria   
+| initials | J.P.M. 
+| given_name | Jo 
+| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
+| last_name.prefix | van
+| last_name.last_name | Putten
+| last_name_partner.partner_prefix | van der
+| last_name_partner.partner_last_name | Giessen
+| titles |
 
+```

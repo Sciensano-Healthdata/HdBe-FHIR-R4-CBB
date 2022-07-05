@@ -1,24 +1,8 @@
 ## Example instances
 
-| [CBB name]      |                   |
+| pulse_rate     |                   |
 |-----------------|-------------------|
-| [Concept name ] | [example value]   |
-
-
-// example of NameInformation
-```
-## Example instances
-
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```
+| pulse_rate_value |  53/min|
+| pulse_rate_date_time | 2022-05-14 |
+| comment |  topsporter |
+| pulse_regularity | 271636001 - polsslag: regelmatig (code by SNOMED CT)  |

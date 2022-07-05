@@ -1,24 +1,15 @@
 ## Example instances
 
-| [CBB name]      |                   |
-|-----------------|-------------------|
-| [Concept name ] | [example value]   |
-
-
-// example of NameInformation
-```
-## Example instances
-
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```
+| procedure                                             |                   |
+|-------------------------------------------------------|-------------------|
+| procedure.procedure_start_date                        | 2022-05-12                  |     	                  
+| procedure.procedure_end_date                          |                  |
+| procedure.procedure_type	                            | 80146002 - Excision of appendix (code by SNOMED CT)                  |
+| procedure.procedure_method	                        | 73632009 - Laparoscopy (code by SNOMED CT)                  |
+| procedure.procedure_anatomical_location.location	    |  66754008 -  Appendix structure (code by SNOMED CT)                |
+| procedure.procedure_anatomical_location.laterality	|    24028007 - Right (code by SNOMED CT)               |
+| procedure.indication.problem_name	                        |    74400008 - Appendicitis (code by SNOMED CT)|               |
+| procedure.medical_device                              |                   |
+| procedure.location.healthcare_provider	            |                   |
+| procedure.performer.health_professional	            |                   |
+| procedure.requester.health_professional	            |                   |

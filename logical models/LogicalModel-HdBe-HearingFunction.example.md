@@ -1,11 +1,11 @@
 ## Example instances
 
-| functional_or_mental_status      |                   |
+| hearing_function     |                   |
 |-----------------|-------------------|
-| status_name |    |
-| status_value |    |
-| status_date |     |
-| comment |     |
-| medical_device | See CBB MedicalDevice |
+| hearing_function |   |
+| **hearing_aid** |  --- |
+| hearing_aid.medical_device.product.product_type |   |
+| hearing_aid.medical_device.anatomical_location.location |   |
+| comment |    |
 
 

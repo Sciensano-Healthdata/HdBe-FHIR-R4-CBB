@@ -1,7 +1,5 @@
-## zib [FunctionalOrMentalStatus-v3.2](https://zibs.nl/wiki/FunctionalOrMentalStatus-v3.2(2020EN)) difference
+## zib [HearingFunction-v3.2](https://zibs.nl/wiki/HearingFunction-v3.2(2020EN)) difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`status_name` | terminology | Included only SNOMED CT as CodeSystem of valueSet StatusName and loosened binding to extensible.|
-|`status_name` | textual | Improved description in correspondence with only using SNOMED CT. |
-|`status_value` | terminology | Included only SNOMED CT as CodeSystem of valueSet StatusValue and loosened binding to extensible. |
+|`product_type` | terminology | Replaced valueSet by changing to the SNOMED hierarchy 6012004 (Hearing Aid) and adding values for Unknown and Other [(zib-1708)](https://bits.nictiz.nl/browse/ZIB-1708). |
