@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <ValueSet xmlns="http://hl7.org/fhir">
-  <id value="ResultFlags"/>
+  <id value="CriticalExtent"/>
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
   </meta>
@@ -9,15 +9,15 @@
       <start value="2020-09-01T00:00:00+01:00"/>
     </valuePeriod>
   </extension>
-  <url value="https://fhir.healthdata.be/ValueSet/ResultFlags"/>
+  <url value="https://fhir.healthdata.be/ValueSet/CriticalExtent"/>
   <identifier>
     <use value="official"/>
     <system value="urn:ietf:rfc:3986"/>
-    <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.13.1.7"/>
+    <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.8.2.4"/>
   </identifier>
   <version value="2020-09-01T00:00:00"/>
-  <name value="ResultFlags"/>
-  <title value="ResultFlags"/>
+  <name value="CriticalExtent"/>
+  <title value="CriticalExtent"/>
   <status value="draft"/>
   <experimental value="false"/>
   <publisher value="Healthdata.be (Sciensano)"/>
@@ -29,7 +29,7 @@
       <use value="work"/>
     </telecom>
   </contact>
-  <description value="ResultFlagsCodelist"/>
+  <description value="CriticalExtentCodelist"/>
   <immutable value="false"/>
   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
   <compose>
@@ -37,10 +37,10 @@
       <system value="http://snomed.info/sct"/>
       <concept>
         <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-          <valueString value="Boven referentiewaarde"/>
+          <valueString value="Licht"/>
         </extension>
-        <code value="281302008"/>
-        <display value="boven referentiebereik"/>
+        <code value="255604002"/>
+        <display value="licht"/>
         <designation>
           <language value="en"/>
           <use>
@@ -48,7 +48,7 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
           </use>
-          <value value="Above reference range"/>
+          <value value="Mild"/>
         </designation>
         <designation>
           <language value="nl"/>
@@ -57,7 +57,7 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
           </use>
-          <value value="boven referentiewaarde"/>
+          <value value="mild"/>
         </designation>
         <designation>
           <language value="fr"/>
@@ -66,15 +66,15 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
           </use>
-          <value value="au-dessus de l'étendue de référence"/>
+          <value value="léger"/>
         </designation>
       </concept>
       <concept>
         <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-          <valueString value="Onder referentiewaarde"/>
+          <valueString value="Matig"/>
         </extension>
-        <code value="281300000"/>
-        <display value="onder referentiebereik"/>
+        <code value="6736007"/>
+        <display value="matig"/>
         <designation>
           <language value="en"/>
           <use>
@@ -82,7 +82,7 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
           </use>
-          <value value="Below reference range"/>
+          <value value="Moderate"/>
         </designation>
         <designation>
           <language value="nl"/>
@@ -91,7 +91,7 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
           </use>
-          <value value="onder referentiewaarde"/>
+          <value value="matig"/>
         </designation>
         <designation>
           <language value="fr"/>
@@ -100,15 +100,15 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
           </use>
-          <value value="au-dessous de l'étendue de référence"/>
+          <value value="modéré"/>
         </designation>
       </concept>
       <concept>
         <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-          <valueString value="Intermediair"/>
+          <valueString value="Ernstig"/>
         </extension>
-        <code value="11896004"/>
-        <display value="intermediair"/>
+        <code value="24484000"/>
+        <display value="ernstig"/>
         <designation>
           <language value="en"/>
           <use>
@@ -116,7 +116,7 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
           </use>
-          <value value="Intermediate"/>
+          <value value="Severe"/>
         </designation>
         <designation>
           <language value="nl"/>
@@ -125,7 +125,7 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
           </use>
-          <value value="intermediair"/>
+          <value value="ernstig"/>
         </designation>
         <designation>
           <language value="fr"/>
@@ -134,15 +134,15 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
           </use>
-          <value value="intermédiaire"/>
+          <value value="sévère"/>
         </designation>
       </concept>
       <concept>
         <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-          <valueString value="Resistent"/>
+          <valueString value="Fataal"/>
         </extension>
-        <code value="30714006"/>
-        <display value="resistent"/>
+        <code value="399166001"/>
+        <display value="fataal"/>
         <designation>
           <language value="en"/>
           <use>
@@ -150,7 +150,7 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
           </use>
-          <value value="Resistant"/>
+          <value value="Fatal"/>
         </designation>
         <designation>
           <language value="nl"/>
@@ -159,7 +159,7 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
           </use>
-          <value value="resistent"/>
+          <value value="fataal"/>
         </designation>
         <designation>
           <language value="fr"/>
@@ -168,41 +168,7 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
           </use>
-          <value value="résistant"/>
-        </designation>
-      </concept>
-      <concept>
-        <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-          <valueString value="Sensitief"/>
-        </extension>
-        <code value="131196009"/>
-        <display value="ontvankelijk"/>
-        <designation>
-          <language value="en"/>
-          <use>
-            <system value="http://snomed.info/sct"/>
-            <code value="900000000000013009"/>
-            <display value="Synonym"/>
-          </use>
-          <value value="Susceptible"/>
-        </designation>
-        <designation>
-          <language value="nl"/>
-          <use>
-            <system value="http://snomed.info/sct"/>
-            <code value="900000000000013009"/>
-            <display value="Synonym"/>
-          </use>
-          <value value="vatbaar"/>
-        </designation>
-        <designation>
-          <language value="fr"/>
-          <use>
-            <system value="http://snomed.info/sct"/>
-            <code value="900000000000013009"/>
-            <display value="Synonym"/>
-          </use>
-          <value value="susceptible"/>
+          <value value="fatal"/>
         </designation>
       </concept>
     </include>

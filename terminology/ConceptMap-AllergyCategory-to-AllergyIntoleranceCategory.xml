@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="AllergyCategory-to-AllergyIntoleranceCategory" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+    <valueBoolean value="false" />
+  </extension>
+  <url value="https://fhir.healthdata.be/ConceptMap/AllergyCategory-to-AllergyIntoleranceCategory" />
+  <version value="0.0.1" />
+  <name value="AllergyCategory_to_AllergyIntoleranceCategory" />
+  <title value="AllergyCategory_to_AllergyIntoleranceCategory" />
+  <status value="draft" />
+  <date value="2022-06-09T11:00:51.8170756+00:00" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Maps AllergyCategory codes as found in the CBB AllergyIntolerance to &lt; http://hl7.org/fhir/ValueSet/allergy-intolerance-category&gt; as found in `AllergyIntolerance.category` in FHIR R4." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <sourceCanonical value="https://fhir.healthdata.be/ValueSet/AllergyCategory" />
+  <targetCanonical value="http://hl7.org/fhir/ValueSet/allergy-intolerance-category" />
+  <group>
+    <source value="http://snomed.info/sct" />
+    <target value="http://hl7.org/fhir/allergy-intolerance-category" />
+    <element>
+      <code value="418471000" />
+      <display value="Propensity to adverse reactions to food" />
+      <target>
+        <code value="food" />
+        <display value="Food" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="419511003" />
+      <display value="Propensity to adverse reactions to drug" />
+      <target>
+        <code value="medication" />
+        <display value="Medication" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="426232007" />
+      <display value="Environmental allergy" />
+      <target>
+        <code value="environment" />
+        <display value="Environment" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="419199007" />
+      <display value="Allergy to substance" />
+      <target>
+        <code value="biologic" />
+        <display value="Biologic" />
+        <equivalence value="subsumes" />
+        <comment value="https://bits.nictiz.nl/browse/ZIB-998" />
+      </target>
+    </element>
+    <element>
+      <code value="261665006" />
+      <display value="Unknown" />
+      <target>
+        <equivalence value="unmatched" />
+        <comment value="The CBB defines that '261665006' (Unknown) is a possible value for the AllergyCategory. The required AllergyIntolerance.category binding does not recognize this use case. If transmitting the value under OTH is not required, omit  AllergyIntolerance.category. If the actual value associated with OTH is known and relevant, use AllergyIntolerance.category (without value) + extension https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification with the description under valueCodeableConcept.text" />
+      </target>
+    </element>
+    <element>
+      <code value="74964007" />
+      <display value="Other" />
+      <target>
+        <equivalence value="unmatched" />
+        <comment value="The CBB defines that '74964007' (Other) is a possible value for the AllergyCategory. The required AllergyIntolerance.category binding does not recognize this use case. If transmitting the value under OTH is not required, omit  AllergyIntolerance.category. If the actual value associated with OTH is known and relevant, use AllergyIntolerance.category (without value) + extension https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification with the description under valueCodeableConcept.text" />
+      </target>
+    </element>
+  </group>
+</ConceptMap>

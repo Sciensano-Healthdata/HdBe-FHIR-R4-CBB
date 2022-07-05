@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConceptMap xmlns="http://hl7.org/fhir">
+   <id value="CriticalExtent-to-AllergyIntoleranceSeverity"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+      <valueBoolean value="true"/>
+   </extension>
+   <url value="https://fhir.healthdata.be/ConceptMap/CriticalExtent-to-AllergyIntoleranceSeverity"/>
+   <version value="0.0.1"/>
+   <name value="CriticalExtent_to_AllergyIntoleranceSeverity"/>
+   <title value="CriticalExtent_to_AllergyIntoleranceSeverity"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Service portal – healthdata.be"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://sciensano.service-now.com/sp"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="Maps Criticality codes as found in the Dutch zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) [AllergyIntolerance v3.3 (2020)](https://zibs.nl/wiki/AllergyIntolerance-v3.3(2020EN)) to &lt;http://hl7.org/fhir/ValueSet/reaction-event-severity&gt; as found in `AllergyIntolerance.reaction.severity` in FHIR R4."/>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <sourceCanonical value="https://fhir.healthdata.be/ValueSet/CriticalExtent"/>
+   <targetCanonical value="http://hl7.org/fhir/ValueSet/reaction-event-severity"/>
+   <group>
+      <source value="http://snomed.info/sct"/>
+      <target value="http://hl7.org/fhir/reaction-event-severity"/>
+      <element>
+         <code value="255604002"/>
+         <display value="Mild"/>
+         <target>
+            <code value="mild"/>
+            <display value="Mild"/>
+            <equivalence value="equal"/>
+         </target>
+      </element>
+      <element>
+         <code value="6736007"/>
+         <display value="Moderate"/>
+         <target>
+            <code value="moderate"/>
+            <display value="Moderate"/>
+            <equivalence value="equal"/>
+         </target>
+      </element>
+      <element>
+         <code value="24484000"/>
+         <display value="Severe"/>
+         <target>
+            <code value="severe"/>
+            <display value="Severe"/>
+            <equivalence value="equal"/>
+         </target>
+      </element>
+      <element>
+         <code value="399166001"/>
+         <display value="Fatal"/>
+         <target>
+            <code value="severe"/>
+            <display value="Severe"/>
+            <equivalence value="wider"/>
+            <comment value="The CBB defines that '399166001' (Fatal) is a possible value for the Severity. The required AllergyIntolerance.reaction.severity binding does not recognize this use case, but severe is the closest match."/>
+         </target>
+      </element>
+   </group>
+</ConceptMap>
