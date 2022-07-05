@@ -1,152 +1,150 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="MaritalStatus"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
-        <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2020-09-01T00:00:00+01:00"/>
-        </valuePeriod>
-    </extension>
-    <url value="https://fhir.healthdata.be/ValueSet/MaritalStatus"/>
-    <identifier>
-        <use value="official"/>
-        <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1"/>
-    </identifier>
-    <version value="2020-09-01T00:00:00"/>
-    <name value="MaritalStatus"/>
-    <title value="MaritalStatus"/>
-    <status value="draft"/>
-    <experimental value="false"/>
-    <publisher value="Healthdata.be (Sciensano)"/>
-    <contact>
-        <name value="Service portal – healthdata.be" />
-        <telecom>
-            <system value="url" />
-            <value value="https://sciensano.service-now.com/sp" />
-            <use value="work" />
-        </telecom>
-    </contact>
-    <description value="MaritalStatusCodelist"/>
-    <immutable value="false"/>
-    <copyright
-        value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-    <compose>
-        <include>
+  <id value="MaritalStatus"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+01:00"/>
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/ValueSet/MaritalStatus"/>
+  <identifier>
+    <use value="official"/>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1"/>
+  </identifier>
+  <version value="2020-09-01T00:00:00"/>
+  <name value="MaritalStatus"/>
+  <title value="MaritalStatus"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="Healthdata.be (Sciensano)"/>
+  <contact>
+    <name value="Service portal – healthdata.be"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://sciensano.service-now.com/sp"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="MaritalStatusCodelist"/>
+  <immutable value="false"/>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="125681006"/>
+        <display value="Single person"/>
+        <designation>
+          <language value="en"/>
+          <use>
             <system value="http://snomed.info/sct"/>
-            <concept>
-                <code value="125681006"/>
-                <display value="Single person"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Single person"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Ongehuwd"/>
-                </designation>
-            </concept>
-            <concept>
-                <code value="87915002"/>
-                <display value="Married"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Married"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Gehuwd"/>
-                </designation>
-            </concept>
-            <concept>
-                <code value="20295000"/>
-                <display value="Divorced"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Divorced"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Gescheiden"/>
-                </designation>
-            </concept>
-            <concept>
-                <code value="33553000"/>
-                <display value="Widowed"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Widowed"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Verweduwd"/>
-                </designation>
-            </concept>
-            <concept>
-                <code value="160504008"/>
-                <display value="Marital state unknown"/>
-                <designation>
-                    <language value="en-US"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Marital state unknown"/>
-                </designation>
-                <designation>
-                    <language value="nl-NL"/>
-                    <use>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="900000000000013009"/>
-                        <display value="Synonym"/>
-                    </use>
-                    <value value="Burgerlijke staat onbekend"/>
-                </designation>
-            </concept>
-        </include>
-    </compose>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Single person"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="87915002"/>
+        <display value="Married"/>
+        <designation>
+          <language value="en"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Married"/>
+        </designation>
+        <designation>
+          <language value="nl"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="getrouwd"/>
+        </designation>
+        <designation>
+          <language value="fr"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="marié(e)"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="20295000"/>
+        <display value="Divorced"/>
+        <designation>
+          <language value="en"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Divorced"/>
+        </designation>
+        <designation>
+          <language value="nl"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="gescheiden"/>
+        </designation>
+        <designation>
+          <language value="fr"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="divorcé(e)"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="33553000"/>
+        <display value="Widowed"/>
+        <designation>
+          <language value="en"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Widowed"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="160504008"/>
+        <display value="Marital state unknown"/>
+        <designation>
+          <language value="en"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Marital state unknown"/>
+        </designation>
+        <designation>
+          <language value="nl"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="burgerlijke staat onbekend"/>
+        </designation>
+      </concept>
+    </include>
+  </compose>
 </ValueSet>
