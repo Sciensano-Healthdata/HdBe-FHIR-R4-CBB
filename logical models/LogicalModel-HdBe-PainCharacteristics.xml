@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBe-PainCharacteristics"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2020-09-01T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PainCharacteristics"/>
+   <name value="HdBePainCharacteristics">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-Pijnkenmerken"/>
+         </extension>
+      </extension>
+   </name>
+   <title value="HdBe PainCharacteristics"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Pain characteristics describe specific, localized pain. They provide information on a number of  aspects of the pain the patient is experiencing. The aspects follow the ALTIS method (Quality, Localization, Duration, Intensity and Context). In this way, pain is always assessed in the same way.&#xD;&#xA;**Purpose**&#xD;&#xA;Pain Characteristics are instrumental in establishing a diagnosis and in evaluating the effectiveness of pain medication.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Pijnkenmerken geven een beschrijving van specifieke, gelokaliseerde pijn. Ze geven informatie over een aantal aspecten van de pijn die de patiënt ervaart.&#xD;&#xA;De aspecten volgen de ALTIS methode (Aard, Lokalisatie, Tijdsduur, Intensiteit en Samenhang). Op deze manier wordt pijn steeds op dezelfde manier beoordeeld.&#xD;&#xA;**Purpose**&#xD;&#xA;Pijnkenmerken zijn een hulpmiddel bij het vaststellen van een diagnose en bij het beoordelen van de effectiviteit van pijnmedicatie.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**References**&#xD;&#xA;1. openEHR-EHR-OBSERVATION.symptom-pain.v1[Online] Beschikbaar op: http://www.openehr.org/knowledge/ [Geraadpleegd: 23 december 2014].&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (01-09-2020)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+         </extension>
+      </extension>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/pain_characteristics"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="pain_characteristics">
+         <path value="pain_characteristics"/>
+         <short value="PainCharacteristics">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Pijnkenmerken"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Root concept of the PainCharacteristics information model.This root concept contains all data elements of the PainCharacteristics information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen Pijnkenmerken. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Pijnkenmerken."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="pain_characteristics"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+      </element>
+        <element id="pain_characteristics.pain_type">
+         <path value="pain_characteristics.pain_type"/>
+         <short value="PainType">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="PijnAard"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value=" Description of the characteristics of the pain as experienced by the patient.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Omschrijving van de aard van de pijn zoals de patient die ervaart."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="pain_characteristics.pain_type"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="extensible"/>
+            <description value="PainType codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/PijnAard"/>
+         </binding>
+      </element>
+        <element id="pain_characteristics.pain_location">
+         <path value="pain_characteristics.pain_location"/>
+         <short value="PainLocation">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="PijnLocatie"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Anatomic location and laterality of the pain.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Anatomische locatie en zijdigheid van de pijn."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="pain_characteristics.pain_location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="BackboneElement"/>
+            </type>
+      </element>
+        <element id="pain_characteristics.pain_location.location">
+         <path value="pain_characteristics.pain_location.location"/>
+         <short value="Location">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Locatie"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Localisation on/in the body.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Localisatie op/in het lichaam."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="pain_characteristics.pain_location.location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+      </element>
+        
+        
+        
+        <element id="pain_characteristics.pain_location.laterality">
+         <path value="pain_characteristics.pain_location.laterality"/>
+         <short value="Laterality">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Lateraliteit"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Laterality adds information about body site to the anatomic location, e.g. left. ">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links. "/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="pain_characteristics.pain_location.laterality"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="required"/>
+            <description value="Laterality codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Lateraliteit"/>
+         </binding>
+      </element>
+        <element id="pain_characteristics.pain_episode_duration">
+         <path value="pain_characteristics.pain_episode_duration"/>
+         <short value="PainEpisodeDuration">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="PijnAanvalDuur"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The duration of a pain episode with non-continues pain. The duration is measured in units of time (days, hours, ...)">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De duur van een pijnaanval bij niet continue pijn. De duur wordt aangegeven als in tijdseenheden (dagen, uren, ...)"/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="pain_characteristics.pain_episode_duration"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="Quantity"/>
+            </type>
+      </element>
+        <element id="pain_characteristics.time_of_onset">
+         <path value="pain_characteristics.time_of_onset"/>
+         <short value="TimeOfOnset">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="BeginTijdPijn"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Date and time of the onset of the pain.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Datum en eventueel tijdstip waarop de pijn is begonnen."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="pain_characteristics.time_of_onset"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="dateTime"/>
+            </type>
+      </element>
+        <element id="pain_characteristics.pain_intensity">
+         <path value="pain_characteristics.pain_intensity"/>
+         <short value="PainIntensity">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="PijnIntensiteit"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The intensity or severity of the pain experienced by the patient, measured using the NRS or VAS score.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De door de patiënt ervaren intensiteit of ernst van de pijn, gemeten met behulp van de NRS of VAS score."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="pain_characteristics.pain_intensity"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PainScore"/>
+         </type>
+      </element>
+        <element id="pain_characteristics.pain_pattern">
+         <path value="pain_characteristics.pain_pattern"/>
+         <short value="PainPattern">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="PijnPatroon"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Description of any repeating patterns in the course of the pain that occur over time">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Beschrijving van eventueel aanwezige, zich in de tijd herhalende patronen van het verloop van de pijn"/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="pain_characteristics.pain_pattern"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="required"/>
+            <description value="PainPattern codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/PijnPatroon"/>
+         </binding>
+      </element>
+        <element id="pain_characteristics.pain_course">
+         <path value="pain_characteristics.pain_course"/>
+         <short value="PainCourse">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Pijnbeloop"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The course of the pain over time since the onset.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Verloop van de pijn in de tijd sinds het begin van de pijn."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="pain_characteristics.pain_course"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="required"/>
+            <description value="PainCourse codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Pijnbeloop"/>
+         </binding>
+      </element>
+        <element id="pain_characteristics.alleviating_factors">
+         <path value="pain_characteristics.alleviating_factors"/>
+         <short value="AlleviatingFactors">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VerzachtendeFactoren"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Description of the factors that relieve the pain, such as rest.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Beschrijving van de factoren die de pijn verzachten, zoals bijvoorbeeld rust."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="pain_characteristics.alleviating_factors"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="string"/>
+            </type>
+      </element>
+        <element id="pain_characteristics.aggravating_factors">
+         <path value="pain_characteristics.aggravating_factors"/>
+         <short value="AggravatingFactors">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="VerergerendeFactoren"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Description of the factors that aggravate the pain, such as exercise.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Beschrijving van de factoren die de pijn verergeren, zoals bijvoorbeeld bewegen."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="pain_characteristics.aggravating_factors"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="string"/>
+            </type>
+      </element>
+        <element id="pain_characteristics.pain_characteristics_date_time">
+         <path value="pain_characteristics.pain_characteristics_date_time"/>
+         <short value="PainCharacteristicsDateTime">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="PijnkenmerkenDatumTijd"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The date and time at which the pain characteristics have been identified.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De datum en het tijdstip waarop de pijnkenmerken vastgesteld zijn."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="pain_characteristics.pain_characteristics_date_time"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="dateTime"/>
+            </type>
+      </element>
+        <element id="pain_characteristics.comment">
+         <path value="pain_characteristics.comment"/>
+         <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Comments on the described pain characteristics.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting op de beschreven pijnkenmerken."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="pain_characteristics.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="string"/>
+            </type>
+      </element>
+    </differential>
+</StructureDefinition>

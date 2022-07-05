@@ -1,13 +1,12 @@
 # {{page-title}}
-- {{pagelink:Home/Examples/HdBe-AlcoholUse-01.page.md}} 
-- {{pagelink:Home/Examples/HdBe-BodyWeight-01.page.md}}  
-- {{pagelink:Home/Examples/HdBe-BodyHeight-01.page.md}} 
-- {{pagelink:Home/Examples/HdBe-BodyTemperature-01.page.md}}
-- {{pagelink:Home/Examples/HdBe-BloodPressure-01.page.md}}
+
 - {{pagelink:Home/Examples/HdBe-ContactPerson-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-ContactPerson-02.page.md}}
+<<<<<<< HEAD
 - {{pagelink:Home/Examples/HdBe-DrugUse-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Encounter-01.page.md}}
+=======
+>>>>>>> main
 - {{pagelink:Home/Examples/HdBe-HealthcareProvider-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-HealthcareProvider-02.page.md}}
 - {{pagelink:Home/Examples/HdBe-HealthcareProvider-03.page.md}}
@@ -19,6 +18,7 @@
 - {{pagelink:Home/Examples/HdBe-LaboratoryTestResult-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-LaboratoryTestResult.Specimen-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-LaboratoryTestResult.Specimen-02.page.md}}
+- {{pagelink:Home/Examples/HdBe-LivingSituation-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Patient-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Patient-02.page.md}}
 <!-- - {{pagelink:Home/Examples/[CBB-ID]-[number].page.md}} --> 
