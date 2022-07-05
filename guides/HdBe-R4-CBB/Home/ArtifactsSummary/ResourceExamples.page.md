@@ -13,11 +13,8 @@
 - {{pagelink:Home/Examples/HdBe-LaboratoryTestResult-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-LaboratoryTestResult.Specimen-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-LaboratoryTestResult.Specimen-02.page.md}}
-<<<<<<< HEAD
-- {{pagelink:Home/Examples/HdBe-NursingIntervention-01.page.md}}
-=======
 - {{pagelink:Home/Examples/HdBe-LivingSituation-01.page.md}}
->>>>>>> main
+- {{pagelink:Home/Examples/HdBe-NursingIntervention-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Patient-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Patient-02.page.md}}
 <!-- - {{pagelink:Home/Examples/[CBB-ID]-[number].page.md}} --> 
