@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <ValueSet xmlns="http://hl7.org/fhir">
-  <id value="Herkomst"/>
+  <id value="Destination"/>
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
   </meta>
@@ -9,15 +9,15 @@
       <start value="2020-09-01T00:00:00+01:00"/>
     </valuePeriod>
   </extension>
-  <url value="https://fhir.healthdata.be/ValueSet/Herkomst"/>
+  <url value="https://fhir.healthdata.be/ValueSet/Destination"/>
   <identifier>
     <use value="official"/>
     <system value="urn:ietf:rfc:3986"/>
-    <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.15.1.2"/>
+    <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.15.1.3"/>
   </identifier>
   <version value="2020-09-01T00:00:00"/>
-  <name value="Herkomst"/>
-  <title value="Herkomst"/>
+  <name value="Destination"/>
+  <title value="Destination"/>
   <status value="draft"/>
   <experimental value="false"/>
   <publisher value="Healthdata.be (Sciensano)"/>
@@ -29,38 +29,10 @@
       <use value="work"/>
     </telecom>
   </contact>
-  <description value="HerkomstCodelijst"/>
+  <description value="DestinationCodelist"/>
   <immutable value="false"/>
   <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
   <compose>
-    <include>
-      <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
-      <concept>
-        <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-          <valueString value="Overig"/>
-        </extension>
-        <code value="OTH"/>
-        <display value="Other"/>
-        <designation>
-          <language value="en-US"/>
-          <use>
-            <system value="http://snomed.info/sct"/>
-            <code value="900000000000013009"/>
-            <display value="Synonym"/>
-          </use>
-          <value value="Other"/>
-        </designation>
-        <designation>
-          <language value="nl-NL"/>
-          <use>
-            <system value="http://snomed.info/sct"/>
-            <code value="900000000000013009"/>
-            <display value="Synonym"/>
-          </use>
-          <value value="Anders"/>
-        </designation>
-      </concept>
-    </include>
     <include>
       <system value="http://snomed.info/sct"/>
       <concept>
@@ -95,6 +67,40 @@
             <display value="Synonym"/>
           </use>
           <value value="à la maison"/>
+        </designation>
+      </concept>
+      <concept>
+        <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+          <valueString value="Tegen advies in vertrokken"/>
+        </extension>
+        <code value="445060000"/>
+        <display value="tegen medisch advies in vertrokken"/>
+        <designation>
+          <language value="en"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Left against medical advice"/>
+        </designation>
+        <designation>
+          <language value="nl"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="vertrokken tegen medisch advies in"/>
+        </designation>
+        <designation>
+          <language value="fr"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="sortie contre avis médical"/>
         </designation>
       </concept>
       <concept>
@@ -235,10 +241,10 @@
       </concept>
       <concept>
         <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-          <valueString value="In dit ziekenhuis geboren"/>
+          <valueString value="Overleden"/>
         </extension>
-        <code value="442311008"/>
-        <display value="levend geboren in ziekenhuis"/>
+        <code value="183676005"/>
+        <display value="overleden in ziekenhuis"/>
         <designation>
           <language value="en"/>
           <use>
@@ -246,7 +252,7 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
           </use>
-          <value value="Liveborn born in hospital"/>
+          <value value="Died in hospital"/>
         </designation>
         <designation>
           <language value="nl"/>
@@ -255,7 +261,7 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
           </use>
-          <value value="levend geboren in ziekenhuis"/>
+          <value value="overleden in ziekenhuis"/>
         </designation>
         <designation>
           <language value="fr"/>
@@ -264,7 +270,7 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
           </use>
-          <value value="né vivant à l'hôpital"/>
+          <value value="décédé à l'hôpital"/>
         </designation>
       </concept>
       <concept>
@@ -299,6 +305,32 @@
             <display value="Synonym"/>
           </use>
           <value value="centre de soins palliatifs"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="261665006"/>
+        <display value="Unknown"/>
+        <designation>
+          <language value="en"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Unknown"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="74964007"/>
+        <display value="Other"/>
+        <designation>
+          <language value="en"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Other"/>
         </designation>
       </concept>
     </include>
