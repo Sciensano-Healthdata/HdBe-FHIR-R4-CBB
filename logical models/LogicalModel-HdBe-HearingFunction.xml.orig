@@ -34,6 +34,562 @@
       <extension url="lang">
         <valueCode value="nl-NL" />
       </extension>
+<<<<<<< HEAD:logical models/LogicalModel-HdBe-HearingFunction.xml
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/hearing_function"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+        <element id="hearing_function">
+         <path value="hearing_function"/>
+         <short value="HearingFunction">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="FunctieHoren"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Root concept of the HearingFunction information model. This concept contains all data elements of the HearingFunction information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen FunctieHoren. Dit concept bevat alle gegevenselementen van de bouwsteen FunctieHoren."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="hearing_function"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+      </element>
+        <element id="hearing_function.hearing_function">
+         <path value="hearing_function.hearing_function"/>
+         <short value="HearingFunction">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="HoorFunctie"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The faculty of hearing due to responses to stimuli from auditory organs, capacity to hear.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het vermogen om te horen als reactie op prikkels van de (auditieve) hoor-organen."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="hearing_function.hearing_function"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="required"/>
+            <description value="HearingFunction codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/HoorFunctie"/>
+         </binding>
+      </element>
+        <element id="hearing_function.hearing_aid">
+         <path value="hearing_function.hearing_aid"/>
+         <short value="HearingAid">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="HorenHulpmiddel"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The medical aid used to help the patient hear.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het medische hulpmiddel dat gebruikt wordt ter ondersteuning van het horen."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="hearing_function.hearing_aid"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+         <type>
+                <code value="BackboneElement"/>
+            </type>
+      </element>
+        <element id="hearing_function.hearing_aid.medical_device">
+         <path value="hearing_function.hearing_aid.medical_device"/>
+         <short value="MedicalDevice">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="MedischHulpmiddel"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Root concept of the MedicalDevice information model. This root concept contains all data elements of the MedicalDevice information model.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Rootconcept van de bouwsteen MedischHulpmiddel. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedischHulpmiddel."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="hearing_function.hearing_aid.medical_device"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="BackboneElement"/>
+            </type>
+      </element>
+        <element id="hearing_function.hearing_aid.medical_device.product">
+         <path value="hearing_function.hearing_aid.medical_device.product"/>
+         <short value="Product">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Product"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The medical device (internally or externally).">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het medische hulpmiddel dat wordt gebruikt (inwendig of uitwendig)."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <base>
+                <path value="hearing_function.hearing_aid.medical_device.product"/>
+                <min value="1"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="BackboneElement"/>
+            </type>
+      </element>
+        <element id="hearing_function.hearing_aid.medical_device.product.product_id">
+         <path value="hearing_function.hearing_aid.medical_device.product.product_id"/>
+         <short value="ProductID">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ProductID"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Unique identification of the product, such as the serial number. &#xD;&#xA;Frequently used coding systems are HIBC and GTIN.&#xD;&#xA;If the law requires this to be registered on the basis of a UDI (Unique Device Identifier), the unique identification must consist of a UDI-DI (Device Identifier) and a UDI-PI (Production Identifier(s)). See http://www.gs1.org/healthcare/udi for more information. &#xD;&#xA;&#xD;&#xA;The UDI-DI must be recorded in reference to GS1 GTIN (01) encryptions, with which for example a firm is linked to the product type. The UDI-PI must consist of the following: application identifier (AI); expiration date (17) and serial number (21) and/or batch or lot number (10).&#xD;&#xA;">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Unieke identificatie van het product, bijvoorbeeld het serienummer.&#xD;&#xA;Veel gebruikte coderingen zijn HIBC en GTIN.&#xD;&#xA;Indien de wet verplicht stelt dat deze geregistreerd wordt op basis van een UDI (Unique Device Identifier), dient de unieke identificatie opgebouwd te zijn uit een UDI-DI (Device Identifier) en een UDI-PI (Production Identifier(s)). Voor meer informatie, zie: http://www.gs1.org/healthcare/udi .&#xD;&#xA;&#xD;&#xA;De UDI-DI dient m.b.t. GS1 GTIN (01) coderingen worden vastgelegd, waarmee o.a. een firma aan het producttype wordt gekoppeld. De UDI-PI dient te bestaan uit de volgende application identifier (AI); vervaldatum (17) en serienummer (21) en/of batch- of lotnummer (10)."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="hearing_function.hearing_aid.medical_device.product.product_id"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+      </element>
+        
+        
+        
+        <element id="hearing_function.hearing_aid.medical_device.product.product_type">
+         <path value="hearing_function.hearing_aid.medical_device.product.product_type"/>
+         <short value="ProductType">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ProductType"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The type of product used to help the patient hear.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Het type product dat gebruikt wordt om het horen te ondersteunen."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="hearing_function.hearing_aid.medical_device.product.product_type"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+         <type>
+                <code value="CodeableConcept"/>
+            </type>
+         <binding>
+            <strength value="extensible"/>
+            <description value="ProductType codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/HorenHulpmiddelType"/>
+         </binding>
+      </element>
+        <element id="hearing_function.hearing_aid.medical_device.product_description">
+         <path value="hearing_function.hearing_aid.medical_device.product_description"/>
+         <short value="ProductDescription">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="ProductOmschrijving"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Textual description of the product.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Tekstuele beschrijving van het product. "/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="hearing_function.hearing_aid.medical_device.product_description"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="string"/>
+            </type>
+      </element>
+        <element id="hearing_function.hearing_aid.medical_device.anatomical_location">
+         <path value="hearing_function.hearing_aid.medical_device.anatomical_location"/>
+         <short value="AnatomicalLocation">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="AnatomischeLocatie"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Patient’s anatomical location of the medical device used.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Anatomische locatie van het gebruikte hulpmiddel bij de patiënt."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"/>
+         </type>
+      </element>
+        
+        
+        
+        
+        
+        <element id="hearing_function.hearing_aid.medical_device.indication">
+         <path value="hearing_function.hearing_aid.medical_device.indication"/>
+         <short value="Indication">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Indicatie"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The medical reason for use of the medical device.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De medische reden voor het gebruik van het medisch hulpmiddel. "/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <base>
+                <path value="hearing_function.hearing_aid.medical_device.indication"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
+         </type>
+      </element>
+        <element id="hearing_function.hearing_aid.medical_device.start_date">
+         <path value="hearing_function.hearing_aid.medical_device.start_date"/>
+         <short value="StartDate">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="BeginDatum"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The start date of the first use or implant of the medical device. A ‘vague’ date, such as only the year, is permitted.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De startdatum van eerste toepassing of implantatie het medische hulpmiddel. Een vage datum, bijv. alleen een jaartal, is toegestaan."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="hearing_function.hearing_aid.medical_device.start_date"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="dateTime"/>
+            </type>
+      </element>
+        <element id="hearing_function.hearing_aid.medical_device.eind_datum">
+         <path value="hearing_function.hearing_aid.medical_device.eind_datum"/>
+         <short value="EindDatum">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="EindDatum"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The end date of the last use or explant of the medical device. A ‘vague’ date, such as only the year, is permitted.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De einddatum van de laatste toepassing of explantatie van het medische hulpmiddel. Een vage datum, bijv. alleen een jaartal, is toegestaan."/>
+                    </extension>
+                </extension>
+            </definition>
+         <alias value="EndDate"/>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="hearing_function.hearing_aid.medical_device.eind_datum"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="dateTime"/>
+            </type>
+      </element>
+        <element id="hearing_function.hearing_aid.medical_device.comment">
+         <path value="hearing_function.hearing_aid.medical_device.comment"/>
+         <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="Comment about use or information on the medical device used.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Opmerking bij de toepassing of informatie over het gebruikte hulpmiddel."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="hearing_function.hearing_aid.medical_device.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="string"/>
+            </type>
+      </element>
+        <element id="hearing_function.hearing_aid.medical_device.location">
+         <path value="hearing_function.hearing_aid.medical_device.location"/>
+         <short value="Location">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Locatie"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The healthcare provider at which use of the medical device was initiated or where the aid was implanted.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De zorgaanbieder waar het gebruik van het hulpmiddel geïnitieerd werd of waar het hulpmiddel geïmplanteerd werd."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="hearing_function.hearing_aid.medical_device.location"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+             <type>
+                <code value="Reference"/>
+                <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
+         </type>
+      </element>
+        <element id="hearing_function.hearing_aid.medical_device.health_professional">
+         <path value="hearing_function.hearing_aid.medical_device.health_professional"/>
+         <short value="HealthProfessional">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Zorgverlener"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="The healthcare provider involved in the indication for use of the medical device implant.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="De zorgverlener betrokken bij de indicatiestelling voor het gebruik of de implantatie van het hulpmiddel. "/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="hearing_function.hearing_aid.medical_device.health_professional"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
+         </type>
+      </element>
+        <element id="hearing_function.comment">
+         <path value="hearing_function.comment"/>
+         <short value="Comment">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Toelichting"/>
+                    </extension>
+                </extension>
+            </short>
+         <definition value="A comment on the hearing function.">
+                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                    <extension url="lang">
+                        <valueCode value="nl-NL"/>
+                    </extension>
+                    <extension url="content">
+                        <valueMarkdown value="Een toelichting op de hoorfunctie."/>
+                    </extension>
+                </extension>
+            </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <base>
+                <path value="hearing_function.comment"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+         <type>
+                <code value="string"/>
+            </type>
+      </element>
+    </differential>
+</StructureDefinition>
+=======
       <extension url="content">
         <valueMarkdown value="**Concept**&#xD;&#xA;Horen is het vermogen om geluid waar te nemen, met als doel het communiceren met anderen, het localiseren van een geluidsbron en het herkennen van geluiden. Het gaat daarbij om de waarneming van de geluidsgolven en niet om de verwerking er van in de hersenen.&#xD;&#xA;Een stoornis van de hoorfunctie kan leiden tot onder andere communicatieproblemen.&#xD;&#xA;**Purpose**&#xD;&#xA;Informatie over de aanwezigheid van stoornissen in de hoorfunctie is van belang bij de verpleging en behandeling van en vooral bij de commununicatie met de patiënt. &#xD;&#xA;**Evidence Base**&#xD;&#xA;De definities van de concepten zijn (deels) ontleend aan de Nederlandse vertaling van de ICNP begrippen.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**References**&#xD;&#xA;1. International Classification of Functioning Disability and Health (ICF) [Online] Beschikbaar op: [http:/www.rivm.nl/who-fic/icf.htm](http:/www.rivm.nl/who-fic/icf.htm) [Geraadpleegd: 13 februari 2015]&#xD;&#xA;" />
       </extension>
@@ -631,3 +1187,4 @@
     </element>
   </differential>
 </StructureDefinition>
+>>>>>>> #22-HdBe-HearingFunction:logical models/HdBe-HearingFunction.xml
