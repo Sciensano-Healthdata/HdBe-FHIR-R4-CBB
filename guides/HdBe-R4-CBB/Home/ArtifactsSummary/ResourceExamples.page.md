@@ -1,7 +1,13 @@
 # {{page-title}}
-
+- {{pagelink:Home/Examples/HdBe-AlcoholUse-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-Alert-01.page.md}} 
+- {{pagelink:Home/Examples/HdBe-BodyWeight-01.page.md}}  
+- {{pagelink:Home/Examples/HdBe-BodyHeight-01.page.md}} 
+- {{pagelink:Home/Examples/HdBe-BodyTemperature-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-BloodPressure-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-ContactPerson-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-ContactPerson-02.page.md}}
+- {{pagelink:Home/Examples/HdBe-DrugUse-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-HealthcareProvider-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-HealthcareProvider-02.page.md}}
 - {{pagelink:Home/Examples/HdBe-HealthcareProvider-03.page.md}}
