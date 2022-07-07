@@ -1,53 +1,54 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-  <id value="MedicationUseStopType"/>
+  <id value="MedicationUseStopType" />
   <meta>
-    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
     <valuePeriod>
-      <start value="2020-09-01T00:00:00+01:00"/>
+      <start value="2020-09-01T00:00:00+01:00" />
     </valuePeriod>
   </extension>
-  <url value="https://fhir.healthdata.be/ValueSet/MedicationUseStopType"/>
+  <url value="https://fhir.healthdata.be/ValueSet/MedicationUseStopType" />
   <identifier>
-    <use value="official"/>
-    <system value="urn:ietf:rfc:3986"/>
-    <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.9.11.1"/>
+    <use value="official" />
+    <system value="urn:ietf:rfc:3986" />
+    <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.9.11.1" />
   </identifier>
-  <version value="2020-09-01T00:00:00"/>
-  <name value="MedicationUseStopType"/>
-  <title value="MedicationUseStopType"/>
-  <status value="draft"/>
-  <experimental value="false"/>
-  <publisher value="Healthdata.be (Sciensano)"/>
+  <version value="2020-09-01T00:00:00" />
+  <name value="MedicationUseStopType" />
+  <title value="MedicationUseStopType" />
+  <status value="draft" />
+  <experimental value="false" />
+  <date value="2022-07-07T11:50:14.7966344+00:00" />
+  <publisher value="Healthdata.be (Sciensano)" />
   <contact>
-    <name value="Service portal – healthdata.be"/>
+    <name value="Service portal – healthdata.be" />
     <telecom>
-      <system value="url"/>
-      <value value="https://sciensano.service-now.com/sp"/>
-      <use value="work"/>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
     </telecom>
   </contact>
-  <description value="2021-04-09: See [ZIB-1261](https://bits.nictiz.nl/browse/ZIB-1261) and [ZIB-1454](https://bits.nictiz.nl/browse/ZIB-1454). &#13;&#10;&#13;&#10;Non-existent SNOMED CT 112171000146100 | Drug therapy temporarily stopped (finding) | replaced with SNOMED CT 113381000146106 | Drug therapy temporarily stopped (situation) | and&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;non-existent SNOMED CT 112161000146106 | Drug therapy temporarily stopped (finding) | replaced with 113371000146109 | Drug therapy definitively stopped (situation) |&#13;&#10;&#13;&#10;"/>
-  <immutable value="false"/>
-  <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+  <description value="MedicationUseStopTypeCodeList" />
+  <immutable value="false" />
+  <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org." />
   <compose>
     <include>
-      <system value="http://snomed.info/sct"/>
+      <system value="http://snomed.info/sct" />
       <concept>
         <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-          <valueString value="Tijdelijke onderbreking van medicamenteuze behandeling (bijvoorbeeld tijdelijk stoppen gebruik vanwege operatie)."/>
+          <valueString value="Tijdelijke onderbreking van medicamenteuze behandeling (bijvoorbeeld tijdelijk stoppen gebruik vanwege operatie)." />
         </extension>
-        <code value="14803004"/>
-        <display value="tijdelijk gestopt met medicatie (situatie)"/>
+        <code value="14803004" />
+        <display value="Transitory" />
       </concept>
       <concept>
         <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-          <valueString value="Het staken van een bestaande medicamenteuze behandeling."/>
+          <valueString value="Het staken van een bestaande medicamenteuze behandeling." />
         </extension>
-        <code value="255545003"/>
-        <display value="definitief gestopt met medicatie (situatie)"/>
+        <code value="255545003" />
+        <display value="Definite" />
       </concept>
     </include>
   </compose>
