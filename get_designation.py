@@ -77,8 +77,10 @@ def getDesignationsById(id, filename):
 #Gets designations for all snomed concepts in a valuesets, adds them, and returns an updated valueset. 
 def addDesignations(valueset, filename):
     vsci = []
+    # Set language of the ValueSet to en-US because we use the en-US designation for the .concept.display value.
+    valueset.language = "en-US"
     for x in valueset.compose.include:
-        #Only get designations for SNOMED codes, that are extententionally defined (no filter) and do have a concept (TypeOfLivingWill contains all of SNOMED).
+        # Only get designations for SNOMED codes, that are extententionally defined (no filter) and do have a concept (TypeOfLivingWill contains all of SNOMED).
         if x.system == 'http://snomed.info/sct' and x.valueSet is None and x.filter is None and x.concept is not None: 
             concepts = []
             for x2 in x.concept:
@@ -91,14 +93,14 @@ def addDesignations(valueset, filename):
                     if con.designation is None:
                         con.designation = []
                     if d[0].value is not None:
-                        #add EN desination as  display value
+                        # Add EN desination as  display value
                         con.display = d[0].value
-                        #con.designation.append(d[0])
+                        # con.designation.append(d[0])
                     if d[1].value is not None:
-                        #add nl-BE designation
+                        # Add nl-BE designation
                         con.designation.append(d[1])
                     if d[2].value is not None:
-                        #add fr-BE designation
+                        # Add fr-BE designation
                         con.designation.append(d[2])
                 concepts.append(con)
             x.concept = concepts  
