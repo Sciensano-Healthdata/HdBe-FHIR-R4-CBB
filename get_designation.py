@@ -35,7 +35,7 @@ def getDesignationsById(id, filename):
                 for key in x['acceptabilityMap']:
                     if x['acceptabilityMap'][key] == 'PREFERRED':
                         EN = {
-                                    "language": x['lang'],
+                                    "language": "en-US",
                                     "use": {
                                         "system": "http://snomed.info/sct",
                                         "code": "900000000000013009",
@@ -49,7 +49,7 @@ def getDesignationsById(id, filename):
                 for key in x['acceptabilityMap']:
                     if x['acceptabilityMap'][key] == 'PREFERRED':
                         NL = {
-                                    "language": x['lang'],
+                                    "language": "nl-BE",
                                     "use": {
                                         "system": "http://snomed.info/sct",
                                         "code": "900000000000013009",
@@ -63,7 +63,7 @@ def getDesignationsById(id, filename):
                 for key in x['acceptabilityMap']:
                     if x['acceptabilityMap'][key] == 'PREFERRED':
                         FR = {
-                                    "language": x['lang'],
+                                    "language": "fr-BE",
                                     "use": {
                                         "system": "http://snomed.info/sct",
                                         "code": "900000000000013009",
@@ -86,14 +86,19 @@ def addDesignations(valueset, filename):
                 if con.designation is not None:
                         con.designation.clear()
                 d = getDesignationsById(x2.code, filename)
-                # BUG "con.designation is not None" should not be here. If a concept does not have a designation, the script will not add designations although they may exists.
-                # However, we run into a TypeError: 'NoneType' object does not support item assignment if we try to add it. 
-                if d is not None and con.designation is not None:
+                if d is not None:
+                    # If the input ValueSet codes do not contains a designation, a list has to be initialized in order to append the designations.
+                    if con.designation is None:
+                        con.designation = []
                     if d[0].value is not None:
-                        con.designation.append(d[0])
+                        #add EN desination as  display value
+                        con.display = d[0].value
+                        #con.designation.append(d[0])
                     if d[1].value is not None:
+                        #add nl-BE designation
                         con.designation.append(d[1])
                     if d[2].value is not None:
+                        #add fr-BE designation
                         con.designation.append(d[2])
                 concepts.append(con)
             x.concept = concepts  
