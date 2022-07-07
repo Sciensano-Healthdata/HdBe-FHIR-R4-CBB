@@ -275,7 +275,7 @@ Logical models examples are functional in nature: they provide examples of what 
 Examples of logical models are not conformant to FHIR, and are therefore not represented in XML or JSON. Examples are provided in  table format in a seperate markdown file. The file has the same name as the CBB logical model but ends with `.example.md.` For example `HdBe-BodyHeight.xml` <-> `HdBe-BodyHeight.example.md`.
 The following conventions exist:
 - For elements that represent a quantity, also provide the unit.
-- For elements that hold coded values: provide a code, the preferred display name and the CodeSystem. This format is used: '[code] - [display name] ([CodeSysem]).
+- For elements that hold coded values: provide a code, the preferred display name and the CodeSystem. This format is used: '[code] - [display name] (code by [CodeSystem]).
 
 *Example*:
 ```
@@ -284,7 +284,7 @@ The following conventions exist:
 | height_value     |165 cm             |
 | height_date_time |2022-01-02         |
 | comment          |                   |
-| position |10904000 - Orthostatic body position (SNOMED CT)  |
+| position |10904000 - Orthostatic body position (code by SNOMED CT)  |
 ```
 
 #### FHIR profile examples <a name="FHIRProfileExamples"></a>
