@@ -2,7 +2,7 @@
 
 | NursingIntervention |                   |
 |---------------------|-------------------| 
-|intervention | Ondersteunen bij wassen en/of persoonlijke hygiene
+|intervention | 386420003 - Ondersteunen bij wassen en/of persoonlijke hygiene (code by SNOMED CT)  
 |indication | Probleem met zichzelf wassen en drogen
 |treatment_objective | Wassen onafhankelijk
 |interval | 

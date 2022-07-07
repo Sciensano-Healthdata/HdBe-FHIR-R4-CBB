@@ -1,208 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-    <id value="HdBe-AbilityToManageMedication"/>
-    <language value="en-US"/>
-    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2020-09-01T00:00:00+02:00"/>
-        </valuePeriod>
+  <id value="HdBe-AbilityToManageMedication" />
+  <language value="en-US" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+02:00" />
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AbilityToManageMedication" />
+  <name value="HdBeAbilityToManageMedication">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="HdBe-VermogenTotZelfstandigMedicatiegebruik" />
+      </extension>
     </extension>
-    <url
-        value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AbilityToManageMedication"/>
-    <name value="HdBeAbilityToManageMedication">
+  </name>
+  <title value="HdBe AbilityToManageMedication" />
+  <status value="draft" />
+  <date value="2022-07-07T15:04:03.2592055+00:00" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="**Concept**&#xD;&#xA;Managing one's own medication is part of self-healthcare. Limitations in this ability indicate a reduced ability to cope for oneself. &#xD;&#xA;This activity and activities such as those including cooking, using the telephone and shopping are also known as instrumentel activities of daily living (IADL). These tasks support an independent life style. Many people can still live independently even though they need help with one or two of these IADL’s.&#xD;&#xA;**Purpose**&#xD;&#xA;To promote safe and proper use of medication, it is important in patient care to know whether the patient is capable of using the medication independently, or if the patient needs help doing so.&#xD;&#xA;**Example Instances**">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="**Concept**&#xD;&#xA;Het zelfstandig kunnen beheren en gebruiken van de eigen medicijnen is een onderdeel van zelfzorg. Beperkingen in dit vermogen duiden op een verminderde zelfredzaamheid op dit gebied.&#xD;&#xA;Deze activiteit wordt samen met activiteiten zoals onder andere koken, telefoneren en boodschappen doen ook aangeduid als instrumentele algemene dagelijkse levensverrichtingen (IADL). Veel mensen kunnen nog steeds zelfstandig functioneren ook als zij hulp nodig hebben bij één of twee van deze activiteiten.&#xD;&#xA;**Purpose**&#xD;&#xA;Om correct en veilig medicatiegebruik te bevorderen is het bij de verzorging van de patiënt van belang te weten of de patiënt in staat is om zelfstandig medicatie te gebruiken, dan wel of de patiënt hierbij geholpen moet worden.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (04-09-2017)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.1 (31-01-2020)&#xD;&#xA;Bevat: [ZIB-835](https://bits.nictiz.nl/browse/ZIB-835), [ZIB-1115](https://bits.nictiz.nl/browse/ZIB-1115)." />
+      </extension>
+    </extension>
+  </description>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="true" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/ability_to_manage_medication" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="ability_to_manage_medication">
+      <path value="ability_to_manage_medication" />
+      <short value="AbilityToManageMedication">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-            <extension url="lang">
-                <valueCode value="nl-NL"/>
-            </extension>
-            <extension url="content">
-                <valueMarkdown value="HdBe-VermogenTotZelfstandigMedicatiegebruik"/>
-            </extension>
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="VermogenTotZelfstandigMedicatiegebruik" />
+          </extension>
         </extension>
-    </name>
-    <title value="HdBe AbilityToManageMedication"/>
-    <status value="draft"/>
-    <publisher value="Healthdata.be (Sciensano)"/>
-    <contact>
-        <name value="Service portal – healthdata.be"/>
-        <telecom>
-            <system value="url"/>
-            <value value="https://sciensano.service-now.com/sp"/>
-            <use value="work"/>
-        </telecom>
-    </contact>
-    <description
-        value="**Concept**&#xD;&#xA;Managing one's own medication is part of self-healthcare. Limitations in this ability indicate a reduced ability to cope for oneself. &#xD;&#xA;This activity and activities such as those including cooking, using the telephone and shopping are also known as instrumentel activities of daily living (IADL). These tasks support an independent life style. Many people can still live independently even though they need help with one or two of these IADL’s.&#xD;&#xA;**Purpose**&#xD;&#xA;To promote safe and proper use of medication, it is important in patient care to know whether the patient is capable of using the medication independently, or if the patient needs help doing so.&#xD;&#xA;**Example Instances**">
+      </short>
+      <definition value="Root concept of the AbilityToManageMedication information model. This root concept contains all data elements of the AbilityToManageMedication information model.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-            <extension url="lang">
-                <valueCode value="nl-NL"/>
-            </extension>
-            <extension url="content">
-                <valueMarkdown
-                    value="**Concept**&#xD;&#xA;Het zelfstandig kunnen beheren en gebruiken van de eigen medicijnen is een onderdeel van zelfzorg. Beperkingen in dit vermogen duiden op een verminderde zelfredzaamheid op dit gebied.&#xD;&#xA;Deze activiteit wordt samen met activiteiten zoals onder andere koken, telefoneren en boodschappen doen ook aangeduid als instrumentele algemene dagelijkse levensverrichtingen (IADL). Veel mensen kunnen nog steeds zelfstandig functioneren ook als zij hulp nodig hebben bij één of twee van deze activiteiten.&#xD;&#xA;**Purpose**&#xD;&#xA;Om correct en veilig medicatiegebruik te bevorderen is het bij de verzorging van de patiënt van belang te weten of de patiënt in staat is om zelfstandig medicatie te gebruiken, dan wel of de patiënt hierbij geholpen moet worden.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (04-09-2017)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.1 (31-01-2020)&#xD;&#xA;Bevat: [ZIB-835](https://bits.nictiz.nl/browse/ZIB-835), [ZIB-1115](https://bits.nictiz.nl/browse/ZIB-1115)."
-                />
-            </extension>
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de bouwsteen VermogenTotZelfstandigMedicatiegebruik. Dit concept bevat alle gegevenselementen van de bouwsteen VermogenTotZelfstandigMedicatiegebruik." />
+          </extension>
         </extension>
-    </description>
-    <copyright
-        value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-    <fhirVersion value="4.0.1"/>
-    <kind value="logical"/>
-    <abstract value="true"/>
-    <type
-        value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/ability_to_manage_medication"/>
-    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
-    <derivation value="specialization"/>
-    <differential>
-        <element id="ability_to_manage_medication">
-            <path value="ability_to_manage_medication"/>
-            <short value="AbilityToManageMedication">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="VermogenTotZelfstandigMedicatiegebruik"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition
-                value="Root concept of the AbilityToManageMedication information model. This root concept contains all data elements of the AbilityToManageMedication information model.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown
-                            value="Rootconcept van de bouwsteen VermogenTotZelfstandigMedicatiegebruik. Dit concept bevat alle gegevenselementen van de bouwsteen VermogenTotZelfstandigMedicatiegebruik."
-                        />
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="*"/>
-            <base>
-                <path value="ability_to_manage_medication"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-        </element>
-        <element id="ability_to_manage_medication.independent_medication_use">
-            <path value="ability_to_manage_medication.independent_medication_use"/>
-            <short value="IndependentMedicationUse">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="ZelfstandigMedicatiegebruik"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition
-                value="The degree of ability of the patient to independently manage their own medication.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown
-                            value="De mate waarin de patiënt zelfstandig in staat is zichzelf om zijn medicatie te beheren en in te nemen."
-                        />
-                    </extension>
-                </extension>
-            </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
-                <path value="ability_to_manage_medication.independent_medication_use"/>
-                <min value="1"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="CodeableConcept"/>
-            </type>
-            <binding>
-                <strength value="required"/>
-                <description value="IndependentMedicationUse codes"/>
-                <valueSet value="https://fhir.healthdata.be/ValueSet/ZelfstandigMedicatiegebruik"/>
-            </binding>
-        </element>
-        <element id="ability_to_manage_medication.required_assistance">
-            <path value="ability_to_manage_medication.required_assistance"/>
-            <short value="RequiredAssistance">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="HulpBijToediening"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition value="The nursing support a patient needs to manage one's own medication.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown
-                            value="De verpleegkundige ondersteuning die de patient nodig heeft om de eigen medicijnen te kunnen beheren en gebruiken."
-                        />
-                    </extension>
-                </extension>
-            </definition>
-            <min value="0"/>
-            <max value="1"/>
-            <base>
-                <path value="ability_to_manage_medication.required_assistance"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="Reference"/>
-                <targetProfile
-                    value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NursingIntervention"
-                />
-            </type>
-        </element>
-        <element id="ability_to_manage_medication.required_assistance.nursing_intervention">
-            <path value="ability_to_manage_medication.required_assistance.nursing_intervention"/>
-            <short value="NursingIntervention">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="VerpleegkundigeInterventie"/>
-                    </extension>
-                </extension>
-            </short>
-            <definition
-                value="Root concept of the NursingIntervention information model. This root concept contains all data elements of the NursingIntervention information model.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown
-                            value="Rootconcept van de bouwsteen VerpleegkundigeInterventie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen VerpleegkundigeInterventie."
-                        />
-                    </extension>
-                </extension>
-            </definition>
-            <min value="1"/>
-            <max value="1"/>
-            <base>
-                <path value="ability_to_manage_medication.required_assistance.nursing_intervention"/>
-                <min value="1"/>
-                <max value="1"/>
-            </base>
-            <type>
-                <code value="Reference"/>
-                <targetProfile
-                    value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NursingIntervention"
-                />
-            </type>
-        </element>
-    </differential>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="ability_to_manage_medication" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+    </element>
+    <element id="ability_to_manage_medication.independent_medication_use">
+      <path value="ability_to_manage_medication.independent_medication_use" />
+      <short value="IndependentMedicationUse">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="ZelfstandigMedicatiegebruik" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The degree of ability of the patient to independently manage their own medication.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De mate waarin de patiënt zelfstandig in staat is zichzelf om zijn medicatie te beheren en in te nemen." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="ability_to_manage_medication.independent_medication_use" />
+        <min value="1" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="IndependentMedicationUse codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/ZelfstandigMedicatiegebruik" />
+      </binding>
+    </element>
+    <element id="ability_to_manage_medication.required_assistance">
+      <path value="ability_to_manage_medication.required_assistance" />
+      <short value="RequiredAssistance">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="HulpBijToediening" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The nursing support a patient needs to manage one's own medication.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De verpleegkundige ondersteuning die de patient nodig heeft om de eigen medicijnen te kunnen beheren en gebruiken." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="ability_to_manage_medication.required_assistance" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NursingIntervention" />
+      </type>
+    </element>
+    <element id="ability_to_manage_medication.required_assistance.nursing_intervention">
+      <path value="ability_to_manage_medication.required_assistance.nursing_intervention" />
+      <short value="NursingIntervention">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="VerpleegkundigeInterventie" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Root concept of the NursingIntervention information model. This root concept contains all data elements of the NursingIntervention information model.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de bouwsteen VerpleegkundigeInterventie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen VerpleegkundigeInterventie." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="ability_to_manage_medication.required_assistance.nursing_intervention" />
+        <min value="1" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NursingIntervention" />
+      </type>
+    </element>
+  </differential>
 </StructureDefinition>

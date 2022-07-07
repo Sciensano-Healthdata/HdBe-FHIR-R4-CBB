@@ -1,27 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBe-MedicationDispense"/>
-   <language value="en-US"/>
-   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2020-09-01T00:00:00+02:00"/>
-        </valuePeriod>
-    </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationDispense"/>
-   <name value="HdBeMedicationDispense">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="HdBe-Medicatieverstrekking"/>
-         </extension>
+  <id value="HdBe-MedicationDispense" />
+  <language value="en-US" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+02:00" />
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationDispense" />
+  <name value="HdBeMedicationDispense">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
       </extension>
-   </name>
-   <title value="HdBe MedicationDispense"/>
-   <status value="draft"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
+      <extension url="content">
+        <valueMarkdown value="HdBe-Medicatieverstrekking" />
+      </extension>
+    </extension>
+  </name>
+  <title value="HdBe MedicationDispense" />
+  <status value="draft" />
+  <date value="2022-07-07T15:04:03.2592055+00:00" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
     <name value="Service portal – healthdata.be" />
     <telecom>
       <system value="url" />
@@ -29,429 +30,429 @@
       <use value="work" />
     </telecom>
   </contact>
-   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;A dispense is the delivery of an amount of medicine to the patient, their administrator or their representative.&#xD;&#xA;**Purpose**&#xD;&#xA;The goal of the dispense is to provide insight into which products are delivered by the pharmacist to the patient (or their representative).&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Een verstrekking is de terhandstelling van een hoeveelheid van een geneesmiddel aan de patiënt, zijn toediener of zijn vertegenwoordiger.&#xD;&#xA;**Purpose**&#xD;&#xA;Het doel van de verstrekking is inzicht te geven in welke producten ter hand gesteld zijn door de apotheker aan de patiënt (of zijn vertegenwoordiger).&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (04-09-2017)&#xD;&#xA;&#xD;&#xA;Publicatieversie 2.0 (31-12-2017)&#xD;&#xA;Bevat: [ZIB-618](https://bits.nictiz.nl/browse/ZIB-618), [ZIB-643](https://bits.nictiz.nl/browse/ZIB-643).&#xD;&#xA;&#xD;&#xA;Publicatieversie 2.0.1 (06-07-2019)&#xD;&#xA;Bevat: [ZIB-807](https://bits.nictiz.nl/browse/ZIB-807).&#xD;&#xA;&#xD;&#xA;Publicatieversie 2.0.2 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-911](https://bits.nictiz.nl/browse/ZIB-911), [ZIB-1195](https://bits.nictiz.nl/browse/ZIB-1195).&#xD;&#xA;&#xD;&#xA;"/>
-         </extension>
+  <description value="**Concept**&#xD;&#xA;A dispense is the delivery of an amount of medicine to the patient, their administrator or their representative.&#xD;&#xA;**Purpose**&#xD;&#xA;The goal of the dispense is to provide insight into which products are delivered by the pharmacist to the patient (or their representative).&#xD;&#xA;**Example Instances**">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
       </extension>
-   </description>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-   <fhirVersion value="4.0.1"/>
-   <kind value="logical"/>
-   <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/medication_dispense"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
-   <derivation value="specialization"/>
-   <differential>
-        <element id="medication_dispense">
-         <path value="medication_dispense"/>
-         <short value="MedicationDispense">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Medicatieverstrekking"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Root concept of the MedicationDispense information model. This root concept contains all data elements of the MedicationDispense information model.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Rootconcept van de bouwsteen Medicatieverstrekking. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Medicatieverstrekking. &#xD;&#xA;"/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="*"/>
-         <base>
-                <path value="medication_dispense"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-      </element>
-        <element id="medication_dispense.supplier">
-         <path value="medication_dispense.supplier"/>
-         <short value="Supplier">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Verstrekker"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="In almost all cases, the supplier will be a pharmacist. It could also be supplied by a webshop (in case of an online order), a drug store or a foreign pharmacist.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="De verstrekker is in vrijwel alle gevallen een apotheker. Het kan ook gaan om een webwinkel (online bestelling), een drogisterij of een buitenlandse apotheker."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_dispense.supplier"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
-         </type>
-      </element>
-        <element id="medication_dispense.dispense_request">
-         <path value="medication_dispense.dispense_request"/>
-         <short value="DispenseRequest">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Verstrekkingsverzoek"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Relationship to the dispense request.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Relatie naar verstrekkingsverzoek."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_dispense.dispense_request"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-DispenseRequest"/>
-         </type>
-      </element>
-        <element id="medication_dispense.dispensed_medicine">
-         <path value="medication_dispense.dispensed_medicine"/>
-         <short value="DispensedMedicine">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="VerstrektGeneesmiddel"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="The dispensed medicine.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Verstrekt geneesmiddel."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_dispense.dispensed_medicine"/>
-                <min value="1"/>
-                <max value="1"/>
-            </base>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct"/>
-         </type>
-      </element>
-        <element id="medication_dispense.medication_dispense_date_time">
-         <path value="medication_dispense.medication_dispense_date_time"/>
-         <short value="MedicationDispenseDateTime">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="MedicatieverstrekkingsDatumTijd"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="The time at which the medicine was supplied. The date and time at which the medicine is delivered. &#xD;&#xA;Note: this is the time at which the medicine was delivered to the patient (or their administrator/representative) and not the request date.&#xD;&#xA;">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Het tijdstip van uitgifte. De datumtijd waarop het geneesmiddel ter hand gesteld wordt. &#xD;&#xA;Noot: het gaat dus om het tijdstip waarop het geneesmiddel aan de patiënt (of diens toediener/vertegenwoordiger) is uitgegeven en niet om de aanschrijfdatum."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_dispense.medication_dispense_date_time"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="dateTime"/>
-            </type>
-      </element>
-        <element id="medication_dispense.request_date">
-         <path value="medication_dispense.request_date"/>
-         <short value="RequestDate">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="AanschrijfDatum"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="The request date is the time at which a pharmacist records an intended dispense.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="De aanschrijfdatum is het tijdstip waarop een apotheker een voorgenomen uitgifte vastlegt."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_dispense.request_date"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="dateTime"/>
-            </type>
-      </element>
-        <element id="medication_dispense.distribution_form">
-         <path value="medication_dispense.distribution_form"/>
-         <short value="DistributionForm">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Distributievorm"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Distribution form ">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Distributievorm "/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_dispense.distribution_form"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="CodeableConcept"/>
-            </type>
-         <binding>
-            <strength value="required"/>
-            <description value="DistributionForm codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieverstrekkingDistributievorm"/>
-         </binding>
-      </element>
-        <element id="medication_dispense.duration_of_use">
-         <path value="medication_dispense.duration_of_use"/>
-         <short value="DurationOfUse">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Verbruiksduur"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="The period in which the medication is expected to be used. The value depends on the dose and the dispensed amount.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="De verwachte periode, dat het medicament gebruikt zal worden. De waarde hangt samen met de dosering en de verstrekte hoeveelheid."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_dispense.duration_of_use"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="Quantity"/>
-            </type>
-      </element>
-        <element id="medication_dispense.medication_dispense_additional_information">
-         <path value="medication_dispense.medication_dispense_additional_information"/>
-         <short value="MedicationDispenseAdditionalInformation">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="MedicatieverstrekkingAanvullendeInformatie"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Additional information includes details on the structure of the medical dispense. This can be e.g. a reason for deviating from the dispense request. &#xD;&#xA;For now, this list is used. This list will be replaced by a thesaurus in the G standard at a later stage.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Aanvullende informatie bevat bijzonderheden over de invulling van de medicatieverstrekking. Dit kan bijvoorbeeld een reden zijn om af te wijken van het verstrekkingsverzoek.&#xD;&#xA;Vooralsnog wordt deze lijst gebruikt. In een later stadium zal deze lijst vervangen worden door een thesaurus in de G-standaard."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="*"/>
-         <base>
-                <path value="medication_dispense.medication_dispense_additional_information"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-         <type>
-                <code value="CodeableConcept"/>
-            </type>
-         <binding>
-            <strength value="required"/>
-            <description value="MedicationDispenseAdditionalInformation codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieverstrekkingAanvullendeInformatie"/>
-         </binding>
-      </element>
-        <element id="medication_dispense.dispensed_amount">
-         <path value="medication_dispense.dispensed_amount"/>
-         <short value="DispensedAmount">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="VerstrekteHoeveelheid"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Number of units of the product (measured based on the relevant product code) supplied. Optionally a translation to NHG table Gebruiksvoorschriften(Table 25) is also allowed.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Aantal eenheden van het product (gemeten op basis van de relevante productcode) dat is afgeleverd. Optioneel is voor de eenheid in plaats van gebruik van UCUM eenheden ook een vertaling toegestaan naar NHG tabel Gebruiksvoorschriften (tabel 25)"/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_dispense.dispensed_amount"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="Quantity"/>
-            </type>
-      </element>
-        <element id="medication_dispense.dispense_location">
-         <path value="medication_dispense.dispense_location"/>
-         <short value="DispenseLocation">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Afleverlocatie"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Dispense location">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Afleverlocatie"/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_dispense.dispense_location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="string"/>
-            </type>
-      </element>
-        <element id="medication_dispense.comment">
-         <path value="medication_dispense.comment"/>
-         <short value="Comment">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Toelichting"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Comments on the dispense.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Opmerkingen met betrekking tot de verstrekking. "/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_dispense.comment"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="string"/>
-            </type>
-      </element>
-    </differential>
+      <extension url="content">
+        <valueMarkdown value="**Concept**&#xD;&#xA;Een verstrekking is de terhandstelling van een hoeveelheid van een geneesmiddel aan de patiënt, zijn toediener of zijn vertegenwoordiger.&#xD;&#xA;**Purpose**&#xD;&#xA;Het doel van de verstrekking is inzicht te geven in welke producten ter hand gesteld zijn door de apotheker aan de patiënt (of zijn vertegenwoordiger).&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (04-09-2017)&#xD;&#xA;&#xD;&#xA;Publicatieversie 2.0 (31-12-2017)&#xD;&#xA;Bevat: [ZIB-618](https://bits.nictiz.nl/browse/ZIB-618), [ZIB-643](https://bits.nictiz.nl/browse/ZIB-643).&#xD;&#xA;&#xD;&#xA;Publicatieversie 2.0.1 (06-07-2019)&#xD;&#xA;Bevat: [ZIB-807](https://bits.nictiz.nl/browse/ZIB-807).&#xD;&#xA;&#xD;&#xA;Publicatieversie 2.0.2 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-911](https://bits.nictiz.nl/browse/ZIB-911), [ZIB-1195](https://bits.nictiz.nl/browse/ZIB-1195)." />
+      </extension>
+    </extension>
+  </description>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="true" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/medication_dispense" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="medication_dispense">
+      <path value="medication_dispense" />
+      <short value="MedicationDispense">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Medicatieverstrekking" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Root concept of the MedicationDispense information model. This root concept contains all data elements of the MedicationDispense information model.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de bouwsteen Medicatieverstrekking. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Medicatieverstrekking." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="medication_dispense" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+    </element>
+    <element id="medication_dispense.supplier">
+      <path value="medication_dispense.supplier" />
+      <short value="Supplier">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Verstrekker" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="In almost all cases, the supplier will be a pharmacist. It could also be supplied by a webshop (in case of an online order), a drug store or a foreign pharmacist.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De verstrekker is in vrijwel alle gevallen een apotheker. Het kan ook gaan om een webwinkel (online bestelling), een drogisterij of een buitenlandse apotheker." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_dispense.supplier" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider" />
+      </type>
+    </element>
+    <element id="medication_dispense.dispense_request">
+      <path value="medication_dispense.dispense_request" />
+      <short value="DispenseRequest">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Verstrekkingsverzoek" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Relationship to the dispense request.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Relatie naar verstrekkingsverzoek." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_dispense.dispense_request" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-DispenseRequest" />
+      </type>
+    </element>
+    <element id="medication_dispense.dispensed_medicine">
+      <path value="medication_dispense.dispensed_medicine" />
+      <short value="DispensedMedicine">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="VerstrektGeneesmiddel" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The dispensed medicine.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Verstrekt geneesmiddel." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="medication_dispense.dispensed_medicine" />
+        <min value="1" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct" />
+      </type>
+    </element>
+    <element id="medication_dispense.medication_dispense_date_time">
+      <path value="medication_dispense.medication_dispense_date_time" />
+      <short value="MedicationDispenseDateTime">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="MedicatieverstrekkingsDatumTijd" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The time at which the medicine was supplied. The date and time at which the medicine is delivered. &#xD;&#xA;Note: this is the time at which the medicine was delivered to the patient (or their administrator/representative) and not the request date.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Het tijdstip van uitgifte. De datumtijd waarop het geneesmiddel ter hand gesteld wordt. &#xD;&#xA;Noot: het gaat dus om het tijdstip waarop het geneesmiddel aan de patiënt (of diens toediener/vertegenwoordiger) is uitgegeven en niet om de aanschrijfdatum." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_dispense.medication_dispense_date_time" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="medication_dispense.request_date">
+      <path value="medication_dispense.request_date" />
+      <short value="RequestDate">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="AanschrijfDatum" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The request date is the time at which a pharmacist records an intended dispense.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De aanschrijfdatum is het tijdstip waarop een apotheker een voorgenomen uitgifte vastlegt." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_dispense.request_date" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="medication_dispense.distribution_form">
+      <path value="medication_dispense.distribution_form" />
+      <short value="DistributionForm">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Distributievorm" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Distribution form">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Distributievorm" />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_dispense.distribution_form" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="DistributionForm codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieverstrekkingDistributievorm" />
+      </binding>
+    </element>
+    <element id="medication_dispense.duration_of_use">
+      <path value="medication_dispense.duration_of_use" />
+      <short value="DurationOfUse">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Verbruiksduur" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The period in which the medication is expected to be used. The value depends on the dose and the dispensed amount.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De verwachte periode, dat het medicament gebruikt zal worden. De waarde hangt samen met de dosering en de verstrekte hoeveelheid." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_dispense.duration_of_use" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="medication_dispense.medication_dispense_additional_information">
+      <path value="medication_dispense.medication_dispense_additional_information" />
+      <short value="MedicationDispenseAdditionalInformation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="MedicatieverstrekkingAanvullendeInformatie" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Additional information includes details on the structure of the medical dispense. This can be e.g. a reason for deviating from the dispense request. &#xD;&#xA;For now, this list is used. This list will be replaced by a thesaurus in the G standard at a later stage.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Aanvullende informatie bevat bijzonderheden over de invulling van de medicatieverstrekking. Dit kan bijvoorbeeld een reden zijn om af te wijken van het verstrekkingsverzoek.&#xD;&#xA;Vooralsnog wordt deze lijst gebruikt. In een later stadium zal deze lijst vervangen worden door een thesaurus in de G-standaard." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="medication_dispense.medication_dispense_additional_information" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="MedicationDispenseAdditionalInformation codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieverstrekkingAanvullendeInformatie" />
+      </binding>
+    </element>
+    <element id="medication_dispense.dispensed_amount">
+      <path value="medication_dispense.dispensed_amount" />
+      <short value="DispensedAmount">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="VerstrekteHoeveelheid" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Number of units of the product (measured based on the relevant product code) supplied. Optionally a translation to NHG table Gebruiksvoorschriften(Table 25) is also allowed.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Aantal eenheden van het product (gemeten op basis van de relevante productcode) dat is afgeleverd. Optioneel is voor de eenheid in plaats van gebruik van UCUM eenheden ook een vertaling toegestaan naar NHG tabel Gebruiksvoorschriften (tabel 25)" />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_dispense.dispensed_amount" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="medication_dispense.dispense_location">
+      <path value="medication_dispense.dispense_location" />
+      <short value="DispenseLocation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Afleverlocatie" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Dispense location">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Afleverlocatie" />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_dispense.dispense_location" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="medication_dispense.comment">
+      <path value="medication_dispense.comment" />
+      <short value="Comment">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toelichting" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Comments on the dispense.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Opmerkingen met betrekking tot de verstrekking." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_dispense.comment" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
 </StructureDefinition>

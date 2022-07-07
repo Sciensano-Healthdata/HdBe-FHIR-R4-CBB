@@ -1,27 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBe-MedicationAdministration2"/>
-   <language value="en-US"/>
-   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2020-09-01T00:00:00+02:00"/>
-        </valuePeriod>
-    </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationAdministration2"/>
-   <name value="HdBeMedicationAdministration2">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="HdBe-MedicatieToediening2"/>
-         </extension>
+  <id value="HdBe-MedicationAdministration2" />
+  <language value="en-US" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+02:00" />
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationAdministration2" />
+  <name value="HdBeMedicationAdministration2">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
       </extension>
-   </name>
-   <title value="HdBe MedicationAdministration2"/>
-   <status value="draft"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
+      <extension url="content">
+        <valueMarkdown value="HdBe-MedicatieToediening2" />
+      </extension>
+    </extension>
+  </name>
+  <title value="HdBe MedicationAdministration2" />
+  <status value="draft" />
+  <date value="2022-07-07T15:04:03.2592055+00:00" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
     <name value="Service portal – healthdata.be" />
     <telecom>
       <system value="url" />
@@ -29,767 +30,767 @@
       <use value="work" />
     </telecom>
   </contact>
-   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Medication administration is the registration of the individual administrations of the medicine on the patient by the administrator (e.g. a nurse or patient themselves), in relation to the entered agreements.&#xD;&#xA;**Purpose**&#xD;&#xA;The goal of administering the medication is to provide insight into the actual administered products.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Medicatietoediening is de registratie van de afzonderlijke toedieningen van het geneesmiddel aan de patiënt door de toediener (zoals een verpleegkundige of patiënt zelf), in relatie tot de gemaakte afspraken.&#xD;&#xA;**Purpose**&#xD;&#xA;Het doel van medicatietoediening is inzicht te geven in de daadwerkelijk toegediende producten.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (04-09-2017)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.1 (31-12-2017)&#xD;&#xA;Bevat: [ZIB-618](https://bits.nictiz.nl/browse/ZIB-618).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (31-01-2020)&#xD;&#xA;Bevat: [ZIB-812](https://bits.nictiz.nl/browse/ZIB-812).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1.1 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-911](https://bits.nictiz.nl/browse/ZIB-911).&#xD;&#xA;&#xD;&#xA;"/>
-         </extension>
+  <description value="**Concept**&#xD;&#xA;Medication administration is the registration of the individual administrations of the medicine on the patient by the administrator (e.g. a nurse or patient themselves), in relation to the entered agreements.&#xD;&#xA;**Purpose**&#xD;&#xA;The goal of administering the medication is to provide insight into the actual administered products.&#xD;&#xA;**Example Instances**">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
       </extension>
-   </description>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-   <fhirVersion value="4.0.1"/>
-   <kind value="logical"/>
-   <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/medication_administration"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
-   <derivation value="specialization"/>
-   <differential>
-        <element id="medication_administration">
-         <path value="medication_administration"/>
-         <short value="MedicationAdministration">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="MedicatieToediening"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Root concept of the MedicationAdministration information model. This root concept contains all data elements of the MedicationAdministration information model.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Rootconcept van de bouwsteen MedicatieToediening. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedicatieToediening."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="*"/>
-         <base>
-                <path value="medication_administration"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-      </element>
-        <element id="medication_administration.administration_product">
-         <path value="medication_administration.administration_product"/>
-         <short value="AdministrationProduct">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="ToedieningsProduct"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="The product taken or administered. This is usually medication. Food, blood products, aids and bandages do not strictly fall under the category of medication, but can be reported as well. &#xD;&#xA;&#xD;&#xA;In principle, this will be the prescribed product, but the administrator may substitute it by replacing the product with an equivalent product. For example: two 50mg tablets can be administered instead of one 100mg tablet.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Het ingenomen of toegediende middel. Dit is vrijwel steeds een geneesmiddel. Voedingsmiddelen, bloedproducten, hulp- en verbandmiddelen vallen strikt genomen niet onder de categorie geneesmiddelen, maar kunnen ook worden worden gerapporteerd. &#xD;&#xA;&#xD;&#xA;In principe betreft dit het voorgeschreven product, maar de toediener kan door substitutie het voorgeschreven product vervangen door een equivalent product. Bijv. in plaats van tabletten van 100mg, tabletten van 50mg waarvan er dan twee worden toegediend."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.administration_product"/>
-                <min value="1"/>
-                <max value="1"/>
-            </base>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct"/>
-         </type>
-      </element>
-        <element id="medication_administration.administering_speed">
-         <path value="medication_administration.administering_speed"/>
-         <short value="AdministeringSpeed">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Toedieningssnelheid"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="The administering speed is used in slow administration of liquid. In practice, the measuring unit is almost always ml/hour. &#xD;&#xA;Entering an interval (such as 0-10 ml/hour) is also a commonly used option. &#xD;&#xA;&#xD;&#xA;For example, with an administering speed of 10ml/hour: &#xD;&#xA;&#xD;&#xA;* amount = 10,&#xD;&#xA;* dose unit = ml&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;* time unit = hour&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Optionally a translation to NHG table Gebruiksvoorschriften(Table 25) is also allowed.&#xD;&#xA;">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="De toedieningssnelheid wordt gebruikt bij de langzame toediening van vloeistoffen. De meeteenheid is in de praktijk vrijwel altijd ml/uur.&#xD;&#xA;Ook het opgeven van een interval (bijv. 0-10 ml/uur) is een gebruikelijke optie.&#xD;&#xA;&#xD;&#xA;Bijvoorbeeld, bij toedieningssnelheid van 10ml/uur geldt:&#xD;&#xA;&#xD;&#xA;* aantal = 10,&#xD;&#xA;* gebruikseenheid = ml&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;* tijdseenheid = uur&#xD;&#xA;&#xD;&#xA;&#xD;&#xA; Optioneel is voor de eenheid in plaats van gebruik van UCUM eenheden ook een vertaling toegestaan naar NHG tabel Gebruiksvoorschriften (tabel 25). &#xD;&#xA;"/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.administering_speed"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="BackboneElement"/>
-            </type>
-      </element>
-        <element id="medication_administration.administering_speed.minimum_value">
-         <path value="medication_administration.administering_speed.minimum_value"/>
-         <short value="minimumValue">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="minimumWaarde"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="The minimal value of the range">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="De minimale waarde van het bereik"/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.administering_speed.minimum_value"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="Quantity"/>
-            </type>
-      </element>
-        <element id="medication_administration.administering_speed.maximum_value">
-         <path value="medication_administration.administering_speed.maximum_value"/>
-         <short value="maximumValue">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="maximumWaarde"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="The maximum value of the range">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="De maximale waarde van het bereik"/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.administering_speed.maximum_value"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="Quantity"/>
-            </type>
-      </element>
-        <element id="medication_administration.administering_speed.nominal_value">
-         <path value="medication_administration.administering_speed.nominal_value"/>
-         <short value="nominalValue">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="nominaleWaarde"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="The nominal value of the quantity. This element can not be used in combination with a minimum and maximum value">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="De nominale waarde van de hoeveelheid. Dit element kan niet in combinatie met een minimale en maximale waarde gebruikt worden."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.administering_speed.nominal_value"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="Quantity"/>
-            </type>
-      </element>
-        <element id="medication_administration.administration_date_time">
-         <path value="medication_administration.administration_date_time"/>
-         <short value="AdministrationDateTime">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="ToedieningsDatumTijd"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="The date and time at which the medication was administered.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Datum en tijd waarop de toediening heeft plaatsgevonden."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.administration_date_time"/>
-                <min value="1"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="dateTime"/>
-            </type>
-      </element>
-        <element id="medication_administration.agreed_date_time">
-         <path value="medication_administration.agreed_date_time"/>
-         <short value="AgreedDateTime">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="AfgesprokenDatumTijd"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Date and time in the medication or administration agreement to which this administration pertains. Since multiple times can be indicated in one medication/administration agreement, this can be used to identify the agreed time in the event of e.g. early administration or a late administration. ">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Datum en tijd uit de medicatie- of toedieningsafspraak waarop deze toediening betrekking heeft. Omdat er in één medicatie/toedieningsafspraak meerdere tijdstippen kunnen worden aangegeven kan hiermee bij bijvoorbeeld vervroegde toediening of het inhalen van een toediening het afgesproken tijdstip worden achterhaald. "/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.agreed_date_time"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="dateTime"/>
-            </type>
-      </element>
-        <element id="medication_administration.administered_amount">
-         <path value="medication_administration.administered_amount"/>
-         <short value="AdministeredAmount">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="ToegediendeHoeveelheid"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Amount of the administered product.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Hoeveelheid van het product dat werd toegediend."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.administered_amount"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="Quantity"/>
-            </type>
-      </element>
-        <element id="medication_administration.deviating_administration">
-         <path value="medication_administration.deviating_administration"/>
-         <short value="DeviatingAdministration">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="AfwijkendeToediening"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="In the administration, was there a deviation from the medication or administration agreement? This can be a deviation in product, time, amount, route of administration or administering speed or foregoing administration altogether.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Is er een afwijking geweest in de toediening ten opzicht van de medicatie- of toedieningsafspraak? Dit kan een afwijking betreffen in product, tijdstip, hoeveelheid, toedieningsweg of toedieningssnelheid of het in het geheel niet toedienen."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.deviating_administration"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="boolean"/>
-            </type>
-      </element>
-        <element id="medication_administration.route_of_administration">
-         <path value="medication_administration.route_of_administration"/>
-         <short value="RouteOfAdministration">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Toedieningsweg"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="The route through which the medication is administered (oral, nasal, intravenous,...).">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="De route waarlangs de medicatie wordt toegediend (oraal, nasaal, intraveneus,...)."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.route_of_administration"/>
-                <min value="1"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="CodeableConcept"/>
-            </type>
-         <binding>
-            <strength value="required"/>
-            <description value="RouteOfAdministration codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieToedieningToedieningsweg"/>
-         </binding>
-      </element>
-        <element id="medication_administration.double_check_performed">
-         <path value="medication_administration.double_check_performed"/>
-         <short value="DoubleCheckPerformed">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="DubbeleControleUitgevoerd"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Was a double check performed prior to the administration? This is only legally required for certain medication.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Is er dubbele controle uitgevoerd voorafgaande aan de toediening? Dit is alleen bij bepaalde medicatie wettelijk verplicht."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.double_check_performed"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="boolean"/>
-            </type>
-      </element>
-        <element id="medication_administration.related_agreement">
-         <path value="medication_administration.related_agreement"/>
-         <short value="RelatedAgreement">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="GerelateerdeAfspraak"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Medication or administration agreement on which this administration.is based.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Medicatie- of toedieningsafspraak waar deze toediening op gebaseerd is."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.related_agreement"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="BackboneElement"/>
-            </type>
-      </element>
-        <element id="medication_administration.related_agreement.medication_agreement">
-         <path value="medication_administration.related_agreement.medication_agreement"/>
-         <short value="MedicationAgreement">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Medicatieafspraak"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Medication agreement on which this administration.is based.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Medicatiesafspraak waar deze toediening op gebaseerd is."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.related_agreement.medication_agreement"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationAgreement"/>
-         </type>
-      </element>
-        <element id="medication_administration.related_agreement.administration_agreement">
-         <path value="medication_administration.related_agreement.administration_agreement"/>
-         <short value="AdministrationAgreement">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Toedieningsafspraak"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Administration agreement on which this administration is based.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Toedieningsafspraak waar deze toediening op gebaseerd is."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.related_agreement.administration_agreement"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AdministrationAgreement"/>
-         </type>
-      </element>
-        <element id="medication_administration.administrator">
-         <path value="medication_administration.administrator"/>
-         <short value="Administrator">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Toediener"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Container of the Administrator concept. This container contains all data elements of the Administrator concept. The concept describes the person who administered the product. This is a professional authorised administrator, the patient themselves or the caregiver, for example.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="De container van het concept Toediener. Deze container bevat alle gegevenselementen van de concept Toediener. Het concept beschrijft de persoon die de toediening gerealiseerd heeft. Dit is een professionele toedieningsbevoegde, de patient zelf of de bijvoorbeeld de mantelzorger. "/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.administrator"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="BackboneElement"/>
-            </type>
-      </element>
-        <element id="medication_administration.administrator.patient">
-         <path value="medication_administration.administrator.patient"/>
-         <short value="Patient">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Patiënt"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="If the patient administered the medication themselves, indicate that here. If the medication is administered by a health professional or caregiver/family member/etc., the health professional is entered in the ‘Healthcare provider’ element or the caregiver/family member/etc. is entered in the ‘Contact’ element respectively.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Wanneer de patiënt zelf de medicatie heeft toegediend wordt dat hier aangegeven. Wanneer de medicatietoediening is gedaan door een zorgverlener of mantelzorger/familielid/etc. wordt respectievelijk de zorgverlener vermeld in het element 'Zorgverlener' of de mantelzorger/familielid/etc. in het element 'Contactpersoon'."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.administrator.patient"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Patient"/>
-         </type>
-      </element>
-        <element id="medication_administration.administrator.health_professional">
-         <path value="medication_administration.administrator.health_professional"/>
-         <short value="HealthProfessional">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Zorgverlener"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="The concept describes the person who administered the product. This is a professional authorised administrator.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Het concept beschrijft de persoon die de toediening gerealiseerd heeft. Dit is een professionele toedieningsbevoegde."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.administrator.health_professional"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
-         </type>
-      </element>
-        <element id="medication_administration.administrator.caregiver">
-         <path value="medication_administration.administrator.caregiver"/>
-         <short value="Caregiver">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Mantelzorger"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Information on the patient’s personal relative or contact that administered the medication.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Gegevens van een persoonlijke relatie van de patiënt, die de medicatietoediening heeft gedaan."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.administrator.caregiver"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson"/>
-         </type>
-      </element>
-        <element id="medication_administration.medication_administration_reason_for_deviation">
-         <path value="medication_administration.medication_administration_reason_for_deviation"/>
-         <short value="MedicationAdministrationReasonForDeviation">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="MedicatieToedieningRedenVanAfwijken"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Reason why the medication was not taken or administered or was taken or administered differently. Here, you can choose to enter text or one of the codes.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Reden dat de toediening of inname van een medicament niet of anders is uitgevoerd. Hier kan een tekst of een van de codes gekozen worden."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.medication_administration_reason_for_deviation"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="CodeableConcept"/>
-            </type>
-         <binding>
-            <strength value="required"/>
-            <description value="MedicationAdministrationReasonForDeviation codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieToedieningRedenVanAfwijken"/>
-         </binding>
-      </element>
-        <element id="medication_administration.medication_administration_status">
-         <path value="medication_administration.medication_administration_status"/>
-         <short value="MedicationAdministrationStatus">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="MedicatieToedieningStatus"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="The status of the administration, as a description of the stage within the administering process. Only the status codes ‘completed’ and ‘cancelled’ apply to indivisible products (such as tablets or suppositories). For divisible products (such as infusions), doses can also be ‘suspended’ or ‘aborted’. &#xD;&#xA;&#xD;&#xA;When documenting this, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Active: The product is administered.&#xD;&#xA;* Interrupted: Use has (temporarily) been interrupted, because of a side effect, for example. Later, the patient and/or doctor can decide whether or not to resume or discontinue use.&#xD;&#xA;* Discontinued: Administration has stopped.&#xD;&#xA;* Completed: Administration has been completed.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;* Not started: The product was never administered.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="De status van de toediening, als beschijving van het stadium van het toedieningsproces. Voor ondeelbare producten (bijv. tabletten, zetpillen) zijn alleen de status codes ‘completed’ (voltooid) en ‘cancelled’ (niet toegediend) van toepassing. Voor deelbare producten (bijv. infusen) geldt dat de toediening ook ‘suspended’ (onderbroken) en ‘aborted’ (afgebroken) kan zijn.&#xD;&#xA;&#xD;&#xA;Bij de vastlegging worden de volgende interpretaties gehanteerd:&#xD;&#xA;&#xD;&#xA;* Actief: Het product wordt toegediend.&#xD;&#xA;* Onderbroken: De toediening is (tijdelijk) onderbroken , bv. wegens een bijwerking. Later zal besloten worden tot hervatting of stoppen.&#xD;&#xA;* Afgebroken: De toediening is afgebroken.&#xD;&#xA;* Voltooid: De toediening is helemaal afgerond.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;* Niet gestart: De toediening van het product is niet gestart.&#xD;&#xA;&#xD;&#xA;"/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.medication_administration_status"/>
-                <min value="1"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="CodeableConcept"/>
-            </type>
-         <binding>
-            <strength value="required"/>
-            <description value="MedicationAdministrationStatus codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieToedieningStatus"/>
-         </binding>
-      </element>
-        <element id="medication_administration.comment">
-         <path value="medication_administration.comment"/>
-         <short value="Comment">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Toelichting"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Comments on administering the medication.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Opmerkingen met betrekking tot de medicatie toediening."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="medication_administration.comment"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="string"/>
-            </type>
-      </element>
-    </differential>
+      <extension url="content">
+        <valueMarkdown value="**Concept**&#xD;&#xA;Medicatietoediening is de registratie van de afzonderlijke toedieningen van het geneesmiddel aan de patiënt door de toediener (zoals een verpleegkundige of patiënt zelf), in relatie tot de gemaakte afspraken.&#xD;&#xA;**Purpose**&#xD;&#xA;Het doel van medicatietoediening is inzicht te geven in de daadwerkelijk toegediende producten.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (04-09-2017)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.1 (31-12-2017)&#xD;&#xA;Bevat: [ZIB-618](https://bits.nictiz.nl/browse/ZIB-618).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (31-01-2020)&#xD;&#xA;Bevat: [ZIB-812](https://bits.nictiz.nl/browse/ZIB-812).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1.1 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-911](https://bits.nictiz.nl/browse/ZIB-911)." />
+      </extension>
+    </extension>
+  </description>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="true" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/medication_administration" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="medication_administration">
+      <path value="medication_administration" />
+      <short value="MedicationAdministration">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="MedicatieToediening" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Root concept of the MedicationAdministration information model. This root concept contains all data elements of the MedicationAdministration information model.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de bouwsteen MedicatieToediening. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedicatieToediening." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="medication_administration" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+    </element>
+    <element id="medication_administration.administration_product">
+      <path value="medication_administration.administration_product" />
+      <short value="AdministrationProduct">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="ToedieningsProduct" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The product taken or administered. This is usually medication. Food, blood products, aids and bandages do not strictly fall under the category of medication, but can be reported as well. &#xD;&#xA;&#xD;&#xA;In principle, this will be the prescribed product, but the administrator may substitute it by replacing the product with an equivalent product. For example: two 50mg tablets can be administered instead of one 100mg tablet.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Het ingenomen of toegediende middel. Dit is vrijwel steeds een geneesmiddel. Voedingsmiddelen, bloedproducten, hulp- en verbandmiddelen vallen strikt genomen niet onder de categorie geneesmiddelen, maar kunnen ook worden worden gerapporteerd. &#xD;&#xA;&#xD;&#xA;In principe betreft dit het voorgeschreven product, maar de toediener kan door substitutie het voorgeschreven product vervangen door een equivalent product. Bijv. in plaats van tabletten van 100mg, tabletten van 50mg waarvan er dan twee worden toegediend." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.administration_product" />
+        <min value="1" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct" />
+      </type>
+    </element>
+    <element id="medication_administration.administering_speed">
+      <path value="medication_administration.administering_speed" />
+      <short value="AdministeringSpeed">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toedieningssnelheid" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The administering speed is used in slow administration of liquid. In practice, the measuring unit is almost always ml/hour. &#xD;&#xA;Entering an interval (such as 0-10 ml/hour) is also a commonly used option. &#xD;&#xA;&#xD;&#xA;For example, with an administering speed of 10ml/hour: &#xD;&#xA;&#xD;&#xA;* amount = 10,&#xD;&#xA;* dose unit = ml&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;* time unit = hour&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Optionally a translation to NHG table Gebruiksvoorschriften(Table 25) is also allowed.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De toedieningssnelheid wordt gebruikt bij de langzame toediening van vloeistoffen. De meeteenheid is in de praktijk vrijwel altijd ml/uur.&#xD;&#xA;Ook het opgeven van een interval (bijv. 0-10 ml/uur) is een gebruikelijke optie.&#xD;&#xA;&#xD;&#xA;Bijvoorbeeld, bij toedieningssnelheid van 10ml/uur geldt:&#xD;&#xA;&#xD;&#xA;* aantal = 10,&#xD;&#xA;* gebruikseenheid = ml&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;* tijdseenheid = uur&#xD;&#xA;&#xD;&#xA;&#xD;&#xA; Optioneel is voor de eenheid in plaats van gebruik van UCUM eenheden ook een vertaling toegestaan naar NHG tabel Gebruiksvoorschriften (tabel 25)." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.administering_speed" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="medication_administration.administering_speed.minimum_value">
+      <path value="medication_administration.administering_speed.minimum_value" />
+      <short value="minimumValue">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="minimumWaarde" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The minimal value of the range">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De minimale waarde van het bereik" />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.administering_speed.minimum_value" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="medication_administration.administering_speed.maximum_value">
+      <path value="medication_administration.administering_speed.maximum_value" />
+      <short value="maximumValue">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="maximumWaarde" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The maximum value of the range">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De maximale waarde van het bereik" />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.administering_speed.maximum_value" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="medication_administration.administering_speed.nominal_value">
+      <path value="medication_administration.administering_speed.nominal_value" />
+      <short value="nominalValue">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="nominaleWaarde" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The nominal value of the quantity. This element can not be used in combination with a minimum and maximum value">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De nominale waarde van de hoeveelheid. Dit element kan niet in combinatie met een minimale en maximale waarde gebruikt worden." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.administering_speed.nominal_value" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="medication_administration.administration_date_time">
+      <path value="medication_administration.administration_date_time" />
+      <short value="AdministrationDateTime">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="ToedieningsDatumTijd" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The date and time at which the medication was administered.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Datum en tijd waarop de toediening heeft plaatsgevonden." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.administration_date_time" />
+        <min value="1" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="medication_administration.agreed_date_time">
+      <path value="medication_administration.agreed_date_time" />
+      <short value="AgreedDateTime">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="AfgesprokenDatumTijd" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Date and time in the medication or administration agreement to which this administration pertains. Since multiple times can be indicated in one medication/administration agreement, this can be used to identify the agreed time in the event of e.g. early administration or a late administration.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Datum en tijd uit de medicatie- of toedieningsafspraak waarop deze toediening betrekking heeft. Omdat er in één medicatie/toedieningsafspraak meerdere tijdstippen kunnen worden aangegeven kan hiermee bij bijvoorbeeld vervroegde toediening of het inhalen van een toediening het afgesproken tijdstip worden achterhaald." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.agreed_date_time" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="medication_administration.administered_amount">
+      <path value="medication_administration.administered_amount" />
+      <short value="AdministeredAmount">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="ToegediendeHoeveelheid" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Amount of the administered product.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Hoeveelheid van het product dat werd toegediend." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.administered_amount" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="medication_administration.deviating_administration">
+      <path value="medication_administration.deviating_administration" />
+      <short value="DeviatingAdministration">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="AfwijkendeToediening" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="In the administration, was there a deviation from the medication or administration agreement? This can be a deviation in product, time, amount, route of administration or administering speed or foregoing administration altogether.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Is er een afwijking geweest in de toediening ten opzicht van de medicatie- of toedieningsafspraak? Dit kan een afwijking betreffen in product, tijdstip, hoeveelheid, toedieningsweg of toedieningssnelheid of het in het geheel niet toedienen." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.deviating_administration" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="medication_administration.route_of_administration">
+      <path value="medication_administration.route_of_administration" />
+      <short value="RouteOfAdministration">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toedieningsweg" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The route through which the medication is administered (oral, nasal, intravenous,...).">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De route waarlangs de medicatie wordt toegediend (oraal, nasaal, intraveneus,...)." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.route_of_administration" />
+        <min value="1" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="RouteOfAdministration codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieToedieningToedieningsweg" />
+      </binding>
+    </element>
+    <element id="medication_administration.double_check_performed">
+      <path value="medication_administration.double_check_performed" />
+      <short value="DoubleCheckPerformed">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="DubbeleControleUitgevoerd" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Was a double check performed prior to the administration? This is only legally required for certain medication.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Is er dubbele controle uitgevoerd voorafgaande aan de toediening? Dit is alleen bij bepaalde medicatie wettelijk verplicht." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.double_check_performed" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="medication_administration.related_agreement">
+      <path value="medication_administration.related_agreement" />
+      <short value="RelatedAgreement">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="GerelateerdeAfspraak" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Medication or administration agreement on which this administration.is based.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Medicatie- of toedieningsafspraak waar deze toediening op gebaseerd is." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.related_agreement" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="medication_administration.related_agreement.medication_agreement">
+      <path value="medication_administration.related_agreement.medication_agreement" />
+      <short value="MedicationAgreement">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Medicatieafspraak" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Medication agreement on which this administration.is based.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Medicatiesafspraak waar deze toediening op gebaseerd is." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.related_agreement.medication_agreement" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationAgreement" />
+      </type>
+    </element>
+    <element id="medication_administration.related_agreement.administration_agreement">
+      <path value="medication_administration.related_agreement.administration_agreement" />
+      <short value="AdministrationAgreement">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toedieningsafspraak" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Administration agreement on which this administration is based.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toedieningsafspraak waar deze toediening op gebaseerd is." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.related_agreement.administration_agreement" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AdministrationAgreement" />
+      </type>
+    </element>
+    <element id="medication_administration.administrator">
+      <path value="medication_administration.administrator" />
+      <short value="Administrator">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toediener" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Container of the Administrator concept. This container contains all data elements of the Administrator concept. The concept describes the person who administered the product. This is a professional authorised administrator, the patient themselves or the caregiver, for example.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De container van het concept Toediener. Deze container bevat alle gegevenselementen van de concept Toediener. Het concept beschrijft de persoon die de toediening gerealiseerd heeft. Dit is een professionele toedieningsbevoegde, de patient zelf of de bijvoorbeeld de mantelzorger." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.administrator" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="medication_administration.administrator.patient">
+      <path value="medication_administration.administrator.patient" />
+      <short value="Patient">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Patiënt" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="If the patient administered the medication themselves, indicate that here. If the medication is administered by a health professional or caregiver/family member/etc., the health professional is entered in the ‘Healthcare provider’ element or the caregiver/family member/etc. is entered in the ‘Contact’ element respectively.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Wanneer de patiënt zelf de medicatie heeft toegediend wordt dat hier aangegeven. Wanneer de medicatietoediening is gedaan door een zorgverlener of mantelzorger/familielid/etc. wordt respectievelijk de zorgverlener vermeld in het element 'Zorgverlener' of de mantelzorger/familielid/etc. in het element 'Contactpersoon'." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.administrator.patient" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Patient" />
+      </type>
+    </element>
+    <element id="medication_administration.administrator.health_professional">
+      <path value="medication_administration.administrator.health_professional" />
+      <short value="HealthProfessional">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Zorgverlener" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The concept describes the person who administered the product. This is a professional authorised administrator.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Het concept beschrijft de persoon die de toediening gerealiseerd heeft. Dit is een professionele toedieningsbevoegde." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.administrator.health_professional" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional" />
+      </type>
+    </element>
+    <element id="medication_administration.administrator.caregiver">
+      <path value="medication_administration.administrator.caregiver" />
+      <short value="Caregiver">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Mantelzorger" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Information on the patient’s personal relative or contact that administered the medication.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Gegevens van een persoonlijke relatie van de patiënt, die de medicatietoediening heeft gedaan." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.administrator.caregiver" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson" />
+      </type>
+    </element>
+    <element id="medication_administration.medication_administration_reason_for_deviation">
+      <path value="medication_administration.medication_administration_reason_for_deviation" />
+      <short value="MedicationAdministrationReasonForDeviation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="MedicatieToedieningRedenVanAfwijken" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Reason why the medication was not taken or administered or was taken or administered differently. Here, you can choose to enter text or one of the codes.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Reden dat de toediening of inname van een medicament niet of anders is uitgevoerd. Hier kan een tekst of een van de codes gekozen worden." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.medication_administration_reason_for_deviation" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="MedicationAdministrationReasonForDeviation codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieToedieningRedenVanAfwijken" />
+      </binding>
+    </element>
+    <element id="medication_administration.medication_administration_status">
+      <path value="medication_administration.medication_administration_status" />
+      <short value="MedicationAdministrationStatus">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="MedicatieToedieningStatus" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The status of the administration, as a description of the stage within the administering process. Only the status codes ‘completed’ and ‘cancelled’ apply to indivisible products (such as tablets or suppositories). For divisible products (such as infusions), doses can also be ‘suspended’ or ‘aborted’. &#xD;&#xA;&#xD;&#xA;When documenting this, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Active: The product is administered.&#xD;&#xA;* Interrupted: Use has (temporarily) been interrupted, because of a side effect, for example. Later, the patient and/or doctor can decide whether or not to resume or discontinue use.&#xD;&#xA;* Discontinued: Administration has stopped.&#xD;&#xA;* Completed: Administration has been completed.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;* Not started: The product was never administered.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De status van de toediening, als beschijving van het stadium van het toedieningsproces. Voor ondeelbare producten (bijv. tabletten, zetpillen) zijn alleen de status codes ‘completed’ (voltooid) en ‘cancelled’ (niet toegediend) van toepassing. Voor deelbare producten (bijv. infusen) geldt dat de toediening ook ‘suspended’ (onderbroken) en ‘aborted’ (afgebroken) kan zijn.&#xD;&#xA;&#xD;&#xA;Bij de vastlegging worden de volgende interpretaties gehanteerd:&#xD;&#xA;&#xD;&#xA;* Actief: Het product wordt toegediend.&#xD;&#xA;* Onderbroken: De toediening is (tijdelijk) onderbroken , bv. wegens een bijwerking. Later zal besloten worden tot hervatting of stoppen.&#xD;&#xA;* Afgebroken: De toediening is afgebroken.&#xD;&#xA;* Voltooid: De toediening is helemaal afgerond.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;* Niet gestart: De toediening van het product is niet gestart." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.medication_administration_status" />
+        <min value="1" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="MedicationAdministrationStatus codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieToedieningStatus" />
+      </binding>
+    </element>
+    <element id="medication_administration.comment">
+      <path value="medication_administration.comment" />
+      <short value="Comment">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toelichting" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Comments on administering the medication.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Opmerkingen met betrekking tot de medicatie toediening." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="medication_administration.comment" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
 </StructureDefinition>

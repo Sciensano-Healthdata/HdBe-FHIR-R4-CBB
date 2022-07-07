@@ -2,8 +2,8 @@
 
 | living_situation    |                   |
 |-----------------|-------------------|
-| house_type |  [*code* - *preferred name* (*CodeSystem*)] |
-| home_adaption |  [*code* - *preferred name* (*CodeSystem*)] |
-| living_condition | [*code* - *preferred name* (*CodeSystem*)] |
+| house_type |   |
+| home_adaption |   |
+| living_condition |  |
 | comment |  | 
 
