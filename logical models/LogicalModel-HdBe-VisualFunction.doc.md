@@ -2,4 +2,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`visual_aid.medical_device.product_type` | terminology | Replaced *geen* and *other* in VisualAidType ValueSet with SNOMED CT values and added a value for Unknown. |
+|`visual_aid.medical_device.product_type` | terminology | Replaced *geen* and *other* in VisualAidType ValueSet with SNOMED CT values and added a value for Unknown.  |

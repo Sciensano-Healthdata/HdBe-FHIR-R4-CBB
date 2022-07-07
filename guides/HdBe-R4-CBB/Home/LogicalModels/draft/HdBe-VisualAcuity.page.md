@@ -2,7 +2,7 @@
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-VisualFunction'
+where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-VisualAcuity'
 select 
 CBB: id,
 Version: version,
@@ -21,25 +21,25 @@ URL: url
 
   <div id="Rendered view" class="tabcontent" style="display:block">
     <br>
-      {{render:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-VisualFunction, snapshot}}
+      {{render:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-VisualAcuity, snapshot}}
   </div>
 
   <div id="Table view" class="tabcontent">
     <br>
-      {{table:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-VisualFunction}}
+      {{table:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-VisualAcuity}}
   </div>
 
   <div id="Detailed descriptions" class="tabcontent">
    <br>
-      {{dict:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-VisualFunction}}
+      {{dict:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-VisualAcuity}}
   </div>
 
   <div id="Example" class="tabcontent">
-      {{render:logical models/LogicalModel-HdBe-VisualFunction.example.md}}
+      {{render:logical models/LogicalModel-HdBe-VisualAcuity.example.md}}
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:logical models/LogicalModel-HdBe-VisualFunction.doc.md}}
+      {{render:logical models/LogicalModel-HdBe-VisualAcuity.doc.md}}
   </div>
 
 </div>
@@ -50,7 +50,7 @@ URL: url
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-VisualFunction'
+where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-VisualAcuity'
 for differential.element
 select
 Path: path.substring((1 + path.indexOf('.'))),

@@ -2,7 +2,7 @@
 
 | vaccination     |                   |
 |-----------------|-------------------|
-| product_code |    |
+| product_code |     |
 | dose  |   |
 | vaccination_date |    |
 | **administrator** | -- |

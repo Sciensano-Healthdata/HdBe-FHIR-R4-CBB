@@ -5,7 +5,7 @@
 | visual_function |45089002 - Normal vision (code by SNOMED CT)  |
 | **visual_aid** | -- |
 | visual_aid.medical_device.product_type|  |
-| comment |   |
+| comment |    |
 
 | visual_function   |                   |
 |-----------------|-------------------|
