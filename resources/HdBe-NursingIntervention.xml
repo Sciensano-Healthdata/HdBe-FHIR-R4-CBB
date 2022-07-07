@@ -148,7 +148,7 @@
       <slicing>
         <discriminator>
           <type value="exists" />
-          <path value="extension(url='https://fhir.healthdata.be/StructureDefinition/ext-NursingIntervention-ContributorIsRequester')" />
+          <path value="extension('https://fhir.healthdata.be/StructureDefinition/ext-NursingIntervention-ContributorIsRequester')" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -447,7 +447,7 @@
       <path value="CarePlan.activity.detail.performer" />
       <slicing>
         <discriminator>
-          <type value="profile" />
+          <type value="type" />
           <path value="resolve()" />
         </discriminator>
         <rules value="open" />
@@ -456,28 +456,6 @@
       <mapping>
         <identity value="HdBe-NursingIntervention" />
         <map value="performer" />
-      </mapping>
-    </element>
-    <element id="CarePlan.activity.detail.performer:healthcareProvider">
-      <path value="CarePlan.activity.detail.performer" />
-      <sliceName value="healthcareProvider" />
-      <short value="HealthcareProvider" />
-      <definition value="The health professional carrying out the nursing procedure." />
-      <alias value="Zorgverlener" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole" />
-      </type>
-      <mapping>
-        <identity value="zib-nursingintervention-v3.2-2020EN" />
-        <map value="NL-CM:14.2.7" />
-        <comment value="HealthcareProvider" />
-      </mapping>
-      <mapping>
-        <identity value="HdBe-NursingIntervention" />
-        <map value="performer.healthcare_provider" />
       </mapping>
     </element>
     <element id="CarePlan.activity.detail.performer:caregiver">
@@ -499,6 +477,28 @@
       <mapping>
         <identity value="HdBe-NursingIntervention" />
         <map value="performer.caregiver" />
+      </mapping>
+    </element>
+    <element id="CarePlan.activity.detail.performer:healthcareProfessional">
+      <path value="CarePlan.activity.detail.performer" />
+      <sliceName value="healthcareProfessional" />
+      <short value="HealthcareProvider" />
+      <definition value="The health professional carrying out the nursing procedure." />
+      <alias value="Zorgverlener" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner" />
+      </type>
+      <mapping>
+        <identity value="zib-nursingintervention-v3.2-2020EN" />
+        <map value="NL-CM:14.2.7" />
+        <comment value="HealthcareProvider" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-NursingIntervention" />
+        <map value="performer.healthcare_provider" />
       </mapping>
     </element>
     <element id="CarePlan.activity.detail.performer:patient">
