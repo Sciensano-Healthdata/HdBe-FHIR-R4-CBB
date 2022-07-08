@@ -2,7 +2,7 @@
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-AllergyIntolerance'
+where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-PulseRate'
 select 
 Profile: id,
 Description: description,
@@ -19,22 +19,22 @@ URL: url
      <button class="tablinks" onclick="openTab(event, 'Mapping')">Mapping</button>
      <button class="tablinks" onclick="openTab(event, 'Examples')">Examples</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff')">Zib-profile diff</button>
-     <button class="tablinks">{{pagelink:Home/LogicalModels/HdBe-AllergyIntolerance.page.md, text:CBB}}</button>
+     <button class="tablinks">{{pagelink:Home/LogicalModels/HdBe-PulseRate.page.md, text:CBB}}</button>
   </div>
 
   <div id="Snapshot view" class="tabcontent" style="display:block">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-AllergyIntolerance, snapshot}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-PulseRate, snapshot}}
   </div>
 
   <div id="Hybrid view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-AllergyIntolerance, hybrid}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-PulseRate, hybrid}}
   </div>
 
   <div id="Diff view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-AllergyIntolerance, diff}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-PulseRate, diff}}
   </div>
 
   <div id="Mapping" class="tabcontent">      
@@ -42,24 +42,24 @@ URL: url
       <div>
       @```
       from StructureDefinition
-      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-AllergyIntolerance'
+      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-PulseRate'
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-AllergyIntolerance') { map, comment }
+        join mapping.where(identity = 'HdBe-PulseRate') { map, comment }
       ```
     </div>
   </div>
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-AllergyIntolerance-01.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-PulseRate-01.page.md}}</li>
         
       </ul>
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:resources/HdBe-AllergyIntolerance.doc.md}}
+      {{render:resources/HdBe-PulseRate.doc.md}}
   </div>
 
 </div>
@@ -70,7 +70,7 @@ URL: url
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-AllergyIntolerance'
+where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-PulseRate'
 
 for differential.element
 select

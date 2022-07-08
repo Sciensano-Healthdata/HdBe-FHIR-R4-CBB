@@ -28,13 +28,23 @@ def getDesignationsById(id, filename):
     desNL = ValueSetComposeIncludeConceptDesignation.construct()
     desFR = ValueSetComposeIncludeConceptDesignation.construct()
 
+    #Loop through all concept descriptions
     for x in data['conceptDescriptions']:
-        if x['active'] == True and x['type'] == 'SYNONYM' and x['released'] == True:
-            ## EN designation
-            if x['lang'] == 'en':
-                for key in x['acceptabilityMap']:
-                    if x['acceptabilityMap'][key] == 'PREFERRED':
-                        EN = {
+        # We only want 1 designation per langague. Filter by active status, needs to be a synonym and published.
+        # Then, next step is to only select the preferred designations. We leave out the acceptable ones. 
+         if x['active'] == True and x['type'] == 'SYNONYM' and x['released'] == True:
+            for key in x['acceptabilityMap']: 
+                    # 31000172101 = BE NL lang refset
+                    # 21000172104 = BE FR lang refset
+                    # 900000000000509007 = EN US refset - currently in use for filtering
+                    # 900000000000508004 = EN GB lang refset
+                    
+                    # TODO - Make function that uses designations from these refsets if not exists in one of the above.
+                    # 711000172101 = Belgium FR GP refset
+                    # 701000172104 = Belgium NL GP refset 
+                    if x['acceptabilityMap'][key] == 'PREFERRED' and (key =='31000172101' or key =='21000172104' or key=='900000000000509007'):
+                        if x['lang'] == 'en':
+                            EN = {
                                     "language": "en-US",
                                     "use": {
                                         "system": "http://snomed.info/sct",
@@ -43,44 +53,36 @@ def getDesignationsById(id, filename):
                                     },
                                     "value": x['term']
                                 }
-                        desEN = ValueSetComposeIncludeConceptDesignation.parse_obj(EN)            
-            ## NL designation
-            if x['lang'] == 'nl':
-                for key in x['acceptabilityMap']:
-                    if x['acceptabilityMap'][key] == 'PREFERRED':
-                        NL = {
-                                    "language": "nl-BE",
-                                    "use": {
-                                        "system": "http://snomed.info/sct",
-                                        "code": "900000000000013009",
-                                        "display": "Synonym"
-                                    },
-                                    "value": x['term']
-                                }
-                        desNL = ValueSetComposeIncludeConceptDesignation.parse_obj(NL)
-            ## FR designation                   
-            if x['lang'] == 'fr':
-                for key in x['acceptabilityMap']:
-                    if x['acceptabilityMap'][key] == 'PREFERRED':
-                        FR = {
-                                    "language": "fr-BE",
-                                    "use": {
-                                        "system": "http://snomed.info/sct",
-                                        "code": "900000000000013009",
-                                        "display": "Synonym"
-                                    },
-                                    "value": x['term']
-                                }
-                        desFR = ValueSetComposeIncludeConceptDesignation.parse_obj(FR)                  
+                            desEN = ValueSetComposeIncludeConceptDesignation.parse_obj(EN)
+                        if x['lang'] == 'nl':
+                            NL = {
+                                        "language": "nl-BE",
+                                        "use": {
+                                            "system": "http://snomed.info/sct",
+                                            "code": "900000000000013009",
+                                            "display": "Synonym"
+                                        },
+                                        "value": x['term']
+                                    }
+                            desNL = ValueSetComposeIncludeConceptDesignation.parse_obj(NL)
+                        if x['lang'] == 'fr':
+                            FR = {
+                                        "language": "fr-BE",
+                                        "use": {
+                                            "system": "http://snomed.info/sct",
+                                            "code": "900000000000013009",
+                                            "display": "Synonym"
+                                        },
+                                        "value": x['term']
+                                    }
+                            desFR = ValueSetComposeIncludeConceptDesignation.parse_obj(FR)                                
     return(desEN, desNL, desFR)
 
 #Gets designations for all snomed concepts in a valuesets, adds them, and returns an updated valueset. 
 def addDesignations(valueset, filename):
     vsci = []
-    # Set language of the ValueSet to en-US because we use the en-US designation for the .concept.display value.
-    valueset.language = "en-US"
     for x in valueset.compose.include:
-        # Only get designations for SNOMED codes, that are extententionally defined (no filter) and do have a concept (TypeOfLivingWill contains all of SNOMED).
+        #Only get designations for SNOMED codes, that are extententionally defined (no filter) and do have a concept (TypeOfLivingWill contains all of SNOMED).
         if x.system == 'http://snomed.info/sct' and x.valueSet is None and x.filter is None and x.concept is not None: 
             concepts = []
             for x2 in x.concept:
@@ -93,14 +95,14 @@ def addDesignations(valueset, filename):
                     if con.designation is None:
                         con.designation = []
                     if d[0].value is not None:
-                        # Add EN desination as  display value
+                        #add EN desination as  display value
                         con.display = d[0].value
-                        # con.designation.append(d[0])
+                        #con.designation.append(d[0])
                     if d[1].value is not None:
-                        # Add nl-BE designation
+                        #add nl-BE designation
                         con.designation.append(d[1])
                     if d[2].value is not None:
-                        # Add fr-BE designation
+                        #add fr-BE designation
                         con.designation.append(d[2])
                 concepts.append(con)
             x.concept = concepts  
