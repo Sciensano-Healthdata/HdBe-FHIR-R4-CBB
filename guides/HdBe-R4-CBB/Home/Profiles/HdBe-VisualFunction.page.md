@@ -35,6 +35,7 @@ select
      <button class="tablinks" onclick="openTab(event, 'Mapping')">Mapping</button>
      <button class="tablinks" onclick="openTab(event, 'Examples')">Examples</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff')">Zib-profile diff</button>
+     <button class="tablinks">{{pagelink:Home/LogicalModels/HdBe-VisualFunction.page.md, text:CBB}}</button>
   </div>
 
   <div id="Snapshot view" class="tabcontent" style="display:block">
@@ -99,6 +100,7 @@ select
      <button class="tablinks" onclick="openTab(event, 'Mapping2')">Mapping</button>
      <button class="tablinks" onclick="openTab(event, 'Examples2')">Examples</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff2')">Zib-profile diff</button>
+     <button class="tablinks">{{pagelink:Home/LogicalModels/HdBe-VisualFunction.page.md, text:CBB}}</button>
   </div>
 
   <div id="Snapshot view2" class="tabcontent" style="display:block">
@@ -162,6 +164,7 @@ select
      <button class="tablinks" onclick="openTab(event, 'Mapping3')">Mapping</button>
      <button class="tablinks" onclick="openTab(event, 'Examples3')">Examples</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff3')">Zib-profile diff</button>
+     <button class="tablinks">{{pagelink:Home/LogicalModels/HdBe-VisualFunction.page.md, text:CBB}}</button>
   </div>
 
   <div id="Snapshot view3" class="tabcontent" style="display:block">
