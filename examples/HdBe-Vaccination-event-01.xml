@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Immunization xmlns="http://hl7.org/fhir">
+    <id value="HdBe-Vaccination-event-01"/>
+    <meta>
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Vaccination-event"/>
+    </meta>
+    <status value="completed" />
+    <vaccineCode>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="836393002" />
+            <display value=" Vaccine product containing Rabies lyssavirus antigen " />
+        </coding>
+    </vaccineCode>
+    <patient>
+        <reference value="Patient/HdBe-Patient-01" />
+        <type value="Patient" />
+        <display value="Belle Ulijn" />        
+    </patient>
+    <occurrenceDateTime value="2018-02-06" />
+    <performer>
+        <function>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0443" />
+                <code value="AP" />
+                <display value="Administering Provider"/>
+            </coding>
+        </function>
+        <actor>
+            <reference value="Organization/HdBe-HealthcareProvider-Organization-02"/>
+            <type value="Organization"/>
+            <display value="Healthcare provider (organization), Enterprise Hospital Ziekenhuis"/>
+        </actor>
+    </performer>
+    <note>
+        <text value="Visit to Peru." />
+    </note>
+</Immunization>
