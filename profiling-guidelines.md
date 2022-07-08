@@ -18,8 +18,8 @@
         2. [Folder structure and file name](FolderStructureAndFileName)
     2. [Metadata](#metadata)
         1. [StructureDefinition](#StructureDefinition)
-        2. [ValueSets](#Valuesets)
-    3.  [ElementDefinition](#elementdefinintion)
+        2. [ValueSets](#ValueSets)
+    3.  [ElementDefinition](#ElementDefinition)
         1. [Usage of DefinitionCodes](#DefinitionCodes)
         2. [Usage of zib concept examples](#ZibConceptExamples)
     4.  [Examples](#Examples)
@@ -184,13 +184,20 @@ Conformance resources can have multiple types of identifying information, which 
 
 Where:
 `[purpose]` and `[English concept name]` are generally a PascalCased name joining words together, with the first letter of every word capitalized.
-
+   
 #### ValueSets
 - The id will be constructed as a word or short wording that describes the ValueSet.
 - The canonical URL will then be: `https://fhir.healthdata.be/ValueSet/[id]`
 - The name will be constructed as: `.id`
 - The title will be constructed as: `.id`
 
+#### CodeSystems    
+Names and purpose are often alike when a CodeSystem is constructed for a ValueSet. To make the `.id` unique and the relation between the CodeSystem and the ValueSet clear, the following conventions are used:
+- The id will be constructed as `CodeSystem-[ValueSet-id]`
+- The canonical URL will then be: `https://fhir.healthdata.be/CodeSystem/[ValueSet-id]`
+- The name will be constructed as: `[ValueSet-id]`
+- The title will be constructed as: `[ValueSet-id]`
+    
 #### ConceptMaps
 - The id will be constructed as: `[source ValueSet.name]-to-[target ValueSet.name]`
 - The canonical URL will then be: `https://fhir.healthdata.be/ConceptMap/[id]`
@@ -254,7 +261,7 @@ The zib export and Nictiz FHIR profiles contain Dutch naming for ValueSets becau
 
 Practically, this means that the ValueSets elements `.id`, `.url`, `.name`, `.title` and `.description` and the file name are translated. These changes are not recorded in the changelog files.
 
-##  ElementDefinition <a name="ElementDefinintion"></a>
+##  ElementDefinition <a name="#ElementDefinition"></a>
 Logical models and FHIR profiles are represented using [StructureDefinition resources](https://www.hl7.org/fhir/R4/structuredefinition.html). Every StructureDefinition has 1..* elements of the [ElementDefinition type](https://www.hl7.org/fhir/R4/elementdefinition.html#ElementDefinition). One element describes exactly one concept. Every zib and CBB concept is mapped and described by an ElementDefinition. 
 
 ### Usage of DefinitionCodes <a name="DefinitionCodes"></a>
@@ -275,7 +282,7 @@ Logical models examples are functional in nature: they provide examples of what 
 Examples of logical models are not conformant to FHIR, and are therefore not represented in XML or JSON. Examples are provided in  table format in a seperate markdown file. The file has the same name as the CBB logical model but ends with `.example.md.` For example `HdBe-BodyHeight.xml` <-> `HdBe-BodyHeight.example.md`.
 The following conventions exist:
 - For elements that represent a quantity, also provide the unit.
-- For elements that hold coded values: provide a code, the preferred display name and the CodeSystem. This format is used: '[code] - [display name] ([CodeSysem]).
+- For elements that hold coded values: provide a code, the preferred display name and the CodeSystem. This format is used: [code] - [display name] (code by [CodeSystem]).
 
 *Example*:
 ```
@@ -284,7 +291,7 @@ The following conventions exist:
 | height_value     |165 cm             |
 | height_date_time |2022-01-02         |
 | comment          |                   |
-| position |10904000 - Orthostatic body position (SNOMED CT)  |
+| position |10904000 - Orthostatic body position (code by SNOMED CT)  |
 ```
 
 #### FHIR profile examples <a name="FHIRProfileExamples"></a>
