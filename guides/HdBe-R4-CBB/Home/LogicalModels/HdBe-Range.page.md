@@ -17,7 +17,7 @@ URL: url
      <button class="tablinks" onclick="openTab(event, 'Detailed descriptions')">Detailed Descriptions</button>
      <button class="tablinks" onclick="openTab(event, 'Example')">Example</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff')">Zib diff</button>
-     <button class="tablinks">{{pagelink:Home/Profiles/HdBe-Range.page.md, text:FHIR profile}}</button>
+     <button class="tablinks" onclick="openTab(event, 'FHIR profile')">FHIR profile</button>
   </div>
 
   <div id="Rendered view" class="tabcontent" style="display:block">
@@ -43,22 +43,8 @@ URL: url
       {{render:logical models/LogicalModel-HdBe-Range.doc.md}}
   </div>
 
+  <div id="FHIR profile" class="tabcontent">
+     <p>There is no profile for this partial CBB because the relevant parts can be modeled directly in the profiles where this CBB is used.</p>
+  </div>
 </div>
-
-<br/><br/> 
-
-## Terminology Bindings
-
-@```
-from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Range'
-for differential.element
-select
-Path: path.substring((1 + path.indexOf('.'))),
-join binding.where(valueSet.exists())
-{
-	Name: valueSet.substring((9 + valueSet.indexOf('ValueSet/'))),
-	Strength: strength,
-	URL: valueSet
-	}
-```  
+ 
