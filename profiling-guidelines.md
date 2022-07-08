@@ -261,7 +261,7 @@ The zib export and Nictiz FHIR profiles contain Dutch naming for ValueSets becau
 
 Practically, this means that the ValueSets elements `.id`, `.url`, `.name`, `.title` and `.description` and the file name are translated. These changes are not recorded in the changelog files.
 
-##  ElementDefinition <a name="#ElementDefinition"></a>
+##  ElementDefinition <a name="ElementDefinition"></a>
 Logical models and FHIR profiles are represented using [StructureDefinition resources](https://www.hl7.org/fhir/R4/structuredefinition.html). Every StructureDefinition has 1..* elements of the [ElementDefinition type](https://www.hl7.org/fhir/R4/elementdefinition.html#ElementDefinition). One element describes exactly one concept. Every zib and CBB concept is mapped and described by an ElementDefinition. 
 
 ### Usage of DefinitionCodes <a name="DefinitionCodes"></a>
