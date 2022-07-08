@@ -34,6 +34,7 @@
 - {{pagelink:Home/Examples/HdBe-NursingIntervention-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Patient-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Patient-02.page.md}}
+- {{pagelink:Home/Examples/HdBe-PharmaceuticalProduct-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Problem-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-VisualFunction-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-VisualFunction.VisualAid-01.page.md}}
