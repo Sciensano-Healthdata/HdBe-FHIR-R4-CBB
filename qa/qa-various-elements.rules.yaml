@@ -86,7 +86,7 @@
   files: 
     - examples/*.xml
   filter: Resource
-  predicate: descendants().where($this.is(Reference)).all(display.exists())
+  predicate: descendants().where($this.is(Reference)).all(display.exists() or extension.exists())
   error-message: "Reference does not have a display value" 
 
 - name: example-reference-makeup
@@ -94,7 +94,7 @@
   files: 
     - examples/*.xml
   filter: Resource
-  predicate: descendants().reference.all(
+  predicate: descendants().where($this.is(Reference)).reference.all(
                 startsWith('http://') or
                 startsWith('https://') or
                 startsWith('#') or
