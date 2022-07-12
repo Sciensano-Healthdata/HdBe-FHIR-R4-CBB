@@ -1,6 +1,15 @@
 ---
 # The issues here are deliberate deviations from the guidelines, as flagged by the qa tooling.
 # For each issue documented, a reason for deviating from the guidelines is given.
+
+
+---
+# The following issues are not "real" deviations stemming from design choices, but rather problems that pop up due to
+# shortcomings in tooling, the used terminology server, etc.
+# These might occur in one or more profiles, or in none if they have been fixed in the meantime. 
+
+issues should occur: false
+
 "*-AdvanceDirective*":
   ignored issues:
     Consent.scope*:
@@ -26,12 +35,3 @@ HdBe-LivingSituation-01:
     Observation.component[0].code.coding[0]:
       - message: "Unable to find code 118871000146108 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20220331)"
         reason: "Relates to issue #200. This is a SNOMED code in the DUTCH edition. We need an International one or one from Belgium."
-
-
----
-# The following issues are not "real" deviations stemming from design choices, but rather problems that pop up due to
-# shortcomings in tooling, the used terminology server, etc.
-# These might occur in one or more profiles, or in none if they have been fixed in the meantime. 
-
-issues should occur: false
-
