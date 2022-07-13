@@ -1,46 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version='1.0' encoding='utf-8'?>
 <Specimen xmlns="http://hl7.org/fhir">
-    <id value="HdBe-LaboratoryTestResult.Specimen-01"/>
-    <meta>
-        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen"/>
-    </meta>
-    <identifier>
-        <system value="https://acme.org/NamingSystem/SpecimenIdentifier"/>
-        <value value="123456789"/>
-    </identifier>
-    <type>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="119297000" />
-            <display value="Blood specimen" />
-        </coding>
-    </type>
-    <collection>
-        <collectedDateTime value="2022-01-12T08:08:00+01:00" />
-        <method>
-            <coding>
-                <system value="http://snomed.info/sct" />
-                <code value="82078001" />
-                <display value="Collection of blood specimen for laboratory" />
-            </coding>            
-        </method>
-        <bodySite>
-            <extension url="https://fhir.healthdata.be/StructureDefinition/ext-AnatomicalLocation.Laterality">
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct" />
-                        <code value="7771000" />
-                        <display value="Left" /> 
-                    </coding>
-                </valueCodeableConcept>
-            </extension>
-            <coding>
-                <system value="http://snomed.info/sct" />
-                <code value="53120007" />
-                <display value="Upper limb structure" /> 
-            </coding>
-        </bodySite>
-    </collection>
+  <id value="HdBe-LaboratoryTestResult.Specimen-01"/>
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen"/>
+  </meta>
+  <identifier>
+    <system value="https://acme.org/NamingSystem/SpecimenIdentifier"/>
+    <value value="123456789"/>
+  </identifier>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="119297000"/>
+      <display value="Blood specimen"/>
+    </coding>
+  </type>
+  <collection>
+    <collectedDateTime value="2022-01-12T08:08:00+01:00"/>
+    <method>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="82078001"/>
+        <display value="Collection of blood specimen for laboratory"/>
+      </coding>
+    </method>
+    <bodySite>
+      <extension url="https://fhir.healthdata.be/StructureDefinition/ext-AnatomicalLocation.Laterality">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="7771000"/>
+            <display value="Left"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="53120007"/>
+        <display value="Upper limb structure"/>
+      </coding>
+    </bodySite>
+  </collection>
 </Specimen>
-

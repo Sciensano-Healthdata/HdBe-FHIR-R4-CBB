@@ -1,48 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="HdBe-AlcoholUse-01"/>
-    <meta>
-        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AlcoholUse"/>
-    </meta>
-    <status value="final"/>
+  <id value="HdBe-AlcoholUse-01"/>
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AlcoholUse"/>
+  </meta>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="228273003"/>
+      <display value="Finding relating to alcohol drinking behavior"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/HdBe-Patient-01"/>
+    <type value="Patient"/>
+    <display value="Belle Ulijn"/>
+  </subject>
+  <effectivePeriod>
+    <start value="1995-01-01"/>
+  </effectivePeriod>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="219006"/>
+      <display value="Current drinker"/>
+    </coding>
+  </valueCodeableConcept>
+  <note>
+    <text value="Drinks mostly in weekends."/>
+  </note>
+  <component>
     <code>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="228273003" />
-            <display value="Finding relating to alcohol drinking behavior" />
-        </coding>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="897148007"/>
+        <display value="Alcoholic beverage intake"/>
+      </coding>
     </code>
-    <subject>
-        <reference value="Patient/HdBe-Patient-01" />
-        <type value="Patient" />
-        <display value="Belle Ulijn" />
-    </subject>
-    <effectivePeriod>
-        <start value="1995-01-01" />
-    </effectivePeriod>
-    <valueCodeableConcept>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="219006" />
-            <display value="Current drinker" />
-        </coding>
-    </valueCodeableConcept>
-    <note>
-        <text value="Drinks mostly in weekends." />
-    </note>
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct" />
-                <code value="897148007" />
-                <display value="Alcoholic beverage intake" />
-            </coding>
-        </code>
-        <valueQuantity>
-            <value value="3"/>
-            <unit value="eenheden per dag"/>
-            <system value="http://unitsofmeasure.org"/>
-            <code value="{eenheden per dag}"/>
-        </valueQuantity>
-    </component>
-   </Observation>
+    <valueQuantity>
+      <value value="3.0"/>
+      <unit value="eenheden per dag"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="{eenheden per dag}"/>
+    </valueQuantity>
+  </component>
+</Observation>

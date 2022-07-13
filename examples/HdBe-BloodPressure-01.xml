@@ -1,99 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="HdBe-BloodPressure-01" />
-    <meta>
-        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-BloodPressure" />
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/observation-bodyPosition">
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct" />
-                <code value="33586001" />
-                <display value="Sitting position" />
-            </coding>
-        </valueCodeableConcept>
-    </extension>
-    <status value="final" />
-    <category>
-        <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
-            <code value="vital-signs" />
-            <display value="Vital Signs" />
-        </coding>
-    </category>
+  <id value="HdBe-BloodPressure-01"/>
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-BloodPressure"/>
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/observation-bodyPosition">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="33586001"/>
+        <display value="Sitting position"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="vital-signs"/>
+      <display value="Vital Signs"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="85354-9"/>
+      <display value="Blood pressure panel with all children optional"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/HdBe-Patient-01"/>
+    <type value="Patient"/>
+    <display value="Belle Ulijn"/>
+  </subject>
+  <effectiveDateTime value="2022-04-22T09:17:00+01:00"/>
+  <note>
+    <text value="Patient uses medication against hypertension."/>
+  </note>
+  <bodySite>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="368209003"/>
+      <display value="Right upper arm structure"/>
+    </coding>
+  </bodySite>
+  <method>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="371911009"/>
+      <display value="Measurement of blood pressure using cuff method"/>
+    </coding>
+  </method>
+  <component>
     <code>
-        <coding>
-            <system value="http://loinc.org" />
-            <code value="85354-9" />
-            <display value="Blood pressure panel with all children optional" />
-        </coding>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="8480-6"/>
+        <display value="Systolic blood pressure"/>
+      </coding>
     </code>
-    <subject>
-        <reference value="Patient/HdBe-Patient-01" />
-        <type value="Patient" />
-        <display value="Belle Ulijn" />
-    </subject>
-    <effectiveDateTime value="2022-04-22T09:17:00+01:00" />
-    <note>
-        <text value="Patient uses medication against hypertension." />
-    </note>
-    <bodySite>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="368209003" />
-            <display value="Right upper arm structure" />
-        </coding>
-    </bodySite>
-    <method>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="371911009" />
-            <display value="Measurement of blood pressure using cuff method" />
-        </coding>
-    </method>
-    <component>
-        <code>
-            <coding>
-                <system value="http://loinc.org" />
-                <code value="8480-6" />
-                <display value="Systolic blood pressure" />
-            </coding>
-        </code>
-        <valueQuantity>
-            <value value="126" />
-            <unit value="mmHg" />
-            <system value="http://unitsofmeasure.org" />
-            <code value="mm[Hg]" />
-        </valueQuantity>
-    </component>
-    <component>
-        <code>
-            <coding>
-                <system value="http://loinc.org" />
-                <code value="8462-4" />
-                <display value="Diastolic blood pressure" />
-            </coding>
-        </code>
-        <valueQuantity>
-            <value value="67" />
-            <unit value="mmHg" />
-            <system value="http://unitsofmeasure.org" />
-            <code value="mm[Hg]" />
-        </valueQuantity>
-    </component>
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct" />
-                <code value="70665002" />
-                <display value="Blood pressure cuff" />
-            </coding>
-        </code>
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct" />
-                <code value="720737000" />
-                <display value="Blood pressure cuff, adult size (physical object)" />
-            </coding>
-        </valueCodeableConcept>
-    </component>
+    <valueQuantity>
+      <value value="126.0"/>
+      <unit value="mmHg"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mm[Hg]"/>
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="8462-4"/>
+        <display value="Diastolic blood pressure"/>
+      </coding>
+    </code>
+    <valueQuantity>
+      <value value="67.0"/>
+      <unit value="mmHg"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mm[Hg]"/>
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="70665002"/>
+        <display value="Blood pressure cuff"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="720737000"/>
+        <display value="Blood pressure cuff, adult size (physical object)"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
 </Observation>

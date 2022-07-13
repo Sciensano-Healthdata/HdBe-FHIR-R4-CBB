@@ -1,61 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="HdBe-LivingSituation-01" />
-    <meta>
-        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-LivingSituation" />
-    </meta>
-    <status value="final" />
+  <id value="HdBe-LivingSituation-01"/>
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-LivingSituation"/>
+  </meta>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="365508006"/>
+      <display value="Residence and accommodation circumstances - finding"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/HdBe-Patient-01"/>
+    <type value="Patient"/>
+    <display value="Belle Ulijn"/>
+  </subject>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="257564005"/>
+      <display value="Apartment"/>
+    </coding>
+  </valueCodeableConcept>
+  <note>
+    <text value="The apartment does not have a lift, which is an problem with the patients current condition."/>
+  </note>
+  <component>
     <code>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="365508006" />
-            <display value="Residence and accommodation circumstances - finding" />
-        </coding>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="118871000146108"/>
+        <display value="Type of home adaptation"/>
+      </coding>
     </code>
-    <subject>
-        <reference value="Patient/HdBe-Patient-01" />
-        <type value="Patient" />
-        <display value="Belle Ulijn" />
-    </subject>
     <valueCodeableConcept>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="257564005" />
-            <display value="Apartment" />
-        </coding>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="705401004"/>
+        <display value="Assistive bed"/>
+      </coding>
     </valueCodeableConcept>
-    <note>
-        <text value="The apartment does not have a lift, which is an problem with the patients current condition."/>
-    </note>
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct" />
-                <code value="118871000146108" />
-                <display value="Type of home adaptation" />
-            </coding>
-        </code>
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct" />
-                <code value="705401004" />
-                <display value="Assistive bed" />
-            </coding>
-        </valueCodeableConcept>
-    </component>
-    <component>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct" />
-                <code value="224249004" />
-                <display value="Characteristics of home environment" />
-            </coding>
-        </code>
-        <valueCodeableConcept>
-            <coding>
-                <system value="http://snomed.info/sct" />
-                <code value="715758005" />
-                <display value="Access to residence by stairs" />
-            </coding>
-        </valueCodeableConcept>
-    </component>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="224249004"/>
+        <display value="Characteristics of home environment"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="715758005"/>
+        <display value="Access to residence by stairs"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
 </Observation>
