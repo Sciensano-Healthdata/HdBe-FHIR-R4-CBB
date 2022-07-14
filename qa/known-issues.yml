@@ -29,6 +29,12 @@ HdBe-AllergyIntolerance-01:
       - message: None of the codings provided are in the value set 'CausativeAgent' (https://fhir.healthdata.be/ValueSet/CausativeAgent), and a coding from this value set is required) (codes = http://snomed.info/sct#419442005)
         reason: The CausativeAgent ValueSet contains a filter on a SCT ^751000172100| Belgian subset for POC FHIR, causative agent, no drug (foundation metadata concept). This is not a snomed hierarchy but a refset. The ValueSet filterering should be okay according to https://www.hl7.org/fhir/snomedct.html#4.3.1.0.8.2. Therefore we assume that the JAVA validator/terminology server does not support this, or has no access to the BE refset.
 
+HdBe-Encounter-*:
+  ignored issues:
+    Encounter.participant[*]:
+      - message: Slicing cannot be evaluated
+        reason: To check slicing in instances, the referenced resources need to be inspected, but this is not supported by the HL7 Validator.
+
 HdBe-LaboratoryTestResult.Specimen-01:
   ignored issues:
     Specimen.type:
@@ -40,7 +46,6 @@ HdBe-LaboratoryTestResult.Specimen-02:
     Specimen.type:
       - message: "None of the codings provided are in the value set 'SpecimenMaterial-and-Microorganism'"
         reason: "JAVA validator does not support valueset that include other valuesets. Code exists."
-
 
 HdBe-*-DeviceUseStatement-*:
   ignored issues:
@@ -54,7 +59,7 @@ HdBe-*-DeviceUseStatement-*:
 HdBe-HearingFunction.HearingAid-*:
   ignored issues:
     DeviceUseStatement.reasonReference[*]:
-      - message: Slicing cannot be evaluated"
+      - message: Slicing cannot be evaluated
         reason: To check slicing in instances, the referenced resources need to be inspected, but this is not supported by the HL7 Validator.
 
 HdBe-MedicalDevice-*:
