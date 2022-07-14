@@ -39,6 +39,10 @@
 - {{pagelink:Home/Examples/HdBe-PharmaceuticalProduct-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Problem-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-PulseRate-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-TreatmentObjective-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-TreatmentObjective-01-Condition-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-TreatmentObjective-01-Device-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-TreatmentObjective-01-DeviceUseStatement-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Vaccination-event-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-VisualFunction-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-VisualFunction.VisualAid-01.page.md}}

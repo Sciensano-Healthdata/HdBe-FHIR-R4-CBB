@@ -2,7 +2,7 @@
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/[CBB-ID]'
+where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-TreatmentObjective'
 select 
 Profile: id,
 Description: description,
@@ -19,22 +19,22 @@ URL: url
      <button class="tablinks" onclick="openTab(event, 'Mapping')">Mapping</button>
      <button class="tablinks" onclick="openTab(event, 'Examples')">Examples</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff')">Zib-profile diff</button>
-     <button class="tablinks">{{pagelink:Home/LogicalModels/[CBB-ID].page.md, text:CBB}}</button>
+     <button class="tablinks">{{pagelink:Home/LogicalModels/HdBe-TreatmentObjective.page.md, text:CBB}}</button>
   </div>
 
   <div id="Snapshot view" class="tabcontent" style="display:block">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/[CBB-ID], snapshot}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-TreatmentObjective, snapshot}}
   </div>
 
   <div id="Hybrid view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/[CBB-ID], hybrid}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-TreatmentObjective, hybrid}}
   </div>
 
   <div id="Diff view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/[CBB-ID], diff}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-TreatmentObjective, diff}}
   </div>
 
   <div id="Mapping" class="tabcontent">      
@@ -42,24 +42,26 @@ URL: url
       <div>
       @```
       from StructureDefinition
-      where url = 'https://fhir.healthdata.be/StructureDefinition/[CBB-ID]'
+      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-TreatmentObjective'
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = '[CBB-ID]') { map, comment }
+        join mapping.where(identity = 'HdBe-TreatmentObjective') { map, comment }
       ```
     </div>
   </div>
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/[CBB-ID]-01.page.md}}</li>
-        
+        <li>{{pagelink:Home/Examples/HdBe-TreatmentObjective-01.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-TreatmentObjective-01-Condition-01.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-TreatmentObjective-01-Device-01.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-TreatmentObjective-01-DeviceUseStatement-01.page.md}}</li>
       </ul>
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:resources/[CBB-ID].doc.md}}
+      {{render:resources/HdBe-TreatmentObjective.doc.md}}
   </div>
 
 </div>
@@ -70,7 +72,7 @@ URL: url
 
 @```
 from StructureDefinition
-where url = 'https://fhir.healthdata.be/StructureDefinition/[CBB-ID]'
+where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-TreatmentObjective'
 
 for differential.element
 select
