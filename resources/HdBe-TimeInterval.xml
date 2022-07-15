@@ -33,6 +33,13 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Period" />
   <derivation value="constraint" />
   <differential>
+    <element id="Period">
+      <path value="Period" />
+      <mapping>
+        <identity value="HdBe-TimeInterval" />
+        <map value="time_interval" />
+      </mapping>
+    </element>
     <element id="Period.extension">
       <path value="Period.extension" />
       <slicing>
@@ -58,7 +65,7 @@
       <path value="Period.extension.value[x]" />
       <mapping>
         <identity value="HdBe-TimeInterval" />
-        <map value="duration" />
+        <map value="time_interval.duration" />
       </mapping>
     </element>
     <element id="Period.start">
@@ -73,7 +80,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-TimeInterval" />
-        <map value="start_date_time" />
+        <map value="time_interval.start_date_time" />
       </mapping>
     </element>
     <element id="Period.end">
@@ -88,7 +95,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-TimeInterval" />
-        <map value="end_date_time" />
+        <map value="time_interval.end_date_time" />
       </mapping>
     </element>
   </differential>
