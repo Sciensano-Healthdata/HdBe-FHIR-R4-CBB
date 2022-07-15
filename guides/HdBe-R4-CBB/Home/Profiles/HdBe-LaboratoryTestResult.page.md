@@ -14,40 +14,37 @@ URL: url
 ## UML overview profiles
 
 <plantuml>
-@startuml
-set namespaceSeparator none
-skinparam backgroundcolor transparent
+  set namespaceSeparator none
+  skinparam backgroundcolor transparent
 
-class "HdBe-LaboratoryTestResult.Requester" << ServiceRequest>>
-{
-  requester
-}
+  class "HdBe-LaboratoryTestResult.Requester" << ServiceRequest>>
+  {
+    requester
+  }
 
-"HdBe-LaboratoryTestResult" --> "HdBe-LaboratoryTestResult.Requester::basedOn" 
+  "HdBe-LaboratoryTestResult" --> "HdBe-LaboratoryTestResult.Requester::basedOn" 
 
-class "HdBe-LaboratoryTestResult" << Observation >>
-{
-  hasMember
-  specimen
-  basedOn
-}
-  "HdBe-LaboratoryTestResult" <-- "HdBe-LaboratoryTestResult::hasMember" : for panels
-  
-  "HdBe-LaboratoryTestResult::specimen" --> "HdBe-LaboratoryTestResult.Specimen as Material"
-  "HdBe-LaboratoryTestResult::specimen" --> "HdBe-LaboratoryTestResult.Specimen as Microorganism"
+  class "HdBe-LaboratoryTestResult" << Observation >>
+  {
+    hasMember
+    specimen
+    basedOn
+  }
+    "HdBe-LaboratoryTestResult" <-- "HdBe-LaboratoryTestResult::hasMember" : for panels
+    
+    "HdBe-LaboratoryTestResult::specimen" --> "HdBe-LaboratoryTestResult.Specimen as Material"
+    "HdBe-LaboratoryTestResult::specimen" --> "HdBe-LaboratoryTestResult.Specimen as Microorganism"
 
-class "HdBe-LaboratoryTestResult.Specimen as Material" << Specimen >>
-{
-  type = material code
-}
-class "HdBe-LaboratoryTestResult.Specimen as Microorganism" << Specimen >>
-{
-  type = microorganism code
-  parent
-}
-  "HdBe-LaboratoryTestResult.Specimen as Microorganism::parent" -->  "HdBe-LaboratoryTestResult.Specimen as Material"
-
-@enduml
+  class "HdBe-LaboratoryTestResult.Specimen as Material" << Specimen >>
+  {
+    type = material code
+  }
+  class "HdBe-LaboratoryTestResult.Specimen as Microorganism" << Specimen >>
+  {
+    type = microorganism code
+    parent
+  }
+    "HdBe-LaboratoryTestResult.Specimen as Microorganism::parent" -->  "HdBe-LaboratoryTestResult.Specimen as Material"
 </plantuml>
 
 <br/><br/> 

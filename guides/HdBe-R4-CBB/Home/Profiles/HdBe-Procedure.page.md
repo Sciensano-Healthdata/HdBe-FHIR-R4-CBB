@@ -22,21 +22,18 @@ select
 ```
 
 <plantuml>
-@startuml
-set namespaceSeparator none
-skinparam backgroundcolor transparent
+  set namespaceSeparator none
+  skinparam backgroundcolor transparent
 
-class "HdBe-Procedure-event" <<Procedure>>
-{
-  basedOn
-}
-  "HdBe-Procedure-event::basedOn" --> "HdBe-Procedure-request" 
-  
-class "HdBe-Procedure-request" <<ServiceRequest>>
-{
-}
-
-@enduml
+  class "HdBe-Procedure-event" <<Procedure>>
+  {
+    basedOn
+  }
+    "HdBe-Procedure-event::basedOn" --> "HdBe-Procedure-request" 
+    
+  class "HdBe-Procedure-request" <<ServiceRequest>>
+  {
+  }
 </plantuml>
 
 <br/><br/> 

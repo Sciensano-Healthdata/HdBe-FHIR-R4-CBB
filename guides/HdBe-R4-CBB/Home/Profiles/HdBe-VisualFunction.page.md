@@ -14,21 +14,18 @@ URL: url
 ## UML overview profiles
 
 <plantuml>
-@startuml
-skinparam backgroundcolor transparent
-class "HdBe-VisualFunction" <<Observation>> 
-class "HdBe-VisualFunction.VisualAid" <<DeviceUseStatement>> {
-  Specialization of HdBe-MedicalDevice
-}
-class "HdBe-VisualFunction.VisualAid.Product" <<Device>> {
-  Specialization of HdBe-MedicalDevice.Product
-}
+  skinparam backgroundcolor transparent
+  class "HdBe-VisualFunction" <<Observation>> 
+  class "HdBe-VisualFunction.VisualAid" <<DeviceUseStatement>> {
+    Specialization of HdBe-MedicalDevice
+  }
+  class "HdBe-VisualFunction.VisualAid.Product" <<Device>> {
+    Specialization of HdBe-MedicalDevice.Product
+  }
 
-"HdBe-VisualFunction.VisualAid"  --> "HdBe-VisualFunction": 0..* reasonReference: The medical aid \nused to help the patient see. 
-note bottom on link: In CBB VisualFunction \nreferences CBB MedicalDevice \nbut in FHIR this reference \nis reversed.
-"HdBe-VisualFunction.VisualAid" --> "HdBe-VisualFunction.VisualAid.Product": 1..1 device
-
-@enduml
+  "HdBe-VisualFunction.VisualAid"  --> "HdBe-VisualFunction": 0..* reasonReference: The medical aid \nused to help the patient see. 
+  note bottom on link: In CBB VisualFunction \nreferences CBB MedicalDevice \nbut in FHIR this reference \nis reversed.
+  "HdBe-VisualFunction.VisualAid" --> "HdBe-VisualFunction.VisualAid.Product": 1..1 device
 </plantuml>
 
 <br/><br/> 
