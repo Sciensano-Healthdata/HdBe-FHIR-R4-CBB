@@ -48,6 +48,7 @@
 - {{pagelink:Home/Examples/HdBe-TreatmentObjective-01-DeviceUseStatement-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Vaccination-event-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-VisualFunction-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-VisualFunction-02.page.md}}
 - {{pagelink:Home/Examples/HdBe-VisualFunction.VisualAid-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-VisualFunction.VisualAid.Product-01.page.md}}
 <!-- - {{pagelink:Home/Examples/[CBB-ID]-[number].page.md}} --> 
