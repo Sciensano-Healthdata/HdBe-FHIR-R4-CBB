@@ -54,7 +54,7 @@ URL: url
   <div id="Examples" class="tabcontent">
       <ul>
         <li>{{pagelink:Home/Examples/HdBe-BodyTemperature-01.page.md}}</li>
-        
+        <li>{{pagelink:Home/Examples/HdBe-BodyTemperature-02.page.md}}</li>
       </ul>
   </div>
 

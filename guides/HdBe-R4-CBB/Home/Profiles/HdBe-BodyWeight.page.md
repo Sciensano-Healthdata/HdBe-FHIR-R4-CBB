@@ -54,7 +54,8 @@ URL: url
   <div id="Examples" class="tabcontent">
       <ul>
         <li>{{pagelink:Home/Examples/HdBe-BodyWeight-01.page.md}}</li>
-        
+        <li>{{pagelink:Home/Examples/HdBe-BodyWeight-02.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-BodyWeight-03.page.md}}</li>
       </ul>
   </div>
 

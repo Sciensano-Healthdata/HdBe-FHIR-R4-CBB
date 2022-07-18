@@ -21,8 +21,20 @@ select
 	Instructions: differential.element[0].comment
 ```
 
+<plantuml>
+  set namespaceSeparator none
+  skinparam backgroundcolor transparent
 
-{{render:uml/HdBe-Procedure-UML-GREY.png}}
+  class "HdBe-Procedure-event" <<Procedure>>
+  {
+    basedOn
+  }
+    "HdBe-Procedure-event::basedOn" --> "HdBe-Procedure-request" 
+    
+  class "HdBe-Procedure-request" <<ServiceRequest>>
+  {
+  }
+</plantuml>
 
 <br/><br/> 
 
