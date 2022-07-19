@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Coverage xmlns="http://hl7.org/fhir">
+   <id value="HdBe-Payer.InsuranceCompany-02"/>
+   <meta>
+      <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Payer.InsuranceCompany"/>
+   </meta>
+   <status value="cancelled"/>
+   <type>
+      <coding>
+         <system value="https://fhir.healthdata.be/CodeSystem/InsuranceType"/>
+         <code value="IT0001"/>
+         <display value="basis (verplichte ziekteverzekering)"/>
+      </coding>
+   </type>
+   <subscriberId value="12345678"/>
+   <beneficiary>
+      <reference value="Patient/HdBe-Patient-01"/>
+      <type value="Patient"/>
+      <display value="Belle Ulijn"/>
+   </beneficiary>
+   <period>
+      <start value="2012-01-01"/>
+      <end value="2013-01-31"/>
+   </period>
+   <payor>
+      <reference value="Organization/HdBe-Payer-Organization-02"/>
+      <type value="Organization"/>
+      <display value="Payer-Organization, Neutraal ziekenfonds Vlaanderen (235)"/>
+   </payor>
+</Coverage>

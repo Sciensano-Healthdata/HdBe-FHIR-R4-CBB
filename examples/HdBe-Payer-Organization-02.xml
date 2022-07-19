@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Organization xmlns="http://hl7.org/fhir">
+   <id value="HdBe-Payer-Organization-02"/>
+   <meta>
+      <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Payer-Organization"/>
+   </meta>
+   <identifier>
+      <system value="https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/be-insuranceidentificationnumber"/>
+      <value value="235"/>
+   </identifier>
+   <name value="Neutraal ziekenfonds Vlaanderen"/>
+   <telecom>
+      <system value="phone"/>
+      <value value="(053) 76 99 99"/>
+      <use value="work"/>
+   </telecom>
+   <address>
+      <extension url="https://fhir.healthdata.be/StructureDefinition/ext-AddressInformation.AddressType">
+         <valueCodeableConcept>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+               <code value="WP"/>
+            </coding>
+         </valueCodeableConcept>
+      </extension>
+      <use value="work"/>
+      <line value="Statieplein 12">
+         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+            <valueString value="Statieplein"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+            <valueString value="15"/>
+         </extension>
+      </line>
+      <city value="Aalst"/>
+      <postalCode value="9300"/>
+   </address>
+</Organization>

@@ -72,11 +72,12 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="payer" />
-        <min value="0" />
-        <max value="*" />
-      </base>
+      <constraint>
+        <key value="hdbe-payer-1" />
+        <severity value="error" />
+        <human value="Either payer_person or insurance_company may exists." />
+        <expression value="payer_person.exists() xor insurance_company.exists()" />
+      </constraint>
     </element>
     <element id="payer.payer_person">
       <path value="payer.payer_person" />
@@ -101,15 +102,11 @@
         </extension>
       </definition>
       <min value="0" />
-      <max value="*" />
-      <base>
-        <path value="payer.payer_person" />
-        <min value="0" />
-        <max value="*" />
-      </base>
+      <max value="1" />
       <type>
         <code value="BackboneElement" />
       </type>
+      <condition value="hdbe-payer-1" />
     </element>
     <element id="payer.payer_person.payer_name">
       <path value="payer.payer_person.payer_name" />
@@ -135,11 +132,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="payer.payer_person.payer_name" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="string" />
       </type>
@@ -168,11 +160,6 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="payer.payer_person.bank_information" />
-        <min value="0" />
-        <max value="*" />
-      </base>
       <type>
         <code value="BackboneElement" />
       </type>
@@ -201,11 +188,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="payer.payer_person.bank_information.bank_name" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="string" />
       </type>
@@ -234,11 +216,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="payer.payer_person.bank_information.bank_code" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="string" />
       </type>
@@ -267,11 +244,6 @@
       </definition>
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="payer.payer_person.bank_information.account_number" />
-        <min value="1" />
-        <max value="1" />
-      </base>
       <type>
         <code value="string" />
       </type>
@@ -299,15 +271,11 @@
         </extension>
       </definition>
       <min value="0" />
-      <max value="*" />
-      <base>
-        <path value="payer.insurance_company" />
-        <min value="0" />
-        <max value="*" />
-      </base>
+      <max value="1" />
       <type>
         <code value="BackboneElement" />
       </type>
+      <condition value="hdbe-payer-1" />
     </element>
     <element id="payer.insurance_company.insurance">
       <path value="payer.insurance_company.insurance" />
@@ -333,11 +301,6 @@
       </definition>
       <min value="1" />
       <max value="*" />
-      <base>
-        <path value="payer.insurance_company.insurance" />
-        <min value="1" />
-        <max value="*" />
-      </base>
       <type>
         <code value="BackboneElement" />
       </type>
@@ -366,11 +329,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="payer.insurance_company.insurance.start_date_time" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="dateTime" />
       </type>
@@ -399,11 +357,6 @@
       </definition>
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="payer.insurance_company.insurance.end_date_time" />
-        <min value="1" />
-        <max value="1" />
-      </base>
       <type>
         <code value="dateTime" />
       </type>
@@ -432,18 +385,13 @@
       </definition>
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="payer.insurance_company.insurance.insurance_type" />
-        <min value="1" />
-        <max value="1" />
-      </base>
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="required" />
         <description value="InsuranceType codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/Verzekeringssoort" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/InsuranceType" />
       </binding>
     </element>
     <element id="payer.insurance_company.identification_number">
@@ -458,7 +406,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="Unique healthcare insurance company identification (the UZOVI number).">
+      <definition value="Unique healthcare insurance company identification.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -470,11 +418,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="payer.insurance_company.identification_number" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Identifier" />
       </type>
@@ -491,7 +434,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="Full, official name of the healthcare insurance company. If the UZOVI number is entered as an identification number, this will be the name as listed in the UZOVI register and the name which is returned in the Check for Right to Insurance (COV).">
+      <definition value="Full, official name of the healthcare insurance company.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -503,11 +446,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="payer.insurance_company.organization_name" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="string" />
       </type>
@@ -536,11 +474,6 @@
       </definition>
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="payer.insurance_company.insurant_number" />
-        <min value="1" />
-        <max value="1" />
-      </base>
       <type>
         <code value="string" />
       </type>
@@ -569,387 +502,10 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="payer.address_information" />
-        <min value="0" />
-        <max value="*" />
-      </base>
       <type>
-        <code value="BackboneElement" />
+        <code value="Address" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AddressInformation" />
       </type>
-    </element>
-    <element id="payer.address_information.street">
-      <path value="payer.address_information.street" />
-      <short value="Street">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Straat" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Street name of the address.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Straatnaam van het adres." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="payer.address_information.street" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="payer.address_information.house_number">
-      <path value="payer.address_information.house_number" />
-      <short value="HouseNumber">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Huisnummer" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="House number of the address.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Huisnummer van het adres." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="payer.address_information.house_number" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="payer.address_information.house_number_letter">
-      <path value="payer.address_information.house_number_letter" />
-      <short value="HouseNumberLetter">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Huisnummerletter" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="A letter following the house number as assigned by the municipal authorities.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Een alfabetisch teken achter het huisnummer zoals dit door het gemeentebestuur is toegekend." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="payer.address_information.house_number_letter" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="payer.address_information.house_number_addition">
-      <path value="payer.address_information.house_number_addition" />
-      <short value="HouseNumberAddition">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Huisnummertoevoeging" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The letters or signs needed to locate the mailbox, in addition to the house number and letter.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Die letters of tekens die noodzakelijk zijn om, naast het huisnummer en de letter, de brievenbus te vinden." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="payer.address_information.house_number_addition" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="payer.address_information.house_number_indication">
-      <path value="payer.address_information.house_number_indication" />
-      <short value="HouseNumberIndication">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="AanduidingBijNummer" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The indication used for addresses which do not consist of the usual street name and house number.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="De aanduiding die wordt gebruikt voor adressen die niet zijn voorzien van de gebruikelijke straatnaam en huisnummeraanduidingen." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="payer.address_information.house_number_indication" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="required" />
-        <description value="HouseNumberIndication codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/AanduidingBijNummer" />
-      </binding>
-    </element>
-    <element id="payer.address_information.postcode">
-      <path value="payer.address_information.postcode" />
-      <short value="Postcode">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Postcode" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Postcode of the address. &#xD;&#xA;In Dutch addresses, preferably use the postcode from the Postcode table (OID: 2.16.840.1.113883.2.4.4.15).">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Postcode van het adres.&#xD;&#xA;Bij Nederlandse adressen bij voorkeur de postcode uit de Postcodetabel (OID: 2.16.840.1.113883.2.4.4.15) gebruiken." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="payer.address_information.postcode" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="payer.address_information.place_of_residence">
-      <path value="payer.address_information.place_of_residence" />
-      <short value="PlaceOfResidence">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Woonplaats" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="A geographically determined area which forms part of the municipal area. &#xD;&#xA;For Dutch places of residence, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14).">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Een geografisch bepaald gebied dat een deel is van het gemeentelijke grondgebied.&#xD;&#xA;Bij Nederlandse woonplaatsen bij voorkeur de naam uit de GBA tabel 33 (OID: 2.16.840.1.113883.2.4.6.14) gebruiken." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="payer.address_information.place_of_residence" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="payer.address_information.municipality">
-      <path value="payer.address_information.municipality" />
-      <short value="Municipality">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Gemeente" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Municipality of residence. &#xD;&#xA;For Dutch municipalities, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14).">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Gemeente van inschrijving. &#xD;&#xA;Bij Nederlandse gemeenten bij voorkeur de naam uit de GBA tabel 33 (OID: 2.16.840.1.113883.2.4.6.14) gebruiken." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="payer.address_information.municipality" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="payer.address_information.country">
-      <path value="payer.address_information.country" />
-      <short value="Country">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Land" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Country in which the address is located.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Land waar het adres zich bevindt." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="payer.address_information.country" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-    </element>
-    <element id="payer.address_information.additional_information">
-      <path value="payer.address_information.additional_information" />
-      <short value="AdditionalInformation">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="AdditioneleInformatie" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Extra information such as the building name, building number, entrance, route number.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Extra informatie zoals naam van het gebouw, gebouwnummer, ingang, routenummer." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="payer.address_information.additional_information" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="payer.address_information.address_type">
-      <path value="payer.address_information.address_type" />
-      <short value="AddressType">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="AdresSoort" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The type of address in question, such as a home address or mailing address.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Het soort adres waarvan sprake is, bijv. woonadres, postadres." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="payer.address_information.address_type" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="AddressType codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/AdresSoort" />
-      </binding>
     </element>
     <element id="payer.contact_information">
       <path value="payer.contact_information" />
@@ -975,293 +531,10 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="payer.contact_information" />
-        <min value="0" />
-        <max value="*" />
-      </base>
       <type>
-        <code value="BackboneElement" />
+        <code value="ContactPoint" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation" />
       </type>
-    </element>
-    <element id="payer.contact_information.telephone_numbers">
-      <path value="payer.contact_information.telephone_numbers" />
-      <short value="TelephoneNumbers">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Telefoonnummers" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Container of the TelephoneNumbers concept. This container contains all data elements of the TelephoneNumbers concept.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Container van het concept Telefoonnummers. Deze container bevat alle gegevenselementen van het concept Telefoonnummers." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="*" />
-      <base>
-        <path value="payer.contact_information.telephone_numbers" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-      <type>
-        <code value="BackboneElement" />
-      </type>
-    </element>
-    <element id="payer.contact_information.telephone_numbers.telephone_number">
-      <path value="payer.contact_information.telephone_numbers.telephone_number" />
-      <short value="TelephoneNumber">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Telefoonnummer" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The person's telephone number.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Een telefoonnummer van de persoon." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="1" />
-      <max value="1" />
-      <base>
-        <path value="payer.contact_information.telephone_numbers.telephone_number" />
-        <min value="1" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="payer.contact_information.telephone_numbers.telecom_type">
-      <path value="payer.contact_information.telephone_numbers.telecom_type" />
-      <short value="TelecomType">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="TelecomType" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The telecom or device type that the telephone number is connected to.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Het type netwerk of apparaat waar het telefoonummer aan verbonden is" />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="payer.contact_information.telephone_numbers.telecom_type" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="TelecomType codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/TelecomType" />
-      </binding>
-    </element>
-    <element id="payer.contact_information.telephone_numbers.number_type">
-      <path value="payer.contact_information.telephone_numbers.number_type" />
-      <short value="NumberType">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="NummerSoort" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="NumberType indicates whether the number is a landline, temporary, work telephone number.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Met NummerSoort kan aangegeven worden of het om een vast, tijdelijk, werk nummer gaat." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="payer.contact_information.telephone_numbers.number_type" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="NumberType codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/NummerSoort" />
-      </binding>
-    </element>
-    <element id="payer.contact_information.telephone_numbers.comment">
-      <path value="payer.contact_information.telephone_numbers.comment" />
-      <short value="Comment">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Toelichting" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Explanation about the telephone number and how to use it. It can be indicated, for example, that it is a department number (for healthcare professionnels) or that availability by phone is only possible during a specified part of the day.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Toelichting over het telefoonnummer en over het gebruik ervan. Aangegeven kan bijvoorbeeld worden dat het een afdelingsnummer is (bij zorgverleners) of dat de bereikbaarheid slecht gedurende een aangegeven deel van de dag mogelijk is." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="payer.contact_information.telephone_numbers.comment" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="payer.contact_information.email_addresses">
-      <path value="payer.contact_information.email_addresses" />
-      <short value="EmailAddresses">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="EmailAdressen" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Container of the E-mailAddresses concept. This container contains all data elements of the E-mailAddresses concept.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Container van het concept EmailAdressen. Deze container bevat alle gegevenselementen van het concept Emailadressen." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="*" />
-      <base>
-        <path value="payer.contact_information.email_addresses" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-      <type>
-        <code value="BackboneElement" />
-      </type>
-    </element>
-    <element id="payer.contact_information.email_addresses.email_address">
-      <path value="payer.contact_information.email_addresses.email_address" />
-      <short value="EmailAddress">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="EmailAdres" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The person's e-mail address">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Een e-mailadres van de persoon" />
-          </extension>
-        </extension>
-      </definition>
-      <min value="1" />
-      <max value="1" />
-      <base>
-        <path value="payer.contact_information.email_addresses.email_address" />
-        <min value="1" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="payer.contact_information.email_addresses.email_address_type">
-      <path value="payer.contact_information.email_addresses.email_address_type" />
-      <short value="EmailAddressType">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="EmailSoort" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="E-mailAddressType indicates whether it is a private or business e-mail address.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Met EmailSoort kan aangegeven worden of het om een prive of zakelijk e-mail adres gaat." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="payer.contact_information.email_addresses.email_address_type" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="EmailAddressType codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/EmailSoort" />
-      </binding>
     </element>
   </differential>
 </StructureDefinition>
