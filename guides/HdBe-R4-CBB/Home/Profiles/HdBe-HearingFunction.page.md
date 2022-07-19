@@ -76,7 +76,7 @@ URL: url
   <div id="Examples" class="tabcontent">
       <ul>
         <li>{{pagelink:Home/Examples/HdBe-HearingFunction-01.page.md}}</li>
-        
+        <li>{{pagelink:Home/Examples/HdBe-HearingFunction-02.page.md}}</li>
       </ul>
   </div>
 

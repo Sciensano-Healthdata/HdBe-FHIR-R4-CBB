@@ -128,6 +128,7 @@
           </extension>
         </extension>
       </definition>
+      <comment value="**This CBB constrains the target CBB. The following child elements describe only the differences relative to the CBB in the target reference.**" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -135,36 +136,24 @@
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicalDevice" />
       </type>
     </element>
-    <element id="visual_function.visual_aid.product">
-      <path value="visual_function.visual_aid.product" />
-      <short value="Product">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Product" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The medical device (internally or externally).">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Het medische hulpmiddel dat wordt gebruikt (inwendig of uitwendig)." />
-          </extension>
-        </extension>
-      </definition>
+    <element id="visual_function.visual_aid.medical_device">
+      <path value="visual_function.visual_aid.medical_device" />
       <min value="1" />
       <max value="1" />
       <type>
         <code value="BackboneElement" />
       </type>
     </element>
-    <element id="visual_function.visual_aid.product.product_type">
-      <path value="visual_function.visual_aid.product.product_type" />
+    <element id="visual_function.visual_aid.medical_device.product">
+      <path value="visual_function.visual_aid.medical_device.product" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="visual_function.visual_aid.medical_device.product.product_type">
+      <path value="visual_function.visual_aid.medical_device.product.product_type" />
       <short value="ProductType">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">

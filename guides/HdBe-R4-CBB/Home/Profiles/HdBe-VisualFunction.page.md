@@ -83,7 +83,7 @@ select
   <div id="Examples" class="tabcontent">
       <ul>
         <li>{{pagelink:Home/Examples/HdBe-VisualFunction-01.page.md}}</li>
-        
+        <li>{{pagelink:Home/Examples/HdBe-VisualFunction-02.page.md}}</li>
       </ul>
   </div>
 
