@@ -2,7 +2,7 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`administering_speed` | type | Replaced type BackboneElement with Range type and added HdBe-Range profile. |
+|`administering_speed` | type | Replaced type BackboneElement with Range type and added  HdBe-Range partial CBB. |
 |`administering_speed` | element | Removed elements minimum_value, maximum_value and nominal_value as they are defined within the HdBe-Range. |
 |`administering_speed` | textual | Removed context regarding the Dutch NHG table. |
 |`route_of_administration` | terminology | Replaced Dutch valueSet with the SNOMED hierarchy containing descendents of 284009009 (Route of administration value) ([zib ticket #1781](https://bits.nictiz.nl/browse/ZIB-1781)) and renamed it to RouteOfMedicationAdministration to reuse the ValueSet both here and in InstructionsForUse. |
