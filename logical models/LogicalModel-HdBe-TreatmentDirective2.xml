@@ -72,11 +72,6 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="treatment_directive" />
-        <min value="0" />
-        <max value="*" />
-      </base>
     </element>
     <element id="treatment_directive.treatment_decision">
       <path value="treatment_directive.treatment_decision" />
@@ -102,18 +97,13 @@
       </definition>
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="treatment_directive.treatment_decision" />
-        <min value="1" />
-        <max value="1" />
-      </base>
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="required" />
         <description value="TreatmentDecision codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/BehandelBesluit" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/TreatmentDecision" />
       </binding>
     </element>
     <element id="treatment_directive.treatment">
@@ -140,18 +130,13 @@
       </definition>
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="treatment_directive.treatment" />
-        <min value="1" />
-        <max value="1" />
-      </base>
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
-        <strength value="required" />
+        <strength value="extensible" />
         <description value="Treatment codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/Behandeling" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/Treatment" />
       </binding>
     </element>
     <element id="treatment_directive.specification_other">
@@ -178,11 +163,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="treatment_directive.specification_other" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="string" />
       </type>
@@ -211,11 +191,6 @@
       </definition>
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="treatment_directive.most_recent_review_date" />
-        <min value="1" />
-        <max value="1" />
-      </base>
       <type>
         <code value="dateTime" />
       </type>
@@ -244,11 +219,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="treatment_directive.date_expired" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="dateTime" />
       </type>
@@ -277,11 +247,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="treatment_directive.reason_for_ending" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="string" />
       </type>
@@ -310,11 +275,6 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="treatment_directive.advance_directive" />
-        <min value="0" />
-        <max value="*" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AdvanceDirective" />
@@ -344,11 +304,6 @@
       </definition>
       <min value="2" />
       <max value="*" />
-      <base>
-        <path value="treatment_directive.agreement_party" />
-        <min value="2" />
-        <max value="*" />
-      </base>
       <type>
         <code value="BackboneElement" />
       </type>
@@ -377,11 +332,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="treatment_directive.agreement_party.patient" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Patient" />
@@ -411,11 +361,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="treatment_directive.agreement_party.representative" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson" />
@@ -445,11 +390,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="treatment_directive.agreement_party.health_professional" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional" />
@@ -479,11 +419,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="treatment_directive.comment" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="string" />
       </type>

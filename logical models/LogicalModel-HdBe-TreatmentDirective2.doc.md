@@ -1,5 +1,6 @@
-## zib [zib name + version](https://zibs.nl/wiki/[zib name + version(release)]) difference
+## zib [TreatmentDirective2-v1.0](https://zibs.nl/wiki/TreatmentDirective2-v1.0(2020EN)) difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+| `treatment_directive.treatment` | terminology | Changed binding strenght from Required to Extensible because it is very likely other codes may be relevant in the future. This is already the case with the zibs in release 2020 versus the pre-release of 2022 where new codes have been added. 
+| `treatment_directive.treatment` | terminology | Changed codes to the one found in TreatmentDirective2-v2.0(2022EN).
