@@ -21,9 +21,10 @@
         2. [ValueSets](#ValueSets)
     3.  [ElementDefinition](#ElementDefinition)
         1. [Usage of DefinitionCodes](#DefinitionCodes)
-        2. [Usage of zib concept examples](#ZibConceptExamples)
+        2. [Constraining a target CBB](#ConstrainingCBB)
+        3. [Usage of zib concept examples](#ZibConceptExamples)
     4.  [Examples](#Examples)
-        1. [Logical mdel examples](#LogicalModelExamples)
+        1. [Logical model examples](#LogicalModelExamples)
         2. [FHIR profile examples](#FHIRProfileExamples)
 8. [Miscellaneous](#miscellaneous)
 
@@ -269,6 +270,12 @@ For some concepts within a zib, a DefinitionCode is assigned. A DefinitionCode m
 
 However, for the CBBs, we have decided not to take over these DefintionCodes because they are often not well suited or outdated. Furthermore, they are not of much value inside profiles because the element's definition provides sufficient meaning: the semantics of concepts are made clear by their definition, and when mapped to FHIR resources, they are backed up by those definitions.
 
+### Constraining a target CBB <a name="ConstrainingCBB"></a>  
+A few ZIBs (e.g. [VisualFunction](https://zibs.nl/wiki/VisualFunction-v3.1(2020EN))) constrain a target CBB. To visualize this in a Logical Model, we defined the following guidelines, which should be modelled outside of Forge:
+- Add an element of the reference type with a reference to the target CBB. Add the following comment to this element: _"This CBB constrains the target CBB. The following child elements describe only the differences relative to the CBB in the target reference."_
+- Add an child element of the BackBoneElement type and give it the name of the target CBB.
+- Finally only add the elements of the target CBB that are constrained. Keep the hierarchy and cardinality as is in the target CBB.
+
 ### Usage of zib concept examples <a name="ZibConceptExamples"></a>
 For some concepts within a zib, examples are available in the export to FHIR logical models. These are mapped to `ElementDefinition.example`. 
 
@@ -278,7 +285,7 @@ The `ElementDefinition.example` should use the concept's datatype. However, the 
 Examples are a vital part of any specification as they will allow the reader to easier understand the expectations. Every logical model and profile shall have at least one example. 
 Logical models examples are functional in nature: they provide examples of what kind of information belongs to a CBB in a non-technical format. FHIR profile examples are technical in nature. The logical model examples are primarily aimed at researchers and non-technical people. They provide an example of how a CBB  is initialized in the FHIR standard, in XML or JSON format, conforming to the FHIR-profile for the respective CBB. These examples are aimed at developers and implementers of the technical specifications.   
 
-#### Logical mdel examples <a name="LogicalModelExamples"></a>
+#### Logical model examples <a name="LogicalModelExamples"></a>
 Examples of logical models are not conformant to FHIR, and are therefore not represented in XML or JSON. Examples are provided in  table format in a seperate markdown file. The file has the same name as the CBB logical model but ends with `.example.md.` For example `HdBe-BodyHeight.xml` <-> `HdBe-BodyHeight.example.md`.
 The following conventions exist:
 - For elements that represent a quantity, also provide the unit.
