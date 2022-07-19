@@ -40,6 +40,10 @@
 - {{pagelink:Home/Examples/HdBe-NutritionAdvice-01-Condition-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Patient-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Patient-02.page.md}}
+- {{pagelink:Home/Examples/HdBe-Payer-Organization-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-Payer-Organization-02.page.md}}
+- {{pagelink:Home/Examples/HdBe-Payer.InsuranceCompany-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-Payer.PayerPerson-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-PharmaceuticalProduct-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Problem-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-PulseRate-01.page.md}}

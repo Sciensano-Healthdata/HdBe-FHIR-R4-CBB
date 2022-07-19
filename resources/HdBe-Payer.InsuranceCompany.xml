@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-Payer.InsuranceCompany" />
   <meta>
-    <lastUpdated value="2022-07-19T12:50:56.0236797+00:00" />
+    <lastUpdated value="2022-07-19T13:39:13.6387467+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-Payer.InsuranceCompany" />
   <name value="HdBePayerInsuranceCompany" />
@@ -17,7 +17,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Payers are organizations or individuals that pay for the healthcare supplied to the patient. These organizations or individuals can be: facilities or people who financially guarantee or who are responsible for the patient (such as parents or guardians of minors), organizations with direct financial responsibility, combinations of these or the patient themselves." />
+  <description value="Payers are organizations or individuals that pay for the healthcare supplied to the patient. This profile represents insurance organizations with direct financial responsibility to the patient." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -39,7 +39,7 @@
     <element id="Coverage">
       <path value="Coverage" />
       <short value="Payer / Insurance" />
-      <comment value="The CBB Payer is split into two focal profiles on Coverage based on the PayerPerson and InsuranceCompany containers. These two containers cannot be profiled within one profile because they both require mapping different concepts on elements such as `.payor` and `.type`.&#xD;&#xA;&#xD;&#xA;The CBB container Payer.InsuranceCompany is mapped to this Coverage profile and uses the profile HdBe-Payer-Organization (&amp;lt;https://fhir.healthdata.be/StructureDefinition/HdBe-Payer-Organization&amp;gt;) to capture the OrganizationName, IdentificationNumber, AddressInformation and ContactInformation. The HdBe-Payer-Organization profile is referenced using the `.payor` element." />
+      <comment value="The CBB Payer is split into two focal profiles on Coverage based on the PayerPerson and InsuranceCompany containers. These two containers cannot be profiled within one profile because they both require mapping different concepts on elements such as `.payor` and `.type`.&#xD;&#xA;&#xD;&#xA;The CBB container Payer.InsuranceCompany is mapped to this Coverage profile and uses the profile HdBe-Payer-Organization to capture the OrganizationName, IdentificationNumber, AddressInformation and ContactInformation. The HdBe-Payer-Organization profile is referenced using the `.payor` element." />
       <alias value="Betaler" />
       <alias value="Verzekering" />
       <mapping>
