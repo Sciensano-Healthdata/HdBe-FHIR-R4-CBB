@@ -72,11 +72,6 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="medication_administration" />
-        <min value="0" />
-        <max value="*" />
-      </base>
     </element>
     <element id="medication_administration.administration_product">
       <path value="medication_administration.administration_product" />
@@ -102,11 +97,6 @@
       </definition>
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="medication_administration.administration_product" />
-        <min value="1" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct" />
@@ -114,134 +104,13 @@
     </element>
     <element id="medication_administration.administering_speed">
       <path value="medication_administration.administering_speed" />
-      <short value="AdministeringSpeed">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Toedieningssnelheid" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The administering speed is used in slow administration of liquid. In practice, the measuring unit is almost always ml/hour. &#xD;&#xA;Entering an interval (such as 0-10 ml/hour) is also a commonly used option. &#xD;&#xA;&#xD;&#xA;For example, with an administering speed of 10ml/hour: &#xD;&#xA;&#xD;&#xA;* amount = 10,&#xD;&#xA;* dose unit = ml&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;* time unit = hour&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Optionally a translation to NHG table Gebruiksvoorschriften(Table 25) is also allowed.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="De toedieningssnelheid wordt gebruikt bij de langzame toediening van vloeistoffen. De meeteenheid is in de praktijk vrijwel altijd ml/uur.&#xD;&#xA;Ook het opgeven van een interval (bijv. 0-10 ml/uur) is een gebruikelijke optie.&#xD;&#xA;&#xD;&#xA;Bijvoorbeeld, bij toedieningssnelheid van 10ml/uur geldt:&#xD;&#xA;&#xD;&#xA;* aantal = 10,&#xD;&#xA;* gebruikseenheid = ml&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;* tijdseenheid = uur&#xD;&#xA;&#xD;&#xA;&#xD;&#xA; Optioneel is voor de eenheid in plaats van gebruik van UCUM eenheden ook een vertaling toegestaan naar NHG tabel Gebruiksvoorschriften (tabel 25)." />
-          </extension>
-        </extension>
-      </definition>
+      <short value="AdministeringSpeed" />
+      <definition value="The administering speed is used in slow administration of liquid. In practice, the measuring unit is almost always ml/hour. &#xD;&#xA;Entering an interval (such as 0-10 ml/hour) is also a commonly used option. &#xD;&#xA;&#xD;&#xA;For example, with an administering speed of 10ml/hour: &#xD;&#xA;&#xD;&#xA;* amount = 10,&#xD;&#xA;* dose unit = ml&#xD;&#xA;* time unit = hour" />
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_administration.administering_speed" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
-        <code value="BackboneElement" />
-      </type>
-    </element>
-    <element id="medication_administration.administering_speed.minimum_value">
-      <path value="medication_administration.administering_speed.minimum_value" />
-      <short value="minimumValue">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="minimumWaarde" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The minimal value of the range">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="De minimale waarde van het bereik" />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="medication_administration.administering_speed.minimum_value" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="Quantity" />
-      </type>
-    </element>
-    <element id="medication_administration.administering_speed.maximum_value">
-      <path value="medication_administration.administering_speed.maximum_value" />
-      <short value="maximumValue">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="maximumWaarde" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The maximum value of the range">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="De maximale waarde van het bereik" />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="medication_administration.administering_speed.maximum_value" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="Quantity" />
-      </type>
-    </element>
-    <element id="medication_administration.administering_speed.nominal_value">
-      <path value="medication_administration.administering_speed.nominal_value" />
-      <short value="nominalValue">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="nominaleWaarde" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The nominal value of the quantity. This element can not be used in combination with a minimum and maximum value">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="De nominale waarde van de hoeveelheid. Dit element kan niet in combinatie met een minimale en maximale waarde gebruikt worden." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="medication_administration.administering_speed.nominal_value" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="Quantity" />
+        <code value="Range" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Range" />
       </type>
     </element>
     <element id="medication_administration.administration_date_time">
@@ -268,11 +137,6 @@
       </definition>
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="medication_administration.administration_date_time" />
-        <min value="1" />
-        <max value="1" />
-      </base>
       <type>
         <code value="dateTime" />
       </type>
@@ -301,11 +165,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_administration.agreed_date_time" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="dateTime" />
       </type>
@@ -334,11 +193,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_administration.administered_amount" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Quantity" />
       </type>
@@ -367,11 +221,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_administration.deviating_administration" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="boolean" />
       </type>
@@ -400,18 +249,13 @@
       </definition>
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="medication_administration.route_of_administration" />
-        <min value="1" />
-        <max value="1" />
-      </base>
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="required" />
         <description value="RouteOfAdministration codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieToedieningToedieningsweg" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/MedicationAdministrationRouteOfAdministration" />
       </binding>
     </element>
     <element id="medication_administration.double_check_performed">
@@ -438,11 +282,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_administration.double_check_performed" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="boolean" />
       </type>
@@ -471,11 +310,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_administration.related_agreement" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="BackboneElement" />
       </type>
@@ -492,7 +326,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="Medication agreement on which this administration.is based.">
+      <definition value="Medication agreement on which this administration is based.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -504,11 +338,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_administration.related_agreement.medication_agreement" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationAgreement" />
@@ -538,11 +367,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_administration.related_agreement.administration_agreement" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AdministrationAgreement" />
@@ -572,11 +396,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_administration.administrator" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="BackboneElement" />
       </type>
@@ -605,11 +424,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_administration.administrator.patient" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Patient" />
@@ -639,11 +453,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_administration.administrator.health_professional" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional" />
@@ -673,11 +482,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_administration.administrator.caregiver" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson" />
@@ -707,18 +511,13 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_administration.medication_administration_reason_for_deviation" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="required" />
         <description value="MedicationAdministrationReasonForDeviation codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieToedieningRedenVanAfwijken" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/MedicationAdministrationReasonForDeviation" />
       </binding>
     </element>
     <element id="medication_administration.medication_administration_status">
@@ -745,18 +544,13 @@
       </definition>
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="medication_administration.medication_administration_status" />
-        <min value="1" />
-        <max value="1" />
-      </base>
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="required" />
         <description value="MedicationAdministrationStatus codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieToedieningStatus" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/MedicationAdministrationStatus" />
       </binding>
     </element>
     <element id="medication_administration.comment">
@@ -783,11 +577,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_administration.comment" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="string" />
       </type>
