@@ -1,57 +1,57 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Consent xmlns="http://hl7.org/fhir">
-   <id value="HdBe-TreatmentDirective2-02"/>
-   <meta>
-      <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-TreatmentDirective2"/>
-   </meta>
-   <modifierExtension url="https://fhir.healthdata.be/StructureDefinition/ext-TreatmentDirective2.SpecificationOther">
-      <valueString value="First consult with husband"/>
-   </modifierExtension>
-   <status value="active"/>
-   <scope>
-      <coding>
-         <system value="http://terminology.hl7.org/CodeSystem/consentscope"/>
-         <code value="treatment"/>
-         <display value="Treatment"/>
-      </coding>
-   </scope>
-   <category>
-      <coding>
-         <system value="http://snomed.info/sct"/>
-         <code value="129125009"/>
-         <display value="verrichting met expliciete context"/>
-      </coding>
-   </category>
-   <patient>
-        <reference value="Patient/HdBe-Patient-01"/>
+  <id value="HdBe-TreatmentDirective2-02"/>
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-TreatmentDirective2"/>
+  </meta>
+  <modifierExtension url="https://fhir.healthdata.be/StructureDefinition/ext-TreatmentDirective2.SpecificationOther">
+    <valueString value="First consult with husband"/>
+  </modifierExtension>
+  <status value="active"/>
+  <scope>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/consentscope"/>
+      <code value="treatment"/>
+      <display value="Treatment"/>
+    </coding>
+  </scope>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="129125009"/>
+      <display value="Procedure with explicit context"/>
+    </coding>
+  </category>
+  <patient>
+    <reference value="Patient/HdBe-Patient-01"/>
+    <type value="Patient"/>
+    <display value="Belle Ulijn"/>
+  </patient>
+  <dateTime value="2012-09-11"/>
+  <policy>
+    <uri value="https://www.belgielex.be"/>
+  </policy>
+  <provision>
+    <actor>
+      <role>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+          <code value="CONSENTER"/>
+          <display value="consenter"/>
+        </coding>
+      </role>
+      <reference>
+        <reference value="Patient/HdBe-TreatmentDirective2-02-Patient-01"/>
         <type value="Patient"/>
-        <display value="Belle Ulijn"/>
-   </patient>
-   <dateTime value="2012-09-11"/>
-   <policy>
-      <uri value="https://www.belgielex.be"/>
-   </policy>
-   <provision>
-      <actor>
-         <role>
-            <coding>
-               <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
-               <code value="CONSENTER"/>
-               <display value="consenter"/>
-            </coding>
-         </role>
-         <reference>
-            <reference value="Patient/HdBe-TreatmentDirective2-02-Patient-01"/>
-            <type value="Patient"/>
-            <display value="Patient, Jan Pieter Mark (Piet) Pietersen"/>
-         </reference>
-      </actor>
-      <code>
-         <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="89666000"/>
-            <display value="Cardiopulmonale resuscitatie"/>
-         </coding>
-      </code>
-   </provision>
+        <display value="Patient, Jan Pieter Mark (Piet) Pietersen"/>
+      </reference>
+    </actor>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="89666000"/>
+        <display value="Cardiopulmonary resuscitation"/>
+      </coding>
+    </code>
+  </provision>
 </Consent>
