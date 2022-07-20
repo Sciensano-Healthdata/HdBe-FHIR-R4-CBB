@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Consent xmlns="http://hl7.org/fhir">
-   <id value="nl-core-TreatmentDirective2-01-Consent-01"/>
+   <id value="HdBe-TreatmentDirective2-01-Consent-01"/>
    <meta>
-      <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AdvanceDirective"/>
+      <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AdvanceDirective"/>
    </meta>
-   <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Comment">
+   <extension url="https://fhir.healthdata.be/StructureDefinition/ext-Comment">
       <valueString value="volmacht aan echtgenote"/>
    </extension>
    <status value="active"/>
@@ -23,14 +23,14 @@
       </coding>
    </category>
    <patient>
-      <reference value="Patient/nl-core-Patient-01"/>
-      <type value="Patient"/>
-      <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
+        <reference value="Patient/HdBe-Patient-01"/>
+        <type value="Patient"/>
+        <display value="Belle Ulijn"/>
    </patient>
    <dateTime value="2010-05-06"/>
    <sourceAttachment>
       <contentType value="application/octet-stream"/>
-      <data value="volmacht"/>
+      <data value="Power of attorney granted"/>
    </sourceAttachment>
    <policy>
       <uri value="https://wetten.overheid.nl/"/>
@@ -38,9 +38,9 @@
    <provision>
       <code>
          <coding>
-            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.14.1"/>
-            <code value="VOL"/>
-            <display value="Volmacht"/>
+            <system value="http://snomed.info/sct"/>
+            <code value="224346008"/>
+            <display value="Power of attorney granted"/>
          </coding>
       </code>
    </provision>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RelatedPerson xmlns="http://hl7.org/fhir">
-   <id value="nl-core-TreatmentDirective2-01-RelatedPerson-01"/>
+   <id value="HdBe-TreatmentDirective2-01-RelatedPerson-01"/>
    <meta>
-      <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPerson"/>
+      <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson"/>
    </meta>
    <patient>
-      <reference value="Patient/nl-core-Patient-01"/>
-      <type value="Patient"/>
-      <display value="Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
+        <reference value="Patient/HdBe-Patient-01"/>
+        <type value="Patient"/>
+        <display value="Belle Ulijn"/>
    </patient>
    <relationship>
       <coding>
@@ -65,30 +65,15 @@
       <given value="Piet"/>
    </name>
    <telecom>
-      <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Comment">
-         <valueString value="test toelichting"/>
-      </extension>
-      <system value="phone">
-         <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
-            <valueCodeableConcept>
-               <coding>
-                  <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
-                  <code value="MC"/>
-                  <display value="Mobile Phone"/>
-               </coding>
-            </valueCodeableConcept>
-         </extension>
-      </system>
-      <value value="+31611234567"/>
-      <use value="home"/>
-   </telecom>
-   <telecom>
       <system value="email"/>
       <value value="giesput@myweb.nl"/>
       <use value="home"/>
    </telecom>
    <address>
-      <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType">
+      <extension url="http://hl7.org/fhir/StructureDefinition/language">
+         <valueCode value="nl"/>
+      </extension>
+      <extension url="https://fhir.healthdata.be/StructureDefinition/ext-AddressInformation.AddressType">
          <valueCodeableConcept>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
@@ -120,7 +105,7 @@
       <district value="Kaag en Braassem"/>
       <postalCode value="1012 NX"/>
       <country value="Nederland">
-         <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+         <extension url="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification">
             <valueCodeableConcept>
                <coding>
                   <system value="urn:iso:std:iso:3166"/>
