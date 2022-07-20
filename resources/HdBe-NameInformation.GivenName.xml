@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBe-NameInformation.GivenName"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation.GivenName"/>
+   <name value="HdBeNameInformationGivenName"/>
+   <title value="HdBe NameInformation.GivenName"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Service portal – healthdata.be"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://sciensano.service-now.com/sp"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="The name normally used to address the person."/>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <mapping>
+      <identity value="zib-nameinformation-v1.1-2020EN"/>
+      <uri value="https://zibs.nl/wiki/NameInformation-v1.1(2020EN)"/>
+      <name value="zib NameInformation-v1.1(2020EN)"/>
+   </mapping>
+   <mapping>
+      <identity value="HdBe-NameInformation"/>
+      <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NameInformation"/>
+      <name value="HdBe logical model NameInformation"/>
+   </mapping>
+   <kind value="complex-type"/>
+   <abstract value="false"/>
+   <type value="HumanName"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/HumanName"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="HumanName">
+         <path value="HumanName"/>
+         <definition value="This slice represents the name information normally used to address the person."/>
+         <comment value="This `.name` element represents the Belgium given name (&#34;roepnaam&#34;) according to the CBB NameInformation.&#xD;&#xA;&#xD;&#xA;**Note 1**: This element should only contain a person's _unofficial_ name. The official names are represented in one or more other `.name` elements with `.name.use` = _official_.&#xD;&#xA;&#xD;&#xA;**Note 2**: The examples illustrate how the CBB is mapped to FHIR."/>
+      </element>
+      <element id="HumanName.use">
+         <path value="HumanName.use"/>
+         <min value="1"/>
+         <fixedCode value="usual"/>
+      </element>
+      <element id="HumanName.family">
+         <path value="HumanName.family"/>
+         <max value="0"/>
+      </element>
+      <element id="HumanName.given">
+         <path value="HumanName.given"/>
+         <short value="GivenName"/>
+         <definition value="The name normally used to address the person."/>
+         <alias value="Roepnaam"/>
+         <min value="1"/>
+         <mapping>
+            <identity value="zib-nameinformation-v1.1-2020EN"/>
+            <map value="NL-CM:20.4.6"/>
+            <comment value="GivenName"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-NameInformation"/>
+            <map value="name_information.given_name"/>
+         </mapping>
+      </element>
+      <element id="HumanName.prefix">
+         <path value="HumanName.prefix"/>
+         <max value="0"/>
+      </element>
+      <element id="HumanName.suffix">
+         <path value="HumanName.suffix"/>
+         <max value="0"/>
+      </element>
+   </differential>
+</StructureDefinition>

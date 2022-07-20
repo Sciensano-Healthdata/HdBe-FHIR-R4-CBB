@@ -93,12 +93,16 @@
       </element>
       <element id="Practitioner.name">
          <path value="Practitioner.name"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="use"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+         <short value="NameInformation"/>
          <definition value="Health professional’s full name."/>
-         <comment value="The cardinality mismatch between the logical model (0..1) and FHIR (0..*) is explained by the presence of the `HumanName.use` element. A full name can be broken into parts using multiple instances of _HumanName_ that have its own value for use."/>
-         <type>
-            <code value="HumanName"/>
-            <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation"/>
-         </type>
+         <alias value="Naamgegevens"/>
          <mapping>
             <identity value="zib-healthprofessional-v3.5-2020EN"/>
             <map value="NL-CM:17.1.3"/>
@@ -108,6 +112,23 @@
             <identity value="HdBe-HealthProfessional"/>
             <map value="name_information"/>
          </mapping>
+      </element>
+      <element id="Practitioner.name:nameInformation">
+         <path value="Practitioner.name"/>
+         <sliceName value="nameInformation"/>
+         <max value="2"/>
+         <type>
+            <code value="HumanName"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation"/>
+         </type>
+      </element>
+      <element id="Practitioner.name:nameInformation-GivenName">
+         <path value="Practitioner.name"/>
+         <sliceName value="nameInformation-GivenName"/>
+         <type>
+            <code value="HumanName"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation.GivenName"/>
+         </type>
       </element>
       <element id="Practitioner.telecom">
          <path value="Practitioner.telecom"/>

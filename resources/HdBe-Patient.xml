@@ -188,33 +188,44 @@
             <system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"/>
          </patternIdentifier>
       </element>
-      <element id="Patient.name">
+            <element id="Patient.name">
          <path value="Patient.name"/>
-         <definition value="Patient's full name.&#xD;&#xA;The cardinality differs from the CBB to allow including several name elements with a different name.use each."/>
-         <comment value="The cardinality mismatch between the CBB (0..1) and FHIR (0..*) is explained by the presence of the HumanName.use element. A full name can be broken into parts using multiple instances of HumanName that have its own value for use."/>
-         <type>
-            <code value="HumanName"/>
-            <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation"/>
-         </type>
-         <mapping>
-            <identity value="HdBe-Patient"/>
-            <map value="patient.name_information"/>
-         </mapping>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="use"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+         <short value="NameInformation"/>
+         <definition value="Patient's full name."/>
+         <alias value="Naamgegevens"/>
          <mapping>
             <identity value="zib-patient-v3.2-2020EN"/>
             <map value="NL-CM:0.1.6"/>
             <comment value="NameInformation"/>
          </mapping>
+         <mapping>
+            <identity value="HdBe-Patient"/>
+            <map value="patient.name_information"/>
+         </mapping>
       </element>
-      <element id="Patient.name.given">
-         <path value="Patient.name.given"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="extension('http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier').value"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
+      <element id="Patient.name:nameInformation">
+         <path value="Patient.name"/>
+         <sliceName value="nameInformation"/>
+         <max value="2"/>
+         <type>
+            <code value="HumanName"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation"/>
+         </type>
+      </element>
+      <element id="Patient.name:nameInformation-GivenName">
+         <path value="Patient.name"/>
+         <sliceName value="nameInformation-GivenName"/>
+         <type>
+            <code value="HumanName"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation.GivenName"/>
+         </type>
       </element>
       <element id="Patient.telecom">
          <path value="Patient.telecom"/>
@@ -595,10 +606,10 @@
             <map value="relationship"/>
          </mapping>
       </element>
-      <element id="Patient.contact.name">
+            <element id="Patient.contact.name">
          <path value="Patient.contact.name"/>
          <definition value="Full name of the contact."/>
-         <comment value="The cardinality mismatch between the CBB (0..1) and FHIR (0..*) is explained by the presence of the HumanName.use element. A full name can be broken into parts using multiple instances of HumanName that have its own value for use."/>
+         <comment value="This element can and should not completely capture the NameInformation concept from the CBB ContactPerson; it should just be used for the information that is needed for contacting the person in relation to care of the patient. The full name information should instead be captured using an instance of [HdBe-ContactPerson](https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson), which can then be referenced from this resource. See the comment on `Patient.contact` for more information."/>
          <type>
             <code value="HumanName"/>
             <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation"/>
@@ -608,20 +619,10 @@
             <map value="NL-CM:3.1.4"/>
             <comment value="NameInformation"/>
          </mapping>
-         <mapping>
-            <identity value="hdbe-ContactInformation"/>
+          <mapping>
+            <identity value="HdBe-ContactPerson"/>
             <map value="name_information"/>
          </mapping>
-      </element>
-      <element id="Patient.contact.name.given">
-         <path value="Patient.contact.name.given"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="extension('http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier').value"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
       </element>
       <element id="Patient.contact.telecom">
          <path value="Patient.contact.telecom"/>

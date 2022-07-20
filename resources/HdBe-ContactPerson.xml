@@ -121,14 +121,18 @@
             <map value="contact_person.relationship"/>
          </mapping>
       </element>
-      <element id="RelatedPerson.name">
+ <element id="RelatedPerson.name">
          <path value="RelatedPerson.name"/>
-         <definition value="Full name of the contact person."/>
-         <comment value="The cardinality mismatch between the CBB (0..1) and FHIR (0..*) is explained by the presence of the HumanName.use element. A full name can be broken into parts using multiple instances of HumanName that have its own value for use."/>
-         <type>
-            <code value="HumanName"/>
-            <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation"/>
-         </type>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="use"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+         <short value="NameInformation"/>
+         <definition value="Full name of the contact."/>
+         <alias value="Naamgegevens"/>
          <mapping>
             <identity value="zib-contactperson-v3.4-2020EN"/>
             <map value="NL-CM:3.1.4"/>
@@ -138,6 +142,23 @@
             <identity value="HdBe-ContactInformation"/>
             <map value="name_information"/>
          </mapping>
+      </element>
+      <element id="RelatedPerson.name:nameInformation">
+         <path value="RelatedPerson.name"/>
+         <sliceName value="nameInformation"/>
+         <max value="2"/>
+         <type>
+            <code value="HumanName"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation"/>
+         </type>
+      </element>
+      <element id="RelatedPerson.name:nameInformation-GivenName">
+         <path value="RelatedPerson.name"/>
+         <sliceName value="nameInformation-GivenName"/>
+         <type>
+            <code value="HumanName"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation.GivenName"/>
+         </type>
       </element>
       <element id="RelatedPerson.telecom">
          <path value="RelatedPerson.telecom"/>
@@ -189,7 +210,9 @@
       </element>
       <element id="RelatedPerson.address">
          <path value="RelatedPerson.address"/>
+         <short value="AddressInformation"/>
          <definition value="Contact person’s address information."/>
+         <alias value="Adresgegevens"/>
          <type>
             <code value="Address"/>
             <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation"/>
