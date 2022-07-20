@@ -47,6 +47,13 @@
 - {{pagelink:Home/Examples/HdBe-PharmaceuticalProduct-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Problem-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-PulseRate-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-TreatmentDirective2-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-TreatmentDirective2-01-Consent-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-TreatmentDirective2-01-Practitioner-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-TreatmentDirective2-01-PractitionerRole-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-TreatmentDirective2-01-RelatedPerson-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-TreatmentDirective2-02.page.md}}
+- {{pagelink:Home/Examples/HdBe-TreatmentDirective2-02-Patient-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-TreatmentObjective-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-TreatmentObjective-01-Condition-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-TreatmentObjective-01-Device-01.page.md}}
