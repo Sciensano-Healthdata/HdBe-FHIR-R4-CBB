@@ -43,6 +43,7 @@ def translateDisplay(coding):
     if coding.system == 'http://snomed.info/sct':
         ENdisplay = getEnglishDisplay(coding.code)
         coding.display = ENdisplay
+        print('Added or updated SNOMED code ' + coding.code + ' with ' + coding.display)
     else:
         pass
     return coding           
@@ -75,7 +76,7 @@ for f in file:
     resource = import_from("fhir.resources." + resource_name.lower(), resource_name).parse_file(f)
     print('Status: parsed'+ filename)
     xml_str = reflect_get_coding(resource).xml(pretty_print=True)
-    print('Status: searched for SNOMED codings...' )
+    
     #only write to file if there is a change.
     if xml_str != '':
         output_file = open(output_folder + filename, 'w', encoding='UTF8') 
