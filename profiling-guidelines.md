@@ -220,7 +220,7 @@ Examples of profiles are not conformance resources and lack the `.url`, `.name` 
 - codesystems
     - `terminology/CodeSystem-[name].xml`    
 - conceptmaps
-    - `terminology/ConceptMaps-[id].xml`
+    - `terminology/ConceptMap-[id].xml`
 - namingsystems
     - `terminology/NamingSystem-[name].xml`  
 - examples
