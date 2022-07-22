@@ -56,7 +56,7 @@ select
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-ContactInformation-EmailAddresses') { map, comment }
+        join mapping.where(identity = 'HdBe-ContactInformation') { map, comment }
       ```
     </div>
   </div>
@@ -119,7 +119,7 @@ select
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-ContactInformation-TelephoneNumbers') { map, comment }
+        join mapping.where(identity = 'HdBe-ContactInformation') { map, comment }
       ```
     </div>
   </div>

@@ -46,7 +46,7 @@ URL: url
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-MedicationAdministration2') { map, comment }
+        join mapping.where(identity in 'HdBe-MedicationAdministration2'|'HdBe-Range') { map, CBB: identity, comment  }
       ```
     </div>
   </div>
