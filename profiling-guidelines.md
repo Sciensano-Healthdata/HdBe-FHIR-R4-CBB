@@ -272,8 +272,8 @@ However, for the CBBs, we have decided not to take over these DefintionCodes bec
 
 ### Constraining a target CBB <a name="ConstrainingCBB"></a>  
 A few ZIBs (e.g. [VisualFunction](https://zibs.nl/wiki/VisualFunction-v3.1(2020EN))) constrain a target CBB. To visualize this in a Logical Model, we defined the following guidelines, which should be modelled outside of Forge:
-- Add an element of the reference type with a reference to the target CBB. Add the following comment to this element: _"This CBB constrains the target CBB. The following child elements describe only the differences relative to the CBB in the target reference."_
-- Add an child element of the BackBoneElement type and give it the name of the target CBB.
+- Add an element of the reference type with a reference to the target CBB. Match the cardinality with the cardinality of the ZIB. Add the following comment to this element: _"This CBB constrains the target CBB. The following child elements describe only the differences relative to the CBB in the target reference."_
+- Add an child element of the BackBoneElement type and give it the name of the target CBB. Set the cardinality to 1..1.
 - Finally only add the elements of the target CBB that are constrained. Keep the hierarchy and cardinality as is in the target CBB.
 
 ### Usage of zib concept examples <a name="ZibConceptExamples"></a>
