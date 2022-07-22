@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?> 
 <ConceptMap xmlns="http://hl7.org/fhir">
    <id value="MedicationAdministrationStatus-to-MedicationAdministrationStatus"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
@@ -22,11 +22,11 @@
    <sourceCanonical value="https://fhir.healthdata.be/ValueSet/MedicationAdministrationStatus"/>
    <targetCanonical value="http://hl7.org/fhir/ValueSet/medication-admin-status"/>
    <group>
-      <source value="http://terminology.hl7.org/CodeSystem/v3-ActStatus"/>
+      <source value="http://snomed.info/sct"/>
       <target value="http://terminology.hl7.org/CodeSystem/medication-admin-status"/>
       <targetVersion value="4.0.1"/>
       <element>
-         <code value="active"/>
+         <code value="55561003"/>
          <display value="Active"/>
          <target>
             <code value="in-progress"/>
@@ -35,7 +35,7 @@
          </target>
       </element>
       <element>
-         <code value="suspended"/>
+         <code value="385655000"/>
          <display value="Suspended"/>
          <target>
             <code value="on-hold"/>
@@ -44,7 +44,21 @@
          </target>
       </element>
       <element>
-         <code value="aborted"/>
+         <code value="89925002"/>
+         <display value="Cancelled"/>
+         <target>
+            <code value="not-done"/>
+            <display value="Not Done"/>
+            <equivalence value="equal"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <source value="https://fhir.healthdata.be/CodeSystem/MedicationAdministrationStatus"/>
+      <target value="http://terminology.hl7.org/CodeSystem/medication-admin-status"/>
+      <targetVersion value="4.0.1"/>
+      <element>
+         <code value="MS0001"/>
          <display value="Aborted"/>
          <target>
             <code value="stopped"/>
@@ -53,20 +67,11 @@
          </target>
       </element>
       <element>
-         <code value="completed"/>
+         <code value="MS0002"/>
          <display value="Completed"/>
          <target>
             <code value="completed"/>
             <display value="Completed"/>
-            <equivalence value="equal"/>
-         </target>
-      </element>
-      <element>
-         <code value="cancelled"/>
-         <display value="Cancelled"/>
-         <target>
-            <code value="not-done"/>
-            <display value="Not Done"/>
             <equivalence value="equal"/>
          </target>
       </element>
