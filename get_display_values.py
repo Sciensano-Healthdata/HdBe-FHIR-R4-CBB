@@ -7,29 +7,7 @@ import os
 from pathlib import Path
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import tostring
-from fhir.resources.allergyintolerance import AllergyIntolerance	
-from fhir.resources.careplan import CarePlan
-from fhir.resources.condition import Condition
-from fhir.resources.consent import Consent
-from fhir.resources.device import Device
-from fhir.resources.deviceusestatement import DeviceUseStatement
-from fhir.resources.encounter import Encounter
-from fhir.resources.flag import Flag
-from fhir.resources.immunization import Immunization
-from fhir.resources.location import Location
-from fhir.resources.medication import Medication
-from fhir.resources.nutritionorder import NutritionOrder
-from fhir.resources.observation import Observation
-from fhir.resources.organization import Organization
-from fhir.resources.patient import Patient
-from fhir.resources.practitioner import Practitioner
-from fhir.resources.practitionerrole import PractitionerRole
-from fhir.resources.procedure import Procedure
-from fhir.resources.relatedperson import RelatedPerson
-from fhir.resources.servicerequest import ServiceRequest
-from fhir.resources.specimen import Specimen 
 from fhir.resources.coding import Coding
-from fhir.resources.codeableconcept import CodeableConcept
 from fhir.resources import construct_fhir_element
 from numpy import iterable 
 
@@ -83,78 +61,21 @@ def reflect_get_coding(fhir):
           reflect_get_coding(value)
   return fhir
 
+def import_from(module, name):
+    module = __import__(module, fromlist=[name])
+    return getattr(module, name)
+
 "Main body of the script. Gets all XML files in a folder and for every file extract the XML root to determine the resource type then uses that to parse the file into the correct resource class. "
 file = Path(input_folder).glob('HdBe-*.xml')
 for f in file:
     filename = os.path.basename(f)
     root = ET.parse(f).getroot()
     xml_str = ''
-    
-    # Asked a question to see if this can be written down more efficient: https://github.com/nazrulworld/fhir.resources/issues/106  
-    if root.tag == '{http://hl7.org/fhir}AllergyIntolerance':
-        resource = AllergyIntolerance.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True)
-    elif root.tag == '{http://hl7.org/fhir}CarePlan': 
-        resource = CarePlan.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True)
-    elif root.tag == '{http://hl7.org/fhir}Condition': 
-        resource = Condition.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True)
-    elif root.tag == '{http://hl7.org/fhir}Consent': 
-        resource = Consent.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True)
-    elif root.tag == '{http://hl7.org/fhir}Device': 
-        resource = Device.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True)
-    elif root.tag == '{http://hl7.org/fhir}DeviceUseStatement': 
-        resource = DeviceUseStatement.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True)
-    elif root.tag == '{http://hl7.org/fhir}Encounter': 
-        resource = Encounter.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True)
-    elif root.tag == '{http://hl7.org/fhir}Flag': 
-        resource = Flag.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True)
-    elif root.tag == '{http://hl7.org/fhir}Immunization': 
-        resource = Immunization.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True)
-    elif root.tag == '{http://hl7.org/fhir}Location': 
-        resource = Location.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True)
-    elif root.tag == '{http://hl7.org/fhir}Medication': 
-        resource = Medication.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True)
-    elif root.tag == '{http://hl7.org/fhir}NutritionOrder': 
-        resource = NutritionOrder.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True)
-    elif root.tag == '{http://hl7.org/fhir}Observation': 
-        resource = Observation.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True)
-    elif root.tag == '{http://hl7.org/fhir}Organization': 
-        resource = Organization.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True)
-    elif root.tag == '{http://hl7.org/fhir}Patient': 
-        resource = Patient.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True)
-    elif root.tag == '{http://hl7.org/fhir}Practitioner': 
-        resource = Practitioner.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True)
-    elif root.tag == '{http://hl7.org/fhir}PractitionerRole': 
-        resource = PractitionerRole.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True)    
-    elif root.tag == '{http://hl7.org/fhir}Procedure': 
-        resource = Procedure.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True)    
-    elif root.tag == '{http://hl7.org/fhir}RelatedPerson': 
-        resource = RelatedPerson.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True) 
-    elif root.tag == '{http://hl7.org/fhir}ServiceRequest': 
-        resource = ServiceRequest.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True) 
-    elif root.tag == '{http://hl7.org/fhir}Specimen': 
-        resource = Specimen.parse_file(f)
-        xml_str = reflect_get_coding(resource).xml(pretty_print=True) 
-
+    resource_name = root.tag.replace('{http://hl7.org/fhir}','')
+    resource = import_from("fhir.resources." + resource_name.lower(), resource_name).parse_file(f)
+    print('Status: parsed'+ filename)
+    xml_str = reflect_get_coding(resource).xml(pretty_print=True)
+    print('Status: searched for SNOMED codings...' )
     #only write to file if there is a change.
     if xml_str != '':
         output_file = open(output_folder + filename, 'w', encoding='UTF8') 
