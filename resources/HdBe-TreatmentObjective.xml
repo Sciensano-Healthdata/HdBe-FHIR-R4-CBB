@@ -46,7 +46,7 @@
     <element id="Goal">
       <path value="Goal" />
       <short value="TreatmentObjective" />
-      <comment value="Although the zib model assumes there's a reference from zib OutcomeOfCare to a distinct instance of zib FunctionalOrMentalStatus (in future context), in this profile the concepts of zib FunctionalOrMentalStatus are mapped directly as this aligns with the way the Goal resource is used." />
+      <comment value="Although the CBB model assumes there's a reference from zib TreatmentObjective to a distinct instance of CBB FunctionalOrMentalStatus (in future context), in this profile the concepts of CBB FunctionalOrMentalStatus are mapped directly as this aligns with the way the Goal resource is used." />
       <alias value="Behandeldoel" />
       <mapping>
         <identity value="zib-treatmentobjective-v3.2-2020EN" />
@@ -165,7 +165,7 @@
       </slicing>
     </element>
     <element id="Goal.target.detail[x]:detailCodeableConcept">
-      <path value="Goal.target.detailCodeableConcept" />
+      <path value="Goal.target.detail[x]" />
       <sliceName value="detailCodeableConcept" />
       <short value="StatusValue" />
       <definition value="The extent to which the patient is limited by the functional or mental condition.&#xD;&#xA;If both the status name and the status value are recorded in code, then both values must come from the same code system. If the patient uses a medical device, the evaluation of the extent of the limitation will take place without this aid. The answer codes must be selected from the subselection of the code system corresponding with the request in accordance with the rules applicable to that system." />
@@ -175,7 +175,7 @@
       </type>
       <binding>
         <strength value="extensible" />
-      <valueSet value="https://fhir.healthdata.be/ValueSet/StatusValue" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/StatusValue" />
       </binding>
       <mapping>
         <identity value="zib-functionalormentalstatus-v3.2-2020EN" />

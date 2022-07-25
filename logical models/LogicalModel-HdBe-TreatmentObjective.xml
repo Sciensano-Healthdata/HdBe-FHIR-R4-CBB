@@ -60,7 +60,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="Root concept of the TreatmentObjective information model. This root concept contains all data elements of the TreatmentObjective information model**.**">
+      <definition value="Root concept of the TreatmentObjective information model. This root concept contains all data elements of the TreatmentObjective information model.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -72,11 +72,12 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="treatment_objective" />
-        <min value="0" />
-        <max value="*" />
-      </base>
+      <constraint>
+        <key value="HdBe-TreatmentObjective-1" />
+        <severity value="error" />
+        <human value="Either desired_healthcare_result or desired_health_condition may exists." />
+        <expression value="desired_healthcare_result.exists() xor desired_health_condition.exists()" />
+      </constraint>
     </element>
     <element id="treatment_objective.desired_healthcare_result">
       <path value="treatment_objective.desired_healthcare_result" />
@@ -102,14 +103,10 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="treatment_objective.desired_healthcare_result" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="string" />
       </type>
+      <condition value="HdBe-TreatmentObjective-1" />
     </element>
     <element id="treatment_objective.desired_health_condition">
       <path value="treatment_objective.desired_health_condition" />
@@ -135,15 +132,11 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="treatment_objective.desired_health_condition" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FunctionalOrMentalStatus" />
       </type>
+      <condition value="HdBe-TreatmentObjective-1" />
     </element>
     <element id="treatment_objective.problem">
       <path value="treatment_objective.problem" />
@@ -169,11 +162,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="treatment_objective.problem" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem" />

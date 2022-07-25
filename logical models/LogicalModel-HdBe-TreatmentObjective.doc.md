@@ -2,4 +2,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-| - |   - |     - |
+| `treatment_objective` | constraint | Added a constraint on the root to indicate the invariant from the zib that is noted in the UML representation. |
