@@ -1,6 +1,6 @@
 {
-  "Timestamp": "2022-07-25T07:43:39.8418537+00:00",
-  "Series": "qa-validate-all",
+  "Timestamp": "2022-07-25T08:53:40.6021088+00:00",
+  "Series": "qa-validate-fhir",
   "Files": [
     {
       "Issues": [
@@ -1091,7 +1091,7 @@
         }
       ],
       "Length": 26465,
-      "Hash": "C0894DCD86416A9B00E0D959DB7EC06D",
+      "Hash": "D61C184EC8D834E37E6F78FEE1B3FC6A",
       "FilePath": "logical models\\LogicalModel-HdBe-Payer.xml"
     },
     {
@@ -1356,8 +1356,8 @@
           "Message": "Internal logic failure: StructureDefinition \u0027http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         }
       ],
-      "Length": 9500,
-      "Hash": "125FA82BF13C724410D530B09536D62B",
+      "Length": 9546,
+      "Hash": "27B8A3C152EEA59FF7789EDACC41326A",
       "FilePath": "logical models\\LogicalModel-HdBe-TreatmentObjective.xml"
     },
     {
@@ -2077,8 +2077,8 @@
           "Message": "Internal logic failure: StructureDefinition \u0027http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         }
       ],
-      "Length": 9499,
-      "Hash": "AF3147B245B655B44FE27AC4F947478F",
+      "Length": 8911,
+      "Hash": "A4BE094664725819493BFF914A493F4D",
       "FilePath": "terminology\\ValueSet-AlertName.xml"
     },
     {
@@ -3951,17 +3951,10 @@
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
           "Code": "4005",
           "Message": "Cannot resolve reference Patient/HdBe-Patient-01"
-        },
-        {
-          "Location": null,
-          "Severity": 0,
-          "System": "https://simplifier.net/qc/errors/evaluation",
-          "Code": "FHIRPATH",
-          "Message": "CodeableConcept does not have a .coding.display or a .text value or an extension."
         }
       ],
-      "Length": 1833,
-      "Hash": "9FD7D2395806ADF74032CFC26A818A35",
+      "Length": 1885,
+      "Hash": "5B064B96A34D6B2220232E48323C72E5",
       "FilePath": "examples\\HdBe-LivingSituation-01.xml"
     },
     {
@@ -4233,48 +4226,6 @@
     {
       "Issues": [
         {
-          "Location": "Organization.address[0]",
-          "Severity": 0,
-          "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
-          "Code": "1028",
-          "Message": "Instance count for \u0027Address.extension:language\u0027 is 0, which is not within the specified cardinality of 1..1"
-        },
-        {
-          "Location": null,
-          "Severity": 0,
-          "System": "https://simplifier.net/qc/errors/evaluation",
-          "Code": "FHIRPATH",
-          "Message": "CodeableConcept does not have a .coding.display or a .text value or an extension."
-        }
-      ],
-      "Length": 1283,
-      "Hash": "BDE7E7772835EFCA1F0C812B2FB00811",
-      "FilePath": "examples\\HdBe-Payer-Organization-01.xml"
-    },
-    {
-      "Issues": [
-        {
-          "Location": "Organization.address[0]",
-          "Severity": 0,
-          "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
-          "Code": "1028",
-          "Message": "Instance count for \u0027Address.extension:language\u0027 is 0, which is not within the specified cardinality of 1..1"
-        },
-        {
-          "Location": null,
-          "Severity": 0,
-          "System": "https://simplifier.net/qc/errors/evaluation",
-          "Code": "FHIRPATH",
-          "Message": "CodeableConcept does not have a .coding.display or a .text value or an extension."
-        }
-      ],
-      "Length": 1383,
-      "Hash": "8821306A8C1EEFE7F7846581FE798611",
-      "FilePath": "examples\\HdBe-Payer-Organization-02.xml"
-    },
-    {
-      "Issues": [
-        {
           "Location": "Coverage.beneficiary[0]",
           "Severity": 1,
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
@@ -4308,17 +4259,10 @@
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
           "Code": "4005",
           "Message": "Cannot resolve reference Organization/HdBe-Payer-Organization-01"
-        },
-        {
-          "Location": null,
-          "Severity": 0,
-          "System": "https://simplifier.net/qc/errors/evaluation",
-          "Code": "FHIRPATH",
-          "Message": "CodeableConcept does not have a .coding.display or a .text value or an extension."
         }
       ],
-      "Length": 1174,
-      "Hash": "9E65E3F5056C59CAFDDE4A1888FCFBCF",
+      "Length": 1204,
+      "Hash": "364FEDB5826D92A0C7AEE7D973F4CC42",
       "FilePath": "examples\\HdBe-Payer.PayerPerson-01.xml"
     },
     {
@@ -4548,13 +4492,6 @@
           "Message": "Terminology service failed while validating code \u0027HUSB\u0027 (system \u0027http://terminology.hl7.org/CodeSystem/v3-RoleCode\u0027): ConceptSets with a filter are not yet supported."
         },
         {
-          "Location": "RelatedPerson.address[0].line[0].extension[3].valueString[0]",
-          "Severity": 0,
-          "System": "https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation",
-          "Code": "houseNumberIndication",
-          "Message": "Instance failed constraint houseNumberIndication \u0022Must have value \u0027by\u0027 or \u0027to\u0027\u0022"
-        },
-        {
           "Location": "RelatedPerson.address[0].country[0].extension[0].valueCodeableConcept[0]",
           "Severity": 1,
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
@@ -4562,8 +4499,8 @@
           "Message": "Terminology service failed while validating code \u0027NL\u0027 (system \u0027urn:iso:std:iso:3166\u0027): Cannot resolve canonical reference \u0027urn:iso:std:iso:3166\u0027 to CodeSystem"
         }
       ],
-      "Length": 4432,
-      "Hash": "F4F6FE1A6B86B97CE4228AE6DBF6C5CD",
+      "Length": 4280,
+      "Hash": "EEC604621A0C125A98C1306743D15A7B",
       "FilePath": "examples\\HdBe-TreatmentDirective2-01-RelatedPerson-01.xml"
     },
     {
@@ -4604,20 +4541,6 @@
     {
       "Issues": [
         {
-          "Location": "Patient.address[0]",
-          "Severity": 0,
-          "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
-          "Code": "1028",
-          "Message": "Instance count for \u0027Address.extension:language\u0027 is 0, which is not within the specified cardinality of 1..1"
-        },
-        {
-          "Location": "Patient.address[0].line[0].extension[3].valueString[0]",
-          "Severity": 0,
-          "System": "https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation",
-          "Code": "houseNumberIndication",
-          "Message": "Instance failed constraint houseNumberIndication \u0022Must have value \u0027by\u0027 or \u0027to\u0027\u0022"
-        },
-        {
           "Location": "Patient.address[0].country[0].extension[0].valueCodeableConcept[0]",
           "Severity": 1,
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
@@ -4625,8 +4548,8 @@
           "Message": "Terminology service failed while validating code \u0027NL\u0027 (system \u0027urn:iso:std:iso:3166\u0027): Cannot resolve canonical reference \u0027urn:iso:std:iso:3166\u0027 to CodeSystem"
         }
       ],
-      "Length": 3720,
-      "Hash": "CBB63B5BEF1410689DD20ED9BECE4C08",
+      "Length": 3541,
+      "Hash": "566C0256C3D5BA5D6F4B23328DED4AEB",
       "FilePath": "examples\\HdBe-TreatmentDirective2-02-Patient-01.xml"
     },
     {
