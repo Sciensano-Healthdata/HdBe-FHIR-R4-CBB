@@ -10,6 +10,6 @@
 |`product_specification.pharmaceutical_form` | textual | Removed G-standard specific context.  |
 |`product_specification.description` | textual | Removed G-standard specific context. |
 |`product_specification.ingredient.substance_code` | textual | Removed context about removed ValueSets in medication_code. |
-|`product_specification.ingredient.substance_code` | terminology | Replaced all defined valueSets and replaced them with the IngredientCode valueSet with the SNOMED descendent-of 105590001 (Substance). Also set binding strength to extensible. |
+|`product_specification.ingredient.substance_code` | terminology | Replaced all defined valueSets and replaced them with the SubstanceCode valueSet with the SNOMED descendent-of 105590001 (Substance). Also set binding strength to extensible. |
 |`product_specification.ingredient.concentration.ingredient_amount` | textual | Removed G-standard specific context. |
 |`product_specification.ingredient.concentration.product_amount` | textual | Removed Dutch specific context. |
