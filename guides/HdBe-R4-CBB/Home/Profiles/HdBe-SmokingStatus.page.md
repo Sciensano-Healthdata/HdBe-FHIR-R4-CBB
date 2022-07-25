@@ -54,7 +54,6 @@ URL: url
   <div id="Examples" class="tabcontent">
       <ul>
         <li>{{pagelink:Home/Examples/HdBe-SmokingStatus-01.page.md}}</li>
-        
       </ul>
   </div>
 

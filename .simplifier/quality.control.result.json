@@ -1,6 +1,6 @@
 {
-  "Timestamp": "2022-07-25T08:53:40.6021088+00:00",
-  "Series": "qa-validate-fhir",
+  "Timestamp": "2022-07-25T10:06:44.3739654+00:00",
+  "Series": "qa-validate-all",
   "Files": [
     {
       "Issues": [
@@ -1104,8 +1104,8 @@
           "Message": "Internal logic failure: StructureDefinition \u0027http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         }
       ],
-      "Length": 26087,
-      "Hash": "4A874176D51A2CA70C7F2B79DB533A59",
+      "Length": 26085,
+      "Hash": "BE60FAE8C6E0A85706840DFDC242FC47",
       "FilePath": "logical models\\LogicalModel-HdBe-PharmaceuticalProduct.xml"
     },
     {
@@ -2441,20 +2441,6 @@
           "Message": "Internal logic failure: StructureDefinition \u0027http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         }
       ],
-      "Length": 1619,
-      "Hash": "0E1BED34036DE9D4A033869CF4C58D2A",
-      "FilePath": "terminology\\ValueSet-IngredientCode.xml"
-    },
-    {
-      "Issues": [
-        {
-          "Location": "ValueSet",
-          "Severity": 2,
-          "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
-          "Code": "5003",
-          "Message": "Internal logic failure: StructureDefinition \u0027http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
-        }
-      ],
       "Length": 1495,
       "Hash": "E4F9A15623A06AC48BFFF67EEA8C3A9F",
       "FilePath": "terminology\\ValueSet-InsuranceType.xml"
@@ -3029,6 +3015,20 @@
           "Message": "Internal logic failure: StructureDefinition \u0027http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         }
       ],
+      "Length": 1614,
+      "Hash": "D4B6CA1F01993925D0D14C75158722D5",
+      "FilePath": "terminology\\ValueSet-SubstanceCode.xml"
+    },
+    {
+      "Issues": [
+        {
+          "Location": "ValueSet",
+          "Severity": 2,
+          "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
+          "Code": "5003",
+          "Message": "Internal logic failure: StructureDefinition \u0027http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
+        }
+      ],
       "Length": 15465,
       "Hash": "D01F2A33FF47048A7436DA7498C2A1CF",
       "FilePath": "terminology\\ValueSet-Symptom.xml"
@@ -3589,11 +3589,32 @@
     {
       "Issues": [
         {
-          "Location": "Encounter",
-          "Severity": 2,
+          "Location": "Encounter.subject[0]",
+          "Severity": 1,
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
-          "Code": "5003",
-          "Message": "Internal logic failure: Unknown symbol \u0027resolve\u0027"
+          "Code": "4005",
+          "Message": "Cannot resolve reference Patient/HdBe-Patient-01"
+        },
+        {
+          "Location": "Encounter",
+          "Severity": 1,
+          "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
+          "Code": "2012",
+          "Message": "StructureDefinition \u0027http://hl7.org/fhir/StructureDefinition/Practitioner\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
+        },
+        {
+          "Location": "Encounter",
+          "Severity": 1,
+          "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
+          "Code": "2012",
+          "Message": "StructureDefinition \u0027https://fhir.healthdata.be/StructureDefinition/HdBe-Problem\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
+        },
+        {
+          "Location": "Encounter.location[0].location[0]",
+          "Severity": 1,
+          "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
+          "Code": "4005",
+          "Message": "Cannot resolve reference Location/HdBe-HealthcareProvider-01"
         }
       ],
       "Length": 1857,
@@ -3628,7 +3649,7 @@
           "Severity": 1,
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
           "Code": "2012",
-          "Message": "The discriminator path \u0027resolve()\u0027 at https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice#DeviceUseStatement.derivedFrom (DeviceUseStatement.derivedFrom:procedure) leads to multiple ElementDefinitions, which is not allowed."
+          "Message": "StructureDefinition \u0027https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-event\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         },
         {
           "Location": "DeviceUseStatement.device[0]",
@@ -3642,7 +3663,7 @@
           "Severity": 1,
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
           "Code": "2012",
-          "Message": "Cannot walk into unknown StructureDefinition with canonical \u0027https://fhir.healthdata.be/StructureDefinition/HdBe-Mobility\u0027 at \u0027https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice#DeviceUseStatement.reasonReference (DeviceUseStatement.reasonReference:HdBe-MedicalDeviceReference)\u0027"
+          "Message": "StructureDefinition \u0027https://fhir.healthdata.be/StructureDefinition/HdBe-Problem\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         }
       ],
       "Length": 928,
@@ -3803,7 +3824,7 @@
           "Severity": 1,
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
           "Code": "2012",
-          "Message": "The discriminator path \u0027resolve()\u0027 at https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction.HearingAid#DeviceUseStatement.derivedFrom (DeviceUseStatement.derivedFrom:procedure) leads to multiple ElementDefinitions, which is not allowed."
+          "Message": "StructureDefinition \u0027https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-event\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         },
         {
           "Location": "DeviceUseStatement.device[0]",
@@ -3817,7 +3838,7 @@
           "Severity": 1,
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
           "Code": "2012",
-          "Message": "Cannot walk into unknown StructureDefinition with canonical \u0027https://fhir.healthdata.be/StructureDefinition/HdBe-Mobility\u0027 at \u0027https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction.HearingAid#DeviceUseStatement.reasonReference (DeviceUseStatement.reasonReference:HdBe-MedicalDeviceReference)\u0027"
+          "Message": "StructureDefinition \u0027https://fhir.healthdata.be/StructureDefinition/HdBe-Problem\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         }
       ],
       "Length": 1039,
@@ -3978,7 +3999,7 @@
           "Severity": 1,
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
           "Code": "2012",
-          "Message": "The discriminator path \u0027resolve()\u0027 at https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice#DeviceUseStatement.derivedFrom (DeviceUseStatement.derivedFrom:procedure) leads to multiple ElementDefinitions, which is not allowed."
+          "Message": "StructureDefinition \u0027https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-event\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         },
         {
           "Location": "DeviceUseStatement.device[0]",
@@ -3992,7 +4013,7 @@
           "Severity": 1,
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
           "Code": "2012",
-          "Message": "Cannot walk into unknown StructureDefinition with canonical \u0027https://fhir.healthdata.be/StructureDefinition/HdBe-Mobility\u0027 at \u0027https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice#DeviceUseStatement.reasonReference (DeviceUseStatement.reasonReference:HdBe-MedicalDeviceReference)\u0027"
+          "Message": "StructureDefinition \u0027https://fhir.healthdata.be/StructureDefinition/HdBe-Problem\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         }
       ],
       "Length": 1247,
@@ -4397,6 +4418,20 @@
       "Length": 1527,
       "Hash": "7C0D909E1F3BF7AC6AA0676CBFCFA4FF",
       "FilePath": "examples\\HdBe-PulseRate-01.xml"
+    },
+    {
+      "Issues": [
+        {
+          "Location": "Observation.subject[0]",
+          "Severity": 1,
+          "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
+          "Code": "4005",
+          "Message": "Cannot resolve reference Patient/HdBe-Patient-01"
+        }
+      ],
+      "Length": 2204,
+      "Hash": "0FC62C7BD7A836800A5237FCE88036C1",
+      "FilePath": "examples\\HdBe-SmokingStatus-01.xml"
     },
     {
       "Issues": [
