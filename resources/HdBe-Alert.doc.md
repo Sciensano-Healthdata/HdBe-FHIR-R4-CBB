@@ -2,4 +2,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+|`code` | terminology | Replaced NullFlavor Other and Unkown with SNOMED equivelant codes.
