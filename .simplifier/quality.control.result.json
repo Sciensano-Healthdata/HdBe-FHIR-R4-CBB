@@ -1,5 +1,5 @@
 {
-  "Timestamp": "2022-07-26T14:22:32.3155708+00:00",
+  "Timestamp": "2022-07-26T14:49:28.2658351+00:00",
   "Series": "qa-validate-all",
   "Files": [
     {
@@ -3169,8 +3169,8 @@
           "Message": "Internal logic failure: StructureDefinition \u0027http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         }
       ],
-      "Length": 1726,
-      "Hash": "51268E779553522326938CAA008C144B",
+      "Length": 3081,
+      "Hash": "A32583D6AB19F99E14FAA8D18A59A09E",
       "FilePath": "terminology\\ValueSet-TypeOfLivingWill.xml"
     },
     {
@@ -3279,13 +3279,6 @@
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
           "Code": "4005",
           "Message": "Cannot resolve reference RelatedPerson/HdBe-ContactPerson-01"
-        },
-        {
-          "Location": "Consent.provision[0].code[0]",
-          "Severity": 0,
-          "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
-          "Code": "6007",
-          "Message": "Code \u0027143021000119109\u0027 from system \u0027http://snomed.info/sct\u0027 does not exist in valueset \u0027https://fhir.healthdata.be/ValueSet/TypeOfLivingWill\u0027"
         }
       ],
       "Length": 2098,
@@ -4500,10 +4493,10 @@
       "Issues": [
         {
           "Location": "Consent.extension[1].valueReference[0]",
-          "Severity": 0,
+          "Severity": 1,
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
-          "Code": "1000",
-          "Message": "Element must not be empty"
+          "Code": "4005",
+          "Message": "Cannot resolve reference Condition/HdBe-Problem-01"
         },
         {
           "Location": "Consent.patient[0]",
@@ -4518,24 +4511,10 @@
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
           "Code": "6004",
           "Message": "Terminology service failed while validating code \u0027application/octet-stream\u0027 (system \u0027\u0027): Cannot resolve canonical reference \u0027urn:ietf:bcp:13\u0027 to CodeSystem"
-        },
-        {
-          "Location": "Consent.provision[0].code[0]",
-          "Severity": 0,
-          "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
-          "Code": "6007",
-          "Message": "Code \u0027186065003\u0027 from system \u0027http://snomed.info/sct\u0027 does not exist in valueset \u0027https://fhir.healthdata.be/ValueSet/TypeOfLivingWill\u0027"
-        },
-        {
-          "Location": null,
-          "Severity": 0,
-          "System": "https://simplifier.net/qc/errors/evaluation",
-          "Code": "FHIRPATH",
-          "Message": "Reference does not have a display value"
         }
       ],
-      "Length": 1706,
-      "Hash": "DC7870C9A1BA923719176253736362A1",
+      "Length": 1824,
+      "Hash": "0B642E56D4B04B8EDFB076F95FD19D19",
       "FilePath": "examples\\HdBe-TreatmentDirective2-01-Consent-01.xml"
     },
     {

@@ -47,15 +47,13 @@ URL: url
       select 
         Path: id,
         join mapping.where(identity in 'HdBe-InstructionsForUse'|'HdBe-Range') { map, CBB: identity, comment  }
+      order by CBB
       ```
     </div>
   </div>
 
   <div id="Examples" class="tabcontent">
-      <ul>
-        <li>{{pagelink:Home/Examples/HdBe-InstructionsForUse.DosageInstructions-01.page.md}}</li>
-        
-      </ul>
+      <p> HdBe-InstructionsForUse is a datatype profile and can therefore not have an example of its own. Rather, an example is provided within the example of the HdBe-profile(s) that use this datatype profile. </p>
   </div>
 
   <div id="Zib diff" class="tabcontent">
