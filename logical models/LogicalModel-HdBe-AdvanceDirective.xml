@@ -72,11 +72,6 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="advance_directive" />
-        <min value="0" />
-        <max value="*" />
-      </base>
     </element>
     <element id="advance_directive.living_will_type">
       <path value="advance_directive.living_will_type" />
@@ -102,18 +97,13 @@
       </definition>
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="advance_directive.living_will_type" />
-        <min value="1" />
-        <max value="1" />
-      </base>
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="required" />
         <description value="LivingWillType codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/WilsverklaringType" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/TypeOfLivingWill" />
       </binding>
     </element>
     <element id="advance_directive.living_will_date">
@@ -140,11 +130,6 @@
       </definition>
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="advance_directive.living_will_date" />
-        <min value="1" />
-        <max value="1" />
-      </base>
       <type>
         <code value="dateTime" />
       </type>
@@ -173,11 +158,6 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="advance_directive.disorder" />
-        <min value="0" />
-        <max value="*" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem" />
@@ -207,11 +187,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="advance_directive.representative" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson" />
@@ -241,11 +216,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="advance_directive.living_will_document" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="base64Binary" />
       </type>
@@ -274,11 +244,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="advance_directive.comment" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="string" />
       </type>
