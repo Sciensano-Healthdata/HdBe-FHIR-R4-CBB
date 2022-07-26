@@ -1,5 +1,5 @@
 {
-  "Timestamp": "2022-07-26T08:18:53.1593599+00:00",
+  "Timestamp": "2022-07-26T12:49:04.0033024+00:00",
   "Series": "qa-validate-all",
   "Files": [
     {
@@ -488,8 +488,8 @@
           "Message": "Internal logic failure: StructureDefinition \u0027http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         }
       ],
-      "Length": 24704,
-      "Hash": "AE12840472D42251C859A9B39E2DB8BC",
+      "Length": 23435,
+      "Hash": "02A03DD26E20020172249F59FAA3A049",
       "FilePath": "logical models\\LogicalModel-HdBe-Encounter.xml"
     },
     {
@@ -1146,8 +1146,8 @@
           "Message": "Internal logic failure: StructureDefinition \u0027http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         }
       ],
-      "Length": 22201,
-      "Hash": "371E25FAB7460DA977130BDAF6758036",
+      "Length": 22574,
+      "Hash": "B92C0D5EDBDD746D67E64C73AA639A5E",
       "FilePath": "logical models\\LogicalModel-HdBe-Problem.xml"
     },
     {
@@ -1643,8 +1643,8 @@
           "Message": "Internal logic failure: StructureDefinition \u0027http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         }
       ],
-      "Length": 14589,
-      "Hash": "8056B0B227E0AEFBEE57984731F627DB",
+      "Length": 13838,
+      "Hash": "21FE61656F005CE6523F96E8443B70C3",
       "FilePath": "resources\\HdBe-Problem.xml"
     },
     {
@@ -1685,8 +1685,8 @@
           "Message": "Internal logic failure: StructureDefinition \u0027http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         }
       ],
-      "Length": 10237,
-      "Hash": "05A9C6B4D7A6990514AF3DCEFFEF4B1C",
+      "Length": 9388,
+      "Hash": "A5968164CD410612D66FE10BE2648CF2",
       "FilePath": "terminology\\CodeSystem-ContactType.xml"
     },
     {
@@ -1825,8 +1825,8 @@
           "Message": "Internal logic failure: StructureDefinition \u0027http://hl7.org/fhir/StructureDefinition/concept-bidirectional\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         }
       ],
-      "Length": 5891,
-      "Hash": "9D086971C9953EF028E53341FFF00D09",
+      "Length": 5496,
+      "Hash": "AF41E648A2CEE167EFE50E9CB8DD6B2E",
       "FilePath": "terminology\\ConceptMap-ContactType-to-ActEncounterCode.xml"
     },
     {
@@ -2749,8 +2749,8 @@
           "Message": "Internal logic failure: StructureDefinition \u0027http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         }
       ],
-      "Length": 5480,
-      "Hash": "536772881C8E8B0078D4490B1F71A1BB",
+      "Length": 6083,
+      "Hash": "8F62049C35FDC5974933D7782DBFBDE7",
       "FilePath": "terminology\\ValueSet-ProblemType.xml"
     },
     {
@@ -3211,8 +3211,8 @@
           "Message": "Internal logic failure: StructureDefinition \u0027http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         }
       ],
-      "Length": 5332,
-      "Hash": "239D0A369926FBB7858674996976AF34",
+      "Length": 5174,
+      "Hash": "53A6AE154D3D71792B991D04102EE169",
       "FilePath": "terminology\\ValueSet-VerificationStatus.xml"
     },
     {
@@ -4303,6 +4303,20 @@
     {
       "Issues": [
         {
+          "Location": "Condition.subject[0]",
+          "Severity": 1,
+          "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
+          "Code": "4005",
+          "Message": "Cannot resolve reference Patient/HdBe-Patient-01"
+        }
+      ],
+      "Length": 1233,
+      "Hash": "273EB9303B000CE8AA54AE302600ACCB",
+      "FilePath": "examples\\HdBe-Procedure-event-01-Condition-01.xml"
+    },
+    {
+      "Issues": [
+        {
           "Location": "Procedure.basedOn[0]",
           "Severity": 1,
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
@@ -4335,7 +4349,7 @@
           "Severity": 1,
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
           "Code": "4005",
-          "Message": "Cannot resolve reference Condition/HdBe-Procedure-01-Condition-01"
+          "Message": "Cannot resolve reference Condition/HdBe-Procedure-event-01-Condition-01"
         },
         {
           "Location": "Procedure.bodySite[0]",
@@ -4352,9 +4366,58 @@
           "Message": "Cannot walk into unknown StructureDefinition with canonical \u0027https://fhir.healthdata.be/StructureDefinition/HdBe-TextResult\u0027 at \u0027https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-event#Procedure.report (Procedure.report:textResult)\u0027"
         }
       ],
-      "Length": 2422,
-      "Hash": "979BB3A83D0B0D40745D533BD33383D8",
+      "Length": 2485,
+      "Hash": "B619133F659474CB50D94A8D09FA6EAD",
       "FilePath": "examples\\HdBe-Procedure-event-01.xml"
+    },
+    {
+      "Issues": [
+        {
+          "Location": "Condition.subject[0]",
+          "Severity": 1,
+          "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
+          "Code": "4005",
+          "Message": "Cannot resolve reference Patient/HdBe-Patient-01"
+        }
+      ],
+      "Length": 1324,
+      "Hash": "B401944D38B6E7278F2249152E9FF520",
+      "FilePath": "examples\\HdBe-Procedure-event-02-Condition-02.xml"
+    },
+    {
+      "Issues": [
+        {
+          "Location": "Procedure.subject[0]",
+          "Severity": 1,
+          "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
+          "Code": "4005",
+          "Message": "Cannot resolve reference Patient/HdBe-Patient-01"
+        },
+        {
+          "Location": "Procedure.reasonReference[0]",
+          "Severity": 1,
+          "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
+          "Code": "4005",
+          "Message": "Cannot resolve reference Condition/HdBe-Procedure-event-02-Condition-02"
+        },
+        {
+          "Location": "Procedure.bodySite[0]",
+          "Severity": 1,
+          "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
+          "Code": "6004",
+          "Message": "Terminology service failed while validating code \u002766754008\u0027 (system \u0027http://snomed.info/sct\u0027): ConceptSets with a filter are not yet supported."
+        },
+        {
+          "Location": "Procedure",
+          "Severity": 1,
+          "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
+          "Code": "2012",
+          "Message": "Cannot walk into unknown StructureDefinition with canonical \u0027https://fhir.healthdata.be/StructureDefinition/HdBe-TextResult\u0027 at \u0027https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-event#Procedure.report (Procedure.report:textResult)\u0027"
+        }
+      ],
+      "Length": 1930,
+      "Hash": "964B7E68481C0AC873BE94663051F175",
+      "FilePath": "examples\\HdBe-Procedure-event-02.xml"
     },
     {
       "Issues": [
@@ -4391,7 +4454,7 @@
           "Severity": 1,
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
           "Code": "4005",
-          "Message": "Cannot resolve reference Condition/HdBe-Procedure-01-Condition-01"
+          "Message": "Cannot resolve reference Condition/HdBe-Procedure-event-01-Condition-01"
         },
         {
           "Location": "ServiceRequest.bodySite[0]",
@@ -4401,8 +4464,8 @@
           "Message": "Terminology service failed while validating code \u002772696002\u0027 (system \u0027http://snomed.info/sct\u0027): ConceptSets with a filter are not yet supported."
         }
       ],
-      "Length": 2290,
-      "Hash": "012B31541B68DCF9340C36BB86651B98",
+      "Length": 2323,
+      "Hash": "F114F6023119CC93CCA94804B8C9A8DB",
       "FilePath": "examples\\HdBe-Procedure-request-01.xml"
     },
     {

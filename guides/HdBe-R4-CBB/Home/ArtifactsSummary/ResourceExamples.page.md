@@ -47,6 +47,11 @@
 - {{pagelink:Home/Examples/HdBe-Payer.PayerPerson-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-PharmaceuticalProduct-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-Problem-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-Procedure-event-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-Procedure-event-01-Condition-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-Procedure-event-02.page.md}}
+- {{pagelink:Home/Examples/HdBe-Procedure-event-02-Condition-02.page.md}}
+- {{pagelink:Home/Examples/HdBe-Procedure-request-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-PulseRate-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-SmokingStatus-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-TreatmentDirective2-01.page.md}}

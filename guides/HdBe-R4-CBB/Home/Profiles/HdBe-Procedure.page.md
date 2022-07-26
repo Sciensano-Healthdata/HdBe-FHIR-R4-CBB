@@ -83,7 +83,9 @@ select
   <div id="Examples" class="tabcontent">
       <ul>
         <li>{{pagelink:Home/Examples/HdBe-Procedure-event-01.page.md}}</li>
-        
+        <li>{{pagelink:Home/Examples/HdBe-Procedure-event-01-Condition-01.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-Procedure-event-02.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-Procedure-event-02-Condition-02.page.md}}</li>
       </ul>
   </div>
 
@@ -140,7 +142,6 @@ select
   <div id="Examples" class="tabcontent">
       <ul>
         <li>{{pagelink:Home/Examples/HdBe-Procedure-request-01.page.md}}</li>
-        
       </ul>
   </div>
 
