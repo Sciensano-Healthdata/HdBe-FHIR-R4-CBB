@@ -1,4 +1,3 @@
-from genericpath import exists
 from typing import Iterable
 from nbformat import write
 import requests
@@ -7,10 +6,7 @@ import json
 import os
 from pathlib import Path
 import xml.etree.ElementTree as ET
-from xml.etree.ElementTree import tostring
 from fhir.resources.coding import Coding
-from fhir.resources import construct_fhir_element
-from numpy import iterable
 from datetime import datetime
 
 baseUrl = 'http://localhost:8080/'
@@ -19,21 +15,31 @@ input_folder = 'examples/'
 output_folder = "examples/"
 filename = ''
 
+"Version 0.1 - "
+
+"Feature wishlist"
+"- Make script XML/JSON agnostic, default write back into same format."
+"- Use CodeSystem resources on disk to get display values"
+"- Define getting designations through FHIR API so LOINC, SNOMED and tx.fhir.org can be accessed in a similar method"
+"- Make language (designation) a parameter"
+"- Make an UI to customize settings such as which terminology servers to ask, input and output files ect, present log file."
+
+
 "Calls a locally running SNOWSTOM terminology server to get the English preferred designation"
-def getEnglishDisplaySNOMED(id):
+def get_snomed_display(id):
     url = baseUrl + branch + '/concepts/' + id + '/descriptions'
     try:  
         response = requests.get(url)
-        content_json = json.loads(response.content.decode('utf8')) # convert the bytes to a JSON
+        content_json = json.loads(response.content.decode('utf8')) 
         response.raise_for_status()
     except HTTPError as http_err:
-        print(f'HTTP error occurred: {http_err}')  # Python 3.6
+        print(f'HTTP error occurred: {http_err}')  
         write_log('error', f'HTTP error occurred: {http_err}' )
         if response.status_code == 404:
             print('SNOMED concept ID ' + id + ' in file ' + filename + ' could not be found.')
             write_log('not-found', 'SNOMED concept ID ' + id + ' in file ' + filename ) 
         return None
-    # Loop through all coRncept descriptions
+    # Loop through all concept descriptions
     for x in content_json['conceptDescriptions']:
         # We only want 1 designation per langague. Filter by active status, needs to be a synonym and published.
         # Then, next step is to only select the preferred designations. We leave out the acceptable ones. 
@@ -41,15 +47,15 @@ def getEnglishDisplaySNOMED(id):
             for key in x['acceptabilityMap']: 
                     if x['acceptabilityMap'][key] == 'PREFERRED' and (key =='31000172101' or key =='21000172104' or key=='900000000000509007'):
                         if x['lang'] == 'en':
-                            ENdisplay = x['term']
-    return ENdisplay                   
+                            display = x['term']
+    return display                   
 
 "Calls http://tx.fhir.org/r4 terminology server to get the display"
-def getEnglishDisplayTxFHIR(id, system):
+def get_tx_display(id, system):
     url =  'http://tx.fhir.org/r4/CodeSystem/$lookup?system=' + system + '&code=' + id
     try:  
         response = requests.get(url, headers={'Accept': 'application/fhir+json'})
-        content_json = json.loads(response.content.decode('utf8')) # convert the bytes to a JSON
+        content_json = json.loads(response.content.decode('utf8')) 
         # If the response was successful, no Exception will be raised
         response.raise_for_status()
     except HTTPError as http_err:
@@ -65,26 +71,26 @@ def getEnglishDisplayTxFHIR(id, system):
             display = x['valueString']
     return display                   
 
-"Filters Codings on having a SNOMED CT system and populates the display value with the English preferred code found in SNOWSTORM."                            
-def translateDisplay(coding):
+"Updates or populates Codings display values. First tries preferred codes in SNOWSTORM. Then tries tx.fhir.org terminology server."                            
+def update_coding_display(coding):
     if coding.system == 'http://snomed.info/sct':
-        ENdisplay = getEnglishDisplaySNOMED(coding.code)
-        if ENdisplay is not None and ENdisplay != coding.display:
-            write_log('terminology', "Using local SNOWSTORM: updating display of code: " + coding.code + ' FROM ' + coding.display + ' TO ' + ENdisplay)
-            coding.display = ENdisplay
+        display = get_snomed_display(coding.code)
+        if display is not None and display != coding.display:
+            write_log('terminology', "Using local SNOWSTORM: updating display of code: " + coding.code + ' FROM ' + coding.display + ' TO ' + display)
+            coding.display = display
     else:
-        display = getEnglishDisplayTxFHIR(coding.code, coding.system)
+        display = get_tx_display(coding.code, coding.system)
         if display is not None and display != coding.display:
             write_log('terminology', "Using tx.fhir.org: - updating display of code: " + coding.code + ' FROM ' + coding.display + ' TO ' + display)
             coding.display = display
         
     return coding           
 
-"Loops through the nested FHIR resource and calls the translateDisplay method for any found Coding datatype."
+"Loops through the nested FHIR resource and calls the update_coding_display method for any found Coding datatype."
 def reflect_get_coding(fhir):
   if not isinstance(fhir, str):
     if isinstance(fhir, Coding):
-        translateDisplay(fhir)
+        update_coding_display(fhir)
     elif isinstance(fhir, Iterable):
       for item in fhir:
         reflect_get_coding(item)
