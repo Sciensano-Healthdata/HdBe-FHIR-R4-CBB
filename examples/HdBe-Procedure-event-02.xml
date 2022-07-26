@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Procedure xmlns="http://hl7.org/fhir">
+    <id value="HdBe-Procedure-event-02"/>
+    <meta>
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-event"/>
+    </meta>
+    <extension url="https://fhir.healthdata.be/StructureDefinition/ext-Procedure.ProcedureMethod">
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="73632009"/>
+                <display value="Laparoscopy"/>
+            </coding>
+        </valueCodeableConcept>
+    </extension>
+    <status value="completed"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="80146002"/>
+            <display value="Excision of appendix"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/HdBe-Patient-01"/>
+        <type value="Patient"/>
+        <display value="Belle Ulijn"/>
+    </subject>
+    <performedPeriod>
+        <start value="2020-05-12"/>
+        <end value="2020-05-12"/>
+    </performedPeriod>
+    <reasonReference>
+        <reference value="Condition/HdBe-Procedure-event-02-Condition-02"/>
+        <type value="Condition"/>
+        <display value="Problem: Appendicitis"/>
+    </reasonReference>
+    <bodySite>
+        <extension url="https://fhir.healthdata.be/StructureDefinition/ext-AnatomicalLocation.Laterality">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="24028007"/>
+                    <display value="Right"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="66754008"/>
+            <display value="Appendix structure"/>
+        </coding>
+    </bodySite>
+</Procedure>
