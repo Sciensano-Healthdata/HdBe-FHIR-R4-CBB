@@ -1,28 +1,13 @@
 ## Example instances
 
-| InstructionsForUse   |                   |
-|-----------------|-------------------|
-| additional_instructions       |       | 
-| description       |       | 
-| repeat_period_cyclical_schedule       |       | 
-| route_of_administration       |       | 
-| **dosing_instructions**       |  --     | 
-| dosing_instructions.dose_duration     |       | 
-| dosing_instructions.sequence_number       |       | 
-| **dosing_instructions.dosage**        | --      | 
-| dosing_instructions.dosage.administering_speed        |   see CBB Range   | 
-| dosing_instructions.dosage.duration_of_administration     |   see CBB TimeInterval   | 
-| dosing_instructions.dosage.dose      |   see CBB Range    | 
-| **dosing_instructions.dosage.as_needed**      | --      | 
-| dosing_instructions.dosage.as_needed.condition        |       | 
-| dosing_instructions.dosage.as_needed.maximum_dose     |       | 
-| **dosing_instructions.dosage.administering_schedule**     |    --   | 
-| dosing_instructions.dosage.administering_schedule.week_day        |       | 
-| dosing_instructions.dosage.administering_schedule.time_of_day     |       | 
-| dosing_instructions.dosage.administering_schedule.administration_time     |       | 
-| dosing_instructions.dosage.administering_schedule.interval        |       | 
-| dosing_instructions.dosage.administering_schedule.frequency       |  see CBB Range    | 
+| InstructionsForUse                                        |                   |
+|-----------------------------------------------------------|-------------------|
+| description                                               | From 24 Oct 2016, for 4 days, 4 times per day 1 unit, if needed 2 times a day 1 unit, oral.| 
+| route_of_administration                                   |26643006 - Oral route (code by SNOMED CT)       | 
+| dosing_instructions with sequence_number 1                | 4 times per day 1 unit | 
+| dosing_instructions with sequence_number 1                | if needed 2 times a day 1 unit  | 
 
+More functional and technical examples of dosages (in Dutch): https://informatiestandaarden.nictiz.nl/wiki/mp:V9.2.0.0_Voorbeelden_doseringen 
 
 
 
