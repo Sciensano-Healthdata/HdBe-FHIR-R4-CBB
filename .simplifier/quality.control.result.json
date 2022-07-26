@@ -1,5 +1,5 @@
 {
-  "Timestamp": "2022-07-26T12:49:04.0033024+00:00",
+  "Timestamp": "2022-07-26T14:22:32.3155708+00:00",
   "Series": "qa-validate-all",
   "Files": [
     {
@@ -166,8 +166,8 @@
           "Message": "Internal logic failure: StructureDefinition \u0027http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod\u0027 has no snapshot component. (Parameter \u0027sd\u0027)"
         }
       ],
-      "Length": 15109,
-      "Hash": "B41877EFBFB1E270AAD0763D09473296",
+      "Length": 14417,
+      "Hash": "2B2D8DF3F9846001CEFA5E70833CFF6B",
       "FilePath": "logical models\\LogicalModel-HdBe-AdvanceDirective.xml"
     },
     {
@@ -3288,8 +3288,8 @@
           "Message": "Code \u0027143021000119109\u0027 from system \u0027http://snomed.info/sct\u0027 does not exist in valueset \u0027https://fhir.healthdata.be/ValueSet/TypeOfLivingWill\u0027"
         }
       ],
-      "Length": 2087,
-      "Hash": "8EDA22E4BF0CD0F0E24BF4EDBCE312A4",
+      "Length": 2098,
+      "Hash": "314A645D322328C04E47ED9A967CAB68",
       "FilePath": "examples\\HdBe-AdvanceDirective-01.xml"
     },
     {
@@ -4499,6 +4499,13 @@
     {
       "Issues": [
         {
+          "Location": "Consent.extension[1].valueReference[0]",
+          "Severity": 0,
+          "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
+          "Code": "1000",
+          "Message": "Element must not be empty"
+        },
+        {
           "Location": "Consent.patient[0]",
           "Severity": 1,
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
@@ -4517,11 +4524,18 @@
           "Severity": 0,
           "System": "http://hl7.org/fhir/dotnet-api-operation-outcome",
           "Code": "6007",
-          "Message": "Code \u0027224346008\u0027 from system \u0027http://snomed.info/sct\u0027 does not exist in valueset \u0027https://fhir.healthdata.be/ValueSet/TypeOfLivingWill\u0027"
+          "Message": "Code \u0027186065003\u0027 from system \u0027http://snomed.info/sct\u0027 does not exist in valueset \u0027https://fhir.healthdata.be/ValueSet/TypeOfLivingWill\u0027"
+        },
+        {
+          "Location": null,
+          "Severity": 0,
+          "System": "https://simplifier.net/qc/errors/evaluation",
+          "Code": "FHIRPATH",
+          "Message": "Reference does not have a display value"
         }
       ],
-      "Length": 1512,
-      "Hash": "DF5419BB964EDDC8928EC257E029699F",
+      "Length": 1706,
+      "Hash": "DC7870C9A1BA923719176253736362A1",
       "FilePath": "examples\\HdBe-TreatmentDirective2-01-Consent-01.xml"
     },
     {
@@ -4772,8 +4786,8 @@
           "Message": "Cannot resolve reference Condition/HdBe-TreatmentObjective-01-Condition-01"
         }
       ],
-      "Length": 1643,
-      "Hash": "8C95245616DFAC98C94890935787AF88",
+      "Length": 1693,
+      "Hash": "5B5B85FFB8BEA86D4699BF53C105A6E5",
       "FilePath": "examples\\HdBe-TreatmentObjective-01.xml"
     },
     {
