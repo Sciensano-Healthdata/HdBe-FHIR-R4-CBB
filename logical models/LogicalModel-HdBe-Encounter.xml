@@ -72,11 +72,6 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="encounter" />
-        <min value="0" />
-        <max value="*" />
-      </base>
     </element>
     <element id="encounter.contact_type">
       <path value="encounter.contact_type" />
@@ -102,11 +97,6 @@
       </definition>
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="encounter.contact_type" />
-        <min value="1" />
-        <max value="1" />
-      </base>
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -140,11 +130,6 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="encounter.contact_with" />
-        <min value="0" />
-        <max value="*" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional" />
@@ -174,11 +159,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="encounter.location" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider" />
@@ -208,11 +188,6 @@
       </definition>
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="encounter.start_date_time" />
-        <min value="1" />
-        <max value="1" />
-      </base>
       <type>
         <code value="dateTime" />
       </type>
@@ -241,11 +216,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="encounter.end_date_time" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="dateTime" />
       </type>
@@ -274,11 +244,6 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="encounter.contact_reason" />
-        <min value="0" />
-        <max value="*" />
-      </base>
       <type>
         <code value="BackboneElement" />
       </type>
@@ -307,11 +272,6 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="encounter.contact_reason.problem" />
-        <min value="0" />
-        <max value="*" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem" />
@@ -341,11 +301,6 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="encounter.contact_reason.procedure" />
-        <min value="0" />
-        <max value="*" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Procedure" />
@@ -375,11 +330,6 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="encounter.contact_reason.deviating_result" />
-        <min value="0" />
-        <max value="*" />
-      </base>
       <type>
         <code value="string" />
       </type>
@@ -408,11 +358,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="encounter.contact_reason.comment_contact_reason" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="string" />
       </type>
@@ -441,18 +386,13 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="encounter.origin" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="extensible" />
         <description value="Origin codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/Herkomst" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/Origin" />
       </binding>
     </element>
     <element id="encounter.destination">
@@ -479,18 +419,13 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="encounter.destination" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="extensible" />
         <description value="Destination codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/Bestemming" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/Destination" />
       </binding>
     </element>
   </differential>
