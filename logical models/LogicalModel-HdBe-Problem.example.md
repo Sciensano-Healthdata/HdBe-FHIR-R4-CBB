@@ -1,24 +1,14 @@
 ## Example instances
-
-| [CBB name]      |                   |
-|-----------------|-------------------|
-| [Concept name ] | [example value]   |
-
-
-// example of NameInformation
-```
-## Example instances
-
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```
+| problem                               |                   |
+|---------------------------------------|-------------------|
+|problem_type                           |282291009 - Diagnosis interpretation (code by SNOMED CT)   |
+|problem_name                           |4241002 - Listeriosis (code by SNOMED CT) |
+|further_specification_problem_name     |   |   
+|**problem_anatomical_location**        | ---  |
+|problem_anatomical_location.location   |   |
+|problem_anatomical_location.laterality |   |
+|problem_start_date                     |2022-05-03T12:00:00  |
+|problem_end_date                       |   |
+|problem_status                         |55561003 - Active (code by SNOMED CT) |
+|verification_status                    |410605003 - Confirmed present (code by SNOMED CT) |
+|comment                                |   |   
