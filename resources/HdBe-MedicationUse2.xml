@@ -41,6 +41,7 @@
     <element id="MedicationStatement">
       <path value="MedicationStatement" />
       <short value="MedicationUse" />
+      <comment value="When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:&#xD;MedicationStatement.status + MedicationStatement.wasNotTaken&#xD;* Status=Active + NotTaken=T = Not currently taking&#xD;* Status=Completed + NotTaken=T = Not taken in the past&#xD;* Status=Intended + NotTaken=T = No intention of taking&#xD;* Status=Active + NotTaken=F = Taking, but not as prescribed&#xD;* Status=Active + NotTaken=F = Taking&#xD;* Status=Intended +NotTaken= F = Will be taking (not started)&#xD;* Status=Completed + NotTaken=F = Taken in past&#xD;* Status=In Error + NotTaken=N/A = In Error." />
       <alias value="MedicatieGebruik" />
       <mapping>
         <identity value="zib-medicationuse2-v1.1.1-2020EN" />
@@ -245,7 +246,7 @@
       </slicing>
     </element>
     <element id="MedicationStatement.medication[x]:medicationReference">
-      <path value="MedicationStatement.medicationReference" />
+      <path value="MedicationStatement.medication[x]" />
       <sliceName value="medicationReference" />
       <short value="ProductUsed" />
       <definition value="The product used. This is usually medication. Food, blood products, aids and bandages do not strictly fall under the category of medication, but can be recorded as well.&#xD;&#xA;In principle, this will be the prescribed product, but the product used may differ from the prescribed product." />
@@ -276,7 +277,7 @@
       </slicing>
     </element>
     <element id="MedicationStatement.effective[x]:effectivePeriod">
-      <path value="MedicationStatement.effectivePeriod" />
+      <path value="MedicationStatement.effective[x]" />
       <sliceName value="effectivePeriod" />
       <short value="PeriodOfUse" />
       <definition value="Medication use can be recorded for a certain moment or over a certain period. Thus, medication use can be recorded multiple times during the use of medication. The usage period is the period or moment over which the data is recorded.&#xA;**Start date:** This is the time at which the agreement was to take effect (or took effect or will take effect). &#xA;**End date:** The time at which the period of use ends (or ended or will end). To avoid confusion between 'to' and 'up to', the submission of time is always mandatory for the end date." />
@@ -357,7 +358,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationUse2" />
-        <map value="comment" />
+        <map value="medication_use.comment" />
       </mapping>
     </element>
     <element id="MedicationStatement.dosage">
