@@ -7,6 +7,7 @@ import pathlib
 from xml.etree.ElementTree import tostring
 from fhir.resources.valueset import ValueSet, ValueSetComposeIncludeConceptDesignation, ValueSetComposeIncludeConcept, ValueSetComposeInclude, ValueSetCompose
 from fhir.resources import construct_fhir_element
+from datetime import datetime
 
 baseUrl = 'http://localhost:8080/'
 branch =  'MAIN/SNOMEDCT-BE'
@@ -78,6 +79,15 @@ def getDesignationsById(id, filename):
                             desFR = ValueSetComposeIncludeConceptDesignation.parse_obj(FR)                                
     return(desEN, desNL, desFR)
 
+#Writes missing designations to a log file including the English display
+def missing_designations(language, message):
+    """ writes message to the log file """
+    with open(output_folder + 'missing_' + language + '_designations.txt', 'a', encoding='utf8') as f:
+        now = str(datetime.now())
+        message = now + '\t' + message + '\n' 
+        f.write(message)
+        f.close()
+
 #Gets designations for all snomed concepts in a valuesets, adds them, and returns an updated valueset. 
 def addDesignations(valueset, filename):
     vsci = []
@@ -98,17 +108,24 @@ def addDesignations(valueset, filename):
                         #add EN desination as  display value
                         con.display = d[0].value
                         #con.designation.append(d[0])
+                    if d[0].value is None:
+                        # This does not occur at the moment. However I am not sure how foul proof this is with getting the display for the French en Dutch missing values.                    
+                        missing_designations('display', 'SNOMED concept ID ' + x2.code + ' in file ' + filename + ' does not have a display.')   
                     if d[1].value is not None:
                         #add nl-BE designation
                         con.designation.append(d[1])
+                    if d[1].value is None:                            
+                        missing_designations('Dutch', 'SNOMED concept ID ' + x2.code + ' (' + d[0].value + ') in file ' + filename + ' does not have a Dutch translation.')
                     if d[2].value is not None:
                         #add fr-BE designation
                         con.designation.append(d[2])
+                    if d[2].value is None:
+                        missing_designations('French', 'SNOMED concept ID ' + x2.code + ' (' + d[0].value + ') in file ' + filename + ' does not have a French translation.')                                            
                 concepts.append(con)
             x.concept = concepts  
         vsci.append(x)     
     valueset.compose.include = vsci
-    return(valueset) 
+    return(valueset)
 
 # Get all files from the input folder that meet the filename creteria. 
 # Next, add EN/NL/FR designations for all extensionally defined SNOMED codes and write the updated files to the output folder. 
@@ -120,3 +137,5 @@ for f in file:
     output_file = open(output_folder + filename, 'w', encoding='UTF8') 
     output_file.write(xml_str)
     output_file.close()
+
+print('Finished getting designations')
