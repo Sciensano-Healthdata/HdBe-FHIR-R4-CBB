@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConceptMap xmlns="http://hl7.org/fhir">
+   <id value="MedicationStopType-to-MedicationStatementStatus"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+      <valueBoolean value="true"/>
+   </extension>
+   <url value="https://fhir.healthdata.be/ConceptMap/MedicationStopType-to-MedicationStatementStatus"/>
+   <name value="MedicationStopType_to_MedicationStatementStatus"/>
+   <title value="MedicationStopType_to_MedicationStatementStatus"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Service portal – healthdata.be"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://sciensano.service-now.com/sp"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="Maps MedicationStopType codes as found in CBB MedicationUse2, to `MedicationStatement.status` codes as found in FHIR R4."/>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <sourceCanonical value="https://fhir.healthdata.be/ValueSet/MedicationStopType"/>
+   <targetCanonical value="http://hl7.org/fhir/ValueSet/medication-statement-status"/>
+   <group>
+      <source value="http://snomed.info/sct"/>
+      <target value="http://hl7.org/fhir/CodeSystem/medication-statement-status"/>
+      <targetVersion value="http://hl7.org/fhir/CodeSystem/medication-statement-status|4.0.1"/>
+      <element>
+         <code value="14803004"/>
+         <display value="Transitory"/>
+         <target>
+            <code value="on-hold"/>
+            <display value="On Hold"/>
+            <equivalence value="equal"/>
+         </target>
+      </element>
+      <element>
+         <code value="255545003"/>
+         <display value="Definite"/>
+         <target>
+            <code value="stopped"/>
+            <display value="Stopped"/>
+            <equivalence value="equal"/>
+         </target>
+      </element>
+   </group>
+</ConceptMap>

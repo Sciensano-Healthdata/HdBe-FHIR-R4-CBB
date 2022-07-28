@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MedicationStatement xmlns="http://hl7.org/fhir">
+  <id value="HdBe-MedicationUse2-01" />
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-MedicationUse2" />
+  </meta>
+  <extension url="https://fhir.healthdata.be/StructureDefinition/ext-MedicationUse2.AsAgreedIndicator">
+    <valueBoolean value="true" />
+  </extension>
+  <extension url="https://fhir.healthdata.be/StructureDefinition/ext-MedicationUse2.Prescriber">
+    <valueReference>
+      <reference value="PractitionerRole/HdBe-HealthProfessional-PractitionerRole-01"/>
+      <type value="PractitionerRole"/>
+      <display value="Healthcare professional (person), E. Penninx"/>
+    </valueReference>
+  </extension>
+  <extension url="https://fhir.healthdata.be/StructureDefinition/ext-RenderedDosageInstruction">
+    <valueString value="From 24 Oct 2016, for 4 days, 4 times per day 1 unit, if needed 2 times a day 1 unit, oral." />
+  </extension>
+  <status value="completed" />
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="422979000"/>
+      <display value="Medication regimen behavior finding"/>
+    </coding>
+  </category>
+  <medicationReference>
+    <reference value="Medication/HdBe-Medication-01"/>
+    <type value="Medication"/>
+    <display value="Acetaminophen 500 mg oral tablet"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/HdBe-Patient-01"/>
+    <type value="Patient"/>
+    <display value="Belle Ulijn"/>
+  </subject>
+  <effectivePeriod>
+    <extension url="https://fhir.healthdata.be/StructureDefinition/ext-TimeInterval.Duration">
+      <valueDuration>
+        <value value="4" />
+        <unit value="dag" />
+        <system value="http://unitsofmeasure.org" />
+        <code value="d" />
+      </valueDuration>
+    </extension>
+    <start value="2016-10-24" />
+  </effectivePeriod>
+  <dateAsserted value="2020-07-21" />
+  <dosage>
+    <sequence value="1" />
+     <timing>
+      <repeat>
+        <frequencyMax value="4" />
+        <period value="1" />
+        <periodUnit value="d" />
+      </repeat>
+    </timing>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="26643006"/>
+        <display value="Oral route"/>
+      </coding>
+    </route>
+    <doseAndRate>
+      <doseQuantity>
+          <value value="1.0"/>
+          <unit value="tablets"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="{tbl}"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosage>
+  <dosage>
+    <sequence value="1"/>
+    <timing>
+      <repeat>
+        <frequency value="2"/>
+        <period value="1"/>
+        <periodUnit value="d"/>
+      </repeat>
+    </timing>
+    <asNeededCodeableConcept>
+      <coding>
+        <system value="https://fhir.healthdata.be/CodeSystem/AsNeededCriterium"/>
+        <code value="NC006"/>
+        <display value="if needed"/>
+      </coding>
+    </asNeededCodeableConcept>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="26643006"/>
+        <display value="Oral route"/>
+      </coding>
+    </route>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="1.0"/>
+        <unit value="tablets"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="{tbl}"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosage>
+</MedicationStatement>
