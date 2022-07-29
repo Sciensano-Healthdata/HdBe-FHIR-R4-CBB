@@ -1,5 +1,30 @@
 # {{page-title}}
 
+## Diagram of technical layering
+
+<plantuml>
+set namespaceSeparator none
+skinparam backgroundcolor transparent
+node hl7.fhir.r4.core                       #aliceblue;line:blue;text:blue
+node hl7.fhir.be.core                       #aliceblue;line:blue;text:blue
+node nictiz.fhir.nl.r4.zib2020              #aliceblue;line:blue;text:blue
+node healthdata.be.r4.cbb                   #green;line:blue;text:yellow
+node healthdata.be.r4.laboratorytestresult
+node healthdata.be.r4.patientsummary
+node healthdata.be.r4.dcd.xyz
+
+hl7.fhir.r4.core -- hl7.fhir.be.core #line:blue
+hl7.fhir.r4.core -- nictiz.fhir.nl.r4.zib2020 #line:blue
+nictiz.fhir.nl.r4.zib2020 .. healthdata.be.r4.cbb #line:blue : manual dependency 
+hl7.fhir.be.core -- healthdata.be.r4.cbb #line:blue
+healthdata.be.r4.cbb -- healthdata.be.r4.laboratorytestresult
+healthdata.be.r4.cbb -- healthdata.be.r4.patientsummary
+healthdata.be.r4.cbb ~~ healthdata.be.r4.dcd.xyz : potential dependency
+healthdata.be.r4.laboratorytestresult ~~ healthdata.be.r4.dcd.xyz  
+healthdata.be.r4.patientsummary ~~ healthdata.be.r4.dcd.xyz 
+</plantuml>
+
+
 ## Content Types
 Unless stated otherwise, this implementation guide uses the [FHIR RESTful framework](https://hl7.org/fhir/R4/http.html#mime-type). This framework defines at least three content-types to send/retrieve information:
 
