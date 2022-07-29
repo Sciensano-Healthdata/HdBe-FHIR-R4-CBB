@@ -1,24 +1,17 @@
 ## Example instances
 
-| [CBB name]      |                   |
+| medication_agreement     |                   |
 |-----------------|-------------------|
-| [Concept name ] | [example value]   |
+| prescriber   |   |
+| prescription_reason   |   |
+| agreed_medicine   |   |
+| instructions_for_use   |  |
+| medication_agreement_date_time   |    |
+| period_of_use   | |
+| medication_agreement_stop_type   |    |
+| reason_medication_agreement   |   |
+| medication_agreement_additional_information   |   |
+| comment   |   |
 
 
-// example of NameInformation
-```
-## Example instances
 
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```

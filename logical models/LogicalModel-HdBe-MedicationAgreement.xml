@@ -72,11 +72,6 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="medication_agreement" />
-        <min value="0" />
-        <max value="*" />
-      </base>
     </element>
     <element id="medication_agreement.prescriber">
       <path value="medication_agreement.prescriber" />
@@ -102,11 +97,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_agreement.prescriber" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional" />
@@ -124,7 +114,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="The medical reason for the prescription or for use of the medication. This can be used to enter a medical indication which was the direct cause for prescription or for use of the medication in question. &#xD;&#xA;&#xD;&#xA;It can concern every type of problem (or condition) of the patient, almost all diagnoses, complaints or symptoms. &#xD;&#xA;&#xD;&#xA;Please note: The BST401T file of the G standard contains a “special reference” to indicate that “exchange of the reason for prescription is essential”.">
+      <definition value="The medical reason for the prescription or for use of the medication. This can be used to enter a medical indication which was the direct cause for prescription or for use of the medication in question. &#xD;&#xA;&#xD;&#xA;It can concern every type of problem (or condition) of the patient, almost all diagnoses, complaints or symptoms.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -136,11 +126,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_agreement.prescription_reason" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem" />
@@ -170,11 +155,6 @@
       </definition>
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="medication_agreement.agreed_medicine" />
-        <min value="1" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct" />
@@ -233,11 +213,6 @@
       </definition>
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="medication_agreement.medication_agreement_date_time" />
-        <min value="1" />
-        <max value="1" />
-      </base>
       <type>
         <code value="dateTime" />
       </type>
@@ -266,112 +241,9 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_agreement.period_of_use" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
-        <code value="BackboneElement" />
-      </type>
-    </element>
-    <element id="medication_agreement.period_of_use.start_date_time">
-      <path value="medication_agreement.period_of_use.start_date_time" />
-      <short value="startDateTime">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="startDatumTijd" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The start date and time of the interval">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="De begindatum en tijd van het interval" />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="medication_agreement.period_of_use.start_date_time" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="dateTime" />
-      </type>
-    </element>
-    <element id="medication_agreement.period_of_use.end_date_time">
-      <path value="medication_agreement.period_of_use.end_date_time" />
-      <short value="endDateTime">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="eindDatumTijd" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The end date and time of the interval">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="De einddatum en tijd van het interval" />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="medication_agreement.period_of_use.end_date_time" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="dateTime" />
-      </type>
-    </element>
-    <element id="medication_agreement.period_of_use.duration">
-      <path value="medication_agreement.period_of_use.duration" />
-      <short value="Duration">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="tijdsDuur" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The duration of the interval in appropriate units of time (*e.g.* days or hours, etc.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="De tijdsduur van het interval in een gewenste tijdseenheid (bv. dagen of uren, etc.)." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="medication_agreement.period_of_use.duration" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="Quantity" />
+        <code value="Range" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-TimeInterval" />
       </type>
     </element>
     <element id="medication_agreement.medication_agreement_stop_type">
@@ -398,18 +270,13 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_agreement.medication_agreement_stop_type" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="required" />
         <description value="MedicationAgreementStopType codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieafspraakStopType" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/MedicationStopType" />
       </binding>
     </element>
     <element id="medication_agreement.reason_medication_agreement">
@@ -436,18 +303,13 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_agreement.reason_medication_agreement" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="required" />
         <description value="ReasonMedicationAgreement codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/RedenMedicatieafspraak" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/MedicationReason" />
       </binding>
     </element>
     <element id="medication_agreement.medication_agreement_additional_information">
@@ -474,18 +336,13 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="medication_agreement.medication_agreement_additional_information" />
-        <min value="0" />
-        <max value="*" />
-      </base>
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="required" />
         <description value="MedicationAgreementAdditionalInformation codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/MedicatieafspraakAanvullendeInformatie" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/MedicationAgreementAdditionalInformation" />
       </binding>
     </element>
     <element id="medication_agreement.comment">
@@ -512,11 +369,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medication_agreement.comment" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="string" />
       </type>
