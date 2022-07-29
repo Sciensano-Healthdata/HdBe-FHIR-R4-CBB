@@ -35,7 +35,9 @@
 - {{pagelink:Home/Examples/HdBe-LivingSituation-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-MedicalDevice-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-MedicalDevice.Product-01.page.md}}
+- {{pagelink:Home/Examples/HdBe-MedicationAgreement-01.page.md}} 
 - {{pagelink:Home/Examples/HdBe-MedicationAdministration2-01.page.md}} 
+- {{pagelink:Home/Examples/HdBe-MedicationUse2-01.page.md}} 
 - {{pagelink:Home/Examples/HdBe-NursingIntervention-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-NutritionAdvice-01.page.md}}
 - {{pagelink:Home/Examples/HdBe-NutritionAdvice-01-Condition-01.page.md}}
