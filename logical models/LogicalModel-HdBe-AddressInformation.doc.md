@@ -2,6 +2,7 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
+|`house_number_indication` | terminology | Developed the CodeSystem HouseNumberIndication as replacement of the current values and added the CodeSystem to the HouseNumberIndication ValueSet. |
 |`postcode` | textual | Removed Dutch context.|
 |`place_of_residence` | textual | Removed Dutch context.|
 |`municipality` | textual | Removed Dutch context. |

@@ -2,4 +2,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-| | | 
+| `comment` | textual | Removed spelling mistake (_professionnels_ to _professionals_) ([zib ticket 1807](https://bits.nictiz.nl/browse/ZIB-1807)).| 
