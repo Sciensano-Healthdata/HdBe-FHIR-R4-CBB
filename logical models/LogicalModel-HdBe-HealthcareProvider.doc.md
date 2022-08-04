@@ -4,7 +4,7 @@
 |-----------------|-------------------|-----------------------------------------|
 |`healthcare_provider_identification_number` | textual | Replaced the Dutch context (URA, AGB) with NIDHI and CBE. |
 |`department_specialty` | textual | Removed the Dutch context. |
-|`department_specialty` | terminology | Removed ValueSet DepartmentSpecialty. |
+|`department_specialty` | terminology | Replaced values in ValueSet DepartmentSpecialty with defined list of SNOMED codes and included SNOMED codes for Unknown and Other. |
 |`department_identification_number` | element | Added new element which specifies an identification number for a department. |
 |`organization_type` | textual | Removed the Dutch context. | 
 |`organization_type` | terminology| Removed ValueSet OrganizationType. | 

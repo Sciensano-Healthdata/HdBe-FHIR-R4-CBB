@@ -35,7 +35,7 @@
         <valueCode value="nl-NL" />
       </extension>
       <extension url="content">
-        <valueMarkdown value="**Concept**&#xD;&#xA;Een zorgaanbieder is een organisatie die medische-, paramedische- en/of verpleegkundige zorg aanbiedt, en ook daadwerkelijk verleent, aan cliënten/patiënten. Voorbeelden zijn: ziekenhuis, verpleeghuis, huisartsenpraktijk.&#xD;&#xA;**Purpose**&#xD;&#xA;Het vastleggen van de relevante gegevens ten behoeve van identificatie van de organisatie, voor administratieve doeleinden.&#xD;&#xA;" />
+        <valueMarkdown value="**Concept**&#xD;&#xA;Een zorgaanbieder is een organisatie die medische-, paramedische- en/of verpleegkundige zorg aanbiedt, en ook daadwerkelijk verleent, aan cliënten/patiënten. Voorbeelden zijn: ziekenhuis, verpleeghuis, huisartsenpraktijk.&#xD;&#xA;**Purpose**&#xD;&#xA;Het vastleggen van de relevante gegevens ten behoeve van identificatie van de organisatie, voor administratieve doeleinden." />
       </extension>
     </extension>
   </description>
@@ -155,6 +155,10 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/DepartmentSpecialty" />
+      </binding>
     </element>
     <element id="healthcare_provider.department_identification_number">
       <path value="healthcare_provider.department_identification_number" />
