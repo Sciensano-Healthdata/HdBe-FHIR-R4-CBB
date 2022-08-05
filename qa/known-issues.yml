@@ -4,9 +4,8 @@
 HdBe-LivingSituation-01:
   ignored issues:
     Observation.component[0].code.coding[0]:
-      - message: "Unable to find code 118871000146108 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20220331)"
+      - message: "Unable to find code 118871000146108 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20220731)"
         reason: "Relates to issue #200. This is a SNOMED code in the DUTCH edition. We need an International one or one from Belgium."
-
 
 ---
 # The following issues are not "real" deviations stemming from design choices, but rather problems that pop up due to
@@ -72,7 +71,7 @@ HdBe-MedicalDevice-*:
 HdBe-SmokingStatus-01:
   ignored issues:
     Observation.component[0].code.coding[0]:
-      - message: Unable to find code 53661000146106 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20220331); The code "53661000146106" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#53661000146106) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#53661000146106'
+      - message: Unable to find code 53661000146106 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20220731); The code "53661000146106" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#53661000146106) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#53661000146106'
         reason: 53661000146106 is a code defined in a recent Dutch refset which is not available to http://tx.fhir.org/r4. This code will likely be changed by issue GitHub 232.
 
 HdBe-TreatmentDirective2-01-Consent-01:
