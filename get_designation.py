@@ -13,6 +13,7 @@ baseUrl = 'http://localhost:8080/'
 branch =  'MAIN/SNOMEDCT-BE'
 input_folder = 'terminology/'
 output_folder = "terminology/"
+message = 'SNOMED concept ID;Betekenis;ValueSet;Taal'
 
 # Queries local running SNOWSTORM server. Gets the full description of the given snomed concept.    
 def getDesignationsById(id, filename):
@@ -84,7 +85,7 @@ def missing_designations(language, message):
     """ writes message to the log file """
     with open(output_folder + 'missing_' + language + '_designations.txt', 'a', encoding='utf8') as f:
         now = str(datetime.now())
-        message = now + '\t' + message + '\n' 
+        message = message + '\n' 
         f.write(message)
         f.close()
 
@@ -115,12 +116,12 @@ def addDesignations(valueset, filename):
                         #add nl-BE designation
                         con.designation.append(d[1])
                     if d[1].value is None:                            
-                        missing_designations('Dutch', 'SNOMED concept ID ' + x2.code + ' (' + d[0].value + ') in file ' + filename + ' does not have a Dutch translation.')
+                        missing_designations('Dutch', 'SNOMED concept ID;' + x2.code + ';' + d[0].value + ';' + filename + ';Dutch')
                     if d[2].value is not None:
                         #add fr-BE designation
                         con.designation.append(d[2])
                     if d[2].value is None:
-                        missing_designations('French', 'SNOMED concept ID ' + x2.code + ' (' + d[0].value + ') in file ' + filename + ' does not have a French translation.')                                            
+                        missing_designations('French', 'SNOMED concept ID;' + x2.code + ';' + d[0].value + ';' + filename + ';French')                                            
                 concepts.append(con)
             x.concept = concepts  
         vsci.append(x)     
