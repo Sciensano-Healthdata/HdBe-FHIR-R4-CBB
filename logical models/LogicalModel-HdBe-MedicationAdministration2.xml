@@ -298,7 +298,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="Medication or administration agreement on which this administration.is based.">
+      <definition value="Medication or administration agreement on which this administration is based.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -311,64 +311,8 @@
       <min value="0" />
       <max value="1" />
       <type>
-        <code value="BackboneElement" />
-      </type>
-    </element>
-    <element id="medication_administration.related_agreement.medication_agreement">
-      <path value="medication_administration.related_agreement.medication_agreement" />
-      <short value="MedicationAgreement">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Medicatieafspraak" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Medication agreement on which this administration is based.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Medicatiesafspraak waar deze toediening op gebaseerd is." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationAgreement" />
-      </type>
-    </element>
-    <element id="medication_administration.related_agreement.administration_agreement">
-      <path value="medication_administration.related_agreement.administration_agreement" />
-      <short value="AdministrationAgreement">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Toedieningsafspraak" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Administration agreement on which this administration is based.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Toedieningsafspraak waar deze toediening op gebaseerd is." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AdministrationAgreement" />
       </type>
     </element>
@@ -397,93 +341,9 @@
       <min value="0" />
       <max value="1" />
       <type>
-        <code value="BackboneElement" />
-      </type>
-    </element>
-    <element id="medication_administration.administrator.patient">
-      <path value="medication_administration.administrator.patient" />
-      <short value="Patient">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Patiënt" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="If the patient administered the medication themselves, indicate that here. If the medication is administered by a health professional or caregiver/family member/etc., the health professional is entered in the ‘Healthcare provider’ element or the caregiver/family member/etc. is entered in the ‘Contact’ element respectively.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Wanneer de patiënt zelf de medicatie heeft toegediend wordt dat hier aangegeven. Wanneer de medicatietoediening is gedaan door een zorgverlener of mantelzorger/familielid/etc. wordt respectievelijk de zorgverlener vermeld in het element 'Zorgverlener' of de mantelzorger/familielid/etc. in het element 'Contactpersoon'." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Patient" />
-      </type>
-    </element>
-    <element id="medication_administration.administrator.health_professional">
-      <path value="medication_administration.administrator.health_professional" />
-      <short value="HealthProfessional">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Zorgverlener" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The concept describes the person who administered the product. This is a professional authorised administrator.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Het concept beschrijft de persoon die de toediening gerealiseerd heeft. Dit is een professionele toedieningsbevoegde." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional" />
-      </type>
-    </element>
-    <element id="medication_administration.administrator.caregiver">
-      <path value="medication_administration.administrator.caregiver" />
-      <short value="Caregiver">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Mantelzorger" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Information on the patient’s personal relative or contact that administered the medication.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Gegevens van een persoonlijke relatie van de patiënt, die de medicatietoediening heeft gedaan." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson" />
       </type>
     </element>
