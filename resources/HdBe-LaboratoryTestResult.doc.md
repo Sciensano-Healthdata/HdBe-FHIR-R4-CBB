@@ -2,6 +2,8 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
+| `status` | terminology | Replaced FHIR ValueSet with ValueSet-TestResultStatus as this is a subset of the FHIR valueset. |
+| `status` | terminology | Removed ConceptMap as we replaced the ValueSet values to the FHIR ValueSet. |
 | `code` | terminology | Removed ValueSet binding and described in the comment the use of Loinc and Albert codes as per the subset defined by the FPS Health (ReTaM). Added a reference to the subset on the website of the FPS Health. The ReTaM codes are not duplicated in a FHIR ValueSet because this would require extensive maintenance in keeping the ValueSet up-to-date. |
 | `performer` | reference | Added reference to HdBe-HealthcareProvider-Organization (seems missing in the current zib profile implementation). |
 | `performer` | slicing | Removed slicing because this caused an error in the FHIR validator. |
