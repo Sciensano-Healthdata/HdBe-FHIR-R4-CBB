@@ -18,6 +18,11 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
+    <identity value="HdBe-MedicationAdministration2" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationAdministration2" />
+    <name value="HdBe logical model MedicationAdministration2" />
+  </mapping>
+  <mapping>
     <identity value="zib-medicationadministration2-v1.1.1-2020EN" />
     <uri value="https://zibs.nl/wiki/MedicationAdministration2-v1.1.1(2020EN)" />
     <name value="zib MedicationAdministration2-v1.1.1(2020EN)" />
@@ -26,11 +31,6 @@
     <identity value="zib-range-v1.0.1-2020EN" />
     <uri value="https://zibs.nl/wiki/Range-v1.0.1(2020EN)" />
     <name value="zib Range-v1.0.1(2020EN)" />
-  </mapping>
-  <mapping>
-    <identity value="HdBe-MedicationAdministration2" />
-    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationAdministration2" />
-    <name value="HdBe logical model MedicationAdministration2" />
   </mapping>
   <mapping>
     <identity value="HdBe-Range" />
@@ -129,7 +129,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="medication_administration_status" />
+        <map value="medication_administration.medication_administration_status" />
       </mapping>
     </element>
     <element id="MedicationAdministration.category">
@@ -170,7 +170,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="administration_product" />
+        <map value="medication_administration.administration_product" />
       </mapping>
     </element>
     <element id="MedicationAdministration.supportingInformation">
@@ -202,7 +202,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="administration_agreement" />
+        <map value="medication_administration.related_agreement.administration_agreement" />
       </mapping>
     </element>
     <element id="MedicationAdministration.effective[x]">
@@ -231,7 +231,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="administration_date_time" />
+        <map value="medication_administration.agreed_date_time" />
       </mapping>
     </element>
     <element id="MedicationAdministration.performer">
@@ -247,7 +247,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="administrator" />
+        <map value="medication_administration.administrator" />
       </mapping>
     </element>
     <element id="MedicationAdministration.performer.actor">
@@ -286,15 +286,15 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="patient" />
+        <map value="medication_administration.administrator.patient" />
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="health_professional" />
+        <map value="medication_administration.administrator.health_professional" />
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="caregiver" />
+        <map value="medication_administration.administrator.caregiver" />
       </mapping>
     </element>
     <element id="MedicationAdministration.request">
@@ -314,7 +314,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="medication_agreement" />
+        <map value="medication_administration.related_agreement.medication_agreement" />
       </mapping>
     </element>
     <element id="MedicationAdministration.note">
@@ -333,7 +333,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="comment" />
+        <map value="medication_administration.comment" />
       </mapping>
     </element>
     <element id="MedicationAdministration.dosage.extension">
@@ -377,7 +377,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="route_of_administration" />
+        <map value="medication_administration.route_of_administration" />
       </mapping>
     </element>
     <element id="MedicationAdministration.dosage.dose">
@@ -391,8 +391,8 @@
         <comment value="AdministeredAmount" />
       </mapping>
       <mapping>
-        <identity value="HdBe-Range" />
-        <map value="administered_amount" />
+        <identity value="HdBe-MedicationAdministration2" />
+        <map value="medication_administration.administered_amount" />
       </mapping>
     </element>
     <element id="MedicationAdministration.dosage.rate[x]">
@@ -428,11 +428,11 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="administering_speed" />
+        <map value="medication_administration.administering_speed" />
       </mapping>
       <mapping>
         <identity value="HdBe-Range" />
-        <map value="nominal_value" />
+        <map value="range.nominal_value" />
       </mapping>
     </element>
   </differential>
