@@ -77,6 +77,13 @@
         <profile value="https://fhir.healthdata.be/StructureDefinition/ext-MedicationAdministration2.AgreedDateTime" />
       </type>
     </element>
+    <element id="MedicationAdministration.extension:agreedDateTime.value[x]">
+      <path value="MedicationAdministration.extension.value[x]" />
+      <mapping>
+        <identity value="HdBe-MedicationAdministration2" />
+        <map value="medication_administration.agreed_date_time" />
+      </mapping>
+    </element>
     <element id="MedicationAdministration.extension:doubleCheckPerformed">
       <path value="MedicationAdministration.extension" />
       <sliceName value="doubleCheckPerformed" />
@@ -86,6 +93,13 @@
         <profile value="https://fhir.healthdata.be/StructureDefinition/ext-MedicationAdministration2.DoubleCheckPerformed" />
       </type>
     </element>
+    <element id="MedicationAdministration.extension:doubleCheckPerformed.value[x]">
+      <path value="MedicationAdministration.extension.value[x]" />
+      <mapping>
+        <identity value="HdBe-MedicationAdministration2" />
+        <map value="medication_administration.double_check_performed" />
+      </mapping>
+    </element>
     <element id="MedicationAdministration.extension:deviatingAdministration">
       <path value="MedicationAdministration.extension" />
       <sliceName value="deviatingAdministration" />
@@ -94,6 +108,13 @@
         <code value="Extension" />
         <profile value="https://fhir.healthdata.be/StructureDefinition/ext-MedicationAdministration2.DeviatingAdministration" />
       </type>
+    </element>
+    <element id="MedicationAdministration.extension:deviatingAdministration.value[x]">
+      <path value="MedicationAdministration.extension.value[x]" />
+      <mapping>
+        <identity value="HdBe-MedicationAdministration2" />
+        <map value="medication_administration.deviating_administration" />
+      </mapping>
     </element>
     <element id="MedicationAdministration.extension:medicationAdministrationReasonForDeviation">
       <path value="MedicationAdministration.extension" />
@@ -107,6 +128,10 @@
     <element id="MedicationAdministration.extension:medicationAdministrationReasonForDeviation.value[x]">
       <path value="MedicationAdministration.extension.value[x]" />
       <comment value="This MedicationAdministrationReasonForDeviation extension has overlap with `statusReason`. Both concepts allow the documentation of reasons why an administration did not take place, potentially resulting in duplicated information in both places. This extension, however, has a broader scope because it also covers the reasons why administrations are performed differently than the agreement." />
+      <mapping>
+        <identity value="HdBe-MedicationAdministration2" />
+        <map value="medication_administration.medication_administration_reason_for_deviation" />
+      </mapping>
     </element>
     <element id="MedicationAdministration.status">
       <path value="MedicationAdministration.status" />
@@ -231,7 +256,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="medication_administration.agreed_date_time" />
+        <map value="medication_administration.administration_date_time" />
       </mapping>
     </element>
     <element id="MedicationAdministration.performer">
@@ -359,7 +384,10 @@
     </element>
     <element id="MedicationAdministration.dosage.extension:administeringSpeedRange.value[x]">
       <path value="MedicationAdministration.dosage.extension.value[x]" />
-      <definition value="The administering speed is used in slow administration of liquid. In practice, the measuring unit is almost always ml/hour. Entering an interval (such as 0-10 ml/hour) is also a commonly used option. &#xA;For example, with an administering speed of 10ml/hour: &#xD;&#xA;- amount = 10,&#xD;&#xA;- dose unit = ml          &#xD;&#xA;- time unit = hour" />
+      <mapping>
+        <identity value="HdBe-MedicationAdministration2" />
+        <map value="medication_administration.administering_speed" />
+      </mapping>
     </element>
     <element id="MedicationAdministration.dosage.route">
       <path value="MedicationAdministration.dosage.route" />
