@@ -153,7 +153,7 @@
             <rules value="open"/>
          </slicing>
       </element>
-      <element id="CarePlan.contributor:requester">
+      <element id="CarePlan.contributor:requester"> 
          <path value="CarePlan.contributor"/>
          <sliceName value="requester"/>
          <short value="Requester"/>
@@ -161,8 +161,8 @@
          <alias value="Aanvrager"/>
          <type>
             <code value="Reference"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/pattern-HealthProfessionalReference" />
             <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner"/>
          </type>
          <mapping>
             <identity value="zib-nursingintervention-v3.2-2020EN"/>
