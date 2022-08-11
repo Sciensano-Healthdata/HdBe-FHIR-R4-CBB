@@ -37,7 +37,6 @@ HdBe-*-DeviceUseStatement-*:
       - message: Slicing cannot be evaluated
         reason: To check slicing in instances, the referenced resources need to be inspected, but this is not supported by the HL7 Validator.
 
-
 HdBe-Encounter-*:
   ignored issues:
     Encounter.participant[*]:
@@ -47,6 +46,12 @@ HdBe-Encounter-*:
 HdBe-HearingFunction.HearingAid-*:
   ignored issues:
     DeviceUseStatement.reasonReference[*]:
+      - message: Slicing cannot be evaluated
+        reason: To check slicing in instances, the referenced resources need to be inspected, but this is not supported by the HL7 Validator.
+
+HdBe-LaboratoryTestResult-01:
+  ignored issues:
+    Observation.performer[*]:
       - message: Slicing cannot be evaluated
         reason: To check slicing in instances, the referenced resources need to be inspected, but this is not supported by the HL7 Validator.
 

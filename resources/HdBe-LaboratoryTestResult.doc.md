@@ -6,7 +6,7 @@
 | `status` | terminology | Removed ConceptMap as we replaced the ValueSet values to the FHIR ValueSet. |
 | `code` | terminology | Removed ValueSet binding and described in the comment the use of Loinc and Albert codes as per the subset defined by the FPS Health (ReTaM). Added a reference to the subset on the website of the FPS Health. The ReTaM codes are not duplicated in a FHIR ValueSet because this would require extensive maintenance in keeping the ValueSet up-to-date. |
 | `performer` | reference | Added reference to HdBe-HealthcareProvider-Organization (seems missing in the current zib profile implementation). |
-| `performer` | slicing | Removed slicing because this caused an error in the FHIR validator. |
+| `performer` | reference | Removed reference to HdBe-HealthcareProfessional-Practitioner in slice as this is incorporated by the pattern. |
 | `value[x]`| textual | Added textual guidance to include the unit for quantitative results. | 
 | `interpretation.resultFlags` | terminology | Added ConceptMap ResultFlagsCodelist-to-ObservationInterpretation (seems missing in the current zib profile implementation).|
 | `interpretation.resultFlags` | terminology | Removed concepts 'Resistent', 'Intermediate' and 'Susceptible' from the ValueSet. These codes are seen as a quantitative result. ([zib ticket #1555](https://bits.nictiz.nl/browse/ZIB-1555))
