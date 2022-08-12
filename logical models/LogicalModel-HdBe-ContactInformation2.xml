@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="HdBe-ContactInformation" />
+  <language value="en-US" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+02:00" />
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation" />
+  <name value="HdBeContactInformation">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="HdBe-Contactgegevens" />
+      </extension>
+    </extension>
+  </name>
+  <title value="HdBe ContactInformation" />
+  <status value="draft" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="**Concept**&#xD;&#xA;Contact information includes a person's telephone numbers and e-mail addresses.&#xD;&#xA;This is a partial information model.&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;Contact information is used to contact a person.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="**Concept**&#xD;&#xA;Contactgegevens bevatten de telefoonnummers en e-mail adressen van een persoon.&#xD;&#xA;Dit is een subbouwsteen.&#xD;&#xA;**Purpose**&#xD;&#xA;Contactgegevens worden gebruikt om met een persoon in contact te treden." />
+      </extension>
+    </extension>
+  </description>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="true" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/contact_information" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="contact_information">
+      <path value="contact_information" />
+      <short value="ContactInformation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Contactgegevens" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Root concept of the ContactInformation partial information model. This root concept contains all data elements of the ContactInformation partial information model.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de sub-bouwsteen Contactgegevens. Dit rootconcept bevat alle gegevenselementen van de sub-bouwsteen Contactgegevens." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+    </element>
+    <element id="contact_information.contact_point">
+      <path value="contact_information.contact_point" />
+      <short value="ContactPoint">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Telefoonnummers" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Container of the ContactPoint concept. This container contains all data elements of the ContactPoint concept.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Container van het concept Telefoonnummers. Deze container bevat alle gegevenselementen van het concept Telefoonnummers." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="contact_information.contact_point.contact_point_value">
+      <path value="contact_information.contact_point.contact_point_value" />
+      <short value="ContactPointValue">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Telefoonnummer" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The value of the contactpoint, e.g. an emailadress or a phone number.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Een telefoonnummer van de persoon." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="contact_information.contact_point.contact_point_type">
+      <path value="contact_information.contact_point.contact_point_type" />
+      <short value="ContactType">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="TelecomType" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The type of contact.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Het type netwerk of apparaat waar het telefoonummer aan verbonden is" />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="ContactType codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/ContactPointType" />
+      </binding>
+    </element>
+    <element id="contact_information.contact_point.contact_point_use">
+      <path value="contact_information.contact_point.contact_point_use" />
+      <short value="ContactPointUse">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="NummerSoort" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="ContactPointUse indicates what the use of the contactpoint is.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Met NummerSoort kan aangegeven worden of het om een vast, tijdelijk, werk nummer gaat." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="ContactUse codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/ContactUse" />
+      </binding>
+    </element>
+    <element id="contact_information.contact_point.comment">
+      <path value="contact_information.contact_point.comment" />
+      <short value="Comment">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toelichting" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Explanation about contactPoint and how to use it. It can be indicated, for example, that it is a department email address (for healthcare professionals) or that availability by phone is only possible during a specified part of the day.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toelichting over het telefoonnummer en over het gebruik ervan. Aangegeven kan bijvoorbeeld worden dat het een afdelingsnummer is (bij zorgverleners) of dat de bereikbaarheid slecht gedurende een aangegeven deel van de dag mogelijk is." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
