@@ -1,5 +1,5 @@
 # FHIR Profiling Guidelines for FHIR R4
-
+   **[General guidelines](#general)**
 1. [Introduction](#introduction)
     1. [Language](#language) 
 2. [Open vs. closed world modeling](#openvsclosedworldmodeling)    
@@ -11,23 +11,29 @@
     2. [Associating the logical definition to StructureDefinitions](#associatingthelogicaldefinitiontostructuredefinitions)
 4. [Versioning](#Versioning)
 5. [Changelog of changes to zibs and zib-profiles](#changelog)
+    1. [Definition of changelog's category](#changelog_def)
+    2. [Changes that affect multiple CBBs](#changelog_multiple)
+    3. [Additional changes](#changes)
 6. [Extensions](#Extensions)
-7. [Practical guidelines](#practicalguidelines)
-    1. [Identity of artifacts](#identityofartifacts)
-        1. [Canonical URL, id, name and title](#CanonicalURLIdNameTitle)
-        2. [Folder structure and file name](FolderStructureAndFileName)
-    2. [Metadata](#metadata)
-        1. [StructureDefinition](#StructureDefinition)
-        2. [ValueSets](#ValueSets)
-    3.  [ElementDefinition](#ElementDefinition)
-        1. [Usage of DefinitionCodes](#DefinitionCodes)
-        2. [Constraining a target CBB](#ConstrainingCBB)
-        3. [Usage of zib concept examples](#ZibConceptExamples)
-    4.  [Examples](#Examples)
-        1. [Logical model examples](#LogicalModelExamples)
-        2. [FHIR profile examples](#FHIRProfileExamples)
-8. [Miscellaneous](#miscellaneous)
 
+   **[Practical guidelines](#practicalguidelines)**
+
+7. [Identity of artifacts](#identityofartifacts)
+    1. [Canonical URL, id, name and title](#CanonicalURLIdNameTitle)
+    2. [Folder structure and file name](FolderStructureAndFileName)
+8. [Metadata](#metadata)
+    1. [StructureDefinition](#StructureDefinition)
+    2. [ValueSets](#ValueSets)
+9.  [ElementDefinition](#ElementDefinition)
+    1. [Usage of DefinitionCodes](#DefinitionCodes)
+    2. [Constraining a target CBB](#ConstrainingCBB)
+    3. [Usage of zib concept examples](#ZibConceptExamples)
+10. [Examples](#Examples)
+    1. [Logical model examples](#LogicalModelExamples)
+    2. [FHIR profile examples](#FHIRProfileExamples)
+11. [Miscellaneous](#miscellaneous)
+
+# General guidelines<a name="general"></a>
 
 ## Introduction <a name="introduction"></a>
 This document is titled "profiling guidelines" but actually addresses all conformance resources (profiles, extensions, value sets, code systems, CapabilityStatements) and associated examples. We use these terms somewhat interchangeably throughout this document; 'profile' can usually be read as 'the whole set of conformance resources'.
@@ -126,14 +132,14 @@ Example:
 | `specimen.container_type`| terminology | Relaxed binding from required to preferred. ([zib ticket #1552](https://bits.nictiz.nl/browse/ZIB-1552))|
 ```
 
-### Definition of changelog's category
+### Definition of changelog's category<a name="changelog_def"></a>
 
 | Category name  | Description  | Affected [elements](https://www.hl7.org/fhir/R4/elementdefinition.html)|
 |---------------|--------------------------------|------------------|
 |element| Complete removal or addition of a concept/element.| `element` 
 |textual| Textual changes (e.g. typo's) to the zib's definition. This may also contain changes that affect the definition and scope of the zib concept. |`.definition`, `.comment`, `.binding.description`
 |naming| Changes to zibs concept names. |`.short`, `.path`, `.alias`
-|terminology| Adjusted binding strenght of a ValueSet, replaced, removed or added a ValueSet binding | `.binding.strength`, `.binding.valueSet`, 
+|terminology| Adjusted binding strength of a ValueSet; replaced, removed or added a ValueSet binding; replaced, removed, or added concepts of a ValueSet. | `.binding.strength`, `.binding.valueSet` 
 |slicing | Added, removed, or changed a slice. | `.slicing`, `.element.slicename` 
 |cardinality| Cardinality changes, e.g. relaxing or restricing a concept. |`.min`, `.max`
 |type| Usage of a different datatype, e.g. an Identifier instead of a Coded concept. | `.type`
@@ -141,6 +147,33 @@ Example:
 |constraint|  Added, removed or changed to constraints that span multiple concepts. |`.constraint`
 |mapping| Relocated, removed or added mapping elements. | `.mapping`
 |example| Changes to examples which are not reflected in other catergories as these should be adjusted in the examples too when applicable. |`.example`
+
+### Changes that affect multiple CBBs <a name="changelog_multiple"></a>
+Some changes affect multiple CBBs at the same time. How to deal with these changes are discussed here.
+
+#### Deduplication of ValueSets
+As a design principle, zibs contain distinct ValueSets for every concept even if the ValueSet's values/concepts are the same for multiple concepts. For the CBBs, these ValueSets are 'deduplicated' and reused where they are applicable. A valueSet can be reused at multiple elements if they contain equal concepts and have the same purpose. For example, the ValueSet `Gender` is reused in both Patient and HealthProfessional. Contradictionary, both the InstructionsForUse `RouteOfMedicationAdminstration` ValueSet and the AllergyIntolerance `RouteOfExposure` ValueSet consist of the same descendant of a SNOMED value. However, they have a different purpose and thus are kept as separate ValueSets. If ValueSets are similar but have different names, naming is done at the author's discretion. At each of the CBBs where a deduplicated valueSet is used, the reuse should be mentioned in Changelog. This should contain all CBBs were the ValueSet is used. In case of changing the ValueSet, this should draw attention to the other CBBs as well.
+
+### Additional changes<a name="changes"></a>
+In addition to the changelog for each CBB, we also made generic changes from the zibs to the CBBs. The following points are too small to explicitly point out in the CBB / HdBe-profile specific changelog, and therefore are described here.
+
+#### General
+- Replace the term zib with CBB wherever applicable (`.definition`, `.comment`, `.description`, etc.)
+
+#### Logical models
+- `.description`: Remove all text regarding **Revision History** as this is only in Dutch and specifically about the zib.
+- A few zibs constrain a target zib, and this is visualised within a zib as such. We represent this in the Logical Model by defining a specific structure, which is described in the [Constraining a target CBB](#ConstrainingCBB) section. As this is not a conceptual but a visual change, this is not mentioned in the changelog.
+- --> _Possibly something regaring the change from inline partial-zibs towards datatypes_.
+
+#### Profiles
+- `.mapping`: Mappings of extensions are not mapped on the extension itself, but are moved to the host profile.
+
+#### ValueSets
+- The zib export and Nictiz FHIR profiles contain Dutch naming for ValueSets because the source application ART-DECOR is not yet multilingual for terminology resources. The English translation of the ValueSets is available on the zib's wiki. Therefore, for consistency and clarity, every ValueSet in use by the CBBs is (manually) translated using the zib's English ValueSet name. All canonical references to the ValueSet should be adjusted accordingly. Practically, this means that the ValueSets elements `.id`, `.url`, `.name`, `.title` and `.description` and the file name are translated.
+- For each valueset that contains specifically defined concepts, a `.code` and a `.display` in English is provided. If available, a `.designation` in nl-BE and fr-BE are added. The tool *get_designations.py* can gather the designations of SNOMED-CT codes. --> _What to do with the designations that are currently defined by the zib, for example the ones in the FHIR valuesets?_
+
+#### ConceptMaps
+- The zib export and Nictiz FHIR profiles contain Dutch naming for ConceptMaps because of the corresponding ValueSet names. The English translation of the ConceptMap should be distinguished based on the names of the source and target ValueSets. For consistency and clarity, every ConceptMap in use by the HdBe-profiles is (manually) translated. All canonical references to the ConceptMap should be adjusted accordingly. Practically, this means that the ConceptMap elements `.id`, `.url`, `.name`, `.title` and `.description` and the file name are translated.
 
 ## Extensions<a name="Extensions"></a>
 Sometimes a concept cannot be implemented using the building blocks FHIR offers by default. In this case, an extension might be used to implement such a concept. Keep in mind that extensions are often seen as a burden for implementers:
@@ -153,6 +186,7 @@ Sometimes a concept cannot be implemented using the building blocks FHIR offers 
 Usually, mappings for the concept, bindings to specific ValueSets and any functional descriptions will be added when the extension is used within a profile. When the extension pertains to a particular profile or resource, this information SHALL be added to the extension. To aid rendering purposes, functional descriptions and implementation guidance are placed on the extension root rather than the `Extension.value[x]` (except for terminology bindings). Without constraints, most snapshots generators will only include the root element in the profile that hosts the extension. So placing the information on the extension makes sure the information is visible in the profile without the need to navigate into the extension by the implementer.
 
 #   Practical guidelines <a name="practicalguidelines"></a>
+
 ##  Identity of artifacts <a name="identityofartifacts"></a>
 ### Canonical URL, id, name and title <a name="CanonicalURLIdNameTitle"></a>  
 Conformance resources can have multiple types of identifying information, which are related at some level:
@@ -252,16 +286,6 @@ Examples of profiles are not conformance resources and lack the `.url`, `.name` 
         - Note: for extensions and datatype profiles, guidance for profilers may be placed here as well.
 - copyright: "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example, a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third-party IP in connection with the specification or otherwise."
 
-### ValueSets <a name="ValueSets"></a>
-
-#### Deduplication 
-As a design principle, zibs contain distinct ValueSets for every concept even if the ValueSet's values/concepts are the same for multiple concepts. For the CBBs, these ValueSets are 'deduplicated' and reused where they are applicable. If ValueSets are similar but have different names, e.g. 'MedicationUseStopType' and 'MedicationAgreementStopType', naming is done at the author's discretion.
-
-#### Translation
-The zib export and Nictiz FHIR profiles contain Dutch naming for ValueSets because the source application ART-DECOR is not yet multilingual for terminology resources. The English translation of the ValueSets is available on the zib's wiki. Therefore, for consistency and clarity, every ValueSet in use by the CBBs is (manually) translated using the zib's English ValueSet name. All canonical references to the ValueSet should be adjusted accordingly.
-
-Practically, this means that the ValueSets elements `.id`, `.url`, `.name`, `.title` and `.description` and the file name are translated. These changes are not recorded in the changelog files.
-
 ##  ElementDefinition <a name="ElementDefinition"></a>
 Logical models and FHIR profiles are represented using [StructureDefinition resources](https://www.hl7.org/fhir/R4/structuredefinition.html). Every StructureDefinition has 1..* elements of the [ElementDefinition type](https://www.hl7.org/fhir/R4/elementdefinition.html#ElementDefinition). One element describes exactly one concept. Every zib and CBB concept is mapped and described by an ElementDefinition. 
 
@@ -281,11 +305,11 @@ For some concepts within a zib, examples are available in the export to FHIR log
 
 The `ElementDefinition.example` should use the concept's datatype. However, the quality of these examples is poor, which is likely the result of storage as free text per concept within ART-DECOR. Often the example value of a coded concept is mapped to a `CodeableConcept.text` with the concept's DefinitionCode to `CodeadbleConcept.coding.` This might be very confusing for the readers as this does not represent how such a concept will be exchanged. Therefore, the `ElementDefinition.example` is not used with the pre-populated values for the zib export. 
 
-### Examples <a name="Examples"></a>
+## Examples <a name="Examples"></a>
 Examples are a vital part of any specification as they will allow the reader to easier understand the expectations. Every logical model and profile shall have at least one example. 
 Logical models examples are functional in nature: they provide examples of what kind of information belongs to a CBB in a non-technical format. FHIR profile examples are technical in nature. The logical model examples are primarily aimed at researchers and non-technical people. They provide an example of how a CBB  is initialized in the FHIR standard, in XML or JSON format, conforming to the FHIR-profile for the respective CBB. These examples are aimed at developers and implementers of the technical specifications.   
 
-#### Logical model examples <a name="LogicalModelExamples"></a>
+### Logical model examples <a name="LogicalModelExamples"></a>
 Examples of logical models are not conformant to FHIR, and are therefore not represented in XML or JSON. Examples are provided in  table format in a seperate markdown file. The file has the same name as the CBB logical model but ends with `.example.md.` For example `HdBe-BodyHeight.xml` <-> `HdBe-BodyHeight.example.md`.
 The following conventions exist:
 - For elements that represent a quantity, also provide the unit.
@@ -301,8 +325,8 @@ The following conventions exist:
 | position         |10904000 - Orthostatic body position (code by SNOMED CT)  |
 ```
 
-#### FHIR profile examples <a name="FHIRProfileExamples"></a>
-Examples of FHIR profiles are provided in either XML or JSON format and must be a valid profile instance. Every example shall have at least one profile URL in the `.meta.profile` element. Examples are stored in the /examples folder.
+### FHIR profile examples <a name="FHIRProfileExamples"></a>
+Examples of FHIR profiles are provided in either XML or JSON format and must be a valid profile instance. Every example shall have at least one profile URL in the `.meta.profile` element. Examples are stored in the `/examples` folder.
 
 ##  Miscellaneous <a name="miscellaneous"></a>
 To add.
