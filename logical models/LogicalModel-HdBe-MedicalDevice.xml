@@ -30,7 +30,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="**Concept**&#xD;&#xA;Medical devices are any internally implanted and external devices and/or aids used by the patient (in the past) to reduce the effects of functional limitations in organ systems or to facilitate the treatment of a disease.&#xD;&#xA;**Purpose**&#xD;&#xA;Data on medical devices is recorded for several reasons. Knowledge of the presence of these implants enables tracing and taking the aid or device into account in diagnostic or therapeutic procedures, care and transport. &#xD;&#xA;&#xD;&#xA;Examples include: &#xD;&#xA;&#xD;&#xA;* Consequences for transportation, toilet use, etc., in the case of a wheelchair;&#xD;&#xA;* A pacemaker can be of medical importance, but also has consequences for planning radiological exams.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Evidence Base**&#xD;&#xA;Recording data on medically complex devices such as pacemakers is not yet common in EPD systems in the Netherlands, but is sometimes lacking: a letter from a specialist for example often does not include information on which type of pacemaker the patient has (and from which manufacturer). &#xD;&#xA;The Dutch Ministry of Health, Welfare and Sport (VWS) will pass legislation for a national basic register of implants. Every healthcare center will have to supply a UDI (Unique Device Identification, with a link to GTIN) and a UPI (Unique Patient Identification) to the basic register. This will prevent situations in which a large group of patients have an aid or implant in which problems have been detected that cannot be traced. &#xD;&#xA;**Example Instances**">
+  <description value="**Concept**&#xD;&#xA;Medical devices are any internally implanted and external devices and/or aids used by the patient (in the past) to reduce the effects of functional limitations in organ systems or to facilitate the treatment of a disease.&#xD;&#xA;**Purpose**&#xD;&#xA;Data on medical devices is recorded for several reasons. Knowledge of the presence of these implants enables tracing and taking the aid or device into account in diagnostic or therapeutic procedures, care and transport. &#xD;&#xA;&#xD;&#xA;Examples include: &#xD;&#xA;&#xD;&#xA;* Consequences for transportation, toilet use, etc., in the case of a wheelchair;&#xD;&#xA;* A pacemaker can be of medical importance, but also has consequences for planning radiological exams.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Evidence Base**&#xD;&#xA;Recording data on medically complex devices such as pacemakers is not yet common in EPD systems in the Netherlands, but is sometimes lacking: a letter from a specialist for example often does not include information on which type of pacemaker the patient has (and from which manufacturer). &#xD;&#xA;The Dutch Ministry of Health, Welfare and Sport (VWS) will pass legislation for a national basic register of implants. Every healthcare center will have to supply a UDI (Unique Device Identification, with a link to GTIN) and a UPI (Unique Patient Identification) to the basic register. This will prevent situations in which a large group of patients have an aid or implant in which problems have been detected that cannot be traced.">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
         <valueCode value="nl-NL" />
@@ -72,11 +72,6 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="medical_device" />
-        <min value="0" />
-        <max value="*" />
-      </base>
     </element>
     <element id="medical_device.product">
       <path value="medical_device.product" />
@@ -102,11 +97,6 @@
       </definition>
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="medical_device.product" />
-        <min value="1" />
-        <max value="1" />
-      </base>
       <type>
         <code value="BackboneElement" />
       </type>
@@ -123,7 +113,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="Unique identification of the product, such as the serial number. &#xD;&#xA;Frequently used coding systems are HIBC and GTIN.&#xD;&#xA;If the law requires this to be registered on the basis of a UDI (Unique Device Identifier), the unique identification must consist of a UDI-DI (Device Identifier) and a UDI-PI (Production Identifier(s)). See http://www.gs1.org/healthcare/udi for more information. &#xD;&#xA;&#xD;&#xA;The UDI-DI must be recorded in reference to GS1 GTIN (01) encryptions, with which for example a firm is linked to the product type. The UDI-PI must consist of the following: application identifier (AI); expiration date (17) and serial number (21) and/or batch or lot number (10).">
+      <definition value="Unique identification code of the product. &#xD;&#xA;Preferably the UDI (Unique Device Identifier) is used, consisting of a UDI-DI (Device Identifier) and a UDI-PI (Production Identifier(s)).&#xD;&#xA;&#xD;&#xA;Additionally, other codes can be registered if needed. Such as: &#xD;&#xA;- a serial number&#xD;&#xA;- a NIHDI notification code (medical devices on the Belgian market: https://www.vas.ehealth.fgov.be/registers/sadm/web/search/public) &#xD;&#xA;- an identification code as indicated on the Nominative lists published by NIHDI: https://webappsa.riziv-inami.fgov.be/IRREQPublic/nl/Home/SearchNominative). Devices on these Nominative lists meet certain criteria for reimbursement.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -135,13 +125,9 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medical_device.product.product_id" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
-        <code value="CodeableConcept" />
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
       </type>
     </element>
     <element id="medical_device.product.product_type">
@@ -168,11 +154,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medical_device.product.product_type" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -206,11 +187,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medical_device.product_description" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="string" />
       </type>
@@ -268,11 +244,6 @@
       </definition>
       <min value="0" />
       <max value="*" />
-      <base>
-        <path value="medical_device.indication" />
-        <min value="0" />
-        <max value="*" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem" />
@@ -302,18 +273,13 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medical_device.start_date" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="dateTime" />
       </type>
     </element>
     <element id="medical_device.eind_datum">
-      <path value="medical_device.eind_datum" />
-      <short value="EindDatum">
+      <path value="medical_device.end_date" />
+      <short value="end_date">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -336,11 +302,6 @@
       <alias value="EndDate" />
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medical_device.eind_datum" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="dateTime" />
       </type>
@@ -369,11 +330,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medical_device.comment" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="string" />
       </type>
@@ -402,11 +358,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medical_device.location" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider" />
@@ -424,7 +375,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="The healthcare provider involved in the indication for use of the medical device implant.">
+      <definition value="The health professional involved in the indication for use of the medical device implant.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -436,11 +387,6 @@
       </definition>
       <min value="0" />
       <max value="1" />
-      <base>
-        <path value="medical_device.health_professional" />
-        <min value="0" />
-        <max value="1" />
-      </base>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional" />

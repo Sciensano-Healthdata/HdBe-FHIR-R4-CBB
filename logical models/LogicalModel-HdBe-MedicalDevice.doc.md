@@ -2,7 +2,7 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`product.product_id` | type | Replaced the CodeableConcept datatype with an Identifier datatype. |
+|`product.product_id` | type | Replaced the CodeableConcept datatype with a string datatype as pre-adopt from a higher zib version ([ MedicationDevice in prerelease 2022-1](https://zibs.nl/wiki/MedicalDevice-v3.5(2022EN))). |
 |`product.product_id` | cardinality | Relaxed the cardinality from 0..1 to 0..* as multiple product identifications codes could be possible. |
 |`product.product_id` | textual | Replaced definition of product identification codes to the Belgium context. | 
 |`product.product_type` | terminology | Loosened the binding strength from required to extensible ([zib issue #1536](https://bits.nictiz.nl/browse/ZIB-1536)). |
