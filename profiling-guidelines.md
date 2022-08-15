@@ -12,8 +12,7 @@
 4. [Versioning](#Versioning)
 5. [Changelog of changes to zibs and zib-profiles](#changelog)
     1. [Definition of changelog's category](#changelog_def)
-    2. [Changes that affect multiple CBBs](#changelog_multiple)
-    3. [Additional changes](#changes)
+    2. [CBB overarching changes](#CBB_overarching_changes)
 6. [Extensions](#Extensions)
 
    **[Practical guidelines](#practicalguidelines)**
@@ -31,7 +30,6 @@
 10. [Examples](#Examples)
     1. [Logical model examples](#LogicalModelExamples)
     2. [FHIR profile examples](#FHIRProfileExamples)
-11. [Miscellaneous](#miscellaneous)
 
 # General guidelines<a name="general"></a>
 
@@ -146,31 +144,26 @@ Example:
 |reference| Added, removed or changed a reference, e.g. a reference to Location instead of Organization. | `.type.targetProfile`
 |constraint|  Added, removed or changed to constraints that span multiple concepts. |`.constraint`
 |mapping| Relocated, removed or added mapping elements. | `.mapping`
-|example| Changes to examples which are not reflected in other catergories as these should be adjusted in the examples too when applicable. |`.example`
+|example| Changes to examples that are not reflected in other categories should also be adjusted in the examples when applicable. |`.example`
 
-### Changes that affect multiple CBBs <a name="changelog_multiple"></a>
-Some changes affect multiple CBBs at the same time. How to deal with these changes are discussed here.
-
-#### Deduplication of ValueSets
-As a design principle, zibs contain distinct ValueSets for every concept even if the ValueSet's values/concepts are the same for multiple concepts. For the CBBs, these ValueSets are 'deduplicated' and reused where they are applicable. A valueSet can be reused at multiple elements if they contain equal concepts and have the same purpose. For example, the ValueSet `Gender` is reused in both Patient and HealthProfessional. Contradictionary, both the InstructionsForUse `RouteOfMedicationAdminstration` ValueSet and the AllergyIntolerance `RouteOfExposure` ValueSet consist of the same descendant of a SNOMED value. However, they have a different purpose and thus are kept as separate ValueSets. If ValueSets are similar but have different names, naming is done at the author's discretion. At each of the CBBs where a deduplicated valueSet is used, the reuse should be mentioned in Changelog. This should contain all CBBs were the ValueSet is used. In case of changing the ValueSet, this should draw attention to the other CBBs as well.
-
-### Additional changes<a name="changes"></a>
-In addition to the changelog for each CBB, we also made generic changes from the zibs to the CBBs. The following points are too small to explicitly point out in the CBB / HdBe-profile specific changelog, and therefore are described here.
+### CBB overarching changes <a name="CBB_overarching_changes"></a>
+In addition to the changelog for each CBB, generic changes made to the zib logical models and profiles that span multiple CBBs are listed here. 
 
 #### General
 - Replace the term zib with CBB wherever applicable (`.definition`, `.comment`, `.description`, etc.)
 
-#### Logical models
+#### Logical Models
 - `.description`: Remove all text regarding **Revision History** as this is only in Dutch and specifically about the zib.
-- A few zibs constrain a target zib, and this is visualised within a zib as such. We represent this in the Logical Model by defining a specific structure, which is described in the [Constraining a target CBB](#ConstrainingCBB) section. As this is not a conceptual but a visual change, this is not mentioned in the changelog.
-- --> _Possibly something regaring the change from inline partial-zibs towards datatypes_.
+- A few zibs constrain a target zib, and this is visualized within a zib as such. We represent this in the Logical Model by defining a specific structure, which is described in the [Constraining a target CBB](#ConstrainingCBB) section. As this is not a conceptual but a visual change, this is not mentioned in the changelog.
+- --> _Possibly something regarding the change from inline partial-zibs towards datatypes_.
 
 #### Profiles
-- `.mapping`: Mappings of extensions are not mapped on the extension itself, but are moved to the host profile.
+- `.mapping`: Mappings of extensions are not mapped on the extension itself but are moved to the host profile. This way, the mappings are shown in the mapping overview tab of the profile.
 
 #### ValueSets
-- The zib export and Nictiz FHIR profiles contain Dutch naming for ValueSets because the source application ART-DECOR is not yet multilingual for terminology resources. The English translation of the ValueSets is available on the zib's wiki. Therefore, for consistency and clarity, every ValueSet in use by the CBBs is (manually) translated using the zib's English ValueSet name. All canonical references to the ValueSet should be adjusted accordingly. Practically, this means that the ValueSets elements `.id`, `.url`, `.name`, `.title` and `.description` and the file name are translated.
-- For each valueset that contains specifically defined concepts, a `.code` and a `.display` in English is provided. If available, a `.designation` in nl-BE and fr-BE are added. The tool *get_designations.py* can gather the designations of SNOMED-CT codes. --> _What to do with the designations that are currently defined by the zib, for example the ones in the FHIR valuesets?_
+- **English ValueSet name** - The zib export and Nictiz FHIR profiles contain Dutch naming for ValueSets because the source application ART-DECOR is not yet multilingual for terminology resources. The English translation of the ValueSets is available on the zib's wiki. Therefore, for consistency and clarity, every ValueSet in use by the CBBs is (manually) translated using the zib's English ValueSet name. All canonical references to the ValueSet should be adjusted accordingly. Practically, this means that the ValueSets elements `.id`, `.url`, `.name`, `.title` and `.description` and the file name are translated.
+- **Addition of concept designations** - For each valueset that contains specifically defined concepts, a `.code` and a `.display` in English is provided. If available, a `.designation` in nl-BE and fr-BE are added. The tool *get_designations.py* can gather the designations of SNOMED-CT codes. --> _What to do with the designations that are currently defined by the zib, for example the ones in the FHIR valuesets?_
+- **Deduplication of ValueSets** - As a design principle, zibs contain distinct ValueSets for every concept, even if the ValueSet's values/concepts are the same for multiple concepts. For the CBBs, these ValueSets are 'deduplicated' and reused where applicable. A valueSet can be reused at multiple elements if they contain similar concepts and have the same purpose. For example, the ValueSet `Gender` is reused in both Patient and HealthProfessional. Contradictory, both the InstructionsForUse `RouteOfMedicationAdminstration` ValueSet and the AllergyIntolerance `RouteOfExposure` ValueSet consist of the same descendant of a SNOMED value. However, they have a different purpose and thus are kept as separate ValueSets. If ValueSets are similar but have different names, naming is done at the author's discretion. At each of the CBBs where a deduplicated valueSet is used, the reuse should be mentioned in changelog. This should contain all CBBs where the ValueSet is used. In case of changing the ValueSet, this should draw attention to the other CBBs as well.
 
 #### ConceptMaps
 - The zib export and Nictiz FHIR profiles contain Dutch naming for ConceptMaps because of the corresponding ValueSet names. The English translation of the ConceptMap should be distinguished based on the names of the source and target ValueSets. For consistency and clarity, every ConceptMap in use by the HdBe-profiles is (manually) translated. All canonical references to the ConceptMap should be adjusted accordingly. Practically, this means that the ConceptMap elements `.id`, `.url`, `.name`, `.title` and `.description` and the file name are translated.
@@ -178,10 +171,10 @@ In addition to the changelog for each CBB, we also made generic changes from the
 ## Extensions<a name="Extensions"></a>
 Sometimes a concept cannot be implemented using the building blocks FHIR offers by default. In this case, an extension might be used to implement such a concept. Keep in mind that extensions are often seen as a burden for implementers:
 
-- If it possible to model the concept (cleanly) without an extension, this is usually the preferred way.
+- If it is possible to model the concept (cleanly) without an extension, this is usually the preferred way.
 - If that's not possible, check if HL7 or other reliable standardization organizations provide an extension to implement the concept.
 - If that's not possible and after discussing the concept with the HL7 FHIR community (on chat.fhir.org), try to create an extension in a reusable way (or reuse a previously defined extension).
-- If that's not possible, create an extension specific for the resource/profile.
+- If that's not possible, create an extension specific to the resource/profile.
 
 Usually, mappings for the concept, bindings to specific ValueSets and any functional descriptions will be added when the extension is used within a profile. When the extension pertains to a particular profile or resource, this information SHALL be added to the extension. To aid rendering purposes, functional descriptions and implementation guidance are placed on the extension root rather than the `Extension.value[x]` (except for terminology bindings). Without constraints, most snapshots generators will only include the root element in the profile that hosts the extension. So placing the information on the extension makes sure the information is visible in the profile without the need to navigate into the extension by the implementer.
 
@@ -327,6 +320,3 @@ The following conventions exist:
 
 ### FHIR profile examples <a name="FHIRProfileExamples"></a>
 Examples of FHIR profiles are provided in either XML or JSON format and must be a valid profile instance. Every example shall have at least one profile URL in the `.meta.profile` element. Examples are stored in the `/examples` folder.
-
-##  Miscellaneous <a name="miscellaneous"></a>
-To add.
