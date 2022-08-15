@@ -30,7 +30,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="**Concept**&#xD;&#xA;Medication administration is the registration of the individual administrations of the medicine on the patient by the administrator (e.g. a nurse or patient themselves), in relation to the entered agreements.&#xD;&#xA;**Purpose**&#xD;&#xA;The goal of administering the medication is to provide insight into the actual administered products.&#xD;&#xA;**Example Instances**">
+  <description value="**Concept**&#xD;&#xA;Medication administration is the registration of the individual administrations of the medicine on the patient by the administrator (e.g. a nurse or patient themselves), in relation to the entered agreements.&#xD;&#xA;**Purpose**&#xD;&#xA;The goal of administering the medication is to provide insight into the actual administered products.">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
         <valueCode value="nl-NL" />
@@ -313,6 +313,12 @@
       <type>
         <code value="BackboneElement" />
       </type>
+      <constraint>
+        <key value="HdBe-MedicationAdministration2-1" />
+        <severity value="error" />
+        <human value="Either medication_agreement or administration_agreement may exists." />
+        <expression value="medication_agreement.exists() xor administration_agreement.exists()" />
+      </constraint>
     </element>
     <element id="medication_administration.related_agreement.medication_agreement">
       <path value="medication_administration.related_agreement.medication_agreement" />
@@ -342,6 +348,7 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationAgreement" />
       </type>
+      <condition value="HdBe-MedicationAdministration2-1" />
     </element>
     <element id="medication_administration.related_agreement.administration_agreement">
       <path value="medication_administration.related_agreement.administration_agreement" />
@@ -371,6 +378,7 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AdministrationAgreement" />
       </type>
+      <condition value="HdBe-MedicationAdministration2-1" />
     </element>
     <element id="medication_administration.administrator">
       <path value="medication_administration.administrator" />
@@ -399,6 +407,12 @@
       <type>
         <code value="BackboneElement" />
       </type>
+      <constraint>
+        <key value="HdBe-MedicationAdministration2-2" />
+        <severity value="error" />
+        <human value="Either patient, health_professional or caregiver may exists." />
+        <expression value="patient.exists() xor health_professional.exists() xor caregiver.exists()" />
+      </constraint>
     </element>
     <element id="medication_administration.administrator.patient">
       <path value="medication_administration.administrator.patient" />
@@ -428,6 +442,7 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Patient" />
       </type>
+      <condition value="HdBe-MedicationAdministration2-2" />
     </element>
     <element id="medication_administration.administrator.health_professional">
       <path value="medication_administration.administrator.health_professional" />
@@ -457,6 +472,7 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional" />
       </type>
+      <condition value="HdBe-MedicationAdministration2-2" />
     </element>
     <element id="medication_administration.administrator.caregiver">
       <path value="medication_administration.administrator.caregiver" />
@@ -486,6 +502,7 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson" />
       </type>
+      <condition value="HdBe-MedicationAdministration2-2" />
     </element>
     <element id="medication_administration.medication_administration_reason_for_deviation">
       <path value="medication_administration.medication_administration_reason_for_deviation" />
