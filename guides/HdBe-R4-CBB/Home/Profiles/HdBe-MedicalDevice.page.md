@@ -11,6 +11,20 @@ Status: status,
 URL: url
 ```
 
+
+## UML overview profiles
+
+<plantuml>
+  skinparam backgroundcolor transparent
+  
+  class "HdBe-MedicalDevice" <<DeviceUseStatement>> 
+  class "HdBe-MedicalDevice.Product" <<Device>> 
+
+  "HdBe-MedicalDevice" --> "HdBe-MedicalDevice.Product": 1..1 device
+</plantuml>
+
+<br/><br/> 
+
 ## HdBe-MedicalDevice
 
 <div>

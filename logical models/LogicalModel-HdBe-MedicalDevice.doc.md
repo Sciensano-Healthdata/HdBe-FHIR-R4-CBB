@@ -2,6 +2,7 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
+|description | textual | Removed 'Evidance Base' section because of Dutch focus. |
 |`product.product_id` | type | Replaced the CodeableConcept datatype with a string datatype as pre-adopt from a higher zib version ([ MedicationDevice in prerelease 2022-1](https://zibs.nl/wiki/MedicalDevice-v3.5(2022EN))). |
 |`product.product_id` | cardinality | Relaxed the cardinality from 0..1 to 0..* as multiple product identifications codes could be possible. |
 |`product.product_id` | textual | Replaced definition of product identification codes to the Belgium context. | 
