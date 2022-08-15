@@ -72,6 +72,9 @@
         <code value="Extension" />
         <profile value="https://fhir.healthdata.be/StructureDefinition/ext-RenderedDosageInstruction" />
       </type>
+    </element>
+    <element id="MedicationStatement.extension:renderedDosageInstruction.value[x]">
+      <path value="MedicationStatement.extension.value[x]" />
       <mapping>
         <identity value="HdBe-InstructionsForUse" />
         <map value="instructions_for_use.description" />
@@ -154,6 +157,9 @@
         <code value="Extension" />
         <profile value="https://fhir.healthdata.be/StructureDefinition/ext-InstructionsForUse.RepeatPeriodCyclicalSchedule" />
       </type>
+    </element>
+    <element id="MedicationStatement.modifierExtension:repeatPeriodCyclicalSchedule.value[x]">
+      <path value="MedicationStatement.modifierExtension.value[x]" />
       <mapping>
         <identity value="HdBe-InstructionsForUse" />
         <map value="instructions_for_use.repeat_period_cyclical_schedule" />
@@ -265,6 +271,14 @@
         <identity value="HdBe-MedicationUse2" />
         <map value="medication_use.product_used" />
       </mapping>
+    </element>
+    <element id="MedicationStatement.subject">
+      <path value="MedicationStatement.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
+      </type>
     </element>
     <element id="MedicationStatement.effective[x]">
       <path value="MedicationStatement.effective[x]" />
