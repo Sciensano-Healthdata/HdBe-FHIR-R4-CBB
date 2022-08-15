@@ -11,6 +11,13 @@
       <display value="Healthcare provider (location), GRAND HOPITAL DE CHARLEROI - SAINT-JOSEPH"/>
     </valueReference>
   </extension>
+  <extension url="https://fhir.healthdata.be/StructureDefinition/ext-MedicalDevice.HealthProfessional">
+    <valueReference>
+      <reference value="PractitionerRole/HdBe-HealthProfessional-PractitionerRole-01"/>
+      <type value="PractitionerRole"/>
+      <display value="Healthcare professional (role), Dermatology"/>
+    </valueReference>
+  </extension>
   <status value="active"/>
   <subject>
     <reference value="Patient/HdBe-Patient-01"/>
@@ -23,7 +30,7 @@
   <device>
     <reference value="Device/HdBe-MedicalDevice.Product-01"/>
     <type value="Device"/>
-    <display value="Arterial stent"/>
+    <display value="Auditory appliance"/>
   </device>
   <reasonReference>
     <reference value="Condition/HdBe-Problem-01"/>
@@ -31,6 +38,6 @@
     <display value="Problem"/>
   </reasonReference>
   <note>
-    <text value="Might need replacement in the future"/>
+    <text value="Might need replacement in the near future."/>
   </note>
 </DeviceUseStatement>
