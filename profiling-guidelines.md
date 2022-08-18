@@ -110,7 +110,7 @@ Version updates of conformance resources normally do not affect their canonical 
 
   
 ## Changelog of changes to zibs and zib-profiles<a name="changelog"></a>
-Every CBB logical model and profile will have an accompanying documentation file that contains a changelog/differential to the zib or zib-profile. The documentation file has the same name as the CBB-profile and ends with `.doc.md`. For example `HdBe-Patient.xml` <-> `HdBe-Patient.doc.md`.
+Because a technical dependency on the base zibs and zib-profiles is not possible, another method for keeping a tight connection is required because the goal is to keep them as aligned as possible. Therefore, every CBB logical model and profile will have an accompanying documentation file that contains a changelog/differential to the zib or zib-profile. The documentation file has the same name as the CBB profile and ends with `.doc.md`. For example `HdBe-Patient.xml` <-> `HdBe-Patient.doc.md`. This changelog comes in handy when the CBB and CBB profiles need to be updated based on a higher version of the zibs. The changelog is used to determine what to incorporate/merge when comparing the CBB to a higher version of the zib using any diff tool. 
 
 Template for changelog:
 ```
@@ -135,7 +135,7 @@ Example:
 | Category name  | Description  | Affected [elements](https://www.hl7.org/fhir/R4/elementdefinition.html)|
 |---------------|--------------------------------|------------------|
 |element| Complete removal or addition of a concept/element.| `element` 
-|textual| Textual changes (e.g. typo's) to the zib's definition. This may also contain changes that affect the definition and scope of the zib concept. |`.definition`, `.comment`, `.binding.description`
+|textual| Textual changes (e.g., typos) to the zib's definition. These changes may also affect the definition and scope of the zib concept. |`.definition`, `.comment`, `.binding.description`
 |naming| Changes to zibs concept names. |`.short`, `.path`, `.alias`
 |terminology| Adjusted binding strength of a ValueSet; replaced, removed or added a ValueSet binding; replaced, removed, or added concepts of a ValueSet. | `.binding.strength`, `.binding.valueSet` 
 |slicing | Added, removed, or changed a slice. | `.slicing`, `.element.slicename` 
@@ -147,10 +147,7 @@ Example:
 |example| Changes to examples that are not reflected in other categories should also be adjusted in the examples when applicable. |`.example`
 
 ### CBB overarching changes <a name="CBB_overarching_changes"></a>
-In addition to the changelog for each CBB, generic changes made to the zib logical models and profiles that span multiple CBBs are listed here. 
-
-#### General
-- Replace the term zib with CBB wherever applicable (`.definition`, `.comment`, `.description`, etc.)
+In addition to the changelog for each CBB, generic changes made that span multiple CBBs are listed here. For all artifacts the term 'zib' is replaced with CBB wherever applicable (`.definition`, `.comment`, `.description`, etc.). Also, text that is specific to the Dutch realm is removed or rewritten to the author's interpretation. Below the overarching changes that are applied are listed per resource type.
 
 #### Logical Models
 - `.description`: Remove all text regarding **Revision History** as this is only in Dutch and specifically about the zib.
@@ -158,15 +155,16 @@ In addition to the changelog for each CBB, generic changes made to the zib logic
 - --> _Possibly something regarding the change from inline partial-zibs towards datatypes_.
 
 #### Profiles
-- `.mapping`: Mappings of extensions are not mapped on the extension itself but are moved to the host profile. This way, the mappings are shown in the mapping overview tab of the profile.
+- `.mapping`: Mappings of extensions are moved from within the Extension profile to the host profile itself. This way, the mappings are shown in the mapping overview tab of the profile. This is because mappings in extensions are not (and will not be) included in the snapshot of the host profile. Therefore, Simplifier cannot render them. Nictiz might move in the same direction at some point [Nictiz GitHub ticket](https://github.com/Nictiz/Nictiz-R4-zib2020/issues/222).
+- `.mapping`: Mappings to the CBB logical model are included. 
 
 #### ValueSets
 - **English ValueSet name** - The zib export and Nictiz FHIR profiles contain Dutch naming for ValueSets because the source application ART-DECOR is not yet multilingual for terminology resources. The English translation of the ValueSets is available on the zib's wiki. Therefore, for consistency and clarity, every ValueSet in use by the CBBs is (manually) translated using the zib's English ValueSet name. All canonical references to the ValueSet should be adjusted accordingly. Practically, this means that the ValueSets elements `.id`, `.url`, `.name`, `.title` and `.description` and the file name are translated.
-- **Addition of concept designations** - For each valueset that contains specifically defined concepts, a `.code` and a `.display` in English is provided. If available, a `.designation` in nl-BE and fr-BE are added. The tool *get_designations.py* can gather the designations of SNOMED-CT codes. --> _What to do with the designations that are currently defined by the zib, for example the ones in the FHIR valuesets?_
-- **Deduplication of ValueSets** - As a design principle, zibs contain distinct ValueSets for every concept, even if the ValueSet's values/concepts are the same for multiple concepts. For the CBBs, these ValueSets are 'deduplicated' and reused where applicable. A valueSet can be reused at multiple elements if they contain similar concepts and have the same purpose. For example, the ValueSet `Gender` is reused in both Patient and HealthProfessional. Contradictory, both the InstructionsForUse `RouteOfMedicationAdminstration` ValueSet and the AllergyIntolerance `RouteOfExposure` ValueSet consist of the same descendant of a SNOMED value. However, they have a different purpose and thus are kept as separate ValueSets. If ValueSets are similar but have different names, naming is done at the author's discretion. At each of the CBBs where a deduplicated valueSet is used, the reuse should be mentioned in changelog. This should contain all CBBs where the ValueSet is used. In case of changing the ValueSet, this should draw attention to the other CBBs as well.
+- **Addition of concept designations** - For each ValueSet that contains specifically defined concepts, a `.code` and a `.display` in English is provided. If available, a `.designation` in nl-BE and fr-BE are added. The tool *get_designations.py* can gather the designations of SNOMED-CT codes. --> _What to do with the designations that are currently defined by the zib, for example the ones in the FHIR valuesets?_
+- **Deduplication of ValueSets** - As a design principle, zibs contain distinct ValueSets for every concept, even if the ValueSet's values/concepts are the same for multiple concepts. For the CBBs, these ValueSets are 'deduplicated' and reused where applicable. A valueSet can be reused at multiple elements if they contain similar concepts and have the same purpose. For example, the ValueSet `Gender` is reused in both Patient and HealthProfessional. Contradictory, both the InstructionsForUse `RouteOfMedicationAdminstration` ValueSet and the AllergyIntolerance `RouteOfExposure` ValueSet consist of the same descendant of a SNOMED value. However, they have a different purpose and thus are kept as separate ValueSets. If ValueSets are similar but have different names, naming is done at the author's discretion. The reuse should be mentioned in the changelog at each of the CBBs where a deduplicated ValueSet is used. This should contain all CBBs where the ValueSet is used. In case of changing the ValueSet, this should draw attention to the other CBBs as well.
 
 #### ConceptMaps
-- The zib export and Nictiz FHIR profiles contain Dutch naming for ConceptMaps because of the corresponding ValueSet names. The English translation of the ConceptMap should be distinguished based on the names of the source and target ValueSets. For consistency and clarity, every ConceptMap in use by the HdBe-profiles is (manually) translated. All canonical references to the ConceptMap should be adjusted accordingly. Practically, this means that the ConceptMap elements `.id`, `.url`, `.name`, `.title` and `.description` and the file name are translated.
+- The zib export and Nictiz profiles contain Dutch naming for ConceptMaps because of the corresponding Dutch ValueSet names. The English translation of the ConceptMap should be distinguished based on the names of the source and target ValueSets. Every ConceptMap in use by the HdBe-profiles is (manually) translated for consistency and clarity. All canonical references to the ConceptMap should be adjusted accordingly. Practically, this means that the ConceptMap elements `.id`, `.url`, `.name`, `.title` and `.description` and the file name are translated.
 
 ## Extensions<a name="Extensions"></a>
 Sometimes a concept cannot be implemented using the building blocks FHIR offers by default. In this case, an extension might be used to implement such a concept. Keep in mind that extensions are often seen as a burden for implementers:
