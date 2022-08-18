@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-ContactInformation" />
   <meta>
-    <lastUpdated value="2022-08-12T08:34:51.569773+00:00" />
+    <lastUpdated value="2022-08-18T09:44:38.1116226+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation" />
   <name value="HdBeContactInformation" />
@@ -39,8 +39,8 @@
     <element id="ContactPoint">
       <path value="ContactPoint" />
       <short value="ContactPoint" />
-      <definition value="Container of the ContactPoint concept. This container contains all data elements of the ContactPoint concept." />
-      <comment value="Implementation of the &quot;ContactPoint&quot; concept of CBB ContactInformation.&#xD;&#xA;&#xD;&#xA;Please note that this profile differs from the implementation of the ZIB profiles. The ZIB defines two separate profiles, one for EmailAddresses and one for TelephoneNumbers. In the CBB, there was chosen for one profile which combines both. There was chosen for a different implementation because:&#xD;&#xA;&#xD;&#xA;1. In the ZIB, the concepts TelecomType and NumberType are functionally equivalent to the FHIR concepts `ContactPoint.system` and `ContactPoint.use` respectively. But a mismatch occurs on the concept of mobile phone numbers; the ZIB uses the first concept and FHIR the second. For this reason, the ValueSet on `ContactPoint.system` is too narrow and the ZIB code will need to be communicated using the codeSpecification extension. By changing the implementation to a closer implementation of the FHIR profile, this issue is solved.&#xD;&#xA;2. The ZIB needs three ConceptMaps to correctly map all values to the values in the `ContactPoint.use` and the ContactPoint.type`, but most of the values could map nicely. To reduce the number of ConceptMaps, the used valueSet are changed and matched with the use in the FHIR profile.&#xD;&#xA;3. ..." />
+      <definition value="Root concept of the ContactInformation partial information model. This root concept contains all data elements of the ContactInformation partial information model." />
+      <comment value="Implementation of the CBB ContactInformation.&#xD;&#xA;&#xD;&#xA;Please note that this profile differs from the implementation of the zib profiles. The zib defines two separate profiles, one for EmailAddresses and one for TelephoneNumbers. In the CBB, there was chosen for one profile which combines both. There was chosen for a different implementation because:&#xD;&#xA;&#xD;&#xA;1. In the zib, the concepts TelecomType and NumberType are functionally equivalent to the FHIR concepts `ContactPoint.system` and `ContactPoint.use` respectively. But a mismatch occurs on the concept of mobile phone numbers; where the zib uses the first concept and FHIR the second. For this reason, the ValueSet on `ContactPoint.system` is too narrow and the zib code will need to be communicated using the codeSpecification extension. By changing the implementation to a closer implementation of the FHIR profile, this issue is solved.&#xD;&#xA;2. The zib needs three ConceptMaps to correctly map all values to the values to `ContactPoint.use` and the ContactPoint.system`, but most of the values could map nicely. To replace the ConceptMaps, the used valueSets are changed and matched with the use in the FHIR profile.&#xD;&#xA;3. There was a cardinality mismatch between the zib (0..1) and FHIR (0..*), which was explained by the containers TelephoneNumbers (0..*) and EmailAddresses (0..*) inside the ContactInformation model. The FHIR datatype ContactPoint does not have these containers. As the containers are removed in this implementation of the CBB, the cardinality for the ContactInformation model was also adapted from 0..1 to 0..*. This matches the cardinality of the profile again." />
       <alias value="Contactpunten" />
       <mapping>
         <identity value="zib-contactinformation-v1.2-2020EN" />
@@ -90,14 +90,14 @@
       </mapping>
       <mapping>
         <identity value="HdBe-ContactInformation" />
-        <map value="contact_information.contact_point.comment" />
+        <map value="contact_information.comment" />
       </mapping>
     </element>
     <element id="ContactPoint.system">
       <path value="ContactPoint.system" />
-      <short value="ContactType" />
-      <definition value="The telecom or device type that the ContactPoint is connected to." />
-      <alias value="ContactType" />
+      <short value="Type" />
+      <definition value="The type of contact information." />
+      <alias value="Type" />
       <mapping>
         <identity value="zib-contactinformation-v1.2-2020EN" />
         <map value="NL-CM:20.6.5" />
@@ -105,14 +105,14 @@
       </mapping>
       <mapping>
         <identity value="HdBe-ContactInformation" />
-        <map value="contact_information.contact_point.contact_point_type" />
+        <map value="contact_information.type" />
       </mapping>
     </element>
     <element id="ContactPoint.value">
       <path value="ContactPoint.value" />
-      <short value="ContactPointValue" />
-      <definition value="The person's ContactPointValue, e.g. a phone number or emailaddress." />
-      <alias value="ContactPuntWaarde" />
+      <short value="Value" />
+      <definition value="The actual contact information details." />
+      <alias value="Waarde" />
       <min value="1" />
       <mapping>
         <identity value="zib-contactinformation-v1.2-2020EN" />
@@ -126,18 +126,18 @@
       </mapping>
       <mapping>
         <identity value="HdBe-ContactInformation" />
-        <map value="contact_information.contact_point.contact_point_value" />
+        <map value="contact_information.value" />
       </mapping>
     </element>
     <element id="ContactPoint.use">
       <path value="ContactPoint.use" />
-      <short value="ContactPointUse" />
-      <definition value="ContactPointUse indicates what the use of the contactpoint is." />
-      <alias value="ContactPuntGebruik" />
+      <short value="Use" />
+      <definition value="Purpose or use of the contact information. For example whether it is a private or business telephone number." />
+      <alias value="Gebruik" />
       <binding>
         <strength value="required" />
-        <description value="Use ConceptMap ContactUse-to-ContactPointUse to translate terminology from the functional model to profile terminology in ValueSet ContactInformation-ContactUse." />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/ContactUse-to-ContactPointUse">
+        <description value="Use of the ContactInformation" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
             <valueCanonical value="https://fhir.healthdata.be/ConceptMap/NumberType-to-ContactInformation-TelephoneNumbersUse" />
           </extension>
@@ -149,8 +149,13 @@
         <comment value="NumberType" />
       </mapping>
       <mapping>
+        <identity value="zib-contactinformation-v1.2-2020EN" />
+        <map value="NL-CM:20.6.8" />
+        <comment value="EmailAddressType" />
+      </mapping>
+      <mapping>
         <identity value="HdBe-ContactInformation" />
-        <map value="contact_information.contact_point.contact_point_use" />
+        <map value="contact_information.use" />
       </mapping>
     </element>
   </differential>

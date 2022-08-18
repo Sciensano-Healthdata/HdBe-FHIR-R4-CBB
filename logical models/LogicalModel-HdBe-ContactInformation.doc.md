@@ -1,6 +1,9 @@
 ## zib [ContactInformation-v1.2](https://zibs.nl/wiki/ContactInformation-v1.2(2020EN)) difference
 
-This CBB differs a lot from the CBB, as we decided to make the CBB more generic and develop it more closely to the FHIR datatype than the zib would have allowed. This changed the logical model from having a separate container for phonenumbers and a separate container for emailadresses, to one structure in which all elements are defined. Underneath is described more specific which elements are replaced.
+This CBB differs a lot from the CBB, as we decided to make the CBB more generic and develop it more closely to the FHIR datatype than the zib would have allowed. This changed the logical model from having separate containers for phonenumbers and for emailadresses, to one structure in which all elements are defined. As a result, all CBBs where this partial information model is used, should change the cardinality of this concept from 0..1 to 0..*.
+
+
+Underneath is described more specific which elements in this CBB are replaced.
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
