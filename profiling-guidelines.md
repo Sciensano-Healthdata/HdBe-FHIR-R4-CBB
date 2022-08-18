@@ -152,7 +152,8 @@ In addition to the changelog for each CBB, generic changes made that span multip
 #### Logical Models
 - `.description`: Remove all text regarding **Revision History** as this is only in Dutch and specifically about the zib.
 - A few zibs constrain a target zib, and this is visualized within a zib as such. We represent this in the Logical Model by defining a specific structure, which is described in the [Constraining a target CBB](#ConstrainingCBB) section. As this is not a conceptual but a visual change, this is not mentioned in the changelog.
-- --> _Possibly something regarding the change from inline partial-zibs towards datatypes_.
+- The zib logical model export gives a model that includes partial zibs, thereby duplicating them. The inline partial zibs are replaced with a link to that model.
+- The zib logical model export makes an element per target reference, mainly within a container element. This is adjusted by having one element that contains multiple target references wherever this is possible. If the zib provides additional definition and context to a target reference, this is left as it is.  
 
 #### Profiles
 - `.mapping`: Mappings of extensions are moved from within the Extension profile to the host profile itself. This way, the mappings are shown in the mapping overview tab of the profile. This is because mappings in extensions are not (and will not be) included in the snapshot of the host profile. Therefore, Simplifier cannot render them. Nictiz might move in the same direction at some point [Nictiz GitHub ticket](https://github.com/Nictiz/Nictiz-R4-zib2020/issues/222).
