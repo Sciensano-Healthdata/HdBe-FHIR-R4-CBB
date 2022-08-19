@@ -3,7 +3,7 @@
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
 |Evidence Base | textual | Removed Dutch specific context from the Evidence Base section in `StructureDefinition.description`. 
-|`contact_information` | cardinality | Loosened cardinality from 0..1 to 0..* as this corresponds with the new implementation of the CBB ContactInformation. |
+|`contact_information` | cardinality | Loosened cardinality from 0..1 to 0..* based on the changes made to the CBB ConctactInformation. Widening the cardinality here allows for capturing all contact information necessary. |
 |`patient_identification_number` | textual | Replaced the Dutch context (BSN) with the Belgian equivalent (NISS-INSZ). |
 |`date_of_birth` | textual | Removed text regarding mandatory date of birth. |
 |`gender` | textual | Extended definition to clarify that the concept is about administrative gender rather then the patient's identified sex.  |
