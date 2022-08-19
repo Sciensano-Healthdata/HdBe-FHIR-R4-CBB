@@ -55,7 +55,7 @@ select
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity.startsWith('HdBe-')){ map, comment }
+        join mapping.where(identity.startsWith('HdBe-')){ map, CBB: identity, comment  }
       ```
     </div>
   </div>
