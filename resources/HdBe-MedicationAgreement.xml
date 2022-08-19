@@ -118,10 +118,6 @@
         <profile value="https://fhir.healthdata.be/StructureDefinition/ext-TimeInterval.Period" />
       </type>
     </element>
-    <element id="MedicationRequest.extension:periodOfUse.url">
-      <path value="MedicationRequest.extension.url" />
-      <fixedUri value="https://fhir.healthdata.be/StructureDefinition/ext-TimeInterval.Period" />
-    </element>
     <element id="MedicationRequest.extension:periodOfUse.value[x]">
       <path value="MedicationRequest.extension.value[x]" />
       <short value="PeriodOfUse" />
@@ -246,7 +242,7 @@
       </slicing>
     </element>
     <element id="MedicationRequest.medication[x]:medicationReference">
-      <path value="MedicationRequest.medicationReference" />
+      <path value="MedicationRequest.medication[x]" />
       <sliceName value="medicationReference" />
       <short value="AgreedMedicine" />
       <definition value="The medicine agreed upon to be used." />
@@ -266,10 +262,18 @@
         <map value="medication_agreement.agreed_medicine" />
       </mapping>
     </element>
+    <element id="MedicationRequest.subject">
+      <path value="MedicationRequest.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
+      </type>
+    </element>
     <element id="MedicationRequest.authoredOn">
       <path value="MedicationRequest.authoredOn" />
       <short value="MedicationAgreementDateTime" />
-      <definition value="The time at which the agreement was made. Appointment date + time are required (order of the appointments must be clear in cases with multiple appointments on one day)" />
+      <definition value="The time at which the agreement was made. Appointment date + time are required (order of the appointments must be clear in cases with multiple appointments on one day)." />
       <alias value="MedicatieafspraakDatumTijd" />
       <mapping>
         <identity value="zib-medicationagreement-v1.2-2020EN" />

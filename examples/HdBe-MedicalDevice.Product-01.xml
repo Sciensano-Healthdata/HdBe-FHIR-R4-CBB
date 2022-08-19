@@ -1,26 +1,30 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Device xmlns="http://hl7.org/fhir">
-  <id value="HdBe-MedicalDevice.Product-01"/>
-  <meta>
-    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice.Product"/>
-  </meta>
-  <identifier>
-    <system value="http://eucatech.com"/>
-    <value value="000037188711"/>
-  </identifier>
-  <type>
-    <coding>
-      <system value="http://snomed.info/sct"/>
-      <code value="360046005"/>
-      <display value="Arterial stent"/>
-    </coding>
-  </type>
-  <patient>
-    <reference value="Patient/HdBe-Patient-01"/>
-    <type value="Patient"/>
-    <display value="Belle Ulijn"/>
-  </patient>
-  <note>
-    <text value="Cardiovascular System / Stents / Non-coronary stents / Arterial stents / other peripheral vascular stents / Bare metal"/>
-  </note>
+   <id value="HdBe-MedicalDevice.Product-01"/>
+   <meta>
+      <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice.Product"/>
+   </meta>
+   <identifier>
+      <system value="https://www.gs1.org/gtin"/>
+      <value value="(01)00810323008108(17)231005(21)6789UV0"/>
+   </identifier>
+   <udiCarrier>
+      <issuer value="https://www.gs1.org/gtin"/>
+      <carrierHRF value="(01)00810323008108(17)231005(21)6789UV0"/>
+   </udiCarrier>
+   <type>
+      <coding>
+         <system value="http://snomed.info/sct"/>
+         <code value="360283003"/>
+         <display value="Auditory appliance"/>
+      </coding>
+   </type>
+   <patient>
+      <reference value="Patient/HdBe-Patient-01"/>
+      <type value="Patient"/>
+      <display value="Belle Ulijn"/>
+   </patient>
+   <note>
+      <text value="TuneAmp auditory appliance"/>
+   </note>
 </Device>

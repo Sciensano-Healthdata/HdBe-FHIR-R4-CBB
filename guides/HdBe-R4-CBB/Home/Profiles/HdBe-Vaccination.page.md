@@ -11,6 +11,15 @@ Status: status,
 URL: url
 ```
 
+@```
+from
+	StructureDefinition
+	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-Vaccination-event'
+select
+	Instructions: differential.element[0].comment
+
+```
+
 <div>
   <div class="tab">
      <button class="tablinks active" onclick="openTab(event, 'Snapshot view')">Snapshot view</button>
