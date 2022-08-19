@@ -54,7 +54,7 @@ This Patient profile contains mappings to the following CBBs:
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity in ('HdBe-Patient'|'HdBe-Nationality'|'HdBe-MaritalStatus'|'HdBe-LanguageProficiency'|'HdBe-ContactPerson')) { map, CBB: identity, comment  }
+        join mapping.where(identity.startsWith('HdBe-')) { map, CBB: identity, comment  }
       ```
      
     </div>

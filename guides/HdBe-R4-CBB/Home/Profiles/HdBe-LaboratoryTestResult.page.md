@@ -103,7 +103,7 @@ select
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-LaboratoryTestResult') { map, comment }
+        join mapping.where(identity.startsWith('HdBe-')){ map, comment }
       ```
     </div>
   </div>
@@ -169,7 +169,7 @@ select
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-LaboratoryTestResult') { map, comment }
+        join mapping.where(identity.startsWith('HdBe-')){ map, comment }
       ```
     </div>
   </div>
@@ -235,7 +235,7 @@ select
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-LaboratoryTestResult') { map, comment }
+        join mapping.where(identity.startsWith('HdBe-')){ map, comment }
       ```
     </div>
   </div>
