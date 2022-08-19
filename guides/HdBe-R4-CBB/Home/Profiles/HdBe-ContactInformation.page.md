@@ -55,8 +55,9 @@ select
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-ContactInformation') { map, comment }
-      ```
+        join mapping.where(identity.startsWith('HdBe-')){ map, CBB: identity, comment  } 
+ 			order by CBB 
+     ```
     </div>
   </div>
 
@@ -71,8 +72,6 @@ select
 </div>
 
 <br/><br/> 
-
-
 
 ## Terminology Bindings
 

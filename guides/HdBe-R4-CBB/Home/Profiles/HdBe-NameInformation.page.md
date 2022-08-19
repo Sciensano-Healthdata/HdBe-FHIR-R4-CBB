@@ -56,8 +56,9 @@ select
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-NameInformation') { map, comment }
-      ```
+        join mapping.where(identity.startsWith('HdBe-')){ map, CBB: identity, comment  } 
+ 			order by CBB 
+     ```
     </div>
   </div>
 
@@ -118,8 +119,9 @@ select
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-NameInformation') { map, comment }
-      ```
+        join mapping.where(identity.startsWith('HdBe-')){ map, CBB: identity, comment  } 
+ 			order by CBB 
+     ```
     </div>
   </div>
 

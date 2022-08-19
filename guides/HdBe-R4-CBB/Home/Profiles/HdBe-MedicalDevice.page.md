@@ -62,7 +62,7 @@ URL: url
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity in 'HdBe-MedicalDevice' | 'HdBe-FunctionalOrMentalStatus' | 'HdBe-Procedure') { map, CBB:identity, comment }
+        join mapping.where(identity.startsWith('HdBe-')) { map, CBB:identity, comment }
       ```
     </div>
   </div>
@@ -131,8 +131,9 @@ select
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-MedicalDevice') { map, comment }
-      ```
+        join mapping.where(identity.startsWith('HdBe-')){ map, CBB: identity, comment  } 
+ 			order by CBB 
+     ```
     </div>
   </div>
 

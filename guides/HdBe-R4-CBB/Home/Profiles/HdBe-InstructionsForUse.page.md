@@ -54,8 +54,8 @@ select
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity in 'HdBe-InstructionsForUse'|'HdBe-Range') { map, CBB: identity, comment  }
-      order by CBB
+        join mapping.where(identity.startsWith('HdBe-')){ map, CBB: identity, comment  } 
+ 			order by CBB 
       ```
     </div>
   </div>
