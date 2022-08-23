@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-HealthcareProvider" />
   <meta>
-    <lastUpdated value="2022-08-19T07:06:00.1160278+00:00" />
+    <lastUpdated value="2022-08-23T16:24:21.7751259+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider" />
   <name value="HdBeHealthcareProvider" />
@@ -80,17 +80,35 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <constraint>
+        <key value="HdBe-HealthcareProvider-1" />
+        <severity value="error" />
+        <human value="If DepartmentIdentificationNumber is exists the LocationIdentificationNumber needs to be present as well." />
+        <expression value="identifier.system = 'https://fhir.healthdata.be/NamingSystem/DepartmentIdentificationNumber' implies identifier.where(system = 'https://fhir.healthdata.be/NamingSystem/LocationIdentificationNumber').exists()" />
+      </constraint>
     </element>
-    <element id="Location.identifier:locationNumber">
+    <element id="Location.identifier:locationIdentificationNumber">
       <path value="Location.identifier" />
-      <sliceName value="locationNumber" />
+      <sliceName value="locationIdentificationNumber" />
       <max value="1" />
       <patternIdentifier>
-        <system value="https://fhir.healthdata.be/NamingSystem/FPS-CampusNumber" />
+        <system value="https://fhir.healthdata.be/NamingSystem/LocationIdentificationNumber" />
       </patternIdentifier>
       <mapping>
         <identity value="HdBe-HealthcareProvider" />
         <map value="healthcare_provider.organization_location.location_number" />
+      </mapping>
+    </element>
+    <element id="Location.identifier:departmentIdentificationNumber">
+      <path value="Location.identifier" />
+      <sliceName value="departmentIdentificationNumber" />
+      <max value="1" />
+      <patternIdentifier>
+        <system value="https://fhir.healthdata.be/NamingSystem/DepartmentIdentificationNumber" />
+      </patternIdentifier>
+      <mapping>
+        <identity value="HdBe-HealthcareProvider" />
+        <map value="healthcare_provider.department_identification_number" />
       </mapping>
     </element>
     <element id="Location.name">
@@ -106,13 +124,6 @@
       <mapping>
         <identity value="HdBe-HealthcareProvider" />
         <map value="healthcare_provider.location_name" />
-      </mapping>
-    </element>
-    <element id="Location.type">
-      <path value="Location.type" />
-      <mapping>
-        <identity value="HdBe-HealthcareProvider" />
-        <map value="healthcare_provider.department_identification_number" />
       </mapping>
     </element>
     <element id="Location.telecom">

@@ -163,7 +163,7 @@
     <element id="healthcare_provider.department_identification_number">
       <path value="healthcare_provider.department_identification_number" />
       <short value="DepartmentIdentificationNumber" />
-      <definition value="The healthcare provider's internal department's identification number.">
+      <definition value="The healthcare provider's internal department's identification number. &#xD;&#xA;&#xD;&#xA;This needs to be an identification number listed in [fair.healthdata.be dataset Internal organization of departments within Belgian healthcare organizations](https://fair.healthdata.be/dataset/53c8b040-0b48-4c41-ab65-4c9d1600e908).">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -322,9 +322,9 @@
         <code value="string" />
       </type>
     </element>
-    <element id="healthcare_provider.organization_location.location_number">
-      <path value="healthcare_provider.organization_location.location_number" />
-      <short value="LocationNumber">
+    <element id="healthcare_provider.organization_location.location_identification_number">
+      <path value="healthcare_provider.organization_location.location_identification_number" />
+      <short value="LocationIdentificationNumber">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -334,7 +334,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="Number of the location Number, if a numerical location identification is used next to or instead of a location name.">
+      <definition value="Identification number of the location, if a numerical location identification is used next to or instead of a location name.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -344,10 +344,12 @@
           </extension>
         </extension>
       </definition>
+      <comment value="This field relates to the CoBRHA HCOrganizationType.Site.SiteID.&#xD;&#xA;&#xD;&#xA;urn:be:fgov:ehealth:cobrha:actors:v1 &#xD;&#xA;&#xD;&#xA;The CoBRHA Consultation Web Service Endpoint: https://services.ehealth.fgov.be/WsCoBRHACons/v1" />
       <min value="0" />
       <max value="1" />
       <type>
-        <code value="Count" />
+        <code value="Identifier" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Identifier" />
       </type>
     </element>
   </differential>
