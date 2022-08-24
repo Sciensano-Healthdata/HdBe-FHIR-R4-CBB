@@ -4,6 +4,7 @@
 
 * [Introduction](#introduction)
     * [Diagram of technical layering](#diagram)
+* [Conformance verbs](conformance-verbs)
 * [Content Types](#contact-types) 
 * [Resource identification](#resource-identification)
     * [.id versus .identifier](#id-vs-identifier)
@@ -56,6 +57,9 @@ healthdata.be.r4.patientsummary ~~ healthdata.be.r4.dcd.xyz
 </plantuml>
 
 <br/><br/>
+
+## Conformance verbs <a name="conformance-verbs"></a>
+The conformance verbs - SHALL, SHOULD, MAY - used in all Healthdata.be specifications are defined in [FHIR Conformance Rules](http://hl7.org/fhir/R4/conformance-rules.html#conflang).
 
 ## Content Types <a name="contact-types"></a>
 Unless stated otherwise, implementation guides use the [FHIR RESTful framework](https://hl7.org/fhir/R4/http.html#mime-type). This framework defines at least three content-types to send/retrieve information:
