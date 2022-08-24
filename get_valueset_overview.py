@@ -12,9 +12,18 @@ from datetime import datetime
 input_folder = 'terminology/'
 output_folder = "terminology/"
 
+
 # Features
 
 # Generate an overview of all ValueSets
+def make_code_overview(message):
+    """ writes message to the log file """
+    with open(output_folder + '_overview.txt', 'a', encoding='utf8') as f:
+        now = str(datetime.now())
+        message = message + '\n' 
+        f.write(message)
+        f.close()
+
 
 # For each Value in a ValueSet:
 # code
@@ -36,19 +45,24 @@ def addDesignations(valueset, filename):
                 concepts.append(con.code)
                 concepts.append(con.display)
                 # TO DO: ADD a counter for the concepts in each valueSet
-
+                nl_display = ''
+                fr_display = ''
                 #Add Franse en NL display (should still deal with non existing translations when fitting in an csv file)
                 if con.designation is not None:
                     for x3 in con.designation:
                         con2 = ValueSetComposeIncludeConceptDesignation.parse_obj(x3)
                         if con2.language == 'nl-BE':
-                            concepts.append(x3.value)
+                                nl_display = x3.value
                         if con2.language == 'fr-BE':
-                            concepts.append(x3.value)    
+                                fr_display = x3.value 
+
                 #WIP: Now only printed, should be added to a file neatly.
-                print(concepts)                    
-
-
+                concepts.append(nl_display)
+                concepts.append(fr_display)                   
+                print(concepts)
+                # Writes to file (nu nog alles aan elkaar)
+                # Nog alternatief voor lege nl en fr displays
+                #make_code_overview(str(con.code + con.display + nl_display + fr_display))   
 
 # Nice to have
 # If a CodeSystem is included as a whole (and is not SNOMED)
