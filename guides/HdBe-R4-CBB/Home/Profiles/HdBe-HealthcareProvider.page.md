@@ -131,6 +131,7 @@ select
   </div>
 
   <div id="Examples2" class="tabcontent">
+      <p> A UML overview at the bottom of this page provides an example of how a hierarchical structure is initialized in FHIR using Organization and Location resources. </p>
       <ul>
         <li>{{pagelink:Home/Examples/HdBe-HealthcareProvider-Organization-01.page.md}}</li>
         <li>{{pagelink:Home/Examples/HdBe-HealthcareProvider-Organization-02.page.md}}</li>
@@ -161,10 +162,28 @@ join binding.where(valueSet.exists())
 	URL: valueSet,
 	ConceptMap: iif(valueSet.extension.where(url='http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap').exists().not(), 'No bound ConceptMap', valueSet.extension.valueCanonical)
 	}
-```  
+``` 
 
+## NamingSystems
 
-## UML overview of Location and Organziation examples
+@```
+from NamingSystem
+where id in ( 'DepartmentIdentificationNumber' | 'LocationIdentificationNumber' )
+select 
+Name: name,
+Kind: kind,
+Description: description,
+UniqueId: for uniqueId.where(preferred = true) select value
+```
+
+<br/><br/> 
+
+## A UML example of a hierarchical structure initialized in FHIR resources
+**Please note**: that he UML is splitst into two for readability purposes. The first UML demonstrates profoundly the Location hierarchical structure. The second UML shows how each instance of the Location hierachy can also refer to the Organization hierachy. 
+
+The locationId, departmentId and nihdi are all mapped to their approriate slice on `.identifier`.
+
+### Location hierachy 
 
 <plantuml>
   set namespaceSeparator none
@@ -229,3 +248,51 @@ join binding.where(valueSet.exists())
 </plantuml>
 
 <br/><br/> 
+
+### Location and Organization hierachy of one site and one ward
+
+<br/><br/> 
+
+<plantuml>
+  set namespaceSeparator none
+  skinparam backgroundcolor transparent
+
+  class "HealthcareProvider" <<Organization>>
+    {
+      nidhi = 70100179
+      name = Centre Hospitalier de Luxembourg
+    }
+  class "Site1 L" <<Location>>
+    {
+      locationId = 4418
+      name = Centre Hospitalier de Luxembourg - Centre
+    }
+  class "Site1 O" <<Organization>>
+    {
+      name = Centre Hospitalier de Luxembourg - Centre
+      type = General Hospital
+    }
+  class "Ward1 L" <<Location>>
+    {
+      locationId = 4418
+      departmentId = 001L-1581
+      name = CHL Centre U53
+    }
+  class "Ward1 O" <<Organization>>
+    {
+      name = CHL Centre U53
+      type = Internal medicine
+    }
+
+  "HealthcareProvider"  <-- "Site1 L": Location.managingOrganization
+  "HealthcareProvider"  <-- "Site1 O" : Organization.partOf
+
+  "Site1 O" <-- "Ward1 O" : Organization.partOf
+  "Site1 L" <-- "Ward1 L" : Location.partOf
+
+  "Site1 O" <-- "Site1 L" : Location.managingOrganization
+  "Ward1 O" <-- "Ward1 L" : Location.managingOrganization
+
+   "Ward1 O" -[hidden] "Ward1 L"
+   "Site1 O" -[hidden] "Site1 L" 
+</plantuml>

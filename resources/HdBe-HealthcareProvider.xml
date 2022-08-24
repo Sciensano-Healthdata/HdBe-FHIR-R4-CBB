@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-HealthcareProvider" />
   <meta>
-    <lastUpdated value="2022-08-23T16:24:21.7751259+00:00" />
+    <lastUpdated value="2022-08-24T09:51:41.9413837+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider" />
   <name value="HdBeHealthcareProvider" />
@@ -83,13 +83,16 @@
       <constraint>
         <key value="HdBe-HealthcareProvider-1" />
         <severity value="error" />
-        <human value="If DepartmentIdentificationNumber is exists the LocationIdentificationNumber needs to be present as well." />
-        <expression value="identifier.system = 'https://fhir.healthdata.be/NamingSystem/DepartmentIdentificationNumber' implies identifier.where(system = 'https://fhir.healthdata.be/NamingSystem/LocationIdentificationNumber').exists()" />
+        <human value="If the Location contains a DepartmentIdentificationNumber, the LocationIdentificationNumber must also be present to ensure unique identification of the Location." />
+        <expression value="where(system = 'https://fhir.healthdata.be/NamingSystem/DepartmentIdentificationNumber').exists() implies where(system = 'https://fhir.healthdata.be/NamingSystem/LocationIdentificationNumber').exists()" />
       </constraint>
     </element>
     <element id="Location.identifier:locationIdentificationNumber">
       <path value="Location.identifier" />
       <sliceName value="locationIdentificationNumber" />
+      <short value="LocationIdentificationNumber" />
+      <definition value="Identification number of the location, if a numerical location identification is used next to or instead of a location name." />
+      <comment value="The identifier value is equal to the HCOrganization.Site.SiteID (or site number) value as found in the [Common Base Registry for HealthCare Actor (CoBRHA)](https://www.ehealth.fgov.be/ehealthplatform/nl/service-cobrha-common-base-registry-for-healthcare-actor)." />
       <max value="1" />
       <patternIdentifier>
         <system value="https://fhir.healthdata.be/NamingSystem/LocationIdentificationNumber" />
@@ -102,13 +105,16 @@
     <element id="Location.identifier:departmentIdentificationNumber">
       <path value="Location.identifier" />
       <sliceName value="departmentIdentificationNumber" />
+      <short value="DepartmentIdentificationNumber" />
+      <definition value="The healthcare provider's internal department's identification number." />
+      <comment value="This needs to be an identification number listed in [fair.healthdata.be dataset Internal organization of departments within Belgian healthcare organizations](https://fair.healthdata.be/dataset/53c8b040-0b48-4c41-ab65-4c9d1600e908)." />
       <max value="1" />
       <patternIdentifier>
         <system value="https://fhir.healthdata.be/NamingSystem/DepartmentIdentificationNumber" />
       </patternIdentifier>
       <mapping>
         <identity value="HdBe-HealthcareProvider" />
-        <map value="healthcare_provider.department_identification_number" />
+        <map value="healthcare_provider.organization_location.department_identification_number" />
       </mapping>
     </element>
     <element id="Location.name">
