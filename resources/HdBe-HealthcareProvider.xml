@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-HealthcareProvider" />
   <meta>
-    <lastUpdated value="2022-08-24T09:51:41.9413837+00:00" />
+    <lastUpdated value="2022-08-24T10:24:47.0805771+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider" />
   <name value="HdBeHealthcareProvider" />
@@ -84,7 +84,7 @@
         <key value="HdBe-HealthcareProvider-1" />
         <severity value="error" />
         <human value="If the Location contains a DepartmentIdentificationNumber, the LocationIdentificationNumber must also be present to ensure unique identification of the Location." />
-        <expression value="where(system = 'https://fhir.healthdata.be/NamingSystem/DepartmentIdentificationNumber').exists() implies where(system = 'https://fhir.healthdata.be/NamingSystem/LocationIdentificationNumber').exists()" />
+        <expression value="identifier.where(system = 'https://fhir.healthdata.be/NamingSystem/DepartmentIdentificationNumber').exists() implies identifier.where(system = 'https://fhir.healthdata.be/NamingSystem/LocationIdentificationNumber').exists()" />
       </constraint>
     </element>
     <element id="Location.identifier:locationIdentificationNumber">
@@ -97,6 +97,7 @@
       <patternIdentifier>
         <system value="https://fhir.healthdata.be/NamingSystem/LocationIdentificationNumber" />
       </patternIdentifier>
+      <condition value="HdBe-HealthcareProvider-1" />
       <mapping>
         <identity value="HdBe-HealthcareProvider" />
         <map value="healthcare_provider.organization_location.location_number" />
@@ -112,6 +113,7 @@
       <patternIdentifier>
         <system value="https://fhir.healthdata.be/NamingSystem/DepartmentIdentificationNumber" />
       </patternIdentifier>
+      <condition value="HdBe-HealthcareProvider-1" />
       <mapping>
         <identity value="HdBe-HealthcareProvider" />
         <map value="healthcare_provider.organization_location.department_identification_number" />
