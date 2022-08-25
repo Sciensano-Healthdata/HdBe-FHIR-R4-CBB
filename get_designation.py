@@ -15,6 +15,9 @@ input_folder = 'terminology/'
 output_folder = "terminology/"
 message = 'SNOMED concept ID;Betekenis;ValueSet;Taal'
 
+# To do:
+#Add Copyright message.
+
 # Queries local running SNOWSTORM server. Gets the full description of the given snomed concept.    
 def getDesignationsById(id, filename):
     url = baseUrl + branch + '/concepts/' + id + '/descriptions'
@@ -127,6 +130,9 @@ def addDesignations(valueset, filename):
         vsci.append(x)     
     valueset.compose.include = vsci
     return(valueset)
+
+
+
 
 # Get all files from the input folder that meet the filename creteria. 
 # Next, add EN/NL/FR designations for all extensionally defined SNOMED codes and write the updated files to the output folder. 

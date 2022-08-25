@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 import pathlib
 from xml.etree.ElementTree import tostring
-from fhir.resources.valueset import ValueSet, ValueSetComposeIncludeConceptDesignation, ValueSetComposeIncludeConcept, ValueSetComposeInclude, ValueSetCompose
+from fhir.resources.valueset import ValueSet, ValueSetComposeIncludeConceptDesignation, ValueSetComposeIncludeConcept, ValueSetComposeInclude, ValueSetCompose, ValueSetComposeIncludeFilter
 from fhir.resources import construct_fhir_element
 from datetime import datetime
 
@@ -28,7 +28,6 @@ def make_code_overview(message):
 # For each concept in a ValueSet:
 def createConceptOverview(valueset, filename):
     for x in valueset.compose.include:
-        #vs = (valueset.id)
         #Only codes that are extententionally defined (no filter) and do have a concept.
         if x.valueSet is None and x.filter is None and x.concept is not None: 
             index = 0
@@ -55,6 +54,11 @@ def createConceptOverview(valueset, filename):
 
                 # Writes concepts to file (nu nog alles aan elkaar)
                 make_code_overview(concepts)   
+                
+        if x.filter is not None:
+            for x2 in x.filter:
+                con = ValueSetComposeIncludeFilter.parse_obj(x2)
+                print(valueset.id.upper() + ';' + x.system + ';' + con.property + ';' + con.op + ';' + con.value )
 
 
 # Nice to have
