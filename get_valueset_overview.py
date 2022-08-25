@@ -29,7 +29,7 @@ def make_code_overview(message):
 def createConceptOverview(valueset, filename):
     for x in valueset.compose.include:
         #vs = (valueset.id)
-        #Only get designations for SNOMED codes, that are extententionally defined (no filter) and do have a concept (TypeOfLivingWill contains all of SNOMED).
+        #Only codes that are extententionally defined (no filter) and do have a concept.
         if x.valueSet is None and x.filter is None and x.concept is not None: 
             index = 0
             #system = x.system
@@ -37,7 +37,7 @@ def createConceptOverview(valueset, filename):
                 con = ValueSetComposeIncludeConcept.parse_obj(x2)
                 concepts = ''
                 index += 1
-                #Add name of the valueset (All capitalized), the indexnumber, code en display  (double ;; are for CODE_CONTENT_ID that we do not fill)
+                #Add id of the valueset (All capitalized), the indexnumber, code en display  (double ;; are for CODE_CONTENT_ID that we do not fill)
                 concepts += valueset.id.upper() + ';' + str(index) + ';' + con.code + ';;' + con.display + ';'
                 nl_display = ''
                 fr_display = ''
@@ -56,7 +56,7 @@ def createConceptOverview(valueset, filename):
                 # Writes concepts to file (nu nog alles aan elkaar)
                 make_code_overview(concepts)   
 
-        
+
 # Nice to have
 # If a CodeSystem is included as a whole (and is not SNOMED)
 # --> Go through that system and get
