@@ -12,4 +12,5 @@
 | municipality | Kaag en Braassem  |
 | country | Nederland |
 | additional_information |   |
-| address_type | Woon-/verblijfadres  |
+| address_type | both - Postal & Physical (code by AddressType)  |
+| address_use | home - Home (code by AddressUse) |

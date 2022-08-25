@@ -3,10 +3,12 @@
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
 |`Address` | textual | Replaced Dutch context with Belgium specific explanantions.
+|`use` | mapping | Replaced mapping from CBB element `address_type` to new CBB element `address_use` which aligns the CBB more with the FHIR datatype profile. |
+|`type` | terminology | Removed the ConceptMap as the binding from the CBB was replaced by the FHIR ValueSet AddressType, which makes a ConceptMap unnecessary. |
 |`city` | textual | Removed Dutch context. |
 |`district` | textual | Removed Dutch context. |
 |`postalCode` | textual | Removed Dutch context. |
 |`line` | textual | Removed Dutch context. |
 |`line.extension:houseNumberIndication.value[x]`| textual | Removed Dutch context. |
 |`country.extension:countryCode.value[x]` | terminology | Replaced valueSet LandCodelijsten with CountryISO. |
-|`extension:addressType`| mapping | Moved mapping from extension to host profile. |
+|`extension:addressType`| element | Removed the extension, as the terminology of the CBB was simplified, which makes the extension unnecessary. |

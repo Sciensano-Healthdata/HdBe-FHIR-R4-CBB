@@ -7,4 +7,7 @@
 |`place_of_residence` | textual | Removed Dutch context.|
 |`municipality` | textual | Removed Dutch context. |
 |`country` | terminology | Removed GBA country codes ValueSet so only ISO country codes are used.|
-|`address_type` | terminology | Removed the code HV - "Vacation Home" from the ValueSet because this is not used and would require a specific extension in FHIR.|
+|`address_type` | terminology | Replaced the ValueSet AddressType with FHIR ValueSet AddressType to make the concept use less complex. Also strictened the binding from extensible to required, to align with the FHIR element. |
+|`address_use` | element | Added element to align with the FHIR datatype profile. |
+|`address_use` | terminology | Used the FHIR AddressUse ValueSet  and set the binding to required to align with the FHIR element. |
+
