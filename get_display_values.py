@@ -49,7 +49,7 @@ def get_snomed_display(id):
                         if x['lang'] == 'en':
                             display = x['term']
     return display                   
-
+    
 "Calls http://tx.fhir.org/r4 terminology server to get the display"
 def get_tx_display(id, system):
     url =  'http://tx.fhir.org/r4/CodeSystem/$lookup?system=' + system + '&code=' + id
@@ -69,7 +69,31 @@ def get_tx_display(id, system):
     for x in content_json['parameter']:
          if x['name'] == 'display':
             display = x['valueString']
+    return display  
+
+"Looks for local CodeSystems values"
+def get_local_CodeSystem_display(id, system):
+    url =  'http://tx.fhir.org/r4/CodeSystem/$lookup?system=' + system + '&code=' + id
+    try:  
+        response = requests.get(url, headers={'Accept': 'application/fhir+json'})
+        content_json = json.loads(response.content.decode('utf8')) 
+        # If the response was successful, no Exception will be raised
+        response.raise_for_status()
+    except HTTPError as http_err:
+        print(f'HTTP error occurred: {http_err}')  
+        if response.status_code == 404:   
+            write('not-found', 'Code ' + id + ' from codesystem' + system +' in file ' + filename) 
+        return None
+    except Exception as err:
+        print(f'Other error occurred: {err}')  
+    # Loop through all parameters to find the display
+    for x in content_json['parameter']:
+         if x['name'] == 'display':
+            display = x['valueString']
     return display                   
+
+  
+
 
 "Updates or populates Codings display values. First tries preferred codes in SNOWSTORM. Then tries tx.fhir.org terminology server."                            
 def update_coding_display(coding):
