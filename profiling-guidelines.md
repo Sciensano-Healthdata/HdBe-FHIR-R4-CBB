@@ -278,7 +278,7 @@ Examples of profiles are not conformance resources and lack the `.url`, `.name` 
         - For extension representing a specific concept: "This extension represents the [concept name] of [name of the building block]]", followed by a link to the functional description.
         - For other extensions this will usually be absent.
         - Note: for extensions and datatype profiles, guidance for profilers may be placed here as well.
-- copyright: "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example, a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third-party IP in connection with the specification or otherwise."
+- copyright: "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."
 
 ##  ElementDefinition <a name="ElementDefinition"></a>
 Logical models and FHIR profiles are represented using [StructureDefinition resources](https://www.hl7.org/fhir/R4/structuredefinition.html). Every StructureDefinition has 1..* elements of the [ElementDefinition type](https://www.hl7.org/fhir/R4/elementdefinition.html#ElementDefinition). One element describes exactly one concept. Every zib and CBB concept is mapped and described by an ElementDefinition. 
