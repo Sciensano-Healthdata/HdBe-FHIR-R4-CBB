@@ -86,7 +86,8 @@ Specific requirements for the usage of `.identifier` will be dictated on a use c
 As stated above, the logical id is meant to uniquely identify instances on a particular server; it is a vital component when using FHIR within a RESTful context. So as a rule of thumb, the `.id` element should always be present when dealing with instances that have a logical id, thus with instances on a server. 
 
 ## Must Support <a name="must-support"></a>
-No elements have been marked as [Must Support](https://www.hl7.org/fhir/profiling.html#mustsupport). Must support flags may be added in derived or specialized profiles.  
+No elements have been marked as [Must Support](https://www.hl7.org/fhir/profiling.html#mustsupport). Although the general essence of the must support flag may apply to all CBB concepts because these concepts have been carefully selected and designed. Thus all FHIR elements that contain mapping information to a CBB concept might provide meaningful information when produced or consumed. Therefore the actors SHOULD deal with it in a meaningful way.  
+Must support flags may be explicitly added in derived or specialized profiles.
 
 ## Use of the reference data type <a name="reference-data-type"></a>
 A key feature of FHIR is the ability of resources to reference each other. This is done using the [Reference data type](https://hl7.org/fhir/R4/references.html#Reference). This data type supports two modes of referencing:
