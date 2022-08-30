@@ -1,24 +1,8 @@
 ## Example instances
 
-| [CBB name]      |                   |
+| time_interval     |                   |
 |-----------------|-------------------|
-| [Concept name ] | [example value]   |
+| start_date_time | 14-04-2022 |
+| end_date_time |  17-04-2022 |
+| duration | 3 dagen | 
 
-
-// example of NameInformation
-```
-## Example instances
-
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```

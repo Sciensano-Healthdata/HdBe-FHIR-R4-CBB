@@ -1,24 +1,17 @@
 ## Example instances
 
-| [CBB name]      |                   |
-|-----------------|-------------------|
-| [Concept name ] | [example value]   |
+| pharmaceutical_product                            |                   |
+|---------------------------------------------------|-------------------|
+|medication_code                                    |322236009 - Acetaminophen 500 mg oral tablet (code by SNOMED CT)
+|**product_specifications**                         | --- |
+|product_specifications.pharmaceutical_form         |385055001 - Tablet (code by SNOMED CT)
+|product_specifications.medication                  |
+|product_specifications.description                 |
+|**product_specifications.ingredient**              | --- |
+|product_specifications.ingredient.substance_code   |
+|product_specifications.ingredient.concentration    |
+|product_specifications.ingredient.concentration.ingredient_amount |
+|product_specifications.ingredient.concentration.product_amount | 
 
 
-// example of NameInformation
-```
-## Example instances
 
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```

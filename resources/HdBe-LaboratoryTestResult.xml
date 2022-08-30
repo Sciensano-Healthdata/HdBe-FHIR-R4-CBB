@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult" />
   <meta>
-    <lastUpdated value="2022-06-17T12:10:20.4632447+00:00" />
+    <lastUpdated value="2022-08-11T14:21:43.5109534+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult" />
   <name value="HdBeLaboratoryTestResult" />
@@ -99,7 +99,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="related_result" />
+        <map value="laboratory_test_result.related_result" />
       </mapping>
     </element>
     <element id="Observation.basedOn">
@@ -117,7 +117,7 @@
       </type>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="requester" />
+        <map value="laboratory_test_result.requester" />
         <comment value="implicit (main mapping on the referenced ServiceRequest.requester)" />
       </mapping>
     </element>
@@ -129,12 +129,7 @@
       <alias value="TestUitslagStatus" />
       <binding>
         <strength value="required" />
-        <description value="Use ConceptMap 'TestResultStatus-to-ObservationStatus' to translate CBB terminology to profile terminology in ValueSet 'ObservationStatus'" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/observation-status|4.0.1">
-          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="https://fhir.healthdata.be/ConceptMap/TestResultStatus-to-ObservationStatus" />
-          </extension>
-        </valueSet>
+        <valueSet value="https://fhir.healthdata.be/ValueSet/TestResultStatus" />
       </binding>
       <mapping>
         <identity value="zib-laboratorytestresult-v4.6-2020EN" />
@@ -148,11 +143,11 @@
       </mapping>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="result_status" />
+        <map value="laboratory_test_result.result_status" />
       </mapping>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="laboratory_test.test_result_status" />
+        <map value="laboratory_test_result.laboratory_test.test_result_status" />
       </mapping>
     </element>
     <element id="Observation.category">
@@ -175,7 +170,7 @@
       </binding>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="result_type" />
+        <map value="laboratory_test_result.result_type" />
       </mapping>
     </element>
     <element id="Observation.code">
@@ -197,11 +192,11 @@
       </mapping>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="panel_or_battery" />
+        <map value="laboratory_test_result.panel_or_battery" />
       </mapping>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="laboratory_test.test_code" />
+        <map value="laboratory_test_result.laboratory_test.test_code" />
       </mapping>
     </element>
     <element id="Observation.subject">
@@ -241,11 +236,18 @@
       </mapping>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="laboratory_test.test_date_time" />
+        <map value="laboratory_test_result.laboratory_test.test_date_time" />
       </mapping>
     </element>
     <element id="Observation.performer">
       <path value="Observation.performer" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <short value="Performer" />
       <definition value="The healthcare provider and/or organization where or by whom the LaboratoryTestResult was performed." />
       <alias value="Uitvoerder" />
@@ -268,8 +270,18 @@
       </mapping>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="performer.healthcare_provider" />
+        <map value="laboratory_test_result.performer.healthcare_provider" />
       </mapping>
+    </element>
+    <element id="Observation.performer:performer">
+      <path value="Observation.performer" />
+      <sliceName value="performer" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/pattern-HealthProfessionalReference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole" />
+      </type>
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
@@ -290,7 +302,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="laboratory_test.test_result" />
+        <map value="laboratory_test_result.laboratory_test.test_result" />
       </mapping>
     </element>
     <element id="Observation.interpretation">
@@ -325,7 +337,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="laboratory_test.result_flags" />
+        <map value="laboratory_test_result.laboratory_test.result_flags" />
       </mapping>
     </element>
     <element id="Observation.interpretation:resultFlags.coding">
@@ -353,7 +365,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="laboratory_test.result_interpretation" />
+        <map value="laboratory_test_result.laboratory_test.result_interpretation" />
       </mapping>
     </element>
     <element id="Observation.note">
@@ -372,7 +384,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="laboratory_test.comment" />
+        <map value="laboratory_test_result.laboratory_test.comment" />
       </mapping>
     </element>
     <element id="Observation.method">
@@ -391,7 +403,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="laboratory_test.test_method" />
+        <map value="laboratory_test_result.laboratory_test.test_method" />
       </mapping>
     </element>
     <element id="Observation.specimen">
@@ -404,7 +416,7 @@
       </type>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="specimen" />
+        <map value="laboratory_test_result.specimen" />
       </mapping>
     </element>
     <element id="Observation.referenceRange.low">
@@ -419,7 +431,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="laboratory_test.reference_range_lower_limit" />
+        <map value="laboratory_test_result.laboratory_test.reference_range_lower_limit" />
       </mapping>
     </element>
     <element id="Observation.referenceRange.high">
@@ -434,7 +446,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="laboratory_test.reference_range_upper_limit" />
+        <map value="laboratory_test_result.laboratory_test.reference_range_upper_limit" />
       </mapping>
     </element>
     <element id="Observation.referenceRange.text">
@@ -442,11 +454,11 @@
       <comment value="Text based reference ranges is only used when the ReferenceRangeLowerLimit and/or ReferenceRangeUpperLimit cannot be expressed as quantity in `.low` and `.high`." />
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="laboratory_test.reference_range_lower_limit" />
+        <map value="laboratory_test_result.laboratory_test.reference_range_lower_limit" />
       </mapping>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="laboratory_test.reference_range_upper_limit" />
+        <map value="laboratory_test_result.laboratory_test.reference_range_upper_limit" />
       </mapping>
     </element>
     <element id="Observation.hasMember">
@@ -482,7 +494,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="related_result" />
+        <map value="laboratory_test_result.related_result" />
       </mapping>
     </element>
   </differential>

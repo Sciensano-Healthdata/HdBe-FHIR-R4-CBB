@@ -1,24 +1,14 @@
 ## Example instances
 
-| [CBB name]      |                   |
-|-----------------|-------------------|
-| [Concept name ] | [example value]   |
+| InstructionsForUse                                        |                   |
+|-----------------------------------------------------------|-------------------|
+| description                                               | From 24 Oct 2016, for 4 days, 4 times per day 1 unit, if needed 2 times a day 1 unit, oral.| 
+| route_of_administration                                   | 26643006 - Oral route (code by SNOMED CT)       | 
+| dosing_instructions with sequence_number 1                | 4 times per day 1 unit | 
+| dosing_instructions with sequence_number 1                | NC006 - if needed (code by Healthdata.be - Sciensano) 2 times a day 1 unit  | 
 
 
-// example of NameInformation
-```
-## Example instances
+More functional and technical examples of dosages (in Dutch): https://informatiestandaarden.nictiz.nl/wiki/mp:V9.2.0.0_Voorbeelden_doseringen 
 
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
 
-```
+

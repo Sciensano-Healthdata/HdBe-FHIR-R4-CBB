@@ -1,24 +1,10 @@
 ## Example instances
 
-| [CBB name]      |                   |
-|-----------------|-------------------|
-| [Concept name ] | [example value]   |
-
-
-// example of NameInformation
-```
-## Example instances
-
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```
+| alert             |                   |
+|-------------------|-------------------|
+| end_date_time     | 2012-12-30 |
+| condition.problem	| Listeriosis |
+| alert_name	    |  |
+| start_date_time	| 2012-09-15 |
+| alert_type	    | 75323-6 - Condition (code by LOINC) |
+| comment	        |  |

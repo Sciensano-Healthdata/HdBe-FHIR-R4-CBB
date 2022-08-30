@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="HdBe-Procedure-request-01"/>
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-request"/>
+  </meta>
+  <status value="completed"/>
+  <intent value="order"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="609588000"/>
+      <display value="Total knee replacement"/>
+    </coding>
+  </code>
+  <orderDetail>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="129284003"/>
+      <display value="Surgical action"/>
+    </coding>
+  </orderDetail>
+  <subject>
+    <reference value="Patient/HdBe-Patient-01"/>
+    <type value="Patient"/>
+    <display value="Belle Ulijn"/>
+  </subject>
+  <occurrencePeriod>
+    <start value="2020-06-05"/>
+    <end value="2020-06-05"/>
+  </occurrencePeriod>
+  <requester>
+    <reference value="PractitionerRole/HdBe-HealthProfessional-PractitionerRole-01"/>
+    <type value="PractitionerRole"/>
+    <display value="Healthcare professional (role), Orthoptisten"/>
+  </requester>
+  <performer>
+    <reference value="PractitionerRole/HdBe-HealthProfessional-PractitionerRole-01"/>
+    <type value="PractitionerRole"/>
+    <display value="Healthcare professional (role), Orthoptisten"/>
+  </performer>
+  <locationReference>
+    <reference value="Location/HdBe-HealthcareProvider-01"/>
+    <type value="Location"/>
+    <display value="Healthcare provider (location), UMCG"/>
+  </locationReference>
+  <reasonReference>
+    <reference value="Condition/HdBe-Procedure-event-01-Condition-01"/>
+    <type value="Condition"/>
+    <display value="Problem: Arthropathy of knee joint"/>
+  </reasonReference>
+  <bodySite>
+    <extension url="https://fhir.healthdata.be/StructureDefinition/ext-AnatomicalLocation.Laterality">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="7771000"/>
+          <display value="Left"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="72696002"/>
+      <display value="Knee region structure"/>
+    </coding>
+  </bodySite>
+</ServiceRequest>

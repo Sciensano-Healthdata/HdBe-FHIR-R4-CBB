@@ -1,5 +1,7 @@
-## zib [zib name + version](https://zibs.nl/wiki/[zib name + version(release)]) difference
+## zib [Encounter-v4.0.1](https://zibs.nl/wiki/Encounter-v4.0.1(2020EN)) difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+|`contact_type` | terminology | Replaced codes with codes in use by Healthdata.be - Sciensano. | 
+|`destination` | terminology | Added SNOMED codes Unkown and Other to the ValueSet. | 
+|`origin` | terminology | Added SNOMED codes Unkown and Other to the ValueSet. | 

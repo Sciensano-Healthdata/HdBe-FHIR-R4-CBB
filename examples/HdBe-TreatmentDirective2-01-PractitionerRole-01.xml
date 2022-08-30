@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="HdBe-TreatmentDirective2-01-PractitionerRole-01"/>
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole"/>
+  </meta>
+  <practitioner>
+    <reference value="Practitioner/HdBe-TreatmentDirective2-01-Practitioner-01"/>
+    <type value="Practitioner"/>
+    <display value="Healthcare professional (person), J.H.R. Peters"/>
+  </practitioner>
+  <specialty>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="394582007"/>
+      <display value="Dermatology"/>
+    </coding>
+  </specialty>
+  <telecom>
+    <system value="phone">
+      <extension url="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification">
+        <valueCodeableConcept>
+          <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
+            <code value="LL"/>
+            <display value="Land Line"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+    </system>
+    <value value="+3715828282"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="j.peters@hospital.nl"/>
+    <use value="work"/>
+  </telecom>
+</PractitionerRole>

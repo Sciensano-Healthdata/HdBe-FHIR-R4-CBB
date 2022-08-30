@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<AllergyIntolerance xmlns="http://hl7.org/fhir">
+  <id value="HdBe-AllergyIntolerance-01"/>
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AllergyIntolerance"/>
+  </meta>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+  </clinicalStatus>
+  <category value="food"/>
+  <criticality value="high">
+    <extension url="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="24484000"/>
+          <display value="Severe"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </criticality>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="419442005"/>
+      <display value="Ethanol"/>
+    </coding>
+  </code>
+  <patient>
+    <reference value="Patient/HdBe-Patient-01"/>
+    <type value="Patient"/>
+    <display value="Belle Ulijn"/>
+  </patient>
+  <onsetDateTime value="2010"/>
+  <lastOccurrence value="2019-04-21"/>
+  <note>
+    <text value="Allergic reactions seems to get more severe over time."/>
+  </note>
+  <reaction>
+    <manifestation>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="126485001"/>
+        <display value="Urticaria"/>
+      </coding>
+    </manifestation>
+    <onset value="2019-04-21"/>
+    <severity value="severe"/>
+    <exposureRoute>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="26643006"/>
+        <display value="Oral route"/>
+      </coding>
+    </exposureRoute>
+  </reaction>
+</AllergyIntolerance>

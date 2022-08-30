@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-ContactPerson" />
   <meta>
-    <lastUpdated value="2022-02-18T15:54:35.3651052+00:00" />
+    <lastUpdated value="2022-08-18T09:53:04.587366+00:00" />
   </meta>
   <language value="en-US" />
   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
@@ -23,6 +23,7 @@
   </name>
   <title value="HdBe ContactPerson" />
   <status value="draft" />
+  <date value="2022-07-07T15:04:03.2592055+00:00" />
   <publisher value="Healthdata.be (Sciensano)" />
   <contact>
     <name value="Service portal – healthdata.be" />
@@ -32,7 +33,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="**Concept**&#xD;&#xA;A contact is a  person not being a healthcare professional who is involved in the patient’s care, such as family members, caregivers, mental caretakers, guardians and legal representatives. &#xD;&#xA;&#xD;&#xA;In addition to identification information such as the name, address and contact information can also be entered. The relationship to the patient and the role this person has can be entered as well.&#xD;&#xA;**Purpose**&#xD;&#xA;Recording the relevant data for identification of contacts and other persons involved in the patient's care.&#xD;&#xA;**Example Instances**">
+  <description value="**Concept**&#xD;&#xA;A contact person is a person not being a healthcare professional who is involved in the patient’s care, such as family members, caregivers, mental caretakers, guardians and legal representatives. &#xD;&#xA;&#xD;&#xA;In addition to identification information such as the name, address and contact information can also be entered. The relationship to the patient and the role this person has can be entered as well.&#xD;&#xA;**Purpose**&#xD;&#xA;Recording the relevant data for identification of contacts and other persons involved in the patient's care.&#xD;&#xA;**Example Instances**">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
         <valueCode value="nl-NL" />
@@ -46,13 +47,13 @@
   <fhirVersion value="4.0.1" />
   <kind value="logical" />
   <abstract value="true" />
-  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/contact" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/contact_person" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
   <derivation value="specialization" />
   <differential>
-    <element id="contact">
-      <path value="contact" />
-      <short value="Contact">
+    <element id="contact_person">
+      <path value="contact_person" />
+      <short value="ContactPerson">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -62,7 +63,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="Root concept of the Contact information model. This root concept contains all data elements of the Contact information model.">
+      <definition value="Root concept of the ContactPerson information model. This root concept contains all data elements of the ContactPerson information model.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -75,8 +76,8 @@
       <min value="0" />
       <max value="*" />
     </element>
-    <element id="contact.name_information">
-      <path value="contact.name_information" />
+    <element id="contact_person.name_information">
+      <path value="contact_person.name_information" />
       <short value="NameInformation">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
@@ -87,7 +88,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="Full name of the contact.">
+      <definition value="Full name of the contact person.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -104,8 +105,8 @@
         <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NameInformation" />
       </type>
     </element>
-    <element id="contact.contact_information">
-      <path value="contact.contact_information" />
+    <element id="contact_person.contact_information">
+      <path value="contact_person.contact_information" />
       <short value="ContactInformation">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
@@ -116,7 +117,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="The contact’s telephone number and/or e-mail address.">
+      <definition value="The contact person’s telephone number and/or e-mail address.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -127,14 +128,14 @@
         </extension>
       </definition>
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <type>
         <code value="ContactPoint" />
         <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation" />
       </type>
     </element>
-    <element id="contact.address_information">
-      <path value="contact.address_information" />
+    <element id="contact_person.address_information">
+      <path value="contact_person.address_information" />
       <short value="AddressInformation">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
@@ -145,7 +146,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="Contact’s address information.">
+      <definition value="Contact person’s address information.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -162,8 +163,8 @@
         <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AddressInformation" />
       </type>
     </element>
-    <element id="contact.role">
-      <path value="contact.role" />
+    <element id="contact_person.role">
+      <path value="contact_person.role" />
       <short value="Role">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
@@ -174,7 +175,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="Defines the role of the contact in relation to the patient.">
+      <definition value="Defines the role of the contact person in relation to the patient.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -195,8 +196,8 @@
         <valueSet value="https://fhir.healthdata.be/ValueSet/Role" />
       </binding>
     </element>
-    <element id="contact.relationship">
-      <path value="contact.relationship" />
+    <element id="contact_person.relationship">
+      <path value="contact_person.relationship" />
       <short value="Relationship">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
@@ -207,7 +208,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="Defines the contact’s familial relationship to the patient.">
+      <definition value="Defines the contact person’s familial relationship to the patient.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />

@@ -42,6 +42,38 @@
         <map value="NL-CM:7.2.1" />
         <comment value="TobaccoUse" />
       </mapping>
+      <mapping>
+        <identity value="HdBe-SmokingStatus" />
+        <map value="smoking_status" />
+      </mapping>
+    </element>
+    <element id="Observation.extension">
+      <path value="Observation.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Observation.extension:frequency">
+      <path value="Observation.extension" />
+      <sliceName value="frequency" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/ext-SmokingStatus.FrequencyQualifier" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Observation.extension:frequency.value[x]">
+      <path value="Observation.extension.value[x]" />
+      <mapping>
+        <identity value="HdBe-SmokingStatus" />
+        <map value="smoking_status.observation_of_use.frequency" />
+      </mapping>
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
@@ -92,7 +124,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-SmokingStatus" />
-        <map value="observation_of_use.start_date" />
+        <map value="smoking_status.observation_of_use.start_date" />
       </mapping>
     </element>
     <element id="Observation.effective[x]:effectivePeriod.end">
@@ -107,7 +139,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-SmokingStatus" />
-        <map value="observation_of_use.stop_date" />
+        <map value="smoking_status.observation_of_use.stop_date" />
       </mapping>
     </element>
     <element id="Observation.value[x]">
@@ -140,7 +172,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-SmokingStatus" />
-        <map value="smoking_status" />
+        <map value="smoking_status.smoking_status" />
       </mapping>
     </element>
     <element id="Observation.note">
@@ -156,6 +188,10 @@
         <identity value="zib-tobaccouse-v3.2-2020EN" />
         <map value="NL-CM:7.2.3" />
         <comment value="Comment" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-SmokingStatus" />
+        <map value="smoking_status.comment" />
       </mapping>
     </element>
     <element id="Observation.component">
@@ -201,7 +237,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-SmokingStatus" />
-        <map value="type_of_smoking_or_tobacco" />
+        <map value="smoking_status.type_of_smoking_or_tobacco" />
       </mapping>
     </element>
     <element id="Observation.component:amount">
@@ -234,6 +270,10 @@
         <map value="NL-CM:7.2.6" />
         <comment value="Amount" />
       </mapping>
+      <mapping>
+        <identity value="HdBe-SmokingStatus" />
+        <map value="smoking_status.observation_of_use.amount" />
+      </mapping>
     </element>
     <element id="Observation.component:packYears">
       <path value="Observation.component" />
@@ -261,6 +301,10 @@
         <identity value="zib-tobaccouse-v3.2-2020EN" />
         <map value="NL-CM:7.2.7" />
         <comment value="PackYears" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-SmokingStatus" />
+        <map value="smoking_status.observation_of_use.pack_years" />
       </mapping>
     </element>
   </differential>

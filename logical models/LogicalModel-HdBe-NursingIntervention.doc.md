@@ -1,5 +1,6 @@
-## zib [zib name + version](https://zibs.nl/wiki/[zib name + version(release)]) difference
+## zib [NursingIntervention-v3.2](https://zibs.nl/wiki/NursingIntervention-v3.2(2020EN)) difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+| `intervention` | terminology | Only allowed SNOMED codes. Removed NIC codelist.|
+| `performer.healthcare_provider` | element | Renamed element to `performer.healthcare_professional` to align with reference being made. This will be fixed in a [future version of the zib](https://zibs.nl/wiki/NursingIntervention-v4.0(2022EN)).

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="HdBe-Encounter-01"/>
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Encounter"/>
+  </meta>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="IMP"/>
+    <display value="inpatient encounter"/>
+  </class>
+  <subject>
+    <reference value="Patient/HdBe-Patient-01"/>
+    <type value="Patient"/>
+    <display value="Belle Ulijn"/>
+  </subject>
+  <participant>
+    <individual>
+      <reference value="PractitionerRole/HdBe-HealthProfessional-PractitionerRole-01"/>
+      <type value="PractitionerRole"/>
+      <display value="Healthcare professional (role), E. Penninx"/>
+    </individual>
+  </participant>
+  <period>
+    <start value="2012-08-16"/>
+    <end value="2012-08-19"/>
+  </period>
+  <reasonReference>
+    <extension url="https://fhir.healthdata.be/StructureDefinition/ext-Comment">
+      <valueString value="stomach ache"/>
+    </extension>
+    <display value="stomach ache"/>
+  </reasonReference>
+  <hospitalization>
+    <admitSource>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="264362003"/>
+        <display value="Home"/>
+      </coding>
+    </admitSource>
+    <dischargeDisposition>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="22232009"/>
+        <display value="Hospital"/>
+      </coding>
+    </dischargeDisposition>
+  </hospitalization>
+  <location>
+    <location>
+      <reference value="Location/HdBe-HealthcareProvider-01"/>
+      <type value="Location"/>
+      <display value="Healthcare provider (location), GRAND HOPITAL DE CHARLEROI - SAINT-JOSEPH"/>
+    </location>
+  </location>
+</Encounter>

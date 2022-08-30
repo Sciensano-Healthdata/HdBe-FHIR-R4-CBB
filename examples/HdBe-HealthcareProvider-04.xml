@@ -1,31 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Location xmlns="http://hl7.org/fhir">
-    <id value="HdBe-HealthcareProvider-05"/>
-    <meta>
-        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider"/>
-    </meta>
-    <name value="004-C - Chirugie"/>
-    <type>
-        <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
-            <code value="SU"/>
-            <display value="Surgery clinic"/>
-        </coding>
-    </type>
-    <physicalType> 
-        <coding> 
-            <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/> 
-            <code value="wa"/> 
-            <display value="Ward"/>      
-        </coding> 
-    </physicalType> 
-    <managingOrganization>
-        <reference value="Organization/HdBe-HealthcareProvider-Organization-02"/>
-        <type value="Organization"/>
-        <display value="Healthcare provider (organization), Enterprise Hospital Ziekenhuis"/>
-    </managingOrganization>
-    <partOf>
-        <reference value="Location/HdBe-HealthcareProvider-03"/>
-        <display value="Enterprise Hospital Ziekenhuis"/>
-    </partOf>
+  <id value="HdBe-HealthcareProvider-05"/>
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider"/>
+  </meta>
+  <identifier>
+    <system value="https://fhir.healthdata.be/NamingSystem/LocationIdentificationNumber"/>
+    <value value="9999"/>
+  </identifier>
+  <identifier>
+    <system value="https://fhir.healthdata.be/NamingSystem/DepartmentIdentificationNumber"/>
+    <value value="004-C"/>
+  </identifier>
+  <name value="004-C - Chirugie"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="SU"/>
+      <display value="Surgery clinic"/>
+    </coding>
+  </type>
+  <physicalType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/>
+      <code value="wa"/>
+      <display value="Ward"/>
+    </coding>
+  </physicalType>
+  <managingOrganization>
+    <reference value="Organization/HdBe-HealthcareProvider-Organization-02"/>
+    <type value="Organization"/>
+    <display value="Healthcare provider (organization), Enterprise Hospital Ziekenhuis"/>
+  </managingOrganization>
+  <partOf>
+    <reference value="Location/HdBe-HealthcareProvider-03"/>
+    <display value="Enterprise Hospital Ziekenhuis"/>
+  </partOf>
 </Location>

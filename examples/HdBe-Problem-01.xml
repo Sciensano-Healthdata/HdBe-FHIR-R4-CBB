@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="HdBe-Problem-01"/>
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Problem"/>
+  </meta>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+      <display value="Confirmed"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="410605003"/>
+      <display value="Confirmed present"/>
+    </coding>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="282291009"/>
+      <display value="Diagnosis interpretation"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="4241002"/>
+      <display value="Listeriosis"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/HdBe-Patient-01"/>
+    <type value="Patient"/>
+    <display value="Belle Ulijn"/>
+  </subject>
+  <onsetDateTime value="2022-05-03T12:00:00+02:00"/>
+</Condition>

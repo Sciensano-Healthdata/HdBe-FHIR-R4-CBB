@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-Patient" />
   <meta>
-    <lastUpdated value="2022-02-22T12:27:21.5426696+00:00" />
+    <lastUpdated value="2022-08-19T06:44:03.8945964+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
   <name value="HdBePatient" />
@@ -62,7 +62,7 @@
     <name value="zib LanguageProficiency-v3.2(2020EN)" />
   </mapping>
   <mapping>
-    <identity value="hdbe-ContactInformation" />
+    <identity value="HdBe-ContactInformation" />
     <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation" />
     <name value="HdBe logical model ContactInformation" />
   </mapping>
@@ -172,7 +172,7 @@
       <alias value="Identificatienummer" />
       <mapping>
         <identity value="HdBe-Patient" />
-        <map value="patient_identification_number" />
+        <map value="patient.patient_identification_number" />
       </mapping>
       <mapping>
         <identity value="zib-patient-v3.2-2020EN" />
@@ -190,38 +190,55 @@
     </element>
     <element id="Patient.name">
       <path value="Patient.name" />
-      <definition value="Patient's full name.&#xD;&#xA;The cardinality differs from the CBB to allow including several name elements with a different name.use each." />
-      <comment value="The cardinality mismatch between the CBB (0..1) and FHIR (0..*) is explained by the presence of the HumanName.use element. A full name can be broken into parts using multiple instances of HumanName that have its own value for use." />
-      <type>
-        <code value="HumanName" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation" />
-      </type>
-      <mapping>
-        <identity value="HdBe-Patient" />
-        <map value="name_information" />
-      </mapping>
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="use" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="NameInformation" />
+      <definition value="Patient's full name." />
+      <alias value="Naamgegevens" />
       <mapping>
         <identity value="zib-patient-v3.2-2020EN" />
         <map value="NL-CM:0.1.6" />
         <comment value="NameInformation" />
       </mapping>
+      <mapping>
+        <identity value="HdBe-Patient" />
+        <map value="patient.name_information" />
+      </mapping>
+    </element>
+    <element id="Patient.name:nameInformation">
+      <path value="Patient.name" />
+      <sliceName value="nameInformation" />
+      <max value="2" />
+      <type>
+        <code value="HumanName" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation" />
+      </type>
+    </element>
+    <element id="Patient.name:nameInformation-GivenName">
+      <path value="Patient.name" />
+      <sliceName value="nameInformation-GivenName" />
+      <type>
+        <code value="HumanName" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation.GivenName" />
+      </type>
     </element>
     <element id="Patient.telecom">
       <path value="Patient.telecom" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <short value="ContactInformation" />
       <definition value="Patient’s telephone number(s) or e-mail address(es)." />
-      <comment value="The cardinality mismatch between the CBB (0..1) and FHIR (0..*) is explained by the containers inside the ContactInformation model which are 0..*. FHIR ContactPoint does not have these containers." />
       <alias value="Contactgegevens" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation" />
+      </type>
       <mapping>
         <identity value="HdBe-Patient" />
-        <map value="contact_information" />
+        <map value="patient.contact_information" />
       </mapping>
       <mapping>
         <identity value="zib-patient-v3.2-2020EN" />
@@ -233,22 +250,6 @@
         <map value="NL-CM:20.6.1" />
         <comment value="ContactInformation" />
       </mapping>
-    </element>
-    <element id="Patient.telecom:telephoneNumbers">
-      <path value="Patient.telecom" />
-      <sliceName value="telephoneNumbers" />
-      <type>
-        <code value="ContactPoint" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers" />
-      </type>
-    </element>
-    <element id="Patient.telecom:emailAddresses">
-      <path value="Patient.telecom" />
-      <sliceName value="emailAddresses" />
-      <type>
-        <code value="ContactPoint" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-EmailAddresses" />
-      </type>
     </element>
     <element id="Patient.gender">
       <path value="Patient.gender" />
@@ -266,7 +267,7 @@
       </binding>
       <mapping>
         <identity value="HdBe-Patient" />
-        <map value="gender" />
+        <map value="patient.gender" />
       </mapping>
       <mapping>
         <identity value="zib-patient-v3.2-2020EN" />
@@ -307,7 +308,7 @@
       </binding>
       <mapping>
         <identity value="HdBe-Patient" />
-        <map value="gender" />
+        <map value="patient.gender" />
       </mapping>
       <mapping>
         <identity value="zib-patient-v3.2-2020EN" />
@@ -322,7 +323,7 @@
       <alias value="Geboortedatum" />
       <mapping>
         <identity value="HdBe-Patient" />
-        <map value="date_of_birth" />
+        <map value="patient.date_of_birth" />
       </mapping>
       <mapping>
         <identity value="zib-patient-v3.2-2020EN" />
@@ -351,7 +352,7 @@
       </type>
       <mapping>
         <identity value="HdBe-Patient" />
-        <map value="death_indicator" />
+        <map value="patient.death_indicator" />
       </mapping>
       <mapping>
         <identity value="zib-patient-v3.2-2020EN" />
@@ -372,11 +373,11 @@
       </type>
       <mapping>
         <identity value="HdBe-Patient" />
-        <map value="date_of_death" />
+        <map value="patient.date_of_death" />
       </mapping>
       <mapping>
         <identity value="HdBe-Patient" />
-        <map value="death_indicator" />
+        <map value="patient.death_indicator" />
       </mapping>
       <mapping>
         <identity value="zib-patient-v3.2-2020EN" />
@@ -398,7 +399,7 @@
       </type>
       <mapping>
         <identity value="HdBe-Patient" />
-        <map value="address_information" />
+        <map value="patient.address_information" />
       </mapping>
       <mapping>
         <identity value="zib-patient-v3.2-2020EN" />
@@ -413,10 +414,10 @@
       <alias value="BurgerlijkeStaat" />
       <binding>
         <strength value="required" />
-        <description value="Use ConceptMap 'MaritalStatus-to-MaritalStatus' to translate CBB terminology to profile terminology in ValueSet 'MaritalStatus'" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/marital-status">
+        <description value="Use ConceptMap 'BeCivilstate-to-MaritalStatus' to translate CBB terminology to profile terminology in ValueSet 'MaritalStatus'" />
+        <valueSet value="https://www.ehealth.fgov.be/standards/fhir/core/ValueSet/be-civilstate">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="https://fhir.healthdata.be/ConceptMap/MaritalStatus-to-MaritalStatus" />
+            <valueCanonical value="https://fhir.healthdata.be/ConceptMap/BeCivilstate-to-MaritalStatus" />
           </extension>
         </valueSet>
       </binding>
@@ -451,7 +452,7 @@
       </type>
       <mapping>
         <identity value="HdBe-Patient" />
-        <map value="multiple_birth_indicator" />
+        <map value="patient.multiple_birth_indicator" />
       </mapping>
       <mapping>
         <identity value="zib-patient-v3.2-2020EN" />
@@ -470,11 +471,11 @@
       </type>
       <mapping>
         <identity value="HdBe-Patient" />
-        <map value="multiple_birth_order" />
+        <map value="patient.multiple_birth_order" />
       </mapping>
       <mapping>
         <identity value="HdBe-Patient" />
-        <map value="multiple_birth_indicator" />
+        <map value="patient.multiple_birth_indicator" />
       </mapping>
     </element>
     <element id="Patient.contact">
@@ -516,7 +517,7 @@
     <element id="Patient.contact.extension:contactPerson.value[x]">
       <path value="Patient.contact.extension.value[x]" />
       <short value="Contact" />
-      <definition value="Reference to a [HdBe-ContactPerson](http://nictiz.nl/fhir/StructureDefinition/HdBe-ContactPerson) instance containing the full details for the current contact." />
+      <definition value="Reference to a [HdBe-ContactPerson](https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson) instance containing the full details for the current contact." />
       <alias value="Contactpersoon" />
       <type>
         <code value="Reference" />
@@ -588,7 +589,7 @@
     <element id="Patient.contact.name">
       <path value="Patient.contact.name" />
       <definition value="Full name of the contact." />
-      <comment value="The cardinality mismatch between the CBB (0..1) and FHIR (0..*) is explained by the presence of the HumanName.use element. A full name can be broken into parts using multiple instances of HumanName that have its own value for use." />
+      <comment value="This element can and should not completely capture the NameInformation concept from the CBB ContactPerson; it should just be used for the information that is needed for contacting the person in relation to care of the patient. The full name information should instead be captured using an instance of [HdBe-ContactPerson](https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson), which can then be referenced from this resource. See the comment on `Patient.contact` for more information." />
       <type>
         <code value="HumanName" />
         <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation" />
@@ -599,23 +600,19 @@
         <comment value="NameInformation" />
       </mapping>
       <mapping>
-        <identity value="hdbe-ContactInformation" />
+        <identity value="HdBe-ContactPerson" />
         <map value="name_information" />
       </mapping>
     </element>
     <element id="Patient.contact.telecom">
       <path value="Patient.contact.telecom" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <short value="ContactInformation" />
       <definition value="The contact’s telephone number and/or e-mail address." />
-      <comment value="The cardinality mismatch between the zib (0..1) and FHIR (0..*) is explained by the containers TelephoneNumbers (0..*) and EmailAddresses (0..*) inside the ContactInformation model. The FHIR datatype ContactPoint does not have these containers." />
       <alias value="Contactgegevens" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation" />
+      </type>
       <mapping>
         <identity value="zib-contactperson-v3.4-2020EN" />
         <map value="NL-CM:3.1.6" />
@@ -630,31 +627,11 @@
         <identity value="HdBe-ContactPerson" />
         <map value="contact_information" />
       </mapping>
-      <mapping>
-        <identity value="hdbe-ContactInformation" />
-        <map value="contact_information" />
-      </mapping>
-    </element>
-    <element id="Patient.contact.telecom:telephoneNumbers">
-      <path value="Patient.contact.telecom" />
-      <sliceName value="telephoneNumbers" />
-      <type>
-        <code value="ContactPoint" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers" />
-      </type>
-    </element>
-    <element id="Patient.contact.telecom:emailAddresses">
-      <path value="Patient.contact.telecom" />
-      <sliceName value="emailAddresses" />
-      <type>
-        <code value="ContactPoint" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-EmailAddresses" />
-      </type>
     </element>
     <element id="Patient.contact.address">
       <path value="Patient.contact.address" />
       <definition value="Contact’s address information." />
-      <comment value="This element can and should not completely capture the AddressInformation concept from CBB ContactPerson; it should just be used for the information that is needed for contacting the person in relation to care of the patient. The full address information should instead be captured using an instance of [HdBe-ContactPerson](http://nictiz.nl/fhir/StructureDefintion/HdBe-ContactPerson), which can then be referenced from this resource. See the comment on `Patient.contact` for more information." />
+      <comment value="This element can and should not completely capture the AddressInformation concept from CBB ContactPerson; it should just be used for the information that is needed for contacting the person in relation to care of the patient. The full address information should instead be captured using an instance of [HdBe-ContactPerson](https://fhir.healthdata.be/StructureDefintion/HdBe-ContactPerson), which can then be referenced from this resource. See the comment on `Patient.contact` for more information." />
       <type>
         <code value="Address" />
         <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation" />

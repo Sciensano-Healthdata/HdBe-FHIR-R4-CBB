@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="HdBe-NursingIntervention-01"/>
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NursingIntervention"/>
+  </meta>
+  <status value="active"/>
+  <intent value="plan"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="9632001"/>
+      <display value="Nursing procedure"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/HdBe-Patient-01"/>
+    <type value="Patient"/>
+    <display value="Belle Ulijn"/>
+  </subject>
+  <period>
+    <start value="2021-09-10"/>
+  </period>
+  <contributor>
+    <extension url="https://fhir.healthdata.be/StructureDefinition/ext-NursingIntervention-ContributorIsRequester">
+      <valueBoolean value="true"/>
+    </extension>
+    <reference value="PractitionerRole/HdBe-HealthProfessional-PractitionerRole-01"/>
+    <type value="PractitionerRole"/>
+    <display value="Healthcare professional (person), E. Penninx"/>
+  </contributor>
+  <addresses>
+    <reference value="Condition/HdBe-Problem-01"/>
+    <type value="Condition"/>
+    <display value="Problem"/>
+  </addresses>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="386420003"/>
+          <display value="Self-care assistance: bathing/hygiene"/>
+        </coding>
+      </code>
+      <status value="in-progress"/>
+      <scheduledTiming>
+        <repeat>
+          <boundsPeriod>
+            <start value="2021-09-10"/>
+          </boundsPeriod>
+          <frequency value="1"/>
+          <period value="10.0"/>
+          <periodUnit value="min"/>
+        </repeat>
+      </scheduledTiming>
+      <description value="Let op: valrisico"/>
+    </detail>
+  </activity>
+</CarePlan>

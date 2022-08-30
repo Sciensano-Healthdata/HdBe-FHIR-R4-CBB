@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-HealthcareProvider" />
   <meta>
-    <lastUpdated value="2022-02-16T17:11:24.5903993+00:00" />
+    <lastUpdated value="2022-08-24T10:24:47.0805771+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider" />
   <name value="HdBeHealthcareProvider" />
@@ -80,17 +80,43 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <constraint>
+        <key value="HdBe-HealthcareProvider-1" />
+        <severity value="error" />
+        <human value="If the Location contains a DepartmentIdentificationNumber, the LocationIdentificationNumber must also be present to ensure unique identification of the Location." />
+        <expression value="identifier.where(system = 'https://fhir.healthdata.be/NamingSystem/DepartmentIdentificationNumber').exists() implies identifier.where(system = 'https://fhir.healthdata.be/NamingSystem/LocationIdentificationNumber').exists()" />
+      </constraint>
     </element>
-    <element id="Location.identifier:locationNumber">
+    <element id="Location.identifier:locationIdentificationNumber">
       <path value="Location.identifier" />
-      <sliceName value="locationNumber" />
+      <sliceName value="locationIdentificationNumber" />
+      <short value="LocationIdentificationNumber" />
+      <definition value="Identification number of the location, if a numerical location identification is used next to or instead of a location name." />
+      <comment value="The identifier value is equal to the HCOrganization.Site.SiteID (or site number) value as found in the [Common Base Registry for HealthCare Actor (CoBRHA)](https://www.ehealth.fgov.be/ehealthplatform/nl/service-cobrha-common-base-registry-for-healthcare-actor)." />
       <max value="1" />
       <patternIdentifier>
-        <system value="https://fhir.healthdata.be/NamingSystem/FPS-CampusNumber" />
+        <system value="https://fhir.healthdata.be/NamingSystem/LocationIdentificationNumber" />
       </patternIdentifier>
+      <condition value="HdBe-HealthcareProvider-1" />
       <mapping>
         <identity value="HdBe-HealthcareProvider" />
-        <map value="organization_location.location_number" />
+        <map value="healthcare_provider.organization_location.location_number" />
+      </mapping>
+    </element>
+    <element id="Location.identifier:departmentIdentificationNumber">
+      <path value="Location.identifier" />
+      <sliceName value="departmentIdentificationNumber" />
+      <short value="DepartmentIdentificationNumber" />
+      <definition value="The healthcare provider's internal department's identification number." />
+      <comment value="This needs to be an identification number listed in [fair.healthdata.be dataset Internal organization of departments within Belgian healthcare organizations](https://fair.healthdata.be/dataset/53c8b040-0b48-4c41-ab65-4c9d1600e908)." />
+      <max value="1" />
+      <patternIdentifier>
+        <system value="https://fhir.healthdata.be/NamingSystem/DepartmentIdentificationNumber" />
+      </patternIdentifier>
+      <condition value="HdBe-HealthcareProvider-1" />
+      <mapping>
+        <identity value="HdBe-HealthcareProvider" />
+        <map value="healthcare_provider.organization_location.department_identification_number" />
       </mapping>
     </element>
     <element id="Location.name">
@@ -105,27 +131,17 @@
       </mapping>
       <mapping>
         <identity value="HdBe-HealthcareProvider" />
-        <map value="location_name" />
-      </mapping>
-    </element>
-    <element id="Location.type">
-      <path value="Location.type" />
-      <mapping>
-        <identity value="HdBe-HealthcareProvider" />
-        <map value="department_identification_number" />
+        <map value="healthcare_provider.location_name" />
       </mapping>
     </element>
     <element id="Location.telecom">
       <path value="Location.telecom" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <short value="ContactInformation" />
       <alias value="Contactgegevens" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation" />
+      </type>
       <mapping>
         <identity value="zib-healthcareprovider-v3.4-2020EN" />
         <map value="NL-CM:17.2.6" />
@@ -138,28 +154,8 @@
       </mapping>
       <mapping>
         <identity value="HdBe-HealthcareProvider" />
-        <map value="contact_information" />
+        <map value="healthcare_provider.contact_information" />
       </mapping>
-      <mapping>
-        <identity value="HdBe-ContactInformation" />
-        <map value="contact_information" />
-      </mapping>
-    </element>
-    <element id="Location.telecom:telephoneNumbers">
-      <path value="Location.telecom" />
-      <sliceName value="telephoneNumbers" />
-      <type>
-        <code value="ContactPoint" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers" />
-      </type>
-    </element>
-    <element id="Location.telecom:emailAddresses">
-      <path value="Location.telecom" />
-      <sliceName value="emailAddresses" />
-      <type>
-        <code value="ContactPoint" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-EmailAddresses" />
-      </type>
     </element>
     <element id="Location.address">
       <path value="Location.address" />
@@ -176,7 +172,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-HealthcareProvider" />
-        <map value="address_information" />
+        <map value="healthcare_provider.address_information" />
       </mapping>
     </element>
     <element id="Location.managingOrganization">

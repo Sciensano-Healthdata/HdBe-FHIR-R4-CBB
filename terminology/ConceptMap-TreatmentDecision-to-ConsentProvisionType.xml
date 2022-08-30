@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="TreatmentDecision-to-ConsentProvisionType"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+    <valueBoolean value="false"/>
+  </extension>
+  <url value="https://fhir.healthdata.be/ConceptMap/TreatmentDecision-to-ConsentProvisionType"/>
+  <name value="TreatmentDecision_to_ConsentProvisionType"/>
+  <title value="TreatmentDecision to ConsentProvisionType"/>
+  <status value="draft"/>
+  <publisher value="Healthdata.be (Sciensano)"/>
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Maps treatment decision codes as found in CBB TreatmentDirective2 to &lt;http://hl7.org/fhir/ValueSet/consent-provision-type&gt; as found in `Consent.provision.type` in FHIR R4."/>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+  <sourceCanonical value="https://fhir.healthdata.be/ValueSet/TreatmentDecision"/>
+  <targetCanonical value="http://hl7.org/fhir/ValueSet/administrative-gender"/>
+  <group>
+    <source value="http://snomed.info/sct"/>
+    <target value="http://hl7.org/fhir/consent-provision-type"/>
+    <element>
+      <code value="385643006"/>
+      <display value="To be done"/>
+      <target>
+        <code value="permit"/>
+        <equivalence value="equal"/>
+      </target>
+    </element>
+    <element>
+      <code value="74964007"/>
+      <display value="Other"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="The SpecificationOther modifier extension on `Consent.provision.type` can be used to implicitly communicate this code."/>
+      </target>
+    </element>
+    <element>
+      <code value="410521004"/>
+      <display value="Not to be done"/>
+      <target>
+        <code value="deny"/>
+        <equivalence value="equal"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

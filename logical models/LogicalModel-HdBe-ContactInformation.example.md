@@ -2,11 +2,18 @@
 
 | ContactInformation     |                   |
 |------------------------|-------------------|
-| telephone_numbers.telephone_number | +3247458497
-| telephone_numbers.telecom_type | Mobile Phone
-| telephone_numbers.number_type | Work Place
-| telephone_numbers.comment |
-| email_addresses.email_address | BelleUlijn@mail.be
-| email_addresses.email_address_type | Primary Home
+| type    | phone - Phone (code by ContactPointSystem)  |
+| value   | +3247458497 |
+| use     | mobile - Mobile (code by ContactPointUse) | 
+| comment | Only during work hours    |
 
 
+
+
+
+| ContactInformation     |                   |
+|------------------------|-------------------|
+| type    | email - Email (code by ContactPointSystem) |
+| value   | BelleUlijn@mail.be |
+| use     | work - Work (code by ContactPointUse) | 
+| comment |    |

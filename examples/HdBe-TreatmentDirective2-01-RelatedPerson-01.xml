@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='utf-8'?>
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="HdBe-TreatmentDirective2-01-RelatedPerson-01"/>
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson"/>
+  </meta>
+  <patient>
+    <reference value="Patient/HdBe-Patient-01"/>
+    <type value="Patient"/>
+    <display value="Belle Ulijn"/>
+  </patient>
+  <relationship>
+    <coding>
+      <system value="urn:oid:2.16.840.1.113883.2.4.3.11.22.472"/>
+      <code value="01"/>
+      <display value="Eerste relatie/contactpersoon"/>
+    </coding>
+  </relationship>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="HUSB"/>
+      <display value="husband"/>
+    </coding>
+  </relationship>
+  <name>
+    <extension url="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order">
+      <valueCode value="NL1"/>
+    </extension>
+    <use value="official"/>
+    <text value="Jan Pieter Mark (Piet) van Putten"/>
+    <family value="van Putten">
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+        <valueString value="van"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+        <valueString value="Putten"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix">
+        <valueString value="van"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
+        <valueString value="Kleeff"/>
+      </extension>
+    </family>
+    <given value="Jan">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="BR"/>
+      </extension>
+    </given>
+    <given value="Pieter">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="BR"/>
+      </extension>
+    </given>
+    <given value="Mark">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="BR"/>
+      </extension>
+    </given>
+    <prefix value="Dr."/>
+  </name>
+  <name>
+    <use value="usual"/>
+    <given value="Piet"/>
+  </name>
+  <telecom>
+    <system value="email"/>
+    <value value="giesput@myweb.nl"/>
+    <use value="home"/>
+  </telecom>
+  <address>
+    <extension url="http://hl7.org/fhir/StructureDefinition/language">
+      <valueCode value="nl"/>
+    </extension>
+    <use value="home"/>
+    <type value="both"/>
+    <line value="1e Jacob van Campenstr to 15 A 2e">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+        <valueString value="1e Jacob van Campenstr"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+        <valueString value="15"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
+        <valueString value="A 2e"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID">
+        <valueString value="test info"/>
+      </extension>
+    </line>
+    <city value="Hoogmade"/>
+    <district value="Kaag en Braassem"/>
+    <postalCode value="1012 NX"/>
+    <country value="Nederland">
+      <extension url="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification">
+        <valueCodeableConcept>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <version value="2020-10-26T00:00:00"/>
+            <code value="NL"/>
+            <display value="Netherlands"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+    </country>
+  </address>
+</RelatedPerson>

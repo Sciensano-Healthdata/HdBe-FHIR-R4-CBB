@@ -1,24 +1,14 @@
 ## Example instances
-
-| [CBB name]      |                   |
-|-----------------|-------------------|
-| [Concept name ] | [example value]   |
-
-
-// example of NameInformation
-```
-## Example instances
-
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```
+| encounter                             |                   |
+|---------------------------------------|-------------------|        
+| contact_type	                        | CT0005 - Inpatient (code by Healtdata.be (Sciensano)) |                   
+| contact_with.health_professional      | Reference to HealthProfessional (E. Penninx) |
+| location	                            | Reference to HealthcareProvide (GRAND HOPITAL DE CHARLEROI - SAINT-JOSEPH) |
+| start_date_time                       | 2012-08-16 |
+| end_date_time	                        | 2012-08-19 |
+| contact_reason.problem                |  |
+| contact_reason.procedure              |  |
+| contact_reason.deviating_result	    |  |
+| contact_reason.comment_contact_reason	| stomach ache  |
+| origin                                | 264362003 - Home (code by SNOMED CT) |
+| destination                           | 22232009 - Hospital (code by SNOMED CT) |

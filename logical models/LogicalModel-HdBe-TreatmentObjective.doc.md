@@ -1,5 +1,5 @@
-## zib [zib name + version](https://zibs.nl/wiki/[zib name + version(release)]) difference
+## zib [TreatmentObjective-v3.2](https://zibs.nl/wiki/TreatmentObjective-v3.2(2020EN)) difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+| `treatment_objective` | constraint | Added a constraint on the root to indicate the invariant from the zib that is noted in the UML representation. |

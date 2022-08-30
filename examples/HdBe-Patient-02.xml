@@ -1,177 +1,142 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Patient xmlns="http://hl7.org/fhir">
-    <id value="HdBe-Patient-02" />
-    <meta>
-        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
-    </meta>
-    <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
-        <extension url="code">
-            <valueCodeableConcept>
-                <coding>
-                    <system value="urn:iso:std:iso:3166" />
-                    <code value="BE" />
-                    <display value="Belgium" />
-                </coding>
-            </valueCodeableConcept>
-        </extension>
+  <id value="HdBe-Patient-02"/>
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient"/>
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
+    <extension url="code">
+      <valueCodeableConcept>
+        <coding>
+          <system value="urn:iso:std:iso:3166"/>
+          <code value="BE"/>
+          <display value="Belgium"/>
+        </coding>
+      </valueCodeableConcept>
     </extension>
-    <identifier>
-        <use value="official" />
-        <type>
-            <coding>
-                <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
-                <code value="SB" />
-                <display value="Social Beneficiary Identifier" />
-            </coding>
-        </type>
-        <system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin" />
-        <value value="79121137740" />
-    </identifier>
-    <identifier>
-        <use value="usual" />
-        <type>
-            <coding>
-                <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
-                <code value="MR" />
-                <display value="Medical record number" />
-            </coding>
-        </type>
-        <system value="https://www.example.be/standards/fhir/NamingSystem/patientrecord" />
-        <value value="45XXP0PA-4" />
-    </identifier>
-    <active value="true" />
-    <name>
-      <use value="official"/>
-      <text value="Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
-      <family value="van Putten-van der Giessen">
-         <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
-            <valueString value="van"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
-            <valueString value="Putten"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix">
-            <valueString value="van der"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
-            <valueString value="Giessen"/>
-         </extension>
-      </family>
-      <given value="Johanna Petronella Maria">
-         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
-            <valueCode value="BR"/>
-         </extension>
-      </given>
-   </name>
-   <name>
-      <use value="usual"/>
-      <given value="Jo"/>
-   </name>
-    <telecom>
-        <system value="email" />
-        <value value="j.giessen@belgium.be" />
-        <use value="home"/>
-    </telecom>
-    <telecom>
-        <system value="phone" >
-            <extension url="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification">
-                <valueCodeableConcept>
-                <coding>
-                    <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
-                    <code value="MC"/>
-                    <display value="Mobile Phone"/>
-                </coding>
-                </valueCodeableConcept>
-            </extension>
-         </system>
-        <value value="+322476792979" />
-        <use value="mobile" />
-    </telecom>
-    <gender value="female" />
-    <birthDate value="1979-12-11"/>
-    <address>
-        <extension url="http://hl7.org/fhir/StructureDefinition/language">
-            <valueCode value="nl" />
-        </extension>
-        <extension url="https://fhir.healthdata.be/StructureDefinition/ext-AddressInformation.AddressType">
-         <valueCodeableConcept>
-            <coding>
-               <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
-               <code value="HP"/>
-               <display value="Primary Home"/>
-            </coding>
-         </valueCodeableConcept>
+  </extension>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="SB"/>
+        <display value="Social Beneficiary Identifier"/>
+      </coding>
+    </type>
+    <system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"/>
+    <value value="79121137740"/>
+  </identifier>
+  <identifier>
+    <use value="usual"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MR"/>
+        <display value="Medical record number"/>
+      </coding>
+    </type>
+    <system value="https://www.example.be/standards/fhir/NamingSystem/patientrecord"/>
+    <value value="45XXP0PA-4"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="official"/>
+    <text value="Johanna Petronella Maria (Jo) van Putten-van der Giessen"/>
+    <family value="van Putten-van der Giessen">
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+        <valueString value="van"/>
       </extension>
-        <use value="home" />
-        <type value="both" />
-        <text value="Sloordelle 42, 1160 Oudergem" />
-        <line value="Sloordelle 42">
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
-                <valueString value="Sloordelle" />
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
-                <valueString value="42" />
-            </extension>
-        </line>
-        <city value="Oudergem" />
-        <postalCode value="1160" />
-        <country value="BE" />
-    </address>
-    <address>
-        <extension url="http://hl7.org/fhir/StructureDefinition/language">
-            <valueCode value="fr" />
-        </extension>
-        <extension url="https://fhir.healthdata.be/StructureDefinition/ext-AddressInformation.AddressType">
-         <valueCodeableConcept>
-            <coding>
-               <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
-               <code value="HP"/>
-               <display value="Primary Home"/>
-            </coding>
-         </valueCodeableConcept>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+        <valueString value="Putten"/>
       </extension>
-        <use value="home" />
-        <type value="both" />
-        <text value="42, Allee des Colzas, 1160 Auderghem" />
-        <line value="42, Allee des Colzas">
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
-                <valueString value="Allee des Colzas" />
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
-                <valueString value="42" />
-            </extension>
-        </line>
-        <city value="Auderghem" />
-        <postalCode value="1160" />
-        <country value="Belgium">
-            <extension url="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification">
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="urn:iso:std:iso:3166" />
-                        <code value="BE" />
-                        <display value="Belgium" />
-                    </coding>
-                </valueCodeableConcept>
-            </extension>
-        </country>
-    </address>
-    <maritalStatus>
-        <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus" />
-            <code value="D" />
-            <display value="Divorced" />
-        </coding>
-        <!--  
-        <coding>
-            <system value="https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-civilstate" />
-            <code value="41" />
-            <display value="Divorced since 1/10/1994" />
-        </coding>
-        -->
-    </maritalStatus>
-    <generalPractitioner>
-        <reference value="Practitioner/HdBe-HealthProfessional-Practitioner-01" />
-        <type value="Practitioner" />
-        <display value="Healthcare professional (person), E. Penninx" />
-    </generalPractitioner>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix">
+        <valueString value="van der"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
+        <valueString value="Giessen"/>
+      </extension>
+    </family>
+    <given value="Johanna Petronella Maria">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="BR"/>
+      </extension>
+    </given>
+  </name>
+  <name>
+    <use value="usual"/>
+    <given value="Jo"/>
+  </name>
+  <telecom>
+    <system value="email"/>
+    <value value="j.giessen@belgium.be"/>
+    <use value="home"/>
+  </telecom>
+  <telecom>
+    <system value="phone"/>
+    <value value="+322476792979"/>
+    <use value="mobile"/>
+  </telecom>
+  <gender value="female"/>
+  <birthDate value="1979-12-11"/>
+  <address>
+    <extension url="http://hl7.org/fhir/StructureDefinition/language">
+      <valueCode value="nl"/>
+    </extension>
+    <use value="home"/>
+    <type value="both"/>
+    <text value="Sloordelle 42, 1160 Oudergem"/>
+    <line value="Sloordelle 42">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+        <valueString value="Sloordelle"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+        <valueString value="42"/>
+      </extension>
+    </line>
+    <city value="Oudergem"/>
+    <postalCode value="1160"/>
+    <country value="BE"/>
+  </address>
+  <address>
+    <extension url="http://hl7.org/fhir/StructureDefinition/language">
+      <valueCode value="fr"/>
+    </extension>
+    <use value="home"/>
+    <type value="both"/>
+    <text value="42, Allee des Colzas, 1160 Auderghem"/>
+    <line value="42, Allee des Colzas">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+        <valueString value="Allee des Colzas"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+        <valueString value="42"/>
+      </extension>
+    </line>
+    <city value="Auderghem"/>
+    <postalCode value="1160"/>
+    <country value="Belgium">
+      <extension url="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification">
+        <valueCodeableConcept>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="BE"/>
+            <display value="Belgium"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+    </country>
+  </address>
+  <maritalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+      <code value="D"/>
+      <display value="Divorced"/>
+    </coding>
+  </maritalStatus>
+  <generalPractitioner>
+    <reference value="Practitioner/HdBe-HealthProfessional-Practitioner-01"/>
+    <type value="Practitioner"/>
+    <display value="Healthcare professional (person), E. Penninx"/>
+  </generalPractitioner>
 </Patient>

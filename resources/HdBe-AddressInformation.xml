@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-AddressInformation" />
   <meta>
-    <lastUpdated value="2022-06-30T15:14:02.8777359+00:00" />
+    <lastUpdated value="2022-08-25T14:31:16.7429184+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation" />
   <name value="HdBeAddressInformation" />
@@ -39,7 +39,7 @@
     <element id="Address">
       <path value="Address" />
       <short value="AddressInformation" />
-      <definition value="This datatype defines a common basis for expressing all addresses around the world, but adds extensions to express Belgium addresses specifically, according to the CBB AddressInformation. A Belgium Address still is a proper FHIR Address, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype.&#xD;&#xA;&#xD;&#xA;To have true compatibility an implementer SHOULD use the core Address parts as intended. To have addresses work for Belgium context, the implementer SHOULD in addition use the extension elements.&#xD;&#xA;&#xD;&#xA;**Separate address parts**&#xD;&#xA;&#xD;&#xA;The first addition is that Belgium addresses make certain address parts separately communicable. These parts are required for use in true Belgium systems when dealing with Belgium addresses, but may not have value for international systems when information gets sent abroad.&#xD;&#xA;&#xD;&#xA;**Custom address types**&#xD;&#xA;&#xD;&#xA;The second addition is that the CBB defines its own ValueSet for address types, which can only be partially expressed using the FHIR Address datatype and requires a mapping to multiple elements. The table below explains how the CBB concepts are mapped to the various FHIR elements (see the ConceptMaps &lt;https://fhir.healthdata.be/ConceptMap/AddressType-to-AddressType&gt; and &lt;https://fhir.healthdata.be/ConceptMap/AddressType-to-AddressUse&gt; as well). The code from the CBB should also be included using the extension on `Address.extension:addressType`.&#xD;&#xA;&#xD;&#xA;         | CBB                               | .ext:addressType | .use | .type    |&#xD;&#xA;         |-----------------------------------|------------------|------|----------|&#xD;&#xA;         | Postal Address/Postadres          | PST              |      | postal   |&#xD;&#xA;         | Primary Home/Officieel adres      | HP               | home | both     |&#xD;&#xA;         | Visit Address/Woon-/verblijfadres | PHYS             | home | physical |&#xD;&#xA;         | Temporary Address/Tijdelijk adres | TMP              | temp |          |&#xD;&#xA;         | Work Place/Werkadres              | WP               | work |          |&#xD;&#xA;         | Vacation Home/Vakantie adres      | HV               | temp |          |&#xD;&#xA;&#xD;&#xA;If `Address.type` is _both_ then this is to be understood as a dual purpose address (postal and physical), unless a specific &quot;postal&quot; type address is added. Systems that support importing it like this are encouraged to do so, otherwise they may need to import this as two separate addresses.&#xD;&#xA;&#xD;&#xA;Note: FHIR core defines the AD-use extension to further specify the postal address type. However, the ValueSet used in that extension doesn't completely match the CBB's ValueSet. Therefore, a custom extension has been made. This doesn't preclude the use of the AD-use extension." />
+      <definition value="This datatype defines a common basis for expressing all addresses around the world, but adds extensions to express Belgium addresses specifically, according to the CBB AddressInformation. A Belgium Address still is a proper FHIR Address, which means that systems that cannot interpret the extensions will still be able to render and work with this datatype.&#xD;&#xA;&#xD;&#xA;To have true compatibility an implementer SHOULD use the core Address parts as intended. To have addresses work for Belgium context, the implementer SHOULD in addition use the extension element.&#xD;&#xA;&#xD;&#xA;**Separate address parts**&#xD;&#xA;&#xD;&#xA;The first addition is that Belgium addresses make certain address parts separately communicable. These parts are required for use in true Belgium systems when dealing with Belgium addresses, but may not have value for international systems when information gets sent abroad." />
       <alias value="Adresgegevens" />
       <mapping>
         <identity value="zib-addressinformation-v1.1-2020EN" />
@@ -62,33 +62,10 @@
       </slicing>
       <min value="1" />
     </element>
-    <element id="Address.extension:addressType">
-      <path value="Address.extension" />
-      <sliceName value="addressType" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/ext-AddressInformation.AddressType" />
-      </type>
-    </element>
-    <element id="Address.extension:addressType.value[x]">
-      <path value="Address.extension.value[x]" />
-      <mapping>
-        <identity value="zib-addressinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.5.8" />
-        <comment value="AddressType" />
-      </mapping>
-      <mapping>
-        <identity value="HdBe-AddressInformation" />
-        <map value="address_type" />
-      </mapping>
-    </element>
     <element id="Address.extension:language">
       <path value="Address.extension" />
       <sliceName value="language" />
-      <min value="0" />
-      <max value="1" />
+      <min value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/language" />
@@ -100,15 +77,6 @@
       <short value="AddressType" />
       <definition value="The type of address in question, such as a home address or mailing address." />
       <alias value="AdresSoort" />
-      <binding>
-        <strength value="required" />
-        <description value="Use ConceptMap 'AddressType-to-AddressUse' to translate CBB terminology to profile terminology in ValueSet 'AddressUse'" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/address-use|4.0.1">
-          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="https://fhir.healthdata.be/ConceptMap/AddressType-to-AddressUse" />
-          </extension>
-        </valueSet>
-      </binding>
       <mapping>
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.8" />
@@ -116,7 +84,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-AddressInformation" />
-        <map value="address_type" />
+        <map value="address_information.address_use" />
       </mapping>
     </element>
     <element id="Address.type">
@@ -124,15 +92,6 @@
       <short value="AddressType" />
       <definition value="The type of address in question, such as a home address or mailing address." />
       <alias value="AdresSoort" />
-      <binding>
-        <strength value="required" />
-        <description value="Use ConceptMap 'AddressType-to-AddressType' to translate CBB terminology to profile terminology in ValueSet 'AddressType'" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/address-type|4.0.1">
-          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="https://fhir.healthdata.be/ConceptMap/AddressType-to-AddressType" />
-          </extension>
-        </valueSet>
-      </binding>
       <mapping>
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.8" />
@@ -140,7 +99,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-AddressInformation" />
-        <map value="address_type" />
+        <map value="address_information.address_type" />
       </mapping>
     </element>
     <element id="Address.line">
@@ -180,7 +139,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-AddressInformation" />
-        <map value="street" />
+        <map value="address_information.street" />
       </mapping>
     </element>
     <element id="Address.line.extension:houseNumber">
@@ -205,7 +164,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-AddressInformation" />
-        <map value="house_number" />
+        <map value="address_information.house_number" />
       </mapping>
     </element>
     <element id="Address.line.extension:houseNumberLetter-houseNumberAddition">
@@ -236,11 +195,11 @@
       </mapping>
       <mapping>
         <identity value="HdBe-AddressInformation" />
-        <map value="house_number_letter" />
+        <map value="address_information.house_number_letter" />
       </mapping>
       <mapping>
         <identity value="HdBe-AddressInformation" />
-        <map value="house_number_addition" />
+        <map value="address_information.house_number_addition" />
       </mapping>
     </element>
     <element id="Address.line.extension:houseNumberIndication">
@@ -272,7 +231,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-AddressInformation" />
-        <map value="house_number_indication" />
+        <map value="address_information.house_number_indication" />
       </mapping>
     </element>
     <element id="Address.line.extension:additionalInformation">
@@ -296,7 +255,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-AddressInformation" />
-        <map value="additional_information" />
+        <map value="address_information.additional_information" />
       </mapping>
     </element>
     <element id="Address.city">
@@ -311,7 +270,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-AddressInformation" />
-        <map value="place_of_residence" />
+        <map value="address_information.place_of_residence" />
       </mapping>
     </element>
     <element id="Address.district">
@@ -326,7 +285,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-AddressInformation" />
-        <map value="municipality" />
+        <map value="address_information.municipality" />
       </mapping>
     </element>
     <element id="Address.postalCode">
@@ -341,7 +300,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-AddressInformation" />
-        <map value="postcode" />
+        <map value="address_information.postcode" />
       </mapping>
     </element>
     <element id="Address.country">
@@ -386,7 +345,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-AddressInformation" />
-        <map value="country" />
+        <map value="address_information.country" />
       </mapping>
     </element>
   </differential>

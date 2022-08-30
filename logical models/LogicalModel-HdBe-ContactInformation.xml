@@ -29,13 +29,13 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="**Concept**&#xD;&#xA;Contact information includes a person's telephone numbers en e-mail addresses.&#xD;&#xA;This is a partial information model.&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;Contact information is used to contact a person.">
+  <description value="**Concept**&#xD;&#xA;Contact information includes a person's telephone numbers and e-mail addresses.&#xD;&#xA;This is a partial information model.&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;Contact information is used to contact a person.">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
         <valueCode value="nl-NL" />
       </extension>
       <extension url="content">
-        <valueMarkdown value="**Concept**&#xD;&#xA;Contactgegevens bevatten de telefoonnummers en e-mail adressen van een persoon.&#xD;&#xA;Dit is een subbouwsteen.&#xD;&#xA;**Purpose**&#xD;&#xA;Contactgegevens worden gebruikt om met een persoon in contact te treden.&#xD;&#xA;" />
+        <valueMarkdown value="**Concept**&#xD;&#xA;Contactgegevens bevatten de telefoonnummers en e-mail adressen van een persoon.&#xD;&#xA;Dit is een subbouwsteen.&#xD;&#xA;**Purpose**&#xD;&#xA;Contactgegevens worden gebruikt om met een persoon in contact te treden." />
       </extension>
     </extension>
   </description>
@@ -72,244 +72,59 @@
       <min value="0" />
       <max value="*" />
     </element>
-    <element id="contact_information.telephone_numbers">
-      <path value="contact_information.telephone_numbers" />
-      <short value="TelephoneNumbers">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Telefoonnummers" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Container of the TelephoneNumbers concept. This container contains all data elements of the TelephoneNumbers concept.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Container van het concept Telefoonnummers. Deze container bevat alle gegevenselementen van het concept Telefoonnummers." />
-          </extension>
-        </extension>
-      </definition>
+    <element id="contact_information.type">
+      <path value="contact_information.type" />
+      <short value="Type" />
+      <definition value="The type of contact information." />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <type>
-        <code value="BackboneElement" />
+        <code value="CodeableConcept" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
       </type>
+      <binding>
+        <strength value="required" />
+        <description value="Telecommunications form for contact point." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/contact-point-system" />
+      </binding>
     </element>
-    <element id="contact_information.telephone_numbers.telephone_number">
-      <path value="contact_information.telephone_numbers.telephone_number" />
-      <short value="TelephoneNumber">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Telefoonnummer" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The person's telephone number.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Een telefoonnummer van de persoon." />
-          </extension>
-        </extension>
-      </definition>
+    <element id="contact_information.value">
+      <path value="contact_information.value" />
+      <short value="Value" />
+      <definition value="The actual contact information details." />
       <min value="1" />
       <max value="1" />
       <type>
         <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
       </type>
     </element>
-    <element id="contact_information.telephone_numbers.telecom_type">
-      <path value="contact_information.telephone_numbers.telecom_type" />
-      <short value="TelecomType">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="TelecomType" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The telecom or device type that the telephone number is connected to.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Het type netwerk of apparaat waar het telefoonummer aan verbonden is" />
-          </extension>
-        </extension>
-      </definition>
+    <element id="contact_information.use">
+      <path value="contact_information.use" />
+      <short value="Use" />
+      <definition value="Purpose or use of the contact information. For example whether it is a private or business telephone number." />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="CodeableConcept" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
       </type>
       <binding>
-        <strength value="extensible" />
-        <description value="TelecomType codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/TelecomType" />
+        <strength value="required" />
+        <description value="Use of contact point." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/contact-point-use" />
       </binding>
     </element>
-    <element id="contact_information.telephone_numbers.number_type">
-      <path value="contact_information.telephone_numbers.number_type" />
-      <short value="NumberType">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="NummerSoort" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="NumberType indicates whether the number is a landline, temporary, work telephone number.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Met NummerSoort kan aangegeven worden of het om een vast, tijdelijk, werk nummer gaat." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="NumberType codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/NumberType" />
-      </binding>
-    </element>
-    <element id="contact_information.telephone_numbers.comment">
-      <path value="contact_information.telephone_numbers.comment" />
-      <short value="Comment">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Toelichting" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Explanation about the telephone number and how to use it. It can be indicated, for example, that it is a department number (for healthcare professionnels) or that availability by phone is only possible during a specified part of the day.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Toelichting over het telefoonnummer en over het gebruik ervan. Aangegeven kan bijvoorbeeld worden dat het een afdelingsnummer is (bij zorgverleners) of dat de bereikbaarheid slecht gedurende een aangegeven deel van de dag mogelijk is." />
-          </extension>
-        </extension>
-      </definition>
+    <element id="contact_information.comment">
+      <path value="contact_information.comment" />
+      <short value="Comment" />
+      <definition value="Explanation about the contact information and how to use it. It can be indicated, for example, that a telephone number concerns a department number (for healthcare professionals) or that availability by phone is only possible during a specified part of the day." />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
       </type>
-    </element>
-    <element id="contact_information.email_addresses">
-      <path value="contact_information.email_addresses" />
-      <short value="EmailAddresses">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="EmailAdressen" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Container of the E-mailAddresses concept. This container contains all data elements of the E-mailAddresses concept.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Container van het concept EmailAdressen. Deze container bevat alle gegevenselementen van het concept Emailadressen." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="BackboneElement" />
-      </type>
-    </element>
-    <element id="contact_information.email_addresses.email_address">
-      <path value="contact_information.email_addresses.email_address" />
-      <short value="EmailAddress">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="EmailAdres" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The person's e-mail address">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Een e-mailadres van de persoon" />
-          </extension>
-        </extension>
-      </definition>
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="contact_information.email_addresses.email_address_type">
-      <path value="contact_information.email_addresses.email_address_type" />
-      <short value="EmailAddressType">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="EmailSoort" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="E-mailAddressType indicates whether it is a private or business e-mail address.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Met EmailSoort kan aangegeven worden of het om een prive of zakelijk e-mail adres gaat." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="extensible" />
-        <description value="EmailAddressType codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/EmailAddressType" />
-      </binding>
     </element>
   </differential>
 </StructureDefinition>

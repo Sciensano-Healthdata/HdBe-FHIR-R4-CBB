@@ -1,24 +1,15 @@
 ## Example instances
 
-| [CBB name]      |                   |
-|-----------------|-------------------|
-| [Concept name ] | [example value]   |
+| range         |               |
+|---------------|---------------|
+| minimum_value | 5 gram        |
+| maximum_value | 10 gram       | 
+| nominal_value |               |
+
+| range         |               |
+|---------------|---------------|
+| minimum_value |               |
+| maximum_value |               | 
+| nominal_value | 2 ml per day  |
 
 
-// example of NameInformation
-```
-## Example instances
-
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```

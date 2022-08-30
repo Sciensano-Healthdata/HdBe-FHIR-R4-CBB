@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="AllergyStatus-to-AllergyIntoleranceClinicalStatusCodes" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+    <valueBoolean value="false" />
+  </extension>
+  <url value="https://fhir.healthdata.be/ConceptMap/AllergyStatus-to-AllergyIntoleranceClinicalStatusCodes" />
+  <version value="0.0.1" />
+  <name value="AllergyStatus_to_AllergyIntoleranceClinicalStatusCodes" />
+  <title value="AllergyStatus_to_AllergyIntoleranceClinicalStatusCodes" />
+  <status value="draft" />
+  <date value="2022-07-07T15:04:03.2592055+00:00" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Maps AllergyStatus codes as found in the CBB AllergyIntolerance to &lt;http://hl7.org/fhir/ValueSet/allergyintolerance-clinical&gt; as found in `AllergyIntolerance.clinicalStatus` in FHIR R4." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <sourceCanonical value="https://fhir.healthdata.be/ValueSet/AllergyStatus" />
+  <targetCanonical value="http://hl7.org/fhir/ValueSet/allergyintolerance-clinical" />
+  <group>
+    <source value="http://snomed.info/sct" />
+    <target value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" />
+    <element>
+      <code value="55561003" />
+      <display value="active" />
+      <target>
+        <code value="active" />
+        <display value="Active" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="73425007" />
+      <display value="inactive" />
+      <target>
+        <code value="inactive" />
+        <display value="Inactive" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+  </group>
+</ConceptMap>

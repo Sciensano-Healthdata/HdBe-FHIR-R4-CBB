@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Consent xmlns="http://hl7.org/fhir">
+  <id value="HdBe-TreatmentDirective2-01"/>
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-TreatmentDirective2"/>
+  </meta>
+  <status value="inactive"/>
+  <scope>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/consentscope"/>
+      <code value="treatment"/>
+      <display value="Treatment"/>
+    </coding>
+  </scope>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="129125009"/>
+      <display value="Procedure with explicit context"/>
+    </coding>
+  </category>
+  <patient>
+    <reference value="Patient/HdBe-Patient-01"/>
+    <type value="Patient"/>
+    <display value="Belle Ulijn"/>
+  </patient>
+  <dateTime value="2012-09-11"/>
+  <sourceReference>
+    <reference value="Consent/HdBe-TreatmentDirective2-01-Consent-01"/>
+    <type value="Consent"/>
+    <display value="AdvanceDirective, Power of attorney granted, 2010-05-06"/>
+  </sourceReference>
+  <policy>
+    <uri value="https://www.belgielex.be"/>
+  </policy>
+  <provision>
+    <extension url="https://fhir.healthdata.be/StructureDefinition/ext-TreatmentDirective2.ReasonForEnding">
+      <valueString value="hersteld en ontslagen"/>
+    </extension>
+    <type value="permit"/>
+    <period>
+      <end value="2012-10-15"/>
+    </period>
+    <actor>
+      <role>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+          <code value="CONSENTER"/>
+          <display value="consenter"/>
+        </coding>
+      </role>
+      <reference>
+        <reference value="RelatedPerson/HdBe-TreatmentDirective2-01-RelatedPerson-01"/>
+        <type value="RelatedPerson"/>
+        <display value="Contact person, Jan Pieter Mark (Piet) van Putten"/>
+      </reference>
+    </actor>
+    <actor>
+      <role>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+          <code value="CONSENTER"/>
+          <display value="consenter"/>
+        </coding>
+      </role>
+      <reference>
+        <reference value="PractitionerRole/HdBe-TreatmentDirective2-01-PractitionerRole-01"/>
+        <type value="PractitionerRole"/>
+        <display value="Healthcare professional (role), J.H.R. Peters, Arts"/>
+      </reference>
+    </actor>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="305351004"/>
+        <display value="Admission to intensive care unit"/>
+      </coding>
+    </code>
+  </provision>
+</Consent>

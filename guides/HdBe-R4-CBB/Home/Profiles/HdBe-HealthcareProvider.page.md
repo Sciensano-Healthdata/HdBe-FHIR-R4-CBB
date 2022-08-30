@@ -56,8 +56,9 @@ select
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-HealthcareProvider') { map, comment }
-      ```
+        join mapping.where(identity.startsWith('HdBe-')){ map, CBB: identity, comment  } 
+ 			order by CBB 
+     ```
     </div>
   </div>
 
@@ -123,12 +124,14 @@ select
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-HealthcareProvider') { map, comment }
-      ```
+        join mapping.where(identity.startsWith('HdBe-')){ map, CBB: identity, comment  } 
+ 			order by CBB 
+     ```
     </div>
   </div>
 
   <div id="Examples2" class="tabcontent">
+      <p> A UML overview at the bottom of this page provides an example of how a hierarchical structure is initialized in FHIR using Organization and Location resources. </p>
       <ul>
         <li>{{pagelink:Home/Examples/HdBe-HealthcareProvider-Organization-01.page.md}}</li>
         <li>{{pagelink:Home/Examples/HdBe-HealthcareProvider-Organization-02.page.md}}</li>
@@ -159,4 +162,136 @@ join binding.where(valueSet.exists())
 	URL: valueSet,
 	ConceptMap: iif(valueSet.extension.where(url='http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap').exists().not(), 'No bound ConceptMap', valueSet.extension.valueCanonical)
 	}
-```  
+``` 
+
+## NamingSystems
+
+@```
+from NamingSystem
+where id in ( 'DepartmentIdentificationNumber' | 'LocationIdentificationNumber' )
+select 
+Name: name,
+Kind: kind,
+Description: description,
+UniqueId: for uniqueId.where(preferred = true) select value
+```
+
+<br/><br/> 
+
+## A UML example of a hierarchical structure initialized in FHIR resources
+**Please note**: that he UML is splitst into two for readability purposes. The first UML demonstrates profoundly the Location hierarchical structure. The second UML shows how each instance of the Location hierachy can also refer to the Organization hierachy. 
+
+The locationId, departmentId and nihdi are all mapped to their approriate slice on `.identifier`.
+
+### Location hierachy 
+
+<plantuml>
+  set namespaceSeparator none
+  skinparam backgroundcolor transparent
+
+  class "HealthcareProvider-Organization" <<Organization>>
+    {
+      nidhi = 71001228
+      name = ALGEMEEN ZIEKENHUIS ST. BLASIUS
+    }
+  class Site1 <<Location>>
+    {
+      locationId = 3460
+      name = ST. BLASIUS- ALGEMEEN ZIEKENHUIS
+    }
+  class Site2 <<Location>>
+    {
+      locationId = 3480
+      name =  ST. BLASIUS- DAGZIEKENHUIS & POLIKLINIEK
+    }
+  class Ward1 <<Location>>
+    {
+      locationId = 3460
+      departmentId = 012-E
+      name = Pediatrie
+    }
+  class Ward2 <<Location>>
+    {
+      locationId = 3460
+      departmentId = 012-G1
+      name = Geriatrie
+    }
+  class Ward3 <<Location>>
+    {
+      locationId = 3460
+      departmentId = 012-Intensieve
+      name = Intensieve      
+    }
+  class Ward4 <<Location>>
+    {
+      locationId = 3480
+      departmentId = 012-E
+      name = Pediatrie
+    }
+  class Ward5 <<Location>>
+    {
+      locationId = 3480
+      departmentId = 012-Hemodialyse
+      name = Hemodialyse
+    }
+
+  "HealthcareProvider-Organization"  <-- Site1: Location.managingOrganization
+  "HealthcareProvider-Organization"  <-- Site2: Location.managingOrganization
+
+  Site1 <-- Ward1 : Location.partOf
+  Site1 <-- Ward2 : Location.partOf
+  Site1 <-- Ward3 : Location.partOf
+  Site2 <-- Ward4 : Location.partOf
+  Site2 <-- Ward5 : Location.partOf
+
+</plantuml>
+
+<br/><br/> 
+
+### Location and Organization hierachy of one site and one ward
+
+<br/><br/> 
+
+<plantuml>
+  set namespaceSeparator none
+  skinparam backgroundcolor transparent
+
+  class "HealthcareProvider" <<Organization>>
+    {
+      nidhi = 70100179
+      name = ALGEMEEN ZIEKENHUIS ST. BLASIUS
+    }
+  class "Site1 L" <<Location>>
+    {
+      locationId = 3460
+      name = ST. BLASIUS- ALGEMEEN ZIEKENHUIS
+    }
+  class "Site1 O" <<Organization>>
+    {
+      name = ST. BLASIUS- ALGEMEEN ZIEKENHUIS
+      type = General Hospital
+    }
+  class "Ward1 L" <<Location>>
+    {
+      locationId = 3460
+      departmentId = 012-E
+      name = Pediatrie
+    }
+  class "Ward1 O" <<Organization>>
+    {
+      name = Pediatrie
+      type = Pediatrie
+    }
+
+  "HealthcareProvider"  <-- "Site1 L": Location.managingOrganization
+  "HealthcareProvider"  <-- "Site1 O" : Organization.partOf
+
+  "Site1 O" <-- "Ward1 O" : Organization.partOf
+  "Site1 L" <-- "Ward1 L" : Location.partOf
+
+  "Site1 O" <-- "Site1 L" : Location.managingOrganization
+  "Ward1 O" <-- "Ward1 L" : Location.managingOrganization
+
+   "Ward1 O" -[hidden] "Ward1 L"
+   "Site1 O" -[hidden] "Site1 L" 
+</plantuml>

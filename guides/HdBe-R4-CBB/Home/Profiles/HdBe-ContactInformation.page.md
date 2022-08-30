@@ -2,7 +2,7 @@
 
 @```
 from StructureDefinition
-where url in ('https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-EmailAddresses'| 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers')
+where url = ('https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation')
 select 
 Profile: id,
 Description: description,
@@ -11,12 +11,11 @@ Status: status,
 URL: url
 ```
 
-## HdBe-ContactInformation-EmailAddresses
 
 @```
 from
 	StructureDefinition
-	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-EmailAddresses'
+	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation'
 select
 	Instructions: differential.element[0].comment
 ```
@@ -34,17 +33,17 @@ select
 
   <div id="Snapshot view" class="tabcontent" style="display:block">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-EmailAddresses, snapshot}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation, snapshot}}
   </div>
 
   <div id="Hybrid view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-EmailAddresses, hybrid}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation, hybrid}}
   </div>
 
   <div id="Diff view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-EmailAddresses, diff}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation, diff}}
   </div>
 
   <div id="Mapping" class="tabcontent">      
@@ -52,87 +51,22 @@ select
       <div>
       @```
       from StructureDefinition
-      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-EmailAddresses'
+      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation'
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-ContactInformation-EmailAddresses') { map, comment }
-      ```
+        join mapping.where(identity.startsWith('HdBe-')){ map, CBB: identity, comment  } 
+ 			order by CBB 
+     ```
     </div>
   </div>
 
   <div id="Examples" class="tabcontent">
-      <p> HdBe-NameInformation is a datatype profile and can therefore not have an example of its own. Rather, an example is provided within the example of the HdBe-profile(s) that use this datatype profile. </p>
+      <p> HdBe-ContactInformation is a datatype profile and can therefore not have an example of its own. Rather, an example is provided within the example of the HdBe-profile(s) that use this datatype profile. </p>
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:resources/HdBe-ContactInformation-EmailAddresses.doc.md}}
-  </div>
-
-</div>
-
-<br/><br/> 
-
-## HdBe-ContactInformation-TelephoneNumbers
-
-@```
-from
-	StructureDefinition
-	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers'
-select
-	Instructions: differential.element[0].comment
-```
-
-<div>
-  <div class="tab">
-     <button class="tablinks active" onclick="openTab(event, 'Snapshot view2')">Snapshot view</button>
-     <button class="tablinks" onclick="openTab(event, 'Hybrid view2')">Hybrid view</button>
-     <button class="tablinks" onclick="openTab(event, 'Diff view2')">Diff view</button>
-     <button class="tablinks" onclick="openTab(event, 'Mapping2')">Mapping</button>
-     <button class="tablinks" onclick="openTab(event, 'JSON example2')">JSON example</button>
-     <button class="tablinks" onclick="openTab(event, 'XML example2')">XML example</button>
-     <button class="tablinks" onclick="openTab(event, 'Zib diff2')">Zib-profile diff</button>
-     <button class="tablinks">{{pagelink:Home/LogicalModels/HdBe-ContactInformation.page.md, text:CBB}}</button>
-  </div>
-
-  <div id="Snapshot view2" class="tabcontent" style="display:block">
-    <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers, snapshot}}
-  </div>
-
-  <div id="Hybrid view2" class="tabcontent">
-    <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers, hybrid}}
-  </div>
-
-  <div id="Diff view2" class="tabcontent">
-    <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers, diff}}
-  </div>
-
-  <div id="Mapping2" class="tabcontent">      
-      <h3>Mapping FHIR profile to CBB</h3>
-      <div>
-      @```
-      from StructureDefinition
-      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers'
-      for differential.element 
-      select 
-        Path: id,
-        join mapping.where(identity = 'HdBe-ContactInformation-TelephoneNumbers') { map, comment }
-      ```
-    </div>
-  </div>
-
-  <div id="JSON example2" class="tabcontent">
-      <p> HdBe-ContactInformation-TelephoneNumbers is a datatype profile and can therefore not have an example of its own. Rather, an example is provided within the example of the HdBe-profile(s) that use this datatype profile. </p>
-  </div>
-  <div id="XML example2" class="tabcontent">
-      <p> HdBe-ContactInformation-TelephoneNumbers is a datatype profile and can therefore not have an example of its own. Rather, an example is provided within the example of the HdBe-profile(s) that use this datatype profile. </p>
-  </div>
-
-  <div id="Zib diff2" class="tabcontent">
-      {{render:resources/HdBe-ContactInformation-TelephoneNumbers.doc.md}}
+      {{render:resources/HdBe-ContactInformation.doc.md}}
   </div>
 
 </div>
@@ -143,7 +77,7 @@ select
 
 @```
 from StructureDefinition
-where url in ('https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-EmailAddresses'| 'https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation-TelephoneNumbers')
+where url = ('https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation')
 
 for differential.element
 select

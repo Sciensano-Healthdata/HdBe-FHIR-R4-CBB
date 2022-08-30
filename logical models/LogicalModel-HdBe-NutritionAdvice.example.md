@@ -1,24 +1,10 @@
 ## Example instances
 
-| [CBB name]      |                   |
-|-----------------|-------------------|
-| [Concept name ] | [example value]   |
+| nutrition_advice      |                   |
+|-----------------------|-------------------|
+| diet_type             | Energie verrijkt  |
+| consistency           | Dikvloeibaar |
+| indication.problem    | 267024001 - gewichtsverlies, abnormaal (code by SNOMED CT) |
+| comment               | Sinds een week dieet veranderd in energieverrijkt. |
 
 
-// example of NameInformation
-```
-## Example instances
-
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```

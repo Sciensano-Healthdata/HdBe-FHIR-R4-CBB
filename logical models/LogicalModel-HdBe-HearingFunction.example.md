@@ -1,24 +1,17 @@
 ## Example instances
 
-| [CBB name]      |                   |
-|-----------------|-------------------|
-| [Concept name ] | [example value]   |
+| hearing_function      |                   |
+|-----------------------|-------------------|
+| hearing_function      | 15188001 - Hearing loss (code by SNOMED CT) |
+| **hearing_aid**       | --- |
+| hearing_aid.medical_device.product.product_type | 723421006 - Tympanic membrane contact hearing aid (code by SNOMED CT) |
+| hearing_aid.medical_device.anatomical_location.location | 25577004 - Right ear structure (code by SNOMED CT) |
+| comment               | By articulating clearly and speaking slowly, the patient can understand reasonably well   |
 
-
-// example of NameInformation
-```
-## Example instances
-
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```
+| hearing_function      |                   |
+|-----------------------|-------------------|
+| hearing_function      | 162339002 - Hearing normal (code by SNOMED CT) |
+| **hearing_aid**       | --- |
+| hearing_aid.medical_device.product.product_type |   |
+| hearing_aid.medical_device.anatomical_location.location |   |
+| comment               | patient passed hearing test |   |

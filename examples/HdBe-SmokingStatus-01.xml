@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="HdBe-SmokingStatus-01"/>
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-SmokingStatus"/>
+  </meta>
+  <extension url="https://fhir.healthdata.be/StructureDefinition/ext-SmokingStatus.FrequencyQualifier">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="69620002"/>
+        <display value="Daily"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="365980008"/>
+      <display value="Tobacco use and exposure - finding"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/HdBe-Patient-01"/>
+    <type value="Patient"/>
+    <display value="Belle Ulijn"/>
+  </subject>
+  <effectivePeriod>
+    <start value="1985"/>
+  </effectivePeriod>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="722499006"/>
+      <display value="Electronic cigarette user"/>
+    </coding>
+  </valueCodeableConcept>
+  <note>
+    <text value="Tries to quit. Partner also smokes."/>
+  </note>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="53661000146106"/>
+        <display value="Tobacco use and exposure - finding"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="785889008"/>
+        <display value="Nicotine-filled electronic cigarette user"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="266918002"/>
+        <display value="Tobacco smoking consumption"/>
+      </coding>
+    </code>
+    <valueQuantity>
+      <value value="16.0"/>
+      <unit value="mg per day"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg/d"/>
+    </valueQuantity>
+  </component>
+</Observation>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="HdBe-BodyWeight-02"/>
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-BodyWeight"/>
+  </meta>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="vital-signs"/>
+      <display value="Vital Signs"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="29463-7"/>
+      <display value="Body weight"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/HdBe-Patient-01"/>
+    <type value="Patient"/>
+    <display value="Belle Ulijn"/>
+  </subject>
+  <effectiveDateTime value="2021-11-30"/>
+  <valueQuantity>
+    <value value="58.0"/>
+    <unit value="kilogram"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="kg"/>
+  </valueQuantity>
+  <note>
+    <text value="right leg amputated below the knee"/>
+  </note>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="248159006"/>
+        <display value="State of dress"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://fhir.healthdata.be/CodeSystem/Clothing"/>
+        <code value="CL0001"/>
+        <display value="Minimally dressed/underwear"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+</Observation>

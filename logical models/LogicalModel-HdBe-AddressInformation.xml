@@ -35,7 +35,7 @@
         <valueCode value="nl-NL" />
       </extension>
       <extension url="content">
-        <valueMarkdown value="**Concept**&#xD;&#xA;Adresgegevens bevatten de gegevens waar een persoon (tijdelijk of vast) woont of waar een gebouw zich bevindt.&#xD;&#xA;Dit is een subbouwsteen.&#xD;&#xA;**Purpose**&#xD;&#xA;Adres informatie wordt gebruik bij het bezoeken van personen of organisaties en ten behoeve van het adresseren van brieven.&#xD;&#xA;" />
+        <valueMarkdown value="**Concept**&#xD;&#xA;Adresgegevens bevatten de gegevens waar een persoon (tijdelijk of vast) woont of waar een gebouw zich bevindt.&#xD;&#xA;Dit is een subbouwsteen.&#xD;&#xA;**Purpose**&#xD;&#xA;Adres informatie wordt gebruik bij het bezoeken van personen of organisaties en ten behoeve van het adresseren van brieven." />
       </extension>
     </extension>
   </description>
@@ -390,9 +390,25 @@
         <code value="CodeableConcept" />
       </type>
       <binding>
-        <strength value="extensible" />
+        <strength value="required" />
         <description value="AddressType codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/AddressType" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/address-type" />
+      </binding>
+    </element>
+    <element id="address_information.address_use">
+      <path value="address_information.address_use" />
+      <short value="AddressUse" />
+      <definition value="The purpose of this address." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="AddressUse codes" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/address-use" />
       </binding>
     </element>
   </differential>

@@ -1,24 +1,17 @@
 ## Example instances
 
-| [CBB name]      |                   |
-|-----------------|-------------------|
-| [Concept name ] | [example value]   |
-
-
-// example of NameInformation
-```
-## Example instances
-
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```
+| medical_device        |                   |
+|-----------------------|-------------------|
+| **product**           | -- |
+| product.product_id    | (01)00810323008108(17)231005(21)6789UV0 (identification by GTIN)  |
+| product.product_type  | 360283003 - Auditory appliance (code by SNOMED CT)  |
+| product_description   | TuneAmp auditory appliance |
+| anatomical_location   |  |
+| **indication**        | -- |
+| indication.problem    | Reference to Problem (Listeriosis) | 
+| start_date            | 2022-05-01 |
+| end_date              |  |
+| comment               | Might need replacement in the near future. |
+| **location**          | -- |
+| location.healthcare_provider  | Reference to HealthcareProvider (GRAND HOPITAL DE CHARLEROI - SAINT-JOSEPH) |
+| health_professional   | Reference to HealthProfessional (Dr. E. Penninx, Dermatology)  |

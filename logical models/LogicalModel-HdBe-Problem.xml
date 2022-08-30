@@ -1,27 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBe-Problem"/>
-   <language value="en-US"/>
-   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-        <valuePeriod>
-            <start value="2020-09-01T00:00:00+02:00"/>
-        </valuePeriod>
-    </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"/>
-   <name value="HdBeProblem">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="HdBe-Probleem"/>
-         </extension>
+  <id value="HdBe-Problem" />
+  <language value="en-US" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+02:00" />
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem" />
+  <name value="HdBeProblem">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
       </extension>
-   </name>
-   <title value="HdBe Problem"/>
-   <status value="draft"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
+      <extension url="content">
+        <valueMarkdown value="HdBe-Probleem" />
+      </extension>
+    </extension>
+  </name>
+  <title value="HdBe Problem" />
+  <status value="draft" />
+  <date value="2022-07-07T15:04:03.2592055+00:00" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
     <name value="Service portal – healthdata.be" />
     <telecom>
       <system value="url" />
@@ -29,371 +30,386 @@
       <use value="work" />
     </telecom>
   </contact>
-   <description value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the person involved (the patient) themselves (in the form of a complaint), or by their healthcare provider (in the form of a diagnosis, for example). The situation can form cause for diagnostic or therapeutic policy. &#xD;&#xA;A problem includes all kinds of medical or nursing information that represents a health problem. A problem can represent various types of health problems: &#xD;&#xA; &#xD;&#xA;&#xD;&#xA;* A complaint, finding by patient: a subjective, negatively experienced observation of the patient’s health. Examples: stomach ache, amnesia&#xD;&#xA;* A symptom: an observation by or about the patient which may indicate a certain disease. Examples: fever, blood in stool, white spots on the roof of the mouth;&#xD;&#xA;* A diagnosis: medical interpretation of complaints and findings. Examples: Diabetes Mellitus type II, pneumonia, hemolytic-uremic syndrome.&#xD;&#xA;* A functional limitation: a reduction of functional options. Examples: reduced mobility, help required for dressing.&#xD;&#xA;* A complication: Every diagnosis seen by the healthcare provider as an unforeseen and undesired result of medical action. Examples: post-operative wound infections, loss of hearing through the use of antibiotics.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;An overview of a patient’s health problems has the purpose of informing all healthcare providers involved in the patient’s care on the patient’s current and past health condition. It provides insight into which problems require medical action, which are under control and which are no longer current. The problem overview also directly provides medical context for medication administered and procedures carried out. &#xD;&#xA;The overview promotes an efficient, targeted continuation of the patient’s care. &#xD;&#xA;A complete list of problems is of importance for automated decision support and determining contraindications.&#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;&#xD;&#xA;For the nursing domain: When two parties use different coding systems, the Snomed CT-based V&amp;VN Dutch nursing problem list should be used for exchange, so data becomes comparable and exchangeable. A mapping table is available from the V&amp;VN Dutch nursing problem list to Omaha System, NANDA-I and ICF.&#xD;&#xA;For the mental health domain, if the GGZ diagnosis list is used then the description of the relevant diagnosis from the DSM-5 or DSM-IV must be entered in the 'comments' of this HCIM.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="&#xD;&#xA;&#xD;&#xA;**Concept**&#xD;&#xA;Een probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de betroffene (de patiënt) zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose). De toestand kan aanleiding zijn voor diagnostisch of therapeutisch beleid.&#xD;&#xA;Een probleem omvat allerlei soorten medische of verpleegkundige gegevens, die een gezondheidsprobleem representeren. Een probleem kan verschillende typen gezondheidsproblemen representeren:&#xD;&#xA; &#xD;&#xA;&#xD;&#xA;* Een klacht (Complaint, finding by patient): een subjectieve, als negatief ervaren waarneming van de gezondheid. Voorbeelden: buikpijn, geheugenverlies&#xD;&#xA;* Een symptoom (Symptom): een waarneming door of over de patiënt die betrekking zou kunnen hebben op een bepaalde ziekte. Voorbeelden : koorts, bloed bij de ontlasting, witte vlekken op het gehemelte;&#xD;&#xA;* Een diagnose (Diagnosis): medische interpretatie van klachten en bevindingen. Voorbeelden: Diabetes Mellitus type II, pneumonie, Hemolytisch Uremisch Syndroom.&#xD;&#xA;* Een functionele beperking (Functional Limitation): een vermindering van functionele mogelijkheden. Voorbeelden: verminderde mobiliteit, hulp nodig bij aankleden.&#xD;&#xA;* Een complicatie (Complication): Iedere diagnose die door de zorgverlener gezien wordt als een onvoorzien en ongewenst gevolg van medisch handelen. Voorbeelden: wondinfectie na chirurgie, gehoorverlies door antibioticagebruik.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;Een overzicht van de problemen met betrekking tot de gezondheid van een patiënt heeft tot doel om alle bij de patiënt betrokken zorgverleners te informeren over de gezondheidstoestand van de patiënt in het heden en het verleden. Het geeft inzicht in welke problemen medisch handelen verlangen en welke niet meer actueel zijn. Het probleemoverzicht geeft ook direct de medische context weer voor toegediende medicatie en uitgevoerde procedures.&#xD;&#xA;Het overzicht bevordert een gerichte en efficiënte voortzetting van de zorg voor de patiënt.&#xD;&#xA;Een volledige probleemlijst is van belang ten behoeve van geautomatiseerde beslissingsondersteuning en het bepalen van contra-indicaties.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;&#xD;&#xA;Voor het verpleegkundige domein geldt: wanneer twee partijen verschillende classificatiesystemen hanteren, wordt voor uitwisseling de op Snomed CT gebaseerde Kernset Patiëntproblemen gebruikt, zodat gegevens vergelijkbaar en uitwisselbaar worden. Er is een mappingstabel beschikbaar van de Kernset Patiëntproblemen naar Omaha System, NANDA-I en ICF.&#xD;&#xA;Voor het GGZ domein geldt dat indien de GGZ diagnoselijst wordt gebruikt dat de omschrijving van de desbetreffende diagnose uit de DSM-5 of DSM-IV dient te worden ingevuld bij 'Toelichting' van deze zib.&#xD;&#xA;&#xD;&#xA;**References**&#xD;&#xA;1. openEHR-EHR-EVALUATION.problem.v1 [Online] Beschikbaar op: http://www.openehr.org/knowledge/ [Geraadpleegd: 23 juli 2014].&#xD;&#xA;&#xD;&#xA;2. North American Nursing Diagnosis Association [Online] Beschikbaar op: http://www.nanda.org [Geraadpleegd: 23 juli 2014].&#xD;&#xA;&#xD;&#xA;3. Diagnosethesaurus. Dutch Hospital Data [Online] Beschikbaar op: http://www.dutchhospitaldata.nl [Geraadpleegd: 23 juli 2014].&#xD;&#xA;&#xD;&#xA;4. Health Level Seven International EHR Technical Committee (February 2007) *Electronic Health Record–System Functional Model, Release 1. *Chapter Three: Direct Care Functions.&#xD;&#xA;&#xD;&#xA;5. HL7 (April 2007) *HL7 Implementation Guide: CDA Release 2 – Continuity of Care Document (CCD)*&#xD;&#xA;&#xD;&#xA;6. Nederlands Huisartsen Genootschap (2013)* HIS-Referentiemodel 2013*&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (15-02-2013)&#xD;&#xA;-&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (01-07-2013)&#xD;&#xA;-&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.2 (01-04-2015)&#xD;&#xA;Bevat: [ZIB-150](https://bits.nictiz.nl/browse/ZIB-150), [ZIB-267](https://bits.nictiz.nl/browse/ZIB-267), [ZIB-268](https://bits.nictiz.nl/browse/ZIB-268), [ZIB-269](https://bits.nictiz.nl/browse/ZIB-269), [ZIB-305](https://bits.nictiz.nl/browse/ZIB-305), [ZIB-310](https://bits.nictiz.nl/browse/ZIB-310), [ZIB-353](https://bits.nictiz.nl/browse/ZIB-353).&#xD;&#xA;&#xD;&#xA;Incl. algemene wijzigingsverzoeken: &#xD;&#xA;[ZIB-94](https://bits.nictiz.nl/browse/ZIB-94), [ZIB-154](https://bits.nictiz.nl/browse/ZIB-154), [ZIB-200](https://bits.nictiz.nl/browse/ZIB-200), [ZIB-201](https://bits.nictiz.nl/browse/ZIB-201), [ZIB-309](https://bits.nictiz.nl/browse/ZIB-309), [ZIB-324](https://bits.nictiz.nl/browse/ZIB-324), [ZIB-326](https://bits.nictiz.nl/browse/ZIB-326).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-400](https://bits.nictiz.nl/browse/ZIB-400), [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453).&#xD;&#xA;&#xD;&#xA;Publicatieversie 4.0 (04-09-2017)&#xD;&#xA;Bevat: [ZIB-107](https://bits.nictiz.nl/browse/ZIB-107), [ZIB-108](https://bits.nictiz.nl/browse/ZIB-108), [ZIB-446](https://bits.nictiz.nl/browse/ZIB-446), [ZIB-459](https://bits.nictiz.nl/browse/ZIB-459), [ZIB-467](https://bits.nictiz.nl/browse/ZIB-467), [ZIB-549](https://bits.nictiz.nl/browse/ZIB-549), [ZIB-564](https://bits.nictiz.nl/browse/ZIB-564), [ZIB-529](https://bits.nictiz.nl/browse/ZIB-529), [ZIB-576](https://bits.nictiz.nl/browse/ZIB-576).&#xD;&#xA;&#xD;&#xA;Publicatieversie 4.1 (31-12-2017)&#xD;&#xA;Bevat: [ZIB-579](https://bits.nictiz.nl/browse/ZIB-579), [ZIB-646](https://bits.nictiz.nl/browse/ZIB-646).&#xD;&#xA;&#xD;&#xA;Publicatieversie 4.1.1 (01-10-2018)&#xD;&#xA;Bevat: [ZIB-661](https://bits.nictiz.nl/browse/ZIB-661).&#xD;&#xA;&#xD;&#xA;Publicatieversie 4.2 (26-02-2019)&#xD;&#xA;Bevat: [ZIB-624](https://bits.nictiz.nl/browse/ZIB-624), [ZIB-627](https://bits.nictiz.nl/browse/ZIB-627).&#xD;&#xA;&#xD;&#xA;Publicatieversie 4.2.1 (06-07-2019)&#xD;&#xA;Bevat: [ZIB-816](https://bits.nictiz.nl/browse/ZIB-816)&#xD;&#xA;&#xD;&#xA;Publicatieversie 4.3 (31-01-2020)&#xD;&#xA;Bevat: [ZIB-908](https://bits.nictiz.nl/browse/ZIB-908), [ZIB-963](https://bits.nictiz.nl/browse/ZIB-963), [ZIB-987](https://bits.nictiz.nl/browse/ZIB-987).&#xD;&#xA;&#xD;&#xA;Publicatieversie 4.4 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-1116](https://bits.nictiz.nl/browse/ZIB-1116), [ZIB-1147](https://bits.nictiz.nl/browse/ZIB-1147), [ZIB-1175](https://bits.nictiz.nl/browse/ZIB-1175), [ZIB-1202](https://bits.nictiz.nl/browse/ZIB-1202), [ZIB-1133](https://bits.nictiz.nl/browse/ZIB-1133).&#xD;&#xA;&#xD;&#xA;"/>
-         </extension>
+  <description value="**Concept**&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the person involved (the patient) themselves (in the form of a complaint), or by their healthcare provider (in the form of a diagnosis, for example). The situation can form cause for diagnostic or therapeutic policy. &#xD;&#xA;A problem includes all kinds of medical or nursing information that represents a health problem. A problem can represent various types of health problems: &#xD;&#xA; &#xD;&#xA;&#xD;&#xA;* A complaint, finding by patient: a subjective, negatively experienced observation of the patient’s health. Examples: stomach ache, amnesia&#xD;&#xA;* A symptom: an observation by or about the patient which may indicate a certain disease. Examples: fever, blood in stool, white spots on the roof of the mouth;&#xD;&#xA;* A diagnosis: medical interpretation of complaints and findings. Examples: Diabetes Mellitus type II, pneumonia, hemolytic-uremic syndrome.&#xD;&#xA;* A functional limitation: a reduction of functional options. Examples: reduced mobility, help required for dressing.&#xD;&#xA;* A complication: Every diagnosis seen by the healthcare provider as an unforeseen and undesired result of medical action. Examples: post-operative wound infections, loss of hearing through the use of antibiotics.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;An overview of a patient’s health problems has the purpose of informing all healthcare providers involved in the patient’s care on the patient’s current and past health condition. It provides insight into which problems require medical action, which are under control and which are no longer current. The problem overview also directly provides medical context for medication administered and procedures carried out. &#xD;&#xA;The overview promotes an efficient, targeted continuation of the patient’s care. &#xD;&#xA;A complete list of problems is of importance for automated decision support and determining contraindications.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
       </extension>
-   </description>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-   <fhirVersion value="4.0.1"/>
-   <kind value="logical"/>
-   <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/problem"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
-   <derivation value="specialization"/>
-   <differential>
-        <element id="problem">
-         <path value="problem"/>
-         <short value="Problem">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Probleem"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Root concept of the Problem information model.&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient himselve (in the form of a complaint) or by their healthprofessional (in the form of a diagnosis, for example). &#xD;&#xA;">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Rootconcept van de bouwsteen Probleem.&#xD;&#xA;Een probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de patiënt zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose). "/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="*"/>
-         <base>
-                <path value="problem"/>
-                <min value="0"/>
-                <max value="*"/>
-            </base>
-      </element>
-        <element id="problem.problem_type">
-         <path value="problem.problem_type"/>
-         <short value="ProblemType">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="ProbleemType"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="The type of problem; see the concept description.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Het type probleem, zie de conceptbeschrijving."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="problem.problem_type"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="CodeableConcept"/>
-            </type>
-         <binding>
-            <strength value="extensible"/>
-            <description value="ProblemType codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ProbleemType"/>
-         </binding>
-      </element>
-        <element id="problem.problem_name">
-         <path value="problem.problem_name"/>
-         <short value="ProblemName">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="ProbleemNaam"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="The problem name defines the problem. Depending on the setting, different code systems can be used. The ProblemNameCodelist provides an overview of the possible code systems.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="De probleemnaam definieert het probleem. Afhankelijk van de setting kunnen verschillende codestelsels worden gebruikt. De ProbleemNaamCodelijst geeft een overzicht van de mogelijke codestelsels"/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <base>
-                <path value="problem.problem_name"/>
-                <min value="1"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="CodeableConcept"/>
-            </type>
-         <binding>
-            <strength value="required"/>
-            <description value="ProblemName codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ProbleemNaam"/>
-         </binding>
-      </element>
-        <element id="problem.further_specification_problem_name">
-         <path value="problem.further_specification_problem_name"/>
-         <short value="FurtherSpecificationProblemName">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="NadereSpecificatieProbleemNaam"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Further specification of problem name when it is recorded via a thesaurus or code system in which the required level of detail is not (yet) available.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Nadere specificatie van de probleem naam wanneer deze via een thesaurus of codesysteem wordt vastgelegd en de vereiste mate van detail (nog) niet beschikbaar is. "/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="problem.further_specification_problem_name"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="string"/>
-            </type>
-      </element>
-        <element id="problem.problem_anatomical_location">
-         <path value="problem.problem_anatomical_location"/>
-         <short value="ProblemAnatomicalLocation">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="ProbleemAnatomischeLocatie"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Anatomical location which is the focus of the problem.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Anatomische locatie die de focus is van het probleem."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="problem.problem_anatomical_location"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-             <type>
-                <code value="Reference"/>
-                <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"/>
-            </type>
-      </element>
-        <element id="problem.problem_start_date">
-         <path value="problem.problem_start_date"/>
-         <short value="ProblemStartDate">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="ProbleemBeginDatum"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Onset of the symptom, complaint, functional limitation, complication or date of diagnosis. A ‘vague’ date, such as only the year or the month and the year, is permitted.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Begin van de klacht, beperking, complicatie of het symptoom of de datum van de diagnose waarop het probleem betrekking heeft. Een vage datum, bijv. alleen een jaartal of een maand en een jaartal, is toegestaan."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="problem.problem_start_date"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="dateTime"/>
-            </type>
-      </element>
-        <element id="problem.problem_end_date">
-         <path value="problem.problem_end_date"/>
-         <short value="ProblemEndDate">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="ProbleemEindDatum"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Date on which the disorder to which the problem applies, is considered not to be present anymore.This datum needs not to be the same as the date of the change in problem status. A ‘vague’ date, such as only the year or the month and the year, is permitted.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Datum waarop de aandoening, waarop het probleem betrekking heeft, als niet meer aanwezig wordt beschouwd. Deze datum hoeft niet gelijk te zijn aan de datum waarop de statuswijzinging van het probleem is vastgelegd. Een vage datum, bijv. alleen een jaartal of een maand en een jaartal, is toegestaan."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="problem.problem_end_date"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="dateTime"/>
-            </type>
-      </element>
-        <element id="problem.problem_status">
-         <path value="problem.problem_status"/>
-         <short value="ProblemStatus">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="ProbleemStatus"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="The problem status describes the condition of the problem: &#xD;&#xA;&#xD;&#xA;1. Active problems are problems of which the patient experiences symptoms or for which evidence exists. &#xD;&#xA;&#xD;&#xA;1. Problems with the status 'Inactive' refer to problems that don't affect the patient anymore or that of which there is no evidence of existence anymore. &#xD;&#xA;&#xD;&#xA;">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="De probleemstatus beschrijft de toestand van het probleem: &#xD;&#xA;&#xD;&#xA;1. Actuele problemen zijn problemen waar de patiënt symptomen van ondervindt of waar bewijsmateriaal voor is. &#xD;&#xA;&#xD;&#xA;1. Problemen met status 'Niet actueel' verwijzen naar problemen waar de patiënt geen last meer van heeft of waar geen aanwijzingen meer voor zijn.  &#xD;&#xA;&#xD;&#xA;"/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <base>
-                <path value="problem.problem_status"/>
-                <min value="1"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="CodeableConcept"/>
-            </type>
-         <binding>
-            <strength value="required"/>
-            <description value="ProblemStatus codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/ProbleemStatus"/>
-         </binding>
-      </element>
-        <element id="problem.verification_status">
-         <path value="problem.verification_status"/>
-         <short value="VerificationStatus">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="VerificatieStatus"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Clinical status of the problem or the diagnosis.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Klinische status van het probleem of de diagnose."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="problem.verification_status"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="CodeableConcept"/>
-            </type>
-         <binding>
-            <strength value="required"/>
-            <description value="VerificationStatus codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/VerificatieStatus"/>
-         </binding>
-      </element>
-        <element id="problem.comment">
-         <path value="problem.comment"/>
-         <short value="Comment">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Toelichting"/>
-                    </extension>
-                </extension>
-            </short>
-         <definition value="Comment by the one who determined or updated the Problem.">
-                <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-                    <extension url="lang">
-                        <valueCode value="nl-NL"/>
-                    </extension>
-                    <extension url="content">
-                        <valueMarkdown value="Toelichting van diegene die het Probleem heeft vastgesteld of bijgewerkt."/>
-                    </extension>
-                </extension>
-            </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <base>
-                <path value="problem.comment"/>
-                <min value="0"/>
-                <max value="1"/>
-            </base>
-         <type>
-                <code value="string"/>
-            </type>
-      </element>
-    </differential>
+      <extension url="content">
+        <valueMarkdown value="**Concept**&#xD;&#xA;Een probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de betroffene (de patiënt) zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose). De toestand kan aanleiding zijn voor diagnostisch of therapeutisch beleid.&#xD;&#xA;Een probleem omvat allerlei soorten medische of verpleegkundige gegevens, die een gezondheidsprobleem representeren. Een probleem kan verschillende typen gezondheidsproblemen representeren:&#xD;&#xA; &#xD;&#xA;&#xD;&#xA;* Een klacht (Complaint, finding by patient): een subjectieve, als negatief ervaren waarneming van de gezondheid. Voorbeelden: buikpijn, geheugenverlies&#xD;&#xA;* Een symptoom (Symptom): een waarneming door of over de patiënt die betrekking zou kunnen hebben op een bepaalde ziekte. Voorbeelden : koorts, bloed bij de ontlasting, witte vlekken op het gehemelte;&#xD;&#xA;* Een diagnose (Diagnosis): medische interpretatie van klachten en bevindingen. Voorbeelden: Diabetes Mellitus type II, pneumonie, Hemolytisch Uremisch Syndroom.&#xD;&#xA;* Een functionele beperking (Functional Limitation): een vermindering van functionele mogelijkheden. Voorbeelden: verminderde mobiliteit, hulp nodig bij aankleden.&#xD;&#xA;* Een complicatie (Complication): Iedere diagnose die door de zorgverlener gezien wordt als een onvoorzien en ongewenst gevolg van medisch handelen. Voorbeelden: wondinfectie na chirurgie, gehoorverlies door antibioticagebruik.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;Een overzicht van de problemen met betrekking tot de gezondheid van een patiënt heeft tot doel om alle bij de patiënt betrokken zorgverleners te informeren over de gezondheidstoestand van de patiënt in het heden en het verleden. Het geeft inzicht in welke problemen medisch handelen verlangen en welke niet meer actueel zijn. Het probleemoverzicht geeft ook direct de medische context weer voor toegediende medicatie en uitgevoerde procedures.&#xD;&#xA;Het overzicht bevordert een gerichte en efficiënte voortzetting van de zorg voor de patiënt.&#xD;&#xA;Een volledige probleemlijst is van belang ten behoeve van geautomatiseerde beslissingsondersteuning en het bepalen van contra-indicaties.&#xD;&#xA;**Example Instances**" />
+      </extension>
+    </extension>
+  </description>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="true" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/problem" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="problem">
+      <path value="problem" />
+      <short value="Problem">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Probleem" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Root concept of the Problem information model.&#xD;&#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient himselve (in the form of a complaint) or by their healthprofessional (in the form of a diagnosis, for example).">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de bouwsteen Probleem.&#xD;&#xA;Een probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de patiënt zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose)." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+    </element>
+    <element id="problem.problem_type">
+      <path value="problem.problem_type" />
+      <short value="ProblemType">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="ProbleemType" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The type of problem; see the concept description.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Het type probleem, zie de conceptbeschrijving." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="ProblemType codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/ProblemType" />
+      </binding>
+    </element>
+    <element id="problem.problem_name">
+      <path value="problem.problem_name" />
+      <short value="ProblemName">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="ProbleemNaam" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The problem name defines the problem.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De probleemnaam definieert het probleem." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="ProblemName codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/ProblemName" />
+      </binding>
+    </element>
+    <element id="problem.further_specification_problem_name">
+      <path value="problem.further_specification_problem_name" />
+      <short value="FurtherSpecificationProblemName">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="NadereSpecificatieProbleemNaam" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Further specification of problem name when it is recorded via a thesaurus or code system in which the required level of detail is not (yet) available.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Nadere specificatie van de probleem naam wanneer deze via een thesaurus of codesysteem wordt vastgelegd en de vereiste mate van detail (nog) niet beschikbaar is." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="problem.problem_anatomical_location">
+      <path value="problem.problem_anatomical_location" />
+      <short value="ProblemAnatomicalLocation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="ProbleemAnatomischeLocatie" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Anatomical location which is the focus of the problem.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Anatomische locatie die de focus is van het probleem." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="problem.problem_anatomical_location.location">
+      <path value="problem.problem_anatomical_location.location" />
+      <short value="Location">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Locatie" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Localisation on/in the body.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Localisatie op/in het lichaam." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="Location codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/Location" />
+      </binding>
+    </element>
+    <element id="problem.problem_anatomical_location.laterality">
+      <path value="problem.problem_anatomical_location.laterality" />
+      <short value="Laterality">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Lateraliteit" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Laterality adds information about body site to the anatomic location, e.g. left.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="Laterality codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/Laterality" />
+      </binding>
+    </element>
+    <element id="problem.problem_start_date">
+      <path value="problem.problem_start_date" />
+      <short value="ProblemStartDate">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="ProbleemBeginDatum" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Onset of the symptom, complaint, functional limitation, complication or date of diagnosis. A ‘vague’ date, such as only the year or the month and the year, is permitted.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Begin van de klacht, beperking, complicatie of het symptoom of de datum van de diagnose waarop het probleem betrekking heeft. Een vage datum, bijv. alleen een jaartal of een maand en een jaartal, is toegestaan." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="problem.problem_end_date">
+      <path value="problem.problem_end_date" />
+      <short value="ProblemEndDate">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="ProbleemEindDatum" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Date on which the disorder to which the problem applies, is considered not to be present anymore.This datum needs not to be the same as the date of the change in problem status. A ‘vague’ date, such as only the year or the month and the year, is permitted.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Datum waarop de aandoening, waarop het probleem betrekking heeft, als niet meer aanwezig wordt beschouwd. Deze datum hoeft niet gelijk te zijn aan de datum waarop de statuswijzinging van het probleem is vastgelegd. Een vage datum, bijv. alleen een jaartal of een maand en een jaartal, is toegestaan." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="problem.problem_status">
+      <path value="problem.problem_status" />
+      <short value="ProblemStatus">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="ProbleemStatus" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The problem status describes the condition of the problem: &#xD;&#xA;&#xD;&#xA;1. Active problems are problems of which the patient experiences symptoms or for which evidence exists. &#xD;&#xA;&#xD;&#xA;1. Problems with the status 'Inactive' refer to problems that don't affect the patient anymore or that of which there is no evidence of existence anymore.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De probleemstatus beschrijft de toestand van het probleem: &#xD;&#xA;&#xD;&#xA;1. Actuele problemen zijn problemen waar de patiënt symptomen van ondervindt of waar bewijsmateriaal voor is. &#xD;&#xA;&#xD;&#xA;1. Problemen met status 'Niet actueel' verwijzen naar problemen waar de patiënt geen last meer van heeft of waar geen aanwijzingen meer voor zijn." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="ProblemStatus codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/ProblemStatus" />
+      </binding>
+    </element>
+    <element id="problem.verification_status">
+      <path value="problem.verification_status" />
+      <short value="VerificationStatus">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="VerificatieStatus" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Clinical status of the problem or the diagnosis.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Klinische status van het probleem of de diagnose." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="VerificationStatus codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/VerificationStatus" />
+      </binding>
+    </element>
+    <element id="problem.comment">
+      <path value="problem.comment" />
+      <short value="Comment">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toelichting" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Comment by the one who determined or updated the Problem.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toelichting van diegene die het Probleem heeft vastgesteld of bijgewerkt." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
 </StructureDefinition>

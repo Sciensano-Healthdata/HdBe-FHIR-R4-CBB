@@ -53,10 +53,11 @@
     </element>
     <element id="ServiceRequest.requester">
       <path value="ServiceRequest.requester" />
-      <definition value="The individual who initiated the request and has responsibility for its activation. Using the PractitionRole(HdBe-HealthProfessional-PractitionerRole) reference, the affiliated organization can be captured." />
+      <definition value="The individual who initiated the request and has responsibility for its activation. Using the PractitionerRole(HdBe-HealthProfessional-PractitionerRole) reference, the affiliated organization can be captured." />
       <min value="1" />
       <type>
         <code value="Reference" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/pattern-HealthProfessionalReference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
@@ -64,11 +65,10 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner" />
       </type>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="requester" />
+        <map value="laboratory_test_result.requester" />
       </mapping>
     </element>
   </differential>

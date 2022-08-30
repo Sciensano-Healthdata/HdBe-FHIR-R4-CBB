@@ -3,7 +3,7 @@
 | [CBB name]      |                   |
 |-----------------|-------------------|
 | [Concept name ] | [example value]   |
-| [Concept name with ValueSet]| [*code* - *preferred name* (*CodeSystem*)] |
+| [Concept name with ValueSet]| [*code* - *preferred display* (code by *CodeSystem*)] |
 
 
 // example of NameInformation

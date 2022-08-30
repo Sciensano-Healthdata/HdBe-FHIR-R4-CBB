@@ -46,15 +46,17 @@ URL: url
       for differential.element 
       select 
         Path: id,
-        join mapping.where(identity = 'HdBe-BodyWeight') { map, comment }
-      ```
+        join mapping.where(identity.startsWith('HdBe-')){ map, CBB: identity, comment  } 
+ 			order by CBB 
+     ```
     </div>
   </div>
 
   <div id="Examples" class="tabcontent">
       <ul>
         <li>{{pagelink:Home/Examples/HdBe-BodyWeight-01.page.md}}</li>
-        
+        <li>{{pagelink:Home/Examples/HdBe-BodyWeight-02.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-BodyWeight-03.page.md}}</li>
       </ul>
   </div>
 

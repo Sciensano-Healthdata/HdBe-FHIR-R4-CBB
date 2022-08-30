@@ -1,94 +1,87 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <RelatedPerson xmlns="http://hl7.org/fhir">
-    <id value="HdBe-ContactPerson-01"/>
-    <meta>
-        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson" />
-    </meta>
-    <patient>
-        <reference value="Patient/HdBe-Patient-01" />
-        <type value="Patient" />
-        <display value="Belle Ulijn" />
-    </patient>
-    <relationship>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="70862002" />
-            <display value="Contact person" />
-        </coding>
-    </relationship>
-    <relationship>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="127849001" />
-            <display value="Husband" />
-        </coding>
-    </relationship>
-    <name>
-        <use value="official" />
-        <text value="Berend Ulijn" />
-        <family value="Ulijn">
-            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
-                <valueString value="Ulijn" />
-            </extension>
-        </family>
-        <given value="Berend">
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
-                <valueCode value="BR" />
-            </extension>
-        </given>
-    </name>
-    <telecom>
-        <system value="phone">
-            <extension url="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification" >
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse" />
-                        <code value="MC" />
-                        <display value="Mobile Phone" />
-                    </coding>
-                </valueCodeableConcept>
-            </extension>
-        </system>
-        <value value="+3246258140" />
-    </telecom>
-    <telecom>
-        <system value="email" />
-        <value value="BerendUlijn@mail.be" />
-        <use value="home" />    
-    </telecom>
-    <address>
-        <extension url="https://fhir.healthdata.be/StructureDefinition/ext-AddressInformation.AddressType">
-            <valueCodeableConcept>
-                <coding>
-                    <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse" />
-                    <code value="HP" />
-                    <display value="Primary Home" />
-                </coding>
-            </valueCodeableConcept>
-        </extension>
-        <use value="home" />
-        <type value="both" />
-        <line value="Rue de Boneffe 422">
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
-                <valueString value="Rue de Boneffe" />
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
-                <valueString value="422" />
-            </extension>
-        </line>
-        <city value="Opont" />
-        <postalCode value="6852" />
-        <country value="Belgium">
-            <extension url="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification">
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="urn:iso:std:iso:3166" />
-                        <code value="BE" />
-                        <display value="Belgium" />
-                    </coding>
-                </valueCodeableConcept>
-            </extension>
-        </country>
-    </address>
+  <id value="HdBe-ContactPerson-01"/>
+  <meta>
+    <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson"/>
+  </meta>
+  <patient>
+    <reference value="Patient/HdBe-Patient-01"/>
+    <type value="Patient"/>
+    <display value="Belle Ulijn"/>
+  </patient>
+  <relationship>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="70862002"/>
+      <display value="Contact person"/>
+    </coding>
+  </relationship>
+  <relationship>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="127849001"/>
+      <display value="Husband"/>
+    </coding>
+  </relationship>
+  <name>
+    <use value="official"/>
+    <text value="Berend Ulijn"/>
+    <family value="Ulijn">
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+        <valueString value="Ulijn"/>
+      </extension>
+    </family>
+    <given value="Berend">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="BR"/>
+      </extension>
+    </given>
+  </name>
+  <telecom>
+    <system value="phone">
+      <extension url="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+            <code value="MC"/>
+            <display value="mobile contact)"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+    </system>
+    <value value="+3246258140"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="BerendUlijn@mail.be"/>
+    <use value="home"/>
+  </telecom>
+  <address>
+    <extension url="http://hl7.org/fhir/StructureDefinition/language">
+      <valueCode value="fr"/>
+    </extension>
+    <use value="home"/>
+    <type value="both"/>
+    <line value="Rue de Boneffe 422">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+        <valueString value="Rue de Boneffe"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+        <valueString value="422"/>
+      </extension>
+    </line>
+    <city value="Opont"/>
+    <postalCode value="6852"/>
+    <country value="Belgium">
+      <extension url="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification">
+        <valueCodeableConcept>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="BE"/>
+            <display value="Belgium"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+    </country>
+  </address>
 </RelatedPerson>
-    

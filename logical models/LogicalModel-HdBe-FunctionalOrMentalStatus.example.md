@@ -1,24 +1,9 @@
 ## Example instances
 
-| [CBB name]      |                   |
-|-----------------|-------------------|
-| [Concept name ] | [example value]   |
-
-
-// example of NameInformation
-```
-## Example instances
-
-| name_information      |                   |
-|----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
-
-```
+| functional_or_mental_status   |                   |
+|-------------------------------|-------------------|
+| status_name                   | 365181006 - Finding related to ability to wash self (code by SNOMED CT) |
+| status_value                  | 284790007 - Difficulty washing self (code by SNOMED CT) |
+| status_date                   | 2022-10-23 |
+| comment                       | Due to functional disability in arms. |
+| medical_device                | Reference to MedicalDevice (Assistive bathing washcloth) |
