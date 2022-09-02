@@ -14,7 +14,7 @@ This guide is divided into several pages, which are listed at the top of each pa
     - _Rendered view_: A dynamic and clickable tree view structure of the CBB. Contains detailed descriptions shown when hovering over an element.
     - _Table view_: The table view shows all concepts with their datatype and cardinality in one tabular view.
     - _Detailed Descriptions_: This shows the complete dictionary with all details. 
-- {{pagelink:Home/Profiles.page.md, text:Profiles}}: Index of profile pages that provide formal definitions, detailed descriptions, usage, and examples. Profile pages bundle all profiles belonging to their respective CBB. Profiles have several presentation forms:
+- {{pagelink:Home/FHIR.page.md, text:FHIR}}: Index of FHIR profile pages that provide formal definitions, detailed descriptions, usage, and examples. Profile pages bundle all profiles belonging to their respective CBB. Profiles have several presentation forms:
     - _Snapshot_: a fully calculated form of the structure. It contains the rendering of profile constraints on top of all its base resource definitions. Please note that '0..0' elements are not shown in the snapshot rendering. 
     - _Differential_: this describes only the differences that the profile makes relative to the structure definition (FHIR resource) they constrain.
     - _Hybrid_: a hybrid view of the snapshot and differential views. The base definition elements which are not constrained by the profile are shown greyed out. 

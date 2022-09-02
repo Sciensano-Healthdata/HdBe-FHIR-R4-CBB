@@ -18,7 +18,7 @@
 
 ## Introduction <a name="introduction"></a>
 
-This page and {{pagelink:Home/Profiles.page.md, text:profile pages}} describe the considerations for using HL7® FHIR® in information exchange with Healthdata.be (Sciensano). It applies specifically to [HL7® FHIR® version 4 (R4)](https://hl7.org/fhir/R4/) and aims at **software vendors and developers that need to implement FHIR**. Users of this guide are expected to be familiar with the FHIR R4 specification and resource processing. Where relevant, links to the FHIR specification are provided. This implementation guide is not intended to be a tutorial on that subject.
+This page and {{pagelink:Home/FHIR.page.md, text:profile pages}} describe the considerations for using HL7® FHIR® in information exchange with Healthdata.be (Sciensano). It applies specifically to [HL7® FHIR® version 4 (R4)](https://hl7.org/fhir/R4/) and aims at **software vendors and developers that need to implement FHIR**. Users of this guide are expected to be familiar with the FHIR R4 specification and resource processing. Where relevant, links to the FHIR specification are provided. This implementation guide is not intended to be a tutorial on that subject.
 
 This page provides use case overarching principles both in terms of exchanging FHIR on the application level (e.g., describing the API functionality) and information level (e.g. data model requirements that transcend
 a single profile). Two examples are the paragraph [Content Types](#contact-types) that states which FHIR formats are allowed, and the [Must Support](#must-support) paragraph that gives information on the usage and interpretation of must-support flags.

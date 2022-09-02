@@ -3,7 +3,7 @@ This folder contains all required files for implementation guides that are hoste
 
 ## Workflow
 1. For every CBB logical model, make a copy of `../LogicalModels/cbbname.page.md` and place the correct CBB name in the file and on every placeholder in the file (e.g. [CBB-Name]).
-2. Add/replace the link to this page within the markdown tables in `CBB.page.md` and `Profiles.page.md`
+2. Add/replace the link to this page within the markdown tables in `CBB.page.md` and `FHIR.page.md`
 2. For every profile do the same as logical models but in the `../Profiles` folder. 
     - If a CBB consists of multiple profiles, (e.g. _HdBe-HealthProfessional_, _HdBe-ContactInformation_), all profiles should be placed within the same guide. 
     - For datatype or pattern profiles (e.g. _HdBe-NameInformation_, _HdBe-AddressInformation_, etc.) replace the pagelink to examples with an explanatory text that these profile do not live on their own and examples are given by the profiles that host these datatype or pattern profiles. Template text: _"HdBe-[name] is a datatype profile and can therefore not have an example of its own. Rather, an example is provided within the example of the HdBe-profile(s) that use this datatype profile."_ 
