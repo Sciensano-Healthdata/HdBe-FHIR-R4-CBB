@@ -183,7 +183,7 @@ UniqueId: for uniqueId.where(preferred = true) select value
 
 The locationId, departmentId and nihdi are all mapped to their approriate slice on `.identifier`.
 
-### Location hierachy 
+### Location hierarchy 
 
 <plantuml>
   set namespaceSeparator none
@@ -248,7 +248,7 @@ The locationId, departmentId and nihdi are all mapped to their approriate slice 
 
 <br/><br/> 
 
-### Location and Organization hierachy of one site and one ward
+### Location and Organization hierarchy of one site and one ward
 
 <br/><br/> 
 
