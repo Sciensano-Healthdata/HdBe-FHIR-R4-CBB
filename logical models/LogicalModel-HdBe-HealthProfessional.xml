@@ -1,328 +1,328 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="HdBe-HealthProfessional" />
-  <meta>
-    <lastUpdated value="2022-08-19T06:50:58.4306362+00:00" />
-  </meta>
-  <language value="en-US" />
-  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-    <valuePeriod>
-      <start value="2020-09-01T00:00:00+02:00" />
-    </valuePeriod>
-  </extension>
-  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional" />
-  <name value="HdBeHealthProfessional">
-    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-      <extension url="lang">
-        <valueCode value="nl-NL" />
+   <id value="HdBe-HealthProfessional"/>
+   <meta>
+      <lastUpdated value="2022-08-19T06:50:58.4306362+00:00"/>
+   </meta>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-09-01T00:00:00+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
+   <name value="HdBeHealthProfessional">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-Zorgverlener"/>
+         </extension>
       </extension>
-      <extension url="content">
-        <valueMarkdown value="HdBe-Zorgverlener" />
+   </name>
+   <title value="HdBe HealthProfessional"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Service portal – healthdata.be"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://sciensano.service-now.com/sp"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="**Concept**&#xD;&#xA;A health professional is a person who is authorized to perform actions in the field of individual healthcare.&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;The purpose of this information model is documenting the identity of people providing healthcare. For health professionals, information must be sufficiently complete for reference and auditing: if known, the name is mandatory. If an identification number is given, the name and number have to match.&#xD;&#xA;&#xD;&#xA;**Evidence Base**&#xD;&#xA;Other employees working in healthcare can also be mapped onto this CBB. If needed the HealthCareProviderRole can be used to specify the type of healthcareworker by using the nullflavor OTH in free text.&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;The concept HealthProfessionalRole can be expressed in two ways, as an element in the information model and as the definition code of a reference in another referring information model (Performer::HealthProfessional). In both cases, the code is taken from the same code list. If both possibilities are used, they should not be in conflict.">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="**Concept**&#xD;&#xA;Een zorgverlener is een persoon die bevoegd is om handelingen uit te voeren op het gebied van de individuele gezondheidszorg.&#xD;&#xA;**Purpose**&#xD;&#xA;Het doel van deze bouwsteen is het documenteren van de identiteit van zorgverlenende personen. Voor zorgverleners dient de informatie voldoende te zijn voor referentie en auditing: de naam is, indien deze bekend is, verplicht. Indien een identificatienummer wordt meegegeven, moeten naam en nummer overeenkomen.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Ook niet RIVIZ geregistreerde medewerkers werkzaam in de zorg via de zib Zorgverlener worden overgedragen. Het zorgverlenerIdentificatienummer kan leeg blijven en (indien gewenst) kan de zorgverlener rol gebruikt worden om in vrije tekst via de nullflavor OTH een omschrijving van het type zorg medewerker worden meegegeven."/>
+         </extension>
       </extension>
-    </extension>
-  </name>
-  <title value="HdBe HealthProfessional" />
-  <status value="draft" />
-  <publisher value="Healthdata.be (Sciensano)" />
-  <contact>
-    <name value="Service portal – healthdata.be" />
-    <telecom>
-      <system value="url" />
-      <value value="https://sciensano.service-now.com/sp" />
-      <use value="work" />
-    </telecom>
-  </contact>
-  <description value="**Concept**&#xD;&#xA;A health professional is a person who is authorized to perform actions in the field of individual healthcare.&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;The purpose of this information model is documenting the identity of people providing healthcare. For health professionals, information must be sufficiently complete for reference and auditing: if known, the name is mandatory. If an identification number is given, the name and number have to match.&#xD;&#xA;&#xD;&#xA;**Evidence Base**&#xD;&#xA;Other employees working in healthcare can also be mapped onto this CBB. If needed the HealthCareProviderRole can be used to specify the type of healthcareworker by using the nullflavor OTH in free text.&#xD;&#xA;&#xD;&#xA;**Instructions**&#xD;&#xA;The concept HealthProfessionalRole can be expressed in two ways, as an element in the information model and as the definition code of a reference in another referring information model (Performer::HealthProfessional). In both cases, the code is taken from the same code list. If both possibilities are used, they should not be in conflict.">
-    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-      <extension url="lang">
-        <valueCode value="nl-NL" />
-      </extension>
-      <extension url="content">
-        <valueMarkdown value="**Concept**&#xD;&#xA;Een zorgverlener is een persoon die bevoegd is om handelingen uit te voeren op het gebied van de individuele gezondheidszorg.&#xD;&#xA;**Purpose**&#xD;&#xA;Het doel van deze bouwsteen is het documenteren van de identiteit van zorgverlenende personen. Voor zorgverleners dient de informatie voldoende te zijn voor referentie en auditing: de naam is, indien deze bekend is, verplicht. Indien een identificatienummer wordt meegegeven, moeten naam en nummer overeenkomen.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Ook niet RIVIZ geregistreerde medewerkers werkzaam in de zorg via de zib Zorgverlener worden overgedragen. Het zorgverlenerIdentificatienummer kan leeg blijven en (indien gewenst) kan de zorgverlener rol gebruikt worden om in vrije tekst via de nullflavor OTH een omschrijving van het type zorg medewerker worden meegegeven." />
-      </extension>
-    </extension>
-  </description>
-  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
-  <fhirVersion value="4.0.1" />
-  <kind value="logical" />
-  <abstract value="true" />
-  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/health_professional" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
-  <derivation value="specialization" />
-  <differential>
-    <element id="health_professional">
-      <path value="health_professional" />
-      <short value="HealthProfessional">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Zorgverlener" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Root concept of the HealthProfessional information model. This root concept contains all data elements of the HealthProfessional information model.&#xD;&#xA;When referring to this information model the role the health professional fulfills in the healthcare process can be addressed additionally. For health professionals, this could be for example main practitioner or referrer.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Rootconcept van de bouwsteen Zorgverlener. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgverlener. &#xD;&#xA;Bij verwijzing naar deze bouwsteen kan tevens de rol die de zorgverlener in het zorgproces vervult, worden meegegeven. Voor zorgverleners kan dit bijvoorbeeld hoofdbehandelaar of verwijzer zijn" />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="*" />
-    </element>
-    <element id="health_professional.health_professional_identification_number">
-      <path value="health_professional.health_professional_identification_number" />
-      <short value="HealthProfessionalIdentificationNumber">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="ZorgverlenerIdentificatienummer" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The health professional identification number is a number that uniquely identifies the health professional. &#xD;&#xA;&#xD;&#xA;A health professional has a NIHDI number (National Institute for Health and Disability Insurance). A local identifier can also be provided when this is desired.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Het zorgverleneridentificatienummer is een nummer dat de zorgverlener uniek identificeert. &#xD;&#xA;&#xD;&#xA; Een zorgverlener heeft een RIVIZ nummer (Rijksinstituut voor Ziekte- en Invaliditeitsverzekering). Indien gewenst kan een lokaal identificatienummer ook meegegeven worden." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="Identifier" />
-      </type>
-    </element>
-    <element id="health_professional.name_information">
-      <path value="health_professional.name_information" />
-      <short value="NameInformation">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Naamgegevens" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Health professional’s full name.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="De naamgegevens van de zorgverlener." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="HumanName" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NameInformation" />
-      </type>
-    </element>
-    <element id="health_professional.specialty">
-      <path value="health_professional.specialty" />
-      <short value="Specialty">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Specialisme" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Health professional’s medical specialty.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Medisch specialisme van de zorgverlener." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="preferred" />
-        <description value="Practice Setting Code Value Set" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/c80-practice-codes" />
-      </binding>
-    </element>
-    <element id="health_professional.gender">
-      <path value="health_professional.gender" />
-      <short value="Gender">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Geslacht" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Health professional’s administrative gender - the gender that the health professional is considered to have for administration and record keeping purposes. Note that the gender might not match the biological sex as determined by genetics or the individual's preferred identification.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Administratief geslacht van de zorgverlener. Het geslacht dat geregistreerd staat voor administratieve en dossiervormende doeleinden. Wees ervan bewust dat het administratieve geslacht kan afwijken van de biologische sekse zoals bepaalt door de genetica of de voorkeursidentificatie van het individu." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="required" />
-        <description value="Gender codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/Gender" />
-      </binding>
-    </element>
-    <element id="health_professional.address_information">
-      <path value="health_professional.address_information" />
-      <short value="AddressInformation">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Adresgegevens" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Health professional’s address information.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Adresgegevens van de zorgverlener." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="Address" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AddressInformation" />
-      </type>
-    </element>
-    <element id="health_professional.contact_information">
-      <path value="health_professional.contact_information" />
-      <short value="ContactInformation">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Contactgegevens" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Health professional’s telephone number(s) or e-mail address(es).">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Telefoonnummer(s) of e-mailadres(sen) van de zorgverlener." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="ContactPoint" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation" />
-      </type>
-    </element>
-    <element id="health_professional.healthcare_provider">
-      <path value="health_professional.healthcare_provider" />
-      <short value="HealthcareProvider">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Zorgaanbieder" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The organization the health professional works for.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="De organisatie waarbij de zorgverlener werkzaam is." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider" />
-      </type>
-    </element>
-    <element id="health_professional.health_professional_role">
-      <path value="health_professional.health_professional_role" />
-      <short value="HealthProfessionalRole">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="ZorgverlenerRol" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The role the health professional fulfills in the healthcare process. For health professionals, this could be for example attender, referrer or performer.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="De rol die de zorgverlener in het zorgproces vervult. Voor zorgverleners kan dit bijvoorbeeld behandelaar, verwijzer of uitvoerder zijn." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <example>
-        <label value="example 1" />
-        <valueCodeableConcept>
-          <text value="Hoofdbehandelaar" />
-        </valueCodeableConcept>
-      </example>
-      <binding>
-        <strength value="extensible" />
-        <description value="HealthProfessionalRole codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/HealthProfessionalRole" />
-      </binding>
-    </element>
-  </differential>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HealthProfessional"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+      <element id="HealthProfessional">
+         <path value="HealthProfessional"/>
+         <short value="HealthProfessional">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Zorgverlener"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="Root concept of the HealthProfessional information model. This root concept contains all data elements of the HealthProfessional information model.&#xD;&#xA;When referring to this information model the role the health professional fulfills in the healthcare process can be addressed additionally. For health professionals, this could be for example main practitioner or referrer.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Rootconcept van de bouwsteen Zorgverlener. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgverlener. &#xD;&#xA;Bij verwijzing naar deze bouwsteen kan tevens de rol die de zorgverlener in het zorgproces vervult, worden meegegeven. Voor zorgverleners kan dit bijvoorbeeld hoofdbehandelaar of verwijzer zijn"/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="*"/>
+      </element>
+      <element id="HealthProfessional.HealthProfessionalIdentificationNumber">
+         <path value="HealthProfessional.HealthProfessionalIdentificationNumber"/>
+         <short value="HealthProfessionalIdentificationNumber">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="ZorgverlenerIdentificatienummer"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="The health professional identification number is a number that uniquely identifies the health professional. &#xD;&#xA;&#xD;&#xA;A health professional has a NIHDI number (National Institute for Health and Disability Insurance). A local identifier can also be provided when this is desired.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Het zorgverleneridentificatienummer is een nummer dat de zorgverlener uniek identificeert. &#xD;&#xA;&#xD;&#xA; Een zorgverlener heeft een RIVIZ nummer (Rijksinstituut voor Ziekte- en Invaliditeitsverzekering). Indien gewenst kan een lokaal identificatienummer ook meegegeven worden."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <type>
+            <code value="Identifier"/>
+         </type>
+      </element>
+      <element id="HealthProfessional.NameInformation">
+         <path value="HealthProfessional.NameInformation"/>
+         <short value="NameInformation">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Naamgegevens"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="Health professional’s full name.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="De naamgegevens van de zorgverlener."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="HumanName"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NameInformation"/>
+         </type>
+      </element>
+      <element id="HealthProfessional.Specialty">
+         <path value="HealthProfessional.Specialty"/>
+         <short value="Specialty">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Specialisme"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="Health professional’s medical specialty.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Medisch specialisme van de zorgverlener."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="CodeableConcept"/>
+         </type>
+         <binding>
+            <strength value="preferred"/>
+            <description value="Practice Setting Code Value Set"/>
+            <valueSet value="http://hl7.org/fhir/ValueSet/c80-practice-codes"/>
+         </binding>
+      </element>
+      <element id="HealthProfessional.Gender">
+         <path value="HealthProfessional.Gender"/>
+         <short value="Gender">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Geslacht"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="Health professional’s administrative gender - the gender that the health professional is considered to have for administration and record keeping purposes. Note that the gender might not match the biological sex as determined by genetics or the individual's preferred identification.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Administratief geslacht van de zorgverlener. Het geslacht dat geregistreerd staat voor administratieve en dossiervormende doeleinden. Wees ervan bewust dat het administratieve geslacht kan afwijken van de biologische sekse zoals bepaalt door de genetica of de voorkeursidentificatie van het individu."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="CodeableConcept"/>
+         </type>
+         <binding>
+            <strength value="required"/>
+            <description value="Gender codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/Gender"/>
+         </binding>
+      </element>
+      <element id="HealthProfessional.AddressInformation">
+         <path value="HealthProfessional.AddressInformation"/>
+         <short value="AddressInformation">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Adresgegevens"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="Health professional’s address information.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Adresgegevens van de zorgverlener."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <type>
+            <code value="Address"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AddressInformation"/>
+         </type>
+      </element>
+      <element id="HealthProfessional.ContactInformation">
+         <path value="HealthProfessional.ContactInformation"/>
+         <short value="ContactInformation">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Contactgegevens"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="Health professional’s telephone number(s) or e-mail address(es).">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Telefoonnummer(s) of e-mailadres(sen) van de zorgverlener."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <type>
+            <code value="ContactPoint"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation"/>
+         </type>
+      </element>
+      <element id="HealthProfessional.HealthcareProvider">
+         <path value="HealthProfessional.HealthcareProvider"/>
+         <short value="HealthcareProvider">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Zorgaanbieder"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="The organization the health professional works for.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="De organisatie waarbij de zorgverlener werkzaam is."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
+         </type>
+      </element>
+      <element id="HealthProfessional.HealthProfessionalRole">
+         <path value="HealthProfessional.HealthProfessionalRole"/>
+         <short value="HealthProfessionalRole">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="ZorgverlenerRol"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="The role the health professional fulfills in the healthcare process. For health professionals, this could be for example attender, referrer or performer.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="De rol die de zorgverlener in het zorgproces vervult. Voor zorgverleners kan dit bijvoorbeeld behandelaar, verwijzer of uitvoerder zijn."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="CodeableConcept"/>
+         </type>
+         <example>
+            <label value="example 1"/>
+            <valueCodeableConcept>
+               <text value="Hoofdbehandelaar"/>
+            </valueCodeableConcept>
+         </example>
+         <binding>
+            <strength value="extensible"/>
+            <description value="HealthProfessionalRole codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/HealthProfessionalRole"/>
+         </binding>
+      </element>
+   </differential>
 </StructureDefinition>
