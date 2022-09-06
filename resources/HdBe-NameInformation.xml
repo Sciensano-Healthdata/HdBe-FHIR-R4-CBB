@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
    <id value="HdBe-NameInformation"/>
    <meta>
@@ -63,7 +63,7 @@
          </mapping>
          <mapping>
             <identity value="HdBe-NameInformation"/>
-            <map value="name_information"/>
+            <map value="NameInformation"/>
          </mapping>
       </element>
       <element id="HumanName.extension">
@@ -107,13 +107,13 @@
          </mapping>
          <mapping>
             <identity value="HdBe-NameInformation"/>
-            <map value="name_information.name_usage"/>
+            <map value="NameInformation.NameUsage"/>
          </mapping>
       </element>
       <element id="HumanName.use">
          <path value="HumanName.use"/>
          <min value="1"/>
-      <fixedCode value="official"/>
+         <fixedCode value="official"/>
       </element>
       <element id="HumanName.family.extension">
          <path value="HumanName.family.extension"/>
@@ -147,7 +147,7 @@
          </mapping>
          <mapping>
             <identity value="HdBe-NameInformation"/>
-            <map value="name_information.last_name.prefix"/>
+            <map value="NameInformation.LastName.Prefix"/>
          </mapping>
       </element>
       <element id="HumanName.family.extension:lastName">
@@ -171,7 +171,7 @@
          </mapping>
          <mapping>
             <identity value="HdBe-NameInformation"/>
-            <map value="name_information.last_name.last_name"/>
+            <map value="NameInformation.LastName.LastName"/>
          </mapping>
       </element>
       <element id="HumanName.family.extension:partnerPrefix">
@@ -195,7 +195,7 @@
          </mapping>
          <mapping>
             <identity value="HdBe-NameInformation"/>
-            <map value="name_information.last_name_partner.partner_prefix"/>
+            <map value="NameInformation.LastNamePartner.PartnerPrefix"/>
          </mapping>
       </element>
       <element id="HumanName.family.extension:partnerLastName">
@@ -219,24 +219,24 @@
          </mapping>
          <mapping>
             <identity value="HdBe-NameInformation"/>
-            <map value="name_information.last_name_partner.partner_last_name"/>
+            <map value="NameInformation.LastNamePartner.PartnerLastName"/>
          </mapping>
       </element>
       <element id="HumanName.given">
          <path value="HumanName.given"/>
          <short value="FirstName / Initial"/>
-               <definition value="One of a person’s official first names or the initial if the full name is not known."/>
-               <comment value="This element represents the FirstNames and Initials concepts of zib NameInformation, but the FHIR implementation deviates from the zib model. The zib defines these concepts as a list of official first names (as a single string) and a list of initials (as a single string), both optional. They both represent the official name(s) of a person and thus represent the same concept. In FHIR however, each first name is either a complete name or an initial, but not both. In addition, each name may be defined separately.&#xD;&#xA;&#xD;&#xA;Therefore, the zib concepts are implemented here in the following way:&#xD;&#xA;&#xD;&#xA;* Systems SHOULD use a `.given` element for each official first name that they know of (either as a full name or an initial), in order of appearance (as specified by FHIR).&#xD;&#xA;* Each of these elements:&#xD;&#xA;  * SHOULD be populated with the complete name if it is known, or with the initial if no more information is available.&#xD;&#xA;  * SHALL be augmented with `extension:givenOrInitial` with code _BR_ when it represents a full name or code _IN_ when it represents an initial.&#xD;&#xA;&#xD;&#xA;Initials should thus not be communicated for each complete first name that is known, in contrast to what is specified by the zib. Receiving systems can recreate initials from the full names if needed.&#xD;&#xA;&#xD;&#xA;If a system _does_ however only have a list of official first names and a separate list of official initials, without knowing the relationship between these two, only the full names SHOULD be communicated, while an additional `.name` instance MAY be used to communicate the initials. It is expected that the second instance just contains the initials and no other information from the zib. Receiving systems MAY ignore the second instance.&#xD;&#xA;&#xD;&#xA;**Note 1:** The GivenName concept should not be included here but in a separate `.name` instance where `.use` = _usual_.&#xD;&#xA;&#xD;&#xA;**Note 2**: As specified by FHIR, multiple official first names MAY be combined in a single `.given` element (separated by spaces), as long as the `.given` elements can be concatenated to form the full first name representation, and the 'extension:givenOrInitial` is used to mark the element as containing either full names or the initials. This pattern is strongly discouraged as it is hard to determine if the value pertains multiple names or a single combined name containing spaces."/>
-            <alias value="Voornaam"/>
+         <definition value="One of a person’s official first names or the initial if the full name is not known."/>
+         <comment value="This element represents the FirstNames and Initials concepts of zib NameInformation, but the FHIR implementation deviates from the zib model. The zib defines these concepts as a list of official first names (as a single string) and a list of initials (as a single string), both optional. They both represent the official name(s) of a person and thus represent the same concept. In FHIR however, each first name is either a complete name or an initial, but not both. In addition, each name may be defined separately.&#xD;&#xA;&#xD;&#xA;Therefore, the zib concepts are implemented here in the following way:&#xD;&#xA;&#xD;&#xA;* Systems SHOULD use a `.given` element for each official first name that they know of (either as a full name or an initial), in order of appearance (as specified by FHIR).&#xD;&#xA;* Each of these elements:&#xD;&#xA;  * SHOULD be populated with the complete name if it is known, or with the initial if no more information is available.&#xD;&#xA;  * SHALL be augmented with `extension:givenOrInitial` with code _BR_ when it represents a full name or code _IN_ when it represents an initial.&#xD;&#xA;&#xD;&#xA;Initials should thus not be communicated for each complete first name that is known, in contrast to what is specified by the zib. Receiving systems can recreate initials from the full names if needed.&#xD;&#xA;&#xD;&#xA;If a system _does_ however only have a list of official first names and a separate list of official initials, without knowing the relationship between these two, only the full names SHOULD be communicated, while an additional `.name` instance MAY be used to communicate the initials. It is expected that the second instance just contains the initials and no other information from the zib. Receiving systems MAY ignore the second instance.&#xD;&#xA;&#xD;&#xA;**Note 1:** The GivenName concept should not be included here but in a separate `.name` instance where `.use` = _usual_.&#xD;&#xA;&#xD;&#xA;**Note 2**: As specified by FHIR, multiple official first names MAY be combined in a single `.given` element (separated by spaces), as long as the `.given` elements can be concatenated to form the full first name representation, and the 'extension:givenOrInitial` is used to mark the element as containing either full names or the initials. This pattern is strongly discouraged as it is hard to determine if the value pertains multiple names or a single combined name containing spaces."/>
+         <alias value="Voornaam"/>
          <alias value="Initiaal"/>
-      <mapping>
+         <mapping>
             <identity value="zib-nameinformation-v1.1-2020EN"/>
             <map value="NL-CM:20.4.4"/>
             <comment value="FirstNames"/>
          </mapping>
          <mapping>
             <identity value="HdBe-NameInformation"/>
-            <map value="name_information.first_names"/>
+            <map value="NameInformation.FirstNames"/>
          </mapping>
          <mapping>
             <identity value="zib-nameinformation-v1.1-2020EN"/>
@@ -245,7 +245,7 @@
          </mapping>
          <mapping>
             <identity value="HdBe-NameInformation"/>
-            <map value="name_information.initials"/>
+            <map value="NameInformation.Initials"/>
          </mapping>
       </element>
       <element id="HumanName.given.extension">
@@ -281,7 +281,7 @@
          </mapping>
          <mapping>
             <identity value="HdBe-NameInformation"/>
-            <map value="name_information.titles"/>
+            <map value="NameInformation.Titles"/>
          </mapping>
       </element>
       <element id="HumanName.suffix">
@@ -297,7 +297,7 @@
          </mapping>
          <mapping>
             <identity value="HdBe-NameInformation"/>
-            <map value="name_information.titles"/>
+            <map value="NameInformation.Titles"/>
          </mapping>
       </element>
    </differential>

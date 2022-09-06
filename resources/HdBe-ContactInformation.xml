@@ -1,153 +1,153 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="HdBe-ContactInformation" />
-  <meta>
-    <lastUpdated value="2022-08-19T07:54:33.8658436+00:00" />
-  </meta>
-  <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation" />
-  <name value="HdBeContactInformation" />
-  <title value="HdBe ContactInformation" />
-  <status value="draft" />
-  <publisher value="Healthdata.be (Sciensano)" />
-  <contact>
-    <name value="Service portal – healthdata.be" />
-    <telecom>
-      <system value="url" />
-      <value value="https://sciensano.service-now.com/sp" />
-      <use value="work" />
-    </telecom>
-  </contact>
-  <description value="Contact information that includes a person's telephone numbers." />
-  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
-  <fhirVersion value="4.0.1" />
-  <mapping>
-    <identity value="zib-contactinformation-v1.2-2020EN" />
-    <uri value="https://zibs.nl/wiki/ContactInformation-v1.2(2020EN)" />
-    <name value="zib ContactInformation-v1.2(2020EN)" />
-  </mapping>
-  <mapping>
-    <identity value="HdBe-ContactInformation" />
-    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation" />
-    <name value="HdBe logical model ContactInformation" />
-  </mapping>
-  <kind value="complex-type" />
-  <abstract value="false" />
-  <type value="ContactPoint" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ContactPoint" />
-  <derivation value="constraint" />
-  <differential>
-    <element id="ContactPoint">
-      <path value="ContactPoint" />
-      <short value="ContactPoint" />
-      <definition value="Root concept of the ContactInformation partial information model. This root concept contains all data elements of the ContactInformation partial information model." />
-      <comment value="Implementation of the CBB ContactInformation.&#xD;&#xA;&#xD;&#xA;Please note that this profile differs significantly from the zib ContactInformation because the zib model is deemed overly complex, too Dutch-specific, and contains unsuited terminology. The mapping from zib to FHIR is not trivial and results in too complex mapping. Therefore, the CBB is redesigned based on what is implemented internationally and in Belgium by looking at the FHIR data type and eHealth core profiles. The new model replaces the containers for phone numbers and email addresses with elements on the root that can capture both. Therefore, no need for two profiles, slicing in the host profiles and no ConceptMaps." />
-      <alias value="Contactpunten" />
-      <mapping>
-        <identity value="zib-contactinformation-v1.2-2020EN" />
-        <map value="NL-CM:20.6.2" />
-        <comment value="TelephoneNumbers" />
-      </mapping>
-      <mapping>
-        <identity value="zib-contactinformation-v1.2-2020EN" />
-        <map value="NL-CM:20.6.3" />
-        <comment value="EmailAddresses" />
-      </mapping>
-      <mapping>
-        <identity value="HdBe-ContactInformation" />
-        <map value="contact_information" />
-      </mapping>
-    </element>
-    <element id="ContactPoint.extension">
-      <path value="ContactPoint.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
-    <element id="ContactPoint.extension:comment">
-      <path value="ContactPoint.extension" />
-      <sliceName value="comment" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/ext-Comment" />
-      </type>
-    </element>
-    <element id="ContactPoint.extension:comment.value[x]">
-      <path value="ContactPoint.extension.value[x]" />
-      <short value="Comment" />
-      <definition value="Explanation about the telephone number and how to use it. It can be indicated, for example, that it is a department number (for healthcare professionals) or that availability by phone is only possible during a specified part of the day." />
-      <alias value="Toelichting" />
-      <mapping>
-        <identity value="zib-contactinformation-v1.2-2020EN" />
-        <map value="NL-CM:20.6.9" />
-        <comment value="Comment" />
-      </mapping>
-      <mapping>
-        <identity value="HdBe-ContactInformation" />
-        <map value="contact_information.comment" />
-      </mapping>
-    </element>
-    <element id="ContactPoint.system">
-      <path value="ContactPoint.system" />
-      <short value="Type" />
-      <definition value="The type of contact information." />
-      <alias value="Type" />
-      <mapping>
-        <identity value="zib-contactinformation-v1.2-2020EN" />
-        <map value="NL-CM:20.6.5" />
-        <comment value="TelecomType" />
-      </mapping>
-      <mapping>
-        <identity value="HdBe-ContactInformation" />
-        <map value="contact_information.type" />
-      </mapping>
-    </element>
-    <element id="ContactPoint.value">
-      <path value="ContactPoint.value" />
-      <short value="Value" />
-      <definition value="The actual contact information details." />
-      <alias value="Waarde" />
-      <min value="1" />
-      <mapping>
-        <identity value="zib-contactinformation-v1.2-2020EN" />
-        <map value="NL-CM:20.6.4" />
-        <comment value="TelephoneNumber" />
-      </mapping>
-      <mapping>
-        <identity value="zib-contactinformation-v1.2-2020EN" />
-        <map value="NL-CM:20.6.7" />
-        <comment value="EmailAddress" />
-      </mapping>
-      <mapping>
-        <identity value="HdBe-ContactInformation" />
-        <map value="contact_information.value" />
-      </mapping>
-    </element>
-    <element id="ContactPoint.use">
-      <path value="ContactPoint.use" />
-      <short value="Use" />
-      <definition value="Purpose or use of the contact information. For example whether it is a private or business telephone number." />
-      <alias value="Gebruik" />
-      <mapping>
-        <identity value="zib-contactinformation-v1.2-2020EN" />
-        <map value="NL-CM:20.6.6" />
-        <comment value="NumberType" />
-      </mapping>
-      <mapping>
-        <identity value="zib-contactinformation-v1.2-2020EN" />
-        <map value="NL-CM:20.6.8" />
-        <comment value="EmailAddressType" />
-      </mapping>
-      <mapping>
-        <identity value="HdBe-ContactInformation" />
-        <map value="contact_information.use" />
-      </mapping>
-    </element>
-  </differential>
+   <id value="HdBe-ContactInformation"/>
+   <meta>
+      <lastUpdated value="2022-08-19T07:54:33.8658436+00:00"/>
+   </meta>
+   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation"/>
+   <name value="HdBeContactInformation"/>
+   <title value="HdBe ContactInformation"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Service portal – healthdata.be"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://sciensano.service-now.com/sp"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="Contact information that includes a person's telephone numbers."/>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <mapping>
+      <identity value="zib-contactinformation-v1.2-2020EN"/>
+      <uri value="https://zibs.nl/wiki/ContactInformation-v1.2(2020EN)"/>
+      <name value="zib ContactInformation-v1.2(2020EN)"/>
+   </mapping>
+   <mapping>
+      <identity value="HdBe-ContactInformation"/>
+      <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation"/>
+      <name value="HdBe logical model ContactInformation"/>
+   </mapping>
+   <kind value="complex-type"/>
+   <abstract value="false"/>
+   <type value="ContactPoint"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ContactPoint"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="ContactPoint">
+         <path value="ContactPoint"/>
+         <short value="ContactPoint"/>
+         <definition value="Root concept of the ContactInformation partial information model. This root concept contains all data elements of the ContactInformation partial information model."/>
+         <comment value="Implementation of the CBB ContactInformation.&#xD;&#xA;&#xD;&#xA;Please note that this profile differs significantly from the zib ContactInformation because the zib model is deemed overly complex, too Dutch-specific, and contains unsuited terminology. The mapping from zib to FHIR is not trivial and results in too complex mapping. Therefore, the CBB is redesigned based on what is implemented internationally and in Belgium by looking at the FHIR data type and eHealth core profiles. The new model replaces the containers for phone numbers and email addresses with elements on the root that can capture both. Therefore, no need for two profiles, slicing in the host profiles and no ConceptMaps."/>
+         <alias value="Contactpunten"/>
+         <mapping>
+            <identity value="zib-contactinformation-v1.2-2020EN"/>
+            <map value="NL-CM:20.6.2"/>
+            <comment value="TelephoneNumbers"/>
+         </mapping>
+         <mapping>
+            <identity value="zib-contactinformation-v1.2-2020EN"/>
+            <map value="NL-CM:20.6.3"/>
+            <comment value="EmailAddresses"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-ContactInformation"/>
+            <map value="ContactInformation"/>
+         </mapping>
+      </element>
+      <element id="ContactPoint.extension">
+         <path value="ContactPoint.extension"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="url"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+         <min value="0"/>
+      </element>
+      <element id="ContactPoint.extension:comment">
+         <path value="ContactPoint.extension"/>
+         <sliceName value="comment"/>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="Extension"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/ext-Comment"/>
+         </type>
+      </element>
+      <element id="ContactPoint.extension:comment.value[x]">
+         <path value="ContactPoint.extension.value[x]"/>
+         <short value="Comment"/>
+         <definition value="Explanation about the telephone number and how to use it. It can be indicated, for example, that it is a department number (for healthcare professionals) or that availability by phone is only possible during a specified part of the day."/>
+         <alias value="Toelichting"/>
+         <mapping>
+            <identity value="zib-contactinformation-v1.2-2020EN"/>
+            <map value="NL-CM:20.6.9"/>
+            <comment value="Comment"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-ContactInformation"/>
+            <map value="ContactInformation.Comment"/>
+         </mapping>
+      </element>
+      <element id="ContactPoint.system">
+         <path value="ContactPoint.system"/>
+         <short value="Type"/>
+         <definition value="The type of contact information."/>
+         <alias value="Type"/>
+         <mapping>
+            <identity value="zib-contactinformation-v1.2-2020EN"/>
+            <map value="NL-CM:20.6.5"/>
+            <comment value="TelecomType"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-ContactInformation"/>
+            <map value="ContactInformation.Type"/>
+         </mapping>
+      </element>
+      <element id="ContactPoint.value">
+         <path value="ContactPoint.value"/>
+         <short value="Value"/>
+         <definition value="The actual contact information details."/>
+         <alias value="Waarde"/>
+         <min value="1"/>
+         <mapping>
+            <identity value="zib-contactinformation-v1.2-2020EN"/>
+            <map value="NL-CM:20.6.4"/>
+            <comment value="TelephoneNumber"/>
+         </mapping>
+         <mapping>
+            <identity value="zib-contactinformation-v1.2-2020EN"/>
+            <map value="NL-CM:20.6.7"/>
+            <comment value="EmailAddress"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-ContactInformation"/>
+            <map value="ContactInformation.Value"/>
+         </mapping>
+      </element>
+      <element id="ContactPoint.use">
+         <path value="ContactPoint.use"/>
+         <short value="Use"/>
+         <definition value="Purpose or use of the contact information. For example whether it is a private or business telephone number."/>
+         <alias value="Gebruik"/>
+         <mapping>
+            <identity value="zib-contactinformation-v1.2-2020EN"/>
+            <map value="NL-CM:20.6.6"/>
+            <comment value="NumberType"/>
+         </mapping>
+         <mapping>
+            <identity value="zib-contactinformation-v1.2-2020EN"/>
+            <map value="NL-CM:20.6.8"/>
+            <comment value="EmailAddressType"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-ContactInformation"/>
+            <map value="ContactInformation.Use"/>
+         </mapping>
+      </element>
+   </differential>
 </StructureDefinition>
