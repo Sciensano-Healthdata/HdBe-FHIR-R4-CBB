@@ -2,4 +2,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`nationality` | terminology | Replaced GBA Nationaliteitentabel with ISO 3166 [ZIB-ticket-1676](https://bits.nictiz.nl/browse/ZIB-1676) |
+|`Nationality` | terminology | Replaced GBA Nationaliteitentabel with ISO 3166 [ZIB-ticket-1676](https://bits.nictiz.nl/browse/ZIB-1676) |

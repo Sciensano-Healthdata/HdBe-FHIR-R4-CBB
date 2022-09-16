@@ -5,11 +5,11 @@ This CBB differs significantly from the zib because the zib model is deemed over
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-| `telephone_numbers` | element | Removed container to simplify CBB and align contact_information into one generic model.| 
-| `email_addresses` | element | Removed container to simplify CBB and align contact_information into one generic model.| 
-| `type` | element | Renamed element `telecom_type` to `type` to make CBB more generic. |
-| `type` | terminology | Replaced ValueSet NumberType with FHIR ValueSet contact-point-system to make the CBB more generic. |
-| `value`| element | Replaced elements `telephone_number` and `email_address` with this element to make the CBB more generic. |
-| `use` | element | Replaced element `number_type` and `email_address_type` with this element to make the CBB more generic. |
-| `use`| terminology | As in the original `number_type` and `email_address_type`, two different ValueSet are used, we replaced both ValueSets with the FHIR ValueSet contact-point-use. |
-| `comment` | textual | Removed spelling mistake (_professionnels_ to _professionals_) ([zib ticket 1807](https://bits.nictiz.nl/browse/ZIB-1807)).| 
+| `TelephoneNumbers` | element | Removed container to simplify CBB and align contact_information into one generic model.| 
+| `EmailAddresses` | element | Removed container to simplify CBB and align contact_information into one generic model.| 
+| `Type` | element | Renamed element `TelecomType` to `type` to make CBB more generic. |
+| `Type` | terminology | Replaced ValueSet NumberType with FHIR ValueSet contact-point-system to make the CBB more generic. |
+| `Value`| element | Replaced elements `TelephoneNumber` and `emailAddress` with this element to make the CBB more generic. |
+| `Use` | element | Replaced element `NumberType` and `emailAddressType` with this element to make the CBB more generic. |
+| `Use`| terminology | As in the original `NumberType` and `emailAddressType`, two different ValueSet are used, we replaced both ValueSets with the FHIR ValueSet contact-point-use. |
+| `Comment` | textual | Removed spelling mistake (_professionnels_ to _professionals_) ([zib ticket 1807](https://bits.nictiz.nl/browse/ZIB-1807)).| 

@@ -2,4 +2,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`height_value` | textual | Specified that the height value is in centimeters. | 
+|`HeightValue` | textual | Specified that the height value is in centimeters. | 

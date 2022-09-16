@@ -2,6 +2,6 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`status_name` | terminology | Removed all CodeSystems except SNOMED CT in ValueSet StatusName and loosened binding to extensible. |
-|`status_name` | textual | Improved description in correspondence with only using SNOMED CT. |
-|`status_value` | terminology | Removed all CodeSystems except SNOMED CT in ValueSet  StatusValue and loosened binding to extensible. |
+|`StatusName` | terminology | Removed all CodeSystems except SNOMED CT in ValueSet StatusName and loosened binding to extensible. |
+|`StatusName` | textual | Improved description in correspondence with only using SNOMED CT. |
+|`StatusValue` | terminology | Removed all CodeSystems except SNOMED CT in ValueSet  StatusValue and loosened binding to extensible. |
