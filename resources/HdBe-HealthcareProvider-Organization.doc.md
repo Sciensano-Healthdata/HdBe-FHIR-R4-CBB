@@ -1,4 +1,4 @@
-## zib HealthcareProvider-Organization difference
+## zib HealthcareOrganization-Organization difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|

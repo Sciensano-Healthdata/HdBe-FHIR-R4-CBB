@@ -12,7 +12,7 @@
 |MedicalDevice | 
 |Instruction | Let op: valrisico
 |Performer | 
-|Performer.HealthcareProvider | 
+|Performer.HealthcareOrganization | 
 |Performer.Caregiver | 
 |Performer.Patient | 
 |Requester | 

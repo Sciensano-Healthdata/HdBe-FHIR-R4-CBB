@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBe-HealthcareProvider"/>
+   <id value="HdBe-HealthcareOrganization"/>
    <meta>
       <lastUpdated value="2022-09-02T11:23:27.6731871+00:00"/>
    </meta>
-   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider"/>
-   <name value="HdBeHealthcareProvider"/>
-   <title value="HdBe HealthcareProvider"/>
+   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization"/>
+   <name value="HdBeHealthcareOrganization"/>
+   <title value="HdBe HealthcareOrganization"/>
    <status value="draft"/>
    <publisher value="Healthdata.be (Sciensano)"/>
    <contact>
@@ -22,8 +22,8 @@
    <fhirVersion value="4.0.1"/>
    <mapping>
       <identity value="zib-healthcareprovider-v3.4-2020EN"/>
-      <uri value="https://zibs.nl/wiki/HealthcareProvider-v3.4(2020EN)"/>
-      <name value="zib HealthcareProvider-v3.4(2020EN)"/>
+      <uri value="https://zibs.nl/wiki/HealthcareOrganization-v3.4(2020EN)"/>
+      <name value="zib HealthcareOrganization-v3.4(2020EN)"/>
    </mapping>
    <mapping>
       <identity value="zib-contactinformation-v1.2-2020EN"/>
@@ -31,9 +31,9 @@
       <name value="zib ContactInformation-v1.2(2020EN)"/>
    </mapping>
    <mapping>
-      <identity value="HdBe-HealthcareProvider"/>
-      <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
-      <name value="HdBe logical model HealthcareProvider"/>
+      <identity value="HdBe-HealthcareOrganization"/>
+      <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareOrganization"/>
+      <name value="HdBe logical model HealthcareOrganization"/>
    </mapping>
    <mapping>
       <identity value="HdBe-ContactInformation"/>
@@ -48,14 +48,14 @@
    <differential>
       <element id="Location">
          <path value="Location"/>
-         <short value="HealthcareProvider / OrganizationLocation"/>
-         <comment value="HealthcareProvider is mapped to this Location profile and a profile on Organization (HdBe-HealthcareProvider-Organization). This Location profile acts as the focal resource of HealthcareProvider because most references to this CBB are concerned about the recording of the physical location where the care to patient takes place rather than the organizational information. For the latter, the profile on Organization is used which is referenced using the `Location.managingOrganization` element.&#xD;&#xA;&#xD;&#xA;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;&#xD;&#xA;&#xD;&#xA;Healthcare providers usually consist of multiple organizational levels and physical locations. The hierarchical structure may be captured by using multiple instances of this HealthcareProvider profile using the `Location.partOf` element to refer to their parent Location. Each instance refers the HdBe-HealthcareProvider-Organization at the appropriate level in the hierarchy."/>
+         <short value="HealthcareOrganization / OrganizationLocation"/>
+         <comment value="HealthcareOrganization is mapped to this Location profile and a profile on Organization (HdBe-HealthcareOrganization-Organization). This Location profile acts as the focal resource of HealthcareOrganization because most references to this CBB are concerned about the recording of the physical location where the care to patient takes place rather than the organizational information. For the latter, the profile on Organization is used which is referenced using the `Location.managingOrganization` element.&#xD;&#xA;&#xD;&#xA;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;&#xD;&#xA;&#xD;&#xA;Healthcare providers usually consist of multiple organizational levels and physical locations. The hierarchical structure may be captured by using multiple instances of this HealthcareOrganization profile using the `Location.partOf` element to refer to their parent Location. Each instance refers the HdBe-HealthcareOrganization-Organization at the appropriate level in the hierarchy."/>
          <alias value="OrganisatieLocatie"/>
          <alias value="Zorgaanbieder"/>
          <mapping>
             <identity value="zib-healthcareprovider-v3.4-2020EN"/>
             <map value="NL-CM:17.2.1"/>
-            <comment value="HealthcareProvider"/>
+            <comment value="HealthcareOrganization"/>
          </mapping>
          <mapping>
             <identity value="zib-healthcareprovider-v3.4-2020EN"/>
@@ -63,12 +63,12 @@
             <comment value="OrganizationLocation"/>
          </mapping>
          <mapping>
-            <identity value="HdBe-HealthcareProvider"/>
-            <map value="HealthcareProvider"/>
+            <identity value="HdBe-HealthcareOrganization"/>
+            <map value="HealthcareOrganization"/>
          </mapping>
          <mapping>
-            <identity value="HdBe-HealthcareProvider"/>
-            <map value="HealthcareProvider.OrganizationLocation"/>
+            <identity value="HdBe-HealthcareOrganization"/>
+            <map value="HealthcareOrganization.OrganizationLocation"/>
          </mapping>
       </element>
       <element id="Location.identifier">
@@ -81,7 +81,7 @@
             <rules value="open"/>
          </slicing>
          <constraint>
-            <key value="HdBe-HealthcareProvider-1"/>
+            <key value="HdBe-HealthcareOrganization-1"/>
             <severity value="error"/>
             <human value="If the Location contains a DepartmentIdentificationNumber, the LocationIdentificationNumber must also be present to ensure unique identification of the Location."/>
             <expression value="identifier.where(system = 'https://fhir.healthdata.be/NamingSystem/DepartmentIdentificationNumber').exists() implies identifier.where(system = 'https://fhir.healthdata.be/NamingSystem/LocationIdentificationNumber').exists()"/>
@@ -97,10 +97,10 @@
          <patternIdentifier>
             <system value="https://fhir.healthdata.be/NamingSystem/LocationIdentificationNumber"/>
          </patternIdentifier>
-         <condition value="HdBe-HealthcareProvider-1"/>
+         <condition value="HdBe-HealthcareOrganization-1"/>
          <mapping>
-            <identity value="HdBe-HealthcareProvider"/>
-            <map value="HealthcareProvider.OrganizationLocation.LocationNumber"/>
+            <identity value="HdBe-HealthcareOrganization"/>
+            <map value="HealthcareOrganization.OrganizationLocation.LocationNumber"/>
          </mapping>
       </element>
       <element id="Location.identifier:departmentIdentificationNumber">
@@ -113,10 +113,10 @@
          <patternIdentifier>
             <system value="https://fhir.healthdata.be/NamingSystem/DepartmentIdentificationNumber"/>
          </patternIdentifier>
-         <condition value="HdBe-HealthcareProvider-1"/>
+         <condition value="HdBe-HealthcareOrganization-1"/>
          <mapping>
-            <identity value="HdBe-HealthcareProvider"/>
-            <map value="HealthcareProvider.OrganizationLocation.DepartmentIdentificationNumber"/>
+            <identity value="HdBe-HealthcareOrganization"/>
+            <map value="HealthcareOrganization.OrganizationLocation.DepartmentIdentificationNumber"/>
          </mapping>
       </element>
       <element id="Location.name">
@@ -130,8 +130,8 @@
             <comment value="LocationName"/>
          </mapping>
          <mapping>
-            <identity value="HdBe-HealthcareProvider"/>
-            <map value="HealthcareProvider.LocationName"/>
+            <identity value="HdBe-HealthcareOrganization"/>
+            <map value="HealthcareOrganization.LocationName"/>
          </mapping>
       </element>
       <element id="Location.telecom">
@@ -153,8 +153,8 @@
             <comment value="ContactInformation"/>
          </mapping>
          <mapping>
-            <identity value="HdBe-HealthcareProvider"/>
-            <map value="HealthcareProvider.ContactInformation"/>
+            <identity value="HdBe-HealthcareOrganization"/>
+            <map value="HealthcareOrganization.ContactInformation"/>
          </mapping>
       </element>
       <element id="Location.address">
@@ -171,8 +171,8 @@
             <comment value="AddressInformation"/>
          </mapping>
          <mapping>
-            <identity value="HdBe-HealthcareProvider"/>
-            <map value="HealthcareProvider.AddressInformation"/>
+            <identity value="HdBe-HealthcareOrganization"/>
+            <map value="HealthcareOrganization.AddressInformation"/>
          </mapping>
       </element>
       <element id="Location.managingOrganization">
@@ -180,7 +180,7 @@
          <type>
             <code value="Reference"/>
             <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider-Organization"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization-Organization"/>
          </type>
       </element>
    </differential>

@@ -9,7 +9,7 @@
 | ProcedureAnatomicalLocation.Laterality	| 7771000 - Left (code by SNOMED CT)                     |
 | indication          	                    | Reference to Problem (Arthropathy of knee joint)    |        
 | MedicalDevice                            |                   |
-| location	                                | Reference to HealthcareProvider (UMCG)              |
+| location	                                | Reference to HealthcareOrganization (UMCG)              |
 | performer	                                | Reference to HealthProfessional (Orthopodist)       |
 | requester	                                |                   |
 
@@ -23,7 +23,7 @@
 | ProcedureAnatomicalLocation.Laterality	| 7771000 - Left (code by SNOMED CT)                     |
 | indication          	                    | Reference to Problem (Arthropathy of knee joint)    |        
 | MedicalDevice                            |                   |
-| location	                                | Reference to HealthcareProvider (UMCG)              |
+| location	                                | Reference to HealthcareOrganization (UMCG)              |
 | performer	                                |        |
 | requester	                                | Reference to HealthProfessional (Orthopodist)       |
 

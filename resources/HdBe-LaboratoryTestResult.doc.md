@@ -6,7 +6,7 @@
 | `status` | terminology | Removed ConceptMap as we replaced the ValueSet values to the FHIR ValueSet. |
 | `status` | terminology | Replaced zib CodeSystem values to corresponding values from the FHIR ObservationStatus CodeSystem because these are more widely adopted and can be mapped to zib status terminology. The new ValueSet contains a subset of the ObservationStatus CodeSystem to maintain compatibility with the zib. |
 | `code` | terminology | Removed ValueSet binding and described in the comment the use of Loinc and Albert codes as per the subset defined by the FPS Health (ReTaM). Added a reference to the subset on the website of the FPS Health. The ReTaM codes are not duplicated in a FHIR ValueSet because this would require extensive maintenance in keeping the ValueSet up-to-date. |
-| `performer` | reference | Added reference to HdBe-HealthcareProvider-Organization (seems missing in the current zib profile implementation). |
+| `performer` | reference | Added reference to HdBe-HealthcareOrganization-Organization (seems missing in the current zib profile implementation). |
 | `performer` | reference | Removed reference to HdBe-HealthcareProfessional-Practitioner in slice as this is incorporated by the pattern. |
 | `value[x]`| textual | Added textual guidance to include the unit for quantitative results. | 
 | `interpretation.resultFlags` | terminology | Added ConceptMap ResultFlagsCodelist-to-ObservationInterpretation (seems missing in the current zib profile implementation).|

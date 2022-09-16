@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBe-HealthcareProvider"/>
+   <id value="HdBe-HealthcareOrganization"/>
    <language value="en-US"/>
    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
       <valuePeriod>
          <start value="2020-09-01T00:00:00+02:00"/>
       </valuePeriod>
    </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider"/>
-   <name value="HdBeHealthcareProvider">
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareOrganization"/>
+   <name value="HdBeHealthcareOrganization">
       <extension url="http://hl7.org/fhir/StructureDefinition/translation">
          <extension url="lang">
             <valueCode value="nl-NL"/>
@@ -18,7 +18,7 @@
          </extension>
       </extension>
    </name>
-   <title value="HdBe HealthcareProvider"/>
+   <title value="HdBe HealthcareOrganization"/>
    <status value="draft"/>
    <publisher value="Healthdata.be (Sciensano)"/>
    <contact>
@@ -43,13 +43,13 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HealthcareProvider"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HealthcareOrganization"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-      <element id="HealthcareProvider">
-         <path value="HealthcareProvider"/>
-         <short value="HealthcareProvider">
+      <element id="HealthcareOrganization">
+         <path value="HealthcareOrganization"/>
+         <short value="HealthcareOrganization">
             <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                <extension url="lang">
                   <valueCode value="nl-NL"/>
@@ -72,9 +72,9 @@
          <min value="0"/>
          <max value="*"/>
       </element>
-      <element id="HealthcareProvider.HealthcareProviderIdentificationNumber">
-         <path value="HealthcareProvider.HealthcareProviderIdentificationNumber"/>
-         <short value="HealthcareProviderIdentificationNumber">
+      <element id="HealthcareOrganization.HealthcareOrganizationIdentificationNumber">
+         <path value="HealthcareOrganization.HealthcareOrganizationIdentificationNumber"/>
+         <short value="HealthcareOrganizationIdentificationNumber">
             <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                <extension url="lang">
                   <valueCode value="nl-NL"/>
@@ -100,8 +100,8 @@
             <code value="Identifier"/>
          </type>
       </element>
-      <element id="HealthcareProvider.OrganizationName">
-         <path value="HealthcareProvider.OrganizationName"/>
+      <element id="HealthcareOrganization.OrganizationName">
+         <path value="HealthcareOrganization.OrganizationName"/>
          <short value="OrganizationName">
             <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                <extension url="lang">
@@ -128,8 +128,8 @@
             <code value="string"/>
          </type>
       </element>
-      <element id="HealthcareProvider.DepartmentSpecialty">
-         <path value="HealthcareProvider.DepartmentSpecialty"/>
+      <element id="HealthcareOrganization.DepartmentSpecialty">
+         <path value="HealthcareOrganization.DepartmentSpecialty"/>
          <short value="DepartmentSpecialty">
             <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                <extension url="lang">
@@ -160,8 +160,8 @@
             <valueSet value="https://fhir.healthdata.be/ValueSet/DepartmentSpecialty"/>
          </binding>
       </element>
-      <element id="HealthcareProvider.ContactInformation">
-         <path value="HealthcareProvider.ContactInformation"/>
+      <element id="HealthcareOrganization.ContactInformation">
+         <path value="HealthcareOrganization.ContactInformation"/>
          <short value="ContactInformation">
             <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                <extension url="lang">
@@ -189,8 +189,8 @@
             <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation"/>
          </type>
       </element>
-      <element id="HealthcareProvider.AddressInformation">
-         <path value="HealthcareProvider.AddressInformation"/>
+      <element id="HealthcareOrganization.AddressInformation">
+         <path value="HealthcareOrganization.AddressInformation"/>
          <short value="AddressInformation">
             <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                <extension url="lang">
@@ -218,8 +218,8 @@
             <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AddressInformation"/>
          </type>
       </element>
-      <element id="HealthcareProvider.OrganizationType">
-         <path value="HealthcareProvider.OrganizationType"/>
+      <element id="HealthcareOrganization.OrganizationType">
+         <path value="HealthcareOrganization.OrganizationType"/>
          <short value="OrganizationType">
             <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                <extension url="lang">
@@ -246,8 +246,8 @@
             <code value="CodeableConcept"/>
          </type>
       </element>
-      <element id="HealthcareProvider.OrganizationLocation">
-         <path value="HealthcareProvider.OrganizationLocation"/>
+      <element id="HealthcareOrganization.OrganizationLocation">
+         <path value="HealthcareOrganization.OrganizationLocation"/>
          <short value="OrganizationLocation">
             <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                <extension url="lang">
@@ -274,8 +274,8 @@
             <code value="BackboneElement"/>
          </type>
       </element>
-      <element id="HealthcareProvider.OrganizationLocation.LocationName">
-         <path value="HealthcareProvider.OrganizationLocation.LocationName"/>
+      <element id="HealthcareOrganization.OrganizationLocation.LocationName">
+         <path value="HealthcareOrganization.OrganizationLocation.LocationName"/>
          <short value="LocationName">
             <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                <extension url="lang">
@@ -302,8 +302,8 @@
             <code value="string"/>
          </type>
       </element>
-      <element id="HealthcareProvider.OrganizationLocation.LocationIdentificationNumber">
-         <path value="HealthcareProvider.OrganizationLocation.LocationIdentificationNumber"/>
+      <element id="HealthcareOrganization.OrganizationLocation.LocationIdentificationNumber">
+         <path value="HealthcareOrganization.OrganizationLocation.LocationIdentificationNumber"/>
          <short value="LocationIdentificationNumber">
             <extension url="http://hl7.org/fhir/StructureDefinition/translation">
                <extension url="lang">
@@ -331,8 +331,8 @@
             <profile value="http://hl7.org/fhir/StructureDefinition/Identifier"/>
          </type>
       </element>
-      <element id="HealthcareProvider.OrganizationLocation.DepartmentIdentificationNumber">
-         <path value="HealthcareProvider.OrganizationLocation.DepartmentIdentificationNumber"/>
+      <element id="HealthcareOrganization.OrganizationLocation.DepartmentIdentificationNumber">
+         <path value="HealthcareOrganization.OrganizationLocation.DepartmentIdentificationNumber"/>
          <short value="DepartmentIdentificationNumber"/>
          <definition value="The healthcare provider's internal department's identification number. &#xD;&#xA;&#xD;&#xA;This needs to be an identification number listed in [fair.healthdata.be dataset Internal organization of departments within Belgian healthcare organizations](https://fair.healthdata.be/dataset/53c8b040-0b48-4c41-ab65-4c9d1600e908). Please note that this dataset is a temporary solution. A more structured and standardized version will follow in the future, which will then be documented here.">
             <extension url="http://hl7.org/fhir/StructureDefinition/translation">

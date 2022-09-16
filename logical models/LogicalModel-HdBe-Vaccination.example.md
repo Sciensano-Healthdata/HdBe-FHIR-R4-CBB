@@ -7,6 +7,6 @@
 | VaccinationDate | 2018-02-06 |
 | **Administrator**| -- |
 | Administrator    | Reference to HealthProfessional (E. Penninx)  |
-| Location         | Reference to HealthcareProvider (Enterprise Hospital Ziekenhuis) |
+| Location         | Reference to HealthcareOrganization (Enterprise Hospital Ziekenhuis) |
 | Comment          | Visit to Peru. |
 

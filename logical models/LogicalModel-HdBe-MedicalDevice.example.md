@@ -13,5 +13,5 @@
 | EndDate              |  |
 | Comment               | Might need replacement in the near future. |
 | **Location**          | -- |
-| Location.HealthcareProvider  | Reference to HealthcareProvider (GRAND HOPITAL DE CHARLEROI - SAINT-JOSEPH) |
+| Location.HealthcareOrganization  | Reference to HealthcareOrganization (GRAND HOPITAL DE CHARLEROI - SAINT-JOSEPH) |
 | HealthProfessional   | Reference to HealthProfessional (Dr. E. Penninx, Dermatology)  |

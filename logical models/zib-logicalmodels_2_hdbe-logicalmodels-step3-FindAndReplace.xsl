@@ -16,14 +16,14 @@
          <xsl:apply-templates select="node()|@*"/>
       </xsl:copy>
    </xsl:template>
-   <!-- Rename Zib HealthcareProvider to HealthcareOrganization -->
+   <!-- Rename Zib HealthcareOrganization to HealthcareOrganization -->
    <xsl:template match="@value[contains(.,'healthcare_provider')]">
       <xsl:attribute name="value"
                      select="replace(., 'healthcare_provider', 'healthcare_organization')"/>
    </xsl:template>
-   <xsl:template match="@value[contains(.,'HealthcareProvider')]">
+   <xsl:template match="@value[contains(.,'HealthcareOrganization')]">
       <xsl:attribute name="value"
-                     select="replace(., 'HealthcareProvider', 'HealthcareOragnization')"/>
+                     select="replace(., 'HealthcareOrganization', 'HealthcareOragnization')"/>
    </xsl:template>
    <xsl:template match="@value[contains(.,'Healthcare Provider')]">
       <xsl:attribute name="value"
@@ -33,7 +33,7 @@
       <xsl:attribute name="value"
                      select="replace(., 'healthcare_provider', 'healthcare_organization')"/>
    </xsl:template>
-   <xsl:template match="@id[contains(.,'HealthcareProvider')]">
+   <xsl:template match="@id[contains(.,'HealthcareOrganization')]">
       <xsl:attribute name="value"
                      select="replace(., 'HealthcareOrganization', 'healthcare_organization')"/>
    </xsl:template>

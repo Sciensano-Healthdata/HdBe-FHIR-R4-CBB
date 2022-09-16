@@ -1,8 +1,8 @@
 ## Example instances
 
-| HealthcareProvider  |                   |
+| HealthcareOrganization  |                   |
 |---------------------|-------------------|
-| HealthcareProviderIdentificationNumber | 010SS3170 |
+| HealthcareOrganizationIdentificationNumber | 010SS3170 |
 | OrganizationName |  GRAND HOPITAL DE CHARLEROI |
 | DepartmentSpecialty | Cardiologie  |
 | AddressInformation |  reference to AddressInformation (6, Rue Marguerite Depasse, 6060 Gilly) | 
