@@ -12,6 +12,6 @@
 | `interpretation.resultFlags` | terminology | Added ConceptMap ResultFlagsCodelist-to-ObservationInterpretation (seems missing in the current zib profile implementation).|
 | `interpretation.resultFlags` | terminology | Removed concepts 'Resistent', 'Intermediate' and 'Susceptible' from the ValueSet. These codes are seen as a quantitative result. ([zib ticket #1555](https://bits.nictiz.nl/browse/ZIB-1555))
 | `interpretation.resultFlags` | textual | Removed notion of 'Resistent', 'Intermediate' and 'Susceptible' codes in definition.
-| `derived_from` | reference | Added reference to HdBe-LaboratoryTestResult (seems missing in the current zib profile implementation). |
+| `derivedFrom` | reference | Added reference to HdBe-LaboratoryTestResult (seems missing in the current zib profile implementation). |
 | `referenceRange.text` | mapping | Added mapping to ReferenceRangeLowerLimit and ReferenceRangeUpperLimit for when the quantaty datatype does not suffice.|
 | `basedOn` | mapping | Added mapping to a new profile on ServiceRequest to implement the requester element of the CBB/zib. Although this element does not provide enough information to create a profile that describes a full ordering service, it will provide details on capturing a requester in FHIR. |

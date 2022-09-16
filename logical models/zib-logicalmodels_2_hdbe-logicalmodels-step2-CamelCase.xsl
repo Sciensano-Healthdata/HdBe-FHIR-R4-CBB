@@ -9,7 +9,8 @@
                 extension-element-prefixes="str"
                 exclude-result-prefixes="#all"
                 version="2.0">
-   <xsl:variable name="input" select="collection('../logical_models/?select=*.xml')"/>
+
+
    <xsl:param name="convertFileNames" select="true()" as="xs:boolean"/>
    <xsl:param name="modelName"
               select="substring(f:StructureDefinition/f:id/@value,6)"/>
@@ -20,11 +21,11 @@
          <xsl:apply-templates select="node()|@*"/>
       </xsl:copy>
    </xsl:template>
-   <!-- needs a filter or in a seperate file for logical models, type of resources should not be changed. -->
+
    <xsl:template match="f:StructureDefinition/f:type[1]">
       <type>
          <xsl:attribute name="value"
-                        select="concat('https://fhir.healthdata.be/StructureDefinition/LogicalModel/',$modelName)"/>
+            select="concat('https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-',$modelName)"/>
       </type>
    </xsl:template>
    <xsl:template match="f:differential/f:element">

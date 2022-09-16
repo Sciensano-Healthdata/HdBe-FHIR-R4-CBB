@@ -2,12 +2,12 @@
 
 | HealthcareProvider  |                   |
 |---------------------|-------------------|
-| healthcare_provider_identification_number | 010SS3170 |
-| organization_name |  GRAND HOPITAL DE CHARLEROI |
-| healthcare_provider.department_specialty | Cardiologie  |
-| healthcare_provider.address_information |  reference to AddressInformation (6, Rue Marguerite Depasse, 6060 Gilly) | 
-| healthcare_provider.contact_information |  reference to ContactInformation (071102111; info@example.be) | 
-| healthcare_provider.organization_type | Ziekenhuis |
-| healthcare_provider.organization_location.location_name | SAINT-JOSEPH  |
-| healthcare_provider.organization_location.location_identification_number | 3170 |
-| healthcare_provider.organization_location.department_identification_number | 004-C - Chirurgie |
+| HealthcareProviderIdentificationNumber | 010SS3170 |
+| OrganizationName |  GRAND HOPITAL DE CHARLEROI |
+| DepartmentSpecialty | Cardiologie  |
+| AddressInformation |  reference to AddressInformation (6, Rue Marguerite Depasse, 6060 Gilly) | 
+| ContactInformation |  reference to ContactInformation (071102111; info@example.Be) | 
+| OrganizationType | Ziekenhuis |
+| OrganizationLocation.LocationName | SAINT-JOSEPH  |
+| OrganizationLocation.LocationIdentificationNumber | 3170 |
+| OrganizationLocation.DepartmentIdentificationNumber | 004-C - Chirurgie |

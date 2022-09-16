@@ -1,15 +1,15 @@
 ## Example instances
 
-| range         |               |
+| Range         |               |
 |---------------|---------------|
-| minimum_value | 5 gram        |
-| maximum_value | 10 gram       | 
-| nominal_value |               |
+| MinimumValue | 5 gram        |
+| MaximumValue | 10 gram       | 
+| NominalValue |               |
 
-| range         |               |
+| Range         |               |
 |---------------|---------------|
-| minimum_value |               |
-| maximum_value |               | 
-| nominal_value | 2 ml per day  |
+| MinimumValue |               |
+| MaximumValue |               | 
+| NominalValue | 2 ml per day  |
 
 

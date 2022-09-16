@@ -2,4 +2,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-| temperature_type | terminology | Added 'Unknown' and 'Other' values to ValueSet TemperatureType |
+| `value[x]` | terminology | Added 'Unknown' and 'Other' values to ValueSet TemperatureType |

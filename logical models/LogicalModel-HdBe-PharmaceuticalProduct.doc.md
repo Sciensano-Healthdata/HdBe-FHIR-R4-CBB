@@ -9,7 +9,7 @@
 |`ProductSpecification.PharmaceuticalForm` | terminology | Replaced values in PharmaceuticalForm valueSet them with the ProductCode valueSet with the SNOMED descendent-of 736478001 (Basic dose form) and loosened the binding from required to extensible. |
 |`ProductSpecification.PharmaceuticalForm` | textual | Removed G-standard specific context.  |
 |`ProductSpecification.Description` | textual | Removed G-standard specific context. |
-|`ProductSpecification.Ingredient.SubstanceCode` | textual | Removed context about removed ValueSets in medication_code. |
+|`ProductSpecification.Ingredient.SubstanceCode` | textual | Removed context about removed ValueSets in medicationCode. |
 |`ProductSpecification.Ingredient.SubstanceCode` | terminology | Replaced all defined valueSets and replaced them with the SubstanceCode valueSet with the SNOMED descendent-of 105590001 (Substance). Also set binding strength to extensible. |
 |`ProductSpecification.Ingredient.Concentration.IngredientAmount` | textual | Removed G-standard specific context. |
 |`ProductSpecification.Ingredient.Concentration.ProductAmount` | textual | Removed Dutch specific context. |

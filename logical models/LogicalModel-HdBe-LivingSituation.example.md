@@ -1,9 +1,9 @@
 ## Example instances
 
-| living_situation    |                   |
+| LivingSituation    |                   |
 |-----------------|-------------------|
-| house_type |   |
-| home_adaption |   |
-| living_condition |  |
-| comment |  | 
+| HouseType |   |
+| HomeAdaption |   |
+| LivingCondition |  |
+| Comment |  | 
 

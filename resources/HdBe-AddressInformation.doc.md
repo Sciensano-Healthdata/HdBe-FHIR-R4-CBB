@@ -2,8 +2,8 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`Address` | textual | Replaced Dutch context with Belgium specific explanantions.
-|`use` | mapping | Replaced mapping from CBB element `address_type` to new CBB element `address_use` which aligns the CBB more with the FHIR datatype profile. |
+|`address` | textual | Replaced Dutch context with Belgium specific explanantions.
+|`use` | mapping | Replaced mapping from CBB element `addressType` to new CBB element `addressUse` which aligns the CBB more with the FHIR datatype profile. |
 |`type` | terminology | Removed the ConceptMap as the binding from the CBB was replaced by the FHIR ValueSet AddressType, which makes a ConceptMap unnecessary. |
 |`city` | textual | Removed Dutch context. |
 |`district` | textual | Removed Dutch context. |

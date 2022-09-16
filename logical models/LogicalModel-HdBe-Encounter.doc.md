@@ -2,6 +2,6 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`Contact_type` | terminology | Replaced codes with codes in use by Healthdata.be - Sciensano. | 
+|`ContactType` | terminology | Replaced codes with codes in use by Healthdata.be - Sciensano. | 
 |`Destination` | terminology | Added SNOMED codes Unkown and Other to the ValueSet. | 
 |`Origin` | terminology | Added SNOMED codes Unkown and Other to the ValueSet. | 
