@@ -1,21 +1,14 @@
 from pickle import FALSE
 from urllib.request import urlopen, Request
-import urllib.error
-import json
 import os
 from pathlib import Path
-import pathlib
 from xml.etree.ElementTree import tostring
 from fhir.resources.valueset import ValueSet, ValueSetComposeIncludeConceptDesignation, ValueSetComposeIncludeConcept, ValueSetComposeInclude, ValueSetCompose, ValueSetComposeIncludeFilter
 from fhir.resources import construct_fhir_element
 from fhir.resources.codesystem import CodeSystem, CodeSystemConcept, CodeSystemConceptDesignation
-from datetime import datetime
 
 input_folder = 'terminology/'
 output_folder = "terminology/"
-
-# TO DO: 
-# Get the index of the valuesets when multiple codesystems are adding up. See ValueSet-ContactType  as an example.
 
 #Make headers for .csv file
 with open(output_folder + 'codelist_overview.csv', 'w', encoding='utf8') as h:
@@ -31,14 +24,15 @@ def make_code_overview(message):
         f.close()
 
 # For each concept in a ValueSet:
-
-def createConceptOverview(valueset, filename, index):
+def createConceptOverview(valueset):
     for x in valueset.compose.include:
+        
         #Only codes that are extententionally defined (no filter) and do have a concept.
         if x.valueSet is None and x.filter is None and x.concept is not None: 
             for x2 in x.concept:
                 con = ValueSetComposeIncludeConcept.parse_obj(x2)
                 concepts = ''
+                global index
                 index += 1
                 #Add id of the valueset (All capitalized), the indexnumber, code en display  (double ;; are for CODE_CONTENT_ID that we do not fill)
                 concepts += valueset.id.upper() + ';' + str(index) + ';' + con.code + ';;' + con.display + ';'
@@ -58,20 +52,22 @@ def createConceptOverview(valueset, filename, index):
 
                 # Writes concepts to file (nu nog alles aan elkaar)
                 make_code_overview(concepts)   
+        
         # For filter elements, we add them separately.
         # No display information is added.
         if x.filter is not None:
             for x2 in x.filter:
                 con = ValueSetComposeIncludeFilter.parse_obj(x2)
                 make_code_overview(valueset.id.upper() + ';;' + con.property + ' ' + con.op + ' ' + con.value + ';;;;;' + x.system)
+        
         # For CodeSystems that are included as a whole
         if x.valueSet is None and x.concept is None and x.filter is None:
-            #we use a different function that also loops through our own defined valuesets.
-            getCodeSystemCodes(valueset.id, x.system, index)
+            # We use a different function that also loops through our own defined valuesets.
+            getCodeSystemCodes(valueset.id, x.system)
          
-
 # For each ValueSet that contains a complet CodeSystem
-def getCodeSystemCodes(valueset, system, index):
+def getCodeSystemCodes(valueset, system):
+    
     #Get CodeSystems from our list
     cs = Path(input_folder).glob('CodeSystem-*.xml')
     match = False
@@ -83,6 +79,7 @@ def getCodeSystemCodes(valueset, system, index):
             for x2 in codsys.concept:
                 con = CodeSystemConcept.parse_obj(x2)
                 csc = ''
+                global index
                 index += 1
                 #Add id of the valueset (All capitalized), the indexnumber, code en display  (double ;; are for CODE_CONTENT_ID that we do not fill)
                 csc += valueset.upper() + ';' + str(index) + ';' + con.code + ';;' + con.display + ';'
@@ -105,10 +102,7 @@ def getCodeSystemCodes(valueset, system, index):
 
     # If there is no match, include the valueset as a whole 
     if(match == False):
-        make_code_overview(valueset.upper() + ';;;;;;; All codes from ' + system)
-
-
-
+        make_code_overview(valueset.upper() + ';;;;;;;All codes from ' + system)
 
 # Get all files from the input folder that meet the filename criteria. 
 # Next, for each valueset, find the concepts and create an overview of the codes in that valueset, including Dutch and French display 
@@ -117,6 +111,6 @@ file = Path(input_folder).glob('ValueSet-*.xml')
 for f in file:
     index = 0 #Used to gather a index code of each ValueSet
     filename = os.path.basename(f)
-    createConceptOverview(ValueSet.parse_file(f), filename, index)
+    createConceptOverview(ValueSet.parse_file(f))
 
 print('Finished getting overview')
