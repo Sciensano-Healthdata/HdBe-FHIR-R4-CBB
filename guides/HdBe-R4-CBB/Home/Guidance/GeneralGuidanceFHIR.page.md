@@ -100,6 +100,21 @@ The basic requirements for using references in this context are:
 - Either a literal or logical reference SHALL be specified, unless specified otherwise.
     - Literal references are preferred over logical references when multiple target resource types/profiles may be used.
     - Literal references SHALL be resolvable.
+    - Logical references are useful if the identifier is the only information to send for a reference. Thus avoiding the need to include a resource or reference to a full resource on a server.
+    Example of a logical reference to a Practitioner with a NIHDI of 18749704477:
+        ```JSON
+            "performer":  [
+                {
+                    "type": "Practitioner",
+                    "identifier": {
+                        "use": "official",
+                        "system": "https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi",
+                        "value": "18749704477"
+                    },
+                    "display": "Healthcare professional (person), E. Penninx"
+                }
+            ],
+        ```
 - Relative references are preferred over absolute references.
 - A short description of the target resource SHOULD be included using the `.display` element.
 
