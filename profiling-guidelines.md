@@ -10,6 +10,8 @@
         3. [Use case specific models](#usecasespecificmodels)
     2. [Associating the logical definition to StructureDefinitions](#associatingthelogicaldefinitiontostructuredefinitions)
 4. [Versioning](#Versioning)
+    1. [CBBs](#Versioning-CBB)
+    2. [FHIR conformance resources](#Versioning-FHIR)
 5. [Changelog of changes to zibs and zib-profiles](#changelog)
     1. [Definition of changelog's category](#changelog_def)
     2. [CBB overarching changes](#CBB_overarching_changes)
@@ -95,6 +97,11 @@ A specific element can then be mapped using:
 Mappings should only be added. There is no need to replace existing mappings as they are valid mappings and provide traceability to the original profiles. It shows the relation between zib and HdBe concepts.
 
 ## Versioning<a name="Versioning"></a>
+### CBBs <a name="Versioning-CBB"></a>
+Healthdata.be uses the package level, or release, as the main versioning mechanism. As a result, the CBBs within the package are not individually versioned; they should be regarded as a consistent set. To identify the package version of a CBB, its version number MAY be set to the package version.
+Package versioning is based on [Semantic Versioning](https://semver.org/). After a first (1.0) release, the normal SemVer rules will determine what happens; if some of the conformance resources need to be changed in a backwards-compatible way, a new patch release of the package should be made. If major functionality is added, a new minor version of the package should be released, etc. 
+### FHIR conformance resources <a name="Versioning-FHIR"></a>
+
 In general terms, FHIR conformance resources could be affected at several different layers:
 
 1. The version of the package that the conformance resources reside in: versioned according to SemVer 2.0.
@@ -102,12 +109,11 @@ In general terms, FHIR conformance resources could be affected at several differ
 3. The FHIR version (`StructureDefinition.fhirVersion`): this document is specifically aimed at FHIR R4, meaning this element will be fixed on 4.x.
 4. The version of the underlying data model (CBB).
 
-Regarding points 1 and 2: Healthdata.be uses the package level as the main versioning mechanism. As a result, the conformance resources within the package are not individually versioned; they should be regarded as a consistent set. To identify the package version a conformance resource, its version number MAY be set to the package version.
+Regarding points 1 and 2: Healthdata.be uses the package level as the main versioning mechanism. As a result, the conformance resources within the package are not individually versioned; they should be regarded as a consistent set. To identify the package version of a conformance resource, its version number MAY be set to the package version.
 
-Regarding point 4: the life cycle of the underlying data model is not reflected directly in the version number of the conformance resources, but a change in de the underlying data could result in a change in one or more of the conformance resources. In this case, the normal SemVer rules will determine what happens; if some of the conformance resources need to be changed in a backwards-compatible way, a new patch release of the package should be made. If major functionality is added, a new minor version of the package should be released, etc. When a new version of the underlying data model reflects a fundamental change, the choice can be made to create a new package under a different name rather than a new version.
+Regarding point 4: the life cycle of the underlying data model is not reflected directly in the version number of the conformance resources, but a change in de the underlying data could result in a change in one or more of the conformance resources. In this case, the normal SemVer rules will determine what happens, as described in [CBB versioning](#Versioning-CBB). When a new version of the underlying data model reflects a fundamental change, the choice can be made to create a new package under a different name rather than a new version.
 
 Version updates of conformance resources normally do not affect their canonical URI. Any resource that references another resource normally does so without a version indicator (uri|version). Instead, this is handled at the package level; reference targets either reside within the same package or in a versioned package that has been added as a dependency.
-
   
 ## Changelog of changes to zibs and zib-profiles<a name="changelog"></a>
 Because a technical dependency on the base zibs and zib-profiles is not possible, another method for keeping a tight connection is required because the goal is to keep them as aligned as possible. Therefore, every CBB logical model and profile will have an accompanying documentation file that contains a changelog/differential to the zib or zib-profile. The documentation file has the same name as the CBB profile and ends with `.doc.md`. For example `HdBe-Patient.xml` <-> `HdBe-Patient.doc.md`. This changelog comes in handy when the CBB and CBB profiles need to be updated based on a higher version of the zibs. The changelog is used to determine what to incorporate/merge when comparing the CBB to a higher version of the zib using any diff tool. 
