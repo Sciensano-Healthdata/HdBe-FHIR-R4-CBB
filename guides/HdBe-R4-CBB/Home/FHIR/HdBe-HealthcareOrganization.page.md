@@ -2,7 +2,7 @@
 
 @```
 from StructureDefinition
-where url in ( 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider' | 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider-Organization' )
+where url in ( 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization' | 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization-Organization' )
 select 
 Profile: id,
 Description: description,
@@ -11,12 +11,12 @@ Status: status,
 URL: url
 ```
 
-## HdBe-HealthcareProvider
+## HdBe-HealthcareOrganization
 
 @```
 from
 	StructureDefinition
-	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider'
+	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization'
 select
 	Instructions: differential.element[0].comment
 ```
@@ -29,22 +29,22 @@ select
      <button class="tablinks" onclick="openTab(event, 'Mapping')">Mapping</button>
      <button class="tablinks" onclick="openTab(event, 'Examples')">Examples</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff')">Zib-profile diff</button>
-     <button class="tablinks">{{pagelink:Home/LogicalModels/HdBe-HealthcareProvider.page.md, text:CBB}}</button>
+     <button class="tablinks">{{pagelink:Home/LogicalModels/HdBe-HealthcareOrganization.page.md, text:CBB}}</button>
   </div>
 
   <div id="Snapshot view" class="tabcontent" style="display:block">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider, snapshot}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization, snapshot}}
   </div>
 
   <div id="Hybrid view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider, hybrid}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization, hybrid}}
   </div>
 
   <div id="Diff view" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider, diff}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization, diff}}
   </div>
 
   <div id="Mapping" class="tabcontent">      
@@ -52,7 +52,7 @@ select
       <div>
       @```
       from StructureDefinition
-      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider'
+      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization'
       for differential.element 
       select 
         Path: id,
@@ -64,27 +64,27 @@ select
 
   <div id="Examples" class="tabcontent">
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-HealthcareProvider-01.page.md}}</li>
-        <li>{{pagelink:Home/Examples/HdBe-HealthcareProvider-02.page.md}}</li>
-        <li>{{pagelink:Home/Examples/HdBe-HealthcareProvider-03.page.md}}</li>
-        <li>{{pagelink:Home/Examples/HdBe-HealthcareProvider-04.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-HealthcareOrganization-01.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-HealthcareOrganization-02.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-HealthcareOrganization-03.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-HealthcareOrganization-04.page.md}}</li>
       </ul>
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:resources/HdBe-HealthcareProvider.doc.md}}
+      {{render:resources/HdBe-HealthcareOrganization.doc.md}}
   </div>
 
 </div>
 
 <br/><br/> 
 
-## HdBe-HealthcareProvider-Organization
+## HdBe-HealthcareOrganization-Organization
 
 @```
 from
 	StructureDefinition
-	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider-Organization'
+	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization-Organization'
 select
 	Instructions: differential.element[0].comment
 ```
@@ -97,22 +97,22 @@ select
      <button class="tablinks" onclick="openTab(event, 'Mapping2')">Mapping</button>
      <button class="tablinks" onclick="openTab(event, 'Examples2')">Examples</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff2')">Zib-profile diff</button>
-     <button class="tablinks">{{pagelink:Home/LogicalModels/HdBe-HealthcareProvider.page.md, text:CBB}}</button>
+     <button class="tablinks">{{pagelink:Home/LogicalModels/HdBe-HealthcareOrganization.page.md, text:CBB}}</button>
   </div>
 
   <div id="Snapshot view2" class="tabcontent" style="display:block">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider-Organization, snapshot}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization-Organization, snapshot}}
   </div>
 
   <div id="Hybrid view2" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider-Organization, hybrid}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization-Organization, hybrid}}
   </div>
 
   <div id="Diff view2" class="tabcontent">
     <br>
-      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider-Organization, diff}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization-Organization, diff}}
   </div>
 
   <div id="Mapping2" class="tabcontent">      
@@ -120,7 +120,7 @@ select
       <div>
       @```
       from StructureDefinition
-      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider-Organization'
+      where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization-Organization'
       for differential.element 
       select 
         Path: id,
@@ -133,13 +133,13 @@ select
   <div id="Examples2" class="tabcontent">
       <p> A UML overview at the bottom of this page provides an example of how a hierarchical structure is initialized in FHIR using Organization and Location resources. </p>
       <ul>
-        <li>{{pagelink:Home/Examples/HdBe-HealthcareProvider-Organization-01.page.md}}</li>
-        <li>{{pagelink:Home/Examples/HdBe-HealthcareProvider-Organization-02.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-HealthcareOrganization-Organization-01.page.md}}</li>
+        <li>{{pagelink:Home/Examples/HdBe-HealthcareOrganization-Organization-02.page.md}}</li>
       </ul>
   </div>
 
   <div id="Zib diff2" class="tabcontent">
-      {{render:resources/HdBe-HealthcareProvider-Organization.doc.md}}
+      {{render:resources/HdBe-HealthcareOrganization-Organization.doc.md}}
   </div>
 
 </div>
@@ -150,7 +150,7 @@ select
 
 @```
 from StructureDefinition
-where url in ( 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider' | 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareProvider-Organization' )
+where url in ( 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization' | 'https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization-Organization' )
 
 for differential.element
 select
@@ -183,13 +183,13 @@ UniqueId: for uniqueId.where(preferred = true) select value
 
 The locationId, departmentId and nihdi are all mapped to their approriate slice on `.identifier`.
 
-### Location hierachy 
+### Location hierarchy 
 
 <plantuml>
   set namespaceSeparator none
   skinparam backgroundcolor transparent
 
-  class "HealthcareProvider-Organization" <<Organization>>
+  class "HealthcareOrganization-Organization" <<Organization>>
     {
       nidhi = 71001228
       name = ALGEMEEN ZIEKENHUIS ST. BLASIUS
@@ -235,8 +235,8 @@ The locationId, departmentId and nihdi are all mapped to their approriate slice 
       name = Hemodialyse
     }
 
-  "HealthcareProvider-Organization"  <-- Site1: Location.managingOrganization
-  "HealthcareProvider-Organization"  <-- Site2: Location.managingOrganization
+  "HealthcareOrganization-Organization"  <-- Site1: Location.managingOrganization
+  "HealthcareOrganization-Organization"  <-- Site2: Location.managingOrganization
 
   Site1 <-- Ward1 : Location.partOf
   Site1 <-- Ward2 : Location.partOf
@@ -248,7 +248,7 @@ The locationId, departmentId and nihdi are all mapped to their approriate slice 
 
 <br/><br/> 
 
-### Location and Organization hierachy of one site and one ward
+### Location and Organization hierarchy of one site and one ward
 
 <br/><br/> 
 
@@ -256,7 +256,7 @@ The locationId, departmentId and nihdi are all mapped to their approriate slice 
   set namespaceSeparator none
   skinparam backgroundcolor transparent
 
-  class "HealthcareProvider" <<Organization>>
+  class "HealthcareOrganization" <<Organization>>
     {
       nidhi = 70100179
       name = ALGEMEEN ZIEKENHUIS ST. BLASIUS
@@ -283,8 +283,8 @@ The locationId, departmentId and nihdi are all mapped to their approriate slice 
       type = Pediatrie
     }
 
-  "HealthcareProvider"  <-- "Site1 L": Location.managingOrganization
-  "HealthcareProvider"  <-- "Site1 O" : Organization.partOf
+  "HealthcareOrganization"  <-- "Site1 L": Location.managingOrganization
+  "HealthcareOrganization"  <-- "Site1 O" : Organization.partOf
 
   "Site1 O" <-- "Ward1 O" : Organization.partOf
   "Site1 L" <-- "Ward1 L" : Location.partOf

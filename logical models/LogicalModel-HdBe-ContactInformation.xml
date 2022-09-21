@@ -1,130 +1,130 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="HdBe-ContactInformation" />
-  <language value="en-US" />
-  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-    <valuePeriod>
-      <start value="2020-09-01T00:00:00+02:00" />
-    </valuePeriod>
-  </extension>
-  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation" />
-  <name value="HdBeContactInformation">
-    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-      <extension url="lang">
-        <valueCode value="nl-NL" />
+   <id value="HdBe-ContactInformation"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-09-01T00:00:00+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation"/>
+   <name value="HdBeContactInformation">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-Contactgegevens"/>
+         </extension>
       </extension>
-      <extension url="content">
-        <valueMarkdown value="HdBe-Contactgegevens" />
+   </name>
+   <title value="HdBe ContactInformation"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Service portal – healthdata.be"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://sciensano.service-now.com/sp"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="**Concept**&#xD;&#xA;Contact information includes a person's telephone numbers and e-mail addresses.&#xD;&#xA;This is a partial information model.&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;Contact information is used to contact a person.">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="**Concept**&#xD;&#xA;Contactgegevens bevatten de telefoonnummers en e-mail adressen van een persoon.&#xD;&#xA;Dit is een subbouwsteen.&#xD;&#xA;**Purpose**&#xD;&#xA;Contactgegevens worden gebruikt om met een persoon in contact te treden."/>
+         </extension>
       </extension>
-    </extension>
-  </name>
-  <title value="HdBe ContactInformation" />
-  <status value="draft" />
-  <publisher value="Healthdata.be (Sciensano)" />
-  <contact>
-    <name value="Service portal – healthdata.be" />
-    <telecom>
-      <system value="url" />
-      <value value="https://sciensano.service-now.com/sp" />
-      <use value="work" />
-    </telecom>
-  </contact>
-  <description value="**Concept**&#xD;&#xA;Contact information includes a person's telephone numbers and e-mail addresses.&#xD;&#xA;This is a partial information model.&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;Contact information is used to contact a person.">
-    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-      <extension url="lang">
-        <valueCode value="nl-NL" />
-      </extension>
-      <extension url="content">
-        <valueMarkdown value="**Concept**&#xD;&#xA;Contactgegevens bevatten de telefoonnummers en e-mail adressen van een persoon.&#xD;&#xA;Dit is een subbouwsteen.&#xD;&#xA;**Purpose**&#xD;&#xA;Contactgegevens worden gebruikt om met een persoon in contact te treden." />
-      </extension>
-    </extension>
-  </description>
-  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
-  <fhirVersion value="4.0.1" />
-  <kind value="logical" />
-  <abstract value="true" />
-  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/contact_information" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
-  <derivation value="specialization" />
-  <differential>
-    <element id="contact_information">
-      <path value="contact_information" />
-      <short value="ContactInformation">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Contactgegevens" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Root concept of the ContactInformation partial information model. This root concept contains all data elements of the ContactInformation partial information model.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Rootconcept van de sub-bouwsteen Contactgegevens. Dit rootconcept bevat alle gegevenselementen van de sub-bouwsteen Contactgegevens." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="*" />
-    </element>
-    <element id="contact_information.type">
-      <path value="contact_information.type" />
-      <short value="Type" />
-      <definition value="The type of contact information." />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="CodeableConcept" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="required" />
-        <description value="Telecommunications form for contact point." />
-        <valueSet value="http://hl7.org/fhir/ValueSet/contact-point-system" />
-      </binding>
-    </element>
-    <element id="contact_information.value">
-      <path value="contact_information.value" />
-      <short value="Value" />
-      <definition value="The actual contact information details." />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="string" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
-      </type>
-    </element>
-    <element id="contact_information.use">
-      <path value="contact_information.use" />
-      <short value="Use" />
-      <definition value="Purpose or use of the contact information. For example whether it is a private or business telephone number." />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="CodeableConcept" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="required" />
-        <description value="Use of contact point." />
-        <valueSet value="http://hl7.org/fhir/ValueSet/contact-point-use" />
-      </binding>
-    </element>
-    <element id="contact_information.comment">
-      <path value="contact_information.comment" />
-      <short value="Comment" />
-      <definition value="Explanation about the contact information and how to use it. It can be indicated, for example, that a telephone number concerns a department number (for healthcare professionals) or that availability by phone is only possible during a specified part of the day." />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="string" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
-      </type>
-    </element>
-  </differential>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/ContactInformation"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+      <element id="ContactInformation">
+         <path value="ContactInformation"/>
+         <short value="ContactInformation">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Contactgegevens"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="Root concept of the ContactInformation partial information model. This root concept contains all data elements of the ContactInformation partial information model.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Rootconcept van de sub-bouwsteen Contactgegevens. Dit rootconcept bevat alle gegevenselementen van de sub-bouwsteen Contactgegevens."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="*"/>
+      </element>
+      <element id="ContactInformation.Type">
+         <path value="ContactInformation.Type"/>
+         <short value="Type"/>
+         <definition value="The type of contact information."/>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="CodeableConcept"/>
+            <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+         </type>
+         <binding>
+            <strength value="required"/>
+            <description value="Telecommunications form for contact point."/>
+            <valueSet value="http://hl7.org/fhir/ValueSet/contact-point-system"/>
+         </binding>
+      </element>
+      <element id="ContactInformation.Value">
+         <path value="ContactInformation.Value"/>
+         <short value="Value"/>
+         <definition value="The actual contact information details."/>
+         <min value="1"/>
+         <max value="1"/>
+         <type>
+            <code value="string"/>
+            <profile value="http://hl7.org/fhir/StructureDefinition/string"/>
+         </type>
+      </element>
+      <element id="ContactInformation.Use">
+         <path value="ContactInformation.Use"/>
+         <short value="Use"/>
+         <definition value="Purpose or use of the contact information. For example whether it is a private or business telephone number."/>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="CodeableConcept"/>
+            <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+         </type>
+         <binding>
+            <strength value="required"/>
+            <description value="Use of contact point."/>
+            <valueSet value="http://hl7.org/fhir/ValueSet/contact-point-use"/>
+         </binding>
+      </element>
+      <element id="ContactInformation.Comment">
+         <path value="ContactInformation.Comment"/>
+         <short value="Comment"/>
+         <definition value="Explanation about the contact information and how to use it. It can be indicated, for example, that a telephone number concerns a department number (for healthcare professionals) or that availability by phone is only possible during a specified part of the day."/>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="string"/>
+            <profile value="http://hl7.org/fhir/StructureDefinition/string"/>
+         </type>
+      </element>
+   </differential>
 </StructureDefinition>

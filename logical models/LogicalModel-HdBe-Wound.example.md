@@ -9,16 +9,16 @@
 ```
 ## Example instances
 
-| name_information      |                   |
+| NameInformation      |                   |
 |----------------------|-------------------|
-| first_names | Johanna Petronella Maria   
-| initials | J.P.M. 
-| given_name | Jo 
-| name_usage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| last_name.prefix | van
-| last_name.last_name | Putten
-| last_name_partner.partner_prefix | van der
-| last_name_partner.partner_last_name | Giessen
-| titles |
+| FirstNames | Johanna Petronella Maria   
+| Initials | J.P.M. 
+| GivenName | Jo 
+| NameUsage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
+| LastName.Prefix | van
+| LastName.LastName | Putten
+| LastNamePartner.PartnerPrefix | van der
+| LastNamePartner.PartnerLastName | Giessen
+| Titles |
 
 ```

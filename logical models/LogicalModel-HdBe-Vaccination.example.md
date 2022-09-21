@@ -2,11 +2,11 @@
 
 | vaccination      |               |
 |------------------|---------------|
-| product_code     | 836393002 - Rabies lyssavirus antigen-containing vaccine product (code by SNOMED CT) |
-| dose             |  |
-| vaccination_date | 2018-02-06 |
-| **administrator**| -- |
-| administrator    | Reference to HealthProfessional (E. Penninx)  |
-| location         | Reference to HealthcareProvider (Enterprise Hospital Ziekenhuis) |
-| comment          | Visit to Peru. |
+| ProductCode     | 836393002 - Rabies lyssavirus antigen-containing vaccine product (code by SNOMED CT) |
+| Dose             |  |
+| VaccinationDate | 2018-02-06 |
+| **Administrator**| -- |
+| Administrator    | Reference to HealthProfessional (E. Penninx)  |
+| Location         | Reference to HealthcareOrganization (Enterprise Hospital Ziekenhuis) |
+| Comment          | Visit to Peru. |
 

@@ -1,15 +1,15 @@
 ## Example instances
-| visual_function                           |                   |
+| VisualFunction                           |                   |
 |-------------------------------------------|-------------------|
-| visual_function                           |397540003 - Visual impairment (code by SNOMED CT)    |
-| **visual_aid**                            | --- |
-| visual_aid.medical_device.product_type    |50121007 - Eyeglasses (code by SNOMED CT) |
-| comment                                   |patient sees significantly worse with the left eye than with the right eye |
+| VisualFunction                           |397540003 - Visual impairment (code by SNOMED CT)    |
+| **VisualAid**                            | --- |
+| VisualAid.MedicalDevice.ProductType    |50121007 - Eyeglasses (code by SNOMED CT) |
+| Comment                                   |patient sees significantly worse with the left eye than with the right eye |
 
-| visual_function                           |                   |
+| VisualFunction                           |                   |
 |-------------------------------------------|-------------------|
-| visual_function                           |45089002 - Normal vision (code by SNOMED CT) |
-| **visual_aid**                            | --- |
-| visual_aid.medical_device.product_type    |     |
-| comment                                   |     |
+| VisualFunction                           |45089002 - Normal vision (code by SNOMED CT) |
+| **VisualAid**                            | --- |
+| VisualAid.MedicalDevice.ProductType    |     |
+| Comment                                   |     |
 

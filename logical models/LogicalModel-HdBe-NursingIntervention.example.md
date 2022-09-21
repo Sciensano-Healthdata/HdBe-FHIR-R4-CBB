@@ -2,18 +2,18 @@
 
 | NursingIntervention |                   |
 |---------------------|-------------------| 
-|intervention | 386420003 - Ondersteunen bij wassen en/of persoonlijke hygiene (code by SNOMED CT)  
-|indication | Probleem met zichzelf wassen en drogen
-|treatment_objective | Wassen onafhankelijk
-|interval | 
-|frequency | 1/dag
-|procedure_start_date_time | 10-09-2021
-|procedure_end_date_time | 
-|medical_device | 
-|instruction | Let op: valrisico
-|performer | 
-|performer.healthcare_provider | 
-|performer.caregiver | 
-|performer.patient | 
-|requester | 
-|comment | 
+|Intervention | 386420003 - Ondersteunen bij wassen en/of persoonlijke hygiene (code by SNOMED CT)  
+|Indication | Probleem met zichzelf wassen en drogen
+|TreatmentObjective | Wassen onafhankelijk
+|Interval | 
+|Frequency | 1/dag
+|ProcedureStartDateTime | 10-09-2021
+|ProcedureEndDateTime | 
+|MedicalDevice | 
+|Instruction | Let op: valrisico
+|Performer | 
+|Performer.HealthcareOrganization | 
+|Performer.Caregiver | 
+|Performer.Patient | 
+|Requester | 
+|Comment | 

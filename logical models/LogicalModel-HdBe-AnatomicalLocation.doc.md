@@ -3,4 +3,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`location`| terminology | Removed valueSet LocationICD-O-3Codelist | 
+|`Location`| terminology | Removed valueSet LocationICD-O-3Codelist | 

@@ -1,8 +1,8 @@
 ## Example instances
 
-| treatment_objective       |                   |
+| TreatmentObjective       |                   |
 |---------------------------|-------------------|
-| desired_healthcare_result | - |
-| desired_health_condition.functional_or_mental_status | Reference to FunctionalOrMentalStauts (Able to shave) |
-| problem                   |  Reference to Problem (Difficulty performing personal grooming activity) | 
+| DesiredHealthcareResult | - |
+| DesiredHealthCondition.FunctionalOrMentalStatus | Reference to FunctionalOrMentalStauts (Able to shave) |
+| Problem                   |  Reference to Problem (Difficulty performing personal grooming activity) | 
 

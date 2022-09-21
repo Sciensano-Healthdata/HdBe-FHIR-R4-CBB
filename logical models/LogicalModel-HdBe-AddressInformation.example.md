@@ -1,16 +1,16 @@
 ## Example instances
 
-| address_information   |                   |
+| AddressInformation   |                   |
 |-----------------|-------------------|
-| street |  1e Jacob van Campenstr |
-| house_number | 15  |
-| house_number_letter |   |
-| house_number_addition |   |
-| house_number_indication |   |
-| postcode | 1012 NX |
-| place_of_residence | Hoogmade  |
-| municipality | Kaag en Braassem  |
-| country | Nederland |
-| additional_information |   |
-| address_type | both - Postal & Physical (code by AddressType)  |
-| address_use | home - Home (code by AddressUse) |
+| Street |  1e Jacob van Campenstr |
+| HouseNumber | 15  |
+| HouseNumberLetter |   |
+| HouseNumberAddition |   |
+| HouseNumberIndication |   |
+| Postcode | 1012 NX |
+| PlaceOfResidence | Hoogmade  |
+| Municipality | Kaag en Braassem  |
+| Country | Nederland |
+| AdditionalInformation |   |
+| AddressType | both - Postal & Physical (code by AddressType)  |
+| AddressUse | home - Home (code by AddressUse) |

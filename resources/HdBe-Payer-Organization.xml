@@ -1,146 +1,146 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="HdBe-Payer-Organization" />
-  <meta>
-    <lastUpdated value="2022-08-19T08:00:11.1048349+00:00" />
-  </meta>
-  <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-Payer-Organization" />
-  <name value="HdBePayerOrganization" />
-  <title value="HdBe Payer Organization" />
-  <status value="draft" />
-  <publisher value="Healthdata.be (Sciensano)" />
-  <contact>
-    <name value="Service portal – healthdata.be" />
-    <telecom>
-      <system value="url" />
-      <value value="https://sciensano.service-now.com/sp" />
-      <use value="work" />
-    </telecom>
-  </contact>
-  <description value="The Payer profiles can refer to respectively an Organization as PayerPerson or an InsuranceCompany. This profile can thus represent either the PayerName or InsuranceCompany concept and both the AddressInformation and ContactInformation concepts of the CBB Payer." />
-  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
-  <fhirVersion value="4.0.1" />
-  <mapping>
-    <identity value="zib-payer-v3.1.1-2020EN" />
-    <uri value="https://zibs.nl/wiki/Payer-v3.1.1(2020EN)" />
-    <name value="zib Payer-v3.1.1(2020EN)" />
-  </mapping>
-  <mapping>
-    <identity value="HdBe-Payer" />
-    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Payer" />
-    <name value="HdBe logical model Payer" />
-  </mapping>
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="Organization" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization" />
-  <derivation value="constraint" />
-  <differential>
-    <element id="Organization">
-      <path value="Organization" />
-      <short value="InsuranceCompany" />
-      <comment value="The CBB Payer is split into two focal profiles on Coverage based on the PayerPerson and InsuranceCompany containers. These profiles can refer to respectively an Organization as PayerPerson or an InsuranceCompany. This profile can thus represent either the PayerName or InsuranceCompany concept and both the AddressInformation and ContactInformation concepts of the CBB." />
-      <alias value="Verzekeraar" />
-      <mapping>
-        <identity value="zib-payer-v3.1.1-2020EN" />
-        <map value="NL-CM:1.1.3" />
-        <comment value="InsuranceCompany" />
-      </mapping>
-      <mapping>
-        <identity value="HdBe-Payer" />
-        <map value="payer.insurance_company" />
-      </mapping>
-    </element>
-    <element id="Organization.identifier">
-      <path value="Organization.identifier" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Organization.identifier:be-InsuranceIdentificationNumber">
-      <path value="Organization.identifier" />
-      <sliceName value="be-InsuranceIdentificationNumber" />
-      <short value="IdentificationNumber" />
-      <definition value="Unique healthcare insurance company identification." />
-      <alias value="IdentificatieNummer" />
-      <max value="1" />
-      <patternIdentifier>
-        <system value="https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/be-insurancenumber" />
-      </patternIdentifier>
-      <mapping>
-        <identity value="zib-payer-v3.1.1-2020EN" />
-        <map value="NL-CM:1.1.7" />
-        <comment value="IdentificationNumber" />
-      </mapping>
-      <mapping>
-        <identity value="HdBe-Payer" />
-        <map value="payer.insurance_company.identification_number" />
-      </mapping>
-    </element>
-    <element id="Organization.name">
-      <path value="Organization.name" />
-      <short value="OrganizationName / PayerName" />
-      <definition value="Full, official name of the healthcare insurance company or paying organization." />
-      <alias value="OrganisatieNaam" />
-      <alias value="BetalerNaam" />
-      <mapping>
-        <identity value="zib-payer-v3.1.1-2020EN" />
-        <map value="NL-CM:1.1.16" />
-        <comment value="OrganizationName" />
-      </mapping>
-      <mapping>
-        <identity value="zib-payer-v3.1.1-2020EN" />
-        <map value="NL-CM:1.1.5" />
-        <comment value="PayerName" />
-      </mapping>
-      <mapping>
-        <identity value="HdBe-Payer" />
-        <map value="payer.insurance_company.organization_name" />
-      </mapping>
-      <mapping>
-        <identity value="HdBe-Payer" />
-        <map value="payer.payer_person.payer_name" />
-      </mapping>
-    </element>
-    <element id="Organization.telecom">
-      <path value="Organization.telecom" />
-      <short value="ContactInformation" />
-      <definition value="The payer’s telephone number and/or e-mail address." />
-      <alias value="Contactgegevens" />
-      <type>
-        <code value="ContactPoint" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation" />
-      </type>
-      <mapping>
-        <identity value="zib-payer-v3.1.1-2020EN" />
-        <map value="NL-CM:1.1.12" />
-        <comment value="ContactInformation" />
-      </mapping>
-      <mapping>
-        <identity value="HdBe-Payer" />
-        <map value="payer.contact_information" />
-      </mapping>
-    </element>
-    <element id="Organization.address">
-      <path value="Organization.address" />
-      <definition value="The payer’s address information." />
-      <type>
-        <code value="Address" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation" />
-      </type>
-      <mapping>
-        <identity value="zib-payer-v3.1.1-2020EN" />
-        <map value="NL-CM:1.1.17" />
-        <comment value="AddressInformation" />
-      </mapping>
-      <mapping>
-        <identity value="HdBe-Payer" />
-        <map value="payer.address_information" />
-      </mapping>
-    </element>
-  </differential>
+   <id value="HdBe-Payer-Organization"/>
+   <meta>
+      <lastUpdated value="2022-08-19T08:00:11.1048349+00:00"/>
+   </meta>
+   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-Payer-Organization"/>
+   <name value="HdBePayerOrganization"/>
+   <title value="HdBe Payer Organization"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Service portal – healthdata.be"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://sciensano.service-now.com/sp"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="The Payer profiles can refer to respectively an Organization as PayerPerson or an InsuranceCompany. This profile can thus represent either the PayerName or InsuranceCompany concept and both the AddressInformation and ContactInformation concepts of the CBB Payer."/>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <mapping>
+      <identity value="zib-payer-v3.1.1-2020EN"/>
+      <uri value="https://zibs.nl/wiki/Payer-v3.1.1(2020EN)"/>
+      <name value="zib Payer-v3.1.1(2020EN)"/>
+   </mapping>
+   <mapping>
+      <identity value="HdBe-Payer"/>
+      <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Payer"/>
+      <name value="HdBe logical model Payer"/>
+   </mapping>
+   <kind value="resource"/>
+   <abstract value="false"/>
+   <type value="Organization"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="Organization">
+         <path value="Organization"/>
+         <short value="InsuranceCompany"/>
+         <comment value="The CBB Payer is split into two focal profiles on Coverage based on the PayerPerson and InsuranceCompany containers. These profiles can refer to respectively an Organization as PayerPerson or an InsuranceCompany. This profile can thus represent either the PayerName or InsuranceCompany concept and both the AddressInformation and ContactInformation concepts of the CBB."/>
+         <alias value="Verzekeraar"/>
+         <mapping>
+            <identity value="zib-payer-v3.1.1-2020EN"/>
+            <map value="NL-CM:1.1.3"/>
+            <comment value="InsuranceCompany"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-Payer"/>
+            <map value="Payer.InsuranceCompany"/>
+         </mapping>
+      </element>
+      <element id="Organization.identifier">
+         <path value="Organization.identifier"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="$this"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Organization.identifier:be-InsuranceIdentificationNumber">
+         <path value="Organization.identifier"/>
+         <sliceName value="be-InsuranceIdentificationNumber"/>
+         <short value="IdentificationNumber"/>
+         <definition value="Unique healthcare insurance company identification."/>
+         <alias value="IdentificatieNummer"/>
+         <max value="1"/>
+         <patternIdentifier>
+            <system value="https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/be-insurancenumber"/>
+         </patternIdentifier>
+         <mapping>
+            <identity value="zib-payer-v3.1.1-2020EN"/>
+            <map value="NL-CM:1.1.7"/>
+            <comment value="IdentificationNumber"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-Payer"/>
+            <map value="Payer.InsuranceCompany.IdentificationNumber"/>
+         </mapping>
+      </element>
+      <element id="Organization.name">
+         <path value="Organization.name"/>
+         <short value="OrganizationName / PayerName"/>
+         <definition value="Full, official name of the healthcare insurance company or paying organization."/>
+         <alias value="OrganisatieNaam"/>
+         <alias value="BetalerNaam"/>
+         <mapping>
+            <identity value="zib-payer-v3.1.1-2020EN"/>
+            <map value="NL-CM:1.1.16"/>
+            <comment value="OrganizationName"/>
+         </mapping>
+         <mapping>
+            <identity value="zib-payer-v3.1.1-2020EN"/>
+            <map value="NL-CM:1.1.5"/>
+            <comment value="PayerName"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-Payer"/>
+            <map value="Payer.InsuranceCompany.OrganizationName"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-Payer"/>
+            <map value="Payer.PayerPerson.PayerName"/>
+         </mapping>
+      </element>
+      <element id="Organization.telecom">
+         <path value="Organization.telecom"/>
+         <short value="ContactInformation"/>
+         <definition value="The payer’s telephone number and/or e-mail address."/>
+         <alias value="Contactgegevens"/>
+         <type>
+            <code value="ContactPoint"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation"/>
+         </type>
+         <mapping>
+            <identity value="zib-payer-v3.1.1-2020EN"/>
+            <map value="NL-CM:1.1.12"/>
+            <comment value="ContactInformation"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-Payer"/>
+            <map value="Payer.ContactInformation"/>
+         </mapping>
+      </element>
+      <element id="Organization.address">
+         <path value="Organization.address"/>
+         <definition value="The payer’s address information."/>
+         <type>
+            <code value="Address"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation"/>
+         </type>
+         <mapping>
+            <identity value="zib-payer-v3.1.1-2020EN"/>
+            <map value="NL-CM:1.1.17"/>
+            <comment value="AddressInformation"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-Payer"/>
+            <map value="Payer.AddressInformation"/>
+         </mapping>
+      </element>
+   </differential>
 </StructureDefinition>

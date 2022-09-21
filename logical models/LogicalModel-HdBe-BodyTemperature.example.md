@@ -1,8 +1,8 @@
 ## Example instances
 
-| body_temperature      |                                       |
+| BodyTemperature      |                                       |
 |-----------------------|---------------------------------------|
-| temperature_value     | 37.2 cel                              |
-| temperature_date_time | 2022-01-02                            |
-| comment               |                                       |
-| temperature_type      | 415945006 - Oral temperature (code by SNOMED CT) | 
+| TemperatureValue     | 37.2 cel                              |
+| TemperatureDateTime | 2022-01-02                            |
+| Comment               |                                       |
+| TemperatureType      | 415945006 - Oral temperature (code by SNOMED CT) | 

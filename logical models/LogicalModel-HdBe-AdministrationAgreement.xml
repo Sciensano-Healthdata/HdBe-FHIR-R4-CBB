@@ -1,553 +1,483 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="HdBe-AdministrationAgreement" />
-  <language value="en-US" />
-  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-    <valuePeriod>
-      <start value="2020-09-01T00:00:00+02:00" />
-    </valuePeriod>
-  </extension>
-  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AdministrationAgreement" />
-  <name value="HdBeAdministrationAgreement">
-    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-      <extension url="lang">
-        <valueCode value="nl-NL" />
+   <id value="HdBe-AdministrationAgreement"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-09-01T00:00:00+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AdministrationAgreement"/>
+   <name value="HdBeAdministrationAgreement">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-Toedieningsafspraak"/>
+         </extension>
       </extension>
-      <extension url="content">
-        <valueMarkdown value="HdBe-Toedieningsafspraak" />
+   </name>
+   <title value="HdBe AdministrationAgreement"/>
+   <status value="draft"/>
+   <date value="2022-07-07T15:04:03.2592055+00:00"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Service portal – healthdata.be"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://sciensano.service-now.com/sp"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="**Concept**&#xD;&#xA;An administration agreement is the use (or administering) instructions from the pharmacist to the patient (or their representative or administrator), whereby a medication agreement is structured at a concrete level.&#xD;&#xA;**Purpose**&#xD;&#xA;The goal of the administration agreement is to provide insight into the concrete instructions for administration/use of medication.&#xD;&#xA;**Example Instances**">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="**Concept**&#xD;&#xA;Een toedieningsafspraak is de gebruiks- (of toedienings-)instructie van de apotheker aan de patiënt (of zijn vertegenwoordiger of toediener), waarbij een medicatieafspraak op een concreet niveau wordt ingevuld.&#xD;&#xA;**Purpose**&#xD;&#xA;Het doel van de toedieningsafspraak is inzicht te geven in de concrete instructie voor het toedienen/gebruik van medicatie.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (04-09-2017)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.1 (31-12-2017)&#xD;&#xA;Bevat: [ZIB-643](https://bits.nictiz.nl/browse/ZIB-643).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.2 (31-01-2020)&#xD;&#xA;Bevat: [ZIB-888](https://bits.nictiz.nl/browse/ZIB-888).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.3 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-911](https://bits.nictiz.nl/browse/ZIB-911), [ZIB-1006](https://bits.nictiz.nl/browse/ZIB-1006)."/>
+         </extension>
       </extension>
-    </extension>
-  </name>
-  <title value="HdBe AdministrationAgreement" />
-  <status value="draft" />
-  <date value="2022-07-07T15:04:03.2592055+00:00" />
-  <publisher value="Healthdata.be (Sciensano)" />
-  <contact>
-    <name value="Service portal – healthdata.be" />
-    <telecom>
-      <system value="url" />
-      <value value="https://sciensano.service-now.com/sp" />
-      <use value="work" />
-    </telecom>
-  </contact>
-  <description value="**Concept**&#xD;&#xA;An administration agreement is the use (or administering) instructions from the pharmacist to the patient (or their representative or administrator), whereby a medication agreement is structured at a concrete level.&#xD;&#xA;**Purpose**&#xD;&#xA;The goal of the administration agreement is to provide insight into the concrete instructions for administration/use of medication.&#xD;&#xA;**Example Instances**">
-    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-      <extension url="lang">
-        <valueCode value="nl-NL" />
-      </extension>
-      <extension url="content">
-        <valueMarkdown value="**Concept**&#xD;&#xA;Een toedieningsafspraak is de gebruiks- (of toedienings-)instructie van de apotheker aan de patiënt (of zijn vertegenwoordiger of toediener), waarbij een medicatieafspraak op een concreet niveau wordt ingevuld.&#xD;&#xA;**Purpose**&#xD;&#xA;Het doel van de toedieningsafspraak is inzicht te geven in de concrete instructie voor het toedienen/gebruik van medicatie.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (04-09-2017)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.1 (31-12-2017)&#xD;&#xA;Bevat: [ZIB-643](https://bits.nictiz.nl/browse/ZIB-643).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.2 (31-01-2020)&#xD;&#xA;Bevat: [ZIB-888](https://bits.nictiz.nl/browse/ZIB-888).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.3 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-911](https://bits.nictiz.nl/browse/ZIB-911), [ZIB-1006](https://bits.nictiz.nl/browse/ZIB-1006)." />
-      </extension>
-    </extension>
-  </description>
-  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
-  <fhirVersion value="4.0.1" />
-  <kind value="logical" />
-  <abstract value="true" />
-  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/administration_agreement" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
-  <derivation value="specialization" />
-  <differential>
-    <element id="administration_agreement">
-      <path value="administration_agreement" />
-      <short value="AdministrationAgreement">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Toedieningsafspraak" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Root concept of the AdministrationAgreement information model. This root concept contains all data elements of the AdministrationAgreement information model.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Rootconcept van de bouwsteen Toedieningsafspraak. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Toedieningsafspraak." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="*" />
-      <base>
-        <path value="administration_agreement" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-    </element>
-    <element id="administration_agreement.supplier">
-      <path value="administration_agreement.supplier" />
-      <short value="Supplier">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Verstrekker" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The supplier (pharmacist) that entered the administration agreement.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="De verstrekker (apotheker) die de toedieningsafspraak heeft vastgelegd." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="administration_agreement.supplier" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareProvider" />
-      </type>
-    </element>
-    <element id="administration_agreement.medicine_for_administration_agreement">
-      <path value="administration_agreement.medicine_for_administration_agreement" />
-      <short value="MedicineForAdministrationAgreement">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="GeneesmiddelBijToedieningsAfspraak" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Medicine in the AdministrationAgreement.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Geneesmiddel horende bij de toedieningsafspraak." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="1" />
-      <max value="1" />
-      <base>
-        <path value="administration_agreement.medicine_for_administration_agreement" />
-        <min value="1" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct" />
-      </type>
-    </element>
-    <element id="administration_agreement.instructions_for_use">
-      <path value="administration_agreement.instructions_for_use" />
-      <short value="InstructionsForUse">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Gebruiksinstructie" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Instructions for administering the medication, e.g. dose and route of administration.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Aanwijzingen voor de toediening van de medicatie, bijvoorbeeld dosering en toedieningsweg." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Dosage" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-InstructionsForUse" />
-      </type>
-    </element>
-    <element id="administration_agreement.administration_agreement_date_time">
-      <path value="administration_agreement.administration_agreement_date_time" />
-      <short value="AdministrationAgreementDateTime">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="ToedieningsafspraakDatumTijd" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The time at which the agreement was made.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Het tijdstip waarop de afspraak gemaakt is." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="administration_agreement.administration_agreement_date_time" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="dateTime" />
-      </type>
-    </element>
-    <element id="administration_agreement.agreement_reason">
-      <path value="administration_agreement.agreement_reason" />
-      <short value="AgreementReason">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="RedenAfspraak" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Reason for this agreement. This will often be the same reason as the one for the medication agreement. &#xD;&#xA;This field has the option to - if applicable - enter a specific reason for the administration agreement. Examples include: substitution, transfer to GDS, patient request for different product, etc.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Reden voor deze afspraak. Dit zal vaak dezelfde reden zijn als die van de medicatieafspraak.&#xD;&#xA;Dit veld geeft de mogelijkheid om - indien van toepassing - een specifieke reden voor de toedieningsafspraak op te nemen. Voorbeelden hiervan zijn: substitutie, overgang naar GDS, wens patiënt voor ander handelsproduct, et cetera." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="administration_agreement.agreement_reason" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="administration_agreement.period_of_use">
-      <path value="administration_agreement.period_of_use" />
-      <short value="PeriodOfUse">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Gebruiksperiode" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Start date: This is the time at which the agreement was to take effect (or took effect or will take effect). This is the time at which the instructions for use in this agreement start. In the case of an agreement to discontinue use, this is the start date of the original administration agreement. The end date indicates from when the medication is to be discontinued. &#xD;&#xA;Duration: The intended duration of use. E.g. 5 days or 8 weeks. It is not allowed to indicate the duration in months, because different months have a variable duration in days. &#xD;&#xA;End date: The time at which the period of use ends (or ended or will end). In the case of an agreement to discontinue use, this is the time at which the medication is to be discontinued. To avoid confusion between 'to' and 'up to', the submission of time is always mandatory for the end date. &#xD;&#xA;&#xD;&#xA;With medication for an indefinite period only a start date is indicated.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Ingangsdatum: Dit is het tijdstip waarop de afspraak ingaat (of is ingegaan of zal ingaan). Dit betreft het tijdstip waarop de in deze afspraak vastgelegde gebruiksinstructie ingaat. In geval van een afspraak om te stoppen betreft dit de ingangsdatum van de originele toedieningsafspraak. De einddatum geeft aan vanaf wanneer de medicatie gestaakt moet worden. &#xD;&#xA;Gebruiksduur: De beoogde gebruiksduur.Bijvoorbeeld 5 dagen of 8 weken. Het is niet toegestaan om de gebruiksduur in maanden aan te geven, omdat verschillende maanden een variable duur in dagen hebben. &#xD;&#xA;Einddatum: Het tijdstip waarop de gebruiksperiode eindigt (of geëindigd is of zal eindigen). In het geval van een afspraak om het gebruik te staken betreft dit het tijdstip waarop de medicatie gestaakt moet worden. Om verwarring te voorkomen tussen 'tot' en 'tot en met' is het meegeven van de tijd altijd verplicht bij einddatum.&#xD;&#xA;&#xD;&#xA;Bij medicatie voor onbepaalde duur wordt er alleen een ingangsdatum aangegeven." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="1" />
-      <max value="1" />
-      <base>
-        <path value="administration_agreement.period_of_use" />
-        <min value="1" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="BackboneElement" />
-      </type>
-    </element>
-    <element id="administration_agreement.period_of_use.start_date_time">
-      <path value="administration_agreement.period_of_use.start_date_time" />
-      <short value="startDateTime">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="startDatumTijd" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The start date and time of the interval">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="De begindatum en tijd van het interval" />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="administration_agreement.period_of_use.start_date_time" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="dateTime" />
-      </type>
-    </element>
-    <element id="administration_agreement.period_of_use.end_date_time">
-      <path value="administration_agreement.period_of_use.end_date_time" />
-      <short value="endDateTime">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="eindDatumTijd" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The end date and time of the interval">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="De einddatum en tijd van het interval" />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="administration_agreement.period_of_use.end_date_time" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="dateTime" />
-      </type>
-    </element>
-    <element id="administration_agreement.period_of_use.duration">
-      <path value="administration_agreement.period_of_use.duration" />
-      <short value="Duration">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="tijdsDuur" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The duration of the interval in appropriate units of time (*e.g.* days or hours, etc.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="De tijdsduur van het interval in een gewenste tijdseenheid (bv. dagen of uren, etc.)." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="administration_agreement.period_of_use.duration" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="Quantity" />
-      </type>
-    </element>
-    <element id="administration_agreement.medication_agreement">
-      <path value="administration_agreement.medication_agreement" />
-      <short value="MedicationAgreement">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Medicatieafspraak" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Relationship to the medication agreement on which the administration agreement is based.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Relatie naar medicatieafspraak waarop de toedieningsafspraak gebaseerd is." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="administration_agreement.medication_agreement" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationAgreement" />
-      </type>
-    </element>
-    <element id="administration_agreement.administration_agreement_stop_type">
-      <path value="administration_agreement.administration_agreement_stop_type" />
-      <short value="AdministrationAgreementStopType">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="ToedieningsafspraakStopType" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Stop type, the manner in which this medication is discontinued (temporary or definitive).">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Stop type, de manier waarop gestopt wordt met deze medicatie (tijdelijk of definitief)." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="administration_agreement.administration_agreement_stop_type" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="required" />
-        <description value="AdministrationAgreementStopType codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/ToedieningsafspraakStopType" />
-      </binding>
-    </element>
-    <element id="administration_agreement.canceled_indicator">
-      <path value="administration_agreement.canceled_indicator" />
-      <short value="CanceledIndicator">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="GeannuleerdIndicator" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="In the event of an error correction, this indicator is to be put on for the incorrect agreement.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="In geval van foutcorrectie wordt bij de foutieve afspraak deze indicator aangezet." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="administration_agreement.canceled_indicator" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="boolean" />
-      </type>
-    </element>
-    <element id="administration_agreement.administration_agreement_additional_information">
-      <path value="administration_agreement.administration_agreement_additional_information" />
-      <short value="AdministrationAgreementAdditionalInformation">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="ToedieningsafspraakAanvullendeInformatie" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Additional information includes details on the structure of the agreement made. &#xD;&#xA;&#xD;&#xA;This element mainly contains information that until now has been structured with ZZ rules. The medication-related topics that are now supported by the ZZ rules are best supported with a system functionality. A process has been started for this by Z-index/KNMP. For now, the following list will be used. This list will be replaced by a thesaurus in the G standard at a later stage.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Aanvullende informatie bevat bijzonderheden over de invulling van de gemaakte afspraak. &#xD;&#xA;&#xD;&#xA;Dit element bevat vooral gegevens die tot op heden met ZZ-regels worden ingevuld. De medicatiegerelateerde onderwerpen die nu met de ZZ-regels worden ondersteund, kunnen het beste met behulp van systeemfunctionaliteit worden ondersteund. Hiervoor is een traject ingang gezet door Z-index/KNMP. Vooralsnog wordt onderstaande lijst gehanteerd. In een later stadium zal deze lijst vervangen worden door een thesaurus in de G-standaard." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="*" />
-      <base>
-        <path value="administration_agreement.administration_agreement_additional_information" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="required" />
-        <description value="AdministrationAgreementAdditionalInformation codes" />
-        <valueSet value="https://fhir.healthdata.be/ValueSet/ToedieningsafspraakAanvullendeInformatie" />
-      </binding>
-    </element>
-    <element id="administration_agreement.comment">
-      <path value="administration_agreement.comment" />
-      <short value="Comment">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Toelichting" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Comments on the administration agreement.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Opmerkingen met betrekking tot de toedieningsafspraak." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="administration_agreement.comment" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-  </differential>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/AdministrationAgreement"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+      <element id="AdministrationAgreement">
+         <path value="AdministrationAgreement"/>
+         <short value="AdministrationAgreement">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Toedieningsafspraak"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="Root concept of the AdministrationAgreement information model. This root concept contains all data elements of the AdministrationAgreement information model.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Rootconcept van de bouwsteen Toedieningsafspraak. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Toedieningsafspraak."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="*"/>
+      </element>
+      <element id="AdministrationAgreement.Supplier">
+         <path value="AdministrationAgreement.Supplier"/>
+         <short value="Supplier">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Verstrekker"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="The supplier (pharmacist) that entered the administration agreement.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="De verstrekker (apotheker) die de toedieningsafspraak heeft vastgelegd."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareOrganization"/>
+         </type>
+      </element>
+      <element id="AdministrationAgreement.MedicineForAdministrationAgreement">
+         <path value="AdministrationAgreement.MedicineForAdministrationAgreement"/>
+         <short value="MedicineForAdministrationAgreement">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="GeneesmiddelBijToedieningsAfspraak"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="Medicine in the AdministrationAgreement.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Geneesmiddel horende bij de toedieningsafspraak."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct"/>
+         </type>
+      </element>
+      <element id="AdministrationAgreement.InstructionsForUse">
+         <path value="AdministrationAgreement.InstructionsForUse"/>
+         <short value="InstructionsForUse">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Gebruiksinstructie"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="Instructions for administering the medication, e.g. dose and route of administration.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Aanwijzingen voor de toediening van de medicatie, bijvoorbeeld dosering en toedieningsweg."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="Dosage"/>
+            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-InstructionsForUse"/>
+         </type>
+      </element>
+      <element id="AdministrationAgreement.AdministrationAgreementDateTime">
+         <path value="AdministrationAgreement.AdministrationAgreementDateTime"/>
+         <short value="AdministrationAgreementDateTime">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="ToedieningsafspraakDatumTijd"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="The time at which the agreement was made.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Het tijdstip waarop de afspraak gemaakt is."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="dateTime"/>
+         </type>
+      </element>
+      <element id="AdministrationAgreement.AgreementReason">
+         <path value="AdministrationAgreement.AgreementReason"/>
+         <short value="AgreementReason">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="RedenAfspraak"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="Reason for this agreement. This will often be the same reason as the one for the medication agreement. &#xD;&#xA;This field has the option to - if applicable - enter a specific reason for the administration agreement. Examples include: substitution, transfer to GDS, patient request for different product, etc.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Reden voor deze afspraak. Dit zal vaak dezelfde reden zijn als die van de medicatieafspraak.&#xD;&#xA;Dit veld geeft de mogelijkheid om - indien van toepassing - een specifieke reden voor de toedieningsafspraak op te nemen. Voorbeelden hiervan zijn: substitutie, overgang naar GDS, wens patiënt voor ander handelsproduct, et cetera."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="string"/>
+         </type>
+      </element>
+      <element id="AdministrationAgreement.PeriodOfUse">
+         <path value="AdministrationAgreement.PeriodOfUse"/>
+         <short value="PeriodOfUse">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Gebruiksperiode"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="Start date: This is the time at which the agreement was to take effect (or took effect or will take effect). This is the time at which the instructions for use in this agreement start. In the case of an agreement to discontinue use, this is the start date of the original administration agreement. The end date indicates from when the medication is to be discontinued. &#xD;&#xA;Duration: The intended duration of use. E.g. 5 days or 8 weeks. It is not allowed to indicate the duration in months, because different months have a variable duration in days. &#xD;&#xA;End date: The time at which the period of use ends (or ended or will end). In the case of an agreement to discontinue use, this is the time at which the medication is to be discontinued. To avoid confusion between 'to' and 'up to', the submission of time is always mandatory for the end date. &#xD;&#xA;&#xD;&#xA;With medication for an indefinite period only a start date is indicated.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Ingangsdatum: Dit is het tijdstip waarop de afspraak ingaat (of is ingegaan of zal ingaan). Dit betreft het tijdstip waarop de in deze afspraak vastgelegde gebruiksinstructie ingaat. In geval van een afspraak om te stoppen betreft dit de ingangsdatum van de originele toedieningsafspraak. De einddatum geeft aan vanaf wanneer de medicatie gestaakt moet worden. &#xD;&#xA;Gebruiksduur: De beoogde gebruiksduur.Bijvoorbeeld 5 dagen of 8 weken. Het is niet toegestaan om de gebruiksduur in maanden aan te geven, omdat verschillende maanden een variable duur in dagen hebben. &#xD;&#xA;Einddatum: Het tijdstip waarop de gebruiksperiode eindigt (of geëindigd is of zal eindigen). In het geval van een afspraak om het gebruik te staken betreft dit het tijdstip waarop de medicatie gestaakt moet worden. Om verwarring te voorkomen tussen 'tot' en 'tot en met' is het meegeven van de tijd altijd verplicht bij einddatum.&#xD;&#xA;&#xD;&#xA;Bij medicatie voor onbepaalde duur wordt er alleen een ingangsdatum aangegeven."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="1"/>
+         <max value="1"/>
+         <type>
+            <code value="BackboneElement"/>
+         </type>
+      </element>
+      <element id="AdministrationAgreement.PeriodOfUse.StartDateTime">
+         <path value="AdministrationAgreement.PeriodOfUse.StartDateTime"/>
+         <short value="startDateTime">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="startDatumTijd"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="The start date and time of the interval">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="De begindatum en tijd van het interval"/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="dateTime"/>
+         </type>
+      </element>
+      <element id="AdministrationAgreement.PeriodOfUse.EndDateTime">
+         <path value="AdministrationAgreement.PeriodOfUse.EndDateTime"/>
+         <short value="endDateTime">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="eindDatumTijd"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="The end date and time of the interval">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="De einddatum en tijd van het interval"/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="dateTime"/>
+         </type>
+      </element>
+      <element id="AdministrationAgreement.PeriodOfUse.Duration">
+         <path value="AdministrationAgreement.PeriodOfUse.Duration"/>
+         <short value="Duration">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="tijdsDuur"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="The duration of the interval in appropriate units of time (*e.g.* days or hours, etc.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="De tijdsduur van het interval in een gewenste tijdseenheid (bv. dagen of uren, etc.)."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="Quantity"/>
+         </type>
+      </element>
+      <element id="AdministrationAgreement.MedicationAgreement">
+         <path value="AdministrationAgreement.MedicationAgreement"/>
+         <short value="MedicationAgreement">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Medicatieafspraak"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="Relationship to the medication agreement on which the administration agreement is based.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Relatie naar medicatieafspraak waarop de toedieningsafspraak gebaseerd is."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationAgreement"/>
+         </type>
+      </element>
+      <element id="AdministrationAgreement.AdministrationAgreementStopType">
+         <path value="AdministrationAgreement.AdministrationAgreementStopType"/>
+         <short value="AdministrationAgreementStopType">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="ToedieningsafspraakStopType"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="Stop type, the manner in which this medication is discontinued (temporary or definitive).">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Stop type, de manier waarop gestopt wordt met deze medicatie (tijdelijk of definitief)."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="CodeableConcept"/>
+         </type>
+         <binding>
+            <strength value="required"/>
+            <description value="AdministrationAgreementStopType codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ToedieningsafspraakStopType"/>
+         </binding>
+      </element>
+      <element id="AdministrationAgreement.CanceledIndicator">
+         <path value="AdministrationAgreement.CanceledIndicator"/>
+         <short value="CanceledIndicator">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="GeannuleerdIndicator"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="In the event of an error correction, this indicator is to be put on for the incorrect agreement.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="In geval van foutcorrectie wordt bij de foutieve afspraak deze indicator aangezet."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="boolean"/>
+         </type>
+      </element>
+      <element id="AdministrationAgreement.AdministrationAgreementAdditionalInformation">
+         <path value="AdministrationAgreement.AdministrationAgreementAdditionalInformation"/>
+         <short value="AdministrationAgreementAdditionalInformation">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="ToedieningsafspraakAanvullendeInformatie"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="Additional information includes details on the structure of the agreement made. &#xD;&#xA;&#xD;&#xA;This element mainly contains information that until now has been structured with ZZ rules. The medication-related topics that are now supported by the ZZ rules are best supported with a system functionality. A process has been started for this by Z-index/KNMP. For now, the following list will be used. This list will be replaced by a thesaurus in the G standard at a later stage.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Aanvullende informatie bevat bijzonderheden over de invulling van de gemaakte afspraak. &#xD;&#xA;&#xD;&#xA;Dit element bevat vooral gegevens die tot op heden met ZZ-regels worden ingevuld. De medicatiegerelateerde onderwerpen die nu met de ZZ-regels worden ondersteund, kunnen het beste met behulp van systeemfunctionaliteit worden ondersteund. Hiervoor is een traject ingang gezet door Z-index/KNMP. Vooralsnog wordt onderstaande lijst gehanteerd. In een later stadium zal deze lijst vervangen worden door een thesaurus in de G-standaard."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="*"/>
+         <type>
+            <code value="CodeableConcept"/>
+         </type>
+         <binding>
+            <strength value="required"/>
+            <description value="AdministrationAgreementAdditionalInformation codes"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/ToedieningsafspraakAanvullendeInformatie"/>
+         </binding>
+      </element>
+      <element id="AdministrationAgreement.Comment">
+         <path value="AdministrationAgreement.Comment"/>
+         <short value="Comment">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Toelichting"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="Comments on the administration agreement.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Opmerkingen met betrekking tot de toedieningsafspraak."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="string"/>
+         </type>
+      </element>
+   </differential>
 </StructureDefinition>

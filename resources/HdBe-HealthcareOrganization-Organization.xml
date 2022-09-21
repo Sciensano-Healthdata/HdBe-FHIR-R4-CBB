@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="HdBe-HealthcareOrganization-Organization"/>
+   <meta>
+      <lastUpdated value="2022-08-04T11:08:30.7899921+00:00"/>
+   </meta>
+   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization-Organization"/>
+   <name value="HdBeHealthcareOrganizationOrganization"/>
+   <title value="HdBe HealthcareOrganization Organization"/>
+   <status value="draft"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Service portal – healthdata.be"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://sciensano.service-now.com/sp"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="The organizational information of a healthcare provider. A healthcare provider is an organization that offers and provides medical, paramedic and/or nursing care to patients/clients. Examples include: hospitals, nursing homes, doctor’s offices."/>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <mapping>
+      <identity value="zib-healthcareprovider-v3.4-2020EN"/>
+      <uri value="https://zibs.nl/wiki/HealthcareOrganization-v3.4(2020EN)"/>
+      <name value="zib HealthcareOrganization-v3.4(2020EN)"/>
+   </mapping>
+   <mapping>
+      <identity value="HdBe-HealthcareOrganization"/>
+      <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareOrganization"/>
+      <name value="HdBe logical model HealthcareOrganization"/>
+   </mapping>
+   <kind value="resource"/>
+   <abstract value="false"/>
+   <type value="Organization"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="Organization">
+         <path value="Organization"/>
+         <short value="HealthcareOrganization"/>
+         <comment value="HealthcareOrganization is mapped to this Organization profile and a profile on Location (HdBe-HealthcareOrganization). The Location profile acts as the focal resource of HealthcareOrganization because most references to this CBB are concerned about the recording of the physical location where the care to patient/client takes place rather than the organizational information. Often there's no clear distinction between an organizational structure and a physical location. As a rule of thumb, locations are always used for recording where a service occurs, and hence where encounters and observations take place.&#xD;&#xA;&#xD;&#xA;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;&#xD;&#xA;&#xD;&#xA;Healthcare providers usually consist of multiple organizational levels and physical locations. The hierarchical structure may be captured by using multiple instances of this profile, using the `Organization.partOf` element to refer to their parent organization. The physical location is captured using the HdBe-HealthcareOrganization profile, which refers this profile at the appropriate level in the hierarchy."/>
+         <alias value="Zorgaanbieder"/>
+         <mapping>
+            <identity value="zib-healthcareprovider-v3.4-2020EN"/>
+            <map value="NL-CM:17.2.1"/>
+            <comment value="HealthcareOrganization"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-HealthcareOrganization"/>
+            <map value="HealthcareOrganization"/>
+         </mapping>
+      </element>
+      <element id="Organization.identifier">
+         <path value="Organization.identifier"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="$this"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+         <short value="HealthcareOrganizationIdentificationNumber"/>
+         <definition value="The organization’s identification number."/>
+         <alias value="ZorgaanbiederIdentificatienummer"/>
+         <mapping>
+            <identity value="zib-healthcareprovider-v3.4-2020EN"/>
+            <map value="NL-CM:17.2.2"/>
+            <comment value="HealthcareOrganizationIdentificationNumber"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-HealthcareOrganization"/>
+            <map value="HealthcareOrganizationIdentificationNumber"/>
+         </mapping>
+      </element>
+      <element id="Organization.identifier:nidhi">
+         <path value="Organization.identifier"/>
+         <sliceName value="nidhi"/>
+         <patternIdentifier>
+            <system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi"/>
+         </patternIdentifier>
+      </element>
+      <element id="Organization.identifier:cbe">
+         <path value="Organization.identifier"/>
+         <sliceName value="cbe"/>
+         <patternIdentifier>
+            <system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/cbe"/>
+         </patternIdentifier>
+      </element>
+      <element id="Organization.type">
+         <path value="Organization.type"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="$this"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Organization.type:departmentSpecialty">
+         <path value="Organization.type"/>
+         <sliceName value="departmentSpecialty"/>
+         <short value="DepartmentSpecialty"/>
+         <definition value="The specialty of the healthcare provider’s department. The departmental specialty can be filled in if further indication of the healthcare provider is needed."/>
+         <comment value="The ValueSet binding strenght deviates from the CBB because the binding strenght must be set to required in order to make the discriminator work. However, the open slice definition allows to extend codes."/>
+         <alias value="AfdelingSpecialisme"/>
+         <max value="1"/>
+         <binding>
+            <strength value="required"/>
+            <valueSet value="https://fhir.healthdata.be/ValueSet/DepartmentSpecialty"/>
+         </binding>
+         <mapping>
+            <identity value="zib-healthcareprovider-v3.4-2020EN"/>
+            <map value="NL-CM:17.2.7"/>
+            <comment value="DepartmentSpecialty"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-HealthcareOrganization"/>
+            <map value="DepartmentSpecialty"/>
+         </mapping>
+      </element>
+      <element id="Organization.type:organizationType">
+         <path value="Organization.type"/>
+         <sliceName value="organizationType"/>
+         <short value="OrganizationType"/>
+         <definition value="The type of healthcare provider, such as general hospital, or nursing home."/>
+         <comment value="The ValueSet binding strenght deviates from the CBB because the binding strenght must be set to required in order to make the discriminator work. However, the open slice definition allows to extend codes."/>
+         <alias value="OrganisatieType"/>
+         <max value="1"/>
+         <binding>
+            <strength value="required"/>
+         </binding>
+         <mapping>
+            <identity value="zib-healthcareprovider-v3.4-2020EN"/>
+            <map value="NL-CM:17.2.4"/>
+            <comment value="OrganizationType"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-HealthcareOrganization"/>
+            <map value="OrganizationType"/>
+         </mapping>
+      </element>
+      <element id="Organization.name">
+         <path value="Organization.name"/>
+         <short value="OrganizationName"/>
+         <definition value="Name of the organization. If an identification number is given, the name must match the name that corresponds to the identification number."/>
+         <alias value="OrganisatieNaam"/>
+         <mapping>
+            <identity value="zib-healthcareprovider-v3.4-2020EN"/>
+            <map value="NL-CM:17.2.3"/>
+            <comment value="OrganizationName"/>
+         </mapping>
+         <mapping>
+            <identity value="HdBe-HealthcareOrganization"/>
+            <map value="OrganizationName"/>
+         </mapping>
+      </element>
+   </differential>
+</StructureDefinition>

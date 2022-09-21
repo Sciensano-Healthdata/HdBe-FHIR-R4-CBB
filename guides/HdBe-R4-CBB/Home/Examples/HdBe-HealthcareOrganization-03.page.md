@@ -9,16 +9,16 @@
   </div>
 
   <div id="JSON" class="tabcontent" style="display:block">
-      {{json:examples/HdBe-HealthcareProvider-02.xml}}
+      {{json:examples/HdBe-HealthcareOrganization-03.xml}}
   </div>
   <div id="XML" class="tabcontent">
-      {{xml:examples/HdBe-HealthcareProvider-02.xml}}
+      {{xml:examples/HdBe-HealthcareOrganization-03.xml}}
   </div>
   <div id="Tree view" class="tabcontent">
-      {{tree:examples/HdBe-HealthcareProvider-02.xml}}
+      {{tree:examples/HdBe-HealthcareOrganization-03.xml}}
   </div>
   <div id="Table view" class="tabcontent">
-      {{table:examples/HdBe-HealthcareProvider-02.xml}}
+      {{table:examples/HdBe-HealthcareOrganization-03.xml}}
   </div>
 
 </div>

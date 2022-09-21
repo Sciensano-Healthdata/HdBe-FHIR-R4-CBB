@@ -1,4 +1,4 @@
-## zib HealthcareProvider-Location difference
+## zib HealthcareOrganization-Location difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|

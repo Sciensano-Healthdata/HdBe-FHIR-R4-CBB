@@ -1,181 +1,161 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="HdBe-Range" />
-  <language value="en-US" />
-  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-    <valuePeriod>
-      <start value="2020-09-01T00:00:00+02:00" />
-    </valuePeriod>
-  </extension>
-  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Range" />
-  <name value="HdBeRange">
-    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-      <extension url="lang">
-        <valueCode value="nl-NL" />
+   <id value="HdBe-Range"/>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-09-01T00:00:00+02:00"/>
+      </valuePeriod>
+   </extension>
+   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Range"/>
+   <name value="HdBeRange">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="HdBe-Bereik"/>
+         </extension>
       </extension>
-      <extension url="content">
-        <valueMarkdown value="HdBe-Bereik" />
+   </name>
+   <title value="HdBe Range"/>
+   <status value="draft"/>
+   <date value="2022-07-07T15:04:03.2592055+00:00"/>
+   <publisher value="Healthdata.be (Sciensano)"/>
+   <contact>
+      <name value="Service portal – healthdata.be"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://sciensano.service-now.com/sp"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="**Concept**&#xD;&#xA;The range gives either a fixed value or a minimum and maximum value a quantity can take on.&#xD;&#xA;This is a partial information model.&#xD;&#xA;**Purpose**&#xD;&#xA;The range is used to limit the value a quantity can take on.&#xD;&#xA;**Example Instances**">
+      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+         <extension url="lang">
+            <valueCode value="nl-NL"/>
+         </extension>
+         <extension url="content">
+            <valueMarkdown value="**Concept**&#xD;&#xA;Het bereik geeft ofwel een vaste waarde ofwel een minimale en maximale waarde aan die een hoeveelheid kan aannemen. &#xD;&#xA;Dit is een subbouwsteen.&#xD;&#xA;**Purpose**&#xD;&#xA;Het bereik wordt gebruikt om de waarden die een variabele kan aannemen in te perken.&#xD;&#xA;**Example Instances**"/>
+         </extension>
       </extension>
-    </extension>
-  </name>
-  <title value="HdBe Range" />
-  <status value="draft" />
-  <date value="2022-07-07T15:04:03.2592055+00:00" />
-  <publisher value="Healthdata.be (Sciensano)" />
-  <contact>
-    <name value="Service portal – healthdata.be" />
-    <telecom>
-      <system value="url" />
-      <value value="https://sciensano.service-now.com/sp" />
-      <use value="work" />
-    </telecom>
-  </contact>
-  <description value="**Concept**&#xD;&#xA;The range gives either a fixed value or a minimum and maximum value a quantity can take on.&#xD;&#xA;This is a partial information model.&#xD;&#xA;**Purpose**&#xD;&#xA;The range is used to limit the value a quantity can take on.&#xD;&#xA;**Example Instances**">
-    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-      <extension url="lang">
-        <valueCode value="nl-NL" />
-      </extension>
-      <extension url="content">
-        <valueMarkdown value="**Concept**&#xD;&#xA;Het bereik geeft ofwel een vaste waarde ofwel een minimale en maximale waarde aan die een hoeveelheid kan aannemen. &#xD;&#xA;Dit is een subbouwsteen.&#xD;&#xA;**Purpose**&#xD;&#xA;Het bereik wordt gebruikt om de waarden die een variabele kan aannemen in te perken.&#xD;&#xA;**Example Instances**" />
-      </extension>
-    </extension>
-  </description>
-  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
-  <fhirVersion value="4.0.1" />
-  <kind value="logical" />
-  <abstract value="true" />
-  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/range" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
-  <derivation value="specialization" />
-  <differential>
-    <element id="range">
-      <path value="range" />
-      <short value="Range">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Bereik" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="Root concept of the Range partial information model. This root concept contains all data elements of the Range partial information model.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="Rootconcept van de subbouwsteen Bereik. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Bereik." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="*" />
-      <base>
-        <path value="range" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-    </element>
-    <element id="range.minimum_value">
-      <path value="range.minimum_value" />
-      <short value="minimumValue">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="minimumWaarde" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The minimal value of the range">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="De minimale waarde van het bereik" />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="range.minimum_value" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="Quantity" />
-      </type>
-    </element>
-    <element id="range.maximum_value">
-      <path value="range.maximum_value" />
-      <short value="maximumValue">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="maximumWaarde" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The maximum value of the range">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="De maximale waarde van het bereik" />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="range.maximum_value" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="Quantity" />
-      </type>
-    </element>
-    <element id="range.nominal_value">
-      <path value="range.nominal_value" />
-      <short value="nominalValue">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="nominaleWaarde" />
-          </extension>
-        </extension>
-      </short>
-      <definition value="The nominal value of the quantity. This element can not be used in combination with a minimum and maximum value">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="nl-NL" />
-          </extension>
-          <extension url="content">
-            <valueMarkdown value="De nominale waarde van de hoeveelheid. Dit element kan niet in combinatie met een minimale en maximale waarde gebruikt worden." />
-          </extension>
-        </extension>
-      </definition>
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="range.nominal_value" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="Quantity" />
-      </type>
-    </element>
-  </differential>
+   </description>
+   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="true"/>
+   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/Range"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+      <element id="Range">
+         <path value="Range"/>
+         <short value="Range">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Bereik"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="Root concept of the Range partial information model. This root concept contains all data elements of the Range partial information model.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="Rootconcept van de subbouwsteen Bereik. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Bereik."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="*"/>
+      </element>
+      <element id="Range.MinimumValue">
+         <path value="Range.MinimumValue"/>
+         <short value="minimumValue">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="minimumWaarde"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="The minimal value of the range">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="De minimale waarde van het bereik"/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="Quantity"/>
+         </type>
+      </element>
+      <element id="Range.MaximumValue">
+         <path value="Range.MaximumValue"/>
+         <short value="maximumValue">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="maximumWaarde"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="The maximum value of the range">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="De maximale waarde van het bereik"/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="Quantity"/>
+         </type>
+      </element>
+      <element id="Range.NominalValue">
+         <path value="Range.NominalValue"/>
+         <short value="nominalValue">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="nominaleWaarde"/>
+               </extension>
+            </extension>
+         </short>
+         <definition value="The nominal value of the quantity. This element can not be used in combination with a minimum and maximum value">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+               <extension url="lang">
+                  <valueCode value="nl-NL"/>
+               </extension>
+               <extension url="content">
+                  <valueMarkdown value="De nominale waarde van de hoeveelheid. Dit element kan niet in combinatie met een minimale en maximale waarde gebruikt worden."/>
+               </extension>
+            </extension>
+         </definition>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="Quantity"/>
+         </type>
+      </element>
+   </differential>
 </StructureDefinition>
