@@ -5,11 +5,11 @@ This CBB differs significantly from the zib because the zib model is deemed over
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-| `TElephoneNumbers` | element | Removed container to simplify CBB and align contactInformation into one generic model.| 
-| `EMailAddresses` | element | Removed container to simplify CBB and align contactInformation into one generic model.| 
+| `TelephoneNumbers` | element | Removed container to simplify CBB and align contactInformation into one generic model.| 
+| `EmailAddresses` | element | Removed container to simplify CBB and align contactInformation into one generic model.| 
 | `Type` | element | Renamed element `TelecomType` to `type` to make CBB more generic. |
 | `Type` | terminology | Replaced ValueSet NumberType with FHIR ValueSet contact-point-system to make the CBB more generic. |
-| `Value`| element | Replaced elements `TelephoneNumber` and `emailAddress` with this element to make the CBB more generic. |
-| `Use` | element | Replaced element `NumberType` and `emailAddressType` with this element to make the CBB more generic. |
-| `Use`| terminology | As in the original `NumberType` and `emailAddressType`, two different ValueSet are used, we replaced both ValueSets with the FHIR ValueSet contact-point-use. |
-| `COmment` | textual | Removed spelling mistake (Professionnels_ to Professionals_) ([zib ticket 1807](https://bits.nictiz.nl/browse/ZIB-1807)).| 
+| `Value`| element | Replaced elements `TelephoneNumber` and `EmailAddress` with this element to make the CBB more generic. |
+| `Use` | element | Replaced element `NumberType` and `EmailAddressType` with this element to make the CBB more generic. |
+| `Use`| terminology | As in the original `NumberType` and `EmailAddressType`, two different ValueSet are used, we replaced both ValueSets with the FHIR ValueSet contact-point-use. |
+| `COmment` | textual | Removed spelling mistake (_Professionnels_ to _Professionals_) ([zib ticket 1807](https://bits.nictiz.nl/browse/ZIB-1807)).| 
