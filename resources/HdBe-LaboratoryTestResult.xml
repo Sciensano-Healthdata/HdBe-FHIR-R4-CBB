@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult" />
   <meta>
-    <lastUpdated value="2022-09-26T11:14:36.9994814+00:00" />
+    <lastUpdated value="2022-09-26T11:41:02.4057202+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult" />
   <name value="HdBeLaboratoryTestResult" />
@@ -248,40 +248,28 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <max value="1" />
+    </element>
+    <element id="Observation.performer:performer">
+      <path value="Observation.performer" />
+      <sliceName value="performer" />
       <short value="Performer" />
       <definition value="The healthcare provider and/or organization where or by whom the LaboratoryTestResult was performed." />
       <alias value="Uitvoerder" />
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization-Organization" />
       </type>
+      <mapping>
+        <identity value="HdBe-LaboratoryTestResult" />
+        <map value="LaboratoryTestResult.Performer.HealthcareOrganization" />
+      </mapping>
       <mapping>
         <identity value="zib-laboratorytestresult-v4.6-2020EN" />
         <map value="NL-CM:13.1.35" />
         <comment value="Performer" />
       </mapping>
-      <mapping>
-        <identity value="HdBe-LaboratoryTestResult" />
-        <map value="LaboratoryTestResult.Performer.HealthcareOrganization" />
-      </mapping>
-    </element>
-    <element id="Observation.performer:performer">
-      <path value="Observation.performer" />
-      <sliceName value="performer" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/pattern-HealthProfessionalReference" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole" />
-      </type>
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
