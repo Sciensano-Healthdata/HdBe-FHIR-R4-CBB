@@ -2,4 +2,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`HouseType` | terminology| Replaced TypeOfHome concepts with SNOMED terminology and removed concepts not relevant in the Belgium context. |
+|`HouseType` | terminology| Replaced TypeOfHome concepts with SNOMED terminology and removed concepts not relevant in the Belgian context. |
