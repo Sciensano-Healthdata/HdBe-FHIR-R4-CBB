@@ -39,7 +39,7 @@
       <element id="Specimen">
          <path value="Specimen"/>
          <short value="Specimen"/>
-         <definition value="The Specimen concept from the CBB HdBe-LaboratoryTestResult contains a concept for SpecimenMaterial and for Microorganism. These two concepts cannot be represented in the same Specimen resources; if there's a need to communicate both the microorganism and the sample material from which it was isolated, two instances need to be used. The instance representing the microorganism should refer to the instance respresenting the sample material using `Specimen.parent`. All other CBB concepts should be repeated in both resources."/>
+         <definition value="The Specimen concept from the CBB LaboratoryTestResult contains a concept for SpecimenMaterial and for Microorganism. These two concepts cannot be represented in the same Specimen resources; if there's a need to communicate both the microorganism and the sample material from which it was isolated, two instances need to be used. The instance representing the microorganism should refer to the instance respresenting the sample material using `Specimen.parent`. All other CBB concepts should be repeated in both resources."/>
          <alias value="Monster"/>
          <mapping>
             <identity value="zib-laboratorytestresult-v4.6-2020EN"/>
@@ -48,7 +48,7 @@
          </mapping>
          <mapping>
             <identity value="HdBe-LaboratoryTestResult"/>
-            <map value="Specimen"/>
+            <map value="LaboratoryTestResult.Specimen"/>
          </mapping>
       </element>
       <element id="Specimen.identifier">
@@ -63,14 +63,15 @@
          </mapping>
          <mapping>
             <identity value="HdBe-LaboratoryTestResult"/>
-            <map value="Specimen.SpecimenId"/>
+            <map value="LaboratoryTestResult.Specimen.SpecimenId"/>
          </mapping>
       </element>
       <element id="Specimen.type">
          <path value="Specimen.type"/>
          <short value="SpecimenMaterial / Microorganism"/>
          <definition value="* SpecimenMaterial describes the material obtained. If the LOINC test code also implicitly describes a material, this element may not conflict with the description. If desired, this component can provide a more detailed description of the material: LOINC codes only contain the materials at a main level. This is in line with the agreements made in the IHE/Nictiz program e-Lab.&#xD;&#xA;* In particular in microbiological determinations the subject of the test is an isolate of a certain microorganism rather then a material. This concept provides the ability to capture information about this microorganism."/>
-         <comment value="The Specimen concept from the CBB LaboratoryTestResult contains a concept for SpecimenMaterial and for Microorganism (isolated from the specimen material). These two concepts cannot be represented in the same Specimen resources; this `Specimen.type` element defines which of the two concepts is represented.&#xD;&#xA;&#xD;&#xA;If there's a need to communicate both the microorganism and the sample material from which it was isolated, two instances need to be used. The instance representing the microorganism should refer in this case to the instance respresenting the sample material using `Specimen.parent`.&#xD;&#xA;&#xD;&#xA;If this resource represents material and is carried out on derived material (such as plasma), this element will still contain the material drawn (in this case, blood). In this case, the LOINC code will generally refer to plasma."/>
+         <comment value="The Specimen concept from Dutch zib LaboratoryTestResult contains a concept for SpecimenMaterial and for Microorganism (isolated from the specimen material). These two concepts cannot be represented in the same Specimen resource; this `Specimen.type` element defines which of the two concepts is represented.&#xD;&#xA;&#xD;&#xA;If there's a need to communicate both the microorganism and the sample material from which it was isolated, two instances need to be used. The instance representing the microorganism should refer in this case to the instance respresenting the sample material using `Specimen.parent`.&#xD;&#xA;&#xD;&#xA;If this resource represents material and is carried out on derived material (such as plasma), this element will still contain the material drawn (in this case, blood). In this case, the LOINC code will generally refer to plasma."/>
+         <alias value="Monstermateriaal"/>
          <alias value="Microorganisme"/>
          <binding>
             <strength value="required"/>
@@ -83,7 +84,7 @@
          </mapping>
          <mapping>
             <identity value="HdBe-LaboratoryTestResult"/>
-            <map value="Specimen.SpecimenMaterial"/>
+            <map value="LaboratoryTestResult.Specimen.SpecimenMaterial"/>
          </mapping>
          <mapping>
             <identity value="zib-laboratorytestresult-v4.6-2020EN"/>
@@ -92,7 +93,32 @@
          </mapping>
          <mapping>
             <identity value="HdBe-LaboratoryTestResult"/>
-            <map value="SpecimenMicroorganism"/>
+            <map value="LaboratoryTestResult.Specimen.Microorganism"/>
+         </mapping>
+      </element>
+      <element id="Specimen.subject">
+         <path value="Specimen.subject"/>
+         <short value="SpecimenSource"/>
+         <definition value="If the material is not collected directly from the patient but comes from a patient-related object, e.g. a cathetertip, this source of material can be recorded here."/>
+         <comment value="If concept SpecimenSource is used, it can be recorded here using a reference to an instance of the HdBe-LaboratoryTestResult.Specimen.Source profile."/>
+         <alias value="BronMonster"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+            <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+            <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+            <targetProfile value="http://hl7.org/fhir/StructureDefinition/Substance"/>
+            <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
+            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen.Source"/>
+         </type>
+         <mapping>
+            <identity value="HdBe-LaboratoryTestResult"/>
+            <map value="LaboratoryTestResult.Specimen.SpecimenSource"/>
+         </mapping>
+         <mapping>
+            <identity value="zib-laboratorytestresult-v4.6-2020EN"/>
+            <map value="NL-CM:13.1.29"/>
+            <comment value="SpecimenSource"/>
          </mapping>
       </element>
       <element id="Specimen.receivedTime">
@@ -107,7 +133,7 @@
          </mapping>
          <mapping>
             <identity value="HdBe-LaboratoryTestResult"/>
-            <map value="Specimen.ReceivedDateTime"/>
+            <map value="LaboratoryTestResult.Specimen.ReceivedDateTime"/>
          </mapping>
       </element>
       <element id="Specimen.parent">
@@ -140,7 +166,7 @@
          </type>
          <mapping>
             <identity value="HdBe-LaboratoryTestResult"/>
-            <map value="Specimen.CollectionDateTime"/>
+            <map value="LaboratoryTestResult.Specimen.CollectionDateTime"/>
          </mapping>
       </element>
       <element id="Specimen.collection.collected[x]:collectedPeriod">
@@ -159,7 +185,7 @@
          </mapping>
          <mapping>
             <identity value="HdBe-LaboratoryTestResult"/>
-            <map value="Specimen.CollectionPeriod"/>
+            <map value="LaboratoryTestResult.Specimen.CollectionPeriod"/>
          </mapping>
       </element>
       <element id="Specimen.collection.duration">
@@ -174,7 +200,7 @@
          </mapping>
          <mapping>
             <identity value="HdBe-LaboratoryTestResult"/>
-            <map value="Specimen.CollectionPeriod"/>
+            <map value="LaboratoryTestResult.Specimen.CollectionPeriod"/>
          </mapping>
       </element>
       <element id="Specimen.collection.quantity">
@@ -189,7 +215,7 @@
          </mapping>
          <mapping>
             <identity value="HdBe-LaboratoryTestResult"/>
-            <map value="Specimen.CollectedVolume"/>
+            <map value="LaboratoryTestResult.Specimen.CollectedVolume"/>
          </mapping>
       </element>
       <element id="Specimen.collection.method">
@@ -208,7 +234,7 @@
          </mapping>
          <mapping>
             <identity value="HdBe-LaboratoryTestResult"/>
-            <map value="Specimen.CollectionMethod"/>
+            <map value="LaboratoryTestResult.Specimen.CollectionMethod"/>
          </mapping>
       </element>
       <element id="Specimen.collection.bodySite">
@@ -231,7 +257,7 @@
          </mapping>
          <mapping>
             <identity value="HdBe-LaboratoryTestResult"/>
-            <map value="Specimen.AnatomicalLocation"/>
+            <map value="LaboratoryTestResult.Specimen.AnatomicalLocation"/>
          </mapping>
       </element>
       <element id="Specimen.collection.bodySite.extension">
@@ -261,7 +287,7 @@
          </mapping>
          <mapping>
             <identity value="HdBe-LaboratoryTestResult"/>
-            <map value="Specimen.Morphology"/>
+            <map value="LaboratoryTestResult.Specimen.Morphology"/>
          </mapping>
       </element>
       <element id="Specimen.container.extension">
@@ -296,7 +322,7 @@
          </mapping>
          <mapping>
             <identity value="HdBe-LaboratoryTestResult"/>
-            <map value="Specimen.SpecimenNumberExtension"/>
+            <map value="LaboratoryTestResult.Specimen.SpecimenNumberExtension"/>
          </mapping>
       </element>
       <element id="Specimen.container.type">
@@ -313,10 +339,10 @@
             <map value="NL-CM:13.1.21"/>
             <comment value="ContainerType"/>
          </mapping>
-         <mapping>
-            <identity value="HdBe-LaboratoryTestResult"/>
-            <map value="Specimen.ContainerType"/>
-         </mapping>
+      </element>
+      <element id="Specimen.note">
+         <path value="Specimen.note"/>
+         <max value="1"/>
       </element>
       <element id="Specimen.note.text">
          <path value="Specimen.note.text"/>
@@ -330,7 +356,7 @@
          </mapping>
          <mapping>
             <identity value="HdBe-LaboratoryTestResult"/>
-            <map value="Specimen.Comment"/>
+            <map value="LaboratoryTestResult.Specimen.Comment"/>
          </mapping>
       </element>
    </differential>
