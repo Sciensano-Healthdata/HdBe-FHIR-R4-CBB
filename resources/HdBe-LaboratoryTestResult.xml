@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult" />
   <meta>
-    <lastUpdated value="2022-09-27T08:29:30.951612+00:00" />
+    <lastUpdated value="2022-09-28T15:55:33.3790525+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult" />
   <name value="HdBeLaboratoryTestResult" />
@@ -40,7 +40,7 @@
       <path value="Observation" />
       <short value="LaboratoryTestResult / LaboratoryTest" />
       <definition value="An instance of CBB LaboratoryTestResult or of a single LaboratoryTest within this CBB." />
-      <comment value="**1. Guidance on use for singular tests and panels**&#xA;&#xA;The CBB LaboratoryTestResult captures both singular laboratory tests and panels/clusters of multiple related tests requested together (e.g., blood gases and EBV serology)*. This profile should be used slightly different in these two situations:&#xA;&#xA;* For singular laboratory test results&#xA;    * A single instance of this profile is to be used.&#xA;    * `Observation.code` represents concept TestCode (the name and code of the executed test) while concept PanelOrBattery (the name and code of the compound test) is not expected to be present.&#xA;    * `Observation.status` represents concept TestResultStatus (the status of the test result). ResultStatus is redundant in this situation and not expected to be present.&#xA;* For a panel or cluster:&#xA;    * There is a single instance for the overall result plus an instance for each test result.&#xA;    * The concepts Comment (`Observation.note`), ResultType ( `Observation.category:resultType`) and Performer ( `Observation.performer`) are repeated in the instance for the overall result and in all instances for the individual test results.&#xA;    * For the instance representing the overall result:&#xA;      * `Observation.code` represents concept PanelOrBattery (the name and code of the compound test), which is required for panels/clusters.&#xA;      * `Observation.status` represents concept ResultStatus (the overall status of the test result). This status should be in accordance with the statuses of each individual test.&#xA;      * The instances representing the individual test results are referenced using `Observation.hasMember`.&#xA;    * For the instances representing the individual test results:&#xA;      * `Observation.code` represents concept TestCode (the name and code of the executed test) for that particular test.&#xA;      * `Observation.status` represents concept TestResultStatus (the status of the test result) for that particular test.&#xA;&#xA;Note 1: The CBB also recognizes the RelatedResult concept. This is unrelated to the use of panels/clusters. This concept is represented either using `Observation.derivedFrom` or `Observation.extension:relatedResult`.&#xA;&#xA;**2. Unmapped CBB concept**&#xA;&#xA;* The concept InterpretationMethod is not implemented because there's no obvious mapping to FHIR while the definition is problematic, and there doesn't seem to be a use case for exchanging this information (see &lt;https://bits.nictiz.nl/browse/ZIB-1292&gt; for more information).&#xD;&#xA;&#xD;&#xA;**3. Unmapped zib concept**&#xA;&#xA;* Although the concept Requester is not implemented in the zib profile because it is deemed unimplementable as-is, it has been implemented by this profile using a light profile on ServiceRequest. The profile does not contain enough guidance to implement a requesting service fully. It merely allows capturing the requester information in a native FHIR element. The ServiceRequest is referenced by `Observation.basedOn`." />
+      <comment value="**1. Guidance on use for singular tests and panels**&#xA;&#xA;The CBB LaboratoryTestResult captures both singular laboratory tests and panels/clusters of multiple related tests requested together (e.g., blood gases and EBV serology)*. This profile should be used slightly different in these two situations:&#xA;&#xA;* For singular laboratory test results&#xA;    * A single instance of this profile is to be used.&#xA;    * `Observation.code` represents concept TestCode (the name and code of the executed test) while concept PanelOrBattery (the name and code of the compound test) is not expected to be present.&#xA;    * `Observation.status` represents concept TestResultStatus (the status of the test result). ResultStatus is redundant in this situation and not expected to be present.&#xA;* For a panel or cluster:&#xA;    * There is a single instance for the overall result plus an instance for each test result.&#xA;    * The concepts Comment (`Observation.note`), ResultType ( `Observation.category:resultType`) and Performer ( `Observation.performer`) are repeated in the instance for the overall result and in all instances for the individual test results.&#xA;    * For the instance representing the overall result:&#xA;      * `Observation.code` represents concept PanelOrBattery (the name and code of the compound test), which is required for panels/clusters.&#xA;      * `Observation.status` represents concept ResultStatus (the overall status of the test result). This status should be in accordance with the statuses of each individual test.&#xA;      * The instances representing the individual test results are referenced using `Observation.hasMember`.&#xA;    * For the instances representing the individual test results:&#xA;      * `Observation.code` represents concept TestCode (the name and code of the executed test) for that particular test.&#xA;      * `Observation.status` represents concept TestResultStatus (the status of the test result) for that particular test.&#xA;&#xA;Note 1: The CBB also recognizes the RelatedResult concept. This is unrelated to the use of panels/clusters. This concept is represented using `Observation.extension:relatedResult`.&#xD;&#xA;&#xA;**2. Unmapped CBB concept**&#xA;&#xA;* The concept InterpretationMethod is not implemented because there's no obvious mapping to FHIR while the definition is problematic, and there doesn't seem to be a use case for exchanging this information (see &lt;https://bits.nictiz.nl/browse/ZIB-1292&gt; for more information).&#xD;&#xA;&#xD;&#xA;**3. Unmapped zib concept**&#xA;&#xA;* Although the concept Requester is not implemented in the zib profile because it is deemed unimplementable as-is, it has been implemented by this profile using a light profile on ServiceRequest. The profile does not contain enough guidance to implement a requesting service fully. It merely allows capturing the requester information in a native FHIR element. The ServiceRequest is referenced by `Observation.basedOn`." />
       <alias value="LaboratoriumUitslag" />
       <alias value="LaboratoriumTest" />
       <mapping>
@@ -59,7 +59,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="LaboratoryTest" />
+        <map value="LaboratoryTestResult.LaboratoryTest" />
       </mapping>
     </element>
     <element id="Observation.extension">
@@ -73,19 +73,19 @@
       </slicing>
       <min value="0" />
     </element>
-    <element id="Observation.extension:sequelTo">
+    <element id="Observation.extension:relatedResult">
       <path value="Observation.extension" />
-      <sliceName value="sequelTo" />
+      <sliceName value="relatedResult" />
       <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/observation-sequelTo" />
       </type>
     </element>
-    <element id="Observation.extension:sequelTo.value[x]">
+    <element id="Observation.extension:relatedResult.value[x]">
       <path value="Observation.extension.value[x]" />
       <short value="RelatedResult" />
-      <definition value="This is one of the two mechanisms to represent concept RelatedResult. The other mechanism is `Observation.derivedFrom`." />
+      <definition value="Reference to related tests, e.g. paired tests or sequential tests like gram staining and microbiological cultures." />
       <alias value="GerelateerdeUitslag" />
       <type>
         <code value="Reference" />
@@ -159,10 +159,25 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
+    </element>
+    <element id="Observation.category:laboratoryCategory">
+      <path value="Observation.category" />
+      <sliceName value="laboratoryCategory" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+          <code value="laboratory" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.category:resultType">
       <path value="Observation.category" />
       <sliceName value="resultType" />
+      <short value="ResultType" />
+      <definition value="The type of result defines the laboratory specialty under which the test is categorized." />
+      <alias value="ResultaatType" />
       <max value="1" />
       <binding>
         <strength value="required" />
@@ -171,6 +186,11 @@
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
         <map value="LaboratoryTestResult.ResultType" />
+      </mapping>
+      <mapping>
+        <identity value="zib-laboratorytestresult-v4.6-2020EN" />
+        <map value="NL-CM:13.1.7" />
+        <comment value="ResultType" />
       </mapping>
     </element>
     <element id="Observation.code">
@@ -452,31 +472,6 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/MolecularSequence" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult" />
       </type>
-    </element>
-    <element id="Observation.derivedFrom">
-      <path value="Observation.derivedFrom" />
-      <short value="RelatedResult" />
-      <definition value="The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.&#xD;&#xA;&#xD;&#xA;This is one of the two mechanisms to represent concept RelatedResult. The other mechanism is `Observation.extension:sequelTo`." />
-      <alias value="GerelateerdeUitslag" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImagingStudy" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MolecularSequence" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult" />
-      </type>
-      <mapping>
-        <identity value="zib-laboratorytestresult-v4.6-2020EN" />
-        <map value="NL-CM:13.1.33" />
-        <comment value="RelatedResult" />
-      </mapping>
-      <mapping>
-        <identity value="HdBe-LaboratoryTestResult" />
-        <map value="LaboratoryTestResult.RelatedResult" />
-      </mapping>
     </element>
   </differential>
 </StructureDefinition>
