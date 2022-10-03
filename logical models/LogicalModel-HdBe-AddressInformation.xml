@@ -1,415 +1,415 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBe-AddressInformation"/>
-   <language value="en-US"/>
-   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-      <valuePeriod>
-         <start value="2020-09-01T00:00:00+02:00"/>
-      </valuePeriod>
-   </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AddressInformation"/>
-   <name value="HdBeAddressInformation">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="HdBe-Adresgegevens"/>
-         </extension>
+  <id value="HdBe-AddressInformation" />
+  <language value="en-US" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+02:00" />
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AddressInformation" />
+  <name value="HdBeAddressInformation">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
       </extension>
-   </name>
-   <title value="HdBe AddressInformation"/>
-   <status value="draft"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
-      <name value="Service portal – healthdata.be"/>
-      <telecom>
-         <system value="url"/>
-         <value value="https://sciensano.service-now.com/sp"/>
-         <use value="work"/>
-      </telecom>
-   </contact>
-   <description value="**Concept**&#xD;&#xA;Address information includes data where a person resides (temporarily, permanently) or where a building is located. This is a partial information model.&#xD;&#xA;&#xD;&#xA;**Purpose**&#xD;&#xA;Address information is used for visiting a person or organization and for addressing of mail.">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="**Concept**&#xD;&#xA;Adresgegevens bevatten de gegevens waar een persoon (tijdelijk of vast) woont of waar een gebouw zich bevindt.&#xD;&#xA;Dit is een subbouwsteen.&#xD;&#xA;**Purpose**&#xD;&#xA;Adres informatie wordt gebruik bij het bezoeken van personen of organisaties en ten behoeve van het adresseren van brieven."/>
-         </extension>
+      <extension url="content">
+        <valueMarkdown value="HdBe-Adresgegevens" />
       </extension>
-   </description>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-   <fhirVersion value="4.0.1"/>
-   <kind value="logical"/>
-   <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/AddressInformation"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
-   <derivation value="specialization"/>
-   <differential>
-      <element id="AddressInformation">
-         <path value="AddressInformation"/>
-         <short value="AddressInformation">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Adresgegevens"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Root concept of the AddressInformation partial information model. This root concept contains all data elements of the AddressInformation partial information model.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="*"/>
-      </element>
-      <element id="AddressInformation.Street">
-         <path value="AddressInformation.Street"/>
-         <short value="Street">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Straat"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Street name of the address.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Straatnaam van het adres."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-      <element id="AddressInformation.HouseNumber">
-         <path value="AddressInformation.HouseNumber"/>
-         <short value="HouseNumber">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Huisnummer"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="House number of the address.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Huisnummer van het adres."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-      <element id="AddressInformation.HouseNumberLetter">
-         <path value="AddressInformation.HouseNumberLetter"/>
-         <short value="HouseNumberLetter">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Huisnummerletter"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="A letter following the house number as assigned by the municipal authorities.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Een alfabetisch teken achter het huisnummer zoals dit door het gemeentebestuur is toegekend."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-      <element id="AddressInformation.HouseNumberAddition">
-         <path value="AddressInformation.HouseNumberAddition"/>
-         <short value="HouseNumberAddition">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Huisnummertoevoeging"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="The letters or signs needed to locate the mailbox, in addition to the house number and letter.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Die letters of tekens die noodzakelijk zijn om, naast het huisnummer en de letter, de brievenbus te vinden."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-      <element id="AddressInformation.HouseNumberIndication">
-         <path value="AddressInformation.HouseNumberIndication"/>
-         <short value="HouseNumberIndication">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="AanduidingBijNummer"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="The indication used for addresses which do not consist of the usual street name and house number.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="De aanduiding die wordt gebruikt voor adressen die niet zijn voorzien van de gebruikelijke straatnaam en huisnummeraanduidingen."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
-         <binding>
-            <strength value="required"/>
-            <description value="HouseNumberIndication codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/HouseNumberIndication"/>
-         </binding>
-      </element>
-      <element id="AddressInformation.Postcode">
-         <path value="AddressInformation.Postcode"/>
-         <short value="Postcode">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Postcode"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Postcode of the address.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Postcode van het adres."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-      <element id="AddressInformation.PlaceOfResidence">
-         <path value="AddressInformation.PlaceOfResidence"/>
-         <short value="PlaceOfResidence">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Woonplaats"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="A geographically determined area which forms part of the municipal area.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Een geografisch bepaald gebied dat een deel is van het gemeentelijke grondgebied."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-      <element id="AddressInformation.Municipality">
-         <path value="AddressInformation.Municipality"/>
-         <short value="Municipality">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Gemeente"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Municipality of residence.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Gemeente van inschrijving."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-      <element id="AddressInformation.Country">
-         <path value="AddressInformation.Country"/>
-         <short value="Country">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Land"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Country in which the address is located.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Land waar het adres zich bevindt."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
-         <binding>
-            <strength value="required"/>
-            <description value="Country ISO codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/CountryISO"/>
-         </binding>
-      </element>
-      <element id="AddressInformation.AdditionalInformation">
-         <path value="AddressInformation.AdditionalInformation"/>
-         <short value="AdditionalInformation">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="AdditioneleInformatie"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Extra information such as the building name, building number, entrance, route number.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Extra informatie zoals naam van het gebouw, gebouwnummer, ingang, routenummer."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-      <element id="AddressInformation.AddressType">
-         <path value="AddressInformation.AddressType"/>
-         <short value="AddressType">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="AdresSoort"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="The type of address in question, such as a home address or mailing address.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Het soort adres waarvan sprake is, bijv. woonadres, postadres."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
-         <binding>
-            <strength value="required"/>
-            <description value="AddressType codes"/>
-            <valueSet value="http://hl7.org/fhir/ValueSet/address-type"/>
-         </binding>
-      </element>
-      <element id="AddressInformation.AddressUse">
-         <path value="AddressInformation.AddressUse"/>
-         <short value="AddressUse"/>
-         <definition value="The purpose of this address."/>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="CodeableConcept"/>
-            <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
-         </type>
-         <binding>
-            <strength value="required"/>
-            <description value="AddressUse codes"/>
-            <valueSet value="http://hl7.org/fhir/ValueSet/address-use"/>
-         </binding>
-      </element>
-   </differential>
+    </extension>
+  </name>
+  <title value="HdBe AddressInformation" />
+  <status value="draft" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Address information includes data where a person resides (temporarily, permanently) or where a building is located. This is a partial information model.&#xD;&#xA;&#xD;&#xA;#### Purpose&#xD;&#xA;Address information is used for visiting a person or organization and for addressing of mail.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="Adresgegevens bevatten de gegevens waar een persoon (tijdelijk of vast) woont of waar een gebouw zich bevindt.&#xD;&#xA;Dit is een subbouwsteen.&#xD;&#xA;#### Purpose&#xD;&#xA;Adres informatie wordt gebruik bij het bezoeken van personen of organisaties en ten behoeve van het adresseren van brieven." />
+      </extension>
+    </extension>
+  </description>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="true" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/AddressInformation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="AddressInformation">
+      <path value="AddressInformation" />
+      <short value="AddressInformation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Adresgegevens" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Root concept of the AddressInformation partial information model. This root concept contains all data elements of the AddressInformation partial information model.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+    </element>
+    <element id="AddressInformation.Street">
+      <path value="AddressInformation.Street" />
+      <short value="Street">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Straat" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Street name of the address.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Straatnaam van het adres." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="AddressInformation.HouseNumber">
+      <path value="AddressInformation.HouseNumber" />
+      <short value="HouseNumber">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Huisnummer" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="House number of the address.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Huisnummer van het adres." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="AddressInformation.HouseNumberLetter">
+      <path value="AddressInformation.HouseNumberLetter" />
+      <short value="HouseNumberLetter">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Huisnummerletter" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="A letter following the house number as assigned by the municipal authorities.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Een alfabetisch teken achter het huisnummer zoals dit door het gemeentebestuur is toegekend." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="AddressInformation.HouseNumberAddition">
+      <path value="AddressInformation.HouseNumberAddition" />
+      <short value="HouseNumberAddition">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Huisnummertoevoeging" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The letters or signs needed to locate the mailbox, in addition to the house number and letter.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Die letters of tekens die noodzakelijk zijn om, naast het huisnummer en de letter, de brievenbus te vinden." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="AddressInformation.HouseNumberIndication">
+      <path value="AddressInformation.HouseNumberIndication" />
+      <short value="HouseNumberIndication">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="AanduidingBijNummer" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The indication used for addresses which do not consist of the usual street name and house number.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De aanduiding die wordt gebruikt voor adressen die niet zijn voorzien van de gebruikelijke straatnaam en huisnummeraanduidingen." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="HouseNumberIndication codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/HouseNumberIndication" />
+      </binding>
+    </element>
+    <element id="AddressInformation.Postcode">
+      <path value="AddressInformation.Postcode" />
+      <short value="Postcode">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Postcode" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Postcode of the address.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Postcode van het adres." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="AddressInformation.PlaceOfResidence">
+      <path value="AddressInformation.PlaceOfResidence" />
+      <short value="PlaceOfResidence">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Woonplaats" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="A geographically determined area which forms part of the municipal area.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Een geografisch bepaald gebied dat een deel is van het gemeentelijke grondgebied." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="AddressInformation.Municipality">
+      <path value="AddressInformation.Municipality" />
+      <short value="Municipality">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Gemeente" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Municipality of residence.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Gemeente van inschrijving." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="AddressInformation.Country">
+      <path value="AddressInformation.Country" />
+      <short value="Country">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Land" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Country in which the address is located.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Land waar het adres zich bevindt." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="Country ISO codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/CountryISO" />
+      </binding>
+    </element>
+    <element id="AddressInformation.AdditionalInformation">
+      <path value="AddressInformation.AdditionalInformation" />
+      <short value="AdditionalInformation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="AdditioneleInformatie" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Extra information such as the building name, building number, entrance, route number.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Extra informatie zoals naam van het gebouw, gebouwnummer, ingang, routenummer." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="AddressInformation.AddressType">
+      <path value="AddressInformation.AddressType" />
+      <short value="AddressType">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="AdresSoort" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The type of address in question, such as a home address or mailing address.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Het soort adres waarvan sprake is, bijv. woonadres, postadres." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="AddressType codes" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/address-type" />
+      </binding>
+    </element>
+    <element id="AddressInformation.AddressUse">
+      <path value="AddressInformation.AddressUse" />
+      <short value="AddressUse" />
+      <definition value="The purpose of this address." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="AddressUse codes" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/address-use" />
+      </binding>
+    </element>
+  </differential>
 </StructureDefinition>

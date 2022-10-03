@@ -1,194 +1,194 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBe-BodyTemperature"/>
-   <language value="en-US"/>
-   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-      <valuePeriod>
-         <start value="2020-09-01T00:00:00+02:00"/>
-      </valuePeriod>
-   </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BodyTemperature"/>
-   <name value="HdBeBodyTemperature">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="HdBe-Lichaamstemperatuur"/>
-         </extension>
+  <id value="HdBe-BodyTemperature" />
+  <language value="en-US" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+02:00" />
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BodyTemperature" />
+  <name value="HdBeBodyTemperature">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
       </extension>
-   </name>
-   <title value="HdBe BodyTemperature"/>
-   <status value="draft"/>
-   <date value="2022-07-07T15:04:03.2592055+00:00"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
-      <name value="Service portal – healthdata.be"/>
-      <telecom>
-         <system value="url"/>
-         <value value="https://sciensano.service-now.com/sp"/>
-         <use value="work"/>
-      </telecom>
-   </contact>
-   <description value="**Concept**&#xD;&#xA;Measuring and documenting the body temperature of a person as a surrogate for a person’s central body temperature (the highest temperature at the centre of the torso)&#xD;&#xA;**Purpose**&#xD;&#xA;Measuring the body temperature is of medical importance. A number of diseases are accompanied by characteristic changes in body temperature. The symptoms of some diseases can be tracked by measuring the body temperature. The healthcare provider can use this temperature development to determine the effect of the treatment.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Traceability to other Standards**&#xD;&#xA;This health and care information model is in accordance with the information model template Measurement v1.0.">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="**Concept**&#xD;&#xA;Het meten en vastleggen van de lichaamstemperatuur van een persoon als surrogaat voor de centrale lichaamstemperatuur (de hoogste temperatuur midden in de romp) van een persoon&#xD;&#xA;**Purpose**&#xD;&#xA;Het meten van de lichaamstemperatuur is van medisch belang. Een aantal ziekten gaat gepaard met karakteristieke veranderingen in de lichaamstemperatuur. Ook kan het verloop van sommige ziekten worden gevolgd door het meten van de lichaamstemperatuur en de zorgverlener kan aan de hand van het temperatuurverloop het effect van de behandeling beoordelen.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Traceability to other Standards**&#xD;&#xA;Deze zorginformatie bouwsteen is in lijn met de bouwsteen blauwdruk Meting v1.0."/>
-         </extension>
+      <extension url="content">
+        <valueMarkdown value="HdBe-Lichaamstemperatuur" />
       </extension>
-   </description>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-   <fhirVersion value="4.0.1"/>
-   <kind value="logical"/>
-   <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/BodyTemperature"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
-   <derivation value="specialization"/>
-   <differential>
-      <element id="BodyTemperature">
-         <path value="BodyTemperature"/>
-         <short value="BodyTemperature">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Lichaamstemperatuur"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Root concept of the BodyTemperature information model. This root concept contains all data elements of the BodyTemperature information model.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Rootconcept van de bouwsteen Lichaamstemperatuur. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Lichaamstemperatuur."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="*"/>
-      </element>
-      <element id="BodyTemperature.TemperatureValue">
-         <path value="BodyTemperature.TemperatureValue"/>
-         <short value="TemperatureValue">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="TemperatuurWaarde"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Body temperature is the temperature inside the body, measured in °C (degrees Celsius). The measurement method must be specified for a correct interpretation of the measurement value.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="De lichaamstemperatuur is de temperatuur, gemeten in °C (graden Celsius), die binnen in het menselijk lichaam heerst. Voor een juiste interpretatie van de gemeten waarde, moet de meetmethodiek worden gespecificeerd."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <type>
-            <code value="Quantity"/>
-         </type>
-      </element>
-      <element id="BodyTemperature.TemperatureDateTime">
-         <path value="BodyTemperature.TemperatureDateTime"/>
-         <short value="TemperatureDateTime">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="TemperatuurDatumTijd"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Date and time of measurement.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Datum en tijd van de meting."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <type>
-            <code value="dateTime"/>
-         </type>
-      </element>
-      <element id="BodyTemperature.Comment">
-         <path value="BodyTemperature.Comment"/>
-         <short value="Comment">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Toelichting"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Comments or details that may be of importance in interpreting the measurement value.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Opmerkingen of bijzonderheden, die van belang zijn om de meetwaarde te interpreteren."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-      <element id="BodyTemperature.TemperatureType">
-         <path value="BodyTemperature.TemperatureType"/>
-         <short value="TemperatureType">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="TemperatuurType"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="The TemperatureType indicates the way and place the measurement (temperature) has been performed.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Het TemperatuurType geeft aan op welke wijze en plaats de meting (temperatuur) verricht is."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
-         <binding>
-            <strength value="extensible"/>
-            <description value="TemperatureType codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/TemperatureType"/>
-         </binding>
-      </element>
-   </differential>
+    </extension>
+  </name>
+  <title value="HdBe BodyTemperature" />
+  <status value="draft" />
+  <date value="2022-07-07T15:04:03.2592055+00:00" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Measuring and documenting the body temperature of a person as a surrogate for a person’s central body temperature (the highest temperature at the centre of the torso)&#xD;&#xA;#### Purpose&#xD;&#xA;Measuring the body temperature is of medical importance. A number of diseases are accompanied by characteristic changes in body temperature. The symptoms of some diseases can be tracked by measuring the body temperature. The healthcare provider can use this temperature development to determine the effect of the treatment.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="Het meten en vastleggen van de lichaamstemperatuur van een persoon als surrogaat voor de centrale lichaamstemperatuur (de hoogste temperatuur midden in de romp) van een persoon&#xD;&#xA;#### Purpose&#xD;&#xA;Het meten van de lichaamstemperatuur is van medisch belang. Een aantal ziekten gaat gepaard met karakteristieke veranderingen in de lichaamstemperatuur. Ook kan het verloop van sommige ziekten worden gevolgd door het meten van de lichaamstemperatuur en de zorgverlener kan aan de hand van het temperatuurverloop het effect van de behandeling beoordelen.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;#### Traceability to other Standards&#xD;&#xA;Deze zorginformatie bouwsteen is in lijn met de bouwsteen blauwdruk Meting v1.0." />
+      </extension>
+    </extension>
+  </description>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="true" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/BodyTemperature" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="BodyTemperature">
+      <path value="BodyTemperature" />
+      <short value="BodyTemperature">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Lichaamstemperatuur" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Root concept of the BodyTemperature information model. This root concept contains all data elements of the BodyTemperature information model.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de bouwsteen Lichaamstemperatuur. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Lichaamstemperatuur." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+    </element>
+    <element id="BodyTemperature.TemperatureValue">
+      <path value="BodyTemperature.TemperatureValue" />
+      <short value="TemperatureValue">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="TemperatuurWaarde" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Body temperature is the temperature inside the body, measured in °C (degrees Celsius). The measurement method must be specified for a correct interpretation of the measurement value.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De lichaamstemperatuur is de temperatuur, gemeten in °C (graden Celsius), die binnen in het menselijk lichaam heerst. Voor een juiste interpretatie van de gemeten waarde, moet de meetmethodiek worden gespecificeerd." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="BodyTemperature.TemperatureDateTime">
+      <path value="BodyTemperature.TemperatureDateTime" />
+      <short value="TemperatureDateTime">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="TemperatuurDatumTijd" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Date and time of measurement.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Datum en tijd van de meting." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="BodyTemperature.Comment">
+      <path value="BodyTemperature.Comment" />
+      <short value="Comment">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toelichting" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Comments or details that may be of importance in interpreting the measurement value.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Opmerkingen of bijzonderheden, die van belang zijn om de meetwaarde te interpreteren." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="BodyTemperature.TemperatureType">
+      <path value="BodyTemperature.TemperatureType" />
+      <short value="TemperatureType">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="TemperatuurType" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The TemperatureType indicates the way and place the measurement (temperature) has been performed.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Het TemperatuurType geeft aan op welke wijze en plaats de meting (temperatuur) verricht is." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="TemperatureType codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/TemperatureType" />
+      </binding>
+    </element>
+  </differential>
 </StructureDefinition>
