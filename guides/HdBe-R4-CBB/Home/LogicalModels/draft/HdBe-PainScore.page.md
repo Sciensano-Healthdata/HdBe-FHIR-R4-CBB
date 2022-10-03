@@ -4,7 +4,8 @@
 from StructureDefinition
 where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PainScore'
 select 
-Profile: id,
+CBB: id,
+Description: description,
 Version: version,
 Status: status,
 URL: url
