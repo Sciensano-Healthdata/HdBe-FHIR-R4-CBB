@@ -1,15 +1,16 @@
 - name: id-mandatory
+  error: https://fhir.healthdata.be/QA/errors|id-mandatory
   status: "Checking if all resources have an id"
   files: 
     - examples/*.xml
     - logical models/*.xml
     - resources/*.xml
     - terminology/*.xml
-  filter: Resource
   predicate: id.exists()
   error-message: "Resource must have an id"
 
 - name: id-unique
+  error: https://fhir.healthdata.be/QA/errors|id-unique
   status: "Checking if all resources have a unique id"
   files: 
     - examples/*.xml
@@ -22,34 +23,38 @@
   # custom error messages for unique checks do not work.
 
 - name: id-cbb-starts-with-hdbe
+  error: https://fhir.healthdata.be/QA/errors|id-cbb-starts-with-hdbe
   status: "Checking if all CBB profiles ids start with 'HdBe-'"
   files: 
     - logical models/*.xml
     - resources/*.xml
   filter: (StructureDefinition.exists() and StructureDefinition.type != 'Extension' and  id.startsWith('pattern') = false)
   predicate: id.startsWith('HdBe-')
-  #error-message: "Resource id does not start with 'HdBe-'" 
+  error-message: "Resource id does not start with 'HdBe-'" 
 
 - name: id-extension-starts-with-ext
+  error: https://fhir.healthdata.be/QA/errors|id-extension-starts-with-ext
   status: "Checking if all extensions ids start with 'ext-'"
   files: 
     - resources/*.xml
   filter: StructureDefinition.type = 'Extension'
   predicate: id.startsWith('ext-') 
-  error-message: "Resource id does not start with 'ext-'" 
+  error-message: "Extension id does not start with 'ext-'" 
 
 - name: id-examples-starts-with-hdbe
+  error: https://fhir.healthdata.be/QA/errors|id-examples-starts-with-hdbe
   status: "Checking if all example ids starts with 'HdBe-'"
   files: 
     - examples/*.xml
-  filter: Resource 
+  category: example 
   predicate: id.startsWith('HdBe-')
-  error-message: "Resource id does not start with 'HdBe-'" 
+  error-message: "Example id does not start with 'HdBe-'" 
 
 - name: id-examples-ends-with-digits
+  error: https://fhir.healthdata.be/QA/errors|id-examples-ends-with-digits
   status: "Checking if all example ids end with a dash and two digits"
   files: 
     - examples/*.xml
-  filter: Resource
+  category: example 
   predicate: id.matches('.*[-][0-9]{2}')
   error-message: "Resource id does not end with a dash and two digits" 
