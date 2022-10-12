@@ -2,8 +2,11 @@
 
 Three tools are developed to automate processes in this project regarding terminology. As they are designed specifically for this project, but build on general principles of SNOMED and FHIR, they could be tweaked to use in other usecases.
 
+1. [Get designations](#get_designation)
+2. [Get display values](#get_display_values)
+3. [Get valueset overview](#get_valueset_overview)
 
-## Get_designation
+## Get designations <a name="get_designations"></a>
 
 ### Description: 
 Each code in a [ValueSet](http://hl7.org/fhir/R4/valueset.html) should have a display. Furthermore, a code can have one or multiple designations equivalent to the code. A designation is an additional representation of the concept can hold a translation or a ‘similar term’. This tool is useful to gather display and designation values automatically and correctly. SNOMED-CT concepts should be available in a ValueSet as input, and the display is extracted for each code. If available, the French and Dutch translation is also extracted and included in the ValueSet designation. 
@@ -30,7 +33,7 @@ Start the get_designations.py. The tool will gather displays and designations of
 -	The preferred designation is used. A concept could occur in multiple refsets with a different preferred term. For the display is chosen to use the US English set. For the designations the Belgian Dutch and Belgium French language referenceset as defined in the Belgium Extension are used. 
 
 
-## Get_display_values
+## Get display values <a name="get_display_values"></a>
 
 ### Description:
 For each created profile, one or more examples are created as well. These examples also contain Codings, which could automatically be enriched with a display when the code and the system are known. This makes adding coding to examples easier and less error-prone. Both SNOMED and FHIR codes can be enriched. Adding displays of local CodeSystems and LOINC codes has not been implemented so far.
@@ -52,7 +55,7 @@ Start get_display_values.py. In each example, the tool will look for coding elem
 -	Examples with SNOMED and FHIR displays for Codings.
 -	Logfile of the codes that do have a SNOMED system, but could not be found there.
 
-## Get_valueset_overview
+## Get valueset overview <a name="get_valueset_overview"></a>
 
 ### Description:
 
