@@ -23,9 +23,10 @@ filename = ''
 "- Define getting designations through FHIR API so LOINC, SNOMED and tx.fhir.org can be accessed in a similar method"
 "- Make language (designation) a parameter"
 "- Make an UI to customize settings such as which terminology servers to ask, input and output files ect, present log file."
+"- Create an overview of examples with missing displays"
 
 
-"Calls a locally running SNOWSTOM terminology server to get the English preferred designation"
+"Calls a locally running SNOWSTORM terminology server to get the English preferred designation"
 def get_snomed_display(id):
     url = baseUrl + branch + '/concepts/' + id + '/descriptions'
     try:  
@@ -71,26 +72,26 @@ def get_tx_display(id, system):
             display = x['valueString']
     return display  
 
-"Looks for local CodeSystems values"
-def get_local_CodeSystem_display(id, system):
-    url =  'http://tx.fhir.org/r4/CodeSystem/$lookup?system=' + system + '&code=' + id
-    try:  
-        response = requests.get(url, headers={'Accept': 'application/fhir+json'})
-        content_json = json.loads(response.content.decode('utf8')) 
-        # If the response was successful, no Exception will be raised
-        response.raise_for_status()
-    except HTTPError as http_err:
-        print(f'HTTP error occurred: {http_err}')  
-        if response.status_code == 404:   
-            write('not-found', 'Code ' + id + ' from codesystem' + system +' in file ' + filename) 
-        return None
-    except Exception as err:
-        print(f'Other error occurred: {err}')  
-    # Loop through all parameters to find the display
-    for x in content_json['parameter']:
-         if x['name'] == 'display':
-            display = x['valueString']
-    return display                   
+#"Looks for local CodeSystems values"
+#def get_local_CodeSystem_display(id, system):
+#    url =  'http://tx.fhir.org/r4/CodeSystem/$lookup?system=' + system + '&code=' + id
+#    try:  
+#        response = requests.get(url, headers={'Accept': 'application/fhir+json'})
+#        content_json = json.loads(response.content.decode('utf8')) 
+#        # If the response was successful, no Exception will be raised
+#        response.raise_for_status()
+#    except HTTPError as http_err:
+#        print(f'HTTP error occurred: {http_err}')  
+#        if response.status_code == 404:   
+#            write('not-found', 'Code ' + id + ' from codesystem' + system +' in file ' + filename) 
+#        return None
+#    except Exception as err:
+#        print(f'Other error occurred: {err}')  
+#    # Loop through all parameters to find the display
+#    for x in content_json['parameter']:
+#         if x['name'] == 'display':
+#            display = x['valueString']
+#    return display                   
 
   
 
@@ -141,7 +142,16 @@ file = Path(input_folder).glob('HdBe-*.xml')
 for f in file:
     filename = os.path.basename(f)
 
-    root = ET.parse(f).getroot()
+    "Checks if the xml syntax is correct."
+    try:
+        root = ET.parse(f).getroot()
+        #print(str(filename) + ': XML well formed, syntax ok.')
+
+    except:
+        print(str(filename) + ': XML error, skipped')
+        pass
+
+    
     xml_str = ''
     resource_name = root.tag.replace('{http://hl7.org/fhir}','')
     resource = import_from("fhir.resources." + resource_name.lower(), resource_name).parse_file(f)

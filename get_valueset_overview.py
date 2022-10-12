@@ -1,7 +1,10 @@
 from pickle import FALSE
+from unittest import skip
 from urllib.request import urlopen, Request
 import os
 from pathlib import Path
+from lxml import etree
+import sys
 from xml.etree.ElementTree import tostring
 from fhir.resources.valueset import ValueSet, ValueSetComposeIncludeConceptDesignation, ValueSetComposeIncludeConcept, ValueSetComposeInclude, ValueSetCompose, ValueSetComposeIncludeFilter
 from fhir.resources import construct_fhir_element
@@ -111,6 +114,16 @@ file = Path(input_folder).glob('ValueSet-*.xml')
 for f in file:
     index = 0 #Used to gather a index code of each ValueSet
     filename = os.path.basename(f)
-    createConceptOverview(ValueSet.parse_file(f))
+
+    # parse xml
+    try:
+        valueset = ValueSet.parse_file(f)
+        #print(str(filename) + ': XML well formed, syntax ok.')
+
+    except:
+        print(str(filename) + ': Formatting error in file, skipped')
+        pass
+    
+    createConceptOverview(valueset)
 
 print('Finished getting overview')

@@ -16,7 +16,10 @@ output_folder = "terminology/"
 message = 'SNOMED concept ID;Betekenis;ValueSet;Taal'
 
 # To do:
-#Add Copyright message.
+# Add Copyright message.
+# Something with the version/last updated date and on which version and extension these codes are based? 
+# --> But only when something has been actually changed?
+
 
 # Queries local running SNOWSTORM server. Gets the full description of the given snomed concept.    
 def getDesignationsById(id, filename):
@@ -134,15 +137,26 @@ def addDesignations(valueset, filename):
 
 
 
-# Get all files from the input folder that meet the filename creteria. 
+# Get all files from the input folder that meet the filename criteria. 
 # Next, add EN/NL/FR designations for all extensionally defined SNOMED codes and write the updated files to the output folder. 
 file = Path(input_folder).glob('ValueSet-*.xml')
 for f in file:
     filename = os.path.basename(f)
-    valueset = addDesignations(ValueSet.parse_file(f), filename)
+
+    # parse xml
+    try:
+        val = ValueSet.parse_file(f)
+        #print(str(filename) + ': XML well formed, syntax ok.')
+
+    except:
+        print(str(filename) + ': XML error, skipped')
+        pass
+
+    valueset = addDesignations(val, filename)
     xml_str = valueset.xml(pretty_print=True)
     output_file = open(output_folder + filename, 'w', encoding='UTF8') 
     output_file.write(xml_str)
+    print('Succesfully parsed '+ filename )
     output_file.close()
 
 print('Finished getting designations')
