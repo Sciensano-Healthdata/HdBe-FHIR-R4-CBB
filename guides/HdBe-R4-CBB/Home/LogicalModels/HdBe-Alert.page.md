@@ -37,11 +37,11 @@ URL: url
   </div>
 
   <div id="Example" class="tabcontent">
-      {{render:logical models/HdBe-Alert.example.md}}
+      {{render:logical models/LogicalModel-HdBe-Alert.example.md}}
   </div>
 
   <div id="Zib diff" class="tabcontent">
-      {{render:logical models/HdBe-Alert.doc.md}}
+      {{render:logical models/LogicalModel-HdBe-Alert.doc.md}}
   </div>
 
 </div>
