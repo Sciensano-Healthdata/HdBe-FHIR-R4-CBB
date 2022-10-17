@@ -1,96 +1,96 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBe-HearingFunction.HearingAid"/>
-   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction.HearingAid"/>
-   <name value="HdBeHearingFunctionHearingAid"/>
-   <title value="HdBe HearingFunction.HearingAid"/>
-   <status value="draft"/>
-   <date value="2022-07-07T15:04:03.2592055+00:00"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
-      <name value="Service portal – healthdata.be"/>
-      <telecom>
-         <system value="url"/>
-         <value value="https://sciensano.service-now.com/sp"/>
-         <use value="work"/>
-      </telecom>
-   </contact>
-   <description value="Hearing is the ability to observe sound, with the purpose of communicating with others, localizing the source of the sound and recognizing certain sounds. This pertains to observing the sound waves, and not processing the sounds in the brain.&#xD;&#xA;A hearing disorder can lead to things including communication problems."/>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-   <fhirVersion value="4.0.1"/>
-   <mapping>
-      <identity value="zib-hearingfunction-v3.2-2020EN"/>
-      <uri value="https://zibs.nl/wiki/HearingFunction-v3.2(2020EN)"/>
-      <name value="zib HearingFunction-v3.2(2020EN)"/>
-   </mapping>
-   <mapping>
-      <identity value="HdBe-HearingFunction"/>
-      <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HearingFunction"/>
-      <name value="HdBe logical model HearingFunction"/>
-   </mapping>
-   <kind value="resource"/>
-   <abstract value="false"/>
-   <type value="DeviceUseStatement"/>
-   <baseDefinition value="https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice"/>
-   <derivation value="constraint"/>
-   <differential>
-      <element id="DeviceUseStatement">
-         <path value="DeviceUseStatement"/>
-         <definition value="The medical aid used to help the patient hear."/>
-         <comment value="This is a specialization of the [HdBe-MedicalDevice](https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice) profile to represent HearingAid devices within the context of HdBe-HearingFunction."/>
-      </element>
-      <element id="DeviceUseStatement.device">
-         <path value="DeviceUseStatement.device"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction.HearingAid.Product"/>
-         </type>
-      </element>
-      <element id="DeviceUseStatement.reasonReference:HdBe-MedicalDeviceReference">
-         <path value="DeviceUseStatement.reasonReference"/>
-         <sliceName value="HdBe-MedicalDeviceReference"/>
-         <max value="0"/>
-      </element>
-      <element id="DeviceUseStatement.reasonReference:hearingFunction">
-         <path value="DeviceUseStatement.reasonReference"/>
-         <sliceName value="hearingFunction"/>
-         <short value="HearingFunction"/>
-         <comment value="Please note that on a functional level, CBB HearingFunction references CBB MedicalDevice, but in FHIR this direction is reversed."/>
-         <alias value="FunctieHoren"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction"/>
-         </type>
-         <mapping>
-            <identity value="zib-hearingfunction-v3.2-2020EN"/>
-            <map value="NL-CM:4.17.4"/>
-            <comment value="Reversed reference for zib HearingFunction.HearingAid"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-HearingFunction"/>
-            <map value="HearingFunction.HearingAid"/>
-            <comment value="Reversed reference for CBB HearingFunction.HearingAid"/>
-         </mapping>
-      </element>
-      <element id="DeviceUseStatement.bodySite">
-         <path value="DeviceUseStatement.bodySite"/>
-         <short value="Location / AnatomicalLocation / DeviceAnatomicalLocation"/>
-         <definition value="The anatomical location of the hearing aid, such as: ‘left ear’."/>
-         <alias value="HulpmiddelAnatomischeLocatie"/>
-         <binding>
-            <strength value="required"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/DeviceAnatomicalLocation"/>
-         </binding>
-         <mapping>
-            <identity value="zib-hearingfunction-v3.2-2020EN"/>
-            <map value="NL-CM:10.1.6"/>
-            <comment value="DeviceAnatomicalLocation"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-HearingFunction"/>
-            <map value="HearingFunction.HearingAid.MedicalDevice.AnatomicalLocation"/>
-         </mapping>
-      </element>
-   </differential>
+  <id value="HdBe-HearingFunction.HearingAid" />
+  <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction.HearingAid" />
+  <name value="HdBeHearingFunctionHearingAid" />
+  <title value="HdBe HearingFunction.HearingAid" />
+  <status value="draft" />
+  <date value="2022-10-17T09:09:13.9562003+00:00" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Hearing is the ability to observe sound, with the purpose of communicating with others, localizing the source of the sound and recognizing certain sounds. This pertains to observing the sound waves, and not processing the sounds in the brain.&#xD;&#xA;A hearing disorder can lead to things including communication problems." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-hearingfunction-v3.2-2020EN" />
+    <uri value="https://zibs.nl/wiki/HearingFunction-v3.2(2020EN)" />
+    <name value="zib HearingFunction-v3.2(2020EN)" />
+  </mapping>
+  <mapping>
+    <identity value="HdBe-HearingFunction" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HearingFunction" />
+    <name value="HdBe logical model HearingFunction" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DeviceUseStatement" />
+  <baseDefinition value="https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="DeviceUseStatement">
+      <path value="DeviceUseStatement" />
+      <definition value="The medical aid used to help the patient hear." />
+      <comment value="This is a specialization of the [HdBe-MedicalDevice](https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice) profile to represent HearingAid devices within the context of HdBe-HearingFunction." />
+    </element>
+    <element id="DeviceUseStatement.device">
+      <path value="DeviceUseStatement.device" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction.HearingAid.Product" />
+      </type>
+    </element>
+    <element id="DeviceUseStatement.reasonReference:HdBe-MedicalDeviceReference">
+      <path value="DeviceUseStatement.reasonReference" />
+      <sliceName value="HdBe-MedicalDeviceReference" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.reasonReference:hearingFunction">
+      <path value="DeviceUseStatement.reasonReference" />
+      <sliceName value="hearingFunction" />
+      <short value="HearingFunction" />
+      <comment value="Please note that on a functional level, CBB HearingFunction references CBB MedicalDevice, but in FHIR this direction is reversed." />
+      <alias value="FunctieHoren" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HearingFunction" />
+      </type>
+      <mapping>
+        <identity value="zib-hearingfunction-v3.2-2020EN" />
+        <map value="NL-CM:4.17.4" />
+        <comment value="Reversed reference for zib HearingFunction.HearingAid" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-HearingFunction" />
+        <map value="HearingFunction.HearingAid" />
+        <comment value="Reversed reference for CBB HearingFunction.HearingAid" />
+      </mapping>
+    </element>
+    <element id="DeviceUseStatement.bodySite">
+      <path value="DeviceUseStatement.bodySite" />
+      <short value="Location / AnatomicalLocation / DeviceAnatomicalLocation" />
+      <definition value="The anatomical location of the hearing aid, such as: ‘left ear’." />
+      <alias value="HulpmiddelAnatomischeLocatie" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/DeviceAnatomicalLocation" />
+      </binding>
+      <mapping>
+        <identity value="zib-hearingfunction-v3.2-2020EN" />
+        <map value="NL-CM:10.1.6" />
+        <comment value="DeviceAnatomicalLocation" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-HearingFunction" />
+        <map value="HearingFunction.HearingAid.MedicalDevice.AnatomicalLocation" />
+      </mapping>
+    </element>
+  </differential>
 </StructureDefinition>

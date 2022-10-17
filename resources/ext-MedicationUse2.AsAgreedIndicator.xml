@@ -1,59 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="ext-MedicationUse2.AsAgreedIndicator"/>
-   <url value="https://fhir.healthdata.be/StructureDefinition/ext-MedicationUse2.AsAgreedIndicator"/>
-   <name value="ExtMedicationUse2AsAgreedIndicator"/>
-   <title value="ext MedicationUse2.AsAgreedIndicator"/>
-   <status value="draft"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
-      <name value="Service portal – healthdata.be"/>
-      <telecom>
-         <system value="url"/>
-         <value value="https://sciensano.service-now.com/sp"/>
-         <use value="work"/>
-      </telecom>
-   </contact>
-   <description value="An extension to indicate if the medicine is used as outlined in the medication agreement."/>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-   <fhirVersion value="4.0.1"/>
-   <mapping>
-      <identity value="zib-medicationuse2-v1.1.1-2020EN"/>
-      <uri value="https://zibs.nl/wiki/MedicationUse2-v1.1.1(2020EN)"/>
-      <name value="zib MedicationUse2-v1.1.1(2020EN)"/>
-   </mapping>
-   <mapping>
-      <identity value="HdBe-MedicationUse2"/>
-      <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationUse2"/>
-      <name value="HdBe logical model MedicationUse2"/>
-   </mapping>
-   <kind value="complex-type"/>
-   <abstract value="false"/>
-   <context>
-      <type value="element"/>
-      <expression value="MedicationStatement"/>
-   </context>
-   <type value="Extension"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
-   <derivation value="constraint"/>
-   <differential>
-      <element id="Extension.url">
-         <path value="Extension.url"/>
-         <fixedUri value="https://fhir.healthdata.be/StructureDefinition/ext-MedicationUse2.AsAgreedIndicator"/>
-      </element>
-      <element id="Extension.value[x]">
-         <path value="Extension.value[x]"/>
-         <short value="AsAgreedIndicator"/>
-         <definition value="Is the medicine used as outlined in the medication agreement?"/>
-         <alias value="VolgensAfspraakIndicator"/>
-         <type>
-            <code value="boolean"/>
-         </type>
-         <mapping>
-            <identity value="zib-medicationuse2-v1.1.1-2020EN"/>
-            <map value="NL-CM:9.11.22492"/>
-            <comment value="AsAgreedIndicator"/>
-         </mapping>
-      </element>
-   </differential>
+  <id value="ext-MedicationUse2.AsAgreedIndicator" />
+  <url value="https://fhir.healthdata.be/StructureDefinition/ext-MedicationUse2.AsAgreedIndicator" />
+  <name value="ExtMedicationUse2AsAgreedIndicator" />
+  <title value="ext MedicationUse2.AsAgreedIndicator" />
+  <status value="draft" />
+  <date value="2022-10-17T09:09:13.9562003+00:00" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An extension to indicate if the medicine is used as outlined in the medication agreement." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-medicationuse2-v1.1.1-2020EN" />
+    <uri value="https://zibs.nl/wiki/MedicationUse2-v1.1.1(2020EN)" />
+    <name value="zib MedicationUse2-v1.1.1(2020EN)" />
+  </mapping>
+  <mapping>
+    <identity value="HdBe-MedicationUse2" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationUse2" />
+    <name value="HdBe logical model MedicationUse2" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="MedicationStatement" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="https://fhir.healthdata.be/StructureDefinition/ext-MedicationUse2.AsAgreedIndicator" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <short value="AsAgreedIndicator" />
+      <definition value="Is the medicine used as outlined in the medication agreement?" />
+      <alias value="VolgensAfspraakIndicator" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <mapping>
+        <identity value="zib-medicationuse2-v1.1.1-2020EN" />
+        <map value="NL-CM:9.11.22492" />
+        <comment value="AsAgreedIndicator" />
+      </mapping>
+    </element>
+  </differential>
 </StructureDefinition>

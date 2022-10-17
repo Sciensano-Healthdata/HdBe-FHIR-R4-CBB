@@ -1,31 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="pattern-HealthProfessionalReference"/>
-   <url value="https://fhir.healthdata.be/StructureDefinition/pattern-HealthProfessionalReference"/>
-   <name value="PatternHealthProfessionalReference"/>
-   <title value="pattern HealthProfessional Reference"/>
-   <status value="draft"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
-      <name value="Service portal – healthdata.be"/>
-      <telecom>
-         <system value="url"/>
-         <value value="https://sciensano.service-now.com/sp"/>
-         <use value="work"/>
-      </telecom>
-   </contact>
-   <description value="A Reference datatype profile for referring CBB HealthProfessional from other CBB profiles. This datatype profile is used in various resource profiles and is never instantiated directly."/>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-   <fhirVersion value="4.0.1"/>
-   <kind value="complex-type"/>
-   <abstract value="false"/>
-   <type value="Reference"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Reference"/>
-   <derivation value="constraint"/>
-   <differential>
-      <element id="Reference">
-         <path value="Reference"/>
-         <comment value="Each occurrence of the CBB HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [HdBe-HealthProfessional-PractitionerRole](https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [HdBe-HealthProfessional-Practitioner](https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.&#xD;&#xA;&#xD;&#xA;In rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the HdBe-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile."/>
-      </element>
-   </differential>
+  <id value="pattern-HealthProfessionalReference" />
+  <url value="https://fhir.healthdata.be/StructureDefinition/pattern-HealthProfessionalReference" />
+  <name value="PatternHealthProfessionalReference" />
+  <title value="pattern HealthProfessional Reference" />
+  <status value="draft" />
+  <date value="2022-10-17T09:09:13.9562003+00:00" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A Reference datatype profile for referring CBB HealthProfessional from other CBB profiles. This datatype profile is used in various resource profiles and is never instantiated directly." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Reference" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Reference" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Reference">
+      <path value="Reference" />
+      <comment value="Each occurrence of the CBB HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [HdBe-HealthProfessional-PractitionerRole](https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [HdBe-HealthProfessional-Practitioner](https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.&#xD;&#xA;&#xD;&#xA;In rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the HdBe-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile." />
+    </element>
+  </differential>
 </StructureDefinition>
