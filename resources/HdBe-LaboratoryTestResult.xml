@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult" />
   <meta>
-    <lastUpdated value="2022-09-28T15:55:33.3790525+00:00" />
+    <lastUpdated value="2022-10-17T15:38:31.2390423+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult" />
   <name value="HdBeLaboratoryTestResult" />
@@ -128,6 +128,9 @@
       <comment value="If this resource represents a singular test result or a single test in a cluster/panel, this will be the status of this particular test result. However, if it represents the overall result of a panel/cluster, this status should represent the status of the panel/cluster and should be in accordance with the test result statuses of the individual tests." />
       <alias value="TestUitslagStatus" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ObservationStatus" />
+        </extension>
         <strength value="required" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/TestResultStatus" />
       </binding>
@@ -180,6 +183,9 @@
       <alias value="ResultaatType" />
       <max value="1" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ObservationCategory" />
+        </extension>
         <strength value="required" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/ResultType" />
       </binding>
@@ -273,7 +279,7 @@
       <path value="Observation.performer" />
       <sliceName value="performer" />
       <short value="Performer" />
-      <definition value="The healthcare provider and/or organization where or by whom the LaboratoryTestResult was performed." />
+      <definition value="The HealthcareOrganization (Laboratory) where the LaboratoryTestResult was performed." />
       <alias value="Uitvoerder" />
       <max value="1" />
       <type>
@@ -288,6 +294,26 @@
         <identity value="zib-laboratorytestresult-v4.6-2020EN" />
         <map value="NL-CM:13.1.35" />
         <comment value="Performer" />
+      </mapping>
+    </element>
+    <element id="Observation.performer:recorder">
+      <path value="Observation.performer" />
+      <sliceName value="recorder" />
+      <definition value="The HealthProfessional responsible for the authentication/validation of the LaboratoryTestResult." />
+      <type>
+        <code value="Reference" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/pattern-HealthProfessionalReference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole" />
+      </type>
+      <mapping>
+        <identity value="HdBe-LaboratoryTestResult" />
+        <map value="LaboratoryTestResult.Recorder.HealthProfessional" />
       </mapping>
     </element>
     <element id="Observation.value[x]">
@@ -323,6 +349,9 @@
       <definition value="Attention codes indicating whether the result of a quantitative test is above or below certain reference values or interpreting the result otherwise.(Resistent). The values Resistant, Intermediate en Susceptible are used with microbiological test results." />
       <alias value="InterpretatieVlaggen" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ObservationInterpretation" />
+        </extension>
         <strength value="extensible" />
         <description value="Use ConceptMap 'ResultFlags-to-ObservationInterpretation' to translate CBB terminology to profile terminology in ValueSet 'Observation-interpretation'" />
         <valueSet value="http://hl7.org/fhir/ValueSet/observation-interpretation">
@@ -394,6 +423,9 @@
       <definition value="The test method used to obtain the result." />
       <alias value="Testmethode" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ObservationMethod" />
+        </extension>
         <strength value="required" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/TestMethod" />
       </binding>

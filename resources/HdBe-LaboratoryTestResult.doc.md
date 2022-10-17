@@ -7,6 +7,7 @@
 | `status` | terminology | Replaced zib CodeSystem values to corresponding values from the FHIR ObservationStatus CodeSystem because these are more widely adopted and can be mapped to zib status terminology. The new ValueSet contains a subset of the ObservationStatus CodeSystem to maintain compatibility with the zib. |
 | `code` | terminology | Removed ValueSet binding and described in the comment the use of Loinc and Albert codes as per the subset defined by the FPS Health (ReTaM). Added a reference to the subset on the website of the FPS Health. The ReTaM codes are not duplicated in a FHIR ValueSet because this would require extensive maintenance in keeping the ValueSet up-to-date. |
 | `value[x]`| textual | Added textual guidance to include the unit for quantitative results. | 
+| `performer`| slicing | Added slice performer.recorder with a reference to HealthProfessional to assign a person responsible for the LaboratoryTestResult. |
 | `interpretation.resultFlags` | terminology | Added ConceptMap ResultFlagsCodelist-to-ObservationInterpretation (seems missing in the current zib profile implementation).|
 | `interpretation.resultFlags` | terminology | Removed concepts 'Resistent', 'Intermediate' and 'Susceptible' from the ValueSet. These codes are seen as a quantitative result. ([zib ticket #1555](https://bits.nictiz.nl/browse/ZIB-1555))
 | `interpretation.resultFlags` | textual | Removed notion of 'Resistent', 'Intermediate' and 'Susceptible' codes in definition.
