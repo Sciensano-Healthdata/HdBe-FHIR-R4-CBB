@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult" />
   <meta>
-    <lastUpdated value="2022-10-17T15:38:34.7894107+00:00" />
+    <lastUpdated value="2022-10-19T07:11:34.8385139+00:00" />
   </meta>
   <language value="en-US" />
   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
@@ -1099,7 +1099,7 @@
           </extension>
         </extension>
       </short>
-      <definition value="The HealthcareOrganization (e.g. laboratory) where the LaboratoryTestResult was performed.">
+      <definition value="The HealthProfessional responsible for the LaboratoryTestResult. If necessary, the Laboratory (HealthcareOrganization) where the test is performed, can be obtained through the HealthProfessional on the HealtcareOrganization element.">
         <extension url="http://hl7.org/fhir/StructureDefinition/translation">
           <extension url="lang">
             <valueCode value="nl-NL" />
@@ -1109,16 +1109,6 @@
           </extension>
         </extension>
       </definition>
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareOrganization" />
-      </type>
-    </element>
-    <element id="LaboratoryTestResult.Recorder">
-      <path value="LaboratoryTestResult.Recorder" />
-      <definition value="The HealthProfessional responsible for the authentication/validation of the LaboratoryTestResult." />
       <min value="0" />
       <max value="1" />
       <type>

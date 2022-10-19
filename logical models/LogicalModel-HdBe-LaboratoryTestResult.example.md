@@ -37,5 +37,5 @@
 | ResultType	                              | 
 | RelatedResult	                              |
 | Requester	 	                              |
-| Performer	 							      |  
-| Recorder                                    |  Enrico Penninx |
+| Performer	 							      |  Enrico Penninx |
+

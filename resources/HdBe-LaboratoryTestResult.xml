@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult" />
   <meta>
-    <lastUpdated value="2022-10-17T15:57:15.4745157+00:00" />
+    <lastUpdated value="2022-10-19T07:12:15.9323638+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult" />
   <name value="HdBeLaboratoryTestResult" />
@@ -279,42 +279,22 @@
       <path value="Observation.performer" />
       <sliceName value="performer" />
       <short value="Performer" />
-      <definition value="The HealthcareOrganization (Laboratory) where the LaboratoryTestResult was performed." />
+      <definition value="The HealthProfessional responsible for the LaboratoryTestResult. If necessary, the Laboratory (HealthcareOrganization) where the test is performed, can be obtained through this the HealthProfessional resource on the organization element." />
       <alias value="Uitvoerder" />
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization-Organization" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/pattern-HealthProfessionalReference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole" />
       </type>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
-        <map value="LaboratoryTestResult.Performer.HealthcareOrganization" />
+        <map value="LaboratoryTestResult.Performer.HealthProfessional" />
       </mapping>
       <mapping>
         <identity value="zib-laboratorytestresult-v4.6-2020EN" />
         <map value="NL-CM:13.1.35" />
         <comment value="Performer" />
-      </mapping>
-    </element>
-    <element id="Observation.performer:recorder">
-      <path value="Observation.performer" />
-      <sliceName value="recorder" />
-      <definition value="The HealthProfessional responsible for the authentication/validation of the LaboratoryTestResult." />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <profile value="https://fhir.healthdata.be/StructureDefinition/pattern-HealthProfessionalReference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole" />
-      </type>
-      <mapping>
-        <identity value="HdBe-LaboratoryTestResult" />
-        <map value="LaboratoryTestResult.Recorder.HealthProfessional" />
       </mapping>
     </element>
     <element id="Observation.value[x]">
