@@ -7,6 +7,11 @@ This folder contains [FHIR terminology resources](http://hl7.org/fhir/terminolog
 3. Place it in the current folder `../terminology`.
 4. Translate all of the Dutch instances with its English equivalent.
 5. Change the coding(s) of the valueSet if this is specified in the Excel.
+6. If a ValueSet contains multiple CodeSystems, they are placed in the following order:
+
+        1. CodeSystems that are included as a whole.
+        2. CodeSystems on which a filter is applied.
+        3. CodeSystems of which concepts are defined.
 
 This works the same for CodeSystems and ConceptMaps, with the difference that ConceptMaps are found in the `../src/HdBe-profiles` folder.
 
