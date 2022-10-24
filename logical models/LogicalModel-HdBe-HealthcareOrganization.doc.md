@@ -2,7 +2,8 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`HealthcareOrganizationIdentificationNumber` | textual | Replaced the Dutch context (URA, AGB) with NIDHI and CBE. |
+|`HealthcareOrganization` | textual | Replaced HealthcareProvider with HealthcareOrganization. |
+|`HealthcareOrganizationIdentificationNumber` | textual | Replaced the Dutch context (URA, AGB) with NIHDI and CBE. |
 |`DepartmentSpecialty` | textual | Removed the Dutch context. |
 |`DepartmentSpecialty` | terminology | Replaced values in ValueSet DepartmentSpecialty with a defined list of SNOMED codes and included SNOMED codes for Unknown and Other. |
 |`DepartmentIdentificationNumber` | element | Added a new element that specifies an Organization's internal identification number for its departments. |
@@ -10,3 +11,5 @@
 |`ContactInformation` | cardinality | Loosened cardinality from 0..1 to 0..* based on the changes made to the CBB ConctactInformation. Widening the cardinality here allows for capturing all contact information necessary. |
 |`OrganizationType` | textual | Removed the Dutch context. | 
 |`OrganizationType` | terminology| Removed ValueSet OrganizationType. | 
+|`HealthcareOrganizationIdentificationNumber` | textual | Replaced ID's with IDs. |
+|`HealthcareOrganizationOrganizationLocation` | textual | Replaced 'concept.This' in 'concept. This'|
