@@ -2,4 +2,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|- | - | - |
+|`Indication` | textual | Added a period at the end of the sentence. |
