@@ -199,8 +199,12 @@ Conformance resources can have multiple types of identifying information, which 
 - The `.id` will be constructed in the following way:
     - For logical models
         - representing a healthdata.be version of a zib: `HdBe-[English zib name]`
+        - representing a DCD version of a CBB: `[Business project code]-[English zib name]`
+        - representing a specific DCD implementation: `[Business project code]-[concept name]`
     - For profiles
-        - representing a healthdata.be version of a zib: `HdBe-[English zib name]`
+        - representing a healthdata.be version of a zib: `HdBe-[English zib-profile name]`
+        - representing a DCD of a HdBe profile: `[Business project code]-[English zib-profile name]`
+        - representing a specific DCD implementation: `[Business project code]-[concept name]`
     - For extensions:
         - pertaining a specific concept in a single profile:`ext-[English root concept name].[English concept name]`
         - pertaining to multiple profiles, or not pertaining to specific profiles and generally applicable:
@@ -221,7 +225,11 @@ Where:
 `[purpose]` and `[English concept name]` are generally a PascalCased name joining words together, with the first letter of every word capitalized.
    
 #### ValueSets
-- The id will be constructed as a word or short wording that describes the ValueSet.
+- The `.id` will be constructed in the following way:
+    - representing a healthdata.be version of a zib ValueSet: `[English zib ValueSet name]`
+    - representing a healthdata.be version of a new ValueSet: `[short English valueSet description]`
+    - representing a DCD version of a zib ValueSet : `[Business project code]-[English zib ValueSet name]`
+    - representing a DCD version of a new ValueSet: `[Business project code]-[short English valueSet description]`
 - The canonical URL will then be: `https://fhir.healthdata.be/ValueSet/[id]`
 - The name will be constructed as: `.id`
 - The title will be constructed as: `.id`
