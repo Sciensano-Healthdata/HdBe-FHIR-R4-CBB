@@ -9,6 +9,7 @@
         2. [Healthdata.be CBBs](#healthdatacbb)
         3. [Use case specific models](#usecasespecificmodels)
     2. [Associating the logical definition to StructureDefinitions](#associatingthelogicaldefinitiontostructuredefinitions)
+    3. [Cardinalities](#cardinalities)
 4. [Versioning](#Versioning)
     1. [CBBs](#Versioning-CBB)
     2. [FHIR conformance resources](#Versioning-FHIR)
@@ -29,7 +30,10 @@
     1. [Usage of DefinitionCodes](#DefinitionCodes)
     2. [Constraining a target CBB](#ConstrainingCBB)
     3. [Usage of zib concept examples](#ZibConceptExamples)
-10. [Examples](#Examples)
+10. [Terminology](#terminology)
+    1. [SNOMED codes from Dutch terminology](#DutchSnomed)
+    2. [Local codes](#LocalCodes)
+11. [Examples](#Examples)
     1. [Logical model examples](#LogicalModelExamples)
     2. [FHIR profile examples](#FHIRProfileExamples)
 
@@ -95,6 +99,19 @@ A specific element can then be mapped using:
 
 
 Mappings should only be added. There is no need to replace existing mappings as they are valid mappings and provide traceability to the original profiles. It shows the relation between zib and HdBe concepts.
+
+### Cardinalities <a name="Cardinalities"></a>
+The functional description will specify the cardinality for each concept as a minimum required and maximum allowed number of times it may occur, which is the same mechanism as in FHIR. However, one needs to be careful as the cardinality can only be restricted in derived profiles, and never widened. Being too strict could thus hinder the re-use of these profiles. This is especially true for cardinalities in CBBs, which should be interpreted as 'purely conceptual'; a use case might allow for data that conceptually always should be there to be absent in practice.
+
+For CBB profiles:
+
+- A minimum of 0 or 1 will be profiled as 0.
+- A maximum (1, n, *) will be profiled as-is.
+
+For use case specific profiles:
+
+- If the corresponding CBB has a minimum of 1 and the use case doesn't contradict this, the minimum will be profiled here as 1.
+- Cardinalities may be further restricted if the use case defines this.
 
 ## Versioning<a name="Versioning"></a>
 ### CBBs <a name="Versioning-CBB"></a>
@@ -304,7 +321,7 @@ However, for the CBBs, we have decided not to take over these DefintionCodes bec
 
 ### Constraining a target CBB <a name="ConstrainingCBB"></a>  
 A few CBBs (e.g. [VisualFunction](https://zibs.nl/wiki/VisualFunction-v3.1(2020EN))) constrain a target CBB. To visualize this in a Logical Model, we defined the following guidelines, which should be modelled outside of Forge:
-- Add an element of the reference type with a reference to the target CBB. Match the cardinality with the cardinality of the zib. Add the following comment to this element: _"This CBB constrains the target CBB. The following child elements describe only the differences relative to the CBB in the target reference."_
+- Add an element of the reference type with a reference to the target CBB. Match the cardinality with the cardinality of the zib. Add the following comment to this element: _"This CBB ([name CBB]) constrains the target CBB ([name target CBB]). The following child elements describe only the differences relative to the CBB in the target reference."_
 - Add an child element of the BackBoneElement type and give it the name of the target CBB. Set the cardinality to 1..1.
 - Finally only add the elements of the target CBB that are constrained. Keep the hierarchy and cardinality as is in the target CBB.
 
@@ -312,6 +329,18 @@ A few CBBs (e.g. [VisualFunction](https://zibs.nl/wiki/VisualFunction-v3.1(2020E
 For some concepts within a zib, examples are available in the export to FHIR logical models. These are mapped to `ElementDefinition.example`. 
 
 The `ElementDefinition.example` should use the concept's datatype. However, the quality of these examples is poor, which is likely the result of storage as free text per concept within ART-DECOR. Often the example value of a coded concept is mapped to a `CodeableConcept.text` with the concept's DefinitionCode to `CodeadbleConcept.coding.` This might be very confusing for the readers as this does not represent how such a concept will be exchanged. Therefore, the `ElementDefinition.example` is not used with the pre-populated values for the zib export. 
+
+## Terminology <a name="Terminology"></a>
+
+### SNOMED codes from Dutch terminology<a name="DutchSnomed"></a> 
+If a SNOMED code from the Dutch terminology center used in a zib is also applicable in the CBB, this code can be incorporated in a ValueSet already. The code and meaning should be submitted to the Belgian terminology centre to have it requested for the SNOMED International edition. If a code is approved, the code is retained and will be added to the international edition. If a code is rejected, it is necessary to change this code and add it to a local CodeSystem.
+
+### Local codes<a name="LocalCodes"></a> 
+If a code is defined in a valueset that is not part of an existing (international) terminology, it is included in a local Codesystem. The name of the CodeSystem matches the name of the valueset it is used in. 
+
+In the Purpose of the CodeSystem, the following should be mentioned: _"This CodeSystem is developed to define concepts that were not available in SNOMED International at the time of implementation of these codes. If a matching SNOMED code is available in the ValueSet, the SNOMED code should preferably be used instead of the code in this CodeSystem."_
+
+When a code from a local CodeSystem has become part of an international terminology after the initial implementation and the code is used in practice, it cannot be replaced without notice. The code of the international should be added to the ValueSet, but the local code is retained as well. In the ValueSet a description must specifiy how to deal with both codes.
 
 ## Examples <a name="Examples"></a>
 Examples are a vital part of any specification as they will allow the reader to easier understand the expectations. Every logical model and profile shall have at least one example. 
