@@ -25,14 +25,13 @@
     2. [Folder structure and file name](FolderStructureAndFileName)
 8. [Metadata](#metadata)
     1. [StructureDefinition](#StructureDefinition)
-    2. [ValueSets](#ValueSets)
 9.  [ElementDefinition](#ElementDefinition)
     1. [Usage of DefinitionCodes](#DefinitionCodes)
     2. [Constraining a target CBB](#ConstrainingCBB)
     3. [Usage of zib concept examples](#ZibConceptExamples)
 10. [Terminology](#terminology)
-    1. [SNOMED codes from Dutch terminology](#DutchSnomed)
-    2. [Local codes](#LocalCodes)
+    1. [Dutch SNOMED codes](#DutchSnomed)
+    2. [Custom codes](#CustomCodes)
 11. [Examples](#Examples)
     1. [Logical model examples](#LogicalModelExamples)
     2. [FHIR profile examples](#FHIRProfileExamples)
@@ -333,14 +332,14 @@ The `ElementDefinition.example` should use the concept's datatype. However, the 
 ## Terminology <a name="Terminology"></a>
 
 ### SNOMED codes from Dutch terminology<a name="DutchSnomed"></a> 
-If a SNOMED code from the Dutch terminology center used in a zib is also applicable in the CBB, this code can be incorporated in a ValueSet already. The code and meaning should be submitted to the Belgian terminology centre to have it requested for the SNOMED International edition. If a code is approved, the code is retained and will be added to the international edition. If a code is rejected, it is necessary to change this code and add it to a local CodeSystem.
+The zibs often make use of SNOMED codes that are defined in the Dutch SNOMED edition. These codes can be used for the CBBs if they are applicable. In this case, the code and meaning should be submitted to the Belgian terminology center to have it requested for adoption in the SNOMED International edition. The code will be retained once it is included in the international edition. If a code is rejected, it is necessary to define the code in a custom CodeSystem and use this code because Belgian vendors generally do not have access to the Dutch SNOMED edition.
 
-### Local codes<a name="LocalCodes"></a> 
-If a code is defined in a valueset that is not part of an existing (international) terminology, it is included in a local Codesystem. The name of the CodeSystem matches the name of the valueset it is used in. 
+### Custom codes<a name="CustomCodes"></a> 
+In some cases, a code does not (yet) exist in (international) terminology systems. In those cases, a custom CodeSystem can be defined. The name of the CodeSystem matches the name of the valueset it is used in. 
 
-In the Purpose of the CodeSystem, the following should be mentioned: _"This CodeSystem is developed to define concepts that were not available in SNOMED International at the time of implementation of these codes. If a matching SNOMED code is available in the ValueSet, the SNOMED code should preferably be used instead of the code in this CodeSystem."_
+The `CodeSystem.Purpose` should mention: _"This CodeSystem is developed to define concepts that were not available in SNOMED International at the time of writing. If a matching SNOMED code is available in a ValueSet, the SNOMED code SHOULD be used instead of the code defined by this CodeSystem."_
 
-When a code from a local CodeSystem has become part of an international terminology after the initial implementation and the code is used in practice, it cannot be replaced without notice. The code of the international should be added to the ValueSet, but the local code is retained as well. In the ValueSet a description must specifiy how to deal with both codes.
+When a code from a custom CodeSystem has been adopted by an internationally utilized CodeSystem after the initial implementation it cannot be easily replaced and generally requires a transition period. The new code can be added to the ValueSet alongside the old code including guidance and expectations of the implementer about the usage of these codes. 
 
 ## Examples <a name="Examples"></a>
 Examples are a vital part of any specification as they will allow the reader to easier understand the expectations. Every logical model and profile shall have at least one example. 
