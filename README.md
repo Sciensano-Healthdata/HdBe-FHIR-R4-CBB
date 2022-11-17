@@ -19,16 +19,16 @@ Healthdata.be uses the following branching strategy during initial development:
     * can be updated by merging main into the zib-branch at any time,
     * require a peer-reviewed pull-request before merging in main,
     * are deleted after merge in main, 
-    * can be merged into integration at any time.  
+    * can be merged into develop at any time.  
 * Multiple zibs may be included in one zib branch which can be convenient for zibs that are strongly related, like the medication-related zibs.
-* The integration branch is linked to a Simplifier.net project which will render all resources and host an Implementation Guide. The integration branch is useful for quality control processes.
+* The develop branch is linked to a Simplifier.net project which will render all resources and host an Implementation Guide. The develop branch is useful for quality control processes.
 
 The following illustration visualizes how this workflow might look like
 ```
 main
 --x---x----------------+--x------------x------+-------
   |   |                |  |            |      |
-  |   |  integration   |  |            |      |
+  |   |  develop       |  |            |      |
   \---|-----------+----|--|------------|---+--|--------
       |           |    |  |            |   |  |  
       | HdBe-xxx  |    |  | HdBe--yyy  |   |  |
@@ -38,10 +38,10 @@ main
 ### Branching strategy after publication
 Healthdata uses the following branching strategy:
 * Releases correspond with the "stable-xxx" branches. These branches are only updated when there is a new release.
-* Integration of fixes and features is done on integration branches, named "release-xxx", where "xxx" is the version number of the upcoming release. Integration branches are created for each new release cycle and deleted after they are merged to the "stable-xxx" branches.
+* Integration of fixes and features is done on develop branches, named "release-xxx", where "xxx" is the version number of the upcoming release. Develop branches are created for each new release cycle and deleted after they are merged to the "stable-xxx" branches.
 * Development of fixes and features is done:
-	* Hotfixes (typos etc.) are usually directly applied to the integration branch(es).
-	* Larger issues are developed in topic branches. These issues are usually tracked in the GitHub repository issue tracker and the topic branches are named accordingly. Topic branches are merged into the integration branches when they are ready to be released. They are deleted after they are merged with all relevant integration branches.
+	* Hotfixes (typos etc.) are usually directly applied to the develop branch(es).
+	* Larger issues are developed in topic branches. These issues are usually tracked in the GitHub repository issue tracker and the topic branches are named accordingly. Topic branches are merged into the develop brancheswhen they are ready to be released. They are deleted after they are merged with all relevant develop branches.
 	* _NOTE: version numbers of FHIR materials should not be changed as part of the development process. This should be part of the release process._
 
 The following illustration visualizes how this workflow might look like
@@ -97,7 +97,7 @@ Depending on what your work contains, you can also use another validation file t
 
 #### **2. Github Actions**
 
-Every time commits are pushed to the GitHub environment in the main or integration branch, the Github Actions pipeline is started. The Github Actions pipeline is also started when a pull request is merged into the main branch.
+Every time commits are pushed to the GitHub environment in the main or develop branch, the Github Actions pipeline is started. The Github Actions pipeline is also started when a pull request is merged into the main branch.
 
 GitHub Actions always validates the complete project and uses all quality assurance rules. 
 It can be found within Github under the **Actions tab**. 
