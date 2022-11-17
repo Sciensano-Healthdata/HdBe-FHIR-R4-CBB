@@ -30,7 +30,7 @@
     2. [Constraining a target CBB](#ConstrainingCBB)
     3. [Usage of zib concept examples](#ZibConceptExamples)
 10. [Terminology](#terminology)
-    1. [Dutch SNOMED codes](#DutchSnomed)
+    1. [Netherlands Edition SNOMED codes](#DutchSnomed)
     2. [Custom codes](#CustomCodes)
 11. [Examples](#Examples)
     1. [Logical model examples](#LogicalModelExamples)
@@ -331,8 +331,8 @@ The `ElementDefinition.example` should use the concept's datatype. However, the 
 
 ## Terminology <a name="Terminology"></a>
 
-### SNOMED codes from Dutch terminology<a name="DutchSnomed"></a> 
-The zibs often make use of SNOMED codes that are defined in the Dutch SNOMED edition. These codes can be used for the CBBs if they are applicable. In this case, the code and meaning should be submitted to the Belgian terminology center to have it requested for adoption in the SNOMED International edition. The code will be retained once it is included in the international edition. If a code is rejected, it is necessary to define the code in a custom CodeSystem and use this code because Belgian vendors generally do not have access to the Dutch SNOMED edition.
+### Netherlands Edition SNOMED codes<a name="DutchSnomed"></a> 
+The zibs often make use of SNOMED codes that are defined in the Netherlands SNOMED edition. These codes can be used for the CBBs if they are applicable. In this case, the code and meaning should be submitted to the Belgian terminology center to have it requested for adoption in the SNOMED International edition. The code will be retained once it is included in the international edition. If a code is rejected, it is necessary to define the code in a custom CodeSystem and use this code because Belgian vendors generally do not have access to the Netherlands SNOMED edition.
 
 ### Custom codes<a name="CustomCodes"></a> 
 In some cases, a code does not (yet) exist in (international) terminology systems. In those cases, a custom CodeSystem can be defined. The name of the CodeSystem matches the name of the valueset it is used in. 
