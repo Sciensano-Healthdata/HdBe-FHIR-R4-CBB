@@ -55,7 +55,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration" />
+        <map value="MedicationAdministration2" />
       </mapping>
     </element>
     <element id="MedicationAdministration.extension">
@@ -82,7 +82,7 @@
       <path value="MedicationAdministration.extension.value[x]" />
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration.AgreedDateTime" />
+        <map value="MedicationAdministration2.AgreedDateTime" />
       </mapping>
     </element>
     <element id="MedicationAdministration.extension:doubleCheckPerformed">
@@ -98,7 +98,7 @@
       <path value="MedicationAdministration.extension.value[x]" />
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration.DoubleCheckPerformed" />
+        <map value="MedicationAdministration2.DoubleCheckPerformed" />
       </mapping>
     </element>
     <element id="MedicationAdministration.extension:deviatingAdministration">
@@ -114,7 +114,7 @@
       <path value="MedicationAdministration.extension.value[x]" />
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration.DeviatingAdministration" />
+        <map value="MedicationAdministration2.DeviatingAdministration" />
       </mapping>
     </element>
     <element id="MedicationAdministration.extension:medicationAdministrationReasonForDeviation">
@@ -131,7 +131,7 @@
       <comment value="This MedicationAdministrationReasonForDeviation extension has overlap with `statusReason`. Both concepts allow the documentation of reasons why an administration did not take place, potentially resulting in duplicated information in both places. This extension, however, has a broader scope because it also covers the reasons why administrations are performed differently than the agreement." />
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration.MedicationAdministrationReasonForDeviation" />
+        <map value="MedicationAdministration2.MedicationAdministrationReasonForDeviation" />
       </mapping>
     </element>
     <element id="MedicationAdministration.status">
@@ -140,6 +140,9 @@
       <definition value="The status of the administration, as a description of the stage within the administering process. Only the status codes ‘completed’ and ‘cancelled’ apply to indivisible products (such as tablets or suppositories). For divisible products (such as infusions), doses can also be ‘suspended’ or ‘aborted’.  &#xD;&#xA;&#xD;&#xA;When documenting this, the following interpretations are used: &#xD;&#xA;&#xD;&#xA;* Active: The product is administered.&#xD;&#xA;* Suspended: Use has (temporarily) been interrupted, because of a side effect, for example. Later, the patient and/or doctor can decide whether or not to resume or discontinue use.&#xD;&#xA;* Aborted: Administration has stopped.&#xD;&#xA;* Completed: Administration has been completed.&#xD;&#xA;* Canceled: The product was never administered." />
       <alias value="MedicatieToedieningStatus" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="MedicationAdministrationStatus" />
+        </extension>
         <strength value="required" />
         <description value="Use ConceptMap 'MedicationAdministrationStatus-to-MedicationAdministrationStatus' to translate CBB terminology to profile terminology in ValueSet 'MedicationAdministrationStatus'." />
         <valueSet value="http://hl7.org/fhir/ValueSet/medication-admin-status|4.0.1">
@@ -155,7 +158,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration.MedicationAdministrationStatus" />
+        <map value="MedicationAdministration2.MedicationAdministrationStatus" />
       </mapping>
     </element>
     <element id="MedicationAdministration.category">
@@ -189,6 +192,9 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-PharmaceuticalProduct" />
       </type>
+      <binding>
+        <strength value="example" />
+      </binding>
       <mapping>
         <identity value="zib-medicationadministration2-v1.1.1-2020EN" />
         <map value="NL-CM:9.13.20929" />
@@ -196,7 +202,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration.AdministrationProduct" />
+        <map value="MedicationAdministration2.AdministrationProduct" />
       </mapping>
     </element>
     <element id="MedicationAdministration.subject">
@@ -237,7 +243,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration.RelatedAgreement.AdministrationAgreement" />
+        <map value="MedicationAdministration2.RelatedAgreement.AdministrationAgreement" />
       </mapping>
     </element>
     <element id="MedicationAdministration.effective[x]">
@@ -266,7 +272,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration.AdministrationDateTime" />
+        <map value="MedicationAdministration2.AdministrationDateTime" />
       </mapping>
     </element>
     <element id="MedicationAdministration.performer">
@@ -282,7 +288,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration.Administrator" />
+        <map value="MedicationAdministration2.Administrator" />
       </mapping>
     </element>
     <element id="MedicationAdministration.performer.actor">
@@ -321,15 +327,15 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration.Administrator.Patient" />
+        <map value="MedicationAdministration2.Administrator.Patient" />
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration.Administrator.HealthProfessional" />
+        <map value="MedicationAdministration2.Administrator.HealthProfessional" />
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration.Administrator.Caregiver" />
+        <map value="MedicationAdministration2.Administrator.Caregiver" />
       </mapping>
     </element>
     <element id="MedicationAdministration.request">
@@ -349,7 +355,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration.RelatedAgreement.MedicationAgreement" />
+        <map value="MedicationAdministration2.RelatedAgreement.MedicationAgreement" />
       </mapping>
     </element>
     <element id="MedicationAdministration.note">
@@ -368,7 +374,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration.Comment" />
+        <map value="MedicationAdministration2.Comment" />
       </mapping>
     </element>
     <element id="MedicationAdministration.dosage.extension">
@@ -396,7 +402,7 @@
       <path value="MedicationAdministration.dosage.extension.value[x]" />
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration.AdministeringSpeed" />
+        <map value="MedicationAdministration2.AdministeringSpeed" />
       </mapping>
     </element>
     <element id="MedicationAdministration.dosage.route">
@@ -405,6 +411,9 @@
       <definition value="The route through which the medication is administered (oral, nasal, intravenous,...)." />
       <alias value="Toedieningsweg" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="RouteOfAdministration" />
+        </extension>
         <strength value="required" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/RouteOfMedicationAdministration" />
       </binding>
@@ -415,7 +424,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration.RouteOfAdministration" />
+        <map value="MedicationAdministration2.RouteOfAdministration" />
       </mapping>
     </element>
     <element id="MedicationAdministration.dosage.dose">
@@ -430,7 +439,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration.AdministeredAmount" />
+        <map value="MedicationAdministration2.AdministeredAmount" />
       </mapping>
     </element>
     <element id="MedicationAdministration.dosage.rate[x]">
@@ -466,7 +475,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationAdministration2" />
-        <map value="MedicationAdministration.AdministeringSpeed" />
+        <map value="MedicationAdministration2.AdministeringSpeed" />
       </mapping>
       <mapping>
         <identity value="HdBe-Range" />

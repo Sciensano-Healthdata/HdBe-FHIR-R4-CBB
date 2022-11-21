@@ -2,6 +2,7 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
+|`MedicationAdministration2` (root) | naming | Renamed the root concept name MedicationAdministration to MedicationAdministration2 to align with the sdf-8 constraint. ([zib ticket #1875](https://bits.nictiz.nl/browse/ZIB-1875)) |
 |`AdministeringSpeed` | type | Replaced type BackboneElement with Range type and added  HdBe-Range partial CBB. |
 |`AdministeringSpeed` | element | Removed elements minimumValue, maximumValue and nominalValue as they are defined within the CBB HdBe-Range. |
 |`AdministeringSpeed` | textual | Removed context regarding the Dutch NHG table. |

@@ -44,14 +44,12 @@
         <severity value="error" />
         <human value="`extension.additionalAdvanceDirective` may only be used for AdvanceDirective references in addition to first reference in `.source[x]`." />
         <expression value="extension.where(url = 'https://fhir.healthdata.be/StructureDefinition/ext-TreatmentDirective2.AdvanceDirective').empty() or source.exists()" />
-        <source value="https://fhir.healthdata.be/StructureDefinition/HdBe-TreatmentDirective2" />
       </constraint>
       <constraint>
         <key value="HdBe-TreatmentDirective2-2" />
         <severity value="error" />
         <human value="If the specificationOther extension is used, `.provision.type` MUST be absent and vice versa" />
         <expression value="(extension.where(url = 'https://fhir.healthdata.be/StructureDefinition/ext-TreatmentDirective2.SpecificitionOther').exists() and provision.type.exists()).not()" />
-        <source value="https://fhir.healthdata.be/StructureDefinition/HdBe-TreatmentDirective2" />
       </constraint>
       <mapping>
         <identity value="zib-treatmentdirective2-v1.0-2020EN" />
@@ -60,7 +58,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-TreatmentDirective2" />
-        <map value="TreatmentDirective" />
+        <map value="TreatmentDirective2" />
       </mapping>
     </element>
     <element id="Consent.extension">
@@ -96,7 +94,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-TreatmentDirective2" />
-        <map value="TreatmentDirective.Comment" />
+        <map value="TreatmentDirective2.Comment" />
       </mapping>
     </element>
     <element id="Consent.extension:additionalAdvanceDirective">
@@ -114,7 +112,7 @@
       <condition value="HdBe-TreatmentDirective2-1" />
       <mapping>
         <identity value="HdBe-TreatmentDirective2" />
-        <map value="TreatmentDirective.AdvanceDirective" />
+        <map value="TreatmentDirective2.AdvanceDirective" />
       </mapping>
     </element>
     <element id="Consent.modifierExtension">
@@ -143,7 +141,7 @@
       <condition value="HdBe-TreatmentDirective2-2" />
       <mapping>
         <identity value="HdBe-TreatmentDirective2" />
-        <map value="TreatmentDirective.SpecificationOther" />
+        <map value="TreatmentDirective2.SpecificationOther" />
       </mapping>
     </element>
     <element id="Consent.status">
@@ -161,12 +159,12 @@
       </mapping>
       <mapping>
         <identity value="HdBe-TreatmentDirective2" />
-        <map value="TreatmentDirective.MostRecentReviewDate" />
+        <map value="TreatmentDirective2.MostRecentReviewDate" />
         <comment value="MostRecentReviewDate (implicit, main mapping is on `Consent.dateTime`)" />
       </mapping>
       <mapping>
         <identity value="HdBe-TreatmentDirective2" />
-        <map value="TreatmentDirective.DateExpired" />
+        <map value="TreatmentDirective2.DateExpired" />
         <comment value="DateExpired (implicit, main mapping is on `Consent.provision.period.end`)" />
       </mapping>
     </element>
@@ -208,7 +206,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-TreatmentDirective2" />
-        <map value="TreatmentDirective.MostRecentReviewDate" />
+        <map value="TreatmentDirective2.MostRecentReviewDate" />
       </mapping>
     </element>
     <element id="Consent.source[x]">
@@ -223,7 +221,7 @@
       <condition value="HdBe-TreatmentDirective2-1" />
     </element>
     <element id="Consent.source[x]:sourceReference">
-      <path value="Consent.sourceReference" />
+      <path value="Consent.source[x]" />
       <sliceName value="sourceReference" />
       <short value="AdvanceDirective" />
       <definition value="A (written) statement in which a person indicates wishes concerning future medical action, in the event that this person is at that point no longer (deemed) capable of taking decisions on the matter." />
@@ -244,7 +242,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-TreatmentDirective2" />
-        <map value="TreatmentDirective.AdvanceDirective" />
+        <map value="TreatmentDirective2.AdvanceDirective" />
       </mapping>
     </element>
     <element id="Consent.policy.uri">
@@ -275,7 +273,7 @@
       <path value="Consent.provision.extension.value[x]" />
       <mapping>
         <identity value="HdBe-TreatmentDirective2" />
-        <map value="TreatmentDirective.ReasonForEnding" />
+        <map value="TreatmentDirective2.ReasonForEnding" />
       </mapping>
     </element>
     <element id="Consent.provision.type">
@@ -285,6 +283,9 @@
       <alias value="BehandelBesluit" />
       <condition value="HdBe-TreatmentDirective2-2" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ConsentProvisionType" />
+        </extension>
         <strength value="required" />
         <description value="Use ConceptMap 'TreatmentDecision-to-ConsentProvisionType' to translate zib terminology to profile terminology in ValueSet 'ConsentProvisionType'" />
         <valueSet value="http://hl7.org/fhir/ValueSet/consent-provision-type|4.0.1">
@@ -300,7 +301,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-TreatmentDirective2" />
-        <map value="TreatmentDirective.TreatmentDecision" />
+        <map value="TreatmentDirective2.TreatmentDecision" />
       </mapping>
     </element>
     <element id="Consent.provision.period.end">
@@ -315,7 +316,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-TreatmentDirective2" />
-        <map value="TreatmentDirective.DateExpired" />
+        <map value="TreatmentDirective2.DateExpired" />
       </mapping>
     </element>
     <element id="Consent.provision.actor">
@@ -341,7 +342,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-TreatmentDirective2" />
-        <map value="TreatmentDirective.AgreementParty" />
+        <map value="TreatmentDirective2.AgreementParty" />
       </mapping>
     </element>
     <element id="Consent.provision.actor:agreementParty.role">
@@ -392,15 +393,15 @@
       </mapping>
       <mapping>
         <identity value="HdBe-TreatmentDirective2" />
-        <map value="TreatmentDirective.AgreementParty.Patient" />
+        <map value="TreatmentDirective2.AgreementParty.Patient" />
       </mapping>
       <mapping>
         <identity value="HdBe-TreatmentDirective2" />
-        <map value="TreatmentDirective.AgreementParty.Representative" />
+        <map value="TreatmentDirective2.AgreementParty.Representative" />
       </mapping>
       <mapping>
         <identity value="HdBe-TreatmentDirective2" />
-        <map value="TreatmentDirective.AgreementParty.HealthProfessional" />
+        <map value="TreatmentDirective2.AgreementParty.HealthProfessional" />
       </mapping>
     </element>
     <element id="Consent.provision.code">
@@ -410,6 +411,9 @@
       <alias value="Behandeling" />
       <max value="1" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ConsentContentCode" />
+        </extension>
         <strength value="extensible" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/Treatment" />
       </binding>
@@ -420,7 +424,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-TreatmentDirective2" />
-        <map value="TreatmentDirective.Treatment" />
+        <map value="TreatmentDirective2.Treatment" />
       </mapping>
     </element>
     <element id="Consent.provision.provision">

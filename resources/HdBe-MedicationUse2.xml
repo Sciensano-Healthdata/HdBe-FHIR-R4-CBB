@@ -51,7 +51,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationUse2" />
-        <map value="MedicationUse" />
+        <map value="MedicationUse2" />
       </mapping>
     </element>
     <element id="MedicationStatement.extension">
@@ -95,7 +95,7 @@
       <path value="MedicationStatement.extension.value[x]" />
       <mapping>
         <identity value="HdBe-MedicationUse2" />
-        <map value="MedicationUse.Prescriber" />
+        <map value="MedicationUse2.Prescriber" />
       </mapping>
     </element>
     <element id="MedicationStatement.extension:asAgreedIndicator">
@@ -113,7 +113,7 @@
       <definition value="Duration: The intended duration of use. E.g. 5 days or 8 weeks. It is not allowed to indicate the duration in months, because different months have a variable duration in days." />
       <mapping>
         <identity value="HdBe-MedicationUse2" />
-        <map value="MedicationUse.AsAgreedIndicator" />
+        <map value="MedicationUse2.AsAgreedIndicator" />
       </mapping>
     </element>
     <element id="MedicationStatement.modifierExtension">
@@ -147,7 +147,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationUse2" />
-        <map value="MedicationUse.MedicationUseStopType" />
+        <map value="MedicationUse2.MedicationUseStopType" />
       </mapping>
     </element>
     <element id="MedicationStatement.modifierExtension:repeatPeriodCyclicalSchedule">
@@ -159,13 +159,6 @@
         <profile value="https://fhir.healthdata.be/StructureDefinition/ext-InstructionsForUse.RepeatPeriodCyclicalSchedule" />
       </type>
     </element>
-    <element id="MedicationStatement.modifierExtension:repeatPeriodCyclicalSchedule.value[x]">
-      <path value="MedicationStatement.modifierExtension.value[x]" />
-      <mapping>
-        <identity value="HdBe-InstructionsForUse" />
-        <map value="InstructionsForUse.RepeatPeriodCyclicalSchedule" />
-      </mapping>
-    </element>
     <element id="MedicationStatement.status">
       <path value="MedicationStatement.status" />
       <short value="UseIndicator / MedicationUseStopType / PeriodOfUse" />
@@ -175,6 +168,9 @@
       <alias value="GebruikIndicator" />
       <alias value="Gebruiksperiode" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="MedicationStatementStatus" />
+        </extension>
         <strength value="required" />
         <description value="Use ConceptMap 'MedicationStopType-to-MedicationStatementStatus' to translate CBB terminology to profile terminology in ValueSet 'Medication Status Codes'." />
         <valueSet value="http://hl7.org/fhir/ValueSet/medication-statement-status|4.0.1">
@@ -200,16 +196,16 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationUse2" />
-        <map value="MedicationUse.UseIndicator" />
+        <map value="MedicationUse2.UseIndicator" />
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationUse2" />
-        <map value="MedicationUse.MedicationUseStopType" />
+        <map value="MedicationUse2.MedicationUseStopType" />
         <comment value="implicit, main mapping is on the modifier extension ext-StopType" />
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationUse2" />
-        <map value="MedicationUse.PeriodOfUse" />
+        <map value="MedicationUse2.PeriodOfUse" />
         <comment value="implicit, main mapping is on `.effective[x]:effectivePeriod` and extension ext-TimeInterval.Duration" />
       </mapping>
     </element>
@@ -219,6 +215,9 @@
       <definition value="Reason for changing or discontinuing use of medication." />
       <alias value="RedenWijzigenOfStoppenGebruik" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="MedicationStatementStatusReason" />
+        </extension>
         <strength value="required" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/MedicationReason" />
       </binding>
@@ -229,7 +228,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationUse2" />
-        <map value="MedicationUse.ReasonForChangeOrDiscontinuationOfUse" />
+        <map value="MedicationUse2.ReasonForChangeOrDiscontinuationOfUse" />
       </mapping>
     </element>
     <element id="MedicationStatement.category">
@@ -263,6 +262,9 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-PharmaceuticalProduct" />
       </type>
+      <binding>
+        <strength value="example" />
+      </binding>
       <mapping>
         <identity value="zib-medicationuse2-v1.1.1-2020EN" />
         <map value="NL-CM:9.11.21339" />
@@ -270,7 +272,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationUse2" />
-        <map value="MedicationUse.ProductUsed" />
+        <map value="MedicationUse2.ProductUsed" />
       </mapping>
     </element>
     <element id="MedicationStatement.subject">
@@ -308,7 +310,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationUse2" />
-        <map value="MedicationUse.PeriodOfUse" />
+        <map value="MedicationUse2.PeriodOfUse" />
       </mapping>
     </element>
     <element id="MedicationStatement.dateAsserted">
@@ -323,7 +325,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationUse2" />
-        <map value="MedicationUse.MedicationUseDateTime" />
+        <map value="MedicationUse2.MedicationUseDateTime" />
       </mapping>
     </element>
     <element id="MedicationStatement.reasonCode">
@@ -354,7 +356,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationUse2" />
-        <map value="MedicationUse.ReasonForUse" />
+        <map value="MedicationUse2.ReasonForUse" />
       </mapping>
     </element>
     <element id="MedicationStatement.note">
@@ -373,7 +375,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationUse2" />
-        <map value="MedicationUse.Comment" />
+        <map value="MedicationUse2.Comment" />
       </mapping>
     </element>
     <element id="MedicationStatement.dosage">
@@ -392,7 +394,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-MedicationUse2" />
-        <map value="MedicationUse.InstructionsForUse" />
+        <map value="MedicationUse2.InstructionsForUse" />
       </mapping>
     </element>
   </differential>

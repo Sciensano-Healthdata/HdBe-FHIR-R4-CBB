@@ -1,6 +1,6 @@
 ## Example instances
 
-| TreatmentDirective                   |                   |
+| TreatmentDirective2                   |                   |
 |---------------------------------------|-------------------|
 | TreatmentDecision		            | 385643006 - To be done (code by SNOMED CT) 
 | Treatment		                        | 305351004 - Admission to intensive care unit (code by SNOMED CT)           
@@ -15,7 +15,7 @@
 | AgreementParty.HealthProfessional   | Reference to HealthProfessional (J.H.R. Peters, Doctor)
 | Comment		                        |
 
-| TreatmentDirective                   |                   |
+| TreatmentDirective2                   |                   |
 |---------------------------------------|-------------------|
 | TreatmentDecision		            | 74964007 - Other (code by SNOMED CT)
 | Treatment		                        | 89666000 - Cardiopulmonary resuscitation (code by SNOMED CT)           
