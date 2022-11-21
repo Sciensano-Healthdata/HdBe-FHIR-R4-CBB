@@ -75,7 +75,7 @@ Servers SHALL support both XML and JSON, while clients MAY use either format for
 FHIR recognizes two fields that are used as identifier for instances: `.id` and `.identifier`. Although these are both identifiers, they are unrelated and serve a completely different purpose:
 
 - `.id` is the logical identifier, or technical identifier, akin to the id-field in a database. It is used as a unique handle for every instance on a particular server, and is needed to construct the URL to the instance. As such, it is used for referring between resources. The .id has no further meaning outside of the server.
-- `.identifier` is a business identifier, which usually has a meaning outside of the server. Examples are a registration number of a healthcare provider, a social security number for citizens, ISBNs for books, etc. Any instance may have multiple kinds of identifiers.
+- `.identifier` is a business identifier, which usually has a meaning outside of the server. Examples are a registration number of a healthcare professional, a social security number for citizens, ISBNs for books, etc. Any instance may have multiple kinds of identifiers.
 
 ### When is .identifier expected? <a name="when-is-identifier-expected"></a>
 Systems that use an (internal) stable identifier to track information are encouraged to assign it to the `.identifier` element of FHIR instances when sending the resource, using a custom identifier `.system` (e.g. an URL or OID that is under control of the sending organization). The presence of this element helps receiving systems with re-identification and deduplication of resources.
