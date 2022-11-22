@@ -7,7 +7,7 @@
 	Name: title.substring((4 + title.indexOf('ext- '))),
 	Context: context.expression, 
 	Description: description, 
-	Canonical_URL: url,
+	Canonical: url,
 	Status: status
 	order by Name
 ```
