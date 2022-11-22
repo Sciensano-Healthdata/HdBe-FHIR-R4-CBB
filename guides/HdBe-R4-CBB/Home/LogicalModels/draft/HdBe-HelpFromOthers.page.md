@@ -7,8 +7,7 @@ select
 CBB: id,
 Concept: description,
 Version: version,
-Status: status,
-URL: url
+Status: status
 ```
 
 <div>
