@@ -22,16 +22,6 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="zib-contactperson-v3.4-2020EN" />
-    <uri value="https://zibs.nl/wiki/ContactPerson-v3.4(2020EN)" />
-    <name value="zib ContactPerson-v3.4(2020EN)" />
-  </mapping>
-  <mapping>
-    <identity value="zib-contactinformation-v1.2-2020EN" />
-    <uri value="https://zibs.nl/wiki/ContactInformation-v1.2(2020EN)" />
-    <name value="zib ContactInformation-v1.2(2020EN)" />
-  </mapping>
-  <mapping>
     <identity value="HdBe-ContactPerson" />
     <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson" />
     <name value="HdBe logical model ContactPerson" />
@@ -40,6 +30,26 @@
     <identity value="HdBe-ContactInformation" />
     <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation" />
     <name value="HdBe logical model ContactInformation" />
+  </mapping>
+  <mapping>
+    <identity value="HdBe-NameInformation" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NameInformation" />
+    <name value="HdBe logical model NameInformation" />
+  </mapping>
+  <mapping>
+    <identity value="HdBe-AddressInformation" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AddressInformation" />
+    <name value="HdBe logical model AddressInformation" />
+  </mapping>
+  <mapping>
+    <identity value="zib-contactperson-v3.4-2020EN" />
+    <uri value="https://zibs.nl/wiki/ContactPerson-v3.4(2020EN)" />
+    <name value="zib ContactPerson-v3.4(2020EN)" />
+  </mapping>
+  <mapping>
+    <identity value="zib-contactinformation-v1.2-2020EN" />
+    <uri value="https://zibs.nl/wiki/ContactInformation-v1.2(2020EN)" />
+    <name value="zib ContactInformation-v1.2(2020EN)" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
@@ -132,7 +142,7 @@
         <rules value="open" />
       </slicing>
       <short value="NameInformation" />
-      <definition value="Full name of the contact." />
+      <definition value="Full name of the contact person." />
       <alias value="Naamgegevens" />
       <mapping>
         <identity value="zib-contactperson-v3.4-2020EN" />
@@ -140,8 +150,12 @@
         <comment value="NameInformation" />
       </mapping>
       <mapping>
-        <identity value="HdBe-ContactInformation" />
+        <identity value="HdBe-NameInformation" />
         <map value="NameInformation" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-ContactPerson" />
+        <map value="ContactPerson.NameInformation" />
       </mapping>
     </element>
     <element id="RelatedPerson.name:nameInformation">
@@ -181,6 +195,10 @@
         <comment value="ContactInformation" />
       </mapping>
       <mapping>
+        <identity value="HdBe-ContactInformation" />
+        <map value="ContactInformation" />
+      </mapping>
+      <mapping>
         <identity value="HdBe-ContactPerson" />
         <map value="ContactPerson.ContactInformation" />
       </mapping>
@@ -198,8 +216,12 @@
         <comment value="AddressInformation" />
       </mapping>
       <mapping>
-        <identity value="HdBe-ContactInformation" />
+        <identity value="HdBe-AddressInformation" />
         <map value="AddressInformation" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-ContactPerson" />
+        <map value="ContactPerson.AddressInformation" />
       </mapping>
     </element>
   </differential>
