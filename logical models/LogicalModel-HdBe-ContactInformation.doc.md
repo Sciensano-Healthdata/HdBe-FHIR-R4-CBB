@@ -12,4 +12,4 @@ This CBB differs significantly from the zib because the zib model is deemed over
 | `Value`| element | Replaced elements `TelephoneNumber` and `EmailAddress` with this element to make the CBB more generic. |
 | `Use` | element | Replaced element `NumberType` and `EmailAddressType` with this element to make the CBB more generic. |
 | `Use`| terminology | As in the original `NumberType` and `EmailAddressType`, two different ValueSet are used, we replaced both ValueSets with the FHIR ValueSet contact-point-use. |
-| `COmment` | textual | Removed spelling mistake (_Professionnels_ to _Professionals_) ([zib ticket 1807](https://bits.nictiz.nl/browse/ZIB-1807)).| 
+| `Comment` | textual | Removed spelling mistake (_Professionnels_ to _Professionals_) ([zib ticket 1807](https://bits.nictiz.nl/browse/ZIB-1807)).| 

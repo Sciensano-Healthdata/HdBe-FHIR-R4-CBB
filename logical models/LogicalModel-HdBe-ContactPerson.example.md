@@ -1,6 +1,6 @@
 ## Example instances
 
-| ContactPerson     |                   |
+| ContactPerson   |                   |
 |-----------------|-------------------|
 | NameInformation | reference to NameInformation  (Berend Ulijn) |
 | AddressInformation | reference to AddressInformation (Rue de Boneffe 422) |

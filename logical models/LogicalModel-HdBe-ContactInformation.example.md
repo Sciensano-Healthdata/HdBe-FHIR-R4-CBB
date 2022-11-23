@@ -8,9 +8,6 @@
 | Comment | Only during work hours    |
 
 
-
-
-
 | ContactInformation     |                   |
 |------------------------|-------------------|
 | Type    | email - Email (code by ContactPointSystem) |
