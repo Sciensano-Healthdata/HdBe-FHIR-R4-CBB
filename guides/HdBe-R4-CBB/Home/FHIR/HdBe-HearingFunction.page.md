@@ -24,7 +24,7 @@ URL: url
   }
 
   "HdBe-HearingFunction.HearingAid"  --> "HdBe-HearingFunction": 0..* reasonReference: The medical aid \nused to help the patient hear. 
-  note bottom on link: In CBB HearingFunction \nreferences CBB MedicalDevice \nbut in FHIR this reference \nis reversed.
+  note bottom on link: CBB HearingFunction \nreferences CBB MedicalDevice \nbut in FHIR this reference \nis reversed.
   "HdBe-HearingFunction.HearingAid" --> "HdBe-HearingFunction.HearingAid.Product": 1..1 device
 </plantuml>
 
