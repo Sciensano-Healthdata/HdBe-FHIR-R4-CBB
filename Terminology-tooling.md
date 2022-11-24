@@ -9,7 +9,7 @@ Three tools are developed to automate processes in this project regarding termin
 ## Get designations <a name="get_designations"></a>
 
 ### Description: 
-Each code in a [ValueSet](http://hl7.org/fhir/R4/valueset.html) should have a display. Furthermore, a code can have one or multiple designations equivalent to the code. A designation is an additional representation of the concept can hold a translation or a ‘similar term’. This tool is useful to gather display and designation values automatically and correctly. SNOMED-CT concepts should be available in a ValueSet as input, and the display is extracted for each code. If available, the French and Dutch translation is also extracted and included in the ValueSet designation. 
+Each code in a [ValueSet](http://hl7.org/fhir/R4/valueset.html) should have a display. Furthermore, a code can have one or more designations. A designation is an additional representation of the concept can hold a translation or a ‘similar term’. This tool gathers display and designation values automatically from a terminology service. The tool currently support codes in system `http://snomed.info/sct. Available French and Dutch translation are included as designations.
 
 ### Requirements: 
 -	A running instance of [SnowStorm](https://github.com/IHTSDO/snowstorm) with a local version of SNOMED international and the Belgium Extension included.
@@ -36,7 +36,7 @@ Start the get_designations.py. The tool will gather displays and designations of
 ## Get display values <a name="get_display_values"></a>
 
 ### Description:
-For each created profile, one or more examples are created as well. These examples also contain Codings, which could automatically be enriched with a display when the code and the system are known. This makes adding coding to examples easier and less error-prone. Both SNOMED and FHIR codes can be enriched. Adding displays of local CodeSystems and LOINC codes has not been implemented so far.
+For each created profile, one or more examples are created as well. These examples also contain Codings, which could automatically be enriched with a display when the code and the system are known. This makes adding coding to examples easier and less error-prone. Currently, Currently the tool support codes in system `http://snomed.info/sct` and systems listed here `http://tx.fhir.org/r4`. 
 
 ### Requirements: 
 -	A local edition of SNOMED international and the Belgium extension.
@@ -55,11 +55,14 @@ Start get_display_values.py. In each example, the tool will look for coding elem
 -	Examples with SNOMED and FHIR displays for Codings.
 -	Logfile of the codes that do have a SNOMED system, but could not be found there.
 
+### Warnings: 
+-   Adding displays of local CodeSystems and LOINC codes has not been implemented so far.
+
 ## Get valueset overview <a name="get_valueset_overview"></a>
 
 ### Description:
 
-A lot of ValueSets are used in this project. To create a complete overview of all used ValueSets, the used terminology, and designations, this tool is constructed.
+This tool creates a CSV overview of all ValueSets of a project, including the ValueSet concepts and designations.
 
 ### Requirements
 -	A directory with all ValueSets and CodeSystems occurring in the project.
@@ -74,4 +77,4 @@ Start get_valueset_overview.py. The tool will process each ValueSet in the termi
 -	An overview of the ValueSets in the project. Includes also the index value, the display, Dutch designation, and French designation (`codelist_overview.csv`).
 
 ### Warnings: 
-The tool can gather the ValueSets that are locally defined. Some CBBs/HdBe profiles bind to FHIR ValueSets as well, which are not represented here.
+-   The tool can gather the ValueSets that are locally defined. Some CBBs/HdBe profiles contain bindings to FHIR ValueSets, which are not represented here.
