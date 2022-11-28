@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An extension to caputure the healthcare provider involved in the indication for use of the medical device implant." />
+  <description value="An extension to caputure the healthcare professional involved in the indication for use of the medical device implant." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -49,7 +49,7 @@
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
       <short value="HealthProfessional" />
-      <definition value="The healthcare provider involved in the indication for use of the medical device implant." />
+      <definition value="The healthcare professional involved in the indication for use of the medical device implant." />
       <comment value="Each occurence of the CBB HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [HdBe-HealthProfessional-PractitionerRole](https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [HdBe-HealthProfessional-Practitioner](https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner)). The reference to the Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Only in rare circumstances, there is just a Practitioner instance, in which case it is that instance which will be referenced here." />
       <alias value="Zorgverlener" />
       <type>
