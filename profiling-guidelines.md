@@ -161,7 +161,7 @@ Example:
 |naming| Changes to zibs concept names. |`.short`, `.path`, `.alias`
 |terminology| Adjusted binding strength of a ValueSet; replaced, removed or added a ValueSet binding; replaced, removed, or added concepts of a ValueSet. | `.binding.strength`, `.binding.valueSet` 
 |slicing | Added, removed, or changed a slice. | `.slicing`, `.element.slicename` 
-|cardinality| Cardinality changes, e.g. relaxing or restricing a concept. |`.min`, `.max`
+|cardinality| Cardinality changes, e.g. relaxing or restricing a concept. |`.min`, `.max`, `.pattern`, `.fixed`
 |type| Usage of a different datatype, e.g. an Identifier instead of a Coded concept. | `.type`
 |reference| Added, removed or changed a reference, e.g. a reference to Location instead of Organization. | `.type.targetProfile`
 |constraint|  Added, removed or changed to constraints that span multiple concepts. |`.constraint`
