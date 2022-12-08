@@ -68,6 +68,13 @@
         <profile value="https://fhir.healthdata.be/StructureDefinition/ext-AdvanceDirective.Disorder" />
       </type>
     </element>
+    <element id="Consent.extension:disorder.value[x]">
+      <path value="Consent.extension.value[x]" />
+      <mapping>
+        <identity value="HdBe-AdvanceDirective" />
+        <map value="AdvanceDirective.Disorder" />
+      </mapping>
+    </element>
     <element id="Consent.extension:comment">
       <path value="Consent.extension" />
       <sliceName value="comment" />
@@ -165,7 +172,7 @@
     </element>
     <element id="Consent.policy.uri">
       <path value="Consent.policy.uri" />
-      <comment value="Either `.policy` or `.policyRule` should exist following core constraint ppc-1. If no explicit value is recorded, a fallback is to populate `.policy.uri` with &lt;https://www.belgielex.be/&gt; if the advance directive is recorded following Belgium law and regulations." />
+      <comment value="Either `.policy` or `.policyRule` should exist following core constraint ppc-1. If no explicit value is recorded, a fallback is to populate `.policy.uri` with &lt;https://www.belgielex.be/&gt; if the advance directive is recorded following Belgian law and regulations." />
     </element>
     <element id="Consent.provision.actor">
       <path value="Consent.provision.actor" />
@@ -224,6 +231,9 @@
       <alias value="WilsverklaringType" />
       <max value="1" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ConsentContentCode" />
+        </extension>
         <strength value="extensible" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/TypeOfLivingWill" />
       </binding>
