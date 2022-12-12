@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult.Specimen" />
   <meta>
-    <lastUpdated value="2022-10-19T14:16:15.9533905+00:00" />
+    <lastUpdated value="2022-12-12T14:09:14.3783026+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen" />
   <name value="HdBeLaboratoryTestResultSpecimen" />
@@ -196,6 +196,11 @@
       <short value="CollectionPeriod" />
       <definition value="If the material has not been collected at a single point in time but over a certain period, this period can be captured in this concept. An example is 24 hour urine." />
       <alias value="Verzamelperiode" />
+      <patternDuration>
+        <unit value="min" />
+        <system value="http://unitsofmeasure.org" />
+        <code value="min" />
+      </patternDuration>
       <mapping>
         <identity value="zib-laboratorytestresult-v4.6-2020EN" />
         <map value="NL-CM:13.1.24" />
@@ -211,6 +216,11 @@
       <short value="CollectedVolume" />
       <definition value="Total volume of the collected material. If it is necessary to determine the absolute amount of a particular substance in the collected material, the volume thereof must be given." />
       <alias value="Verzamelvolume" />
+      <patternQuantity>
+        <unit value="mL" />
+        <system value="http://unitsofmeasure.org" />
+        <code value="mL" />
+      </patternQuantity>
       <mapping>
         <identity value="zib-laboratorytestresult-v4.6-2020EN" />
         <map value="NL-CM:13.1.23" />

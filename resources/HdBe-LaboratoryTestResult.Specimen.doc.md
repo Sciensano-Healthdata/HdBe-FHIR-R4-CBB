@@ -7,3 +7,5 @@
 |`type`| terminology | Combined ValueSet for SpecimenMaterial and Microorganism in new ValueSet SpecimenMaterial-and-Microorganism. Also loosened the binding from required to extensible. |
 |`receivedTime`| textual | Removed sentence 'This is the issue...' ([zib ticket #1551](https://bits.nictiz.nl/browse/ZIB-1551))|
 |`container.type`| terminology | Relaxed binding from required to preferred. ([zib ticket #1552](https://bits.nictiz.nl/browse/ZIB-1552))|
+|`collection.quantity` | cardinality| Added the expected unit (mL) in a pattern. ([zib ticket #1915](https://bits.nictiz.nl/browse/ZIB-1915))|
+|`collection.duration` | cardinality| Added the expected unit (min) in a pattern. ([zib ticket #1915](https://bits.nictiz.nl/browse/ZIB-1915))|

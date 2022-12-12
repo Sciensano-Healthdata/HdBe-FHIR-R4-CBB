@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult" />
   <meta>
-    <lastUpdated value="2022-11-14T09:39:13.8218704+00:00" />
+    <lastUpdated value="2022-12-12T13:56:41.0284694+00:00" />
   </meta>
   <language value="en-US" />
   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
@@ -693,6 +693,11 @@
       <type>
         <code value="Quantity" />
       </type>
+      <patternQuantity>
+        <unit value="mL" />
+        <system value="http://unitsofmeasure.org" />
+        <code value="mL" />
+      </patternQuantity>
     </element>
     <element id="LaboratoryTestResult.Specimen.CollectionPeriod">
       <path value="LaboratoryTestResult.Specimen.CollectionPeriod" />
@@ -716,10 +721,11 @@
           </extension>
         </extension>
       </definition>
+      <comment value="TimeInterval.Duration is expressed in minutes (min)." />
       <min value="0" />
       <max value="1" />
       <type>
-        <code value="Range" />
+        <code value="HdBe-TimeInterval" />
         <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-TimeInterval" />
       </type>
     </element>
