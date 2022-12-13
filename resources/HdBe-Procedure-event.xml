@@ -121,6 +121,9 @@
       <definition value="The name of the procedure." />
       <alias value="VerrichtingType" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ProcedureCode" />
+        </extension>
         <strength value="extensible" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/ProcedureType" />
       </binding>
@@ -185,7 +188,7 @@
       <path value="Procedure.performed[x]" />
       <sliceName value="performedDateTime" />
       <short value="ProcedureStartDate" />
-      <definition value="The (desired) start date (and if possible start time) of the procedure. A ‘vague’ date, such as only the year, is permitted. `performedDateTime` is used for instantaneous or very short lasting procedures." />
+      <definition value="The start date (and if possible start time) of the procedure. A ‘vague’ date, such as only the year, is permitted. `performedDateTime` is used for instantaneous or very short lasting procedures." />
       <alias value="VerrichtingStartDatum" />
       <type>
         <code value="dateTime" />
@@ -229,7 +232,7 @@
     <element id="Procedure.location">
       <path value="Procedure.location" />
       <short value="Location" />
-      <definition value="The healthcare organization where the procedure was, is or or will be carried out." />
+      <definition value="The healthcare organization where the procedure was, is or will be carried out." />
       <alias value="Locatie" />
       <type>
         <code value="Reference" />
@@ -281,6 +284,9 @@
         <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AnatomicalLocation" />
       </type>
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="BodySite" />
+        </extension>
         <strength value="required" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/Location" />
       </binding>

@@ -6,6 +6,7 @@
 | `ProcedureType` | terminology | Replaced (Dutch) ValueSets with one ValueSet that includes all SNOMED child concepts of 71388002 Procedure. | 
 | `ProcedureMethod` | terminology | Widened terminology from descendent of 129264002(Action) to all of SNOMED. Changed the binding strenght from required to extensible. |  
 | `Location` | textual | Replaced 'healthcare center' with 'healthcare provider' in the definition. |
+| `Location` | textual | Removed a double 'or' in the definition. |
 | `Performer` | textual | Replaced 'healthcare provider' with 'healthcare professional' in the definition. |
 | `Requester` | textual | Replaced 'healthcare provider' with 'healthcare professional' in the definition. |
 | `Requester` | cardinality | Restricted requester from 0..* to 0..1. This aligns with FHIR and a future version of the zib. [ZIB-1488](https://bits.nictiz.nl/browse/ZIB-1488) and [Nictiz-ticket #69](https://github.com/Nictiz/Nictiz-R4-zib2020/issues/69). |
