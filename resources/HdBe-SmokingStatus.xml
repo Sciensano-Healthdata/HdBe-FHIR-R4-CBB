@@ -154,7 +154,7 @@
       </slicing>
     </element>
     <element id="Observation.value[x]:valueCodeableConcept">
-      <path value="Observation.valueCodeableConcept" />
+      <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
       <short value="SmokingStatus" />
       <definition value="The patient’s smoking status or usage of (smokeless) tobacco." />
@@ -241,6 +241,10 @@
         <map value="SmokingStatus.TypeOfSmokingOrTobacco" />
       </mapping>
     </element>
+    <element id="Observation.component:typeOfSmokingOrTobacco.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:amount">
       <path value="Observation.component" />
       <sliceName value="amount" />
@@ -276,6 +280,10 @@
         <map value="SmokingStatus.ObservationOfUse.Amount" />
       </mapping>
     </element>
+    <element id="Observation.component:amount.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+    </element>
     <element id="Observation.component:packYears">
       <path value="Observation.component" />
       <sliceName value="packYears" />
@@ -307,6 +315,10 @@
         <identity value="HdBe-SmokingStatus" />
         <map value="SmokingStatus.ObservationOfUse.PackYears" />
       </mapping>
+    </element>
+    <element id="Observation.component:packYears.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
     </element>
   </differential>
 </StructureDefinition>
