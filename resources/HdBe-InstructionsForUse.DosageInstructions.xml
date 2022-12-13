@@ -71,7 +71,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-InstructionsForUse" />
-        <map value="InstructionsForUse.InstructionsForUse.SequenceNumber" />
+        <map value="InstructionsForUse.DosingInstructions.SequenceNumber" />
       </mapping>
     </element>
     <element id="Dosage.additionalInstruction">
@@ -393,6 +393,9 @@
       <comment value="If no days are specified, the action is assumed to happen every day as otherwise specified." />
       <alias value="Weekdag" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="DayOfWeek" />
+        </extension>
         <strength value="required" />
         <description value="Use ConceptMap 'WeekDay_to_DaysOfWeek' to translate CBB terminology to profile terminology in ValueSet 'DaysOfWeek.'" />
         <valueSet value="http://hl7.org/fhir/ValueSet/days-of-week|4.0.1">
@@ -433,6 +436,9 @@
       <definition value="Time of day: morning, afternoon, evening, night." />
       <alias value="Dagdeel" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="EventTiming" />
+        </extension>
         <strength value="required" />
         <description value="Use ConceptMap 'TimeOfDay_to_EventTiming' to translate CBB terminology to profile terminology in ValueSet 'EventTiming.'" />
         <valueSet value="http://hl7.org/fhir/ValueSet/event-timing">
@@ -471,6 +477,9 @@
         <code value="CodeableConcept" />
       </type>
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="MedicationAsNeededReason" />
+        </extension>
         <strength value="required" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/AsNeededCriterium" />
       </binding>
@@ -481,7 +490,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-InstructionsForUse" />
-        <map value="InstructionsForUse.DosingInstructions.Dosage.AsNeeded" />
+        <map value="InstructionsForUse.DosingInstructions.Dosage.AsNeeded.Condition" />
       </mapping>
     </element>
     <element id="Dosage.route">
@@ -491,6 +500,9 @@
       <comment value="Please note that in contrast to the CBB, this RouteOfAdministration concept is grouped under the DosingInstructions concept. This CBB concept should thus be duplicated when there are multiple DosingInstructions." />
       <alias value="Toedieningsweg" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="RouteOfAdministration" />
+        </extension>
         <strength value="required" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/RouteOfMedicationAdministration" />
       </binding>
@@ -617,7 +629,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-InstructionsForUse" />
-        <map value="InstructionsForUse.DosingInstructions.Dosage.AdministeringSchedule" />
+        <map value="InstructionsForUse.DosingInstructions.Dosage.AdministeringSpeed" />
       </mapping>
     </element>
     <element id="Dosage.doseAndRate.rate[x]:rateRange">
@@ -688,7 +700,7 @@
       </mapping>
       <mapping>
         <identity value="HdBe-InstructionsForUse" />
-        <map value="InstructionsForUse.DosingInstructionsDosage.AsNeeded.MaximumDose" />
+        <map value="InstructionsForUse.DosingInstructions.Dosage.AsNeeded.MaximumDose" />
       </mapping>
     </element>
   </differential>
