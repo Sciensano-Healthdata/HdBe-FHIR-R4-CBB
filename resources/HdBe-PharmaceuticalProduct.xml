@@ -68,12 +68,22 @@
         <profile value="https://fhir.healthdata.be/StructureDefinition/ext-PharmaceuticalProduct.Description" />
       </type>
     </element>
+    <element id="Medication.extension:description.value[x]">
+      <path value="Medication.extension.value[x]" />
+      <mapping>
+        <identity value="HdBe-PharmaceuticalProduct" />
+        <map value="PharmaceuticalProduct.ProductSpecifications.Description" />
+      </mapping>
+    </element>
     <element id="Medication.code">
       <path value="Medication.code" />
       <short value="MedicationCode" />
       <definition value="Code of the Medication." />
       <alias value="ProductCode" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="MedicationFormalRepresentation" />
+        </extension>
         <strength value="extensible" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/ProductCode" />
       </binding>
@@ -90,7 +100,7 @@
     <element id="Medication.code.text">
       <path value="Medication.code.text" />
       <short value="Medication" />
-      <definition value="For medication which has no code, enter the complete name of the pharmaceutical product here." />
+      <definition value="For medication that has no code, enter the complete name of the pharmaceutical product here." />
       <alias value="ProductNaam" />
       <mapping>
         <identity value="zib-pharmaceuticalproduct-v2.1.2-2020EN" />
@@ -108,6 +118,9 @@
       <definition value="The pharmaceutical form indicates the form of the medication. Examples include: tablet, suppository, infusion liquid, ointment. For products without a code (free text, preparation by the pharmacy), the means of administration can be entered." />
       <alias value="FarmaceutischeVorm" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="MedicationForm" />
+        </extension>
         <strength value="extensible" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/PharmaceuticalForm" />
       </binding>
@@ -147,7 +160,7 @@
       </slicing>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept">
-      <path value="Medication.ingredient.itemCodeableConcept" />
+      <path value="Medication.ingredient.item[x]" />
       <sliceName value="itemCodeableConcept" />
       <short value="SubstanceCode" />
       <definition value="Active substance or excipient." />
