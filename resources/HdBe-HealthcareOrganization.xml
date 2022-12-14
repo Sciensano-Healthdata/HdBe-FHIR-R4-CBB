@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-HealthcareOrganization" />
   <meta>
-    <lastUpdated value="2022-12-14T08:59:10.8474779+00:00" />
+    <lastUpdated value="2022-12-14T09:11:11.6486171+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthcareOrganization" />
   <name value="HdBeHealthcareOrganization" />
@@ -92,8 +92,7 @@
       <path value="Location.identifier" />
       <sliceName value="locationIdentificationNumber" />
       <short value="LocationIdentificationNumber" />
-      <definition value="Identification number of the location, if a numerical location identification is used next to or instead of a location name." />
-      <comment value="The identifier value is equal to the HCOrganization.Site.SiteID (or site number) value as found in the [Common Base Registry for HealthCare Actor (CoBRHA)](https://www.ehealth.fgov.be/ehealthplatform/nl/service-cobrha-common-base-registry-for-healthcare-actor)." />
+      <definition value="Identification number of the location, if a numerical location identification is used next to or instead of a location name.&#xD;&#xA;&#xD;&#xA;The identifier value is equal to the HCOrganization.Site.SiteID (or site number) value as found in the [Common Base Registry for HealthCare Actor (CoBRHA)](https://www.ehealth.fgov.be/ehealthplatform/nl/service-cobrha-common-base-registry-for-healthcare-actor)." />
       <max value="1" />
       <patternIdentifier>
         <system value="https://fhir.healthdata.be/NamingSystem/LocationIdentificationNumber" />
@@ -132,12 +131,13 @@
       </mapping>
       <mapping>
         <identity value="HdBe-HealthcareOrganization" />
-        <map value="HealthcareOrganization.LocationName" />
+        <map value="HealthcareOrganization.OrganizationLocation.LocationName" />
       </mapping>
     </element>
     <element id="Location.telecom">
       <path value="Location.telecom" />
       <short value="ContactInformation" />
+      <definition value="The information needed to contact the healthcare organization via telephone and/or e-mail." />
       <alias value="Contactgegevens" />
       <type>
         <code value="ContactPoint" />
