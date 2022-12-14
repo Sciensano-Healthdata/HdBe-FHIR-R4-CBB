@@ -25,22 +25,13 @@ issues should occur: false
 HdBe-AllergyIntolerance-01:
   ignored issues:
     AllergyIntolerance.code:
-      - message: None of the codings provided are in the value set 'CausativeAgent' (https://fhir.healthdata.be/ValueSet/CausativeAgent), and a coding from this value set is required) (codes = http://snomed.info/sct#419442005)
+      - message: None of the codings provided are in the value set 'CausativeAgent' (https://fhir.healthdata.be/ValueSet/CausativeAgent|2020-09-01T00:00:00), and a coding from this value set is required) (codes = http://snomed.info/sct#419442005)
         reason: The CausativeAgent ValueSet contains a filter on a SCT ^751000172100| Belgian subset for POC FHIR, causative agent, no drug (foundation metadata concept). This is not a snomed hierarchy but a refset. The ValueSet filterering should be okay according to https://www.hl7.org/fhir/snomedct.html#4.3.1.0.8.2. Therefore we assume that the JAVA validator/terminology server does not support this, or has no access to the BE refset.
-
-HdBe-*-DeviceUseStatement-*:
-  ignored issues:
-    DeviceUseStatement.derivedFrom[*]:
-      - message: Slicing cannot be evaluated
-        reason: To check slicing in instances, the referenced resources need to be inspected, but this is not supported by the HL7 Validator.
-    DeviceUseStatement.reasonReference[*]:
-      - message: Slicing cannot be evaluated
-        reason: To check slicing in instances, the referenced resources need to be inspected, but this is not supported by the HL7 Validator.
 
 HdBe-HearingFunction.HearingAid-*:
   ignored issues:
     DeviceUseStatement:
-      - message: 'DeviceUseStatement.reasonReference:zibMedicalDeviceReference: max allowed = 0, but found 1'
+      - message: 'DeviceUseStatement.reasonReference:HdBe-MedicalDeviceReference: max allowed = 0, but found 1'
         reason: The Validator cannot actually inspect the referenced resources, and falsely assumes the reference is a reference to the offending profile.
 
 HdBe-LaboratoryTestResult.Specimen-01:
@@ -64,8 +55,8 @@ HdBe-MedicalDevice-*:
 HdBe-SmokingStatus-01:
   ignored issues:
     Observation.component[0].code.coding[0]:
-      - message: Unable to find code 53661000146106 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20220731); The code "53661000146106" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#53661000146106) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#53661000146106'
-        reason: 53661000146106 is a code defined in a recent Dutch refset which is not available to http://tx.fhir.org/r4. This code will likely be changed by issue GitHub 232.
+      - message: 'Local Error: Resolved system http://snomed.info/sct, but the definition is not complete. Server Error: Unable to find code 53661000146106 in http://snomed.info/sct'
+        reason: Relates to issue ICF-306. This is a SNOMED code in the DUTCH edition. It has been recently added to SNOMED international edition. This version is not yet loaded into the FHIR validator.
 
 HdBe-TreatmentDirective2-01-Consent-01:
   ignored issues:
@@ -78,5 +69,5 @@ HdBe-TreatmentDirective2-01-Consent-01:
 HdBe-VisualFunction.VisualAid-*:
   ignored issues:
     DeviceUseStatement:
-      - message: 'DeviceUseStatement.reasonReference:zibMedicalDeviceReference: max allowed = 0, but found 1'
+      - message: 'DeviceUseStatement.reasonReference:HdBe-MedicalDeviceReference: max allowed = 0, but found 1'
         reason: The Validator cannot actually inspect the referenced resources, and falsely assumes the reference is a reference to the offending profile.
