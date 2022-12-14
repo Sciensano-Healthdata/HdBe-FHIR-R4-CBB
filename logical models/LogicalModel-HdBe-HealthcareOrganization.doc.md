@@ -2,7 +2,7 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`HealthcareOrganization` | textual | Replaced HealthcareProvider with HealthcareOrganization. |
+|`HealthcareOrganization` | textual | Renamed HealthcareProvider with HealthcareOrganization because HealthcareOrganization is a term already heavily in use within the BE context.|
 |`HealthcareOrganizationIdentificationNumber` | textual | Replaced the Dutch context (URA, AGB) with NIHDI and CBE. |
 |`DepartmentSpecialty` | textual | Removed the Dutch context. |
 |`DepartmentSpecialty` | terminology | Replaced values in ValueSet DepartmentSpecialty with a defined list of SNOMED codes and included SNOMED codes for Unknown and Other. |
