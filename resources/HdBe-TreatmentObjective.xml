@@ -135,12 +135,22 @@
         <profile value="https://fhir.healthdata.be/StructureDefinition/ext-TreatmentObjective.MedicalDevice" />
       </type>
     </element>
+    <element id="Goal.target.extension:medicalDevice.value[x]">
+      <path value="Goal.target.extension.value[x]" />
+      <mapping>
+        <identity value="HdBe-FunctionalOrMentalStatus" />
+        <map value="MedicalDevice" />
+      </mapping>
+    </element>
     <element id="Goal.target.measure">
       <path value="Goal.target.measure" />
       <short value="StatusName" />
       <definition value="Coded description of the functional or mental status or limitation. &#xD;&#xA;CodeSystem used is SNOMED CT" />
       <alias value="StatusNaam" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="GoalTargetMeasure" />
+        </extension>
         <strength value="extensible" />
         <description value="Description of the Status" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/StatusName" />
@@ -175,6 +185,9 @@
         <code value="CodeableConcept" />
       </type>
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="GoalTargetDetail" />
+        </extension>
         <strength value="extensible" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/StatusValue" />
       </binding>
