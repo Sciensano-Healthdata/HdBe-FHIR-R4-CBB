@@ -10,6 +10,6 @@
 |`OrganizationLocation.LocationIdentificationNumber` | element | Renamed LocationNumber to LocationIdentificationNumber to align with HealthcareOrganizationIdentificationNumber and DepartmentIdentificationNumber. The name is also more explicit about what it represents. | 
 |`ContactInformation` | cardinality | Loosened cardinality from 0..1 to 0..* based on the changes made to the CBB ConctactInformation. Widening the cardinality here allows for capturing all contact information necessary. |
 |`OrganizationType` | textual | Removed the Dutch context. | 
-|`OrganizationType` | terminology| Removed ValueSet OrganizationType. | 
+|`OrganizationType` | terminology| Replaced ValueSet OrganizationType codes with terminology based on a one-time export of HCO_TYPE as found in the [Common Base Registry for HealthCare Actor (CoBRHA)](https://www.ehealth.fgov.be/ehealthplatform/nl/service-cobrha-common-base-registry-for-healthcare-actor). These codes are placed in the healthdata.be namespace. [HL7 BE GitHub issue #32](https://github.com/hl7-be/core/issues/32) requests to standardize terminology on a federal level for Belgium. | 
 |`HealthcareOrganizationIdentificationNumber` | textual | Replaced ID's with IDs. |
 |`HealthcareOrganizationOrganizationLocation` | textual | Replaced 'concept.This' in 'concept. This'|
