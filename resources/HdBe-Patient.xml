@@ -1,650 +1,668 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBe-Patient"/>
-   <meta>
-      <lastUpdated value="2022-08-19T06:44:03.8945964+00:00"/>
-   </meta>
-   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient"/>
-   <name value="HdBePatient"/>
-   <title value="HdBe Patient"/>
-   <status value="draft"/>
-   <experimental value="false"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
-      <name value="Service portal – healthdata.be"/>
-      <telecom>
-         <system value="url"/>
-         <value value="https://sciensano.service-now.com/sp"/>
-         <use value="work"/>
-      </telecom>
-   </contact>
-   <description value="A person who receives medical, psychological, paramedical or nursing care. In some care settings, the term client or participant is used instead of the term patient.&#xD;&#xA;Nationality is used as an indication of the country of citizenship. &#xD;&#xA;Marital status is a person’s formal position as defined by the Belgian civil code. There is a distinction between marriage and civil union."/>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-   <fhirVersion value="4.0.1"/>
-   <mapping>
-      <identity value="HdBe-Patient"/>
-      <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Patient"/>
-      <name value="HdBe logical model Patient"/>
-   </mapping>
-   <mapping>
-      <identity value="zib-patient-v3.2-2020EN"/>
-      <uri value="https://zibs.nl/wiki/Patient-v3.2(2020EN)"/>
-      <name value="zib Patient-v3.2(2020EN)"/>
-   </mapping>
-   <mapping>
-      <identity value="HdBe-Nationality"/>
-      <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Nationality"/>
-      <name value="HdBe logical model Nationality"/>
-   </mapping>
-   <mapping>
-      <identity value="zib-nationality-v3.0-2020EN"/>
-      <uri value="https://zibs.nl/wiki/Nationality-v3.0(2020EN)"/>
-      <name value="zib Nationality-v3.0(2020EN)"/>
-   </mapping>
-   <mapping>
-      <identity value="HdBe-MaritalStatus"/>
-      <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MaritalStatus"/>
-      <name value="HdBe logical model MaritalStatus"/>
-   </mapping>
-   <mapping>
-      <identity value="zib-maritalstatus-v3.1-2020EN"/>
-      <uri value="https://zibs.nl/wiki/MaritalStatus-v3.1(2020EN)"/>
-      <name value="zib MaritalStatus-v3.1(2020EN)"/>
-   </mapping>
-   <mapping>
-      <identity value="HdBe-LanguageProficiency"/>
-      <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LanguageProficiency"/>
-      <name value="HdBe logical model LanguageProficiency"/>
-   </mapping>
-   <mapping>
-      <identity value="zib-languageproficiency-v3.2-2020EN"/>
-      <uri value="https://zibs.nl/wiki/LanguageProficiency-v3.2(2020EN)"/>
-      <name value="zib LanguageProficiency-v3.2(2020EN)"/>
-   </mapping>
-   <mapping>
-      <identity value="HdBe-ContactInformation"/>
-      <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation"/>
-      <name value="HdBe logical model ContactInformation"/>
-   </mapping>
-   <mapping>
-      <identity value="zib-contactinformation-v1.2-2020EN"/>
-      <uri value="https://zibs.nl/wiki/ContactInformation-v1.2(2020EN)"/>
-      <name value="zib ContactInformation-v1.2(2020EN)"/>
-   </mapping>
-   <mapping>
-      <identity value="HdBe-ContactPerson"/>
-      <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson"/>
-      <name value="HdBe logical model ContactPerson"/>
-   </mapping>
-   <mapping>
-      <identity value="zib-contactperson-v3.4-2020EN"/>
-      <uri value="https://zibs.nl/wiki/ContactPerson-v3.4(2020EN)"/>
-      <name value="zib ContactPerson-v3.4(2020EN)"/>
-   </mapping>
-   <kind value="resource"/>
-   <abstract value="false"/>
-   <type value="Patient"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-   <derivation value="constraint"/>
-   <differential>
-      <element id="Patient">
-         <path value="Patient"/>
-         <short value="Patient"/>
-         <alias value="Patient"/>
-         <mapping>
-            <identity value="zib-patient-v3.2-2020EN"/>
-            <map value="NL-CM:0.1.1"/>
-            <comment value="Patient"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-Patient"/>
-            <map value="Patient"/>
-         </mapping>
-      </element>
-      <element id="Patient.extension">
-         <path value="Patient.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-         <min value="0"/>
-      </element>
-      <element id="Patient.extension:nationality">
-         <path value="Patient.extension"/>
-         <sliceName value="nationality"/>
-         <comment value="Due to the nature of the nationality core extension (which allows for a period to be placed next to the nationality and thus allows for different nationalities over time), the cardinality of the extension is left at 0..* instead of the CBB cardinality of 0..1."/>
-         <min value="0"/>
-         <type>
-            <code value="Extension"/>
-            <profile value="http://hl7.org/fhir/StructureDefinition/patient-nationality"/>
-         </type>
-      </element>
-      <element id="Patient.extension:nationality.extension">
-         <path value="Patient.extension.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-         <min value="0"/>
-      </element>
-      <element id="Patient.extension:nationality.extension:code">
-         <path value="Patient.extension.extension"/>
-         <sliceName value="code"/>
-         <min value="0"/>
-      </element>
-      <element id="Patient.extension:nationality.extension:code.value[x]">
-         <path value="Patient.extension.extension.value[x]"/>
-         <short value="Nationality"/>
-         <definition value="Indicates the country of citizenship."/>
-         <alias value="Nationaliteit"/>
-         <binding>
-            <strength value="extensible"/>
-            <description value="Iso 3166 Part 1: 2 Letter Codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/CountryISO"/>
-         </binding>
-         <mapping>
-            <identity value="zib-nationality-v3.0-2020EN"/>
-            <map value="NL-CM:7.6.3"/>
-            <comment value="Nationality"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-Nationality"/>
-            <map value="Nationality"/>
-         </mapping>
-      </element>
-      <element id="Patient.identifier">
-         <path value="Patient.identifier"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="$this"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-         <short value="PatientIdentificationNumber"/>
-         <definition value="The patient’s identification number. Typically, when an social security identification number (NISS-INSZ), is available it is used. A local identifier may be provided when this is desired."/>
-         <alias value="Identificatienummer"/>
-         <mapping>
-            <identity value="HdBe-Patient"/>
-            <map value="Patient.PatientIdentificationNumber"/>
-         </mapping>
-         <mapping>
-            <identity value="zib-patient-v3.2-2020EN"/>
-            <map value="NL-CM:0.1.7"/>
-            <comment value="PatientIdentificationNumber"/>
-         </mapping>
-      </element>
-      <element id="Patient.identifier:SSIN">
-         <path value="Patient.identifier"/>
-         <sliceName value="SSIN"/>
-         <definition value="An identifier for this patient according to SSIN (NISS-INSZ.)"/>
-         <patternIdentifier>
-            <system value="https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin"/>
-         </patternIdentifier>
-      </element>
-      <element id="Patient.name">
-         <path value="Patient.name"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="use"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-         <short value="NameInformation"/>
-         <definition value="Patient's full name."/>
-         <alias value="Naamgegevens"/>
-         <mapping>
-            <identity value="zib-patient-v3.2-2020EN"/>
-            <map value="NL-CM:0.1.6"/>
-            <comment value="NameInformation"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-Patient"/>
-            <map value="Patient.NameInformation"/>
-         </mapping>
-      </element>
-      <element id="Patient.name:nameInformation">
-         <path value="Patient.name"/>
-         <sliceName value="nameInformation"/>
-         <max value="2"/>
-         <type>
-            <code value="HumanName"/>
-            <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation"/>
-         </type>
-      </element>
-      <element id="Patient.name:nameInformation-GivenName">
-         <path value="Patient.name"/>
-         <sliceName value="nameInformation-GivenName"/>
-         <type>
-            <code value="HumanName"/>
-            <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation.GivenName"/>
-         </type>
-      </element>
-      <element id="Patient.telecom">
-         <path value="Patient.telecom"/>
-         <short value="ContactInformation"/>
-         <definition value="Patient’s telephone number(s) or e-mail address(es)."/>
-         <alias value="Contactgegevens"/>
-         <type>
-            <code value="ContactPoint"/>
-            <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation"/>
-         </type>
-         <mapping>
-            <identity value="HdBe-Patient"/>
-            <map value="Patient.ContactInformation"/>
-         </mapping>
-         <mapping>
-            <identity value="zib-patient-v3.2-2020EN"/>
-            <map value="NL-CM:0.1.5"/>
-            <comment value="ContactInformation"/>
-         </mapping>
-         <mapping>
-            <identity value="zib-contactinformation-v1.2-2020EN"/>
-            <map value="NL-CM:20.6.1"/>
-            <comment value="ContactInformation"/>
-         </mapping>
-      </element>
-      <element id="Patient.gender">
-         <path value="Patient.gender"/>
-         <short value="Gender"/>
-         <definition value="Patient’s administrative gender. The gender that that the patient is considered to have for administration and record keeping purposes. Note that the gender might not match the biological sex as determined by genetics or the individual's preferred identification. The Observation resource can deal with specific sex or gender aspect of interest."/>
-         <alias value="Geslacht"/>
-         <binding>
-            <strength value="required"/>
-            <description value="Use ConceptMap 'GenderCodelijst-to-AdministrativeGender' to translate CBB terminology to profile terminology in ValueSet 'AdministrativeGender'"/>
-            <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1">
-               <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-                  <valueCanonical value="https://fhir.healthdata.be/ConceptMap/Gender-to-AdministrativeGender"/>
-               </extension>
-            </valueSet>
-         </binding>
-         <mapping>
-            <identity value="HdBe-Patient"/>
-            <map value="Patient.Gender"/>
-         </mapping>
-         <mapping>
-            <identity value="zib-patient-v3.2-2020EN"/>
-            <map value="NL-CM:0.1.9"/>
-            <comment value="Gender"/>
-         </mapping>
-      </element>
-      <element id="Patient.gender.extension">
-         <path value="Patient.gender.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-         <min value="0"/>
-      </element>
-      <element id="Patient.gender.extension:genderCodelist">
-         <path value="Patient.gender.extension"/>
-         <sliceName value="genderCodelist"/>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="Extension"/>
-            <profile value="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification"/>
-         </type>
-      </element>
-      <element id="Patient.gender.extension:genderCodelist.value[x]">
-         <path value="Patient.gender.extension.value[x]"/>
-         <short value="Gender"/>
-         <definition value="Patient’s administrative gender."/>
-         <alias value="Geslacht"/>
-         <binding>
-            <strength value="required"/>
-            <description value="GenderCodelist"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Gender"/>
-         </binding>
-         <mapping>
-            <identity value="HdBe-Patient"/>
-            <map value="Patient.Gender"/>
-         </mapping>
-         <mapping>
-            <identity value="zib-patient-v3.2-2020EN"/>
-            <map value="NL-CM:0.1.9"/>
-            <comment value="Gender"/>
-         </mapping>
-      </element>
-      <element id="Patient.birthDate">
-         <path value="Patient.birthDate"/>
-         <short value="DateOfBirth"/>
-         <definition value="Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted."/>
-         <alias value="Geboortedatum"/>
-         <mapping>
-            <identity value="HdBe-Patient"/>
-            <map value="Patient.DateOfBirth"/>
-         </mapping>
-         <mapping>
-            <identity value="zib-patient-v3.2-2020EN"/>
-            <map value="NL-CM:0.1.10"/>
-            <comment value="DateOfBirth"/>
-         </mapping>
-      </element>
-      <element id="Patient.deceased[x]">
-         <path value="Patient.deceased[x]"/>
-         <slicing>
-            <discriminator>
-               <type value="type"/>
-               <path value="$this"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="Patient.deceased[x]:deceasedBoolean">
-         <path value="Patient.deceased[x]"/>
-         <sliceName value="deceasedBoolean"/>
-         <short value="DeathIndicator"/>
-         <definition value="An indication stating whether the patient has died."/>
-         <alias value="OverlijdensIndicator"/>
-         <type>
-            <code value="boolean"/>
-         </type>
-         <mapping>
-            <identity value="HdBe-Patient"/>
-            <map value="Patient.DeathIndicator"/>
-         </mapping>
-         <mapping>
-            <identity value="zib-patient-v3.2-2020EN"/>
-            <map value="NL-CM:0.1.32"/>
-            <comment value="DeathIndicator"/>
-         </mapping>
-      </element>
-      <element id="Patient.deceased[x]:deceasedDateTime">
-         <path value="Patient.deceased[x]"/>
-         <sliceName value="deceasedDateTime"/>
-         <short value="DateOfDeath"/>
-         <definition value="The date on which the patient died. A ‘vague’ date, such as only the year, is permitted."/>
-         <comment value="The CBB recognizes both the DeathIndicator (boolean) and DateOfDeath (datetime) concepts, whereas in FHIR only one of these concepts may be present. Therefore, if deceasedDateTime is present and has a value, its value can be mapped to DateOfDeath and DeathIndicator is assumed to be true."/>
-         <alias value="DatumOverlijden"/>
-         <alias value="OverlijdensIndicator"/>
-         <type>
-            <code value="dateTime"/>
-         </type>
-         <mapping>
-            <identity value="HdBe-Patient"/>
-            <map value="Patient.DateOfDeath"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-Patient"/>
-            <map value="Patient.DeathIndicator"/>
-         </mapping>
-         <mapping>
-            <identity value="zib-patient-v3.2-2020EN"/>
-            <map value="NL-CM:0.1.33"/>
-            <comment value="DateOfDeath"/>
-         </mapping>
-         <mapping>
-            <identity value="zib-patient-v3.2-2020EN"/>
-            <map value="NL-CM:0.1.32"/>
-            <comment value="DeathIndicator"/>
-         </mapping>
-      </element>
-      <element id="Patient.address">
-         <path value="Patient.address"/>
-         <definition value="Patient's address information."/>
-         <type>
-            <code value="Address"/>
-            <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation"/>
-         </type>
-         <mapping>
-            <identity value="HdBe-Patient"/>
-            <map value="Patient.AddressInformation"/>
-         </mapping>
-         <mapping>
-            <identity value="zib-patient-v3.2-2020EN"/>
-            <map value="NL-CM:0.1.4"/>
-            <comment value="AddressInformation"/>
-         </mapping>
-      </element>
-      <element id="Patient.maritalStatus">
-         <path value="Patient.maritalStatus"/>
-         <short value="MaritalStatus"/>
-         <definition value="A person’s marital status."/>
-         <alias value="BurgerlijkeStaat"/>
-         <binding>
-            <strength value="required"/>
-            <description value="Use ConceptMap 'BeCivilstate-to-MaritalStatus' to translate CBB terminology to profile terminology in ValueSet 'MaritalStatus'"/>
-            <valueSet value="https://www.ehealth.fgov.be/standards/fhir/core/ValueSet/be-civilstate">
-               <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-                  <valueCanonical value="https://fhir.healthdata.be/ConceptMap/BeCivilstate-to-MaritalStatus"/>
-               </extension>
-            </valueSet>
-         </binding>
-         <mapping>
-            <identity value="HdBe-MaritalStatus"/>
-            <map value="MaritalStatus"/>
-         </mapping>
-         <mapping>
-            <identity value="zib-maritalstatus-v3.1-2020EN"/>
-            <map value="NL-CM:7.9.2"/>
-            <comment value="MaritalStatus"/>
-         </mapping>
-      </element>
-      <element id="Patient.multipleBirth[x]">
-         <path value="Patient.multipleBirth[x]"/>
-         <slicing>
-            <discriminator>
-               <type value="type"/>
-               <path value="$this"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="Patient.multipleBirth[x]:multipleBirthBoolean">
-         <path value="Patient.multipleBirth[x]"/>
-         <sliceName value="multipleBirthBoolean"/>
-         <short value="MultipleBirthIndicator"/>
-         <definition value="An indication stating whether the patient is of a multiple birth."/>
-         <alias value="MeerlingIndicator"/>
-         <type>
-            <code value="boolean"/>
-         </type>
-         <mapping>
-            <identity value="HdBe-Patient"/>
-            <map value="Patient.MultipleBirthIndicator"/>
-         </mapping>
-         <mapping>
-            <identity value="zib-patient-v3.2-2020EN"/>
-            <map value="NL-CM:0.1.31"/>
-            <comment value="MultipleBirthIndicator"/>
-         </mapping>
-      </element>
-      <element id="Patient.multipleBirth[x]:multipleBirthInteger">
-         <path value="Patient.multipleBirth[x]"/>
-         <sliceName value="multipleBirthInteger"/>
-         <short value="MultipleBirthOrder"/>
-         <definition value="An indication of the birth order in case the patient is of a multiple birth."/>
-         <comment value="The CBB recognizes both the MultipleBirthIndicator (boolean) and MultipleBirthOrder (integer) concepts, whereas in FHIR only one of these concepts may be present. Therefore, if multipleBirthInteger is present and has a value, its value can be mapped to MultipleBirthOrder and MultipleBirthIndicator is assumed to be true."/>
-         <type>
-            <code value="integer"/>
-         </type>
-         <mapping>
-            <identity value="HdBe-Patient"/>
-            <map value="Patient.MultipleBirthOrder"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-Patient"/>
-            <map value="Patient.MultipleBirthIndicator"/>
-         </mapping>
-      </element>
-      <element id="Patient.contact">
-         <path value="Patient.contact"/>
-         <short value="Contact"/>
-         <comment value="Whereas the CBB ContactPerson includes all (non-healthcare professional) persons that are involved in the care for a patient, FHIR distinguishes two use cases for these persons:&#xD;&#xA;&#xD;&#xA;* The RelatedPerson resource is used to capture information about any person that is related to the patient, using the profile &lt;https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson&gt;.&#xD;&#xA;* Information about persons that should be _contacted_ regarding the care for the patient is captured using the `Patient.contact` resource.&#xD;&#xA;&#xD;&#xA;If a person is both a related person and a contact person, then some data duplication is inevitable. The HdBe-ContactPerson can be referenced using the extension in `contact:contactPerson`."/>
-         <alias value="Contactpersoon"/>
-         <mapping>
-            <identity value="zib-contactperson-v3.4-2020EN"/>
-            <map value="NL-CM:3.1.1"/>
-            <comment value="Contact"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-ContactPerson"/>
-            <map value="Contact"/>
-         </mapping>
-      </element>
-      <element id="Patient.contact.extension">
-         <path value="Patient.contact.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-         <min value="0"/>
-      </element>
-      <element id="Patient.contact.extension:contactPerson">
-         <path value="Patient.contact.extension"/>
-         <sliceName value="contactPerson"/>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="Extension"/>
-            <profile value="http://hl7.org/fhir/StructureDefinition/patient-relatedPerson"/>
-         </type>
-      </element>
-      <element id="Patient.contact.extension:contactPerson.value[x]">
-         <path value="Patient.contact.extension.value[x]"/>
-         <short value="Contact"/>
-         <definition value="Reference to a [HdBe-ContactPerson](https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson) instance containing the full details for the current contact."/>
-         <alias value="Contactpersoon"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson"/>
-         </type>
-         <mapping>
-            <identity value="zib-contactperson-v3.4-2020EN"/>
-            <map value="NL-CM:3.1.1"/>
-            <comment value="Contact"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-ContactPerson"/>
-            <map value="Contact"/>
-         </mapping>
-      </element>
-      <element id="Patient.contact.relationship">
-         <path value="Patient.contact.relationship"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="$this"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="Patient.contact.relationship:role">
-         <path value="Patient.contact.relationship"/>
-         <sliceName value="role"/>
-         <short value="Role"/>
-         <definition value="Defines the role of the contact in relation to the patient."/>
-         <alias value="Rol"/>
-         <binding>
-            <strength value="required"/>
-            <description value="RolCodelijst"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Role"/>
-         </binding>
-         <mapping>
-            <identity value="zib-contactperson-v3.4-2020EN"/>
-            <map value="NL-CM:3.1.2"/>
-            <comment value="Role"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-ContactPerson"/>
-            <map value="Role"/>
-         </mapping>
-      </element>
-      <element id="Patient.contact.relationship:relationship">
-         <path value="Patient.contact.relationship"/>
-         <sliceName value="relationship"/>
-         <short value="Relationship"/>
-         <definition value="Defines the contact’s familial relationship to the patient."/>
-         <alias value="Relatie"/>
-         <binding>
-            <strength value="required"/>
-            <description value="RelatieCodelijst"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Relationship"/>
-         </binding>
-         <mapping>
-            <identity value="zib-contactperson-v3.4-2020EN"/>
-            <map value="NL-CM:3.1.3"/>
-            <comment value="Relationship"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-ContactPerson"/>
-            <map value="Relationship"/>
-         </mapping>
-      </element>
-      <element id="Patient.contact.name">
-         <path value="Patient.contact.name"/>
-         <definition value="Full name of the contact."/>
-         <comment value="This element can and should not completely capture the NameInformation concept from the CBB ContactPerson; it should just be used for the information that is needed for contacting the person in relation to care of the patient. The full name information should instead be captured using an instance of [HdBe-ContactPerson](https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson), which can then be referenced from this resource. See the comment on `Patient.contact` for more information."/>
-         <type>
-            <code value="HumanName"/>
-            <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation"/>
-         </type>
-         <mapping>
-            <identity value="zib-contactperson-v3.4-2020EN"/>
-            <map value="NL-CM:3.1.4"/>
-            <comment value="NameInformation"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-ContactPerson"/>
-            <map value="NameInformation"/>
-         </mapping>
-      </element>
-      <element id="Patient.contact.telecom">
-         <path value="Patient.contact.telecom"/>
-         <short value="ContactInformation"/>
-         <definition value="The contact’s telephone number and/or e-mail address."/>
-         <alias value="Contactgegevens"/>
-         <type>
-            <code value="ContactPoint"/>
-            <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation"/>
-         </type>
-         <mapping>
-            <identity value="zib-contactperson-v3.4-2020EN"/>
-            <map value="NL-CM:3.1.6"/>
-            <comment value="ContactInformation"/>
-         </mapping>
-         <mapping>
-            <identity value="zib-contactinformation-v1.2-2020EN"/>
-            <map value="NL-CM:20.6.1"/>
-            <comment value="ContactInformation"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-ContactPerson"/>
-            <map value="ContactInformation"/>
-         </mapping>
-      </element>
-      <element id="Patient.contact.address">
-         <path value="Patient.contact.address"/>
-         <definition value="Contact’s address information."/>
-         <comment value="This element can and should not completely capture the AddressInformation concept from CBB ContactPerson; it should just be used for the information that is needed for contacting the person in relation to care of the patient. The full address information should instead be captured using an instance of [HdBe-ContactPerson](https://fhir.healthdata.be/StructureDefintion/HdBe-ContactPerson), which can then be referenced from this resource. See the comment on `Patient.contact` for more information."/>
-         <type>
-            <code value="Address"/>
-            <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation"/>
-         </type>
-         <mapping>
-            <identity value="zib-contactperson-v3.4-2020EN"/>
-            <map value="NL-CM:3.1.5"/>
-            <comment value="AddressInformation"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-ContactPerson"/>
-            <map value="AddressInformation"/>
-         </mapping>
-      </element>
-   </differential>
+  <id value="HdBe-Patient" />
+  <meta>
+    <lastUpdated value="2022-12-13T09:47:21.7895743+00:00" />
+  </meta>
+  <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
+  <name value="HdBePatient" />
+  <title value="HdBe Patient" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A person who receives medical, psychological, paramedical or nursing care. In some care settings, the term client or participant is used instead of the term patient.&#xD;&#xA;Nationality is used as an indication of the country of citizenship. &#xD;&#xA;Marital status is a person’s formal position as defined by the Belgian civil code. There is a distinction between marriage and civil union." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="HdBe-Patient" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Patient" />
+    <name value="HdBe logical model Patient" />
+  </mapping>
+  <mapping>
+    <identity value="zib-patient-v3.2-2020EN" />
+    <uri value="https://zibs.nl/wiki/Patient-v3.2(2020EN)" />
+    <name value="zib Patient-v3.2(2020EN)" />
+  </mapping>
+  <mapping>
+    <identity value="HdBe-Nationality" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Nationality" />
+    <name value="HdBe logical model Nationality" />
+  </mapping>
+  <mapping>
+    <identity value="zib-nationality-v3.0-2020EN" />
+    <uri value="https://zibs.nl/wiki/Nationality-v3.0(2020EN)" />
+    <name value="zib Nationality-v3.0(2020EN)" />
+  </mapping>
+  <mapping>
+    <identity value="HdBe-MaritalStatus" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MaritalStatus" />
+    <name value="HdBe logical model MaritalStatus" />
+  </mapping>
+  <mapping>
+    <identity value="zib-maritalstatus-v3.1-2020EN" />
+    <uri value="https://zibs.nl/wiki/MaritalStatus-v3.1(2020EN)" />
+    <name value="zib MaritalStatus-v3.1(2020EN)" />
+  </mapping>
+  <mapping>
+    <identity value="HdBe-LanguageProficiency" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LanguageProficiency" />
+    <name value="HdBe logical model LanguageProficiency" />
+  </mapping>
+  <mapping>
+    <identity value="zib-languageproficiency-v3.2-2020EN" />
+    <uri value="https://zibs.nl/wiki/LanguageProficiency-v3.2(2020EN)" />
+    <name value="zib LanguageProficiency-v3.2(2020EN)" />
+  </mapping>
+  <mapping>
+    <identity value="HdBe-ContactInformation" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation" />
+    <name value="HdBe logical model ContactInformation" />
+  </mapping>
+  <mapping>
+    <identity value="zib-contactinformation-v1.2-2020EN" />
+    <uri value="https://zibs.nl/wiki/ContactInformation-v1.2(2020EN)" />
+    <name value="zib ContactInformation-v1.2(2020EN)" />
+  </mapping>
+  <mapping>
+    <identity value="HdBe-ContactPerson" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson" />
+    <name value="HdBe logical model ContactPerson" />
+  </mapping>
+  <mapping>
+    <identity value="zib-contactperson-v3.4-2020EN" />
+    <uri value="https://zibs.nl/wiki/ContactPerson-v3.4(2020EN)" />
+    <name value="zib ContactPerson-v3.4(2020EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient">
+      <path value="Patient" />
+      <short value="Patient" />
+      <alias value="Patient" />
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN" />
+        <map value="NL-CM:0.1.1" />
+        <comment value="Patient" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-Patient" />
+        <map value="Patient" />
+      </mapping>
+    </element>
+    <element id="Patient.extension">
+      <path value="Patient.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Patient.extension:nationality">
+      <path value="Patient.extension" />
+      <sliceName value="nationality" />
+      <comment value="Due to the nature of the nationality core extension (which allows for a period to be placed next to the nationality and thus allows for different nationalities over time), the cardinality of the extension is left at 0..* instead of the CBB cardinality of 0..1." />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/patient-nationality" />
+      </type>
+    </element>
+    <element id="Patient.extension:nationality.extension">
+      <path value="Patient.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Patient.extension:nationality.extension:code">
+      <path value="Patient.extension.extension" />
+      <sliceName value="code" />
+      <min value="0" />
+    </element>
+    <element id="Patient.extension:nationality.extension:code.value[x]">
+      <path value="Patient.extension.extension.value[x]" />
+      <short value="Nationality" />
+      <definition value="Indicates the country of citizenship." />
+      <alias value="Nationaliteit" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Iso 3166 Part 1: 2 Letter Codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/CountryISO" />
+      </binding>
+      <mapping>
+        <identity value="zib-nationality-v3.0-2020EN" />
+        <map value="NL-CM:7.6.3" />
+        <comment value="Nationality" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-Nationality" />
+        <map value="NationalityRC.Nationality" />
+      </mapping>
+    </element>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="PatientIdentificationNumber" />
+      <definition value="The patient’s identification number. Typically, when an social security identification number (NISS-INSZ), is available it is used. A local identifier may be provided when this is desired." />
+      <alias value="Identificatienummer" />
+      <mapping>
+        <identity value="HdBe-Patient" />
+        <map value="Patient.PatientIdentificationNumber" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN" />
+        <map value="NL-CM:0.1.7" />
+        <comment value="PatientIdentificationNumber" />
+      </mapping>
+    </element>
+    <element id="Patient.identifier:SSIN">
+      <path value="Patient.identifier" />
+      <sliceName value="SSIN" />
+      <definition value="An identifier for this patient according to SSIN (NISS-INSZ.)" />
+      <patternIdentifier>
+        <system value="https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin" />
+      </patternIdentifier>
+    </element>
+    <element id="Patient.name">
+      <path value="Patient.name" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="use" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="NameInformation" />
+      <definition value="Patient's full name." />
+      <alias value="Naamgegevens" />
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN" />
+        <map value="NL-CM:0.1.6" />
+        <comment value="NameInformation" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-Patient" />
+        <map value="Patient.NameInformation" />
+      </mapping>
+    </element>
+    <element id="Patient.name:nameInformation">
+      <path value="Patient.name" />
+      <sliceName value="nameInformation" />
+      <max value="2" />
+      <type>
+        <code value="HumanName" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation" />
+      </type>
+    </element>
+    <element id="Patient.name:nameInformation-GivenName">
+      <path value="Patient.name" />
+      <sliceName value="nameInformation-GivenName" />
+      <type>
+        <code value="HumanName" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation.GivenName" />
+      </type>
+    </element>
+    <element id="Patient.telecom">
+      <path value="Patient.telecom" />
+      <short value="ContactInformation" />
+      <definition value="Patient’s telephone number(s) or e-mail address(es)." />
+      <alias value="Contactgegevens" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation" />
+      </type>
+      <mapping>
+        <identity value="HdBe-Patient" />
+        <map value="Patient.ContactInformation" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN" />
+        <map value="NL-CM:0.1.5" />
+        <comment value="ContactInformation" />
+      </mapping>
+      <mapping>
+        <identity value="zib-contactinformation-v1.2-2020EN" />
+        <map value="NL-CM:20.6.1" />
+        <comment value="ContactInformation" />
+      </mapping>
+    </element>
+    <element id="Patient.gender">
+      <path value="Patient.gender" />
+      <short value="Gender" />
+      <definition value="Patient’s administrative gender. The gender that that the patient is considered to have for administration and record keeping purposes. Note that the gender might not match the biological sex as determined by genetics or the individual's preferred identification. The Observation resource can deal with specific sex or gender aspect of interest." />
+      <alias value="Geslacht" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="AdministrativeGender" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <description value="Use ConceptMap 'GenderCodelijst-to-AdministrativeGender' to translate CBB terminology to profile terminology in ValueSet 'AdministrativeGender'" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1">
+          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
+            <valueCanonical value="https://fhir.healthdata.be/ConceptMap/Gender-to-AdministrativeGender" />
+          </extension>
+        </valueSet>
+      </binding>
+      <mapping>
+        <identity value="HdBe-Patient" />
+        <map value="Patient.Gender" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN" />
+        <map value="NL-CM:0.1.9" />
+        <comment value="Gender" />
+      </mapping>
+    </element>
+    <element id="Patient.gender.extension">
+      <path value="Patient.gender.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Patient.gender.extension:genderCodelist">
+      <path value="Patient.gender.extension" />
+      <sliceName value="genderCodelist" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification" />
+      </type>
+    </element>
+    <element id="Patient.gender.extension:genderCodelist.value[x]">
+      <path value="Patient.gender.extension.value[x]" />
+      <short value="Gender" />
+      <definition value="Patient’s administrative gender." />
+      <alias value="Geslacht" />
+      <binding>
+        <strength value="required" />
+        <description value="GenderCodelist" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/Gender" />
+      </binding>
+      <mapping>
+        <identity value="HdBe-Patient" />
+        <map value="Patient.Gender" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN" />
+        <map value="NL-CM:0.1.9" />
+        <comment value="Gender" />
+      </mapping>
+    </element>
+    <element id="Patient.birthDate">
+      <path value="Patient.birthDate" />
+      <short value="DateOfBirth" />
+      <definition value="Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted." />
+      <alias value="Geboortedatum" />
+      <mapping>
+        <identity value="HdBe-Patient" />
+        <map value="Patient.DateOfBirth" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN" />
+        <map value="NL-CM:0.1.10" />
+        <comment value="DateOfBirth" />
+      </mapping>
+    </element>
+    <element id="Patient.deceased[x]">
+      <path value="Patient.deceased[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.deceased[x]:deceasedBoolean">
+      <path value="Patient.deceased[x]" />
+      <sliceName value="deceasedBoolean" />
+      <short value="DeathIndicator" />
+      <definition value="An indication stating whether the patient has died." />
+      <alias value="OverlijdensIndicator" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <mapping>
+        <identity value="HdBe-Patient" />
+        <map value="Patient.DeathIndicator" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN" />
+        <map value="NL-CM:0.1.32" />
+        <comment value="DeathIndicator" />
+      </mapping>
+    </element>
+    <element id="Patient.deceased[x]:deceasedDateTime">
+      <path value="Patient.deceased[x]" />
+      <sliceName value="deceasedDateTime" />
+      <short value="DateOfDeath" />
+      <definition value="The date on which the patient died. A ‘vague’ date, such as only the year, is permitted." />
+      <comment value="The CBB recognizes both the DeathIndicator (boolean) and DateOfDeath (datetime) concepts, whereas in FHIR only one of these concepts may be present. Therefore, if deceasedDateTime is present and has a value, its value can be mapped to DateOfDeath and DeathIndicator is assumed to be true." />
+      <alias value="DatumOverlijden" />
+      <alias value="OverlijdensIndicator" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mapping>
+        <identity value="HdBe-Patient" />
+        <map value="Patient.DateOfDeath" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-Patient" />
+        <map value="Patient.DeathIndicator" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN" />
+        <map value="NL-CM:0.1.33" />
+        <comment value="DateOfDeath" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN" />
+        <map value="NL-CM:0.1.32" />
+        <comment value="DeathIndicator" />
+      </mapping>
+    </element>
+    <element id="Patient.address">
+      <path value="Patient.address" />
+      <definition value="Patient's address information." />
+      <type>
+        <code value="Address" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation" />
+      </type>
+      <mapping>
+        <identity value="HdBe-Patient" />
+        <map value="Patient.AddressInformation" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN" />
+        <map value="NL-CM:0.1.4" />
+        <comment value="AddressInformation" />
+      </mapping>
+    </element>
+    <element id="Patient.maritalStatus">
+      <path value="Patient.maritalStatus" />
+      <short value="MaritalStatus" />
+      <definition value="A person’s marital status." />
+      <alias value="BurgerlijkeStaat" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="MaritalStatus" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <description value="Use ConceptMap 'BeCivilstate-to-MaritalStatus' to translate CBB terminology to profile terminology in ValueSet 'MaritalStatus'" />
+        <valueSet value="https://www.ehealth.fgov.be/standards/fhir/core/ValueSet/be-civilstate">
+          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
+            <valueCanonical value="https://fhir.healthdata.be/ConceptMap/BeCivilstate-to-MaritalStatus" />
+          </extension>
+        </valueSet>
+      </binding>
+      <mapping>
+        <identity value="HdBe-MaritalStatus" />
+        <map value="MaritalStatusRC.MaritalStatus" />
+      </mapping>
+      <mapping>
+        <identity value="zib-maritalstatus-v3.1-2020EN" />
+        <map value="NL-CM:7.9.2" />
+        <comment value="MaritalStatus" />
+      </mapping>
+    </element>
+    <element id="Patient.multipleBirth[x]">
+      <path value="Patient.multipleBirth[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.multipleBirth[x]:multipleBirthBoolean">
+      <path value="Patient.multipleBirth[x]" />
+      <sliceName value="multipleBirthBoolean" />
+      <short value="MultipleBirthIndicator" />
+      <definition value="An indication stating whether the patient is of a multiple birth." />
+      <alias value="MeerlingIndicator" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <mapping>
+        <identity value="HdBe-Patient" />
+        <map value="Patient.MultipleBirthIndicator" />
+      </mapping>
+      <mapping>
+        <identity value="zib-patient-v3.2-2020EN" />
+        <map value="NL-CM:0.1.31" />
+        <comment value="MultipleBirthIndicator" />
+      </mapping>
+    </element>
+    <element id="Patient.multipleBirth[x]:multipleBirthInteger">
+      <path value="Patient.multipleBirth[x]" />
+      <sliceName value="multipleBirthInteger" />
+      <short value="MultipleBirthOrder" />
+      <definition value="An indication of the birth order in case the patient is of a multiple birth." />
+      <comment value="The CBB recognizes both the MultipleBirthIndicator (boolean) and MultipleBirthOrder (integer) concepts, whereas in FHIR only one of these concepts may be present. Therefore, if multipleBirthInteger is present and has a value, its value can be mapped to MultipleBirthOrder and MultipleBirthIndicator is assumed to be true." />
+      <type>
+        <code value="integer" />
+      </type>
+      <mapping>
+        <identity value="HdBe-Patient" />
+        <map value="Patient.MultipleBirthOrder" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-Patient" />
+        <map value="Patient.MultipleBirthIndicator" />
+      </mapping>
+    </element>
+    <element id="Patient.contact">
+      <path value="Patient.contact" />
+      <short value="Contact" />
+      <comment value="Whereas the CBB ContactPerson includes all (non-healthcare professional) persons that are involved in the care for a patient, FHIR distinguishes two use cases for these persons:&#xD;&#xA;&#xD;&#xA;* The RelatedPerson resource is used to capture information about any person that is related to the patient, using the profile &lt;https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson&gt;.&#xD;&#xA;* Information about persons that should be _contacted_ regarding the care for the patient is captured using the `Patient.contact` resource.&#xD;&#xA;&#xD;&#xA;If a person is both a related person and a contact person, then some data duplication is inevitable. The HdBe-ContactPerson can be referenced using the extension in `contact:contactPerson`." />
+      <alias value="Contactpersoon" />
+      <mapping>
+        <identity value="zib-contactperson-v3.4-2020EN" />
+        <map value="NL-CM:3.1.1" />
+        <comment value="Contact" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-ContactPerson" />
+        <map value="Contact" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.extension">
+      <path value="Patient.contact.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Patient.contact.extension:contactPerson">
+      <path value="Patient.contact.extension" />
+      <sliceName value="contactPerson" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/patient-relatedPerson" />
+      </type>
+    </element>
+    <element id="Patient.contact.extension:contactPerson.value[x]">
+      <path value="Patient.contact.extension.value[x]" />
+      <short value="Contact" />
+      <definition value="Reference to a [HdBe-ContactPerson](https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson) instance containing the full details for the current contact." />
+      <alias value="Contactpersoon" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson" />
+      </type>
+      <mapping>
+        <identity value="zib-contactperson-v3.4-2020EN" />
+        <map value="NL-CM:3.1.1" />
+        <comment value="Contact" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-ContactPerson" />
+        <map value="Contact" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.relationship">
+      <path value="Patient.contact.relationship" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.contact.relationship:role">
+      <path value="Patient.contact.relationship" />
+      <sliceName value="role" />
+      <short value="Role" />
+      <definition value="Defines the role of the contact in relation to the patient." />
+      <alias value="Rol" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ContactRelationship" />
+        </extension>
+        <strength value="required" />
+        <description value="RolCodelijst" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/Role" />
+      </binding>
+      <mapping>
+        <identity value="zib-contactperson-v3.4-2020EN" />
+        <map value="NL-CM:3.1.2" />
+        <comment value="Role" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-ContactPerson" />
+        <map value="Role" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.relationship:relationship">
+      <path value="Patient.contact.relationship" />
+      <sliceName value="relationship" />
+      <short value="Relationship" />
+      <definition value="Defines the contact’s familial relationship to the patient." />
+      <alias value="Relatie" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ContactRelationship" />
+        </extension>
+        <strength value="required" />
+        <description value="RelatieCodelijst" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/Relationship" />
+      </binding>
+      <mapping>
+        <identity value="zib-contactperson-v3.4-2020EN" />
+        <map value="NL-CM:3.1.3" />
+        <comment value="Relationship" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-ContactPerson" />
+        <map value="Relationship" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name">
+      <path value="Patient.contact.name" />
+      <definition value="Full name of the contact." />
+      <comment value="This element can and should not completely capture the NameInformation concept from the CBB ContactPerson; it should just be used for the information that is needed for contacting the person in relation to care of the patient. The full name information should instead be captured using an instance of [HdBe-ContactPerson](https://fhir.healthdata.be/StructureDefinition/HdBe-ContactPerson), which can then be referenced from this resource. See the comment on `Patient.contact` for more information." />
+      <type>
+        <code value="HumanName" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation" />
+      </type>
+      <mapping>
+        <identity value="zib-contactperson-v3.4-2020EN" />
+        <map value="NL-CM:3.1.4" />
+        <comment value="NameInformation" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-ContactPerson" />
+        <map value="NameInformation" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.telecom">
+      <path value="Patient.contact.telecom" />
+      <short value="ContactInformation" />
+      <definition value="The contact’s telephone number and/or e-mail address." />
+      <alias value="Contactgegevens" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-ContactInformation" />
+      </type>
+      <mapping>
+        <identity value="zib-contactperson-v3.4-2020EN" />
+        <map value="NL-CM:3.1.6" />
+        <comment value="ContactInformation" />
+      </mapping>
+      <mapping>
+        <identity value="zib-contactinformation-v1.2-2020EN" />
+        <map value="NL-CM:20.6.1" />
+        <comment value="ContactInformation" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-ContactPerson" />
+        <map value="ContactInformation" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.address">
+      <path value="Patient.contact.address" />
+      <definition value="Contact’s address information." />
+      <comment value="This element can and should not completely capture the AddressInformation concept from CBB ContactPerson; it should just be used for the information that is needed for contacting the person in relation to care of the patient. The full address information should instead be captured using an instance of [HdBe-ContactPerson](https://fhir.healthdata.be/StructureDefintion/HdBe-ContactPerson), which can then be referenced from this resource. See the comment on `Patient.contact` for more information." />
+      <type>
+        <code value="Address" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation" />
+      </type>
+      <mapping>
+        <identity value="zib-contactperson-v3.4-2020EN" />
+        <map value="NL-CM:3.1.5" />
+        <comment value="AddressInformation" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-ContactPerson" />
+        <map value="AddressInformation" />
+      </mapping>
+    </element>
+  </differential>
 </StructureDefinition>

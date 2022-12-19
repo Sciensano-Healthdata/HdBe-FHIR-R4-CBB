@@ -15,3 +15,7 @@
 |`DosingInstructions.Dosage.Dose` | element | Removed elements minimumValue, maximumValue and nominalValue as they are defined within the HdBe-Range. |
 |`DosingInstructions.Dosage.AdminsteringSchedule.Frequency` | type | Replaced type BackboneElement with Range type and added HdBe-Range partial CBB. |
 |`DosingInstructions.Dosage.AdminsteringSchedule.Frequency` | element | Removed elements minimumValue, maximumValue and nominalValue as they are defined within the HdBe-Range. |
+| concept | textual | Added a period after 'This is a partial information model'. |
+| instructions | textual | Replaced 'eg' with 'e.g.'. |
+| instructions | textual | Replaced 'tablets.As' with 'tablets. As'. |
+| instructions | textual | Replaced 'delivery.The system' with 'delivery. The system'. |

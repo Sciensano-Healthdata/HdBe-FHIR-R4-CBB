@@ -39,17 +39,16 @@
     </element>
     <element id="Device.deviceName">
       <path value="Device.deviceName" />
-      <min value="1" />
       <max value="1" />
     </element>
     <element id="Device.deviceName.name">
       <path value="Device.deviceName.name" />
-      <short value="SpecimenSource" />
-      <definition value="If the material is not collected directly from the patient but comes from a patient-related object, e.g. a cathetertip, this source of material can be recorded here." />
+      <definition value="If the material is not collected directly from the patient but comes from a patient-related object, e.g. a cathetertip, a specific name of this source of material can be recorded here." />
       <alias value="BronMonster" />
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
         <map value="LaboratoryTestResult.Specimen.SpecimenSource" />
+        <comment value="Only if a more specific SpecimenSource name can be provided than specified as type." />
       </mapping>
       <mapping>
         <identity value="zib-laboratorytestresult-v4.6-2020EN" />
@@ -61,6 +60,25 @@
       <path value="Device.deviceName.type" />
       <definition value="The type of name the device is referred by." />
       <comment value="If type is unknown, use value `other`." />
+    </element>
+    <element id="Device.type">
+      <path value="Device.type" />
+      <short value="SpecimenSource" />
+      <definition value="If the material is not collected directly from the patient but comes from a patient-related object, e.g. a cathetertip, this source of material can be recorded here." />
+      <comment value="If a deviceName is known, which is more specific than the type, this name can be added to deviceName.name." />
+      <alias value="BronMonster" />
+      <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="DeviceType" />
+        </extension>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/SpecimenSource" />
+      </binding>
+      <mapping>
+        <identity value="HdBe-LaboratoryTestResult" />
+        <map value="LaboratoryTestResult.Specimen.SpecimenSource" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

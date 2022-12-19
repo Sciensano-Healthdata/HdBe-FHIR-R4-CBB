@@ -16,3 +16,6 @@ cd ValidationFiles
 # This could be elaborated if there occur other issues.
 find . -name "*.md" -type f -delete
 echo "All *.md files are deleted from the ValidationFiles"
+
+find . -name "*.py" -type f -delete
+echo "All *.py files are deleted from the ValidationFiles"

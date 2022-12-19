@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ConceptMap xmlns="http://hl7.org/fhir">
-   <id value="ResultFlags-to-ObservationInterpretationCodes"/>
-   <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
-      <valueBoolean value="true"/>
-   </extension>
-   <url value="https://fhir.healthdata.be/ConceptMap/ResultFlags-to-ObservationInterpretationCodes"/>
-   <version value="0.0.1"/>
-   <name value="ResultFlags_to_ObservationInterpretationCodes"/>
-   <title value="ResultFlags_to_ObservationInterpretationCodes"/>
-   <status value="draft"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
+  <id value="ResultFlags-to-ObservationInterpretationCodes" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+    <valueBoolean value="true" />
+  </extension>
+  <url value="https://fhir.healthdata.be/ConceptMap/ResultFlags-to-ObservationInterpretationCodes" />
+  <version value="0.0.1" />
+  <name value="ResultFlags_to_ObservationInterpretationCodes" />
+  <title value="ResultFlags_to_ObservationInterpretationCodes" />
+  <status value="draft" />
+  <date value="2022-10-17T09:09:13.9562003+00:00" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
     <name value="Service portal – healthdata.be" />
     <telecom>
       <system value="url" />
@@ -18,26 +19,47 @@
       <use value="work" />
     </telecom>
   </contact>
-   <description value="Maps test result interpretation flags as found in CBB LaboratoryTestResult to &lt;http://hl7.org/fhir/ValueSet/observation-interpretation&gt; as found in `Observation.interpretation` in FHIR R4."/>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-   <sourceCanonical value="https://fhir.healthdata.be/ValueSet/ResultFlags"/>
-   <targetCanonical value="http://hl7.org/fhir/ValueSet/observation-interpretation"/>
-   <group>
-      <source value="http://snomed.info/sct"/>
-      <target value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
-      <element>
-         <code value="281302008"/>
-         <target>
-            <code value="H"/>
-            <equivalence value="equal"/>
-         </target>
-      </element>
-      <element>
-         <code value="281300000"/>
-         <target>
-            <code value="L"/>
-            <equivalence value="equal"/>
-         </target>
-      </element>
-   </group>
+  <description value="Maps test result interpretation flags as found in CBB LaboratoryTestResult to &lt;http://hl7.org/fhir/ValueSet/observation-interpretation&gt; as found in `Observation.interpretation` in FHIR R4." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <sourceCanonical value="https://fhir.healthdata.be/ValueSet/ResultFlags" />
+  <targetCanonical value="http://hl7.org/fhir/ValueSet/observation-interpretation" />
+  <group>
+    <source value="http://snomed.info/sct" />
+    <target value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+    <element>
+        <code value="281302008" />
+        <target>
+            <code value="H" />
+            <equivalence value="equal" />
+        </target>
+    </element>
+    <element>
+        <code value="281300000" />
+        <target>
+            <code value="L" />
+            <equivalence value="equal" />
+        </target>
+    </element>
+    <element>
+        <code value="11896004" />
+        <target>
+            <code value="I" />
+            <equivalence value="equal" />
+        </target>
+    </element>
+    <element>
+        <code value="30714006" />
+        <target>
+            <code value="R" />
+            <equivalence value="equal" />
+        </target>
+    </element>
+    <element>
+        <code value="131196009" />
+        <target>
+            <code value="S" />
+            <equivalence value="equal" />
+        </target>
+    </element>
+  </group>
 </ConceptMap>

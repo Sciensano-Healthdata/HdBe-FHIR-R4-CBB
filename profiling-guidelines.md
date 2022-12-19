@@ -9,6 +9,7 @@
         2. [Healthdata.be CBBs](#healthdatacbb)
         3. [Use case specific models](#usecasespecificmodels)
     2. [Associating the logical definition to StructureDefinitions](#associatingthelogicaldefinitiontostructuredefinitions)
+    3. [Cardinalities](#cardinalities)
 4. [Versioning](#Versioning)
     1. [CBBs](#Versioning-CBB)
     2. [FHIR conformance resources](#Versioning-FHIR)
@@ -24,12 +25,14 @@
     2. [Folder structure and file name](FolderStructureAndFileName)
 8. [Metadata](#metadata)
     1. [StructureDefinition](#StructureDefinition)
-    2. [ValueSets](#ValueSets)
 9.  [ElementDefinition](#ElementDefinition)
     1. [Usage of DefinitionCodes](#DefinitionCodes)
     2. [Constraining a target CBB](#ConstrainingCBB)
     3. [Usage of zib concept examples](#ZibConceptExamples)
-10. [Examples](#Examples)
+10. [Terminology](#terminology)
+    1. [Netherlands Edition SNOMED codes](#DutchSnomed)
+    2. [Custom codes](#CustomCodes)
+11. [Examples](#Examples)
     1. [Logical model examples](#LogicalModelExamples)
     2. [FHIR profile examples](#FHIRProfileExamples)
 
@@ -96,6 +99,19 @@ A specific element can then be mapped using:
 
 Mappings should only be added. There is no need to replace existing mappings as they are valid mappings and provide traceability to the original profiles. It shows the relation between zib and HdBe concepts.
 
+### Cardinalities <a name="Cardinalities"></a>
+The functional description will specify the cardinality for each concept as a minimum required and maximum allowed number of times it may occur, which is the same mechanism as in FHIR. However, one needs to be careful as the cardinality can only be restricted in derived profiles, and never widened. Being too strict could thus hinder the re-use of these profiles. This is especially true for cardinalities in CBBs, which should be interpreted as 'purely conceptual'; a use case might allow for data that conceptually always should be there to be absent in practice.
+
+For CBB profiles:
+
+- A minimum of 0 or 1 will be profiled as 0.
+- A maximum (1, n, *) will be profiled as-is.
+
+For use case specific profiles:
+
+- If the corresponding CBB has a minimum of 1 and the use case doesn't contradict this, the minimum will be profiled here as 1.
+- Cardinalities may be further restricted if the use case defines this.
+
 ## Versioning<a name="Versioning"></a>
 ### CBBs <a name="Versioning-CBB"></a>
 Healthdata.be uses the package level, or release, as the main versioning mechanism. As a result, the CBBs within the package are not individually versioned; they should be regarded as a consistent set. To identify the package version of a CBB, its version number MAY be set to the package version.
@@ -145,7 +161,7 @@ Example:
 |naming| Changes to zibs concept names. |`.short`, `.path`, `.alias`
 |terminology| Adjusted binding strength of a ValueSet; replaced, removed or added a ValueSet binding; replaced, removed, or added concepts of a ValueSet. | `.binding.strength`, `.binding.valueSet` 
 |slicing | Added, removed, or changed a slice. | `.slicing`, `.element.slicename` 
-|cardinality| Cardinality changes, e.g. relaxing or restricing a concept. |`.min`, `.max`
+|cardinality| Cardinality changes, e.g. relaxing or restricing a concept. |`.min`, `.max`, `.pattern`, `.fixed`
 |type| Usage of a different datatype, e.g. an Identifier instead of a Coded concept. | `.type`
 |reference| Added, removed or changed a reference, e.g. a reference to Location instead of Organization. | `.type.targetProfile`
 |constraint|  Added, removed or changed to constraints that span multiple concepts. |`.constraint`
@@ -156,10 +172,13 @@ Example:
 In addition to the changelog for each CBB, generic changes made that span multiple CBBs are listed here. For all artifacts the term 'zib' is replaced with CBB wherever applicable (`.definition`, `.comment`, `.description`, etc.). Also, text that is specific to the Dutch realm is removed or rewritten to the author's interpretation. Below the overarching changes that are applied are listed per resource type.
 
 #### Logical Models
-- `.description`: Remove all text regarding **Revision History** as this is only in Dutch and specifically about the zib.
+- The `StructureDefinition.description` element is adjusted in several ways:
+    - bold paragraph headers are replaced with markdown headers level four and the first header is removed for readability purposes, 
+    - 'Example instances' headers are removed because those sections do not contain information,
+    - 'Revision History' headers are removed as this is only in Dutch and specifically about the zib.
 - A few zibs constrain a target zib, and this is visualized within a zib as such. We represent this in the Logical Model by defining a specific structure, which is described in the [Constraining a target CBB](#ConstrainingCBB) section. As this is not a conceptual but a visual change, this is not mentioned in the changelog.
-- The zib logical model export gives a model that includes partial zibs, thereby duplicating them. The inline partial zibs are replaced with a link to that model.
-- The zib logical model export makes an element per target reference, mainly within a container element. This is adjusted by having one element that contains multiple target references wherever this is possible. If the zib provides additional definition and context to a target reference, this is left as it is.  
+- The zib logical model export gives a model that includes partial zibs, thereby duplicating them. The inline partial zibs are replaced with a reference to that model.
+- The zib logical model export adds every target refence to one element within a container element. The container element is removed if this does not provide additional meaning.  
 
 #### Profiles
 - `.mapping`: Mappings of extensions are moved from within the Extension profile to the host profile itself. This way, the mappings are shown in the mapping overview tab of the profile. This is because mappings in extensions are not (and will not be) included in the snapshot of the host profile. Therefore, Simplifier cannot render them. Nictiz might move in the same direction at some point [Nictiz GitHub ticket](https://github.com/Nictiz/Nictiz-R4-zib2020/issues/222).
@@ -199,8 +218,12 @@ Conformance resources can have multiple types of identifying information, which 
 - The `.id` will be constructed in the following way:
     - For logical models
         - representing a healthdata.be version of a zib: `HdBe-[English zib name]`
+        - representing a DCD version of a CBB: `[Business project code]-[English zib name]`
+        - representing a specific DCD implementation: `[Business project code]-[concept name]`
     - For profiles
-        - representing a healthdata.be version of a zib: `HdBe-[English zib name]`
+        - representing a healthdata.be version of a zib: `HdBe-[English zib-profile name]`
+        - representing a DCD of a HdBe profile: `[Business project code]-[English zib-profile name]`
+        - representing a specific DCD implementation: `[Business project code]-[concept name]`
     - For extensions:
         - pertaining a specific concept in a single profile:`ext-[English root concept name].[English concept name]`
         - pertaining to multiple profiles, or not pertaining to specific profiles and generally applicable:
@@ -221,7 +244,11 @@ Where:
 `[purpose]` and `[English concept name]` are generally a PascalCased name joining words together, with the first letter of every word capitalized.
    
 #### ValueSets
-- The id will be constructed as a word or short wording that describes the ValueSet.
+- The `.id` will be constructed in the following way:
+    - representing a healthdata.be version of a zib ValueSet: `[English zib ValueSet name]`
+    - representing a healthdata.be version of a new ValueSet: `[short English valueSet description]`
+    - representing a DCD version of a zib ValueSet : `[Business project code]-[English zib ValueSet name]`
+    - representing a DCD version of a new ValueSet: `[Business project code]-[short English valueSet description]`
 - The canonical URL will then be: `https://fhir.healthdata.be/ValueSet/[id]`
 - The name will be constructed as: `.id`
 - The title will be constructed as: `.id`
@@ -296,7 +323,7 @@ However, for the CBBs, we have decided not to take over these DefintionCodes bec
 
 ### Constraining a target CBB <a name="ConstrainingCBB"></a>  
 A few CBBs (e.g. [VisualFunction](https://zibs.nl/wiki/VisualFunction-v3.1(2020EN))) constrain a target CBB. To visualize this in a Logical Model, we defined the following guidelines, which should be modelled outside of Forge:
-- Add an element of the reference type with a reference to the target CBB. Match the cardinality with the cardinality of the zib. Add the following comment to this element: _"This CBB constrains the target CBB. The following child elements describe only the differences relative to the CBB in the target reference."_
+- Add an element of the reference type with a reference to the target CBB. Match the cardinality with the cardinality of the zib. Add the following comment to this element: _"This CBB ([name CBB]) constrains the target CBB ([name target CBB]). The following child elements describe only the differences relative to the CBB in the target reference."_
 - Add an child element of the BackBoneElement type and give it the name of the target CBB. Set the cardinality to 1..1.
 - Finally only add the elements of the target CBB that are constrained. Keep the hierarchy and cardinality as is in the target CBB.
 
@@ -304,6 +331,18 @@ A few CBBs (e.g. [VisualFunction](https://zibs.nl/wiki/VisualFunction-v3.1(2020E
 For some concepts within a zib, examples are available in the export to FHIR logical models. These are mapped to `ElementDefinition.example`. 
 
 The `ElementDefinition.example` should use the concept's datatype. However, the quality of these examples is poor, which is likely the result of storage as free text per concept within ART-DECOR. Often the example value of a coded concept is mapped to a `CodeableConcept.text` with the concept's DefinitionCode to `CodeadbleConcept.coding.` This might be very confusing for the readers as this does not represent how such a concept will be exchanged. Therefore, the `ElementDefinition.example` is not used with the pre-populated values for the zib export. 
+
+## Terminology <a name="Terminology"></a>
+
+### Netherlands Edition SNOMED codes<a name="DutchSnomed"></a> 
+The zibs often make use of SNOMED codes that are defined in the Netherlands SNOMED edition. These codes can be used for the CBBs if they are applicable. In this case, the code and meaning should be submitted to the Belgian terminology center to have it requested for adoption in the SNOMED International edition. The code will be retained once it is included in the international edition. If a code is rejected, it is necessary to define the code in a custom CodeSystem and use this code because Belgian vendors generally do not have access to the Netherlands SNOMED edition.
+
+### Custom codes<a name="CustomCodes"></a> 
+In some cases, a code does not (yet) exist in (international) terminology systems. In those cases, a custom CodeSystem can be defined. The name of the CodeSystem matches the name of the valueset it is used in. 
+
+The `CodeSystem.Purpose` should mention: _"This CodeSystem is developed to define concepts that were not available in SNOMED International at the time of writing. If a matching SNOMED code is available in a ValueSet, the SNOMED code SHOULD be used instead of the code defined by this CodeSystem."_
+
+When a code from a custom CodeSystem has been adopted by an internationally utilized CodeSystem after the initial implementation it cannot be easily replaced and generally requires a transition period. The new code can be added to the ValueSet alongside the old code including guidance and expectations of the implementer about the usage of these codes. 
 
 ## Examples <a name="Examples"></a>
 Examples are a vital part of any specification as they will allow the reader to easier understand the expectations. Every logical model and profile shall have at least one example. 

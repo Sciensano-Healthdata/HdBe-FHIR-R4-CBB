@@ -2,5 +2,10 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
+|description.concept | textual | Added a period after 'a relevant instruction'.|
+|description.concept | textual | Removed the Dutch context 'NEN-EN-ISO 18104 norm'.|
+|description.instructions | textual | Removed the Dutch context. |
 | `Intervention` | terminology | Only allowed SNOMED codes. Removed NIC codelist.|
-| `Performer.HealthcareOrganization` | element | Renamed element to `Performer.HealthcareProfessional` to align with reference being made. This will be fixed in a [future version of the zib](https://zibs.nl/wiki/NursingIntervention-v4.0(2022EN)).
+| `Performer.HealthcareOrganization` | element | Renamed element to `Performer.HealthcareProfessional` to align with reference being made. This will be fixed in a [future version of the zib](https://zibs.nl/wiki/NursingIntervention-v4.0(2022EN)).|
+|`Intervention` | textual | Replaced 'towards' by 'toward'. |
+|`Instruction` | textual | Replaced 'himself' by 'themselves'. |

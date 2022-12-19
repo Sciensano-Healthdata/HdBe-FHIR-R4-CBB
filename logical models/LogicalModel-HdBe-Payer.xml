@@ -1,540 +1,540 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBe-Payer"/>
-   <language value="en-US"/>
-   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-      <valuePeriod>
-         <start value="2020-09-01T00:00:00+02:00"/>
-      </valuePeriod>
-   </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Payer"/>
-   <name value="HdBePayer">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="HdBe-Betaler"/>
-         </extension>
+  <id value="HdBe-Payer" />
+  <language value="en-US" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+02:00" />
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Payer" />
+  <name value="HdBePayer">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
       </extension>
-   </name>
-   <title value="HdBe Payer"/>
-   <status value="draft"/>
-   <date value="2022-07-07T15:04:03.2592055+00:00"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
-      <name value="Service portal – healthdata.be"/>
-      <telecom>
-         <system value="url"/>
-         <value value="https://sciensano.service-now.com/sp"/>
-         <use value="work"/>
-      </telecom>
-   </contact>
-   <description value="**Concept**&#xD;&#xA;Payers are organizations or individuals that pay for the healthcare supplied to the patient. These organizations or individuals can be: facilities or people who financially guarantee or who are responsible for the patient (such as parents or guardians of minors), organizations with direct financial responsibility, combinations of these or the patient themselves.&#xD;&#xA;**Purpose**&#xD;&#xA;Recording the information of the paying authorities and people serves to simplify payment of the fees for the supplied care and to provide insight in advance on how these fees are to be paid, especially when it comes to non-insured healthcare.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Those that developed the model took into account the information exchanged in the ‘Check for Right to Insurance (COV)’. To do so, the COV VZ801/802 message definitions were used, v4 (02-nov-2012). &#xD;&#xA;&#xD;&#xA;The structure of the 'European Health Insurance Card (EHIC)' information was taken into account as well.&#xD;&#xA;&#xD;&#xA;**Example Instances**">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="**Concept**&#xD;&#xA;Betalers zijn organisaties of individuen die betalen voor de aan de patiënt geleverde zorg. Deze organisaties of individuen kunnen zijn: instellingen of personen die financieel garant staan of verantwoordelijk zijn voor de patiënt (zoals ouders van minderjarigen), organisaties met directe financiële verantwoordelijkheid, combinaties van deze of de patiënt zelf.&#xD;&#xA;**Purpose**&#xD;&#xA;Het vastleggen van de gegevens van de betalende instanties en personen dient om betaling van de kosten van de geleverde zorg te vereenvoudigen en op voorhand inzicht te verkrijgen hoe deze kosten betaald gaan worden, zeker waar het gaat om niet verzekerde zorg.&#xD;&#xA;**Evidence Base**&#xD;&#xA;Bij het vaststellen van het model is gekeken naar de gegevens die uitgewisseld worden bij de 'Controle op Verzekeringsrecht (COV)'. Hierbij is gebruik gemaakt van de berichtdefinities COV VZ801/802, v4 (02-nov-2012).&#xD;&#xA;&#xD;&#xA;Daarnaast is de opbouw van de gegevens op de 'European Health Insurance Card (EHIC)' in de afwegingen meegenomen. &#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (15-02-2013)&#xD;&#xA;-&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (01-07-2013)&#xD;&#xA;Bevat: [ZIB-59](https://bits.nictiz.nl/browse/ZIB-59).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.2 (01-04-2015)&#xD;&#xA;Bevat: [ZIB-72](https://bits.nictiz.nl/browse/ZIB-72), [ZIB-216](https://bits.nictiz.nl/browse/ZIB-216), [ZIB-217](https://bits.nictiz.nl/browse/ZIB-217), [ZIB-306](https://bits.nictiz.nl/browse/ZIB-306), [ZIB-308](https://bits.nictiz.nl/browse/ZIB-308), [ZIB-314](https://bits.nictiz.nl/browse/ZIB-314), [ZIB-357](https://bits.nictiz.nl/browse/ZIB-357).&#xD;&#xA;&#xD;&#xA;Incl. algemene wijzigingsverzoeken: &#xD;&#xA;[ZIB-94](https://bits.nictiz.nl/browse/ZIB-94), [ZIB-154](https://bits.nictiz.nl/browse/ZIB-154), [ZIB-200](https://bits.nictiz.nl/browse/ZIB-200), [ZIB-201](https://bits.nictiz.nl/browse/ZIB-201), [ZIB-309](https://bits.nictiz.nl/browse/ZIB-309), [ZIB-324](https://bits.nictiz.nl/browse/ZIB-324), [ZIB-326](https://bits.nictiz.nl/browse/ZIB-326).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.1 (04-09-2017)&#xD;&#xA;Bevat: [ZIB-429](https://bits.nictiz.nl/browse/ZIB-429), [ZIB-564](https://bits.nictiz.nl/browse/ZIB-564), [ZIB-575](https://bits.nictiz.nl/browse/ZIB-575), [ZIB-582](https://bits.nictiz.nl/browse/ZIB-582), [ZIB-583](https://bits.nictiz.nl/browse/ZIB-583).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.1.1 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-1008](https://bits.nictiz.nl/browse/ZIB-1008)."/>
-         </extension>
+      <extension url="content">
+        <valueMarkdown value="HdBe-Betaler" />
       </extension>
-   </description>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-   <fhirVersion value="4.0.1"/>
-   <kind value="logical"/>
-   <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/Payer"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
-   <derivation value="specialization"/>
-   <differential>
-      <element id="Payer">
-         <path value="Payer"/>
-         <short value="Payer">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Betaler"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Root concept of the Payer information model. This root concept contains all data elements of the Payer information model.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Rootconcept van de bouwsteen Betaler. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Betaler."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="*"/>
-         <constraint>
-            <key value="HdBe-Payer-1"/>
-            <severity value="error"/>
-            <human value="Either payer_person or insurance_company may exists."/>
-            <expression value="payer_person.exists() xor insurance_company.exists()"/>
-         </constraint>
-      </element>
-      <element id="Payer.PayerPerson">
-         <path value="Payer.PayerPerson"/>
-         <short value="PayerPerson">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="BetalerPersoon"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Container of the PayerPerson concept. This container contains all data elements of the PayerPerson concept.&#xD;&#xA;In this a person is a natural person or a juridical person, such as an organization, municipality, etc.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Container van het concept BetalerPersoon. Deze container bevat alle gegevenselementen van het concept BetalerPersoon.&#xD;&#xA;Een persoon is hierbij een natuurlijk persoon of een rechts persoon, zoals een organisatie, gemeente, etc."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="BackboneElement"/>
-         </type>
-         <condition value="HdBe-Payer-1"/>
-      </element>
-      <element id="Payer.PayerPerson.PayerName">
-         <path value="Payer.PayerPerson.PayerName"/>
-         <short value="PayerName">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="BetalerNaam"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Full name of the paying person or organization (legal entity).">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Naamgegevens van de betalende persoon of organisatie (rechtspersoon)."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-      <element id="Payer.PayerPerson.BankInformation">
-         <path value="Payer.PayerPerson.BankInformation"/>
-         <short value="BankInformation">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Bankgegevens"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Container of the BankInformation concept. This container contains all data elements of the BankInformation concept.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Container van het concept Bankgegevens. Deze container bevat alle gegevenselementen van het concept Bankgegevens."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="*"/>
-         <type>
-            <code value="BackboneElement"/>
-         </type>
-      </element>
-      <element id="Payer.PayerPerson.BankInformation.BankName">
-         <path value="Payer.PayerPerson.BankInformation.BankName"/>
-         <short value="BankName">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="BankNaam"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Name of the financial organization.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Naam van de financiële instelling."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-      <element id="Payer.PayerPerson.BankInformation.BankCode">
-         <path value="Payer.PayerPerson.BankInformation.BankCode"/>
-         <short value="BankCode">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Bankcode"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Code indicating the bank and branch. For European countries, this is the organization’s BIC or SWIFT code.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Code die de bank en het filiaal aangeven. Voor Europese landen is dat de BIC of SWIFT code van de instelling."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-      <element id="Payer.PayerPerson.BankInformation.AccountNumber">
-         <path value="Payer.PayerPerson.BankInformation.AccountNumber"/>
-         <short value="AccountNumber">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Rekeningnummer"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="The payer’s bank account number at the listed organization. For European countries, this is the IBAN.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Rekeningnummer van de betaler bij de genoemde instelling. Voor Europese landen is dit het IBAN nummer."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-      <element id="Payer.InsuranceCompany">
-         <path value="Payer.InsuranceCompany"/>
-         <short value="InsuranceCompany">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Verzekeraar"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Container of the InsuranceCompany concept. This container contains all data elements of the InsuranceCompany concept.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Container van het concept Verzekeraar. Deze container bevat alle gegevenselementen van het concept Verzekeraar."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="BackboneElement"/>
-         </type>
-         <condition value="HdBe-Payer-1"/>
-      </element>
-      <element id="Payer.InsuranceCompany.Insurance">
-         <path value="Payer.InsuranceCompany.Insurance"/>
-         <short value="Insurance">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Verzekering"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Container of the Insurance concept. This container contains all data elements of the Insurance concept.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Container van het concept Verzekering. Deze container bevat alle gegevenselementen van het concept Verzekering."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="1"/>
-         <max value="*"/>
-         <type>
-            <code value="BackboneElement"/>
-         </type>
-      </element>
-      <element id="Payer.InsuranceCompany.Insurance.StartDateTime">
-         <path value="Payer.InsuranceCompany.Insurance.StartDateTime"/>
-         <short value="StartDateTime">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="BeginDatumTijd"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Date from which the insurance policy coverage applies.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Datum vanaf wanneer de dekking van de verzekering geldt."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="dateTime"/>
-         </type>
-      </element>
-      <element id="Payer.InsuranceCompany.Insurance.EndDateTime">
-         <path value="Payer.InsuranceCompany.Insurance.EndDateTime"/>
-         <short value="EndDateTime">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="EindDatumTijd"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Date until which the insurance policy coverage applies. &#xD;&#xA;This item maps the *‘Expiry date’* on EHIC field 9.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Datum tot wanneer de dekking van de verzekering geldt.&#xD;&#xA;Dit item mapt op het EHIC veld 9 *'Expiry date'.*"/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <type>
-            <code value="dateTime"/>
-         </type>
-      </element>
-      <element id="Payer.InsuranceCompany.Insurance.InsuranceType">
-         <path value="Payer.InsuranceCompany.Insurance.InsuranceType"/>
-         <short value="InsuranceType">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Verzekeringssoort"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Type of insurance policy. Codes as returned in the Check for Right to Insurance">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Soort verzekering. Codes zoals geretourneerd bij de controle op verzekeringsrecht"/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
-         <binding>
-            <strength value="required"/>
-            <description value="InsuranceType codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/InsuranceType"/>
-         </binding>
-      </element>
-      <element id="Payer.InsuranceCompany.IdentificationNumber">
-         <path value="Payer.InsuranceCompany.IdentificationNumber"/>
-         <short value="IdentificationNumber">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="IdentificatieNummer"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Unique healthcare insurance company identification.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Unieke zorgverzekeraarsidentificatie (het UZOVI-nummer)."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="Identifier"/>
-         </type>
-      </element>
-      <element id="Payer.InsuranceCompany.OrganizationName">
-         <path value="Payer.InsuranceCompany.OrganizationName"/>
-         <short value="OrganizationName">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="OrganisatieNaam"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Full, official name of the healthcare insurance company.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="De naamgegevens van de zorgverzekeraar. Indien het UZOVI nummer als identificatienummer wordt opgegeven, is dit de naam zoals vermeld in het UZOVI register en ook bij de controle op verzekeringsrecht (COV) wordt teruggegeven."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-      <element id="Payer.InsuranceCompany.InsurantNumber">
-         <path value="Payer.InsuranceCompany.InsurantNumber"/>
-         <short value="InsurantNumber">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="VerzekerdeNummer"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Number under which the insured person is registered at the insurance company &#xD;&#xA;This item maps the *‘Identification number of the card’* on EHIC field 8">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Nummer waaronder de verzekerde bekend is bij de verzekeraar&#xD;&#xA;Dit item mapt op het EHIC veld 8 *'Identification number of the card'*"/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-      <element id="Payer.AddressInformation">
-         <path value="Payer.AddressInformation"/>
-         <short value="AddressInformation">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Adresgegevens"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="The payer’s address information.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Adresgegevens van betaler."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="*"/>
-         <type>
-            <code value="Address"/>
-            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AddressInformation"/>
-         </type>
-      </element>
-      <element id="Payer.ContactInformation">
-         <path value="Payer.ContactInformation"/>
-         <short value="ContactInformation">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Contactgegevens"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="The payer’s telephone number and/or e-mail address.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Telefoonnummer en/of e-mailadres van betaler."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="*"/>
-         <type>
-            <code value="ContactPoint"/>
-            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation"/>
-         </type>
-      </element>
-   </differential>
+    </extension>
+  </name>
+  <title value="HdBe Payer" />
+  <status value="draft" />
+  <date value="2022-07-07T15:04:03.2592055+00:00" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Payers are organizations or individuals that pay for the healthcare supplied to the patient. These organizations or individuals can be: facilities or people who financially guarantee or who are responsible for the patient (such as parents or guardians of minors), organizations with direct financial responsibility, combinations of these or the patient themselves.&#xD;&#xA;#### Purpose&#xD;&#xA;Recording the information of the paying authorities and people serves to simplify payment of the fees for the supplied care and to provide insight in advance on how these fees are to be paid, especially when it comes to non-insured healthcare.&#xD;&#xA;#### Evidence Base&#xD;&#xA;The structure of the 'European Health Insurance Card (EHIC)' information was taken into account.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="Betalers zijn organisaties of individuen die betalen voor de aan de patiënt geleverde zorg. Deze organisaties of individuen kunnen zijn: instellingen of personen die financieel garant staan of verantwoordelijk zijn voor de patiënt (zoals ouders van minderjarigen), organisaties met directe financiële verantwoordelijkheid, combinaties van deze of de patiënt zelf.&#xD;&#xA;#### Purpose&#xD;&#xA;Het vastleggen van de gegevens van de betalende instanties en personen dient om betaling van de kosten van de geleverde zorg te vereenvoudigen en op voorhand inzicht te verkrijgen hoe deze kosten betaald gaan worden, zeker waar het gaat om niet verzekerde zorg.&#xD;&#xA;#### Evidence Base&#xD;&#xA;Bij het vaststellen van het model is gekeken naar de gegevens die uitgewisseld worden bij de 'Controle op Verzekeringsrecht (COV)'. Hierbij is gebruik gemaakt van de berichtdefinities COV VZ801/802, v4 (02-nov-2012).&#xD;&#xA;&#xD;&#xA;Daarnaast is de opbouw van de gegevens op de 'European Health Insurance Card (EHIC)' in de afwegingen meegenomen. &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (15-02-2013)&#xD;&#xA;-&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (01-07-2013)&#xD;&#xA;Bevat: [ZIB-59](https://bits.nictiz.nl/browse/ZIB-59).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.2 (01-04-2015)&#xD;&#xA;Bevat: [ZIB-72](https://bits.nictiz.nl/browse/ZIB-72), [ZIB-216](https://bits.nictiz.nl/browse/ZIB-216), [ZIB-217](https://bits.nictiz.nl/browse/ZIB-217), [ZIB-306](https://bits.nictiz.nl/browse/ZIB-306), [ZIB-308](https://bits.nictiz.nl/browse/ZIB-308), [ZIB-314](https://bits.nictiz.nl/browse/ZIB-314), [ZIB-357](https://bits.nictiz.nl/browse/ZIB-357).&#xD;&#xA;&#xD;&#xA;Incl. algemene wijzigingsverzoeken: &#xD;&#xA;[ZIB-94](https://bits.nictiz.nl/browse/ZIB-94), [ZIB-154](https://bits.nictiz.nl/browse/ZIB-154), [ZIB-200](https://bits.nictiz.nl/browse/ZIB-200), [ZIB-201](https://bits.nictiz.nl/browse/ZIB-201), [ZIB-309](https://bits.nictiz.nl/browse/ZIB-309), [ZIB-324](https://bits.nictiz.nl/browse/ZIB-324), [ZIB-326](https://bits.nictiz.nl/browse/ZIB-326).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.1 (04-09-2017)&#xD;&#xA;Bevat: [ZIB-429](https://bits.nictiz.nl/browse/ZIB-429), [ZIB-564](https://bits.nictiz.nl/browse/ZIB-564), [ZIB-575](https://bits.nictiz.nl/browse/ZIB-575), [ZIB-582](https://bits.nictiz.nl/browse/ZIB-582), [ZIB-583](https://bits.nictiz.nl/browse/ZIB-583).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.1.1 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-1008](https://bits.nictiz.nl/browse/ZIB-1008)." />
+      </extension>
+    </extension>
+  </description>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="true" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/Payer" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="Payer">
+      <path value="Payer" />
+      <short value="Payer">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Betaler" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Root concept of the Payer information model. This root concept contains all data elements of the Payer information model.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de bouwsteen Betaler. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Betaler." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+      <constraint>
+        <key value="HdBe-Payer-1" />
+        <severity value="error" />
+        <human value="Either payer_person or insurance_company must exist, but not both." />
+        <expression value="payer_person.exists() xor insurance_company.exists()" />
+      </constraint>
+    </element>
+    <element id="Payer.PayerPerson">
+      <path value="Payer.PayerPerson" />
+      <short value="PayerPerson">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="BetalerPersoon" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Container of the PayerPerson concept. This container contains all data elements of the PayerPerson concept.&#xD;&#xA;In this a person is a natural person or a juridical person, such as an organization, municipality, etc.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Container van het concept BetalerPersoon. Deze container bevat alle gegevenselementen van het concept BetalerPersoon.&#xD;&#xA;Een persoon is hierbij een natuurlijk persoon of een rechts persoon, zoals een organisatie, gemeente, etc." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <condition value="HdBe-Payer-1" />
+    </element>
+    <element id="Payer.PayerPerson.PayerName">
+      <path value="Payer.PayerPerson.PayerName" />
+      <short value="PayerName">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="BetalerNaam" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Full name of the paying person or organization (legal entity).">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Naamgegevens van de betalende persoon of organisatie (rechtspersoon)." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Payer.PayerPerson.BankInformation">
+      <path value="Payer.PayerPerson.BankInformation" />
+      <short value="BankInformation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Bankgegevens" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Container of the BankInformation concept. This container contains all data elements of the BankInformation concept.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Container van het concept Bankgegevens. Deze container bevat alle gegevenselementen van het concept Bankgegevens." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Payer.PayerPerson.BankInformation.BankName">
+      <path value="Payer.PayerPerson.BankInformation.BankName" />
+      <short value="BankName">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="BankNaam" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Name of the financial organization.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Naam van de financiële instelling." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Payer.PayerPerson.BankInformation.BankCode">
+      <path value="Payer.PayerPerson.BankInformation.BankCode" />
+      <short value="BankCode">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Bankcode" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Code indicating the bank and branch. For European countries, this is the organization’s BIC or SWIFT code.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Code die de bank en het filiaal aangeven. Voor Europese landen is dat de BIC of SWIFT code van de instelling." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Payer.PayerPerson.BankInformation.AccountNumber">
+      <path value="Payer.PayerPerson.BankInformation.AccountNumber" />
+      <short value="AccountNumber">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rekeningnummer" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The payer’s bank account number at the listed organization. For European countries, this is the IBAN.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rekeningnummer van de betaler bij de genoemde instelling. Voor Europese landen is dit het IBAN nummer." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Payer.InsuranceCompany">
+      <path value="Payer.InsuranceCompany" />
+      <short value="InsuranceCompany">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Verzekeraar" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Container of the InsuranceCompany concept. This container contains all data elements of the InsuranceCompany concept.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Container van het concept Verzekeraar. Deze container bevat alle gegevenselementen van het concept Verzekeraar." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <condition value="HdBe-Payer-1" />
+    </element>
+    <element id="Payer.InsuranceCompany.Insurance">
+      <path value="Payer.InsuranceCompany.Insurance" />
+      <short value="Insurance">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Verzekering" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Container of the Insurance concept. This container contains all data elements of the Insurance concept.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Container van het concept Verzekering. Deze container bevat alle gegevenselementen van het concept Verzekering." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Payer.InsuranceCompany.Insurance.StartDateTime">
+      <path value="Payer.InsuranceCompany.Insurance.StartDateTime" />
+      <short value="StartDateTime">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="BeginDatumTijd" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Date from which the insurance policy coverage applies.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Datum vanaf wanneer de dekking van de verzekering geldt." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Payer.InsuranceCompany.Insurance.EndDateTime">
+      <path value="Payer.InsuranceCompany.Insurance.EndDateTime" />
+      <short value="EndDateTime">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="EindDatumTijd" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Date until which the insurance policy coverage applies. &#xD;&#xA;This item maps the *‘Expiry date’* on EHIC field 9.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Datum tot wanneer de dekking van de verzekering geldt.&#xD;&#xA;Dit item mapt op het EHIC veld 9 *'Expiry date'.*" />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Payer.InsuranceCompany.Insurance.InsuranceType">
+      <path value="Payer.InsuranceCompany.Insurance.InsuranceType" />
+      <short value="InsuranceType">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Verzekeringssoort" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Type of insurance policy. Codes as returned in the Check for Right to Insurance">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Soort verzekering. Codes zoals geretourneerd bij de controle op verzekeringsrecht" />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="InsuranceType codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/InsuranceType" />
+      </binding>
+    </element>
+    <element id="Payer.InsuranceCompany.IdentificationNumber">
+      <path value="Payer.InsuranceCompany.IdentificationNumber" />
+      <short value="IdentificationNumber">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="IdentificatieNummer" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Unique healthcare insurance company identification.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Unieke zorgverzekeraarsidentificatie (het UZOVI-nummer)." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Identifier" />
+      </type>
+    </element>
+    <element id="Payer.InsuranceCompany.OrganizationName">
+      <path value="Payer.InsuranceCompany.OrganizationName" />
+      <short value="OrganizationName">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="OrganisatieNaam" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Full, official name of the healthcare insurance company.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De naamgegevens van de zorgverzekeraar. Indien het UZOVI nummer als identificatienummer wordt opgegeven, is dit de naam zoals vermeld in het UZOVI register en ook bij de controle op verzekeringsrecht (COV) wordt teruggegeven." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Payer.InsuranceCompany.InsurantNumber">
+      <path value="Payer.InsuranceCompany.InsurantNumber" />
+      <short value="InsurantNumber">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="VerzekerdeNummer" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Number under which the insured person is registered at the insurance company &#xD;&#xA;This item maps the *‘Identification number of the card’* on EHIC field 8">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Nummer waaronder de verzekerde bekend is bij de verzekeraar&#xD;&#xA;Dit item mapt op het EHIC veld 8 *'Identification number of the card'*" />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Payer.AddressInformation">
+      <path value="Payer.AddressInformation" />
+      <short value="AddressInformation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Adresgegevens" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The payer’s address information.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Adresgegevens van betaler." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Address" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AddressInformation" />
+      </type>
+    </element>
+    <element id="Payer.ContactInformation">
+      <path value="Payer.ContactInformation" />
+      <short value="ContactInformation">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Contactgegevens" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The payer’s telephone number and/or e-mail address.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Telefoonnummer en/of e-mailadres van betaler." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation" />
+      </type>
+    </element>
+  </differential>
 </StructureDefinition>

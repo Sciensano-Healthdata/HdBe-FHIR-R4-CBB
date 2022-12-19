@@ -2,4 +2,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+| description | textual | Replaced the three times duplicated CBB's context with a more specific description of this profile 'helper' profile. The CBB context text remains in the HearingFunction profile on Observation. |

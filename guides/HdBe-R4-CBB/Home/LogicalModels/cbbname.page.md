@@ -5,9 +5,9 @@ from StructureDefinition
 where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/[CBB-ID]'
 select 
 CBB: id,
+Concept: description,
 Version: version,
-Status: status,
-URL: url
+Status: status
 ```
 
 <div>

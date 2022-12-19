@@ -1,85 +1,82 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="ext-InstructionsForUse.RepeatPeriodCyclicalSchedule"/>
-   <url value="https://fhir.healthdata.be/StructureDefinition/ext-InstructionsForUse.RepeatPeriodCyclicalSchedule"/>
-   <name value="ExtInstructionsForUseRepeatPeriodCyclicalSchedule"/>
-   <title value="ext InstructionsForUse.RepeatPeriodCyclicalSchedule"/>
-   <status value="draft"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
-      <name value="Service portal – healthdata.be"/>
-      <telecom>
-         <system value="url"/>
-         <value value="https://sciensano.service-now.com/sp"/>
-         <use value="work"/>
-      </telecom>
-   </contact>
-   <description value="The repeated period in a cyclical schedule (of one or more dosing instructions). A cyclic schedule is noted in days, the corresponding dosing duration is also in days.&#xD;&#xA;&#xD;&#xA;The dosage instructions are interperted differently if RepeatPeriodCyclicalSchedule is present. Therorefore this extension is labeld a as a modifier extension."/>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-   <fhirVersion value="4.0.1"/>
-   <mapping>
-      <identity value="zib-instructionsforuse-v1.2.1-2020EN"/>
-      <uri value="https://zibs.nl/wiki/InstructionsForUse-v1.2.1(2020EN)"/>
-      <name value="zib InstructionsForUse-v1.2.1(2020EN)"/>
-   </mapping>
-   <mapping>
-      <identity value="HdBe-InstructionsForUse"/>
-      <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-InstructionsForUse"/>
-      <name value="HdBe logical model InstructionsForUse"/>
-   </mapping>
-   <kind value="complex-type"/>
-   <abstract value="false"/>
-   <context>
-      <type value="element"/>
-      <expression value="MedicationRequest"/>
-   </context>
-   <context>
-      <type value="element"/>
-      <expression value="MedicationDispense"/>
-   </context>
-   <context>
-      <type value="element"/>
-      <expression value="MedicationAdministration"/>
-   </context>
-   <context>
-      <type value="element"/>
-      <expression value="MedicationUse"/>
-   </context>
-   <context>
-      <type value="element"/>
-      <expression value="Timing"/>
-   </context>
-   <type value="Extension"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
-   <derivation value="constraint"/>
-   <differential>
-      <element id="Extension">
-         <path value="Extension"/>
-         <max value="1"/>
-         <isModifier value="true"/>
-         <isModifierReason value="The dosage instructions are interperted differently if RepeatPeriodCyclicalSchedule is present. Therorefore this extension is labeld a as a modifier extension."/>
-      </element>
-      <element id="Extension.url">
-         <path value="Extension.url"/>
-         <fixedUri value="https://fhir.healthdata.be/StructureDefinition/ext-InstructionsForUse.RepeatPeriodCyclicalSchedule"/>
-      </element>
-      <element id="Extension.value[x]">
-         <path value="Extension.value[x]"/>
-         <short value="RepeatPeriodCyclicalSchedule"/>
-         <definition value="The repeated period in a cyclical schedule (of one or more dosing instructions). A cyclic schedule is noted in days, the corresponding dosing duration is also in days.&#xD;&#xA;&#xD;&#xA;Examples of a cyclical schedule:  &#xD;&#xA;contraceptive pill (21 days, 1 pill 1x a day, then skip for 7 days, repeat), repeat period here is 28 days"/>
-         <alias value="HerhaalperiodeCyclischSchema"/>
-         <type>
-            <code value="Duration"/>
-         </type>
-         <mapping>
-            <identity value="zib-instructionsforuse-v1.2.1-2020EN"/>
-            <map value="NL-CM:9.12.22505"/>
-            <comment value="RepeatPeriodCyclicalSchedule"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-InstructionsForUse"/>
-            <map value="InstructionsForUse.RepeatPeriodCyclicalSchedule"/>
-         </mapping>
-      </element>
-   </differential>
+  <id value="ext-InstructionsForUse.RepeatPeriodCyclicalSchedule" />
+  <url value="https://fhir.healthdata.be/StructureDefinition/ext-InstructionsForUse.RepeatPeriodCyclicalSchedule" />
+  <name value="ExtInstructionsForUseRepeatPeriodCyclicalSchedule" />
+  <title value="ext InstructionsForUse.RepeatPeriodCyclicalSchedule" />
+  <status value="draft" />
+  <date value="2022-10-17T09:09:13.9562003+00:00" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="The repeated period in a cyclical schedule (of one or more dosing instructions). A cyclic schedule is noted in days, the corresponding dosing duration is also in days.&#xD;&#xA;&#xD;&#xA;The dosage instructions are interperted differently if RepeatPeriodCyclicalSchedule is present. Therorefore this extension is labeld a as a modifier extension." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-instructionsforuse-v1.2.1-2020EN" />
+    <uri value="https://zibs.nl/wiki/InstructionsForUse-v1.2.1(2020EN)" />
+    <name value="zib InstructionsForUse-v1.2.1(2020EN)" />
+  </mapping>
+  <mapping>
+    <identity value="HdBe-InstructionsForUse" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-InstructionsForUse" />
+    <name value="HdBe logical model InstructionsForUse" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="MedicationRequest" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="MedicationDispense" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="MedicationAdministration" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="MedicationUse" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="Timing" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <max value="1" />
+      <isModifier value="true" />
+      <isModifierReason value="The dosage instructions are interperted differently if RepeatPeriodCyclicalSchedule is present. Therorefore this extension is labeld a as a modifier extension." />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="https://fhir.healthdata.be/StructureDefinition/ext-InstructionsForUse.RepeatPeriodCyclicalSchedule" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <short value="RepeatPeriodCyclicalSchedule" />
+      <definition value="The repeated period in a cyclical schedule (of one or more dosing instructions). A cyclic schedule is noted in days, the corresponding dosing duration is also in days.&#xD;&#xA;&#xD;&#xA;Examples of a cyclical schedule:  &#xD;&#xA;contraceptive pill (21 days, 1 pill 1x a day, then skip for 7 days, repeat), repeat period here is 28 days" />
+      <alias value="HerhaalperiodeCyclischSchema" />
+      <type>
+        <code value="Duration" />
+      </type>
+      <mapping>
+        <identity value="zib-instructionsforuse-v1.2.1-2020EN" />
+        <map value="NL-CM:9.12.22505" />
+        <comment value="RepeatPeriodCyclicalSchedule" />
+      </mapping>
+    </element>
+  </differential>
 </StructureDefinition>

@@ -2,4 +2,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-| `AlcoholUseStatus` | terminology | Replaced the NullFlavor Other code with the SNOMED code 74964007 - Other. Also added SNOMED  code 261665006 - Unknown. | 
+| `AlcoholUseStatus` | terminology | Replaced Other (code by Nullflavor) with the 74964007 - Other (code by SNOMED CT) and added 261665006 - Unknown (code by SNOMED CT). | 

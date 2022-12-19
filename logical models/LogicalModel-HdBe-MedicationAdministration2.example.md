@@ -1,6 +1,6 @@
 ## Example instances
 
-| MedicationAdministration              |                   |
+| MedicationAdministration2              |                   |
 |---------------------------------------|-------------------|
 |AdministrationProduct                  | Reference to PharmaceuticalProduct (Acetaminophen 500 mg oral tablet) |
 |AdministeringSpeed                     |  |

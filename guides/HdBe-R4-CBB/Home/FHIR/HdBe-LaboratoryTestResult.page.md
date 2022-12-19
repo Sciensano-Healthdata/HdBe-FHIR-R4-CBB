@@ -200,7 +200,7 @@ select
 
 <br/><br/> 
 
-## HdBe-LaboratoryTestResult.Specimen
+## HdBe-LaboratoryTestResult.Specimen.Source
 
 <div>
   <div class="tab">

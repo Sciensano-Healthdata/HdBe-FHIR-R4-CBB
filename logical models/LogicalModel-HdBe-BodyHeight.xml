@@ -1,194 +1,194 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBe-BodyHeight"/>
-   <language value="en-US"/>
-   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-      <valuePeriod>
-         <start value="2020-09-01T00:00:00+02:00"/>
-      </valuePeriod>
-   </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BodyHeight"/>
-   <name value="HdBeBodyHeight">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="HdBe-Lichaamslengte"/>
-         </extension>
+  <id value="HdBe-BodyHeight" />
+  <language value="en-US" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+02:00" />
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BodyHeight" />
+  <name value="HdBeBodyHeight">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
       </extension>
-   </name>
-   <title value="HdBe BodyHeight"/>
-   <status value="draft"/>
-   <date value="2022-07-07T15:04:03.2592055+00:00"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
-      <name value="Service portal – healthdata.be"/>
-      <telecom>
-         <system value="email"/>
-         <value value="fhir.healthdata@sciensano.be"/>
-         <use value="work"/>
-      </telecom>
-   </contact>
-   <description value="**Concept**&#xD;&#xA;A person’s body height.&#xD;&#xA;**Purpose**&#xD;&#xA;Body height is used for various reasons, including to measure growth, such as in babies, children or adolescents, to calculate body surface area, to for example calculate the correct amount of medication, or in combination with body weight to calculate the Body Mass Index. Height is also used to determine a person’s nutritional state. &#xD;&#xA;&#xD;&#xA;This healthcare information information model offers the option to record a person’s body height.&#xD;&#xA;&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Traceability to other Standards**&#xD;&#xA;This health and care information model is in accordance with the information model template Measurement v1.0.">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="**Concept**&#xD;&#xA;De lichaamslengte van een persoon.&#xD;&#xA;**Purpose**&#xD;&#xA;De lichaamslengte wordt voor verschillende redenen gebruikt, zoals het meten van de groei, bijvoorbeeld voor een baby, kind of jongere, het berekenen van de lichaamsoppervlakte, bijvoorbeeld voor het berekenen van de juiste hoeveelheid medicatie, of gecombineerd met lichaamsgewicht om de Body Mass Index te berekenen. Ook voor het bepalen van de voedingstoestand van een persoon wordt de lengte gebruikt.&#xD;&#xA;&#xD;&#xA;Deze CBB biedt de mogelijkheid om het lichaamslengte van een persoon vast te leggen.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**References**&#xD;&#xA;1. Parelsnoer DCM Lichaamslengte v0.98 [Online] Beschikbaar op: http://www.nictiz.nl/uploaded/FILES/htmlcontent/dcm/parelsnoer/Lichaamslengte%20v0.98.pdf [Geraadpleegd: 19 december 2014].&#xD;&#xA;&#xD;&#xA;2. openEHR-EHR-OBSERVATION.height.v1 [Online] Beschikbaar op: http://www.openehr.org/knowledge/ [Geraadpleegd: 19 december 2014].&#xD;&#xA;**Traceability to other Standards**&#xD;&#xA;Deze zorginformatie bouwsteen is in lijn met de bouwsteen blauwdruk Meting v1.0."/>
-         </extension>
+      <extension url="content">
+        <valueMarkdown value="HdBe-Lichaamslengte" />
       </extension>
-   </description>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-   <fhirVersion value="4.0.1"/>
-   <kind value="logical"/>
-   <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/BodyHeight"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
-   <derivation value="specialization"/>
-   <differential>
-      <element id="BodyHeight">
-         <path value="BodyHeight"/>
-         <short value="BodyHeight">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Lichaamslengte"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Root concept of the BodyHeight information model. This root concept contains all data elements of the BodyHeight information model.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Rootconcept van de bouwsteen Lichaamslengte. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Lichaamslengte."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="*"/>
-      </element>
-      <element id="BodyHeight.HeightValue">
-         <path value="BodyHeight.HeightValue"/>
-         <short value="HeightValue">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="LengteWaarde"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="The element contains the value of the measured body height in centimeters. &#xD;&#xA;Body height is the height of the human body from heel to scalp, generally measured when standing. Body height is measured in a stretched, horizontal position for very small children or patients that are unable to stand.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Het element bevat de waarde van de gemeten lichaamslengte in centimeters. &#xD;&#xA;De lichaamslengte is de lengte van het menselijk lichaam van hielbodem tot kruin, in het algemeen gemeten in staande houding. Bij zeer kleine kinderen of patiënten die niet kunnen staan wordt de lichaamslengte in gestrekte liggende houding gemeten."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <type>
-            <code value="Quantity"/>
-         </type>
-      </element>
-      <element id="BodyHeight.HeightDateTime">
-         <path value="BodyHeight.HeightDateTime"/>
-         <short value="HeightDateTime">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="LengteDatumTijd"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Date and if possible time of body height measurement.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Datum en (eventueel) tijd van de waarneming van de lichaamslengte."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <type>
-            <code value="dateTime"/>
-         </type>
-      </element>
-      <element id="BodyHeight.Comment">
-         <path value="BodyHeight.Comment"/>
-         <short value="Comment">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Toelichting"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Comment on the body height measurement.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Toelichting op de meting van de lichaamslengte."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-      <element id="BodyHeight.Position">
-         <path value="BodyHeight.Position"/>
-         <short value="Position">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Positie"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="The person's position during the measurement.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="De positie tijdens de meting van de gemeten persoon."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
-         <binding>
-            <strength value="extensible"/>
-            <description value="Position codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/Position"/>
-         </binding>
-      </element>
-   </differential>
+    </extension>
+  </name>
+  <title value="HdBe BodyHeight" />
+  <status value="draft" />
+  <date value="2022-07-07T15:04:03.2592055+00:00" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="email" />
+      <value value="fhir.healthdata@sciensano.be" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A person’s body height.&#xD;&#xA;#### Purpose&#xD;&#xA;Body height is used for various reasons, including to measure growth, such as in babies, children or adolescents, to calculate body surface area, to for example calculate the correct amount of medication, or in combination with body weight to calculate the Body Mass Index. Height is also used to determine a person’s nutritional state.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="De lichaamslengte van een persoon.&#xD;&#xA;#### Purpose&#xD;&#xA;De lichaamslengte wordt voor verschillende redenen gebruikt, zoals het meten van de groei, bijvoorbeeld voor een baby, kind of jongere, het berekenen van de lichaamsoppervlakte, bijvoorbeeld voor het berekenen van de juiste hoeveelheid medicatie, of gecombineerd met lichaamsgewicht om de Body Mass Index te berekenen. Ook voor het bepalen van de voedingstoestand van een persoon wordt de lengte gebruikt.&#xD;&#xA;&#xD;&#xA;Deze CBB biedt de mogelijkheid om het lichaamslengte van een persoon vast te leggen.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**References**&#xD;&#xA;1. Parelsnoer DCM Lichaamslengte v0.98 [Online] Beschikbaar op: http://www.nictiz.nl/uploaded/FILES/htmlcontent/dcm/parelsnoer/Lichaamslengte%20v0.98.pdf [Geraadpleegd: 19 december 2014].&#xD;&#xA;&#xD;&#xA;2. openEHR-EHR-OBSERVATION.height.v1 [Online] Beschikbaar op: http://www.openehr.org/knowledge/ [Geraadpleegd: 19 december 2014].&#xD;&#xA;#### Traceability to other Standards&#xD;&#xA;Deze zorginformatie bouwsteen is in lijn met de bouwsteen blauwdruk Meting v1.0." />
+      </extension>
+    </extension>
+  </description>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="true" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/BodyHeight" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="BodyHeight">
+      <path value="BodyHeight" />
+      <short value="BodyHeight">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Lichaamslengte" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Root concept of the BodyHeight information model. This root concept contains all data elements of the BodyHeight information model.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de bouwsteen Lichaamslengte. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Lichaamslengte." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+    </element>
+    <element id="BodyHeight.HeightValue">
+      <path value="BodyHeight.HeightValue" />
+      <short value="HeightValue">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="LengteWaarde" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The element contains the value of the measured body height in centimeters. &#xD;&#xA;Body height is the height of the human body from heel to scalp, generally measured when standing. Body height is measured in a stretched, horizontal position for very small children or patients that are unable to stand.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Het element bevat de waarde van de gemeten lichaamslengte in centimeters. &#xD;&#xA;De lichaamslengte is de lengte van het menselijk lichaam van hielbodem tot kruin, in het algemeen gemeten in staande houding. Bij zeer kleine kinderen of patiënten die niet kunnen staan wordt de lichaamslengte in gestrekte liggende houding gemeten." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="BodyHeight.HeightDateTime">
+      <path value="BodyHeight.HeightDateTime" />
+      <short value="HeightDateTime">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="LengteDatumTijd" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Date and if possible time of body height measurement.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Datum en (eventueel) tijd van de waarneming van de lichaamslengte." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="BodyHeight.Comment">
+      <path value="BodyHeight.Comment" />
+      <short value="Comment">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toelichting" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Comment on the body height measurement.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toelichting op de meting van de lichaamslengte." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="BodyHeight.Position">
+      <path value="BodyHeight.Position" />
+      <short value="Position">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Positie" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The person's position during the measurement.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De positie tijdens de meting van de gemeten persoon." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Position codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/Position" />
+      </binding>
+    </element>
+  </differential>
 </StructureDefinition>

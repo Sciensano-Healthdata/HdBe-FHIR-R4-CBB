@@ -1,6 +1,6 @@
 ## Example instances
 
-|**MedicationUse**         |                   |
+|**MedicationUse2**         |                   |
 |---------------------------|-------------------|
 |Prescriber                 | Reference to HealthProfessional (E. Penninx) |
 |ProductUsed               | Reference to PharmaceuticalProduct (Acetaminophen 500 mg)    |

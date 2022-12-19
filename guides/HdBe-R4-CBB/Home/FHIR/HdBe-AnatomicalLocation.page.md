@@ -11,6 +11,14 @@ Status: status,
 URL: url
 ```
 
+@```
+from
+	StructureDefinition
+	where url = 'https://fhir.healthdata.be/StructureDefinition/HdBe-AnatomicalLocation'
+select
+	Instructions: purpose
+```
+
 <div>
   <div class="tab">
      <button class="tablinks active" onclick="openTab(event, 'Snapshot view')">Snapshot view</button>

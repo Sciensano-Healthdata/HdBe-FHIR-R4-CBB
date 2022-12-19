@@ -3,4 +3,6 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`Location`| terminology | Removed valueSet LocationICD-O-3Codelist | 
+|`Location`| terminology | Removed valueSet LocationICD-O-3Codelist. | 
+|`Location`| textual | Improved definition by replacing localisation with location. |
+|`Laterality`| textual | Improved definition by adding 'the'. |

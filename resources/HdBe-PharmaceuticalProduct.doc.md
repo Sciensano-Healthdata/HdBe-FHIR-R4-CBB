@@ -5,6 +5,7 @@
 | Concept | textual | Aligned context the Concept section in the `StructureDefinition.description` with the logical model. |
 | `code` | terminology | Loosened binding strength from required to extensible. |
 | `code` | textual | Removed all guidance on use of codes as this is the codes are different. |
+| `code.text` | textual | Replaced 'which' with 'that'. |
 | `form` | terminology | Loosened the binding from required to extensible. |
 | `form` | textual | Removed G-standard specific context.  |
 | `ingredient.item[x].itemCodeableConcept` | terminology | Loosened binding strength from required to extensible. |

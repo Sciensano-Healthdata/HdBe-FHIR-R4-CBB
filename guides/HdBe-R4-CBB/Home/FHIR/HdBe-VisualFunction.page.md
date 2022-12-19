@@ -24,7 +24,7 @@ URL: url
   }
 
   "HdBe-VisualFunction.VisualAid"  --> "HdBe-VisualFunction": 0..* reasonReference: The medical aid \nused to help the patient see. 
-  note bottom on link: In CBB VisualFunction \nreferences CBB MedicalDevice \nbut in FHIR this reference \nis reversed.
+  note bottom on link: CBB VisualFunction \nreferences CBB MedicalDevice \nbut in FHIR this reference \nis reversed.
   "HdBe-VisualFunction.VisualAid" --> "HdBe-VisualFunction.VisualAid.Product": 1..1 device
 </plantuml>
 

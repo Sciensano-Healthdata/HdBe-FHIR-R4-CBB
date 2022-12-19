@@ -8,3 +8,4 @@
 |`LastName.LastName` | textual | Added textual guidance that it is allowed to include `.Prefix` in the `.LastName` for systems that do not record the prefix sperately, which is common in Belgium. |
 |`LastNamePartner` | textual | Renamed GeslachtsnaamPartner to FamilienaamPartner. |
 |`LastNamePartner.LastNamePartner` | textual | Added textual guidance that it is allowed to include `.PartnerPrefix` in the `.PartnerLast` for systems that do not record the prefix sperately, which is common in Belgium. |
+|description.purpose | textual | Replaced 'address person' with 'address a person'. |

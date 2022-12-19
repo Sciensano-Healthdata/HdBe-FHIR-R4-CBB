@@ -1,399 +1,399 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBe-MedicationUse2"/>
-   <language value="en-US"/>
-   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-      <valuePeriod>
-         <start value="2020-09-01T00:00:00+02:00"/>
-      </valuePeriod>
-   </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationUse2"/>
-   <name value="HdBeMedicationUse2">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="HdBe-MedicatieGebruik2"/>
-         </extension>
+  <id value="HdBe-MedicationUse2" />
+  <language value="en-US" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+02:00" />
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationUse2" />
+  <name value="HdBeMedicationUse2">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
       </extension>
-   </name>
-   <title value="HdBe MedicationUse2"/>
-   <status value="draft"/>
-   <date value="2022-07-07T15:04:03.2592055+00:00"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
-      <name value="Service portal – healthdata.be"/>
-      <telecom>
-         <system value="url"/>
-         <value value="https://sciensano.service-now.com/sp"/>
-         <use value="work"/>
-      </telecom>
-   </contact>
-   <description value="**Concept**&#xD;&#xA;MedicationUse is a statement on the historic, current or intended use of a certain medicine.&#xD;&#xA;**Purpose**&#xD;&#xA;The goal of the medication use is to provide insight into the patient’s pattern of use.&#xD;&#xA;**Example Instances**">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="**Concept**&#xD;&#xA;Medicatiegebruik is een uitspraak over historisch, huidig of voorgenomen gebruik van een geneesmiddel.&#xD;&#xA;**Purpose**&#xD;&#xA;Het doel van medicatiegebruik is inzicht te geven in het gebruikspatroon van de patiënt.&#xD;&#xA;**Example Instances**&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (04-09-2017)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.1 (31-12-2017)&#xD;&#xA;Bevat: [ZIB-618](https://bits.nictiz.nl/browse/ZIB-618), [ZIB-643](https://bits.nictiz.nl/browse/ZIB-643).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (31-01-2020)&#xD;&#xA;Bevat: [ZIB-906](https://bits.nictiz.nl/browse/ZIB-906), [ZIB-888](https://bits.nictiz.nl/browse/ZIB-888).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1.1 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-911](https://bits.nictiz.nl/browse/ZIB-911)."/>
-         </extension>
+      <extension url="content">
+        <valueMarkdown value="HdBe-MedicatieGebruik2" />
       </extension>
-   </description>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-   <fhirVersion value="4.0.1"/>
-   <kind value="logical"/>
-   <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/MedicationUse2"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
-   <derivation value="specialization"/>
-   <differential>
-      <element id="MedicationUse">
-         <path value="MedicationUse"/>
-         <short value="MedicationUse">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="MedicatieGebruik"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Root concept of the MedicationUse information model. This root concept contains all data elements of the MedicationUse information model.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Rootconcept van de bouwsteen MedicatieGebruik. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedicatieGebruik."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="*"/>
-      </element>
-      <element id="MedicationUse.Prescriber">
-         <path value="MedicationUse.Prescriber"/>
-         <short value="Prescriber">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Voorschrijver"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="The health professional that entered the medication agreement with the patient.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="De zorgverlener die de medicatieafspraak met de patiënt heeft vastgesteld."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"/>
-         </type>
-      </element>
-      <element id="MedicationUse.ProductUsed">
-         <path value="MedicationUse.ProductUsed"/>
-         <short value="ProductUsed">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Gebruiksproduct"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="The product used. This is usually medication. Food, blood products, aids and bandages do not strictly fall under the category of medication, but can be recorded as well. &#xD;&#xA;&#xD;&#xA;In principle, this will be the prescribed product, but the product used may differ from the prescribed product.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Het gebruikte middel. Dit is vrijwel steeds een geneesmiddel. Voedingsmiddelen, bloedproducten, hulp- en verbandmiddelen vallen strikt genomen niet onder de categorie geneesmiddelen, maar kunnen ook worden worden vastgelegd.&#xD;&#xA;&#xD;&#xA;In principe betreft dit het voorgeschreven product, maar het daadwerkelijk gebruikte product kan afwijken van het voorgeschreven product."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct"/>
-         </type>
-      </element>
-      <element id="MedicationUse.InstructionsForUse">
-         <path value="MedicationUse.InstructionsForUse"/>
-         <short value="InstructionsForUse">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Gebruiksinstructie"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Instructions for the use of the medication, e.g. dose and route of administration. In the event of medication use, this is the pattern of use established by the patient or which the patient followed.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Aanwijzingen voor het gebruik van de medicatie, bijvoorbeeld dosering en toedieningsweg. Bij medicatiegebruik is dit het gebruikspatroon dat de patiënt heeft gevolgd of met zichzelf heeft afgesproken."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="Dosage"/>
-            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-InstructionsForUse"/>
-         </type>
-      </element>
-      <element id="MedicationUse.MedicationUseDateTime">
-         <path value="MedicationUse.MedicationUseDateTime"/>
-         <short value="MedicationUseDateTime">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="MedicatieGebruikDatumTijd"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Date on which this use is entered.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Datum waarop het onderliggende gebruik is vastgelegd."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <type>
-            <code value="dateTime"/>
-         </type>
-      </element>
-      <element id="MedicationUse.PeriodOfUse">
-         <path value="MedicationUse.PeriodOfUse"/>
-         <short value="PeriodOfUse">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Gebruiksperiode"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Medication use can be recorded for a certain moment or over a certain period. Thus, medication use can be recorded multiple times during the use of medication. The usage period is the period or moment over which the data is recorded.&#xD;&#xA;**Start date**: This is the time at which the agreement was to take effect (or took effect or will take effect). &#xD;&#xA;**Duration**: The intended duration of use. E.g. 5 days or 8 weeks. It is not allowed to indicate the duration in months, because different months have a variable duration in days. &#xD;&#xA;**End date**: The time at which the period of use ends (or ended or will end). To avoid confusion between 'to' and 'up to', the submission of time is always mandatory for the end date.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Medicatiegebruik kan voor een bepaald moment of over een bepaalde periode worden vastgelegd. Gedurende het gebruik van medicatie kan er dus meerdere keren medicatiegebruik worden vastgelegd. Het betreft hier de periode of het moment waarover de gegevens worden vastgelegd. &#xD;&#xA;**Ingangsdatum**: Dit is het tijdstip waarop het gebruik is gestart. &#xD;&#xA;**Gebruiksduur**: De beoogde gebruiksduur. Bijvoorbeeld 5 dagen of 8 weken. Het is niet toegestaan om de gebruiksduur in maanden aan te geven, omdat verschillende maanden een variabele duur in dagen hebben. &#xD;&#xA;**Einddatum**: Het tijdstip waarop de gebruiksperiode eindigt (of geëindigd is of zal eindigen). Om verwarring te voorkomen tussen 'tot' en 'tot en met' is het meegeven van de tijd altijd verplicht bij einddatum."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="Range"/>
-            <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-TimeInterval"/>
-         </type>
-      </element>
-      <element id="MedicationUse.AsAgreedIndicator">
-         <path value="MedicationUse.AsAgreedIndicator"/>
-         <short value="AsAgreedIndicator">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="VolgensAfspraakIndicator"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Is the medicine used as outlined in the medication agreement?">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Wordt het geneesmiddel gebruikt zoals afgesproken in de medicatieafspraak?"/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="boolean"/>
-         </type>
-      </element>
-      <element id="MedicationUse.UseIndicator">
-         <path value="MedicationUse.UseIndicator"/>
-         <short value="UseIndicator">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="GebruikIndicator"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Is this medicine used or not?">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Wordt dit geneesmiddel gebruikt of niet."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <type>
-            <code value="boolean"/>
-         </type>
-      </element>
-      <element id="MedicationUse.ReasonForUse">
-         <path value="MedicationUse.ReasonForUse"/>
-         <short value="ReasonForUse">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="RedenGebruik"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="The reason for using the medication, particularly in self-care medicine purchased by the patient themselves.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="De reden om medicatie te gebruiken, m.n. bij zelfzorgmiddelen die de patiënt zelf aanschaft."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-      <element id="MedicationUse.MedicationUseStopType">
-         <path value="MedicationUse.MedicationUseStopType"/>
-         <short value="MedicationUseStopType">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="MedicatieGebruikStopType"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Stop type, the manner in which this medication is discontinued (temporary or definitive).">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Stop type, de manier waarop gestopt wordt met deze medicatie (tijdelijk of definitief)."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
-         <binding>
-            <strength value="required"/>
-            <description value="MedicationUseStopType codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicationStopType"/>
-         </binding>
-      </element>
-      <element id="MedicationUse.ReasonForChangeOrDiscontinuationOfUse">
-         <path value="MedicationUse.ReasonForChangeOrDiscontinuationOfUse"/>
-         <short value="ReasonForChangeOrDiscontinuationOfUse">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="RedenWijzigenOfStoppenGebruik"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Reason for changing or discontinuing use of medication.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Reden van wijzigen of stoppen met medicatiegebruik"/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="*"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
-         <binding>
-            <strength value="required"/>
-            <description value="ReasonForChangeOrDiscontinuationOfUse codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/MedicationReason"/>
-         </binding>
-      </element>
-      <element id="MedicationUse.Comment">
-         <path value="MedicationUse.Comment"/>
-         <short value="Comment">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Toelichting"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Comments on the medication use.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Opmerkingen met betrekking tot het medicatie gebruik."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-   </differential>
+    </extension>
+  </name>
+  <title value="HdBe MedicationUse2" />
+  <status value="draft" />
+  <date value="2022-07-07T15:04:03.2592055+00:00" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="MedicationUse is a statement on the historic, current or intended use of a certain medicine.&#xD;&#xA;#### Purpose&#xD;&#xA;The goal of the medication use is to provide insight into the patient’s pattern of use.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="Medicatiegebruik is een uitspraak over historisch, huidig of voorgenomen gebruik van een geneesmiddel.&#xD;&#xA;#### Purpose&#xD;&#xA;Het doel van medicatiegebruik is inzicht te geven in het gebruikspatroon van de patiënt.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (04-09-2017)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.0.1 (31-12-2017)&#xD;&#xA;Bevat: [ZIB-618](https://bits.nictiz.nl/browse/ZIB-618), [ZIB-643](https://bits.nictiz.nl/browse/ZIB-643).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (31-01-2020)&#xD;&#xA;Bevat: [ZIB-906](https://bits.nictiz.nl/browse/ZIB-906), [ZIB-888](https://bits.nictiz.nl/browse/ZIB-888).&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1.1 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-911](https://bits.nictiz.nl/browse/ZIB-911)." />
+      </extension>
+    </extension>
+  </description>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="true" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/MedicationUse2" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="MedicationUse2">
+      <path value="MedicationUse2" />
+      <short value="MedicationUse2">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="MedicatieGebruik" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Root concept of the MedicationUse2 information model. This root concept contains all data elements of the MedicationUse2 information model.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de bouwsteen MedicatieGebruik2. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedicatieGebruik2." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+    </element>
+    <element id="MedicationUse2.Prescriber">
+      <path value="MedicationUse2.Prescriber" />
+      <short value="Prescriber">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Voorschrijver" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The health professional that entered the medication agreement with the patient.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De zorgverlener die de medicatieafspraak met de patiënt heeft vastgesteld." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional" />
+      </type>
+    </element>
+    <element id="MedicationUse2.ProductUsed">
+      <path value="MedicationUse2.ProductUsed" />
+      <short value="ProductUsed">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Gebruiksproduct" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The product used. This is usually medication. Food, blood products, aids and bandages do not strictly fall under the category of medication, but can be recorded as well. &#xD;&#xA;&#xD;&#xA;In principle, this will be the prescribed product, but the product used may differ from the prescribed product.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Het gebruikte middel. Dit is vrijwel steeds een geneesmiddel. Voedingsmiddelen, bloedproducten, hulp- en verbandmiddelen vallen strikt genomen niet onder de categorie geneesmiddelen, maar kunnen ook worden worden vastgelegd.&#xD;&#xA;&#xD;&#xA;In principe betreft dit het voorgeschreven product, maar het daadwerkelijk gebruikte product kan afwijken van het voorgeschreven product." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct" />
+      </type>
+    </element>
+    <element id="MedicationUse2.InstructionsForUse">
+      <path value="MedicationUse2.InstructionsForUse" />
+      <short value="InstructionsForUse">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Gebruiksinstructie" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Instructions for the use of the medication, e.g. dose and route of administration. In the event of medication use, this is the pattern of use established by the patient or that the patient followed.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Aanwijzingen voor het gebruik van de medicatie, bijvoorbeeld dosering en toedieningsweg. Bij medicatiegebruik is dit het gebruikspatroon dat de patiënt heeft gevolgd of met zichzelf heeft afgesproken." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Dosage" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-InstructionsForUse" />
+      </type>
+    </element>
+    <element id="MedicationUse2.MedicationUseDateTime">
+      <path value="MedicationUse2.MedicationUseDateTime" />
+      <short value="MedicationUseDateTime">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="MedicatieGebruikDatumTijd" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Date on which this use is entered.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Datum waarop het onderliggende gebruik is vastgelegd." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="MedicationUse2.PeriodOfUse">
+      <path value="MedicationUse2.PeriodOfUse" />
+      <short value="PeriodOfUse">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Gebruiksperiode" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Medication use can be recorded for a certain moment or over a certain period. Thus, medication use can be recorded multiple times during the use of medication. The usage period is the period or moment over which the data is recorded.&#xD;&#xA;**Start date**: This is the time at which the agreement was to take effect (or took effect or will take effect). &#xD;&#xA;**Duration**: The intended duration of use. E.g. 5 days or 8 weeks. It is not allowed to indicate the duration in months, because different months have a variable duration in days. &#xD;&#xA;**End date**: The time at which the period of use ends (or ended or will end). To avoid confusion between 'to' and 'up to', the submission of time is always mandatory for the end date.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Medicatiegebruik kan voor een bepaald moment of over een bepaalde periode worden vastgelegd. Gedurende het gebruik van medicatie kan er dus meerdere keren medicatiegebruik worden vastgelegd. Het betreft hier de periode of het moment waarover de gegevens worden vastgelegd. &#xD;&#xA;**Ingangsdatum**: Dit is het tijdstip waarop het gebruik is gestart. &#xD;&#xA;**Gebruiksduur**: De beoogde gebruiksduur. Bijvoorbeeld 5 dagen of 8 weken. Het is niet toegestaan om de gebruiksduur in maanden aan te geven, omdat verschillende maanden een variabele duur in dagen hebben. &#xD;&#xA;**Einddatum**: Het tijdstip waarop de gebruiksperiode eindigt (of geëindigd is of zal eindigen). Om verwarring te voorkomen tussen 'tot' en 'tot en met' is het meegeven van de tijd altijd verplicht bij einddatum." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Range" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-TimeInterval" />
+      </type>
+    </element>
+    <element id="MedicationUse2.AsAgreedIndicator">
+      <path value="MedicationUse2.AsAgreedIndicator" />
+      <short value="AsAgreedIndicator">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="VolgensAfspraakIndicator" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Is the medicine used as outlined in the medication agreement?">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Wordt het geneesmiddel gebruikt zoals afgesproken in de medicatieafspraak?" />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="MedicationUse2.UseIndicator">
+      <path value="MedicationUse2.UseIndicator" />
+      <short value="UseIndicator">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="GebruikIndicator" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Is this medicine used or not?">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Wordt dit geneesmiddel gebruikt of niet." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="MedicationUse2.ReasonForUse">
+      <path value="MedicationUse2.ReasonForUse" />
+      <short value="ReasonForUse">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="RedenGebruik" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The reason for using the medication, particularly in self-care medicine purchased by the patient themselves.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De reden om medicatie te gebruiken, m.n. bij zelfzorgmiddelen die de patiënt zelf aanschaft." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="MedicationUse2.MedicationUseStopType">
+      <path value="MedicationUse2.MedicationUseStopType" />
+      <short value="MedicationUseStopType">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="MedicatieGebruikStopType" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Stop type, the manner in which this medication is discontinued (temporary or definitive).">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Stop type, de manier waarop gestopt wordt met deze medicatie (tijdelijk of definitief)." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="MedicationUseStopType codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/MedicationStopType" />
+      </binding>
+    </element>
+    <element id="MedicationUse2.ReasonForChangeOrDiscontinuationOfUse">
+      <path value="MedicationUse2.ReasonForChangeOrDiscontinuationOfUse" />
+      <short value="ReasonForChangeOrDiscontinuationOfUse">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="RedenWijzigenOfStoppenGebruik" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Reason for changing or discontinuing use of medication.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Reden van wijzigen of stoppen met medicatiegebruik" />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="ReasonForChangeOrDiscontinuationOfUse codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/MedicationReason" />
+      </binding>
+    </element>
+    <element id="MedicationUse2.Comment">
+      <path value="MedicationUse2.Comment" />
+      <short value="Comment">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toelichting" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Comments on the medication use.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Opmerkingen met betrekking tot het medicatie gebruik." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
 </StructureDefinition>

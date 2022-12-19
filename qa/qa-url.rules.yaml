@@ -1,4 +1,5 @@
 - name: url-unique
+  error: https://fhir.healthdata.be/QA/errors|url-unique
   status: "Checking if all resources have a unique url"
   files: 
     - logical models/*.xml
@@ -9,6 +10,7 @@
   # custom error messages for unique checks do not work.
 
 - name: url-starts-with-correct-base
+  error: https://fhir.healthdata.be/QA/errors|url-starts-with-correct-base
   status: "Checking if all resources have a canonical URL that start with the correct base"
   files: 
     - logical models/*.xml
@@ -19,19 +21,19 @@
   error-message: "Resource canonical URL doesn't start with 'https://fhir.healthdata.be/'"  
 
 - name: url-profiles
+  error: https://fhir.healthdata.be/QA/errors|url-profiles
   status: "Checking if all CBBs canonical URL conform to the profiling guidelines"
   files: 
     - resources/*.xml
-  filter: 
-    - Profile
-    - Extension
+  category: profile 
   predicate: url = 'https://fhir.healthdata.be/StructureDefinition/' + id
-  error-message: "Resource canonical URL pattern doesn't conform to 'https://fhir.healthdata.be/StructureDefinition/[id]'"  
+  error-message: "Profile canonical URL doesn't conform to the profiling guidelines: 'https://fhir.healthdata.be/StructureDefinition/[id]'"  
 
 - name: url-valuesets
+  error: https://fhir.healthdata.be/QA/errors|url-valuesets
   status: "Checking if all ValueSet canonical URLs confrom to the profiling guidelines"
   files: 
      - terminology/*.xml
   filter: ValueSet.exists()
   predicate: ValueSet.url = 'https://fhir.healthdata.be/ValueSet/' + ValueSet.id
-  error-message: "Resource canonical URL doesn't conform to 'https://fhir.healthdata.be/ValueSet/[id]'"
+  error-message: "ValueSet canonical URL doesn't conform to the profiling guidelines: 'https://fhir.healthdata.be/ValueSet/[id]'"
