@@ -1,3 +1,8 @@
+<div style="float:right;width:70px;padding:10px;margin:10">
+<p>{{pagelink:Home/LogicalModels/NL.HdBe-Infuus.page.md, text:NL }} </p>
+</div>
+
+
 # HdBe-Infusion
 
 
@@ -25,7 +30,7 @@ Status: status
      <button class="tablinks" onclick="openTab(event, 'Detailed descriptions')">Detailed Descriptions</button>
      <button class="tablinks" onclick="openTab(event, 'Example')">Example</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff')">Zib diff</button>
-     <button class="tablinks">{{pagelink:Home/FHIR/HdBe-Infusion.page.md, text:FHIR profile}}</button>
+     
   </div>
 
   <div id="Rendered view" class="tabcontent" style="display:block">

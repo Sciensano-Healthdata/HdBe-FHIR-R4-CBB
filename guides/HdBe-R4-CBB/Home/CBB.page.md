@@ -178,7 +178,7 @@
 </table>
   </div>
 
-  <div id="NL" class="tabcontent" style="display: block;border: none;padding-left: 0px;padding-right: 0px;">
+  <div id="NL" class="tabcontent" style="border: none;padding-left: 0px;padding-right: 0px;">
       <table border="0" class="dataframe table">
   <thead>
     <tr style="text-align: right;">
@@ -349,7 +349,7 @@
 </table>
   </div>
 
-   <div id="FR" class="tabcontent" style="display: block;border: none;padding-left: 0px;padding-right: 0px;">
+   <div id="FR" class="tabcontent" style="border: none;padding-left: 0px;padding-right: 0px;">
       FR index will be added later.
   </div>
 </div>

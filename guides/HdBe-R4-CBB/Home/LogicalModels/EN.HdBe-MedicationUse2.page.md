@@ -1,3 +1,8 @@
+<div style="float:right;width:70px;padding:10px;margin:10">
+<p>{{pagelink:Home/LogicalModels/NL.HdBe-MedicatieGebruik2.page.md, text:NL }} </p>
+</div>
+
+
 # HdBe-MedicationUse2
 
 

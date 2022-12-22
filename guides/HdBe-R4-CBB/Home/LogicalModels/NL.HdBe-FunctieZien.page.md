@@ -1,3 +1,8 @@
+<div style="float:right;width:70px;padding:10px;margin:10">
+<p>{{pagelink:Home/LogicalModels/EN.HdBe-VisualFunction.page.md, text:EN }} </p>
+</div>
+
+
 # HdBe-FunctieZien
 
 
