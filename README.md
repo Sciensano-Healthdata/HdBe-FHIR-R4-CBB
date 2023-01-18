@@ -68,7 +68,6 @@ Packages are released using the following settings.
 - Package description can be equal to the project description.
 - Under content, select the following boxes:
     - Convert all resources to **json**.
-
     - Move all resources to the **packages folder**.
     - Move examples to the **examples** folder.
 
