@@ -16,7 +16,7 @@ This last group of scientific data collections, the so-called registries, is cha
 
 The consequences of this diversity for the providers and collectors of this data include reduced efficiency in the registration and processing of the information (a lot of manual data cleaning, retyping and mapping), real privacy risks and the scattered deployment of IT resources and people for the same tasks. Moreover, this context is not motivating for the (highly skilled) employees involved in these data collections (both among the data providers and the researchers). Finally, this situation leads to a high (direct and indirect) financial commitment on the part of data providers, the researchers and their clients.
 
-The healthdata.be team opted to align the standardization of these so-called "real world data" projects with the clinical context (instead of starting from the research context) and to look for an information architecture that can be technically implemented in the various applications used in the Belgian healthcare landscape.
+The healthdata.be team opted to align the standardization of these so-called "real world data" projects with the clinical context (instead of starting from the research context) and to look for an information architecture that can be technically implemented in the varwhenious applications used in the Belgian healthcare landscape.
 
 One of the initiatives studied by the healthdata.be team is the “Registration at the source” project of the Dutch University Medical Centers (UMCs), united in the Dutch Federation of University Medical Centers (NFU). Within this initiative, which is supported by the National ICT Institute in Healthcare (NICTIZ), it was decided to work together in the field of standardization of healthcare data. The result of this collaboration is a set of so-called “Zorginformatiebouwstenen” (or Clinical Building Blocks). These Dutch Zorginformatiebouwstenen are reviewed and adapted to the national landscape by the healthdata.be team and their stakeholders. Next to the zibs, the Belgian governmental eHealth organization forms a strong basis in the adaptation. The results are "Clinical Building Blocks" (CBB) also called "logical data models' published here as FHIR logical models. FHIR has the capability to use the conformance infrastructure (like StructureDefinitions, ValueSets etc) to produce logical models and provides various benefits because the definitions are computable.
 
@@ -27,7 +27,7 @@ CBBs are in principle technology independent. With further use of CBBs, however,
 
 
 ## Usage of CBB's<a name="usage-of-cbbs"></a>
-As the name indicates, CBBs are information blocks to build up use cases. CBBs by themselves do not contain process or use case information. Using CBBs in practice requires adding additional details for proper implementation. For example, two standard use cases based on CBBs are the exchange of LaboratoryTestResults and the PatientSummary. These two use cases select the required CBBs, provide potential annotations to indicate the precise usage of the CBB, and add process information such as which actors are involved and when to exchange information. 
+As the name indicates, CBBs are information blocks to build up use cases. CBBs by themselves do not contain process or use case information. Using CBBs in practice requires adding additional details for proper implementation. For example, two standard use cases based on CBBs are the exchange of LaboratoryTestResults and the ClinicalReportResearch. These two use cases select the required CBBs, provide potential annotations to indicate the precise usage of the CBB, and add process information such as which actors are involved and when to exchange information. 
 
 Besides these two standard use cases, which should cover a majority of required information exchange within the Healthdata.be context, project-specific Data Collection Definition (DCD) exists. DCDs will also be composed of CBBs and (re)use the standard use cases wherever possible. Whereas CBBs are very permissive because they should be applied in various use cases, DCDs may be more stringent by indicating which concepts need to be exchanged and could also introduce concepts not listed in the CBB. 
 
@@ -35,7 +35,7 @@ Besides these two standard use cases, which should cover a majority of required 
 The below diagram offers an overview of the layering of CBBs. A description of the diagram and its three used colors:
 - CBBs are based on zibs, eHealth, and the Healthdata.be stakeholders and are indicated by the blue boxes and dotted lines.
 - The green box indicates this implementation guide that contains all the CBB definitions.
-- All the grey boxes represent projects and use cases built on the CBBs. Two standard use cases are the exchange of LaboratoryTestResult and the PatientSummary. DCDs (represented by DCDx, DCDy and DCDz) can build on top of these standard use cases and/or directly depend on the CBBs. 
+- All the grey boxes represent projects and use cases built on the CBBs. Two standard use cases are the exchange of LaboratoryTestResult and the ClinicalReportResearch. DCDs (represented by DCDx, DCDy and DCDz) can build on top of these standard use cases and/or directly depend on the CBBs. 
 
 <br/><br/>  
 
@@ -47,7 +47,7 @@ node eHealth                      #aliceblue;line:blue;text:blue
 node "Healthdata.be"              #aliceblue;line:blue;text:blue
 node CBB                          #green;line:blue;text:yellow
 node LaboratoryTestResultMessage                  
-node PatientSummaryMessage
+node ClinicalReportResearchMessage
 node DCDx
 node DCDy
 node DCDz
@@ -57,9 +57,9 @@ zibs .. CBB
 eHealth .. CBB
 Healthdata.be .. CBB
 CBB -- LaboratoryTestResultMessage                  
-CBB -- PatientSummaryMessage
+CBB -- ClinicalReportResearchMessage
 CBB -- DCDx 
 LaboratoryTestResultMessage -- DCDy
-PatientSummaryMessage -- DCDz
+ClinicalReportResearchMessage -- DCDz
 </plantuml>
 
