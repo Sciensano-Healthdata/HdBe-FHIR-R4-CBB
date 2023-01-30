@@ -36,6 +36,10 @@
     1. [Logical model examples](#LogicalModelExamples)
     2. [FHIR profile examples](#FHIRProfileExamples)
 
+    **[Technical guidelines](#technical-guidelines)**
+
+12. [Exchange](#exchange)
+
 # General guidelines<a name="general"></a>
 
 ## Introduction <a name="introduction"></a>
@@ -366,3 +370,17 @@ The following conventions exist:
 
 ### FHIR profile examples <a name="FHIRProfileExamples"></a>
 Examples of FHIR profiles are provided in either XML or JSON format and must be a valid profile instance. Every example shall have at least one profile URL in the `.meta.profile` element. Examples are stored in the `/examples` folder.
+
+
+# Technical Guidelines
+
+## Exchange
+
+Data is pushed from data source to data consumer. As the data is defined in a Data Collection Definition and can be different depending on the use case, it need to be persisted as a group.
+
+A FHIR document is used to provide context and clearance regarding the DCD. It tells a story regarding the DCD.
+
+A Composition profile, derived from the LaboratoryTestResult or ClinicalReportResearch Composition profiles is used. It points to relevant DCD profiles, can add constraints and add additional clinical concepts. The Composition is split in relevant sections, each containing relevant codes. Textual guidance is provided on which information is expected at what section. This also includes selection and filter rules.
+
+The Composition is relatively easy to build and author, but also provides control on what is exchanged.
+
