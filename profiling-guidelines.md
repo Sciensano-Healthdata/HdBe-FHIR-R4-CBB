@@ -376,6 +376,9 @@ Examples of FHIR profiles are provided in either XML or JSON format and must be 
 
 ## Exchange
 
+FHIR Documents are used for exchanging information. This has a few implications
+
+
 Data is pushed from data source to data consumer. As the data is defined in a Data Collection Definition and can be different depending on the use case, it need to be persisted as a group.
 
 A FHIR document is used to provide context and clearance regarding the DCD. It tells a story regarding the DCD.
@@ -383,4 +386,8 @@ A FHIR document is used to provide context and clearance regarding the DCD. It t
 A Composition profile, derived from the LaboratoryTestResult or ClinicalReportResearch Composition profiles is used. It points to relevant DCD profiles, can add constraints and add additional clinical concepts. The Composition is split in relevant sections, each containing relevant codes. Textual guidance is provided on which information is expected at what section. This also includes selection and filter rules.
 
 The Composition is relatively easy to build and author, but also provides control on what is exchanged.
+
+
+Described in resource:
+The Composition resource organizes clinical and administrative content into sections, each of which contains a narrative, and references other resources for supporting data. The narrative content of the various sections in a Composition are supported by the resources referenced in the section entries. The complete set of content to make up a document includes the Composition resource together with various resources pointed to or indirectly connected to the Composition. See the FHIR Documents documentation for guidance on how a Composition is used when creating a document bundle. 
 
