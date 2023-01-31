@@ -376,7 +376,12 @@ Examples of FHIR profiles are provided in either XML or JSON format and must be 
 
 ## Exchange
 
-FHIR Documents are used for exchanging information. This has a few implications
+All information is sent to Sciensano using FHIR documents. These [FHIR documents](https://www.hl7.org/fhir/documents.html) are defined as: _FHIR resources can be used to build documents that represent a composition: a coherent set of information that is a statement of healthcare information, including clinical observations and services. A document is an immutable set of resources with a fixed presentation that is authored and/or attested by humans, organizations and devices._ 
+
+All FHIR documents have the same structure. The document itself is a `Bundle` resource of type `document`. The first resource within the Bundle is always a `Composition` resource, then followed by a series of other resources, which are referenced within the Composition resource.
+
+Using FHIR documents have a few implications:
+
 
 
 Data is pushed from data source to data consumer. As the data is defined in a Data Collection Definition and can be different depending on the use case, it need to be persisted as a group.
