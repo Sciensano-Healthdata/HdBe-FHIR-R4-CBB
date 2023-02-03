@@ -378,22 +378,11 @@ Examples of FHIR profiles are provided in either XML or JSON format and must be 
 
 All information is sent to Sciensano using FHIR documents. These [FHIR documents](https://www.hl7.org/fhir/documents.html) are defined as: _FHIR resources can be used to build documents that represent a composition: a coherent set of information that is a statement of healthcare information, including clinical observations and services. A document is an immutable set of resources with a fixed presentation that is authored and/or attested by humans, organizations and devices._ 
 
-All FHIR documents have the same structure. The document itself is a `Bundle` resource of type = `document`. The first resource within the Bundle is always a `Composition` resource, then followed by a series of other resources, which are referenced within the Composition resource.
-
-The composition is the foundation of the doucment. It:
+All FHIR documents have the same structure. The document itself is a `Bundle` resource of type = `document`. The first resource within the Bundle is always a `Composition` resource, then followed by a series of other resources, which are referenced within the Composition resource. The composition is the foundation of the document. It:
 
  - provides identity and its purpose, and sets the context of the document
  - carries key information such as the subject and author, and who attests to the document
  - divides the document up into a series of sections, each with their own narrative
 
-A Composition profile, derived from the LaboratoryTestResult or ClinicalReportResearch Composition profiles is used. It points to relevant DCD profiles, can add constraints and add additional clinical concepts. The Composition is split in relevant sections, each containing representive codes. Textual guidance is provided on which information is expected at what section. This also includes selection and filter rules.
-
-
-
-
-The Composition is relatively easy to build and author, but also provides control on what is exchanged.
-
-
-Described in resource:
-The Composition resource organizes clinical and administrative content into sections, each of which contains a narrative, and references other resources for supporting data. The narrative content of the various sections in a Composition are supported by the resources referenced in the section entries. The complete set of content to make up a document includes the Composition resource together with various resources pointed to or indirectly connected to the Composition. See the FHIR Documents documentation for guidance on how a Composition is used when creating a document bundle. 
+A Composition profile, derived from the LaboratoryTestResult-Composition or ClinicalReportResearch-Composition profile, is used. It points to relevant DCD profiles, and can add constraints and additional clinical concepts. The Composition is split in relevant sections, each containing representative codes. Textual guidance is provided on which information is expected at what section. This also includes selection and filter rules. The Composition is relatively easy to build and author, but also provides control on what is exchanged.
 
