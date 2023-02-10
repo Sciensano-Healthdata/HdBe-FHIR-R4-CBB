@@ -392,12 +392,21 @@ We dediced on using the FHIR Document for exchange, based on the [Exchange Appro
 
 |Step | Decision | 
 | -- | -- | 
-| Consumer initiates? | **No**: The data should be pushed, as the data source knows the event that triggers the need for the exchange. | 
-| Configured by consumer? | **No**: Configuration by the consumer adds complexity for both the data source and the data consumer, which is unwanted. This also gives the data consumer full control over the data, which is not desired either. | 
-| Direct connection? (push) | **Yes**: There will be a direct connection between the  data source and the data consumer. |
+| Consumer initiates? | **No**: The data SHALL be pushed, as the data source knows the event that triggers the need for the exchange. | 
+| Configured by consumer? | **No**: Configuration by the consumer adds complexity for both the data source and the data consumer, which is unwanted. This also gives the data consumer full control over the data perstistence, which is not desired either. | 
+| Direct connection? (push) | **Yes**: There will be a direct connection between the data source and the data consumer. |
 | Data source directs consumer persistence? | **Yes**: The data source shall have control regarding the persistence, as the data source is the owner of the data. | 
 | Persist as a group? | **Yes**: The resources need to be packed as a set and to be stored together as they are only relevant together in context of a DCD. | 
-| Focus on presentation / story-telling? | **Yes**: It is necessary to provide storytelling regarding the contents of the resources and thus the use of FHIR documents. | 
+| Focus on presentation / story-telling? | **Yes**: The data is more then a set of resource stored togethere and it is necessary to provide storytelling regarding the contents of the resources. |
+| **Conclusion:** | This leads to exchanging the data using FHIR documents.| 
+
+
 
 
 ### Updating data
+
+
+From eHealth implementation: 
+The Composition relatesTo (operationally determined - SHALL be used when needed to express a document replaces a previously created document.). This is found in Composition.relatesTo and when used SHALL take the value 'replaces'. The element Composition.relatesTo.target.targetIdentifier SHALL give the unique document identifier (as described supra) of the other FHIR document.
+
+    please note it MAY be possible a FHIR document that was initially marked as 'final' is still followed up later by a new 'final' version. As such implementers SHALL take note whatever status a FHIR document has, it MAY always be replaced.
