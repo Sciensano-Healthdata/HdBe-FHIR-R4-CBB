@@ -2,4 +2,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+|`DeviatingBreathingPattern` | Terminology | Replaced NullFlavor Other code with SNOMED CT Other code and added Unknown. |
