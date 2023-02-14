@@ -2,4 +2,6 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
+|`HeartRateMeasurementMethod` | terminology | Added SNOMED CT code for Unknown and Other |
+|`HeartbeatRegularity` | terminology | Added SNOMED CT code for Unknown |
+|`InterpretationHeartRate` | terminology | Added SNOMED CT code for Unknown |
