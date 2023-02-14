@@ -2,4 +2,7 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-|`DeviatingBreathingPattern` | Terminology | Replaced NullFlavor Other code with SNOMED CT Other code and added Unknown. |
+|`DeviatingBreathingPattern` | terminology | Replaced NullFlavor Other code with SNOMED CT Other code and added Unknown. |
+|`Rhythm`| terminology | Added SNOMED CT code for Unknown |
+|`Depth`| terminology | Added SNOMED CT code for Unknown and Other |
+|`AdministrationDevice`| terminology | Replaced NullFlavor Other code with SNOMED CT Other code and added Unknown. |
