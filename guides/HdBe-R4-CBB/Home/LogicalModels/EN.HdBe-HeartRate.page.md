@@ -4,12 +4,7 @@
 
 
 # HdBe-HeartRate
-
-<div class="notebox-warning">
-    <p><strong>WARNING</strong> This page contains a draft CBB, as raw output from the zib export and automatic conversion to CBB. 
-    It requires thorough review and adaption to the Belgian realm. This CBB is merely added for informative use.</p>
-    </div>
-    
+ 
 
 @```
 from StructureDefinition
