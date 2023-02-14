@@ -1,4 +1,4 @@
-## zib [zib name + version](https://zibs.nl/wiki/[zib name + version(release)]) difference
+## zib [HeartRate-v3.4](https://zibs.nl/wiki/HeartRate-v3.4(2020EN)) difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
