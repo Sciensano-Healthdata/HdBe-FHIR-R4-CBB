@@ -1,260 +1,260 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBe-HeartRate"/>
-   <language value="en-US"/>
-   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
-      <valuePeriod>
-         <start value="2020-09-01T00:00:00+02:00"/>
-      </valuePeriod>
-   </extension>
-   <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HeartRate"/>
-   <name value="HdBeHeartRate">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="HdBe-Hartfrequentie"/>
-         </extension>
+  <id value="HdBe-HeartRate" />
+  <language value="en-US" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+02:00" />
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HeartRate" />
+  <name value="HdBeHeartRate">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
       </extension>
-   </name>
-   <title value="HdBe HeartRate"/>
-   <status value="draft"/>
-   <date value="2022-07-07T15:04:03.2592055+00:00"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
-      <name value="Service portal – healthdata.be"/>
-      <telecom>
-         <system value="url"/>
-         <value value="https://sciensano.service-now.com/sp"/>
-         <use value="work"/>
-      </telecom>
-   </contact>
-   <description value="The heart rate is the number of heartbeats per minute.&#xD;&#xA;#### Purpose&#xD;&#xA;Obtaining information on circulation and heart function by measuring the heartrate.&#xD;&#xA;#### Evidence Base&#xD;&#xA;Heart rate (electric or auscultatory rhythm of the ventricles) and pulse rate (tangible output in the peripheral arteries) are physiologically different things, but produce the same values in normal circulation (beats per minute) and are therefore used interchangeably by many healthcare professionals (and laymen). This is however incorrect, as a patient’s pulse rate can be lower than their heart rate. Nevertheless, in daily practice, the pulse is usually palpated to measure heart rate and also written down as the heart rate. For this reason, the HeartRate information model, in addition to the PulseRate information model, offers the option to enter palpation as the HeartRateMeasurementMethod.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;#### Instructions&#xD;&#xA;A Holter registration is a 24-hour ECG: an ECG with a very long measuring period.">
-      <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-         <extension url="lang">
-            <valueCode value="nl-NL"/>
-         </extension>
-         <extension url="content">
-            <valueMarkdown value="De hartfrequentie is het aantal slagen per minuut dat het hart maakt.&#xD;&#xA;#### Purpose&#xD;&#xA;Het verkrijgen van informatie over de bloedcirculatie en hartfunctie door middel van het meten van de hartslag.&#xD;&#xA;#### Evidence Base&#xD;&#xA;Hartfrequentie (elektrisch of auscultatoir ritme van de ventrikels) en polsfrequentie (voelbare output in perifere arterie) zijn fysiologisch verschillende zaken, maar leveren bij normale circulatie dezelfde waarden op (slagen per minuut) en worden daarom door veel zorgverleners (en leken) door elkaar heen gebruikt. Dit is in feite niet correct, want de polsfrequentie kan lager zijn dan de hartfrequentie. In de dagelijkse praktijk wordt niettemin de pols vooral gepalpeerd om de hartfrequentie te meten, en ook als hartfrequentie genoteerd. Om deze reden biedt de bouwsteen Hartfrequentie, naast de bouwsteen Polsfrequentie, de mogelijkheid palpatie als HartslagMeetMethode op te geven. &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;#### Instructions&#xD;&#xA;Een Holter registratie is een 24 uurs ECG: een ECG met een zeer lange meetperiode.&#xD;&#xA;**References**&#xD;&#xA;1. Parelsnoer DCM Hartslag v0.98. [Online] Beschikbaar op: http://www.nictiz.nl/uploaded/FILES/htmlcontent/dcm/parelsnoer/Hartslag%20v0.64.pdf [Geraadpleegd: 19 februari 2015].&#xD;&#xA;2. openEHR-EHR-OBSERVATION.heart_rate.v1 [Online] Beschikbaar op: http://www.openehr.org/knowledge/ [Geraadpleegd: 19 februari 2015].&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (15-02-2013)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (01-07-2013)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.2 (01-04-2015)&#xD;&#xA;Bevat: [ZIB-141](https://bits.nictiz.nl/browse/ZIB-141), [ZIB-234](https://bits.nictiz.nl/browse/ZIB-234), [ZIB-308](https://bits.nictiz.nl/browse/ZIB-308), [ZIB-360](https://bits.nictiz.nl/browse/ZIB-360).&#xD;&#xA;&#xD;&#xA;Incl. algemene wijzigingsverzoeken: &#xD;&#xA;[ZIB-94](https://bits.nictiz.nl/browse/ZIB-94), [ZIB-154](https://bits.nictiz.nl/browse/ZIB-154), [ZIB-200](https://bits.nictiz.nl/browse/ZIB-200), [ZIB-201](https://bits.nictiz.nl/browse/ZIB-201), [ZIB-309](https://bits.nictiz.nl/browse/ZIB-309), [ZIB-324](https://bits.nictiz.nl/browse/ZIB-324), [ZIB-326](https://bits.nictiz.nl/browse/ZIB-326).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.1 (04-09-2017)&#xD;&#xA;Bevat: [ZIB-431](https://bits.nictiz.nl/browse/ZIB-431), [ZIB-549](https://bits.nictiz.nl/browse/ZIB-549), [ZIB-564](https://bits.nictiz.nl/browse/ZIB-564).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.2 (01-10-2018)&#xD;&#xA;Bevat: [ZIB-509](https://bits.nictiz.nl/browse/ZIB-509).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.3 (06-07-2019)&#xD;&#xA;Bevat: [ZIB-732](https://bits.nictiz.nl/browse/ZIB-732).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.4 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-881](https://bits.nictiz.nl/browse/ZIB-881)."/>
-         </extension>
+      <extension url="content">
+        <valueMarkdown value="HdBe-Hartfrequentie" />
       </extension>
-   </description>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-   <fhirVersion value="4.0.1"/>
-   <kind value="logical"/>
-   <abstract value="true"/>
-   <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HeartRate"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
-   <derivation value="specialization"/>
-   <differential>
-      <element id="HeartRate">
-         <path value="HeartRate"/>
-         <short value="HeartRate">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Hartfrequentie"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Root concept of the HeartRate information model. This root concept contains all data elements of the HeartRate information model.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Rootconcept van de bouwsteen Hartfrequentie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Hartfrequentie."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="*"/>
-      </element>
-      <element id="HeartRate.HeartRateValue">
-         <path value="HeartRate.HeartRateValue"/>
-         <short value="HeartRateValue">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="HartfrequentieWaarde"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="The heart rate measured as the number of heartbeats per minute.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="De hartfrequentie gemeten als aantal slagen per minuut."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <type>
-            <code value="Quantity"/>
-         </type>
-      </element>
-      <element id="HeartRate.HeartRateDateTime">
-         <path value="HeartRate.HeartRateDateTime"/>
-         <short value="HeartRateDateTime">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="HartfrequentieDatumTijd"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Date and time of the heart rate measurement.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Datum en tijd van waarneming van de hartfrequentie."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="1"/>
-         <max value="1"/>
-         <type>
-            <code value="dateTime"/>
-         </type>
-      </element>
-      <element id="HeartRate.HeartRateMeasurementMethod">
-         <path value="HeartRate.HeartRateMeasurementMethod"/>
-         <short value="HeartRateMeasurementMethod">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="HartslagMeetMethode"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="The method used to count and observe the heart rate.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="De wijze waarop de hartslag is geteld en geobserveerd."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
-         <binding>
-            <strength value="extensible"/>
-            <description value="HeartRateMeasurementMethod codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/HartslagMeetMethode"/>
-         </binding>
-      </element>
-      <element id="HeartRate.Comment">
-         <path value="HeartRate.Comment"/>
-         <short value="Comment">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Toelichting"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Comment on any problems or factors that may influence the measurement.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Toelichting over eventuele problemen of factoren die van invloed kunnen zijn op de meting."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="string"/>
-         </type>
-      </element>
-      <element id="HeartRate.HeartbeatRegularity">
-         <path value="HeartRate.HeartbeatRegularity"/>
-         <short value="HeartbeatRegularity">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="HartslagRegelmatigheid"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Regularity of the heartbeat.">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Regelmatigheid van de hartslag test."/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
-         <binding>
-            <strength value="required"/>
-            <description value="HeartbeatRegularity codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/HartslagRegelmatigheid"/>
-         </binding>
-      </element>
-      <element id="HeartRate.InterpretationHeartRate">
-         <path value="HeartRate.InterpretationHeartRate"/>
-         <short value="InterpretationHeartRate">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="InterpretatieFrequentie"/>
-               </extension>
-            </extension>
-         </short>
-         <definition value="Interpretation heart rate">
-            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-               <extension url="lang">
-                  <valueCode value="nl-NL"/>
-               </extension>
-               <extension url="content">
-                  <valueMarkdown value="Interpretatie van de hartfrequentie"/>
-               </extension>
-            </extension>
-         </definition>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
-         <binding>
-            <strength value="extensible"/>
-            <description value="InterpretationHeartRate codes"/>
-            <valueSet value="https://fhir.healthdata.be/ValueSet/InterpretatieFrequentie"/>
-         </binding>
-      </element>
-   </differential>
+    </extension>
+  </name>
+  <title value="HdBe HeartRate" />
+  <status value="draft" />
+  <date value="2022-07-07T15:04:03.2592055+00:00" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="The heart rate is the number of heartbeats per minute.&#xD;&#xA;#### Purpose&#xD;&#xA;Obtaining information on circulation and heart function by measuring the heartrate.&#xD;&#xA;#### Evidence Base&#xD;&#xA;Heart rate (electric or auscultatory rhythm of the ventricles) and pulse rate (tangible output in the peripheral arteries) are physiologically different things, but produce the same values in normal circulation (beats per minute) and are therefore used interchangeably by many healthcare professionals (and laymen). This is however incorrect, as a patient’s pulse rate can be lower than their heart rate. Nevertheless, in daily practice, the pulse is usually palpated to measure heart rate and also written down as the heart rate. For this reason, the HeartRate information model, in addition to the PulseRate information model, offers the option to enter palpation as the HeartRateMeasurementMethod.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;#### Instructions&#xD;&#xA;A Holter registration is a 24-hour ECG: an ECG with a very long measuring period.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl-NL" />
+      </extension>
+      <extension url="content">
+        <valueMarkdown value="De hartfrequentie is het aantal slagen per minuut dat het hart maakt.&#xD;&#xA;#### Purpose&#xD;&#xA;Het verkrijgen van informatie over de bloedcirculatie en hartfunctie door middel van het meten van de hartslag.&#xD;&#xA;#### Evidence Base&#xD;&#xA;Hartfrequentie (elektrisch of auscultatoir ritme van de ventrikels) en polsfrequentie (voelbare output in perifere arterie) zijn fysiologisch verschillende zaken, maar leveren bij normale circulatie dezelfde waarden op (slagen per minuut) en worden daarom door veel zorgverleners (en leken) door elkaar heen gebruikt. Dit is in feite niet correct, want de polsfrequentie kan lager zijn dan de hartfrequentie. In de dagelijkse praktijk wordt niettemin de pols vooral gepalpeerd om de hartfrequentie te meten, en ook als hartfrequentie genoteerd. Om deze reden biedt de bouwsteen Hartfrequentie, naast de bouwsteen Polsfrequentie, de mogelijkheid palpatie als HartslagMeetMethode op te geven. &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;#### Instructions&#xD;&#xA;Een Holter registratie is een 24 uurs ECG: een ECG met een zeer lange meetperiode.&#xD;&#xA;**References**&#xD;&#xA;1. Parelsnoer DCM Hartslag v0.98. [Online] Beschikbaar op: http://www.nictiz.nl/uploaded/FILES/htmlcontent/dcm/parelsnoer/Hartslag%20v0.64.pdf [Geraadpleegd: 19 februari 2015].&#xD;&#xA;2. openEHR-EHR-OBSERVATION.heart_rate.v1 [Online] Beschikbaar op: http://www.openehr.org/knowledge/ [Geraadpleegd: 19 februari 2015].&#xD;&#xA;**Revision History**&#xD;&#xA;Publicatieversie 1.0 (15-02-2013)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.1 (01-07-2013)&#xD;&#xA;&#xD;&#xA;Publicatieversie 1.2 (01-04-2015)&#xD;&#xA;Bevat: [ZIB-141](https://bits.nictiz.nl/browse/ZIB-141), [ZIB-234](https://bits.nictiz.nl/browse/ZIB-234), [ZIB-308](https://bits.nictiz.nl/browse/ZIB-308), [ZIB-360](https://bits.nictiz.nl/browse/ZIB-360).&#xD;&#xA;&#xD;&#xA;Incl. algemene wijzigingsverzoeken: &#xD;&#xA;[ZIB-94](https://bits.nictiz.nl/browse/ZIB-94), [ZIB-154](https://bits.nictiz.nl/browse/ZIB-154), [ZIB-200](https://bits.nictiz.nl/browse/ZIB-200), [ZIB-201](https://bits.nictiz.nl/browse/ZIB-201), [ZIB-309](https://bits.nictiz.nl/browse/ZIB-309), [ZIB-324](https://bits.nictiz.nl/browse/ZIB-324), [ZIB-326](https://bits.nictiz.nl/browse/ZIB-326).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.0 (01-05-2016)&#xD;&#xA;Bevat: [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453)&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.1 (04-09-2017)&#xD;&#xA;Bevat: [ZIB-431](https://bits.nictiz.nl/browse/ZIB-431), [ZIB-549](https://bits.nictiz.nl/browse/ZIB-549), [ZIB-564](https://bits.nictiz.nl/browse/ZIB-564).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.2 (01-10-2018)&#xD;&#xA;Bevat: [ZIB-509](https://bits.nictiz.nl/browse/ZIB-509).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.3 (06-07-2019)&#xD;&#xA;Bevat: [ZIB-732](https://bits.nictiz.nl/browse/ZIB-732).&#xD;&#xA;&#xD;&#xA;Publicatieversie 3.4 (01-09-2020)&#xD;&#xA;Bevat: [ZIB-881](https://bits.nictiz.nl/browse/ZIB-881)." />
+      </extension>
+    </extension>
+  </description>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="true" />
+  <type value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HeartRate" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="HeartRate">
+      <path value="HeartRate" />
+      <short value="HeartRate">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Hartfrequentie" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Root concept of the HeartRate information model. This root concept contains all data elements of the HeartRate information model.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Rootconcept van de bouwsteen Hartfrequentie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Hartfrequentie." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="*" />
+    </element>
+    <element id="HeartRate.HeartRateValue">
+      <path value="HeartRate.HeartRateValue" />
+      <short value="HeartRateValue">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="HartfrequentieWaarde" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The heart rate measured as the number of heartbeats per minute.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De hartfrequentie gemeten als aantal slagen per minuut." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="HeartRate.HeartRateDateTime">
+      <path value="HeartRate.HeartRateDateTime" />
+      <short value="HeartRateDateTime">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="HartfrequentieDatumTijd" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Date and time of the heart rate measurement.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Datum en tijd van waarneming van de hartfrequentie." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="HeartRate.HeartRateMeasurementMethod">
+      <path value="HeartRate.HeartRateMeasurementMethod" />
+      <short value="HeartRateMeasurementMethod">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="HartslagMeetMethode" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="The method used to count and observe the heart rate.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="De wijze waarop de hartslag is geteld en geobserveerd." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="HeartRateMeasurementMethod codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/HeartRateMeasurementMethod" />
+      </binding>
+    </element>
+    <element id="HeartRate.Comment">
+      <path value="HeartRate.Comment" />
+      <short value="Comment">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toelichting" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Comment on any problems or factors that may influence the measurement.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Toelichting over eventuele problemen of factoren die van invloed kunnen zijn op de meting." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="HeartRate.HeartbeatRegularity">
+      <path value="HeartRate.HeartbeatRegularity" />
+      <short value="HeartbeatRegularity">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="HartslagRegelmatigheid" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Regularity of the heartbeat.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Regelmatigheid van de hartslag test." />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="HeartbeatRegularity codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/HeartbeatRegularity" />
+      </binding>
+    </element>
+    <element id="HeartRate.InterpretationHeartRate">
+      <path value="HeartRate.InterpretationHeartRate" />
+      <short value="InterpretationHeartRate">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="InterpretatieFrequentie" />
+          </extension>
+        </extension>
+      </short>
+      <definition value="Interpretation heart rate">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl-NL" />
+          </extension>
+          <extension url="content">
+            <valueMarkdown value="Interpretatie van de hartfrequentie" />
+          </extension>
+        </extension>
+      </definition>
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="InterpretationHeartRate codes" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/InterpretationHeartRate" />
+      </binding>
+    </element>
+  </differential>
 </StructureDefinition>
