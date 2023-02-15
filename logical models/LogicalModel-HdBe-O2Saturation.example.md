@@ -1,24 +1,8 @@
 ## Example instances
 
-| [CBB name]      |                   |
+| O2Saturation    |                   |
 |-----------------|-------------------|
-| [Concept name ] | [example value]   |
-
-
-// example of NameInformation
-```
-## Example instances
-
-| NameInformation      |                   |
-|----------------------|-------------------|
-| FirstNames | Johanna Petronella Maria   
-| Initials | J.P.M. 
-| GivenName | Jo 
-| NameUsage | Geslachtsnaam partner gevolgd door eigen geslachtsnaam
-| LastName.Prefix | van
-| LastName.LastName | Putten
-| LastNamePartner.PartnerPrefix | van der
-| LastNamePartner.PartnerLastName | Giessen
-| Titles |
-
-```
+| SpO2value                 | 92%                           |
+| O2saturationDateTime      | 2013-02-08T6:43               |
+| Comment                   | Increases fast when addressed |
+| ExtraOxygenAdministration | Yes                           |
