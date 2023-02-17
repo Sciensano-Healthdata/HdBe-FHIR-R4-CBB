@@ -1,4 +1,4 @@
-## zib [zib name + version](https://zibs.nl/wiki/[zib name + version(release)]) difference
+## zib [Respiration-v3.2](https://zibs.nl/wiki/Respiration-v3.2(2020EN)) difference
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
