@@ -9,8 +9,8 @@
 | BreathingDateTime         | 2015-03-13T14:47                                          |
 | ExtraOxygenAdministration | Yes                                                       |
 | Comment                   |                                                           |
-| AdministeredOxygen        |                                                           |
-| FlowRate                  | 2 l/min                                                   |
-| FiO2                      | 0,29l                                                     |
-| AdministrationDevice      |                                                           |
-| ProductType               | 336623009 - Oxygen nasal cannula (code by SNOMED-CT)      |
+| **AdministeredOxygen**        |                                                           |
+| AdministeredOxygen.FlowRate                  | 2 l/min                                                   |
+| AdministeredOxygen.FiO2                      | 0,29l                                                     |
+| AdministeredOxygen.AdministrationDevice.MedicalDevice.ProductType      |       336623009 - Oxygen nasal cannula (code by SNOMED-CT)    |
+
