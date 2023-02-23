@@ -7,4 +7,4 @@
 |`PatientIdentificationNumber` | textual | Replaced the Dutch context (BSN) with the Belgian equivalent (NISS-INSZ). |
 |`DateOfBirth` | textual | Removed text regarding mandatory date of birth. |
 |`Gender` | textual | Extended definition to clarify that the concept is about administrative gender rather then the patient's identified sex.  |
-|`MultipleBirthOrder` | element | Added element which defines the order of birth. [ZIB-1670](https://bits.nictiz.nl/browse/ZIB-1670)|
+|`MultipleBirthOrder` | element | Added element which defines the order of birth. Although reported for inclusion in the zibs [ZIB-1670](https://bits.nictiz.nl/browse/ZIB-1670)|, it has been deemed to specific. It does however apply for the use cases within Sciensano and is therefore added to the CBB.   
