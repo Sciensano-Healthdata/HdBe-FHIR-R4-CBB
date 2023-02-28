@@ -1,6 +1,6 @@
 ## Example instances
 
-| HearthRate      |                   |
+| HeartRate       |                   |
 |-----------------|-------------------|
 | HeartRateValue	         | 126/min                                          |
 | HeartRateDateTime	         |                                                  |
