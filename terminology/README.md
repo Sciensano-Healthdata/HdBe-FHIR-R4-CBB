@@ -19,12 +19,16 @@ A ValueSet resource instance specifies a set of codes drawn from one or more cod
         3. CodeSystems of which concepts are defined.
 8. To obtain correct translations of ValueSets: Start SnowStorm and the HdBe-FHIR-R4-Tooling-GUI file in the HdBe-FHIR-R4-Tooling repository and pick option 2., which gathers the NL and FR designations for ValueSets. More info on that process can be found in that repository.
 
-The workflow works the same for ConceptMaps.
+The workflow is identical for ConceptMaps.
 
 ### CodeSystems
 A CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
 
-To-do
+A CodeSystem is only created when no existing code system represent a desired code for a ValueSet. In this project, creation of a CodeSystem is approached together with a request to the Terminology Center to add the code to a Externally Published code system, such as SNOMED-CT, LOINC or ReTaM. This benefits the reuse and implementation of codes.
+
+A CodeSystem is always created for a specific ValueSet and both names align to make their relation visible.
+1. Use the CodeSystem-[template].xml and rename it to the ValueSet name.
+2. Also rename all other [template] instances to align with the ValueSet name.
 
 ### NamingSystem
 A curated namespace that issues unique symbols within that namespace for the identification of concepts, people, devices, etc.
