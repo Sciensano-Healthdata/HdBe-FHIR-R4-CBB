@@ -142,7 +142,7 @@ Template for changelog:
 |-----------------|-------------------|-----------------------------------------|
 |`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
 ```
-Example:
+Examples:
 ```
 ## zib [Patient-v3.2](https://zibs.nl/wiki/Patient-v3.2(2020EN)) difference
 
