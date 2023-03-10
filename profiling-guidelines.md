@@ -91,7 +91,7 @@ A specific element can then be mapped using:
     <path value="Patient.identifier" />
     <mapping>
         <identity value="HdBe-Patient" />
-        <map value="patient_identification_number" />
+        <map value="Patient.PatientIdentificationNumber" />
     </mapping>
 </element>
 ```
@@ -99,7 +99,7 @@ A specific element can then be mapped using:
 
 Mappings should only be added. There is no need to replace existing mappings as they are valid mappings and provide traceability to the original profiles. It shows the relation between zib and HdBe concepts.
 
-### Cardinalities <a name="Cardinalities"></a>
+### Cardinalities <a name="cardinalities"></a>
 The functional description will specify the cardinality for each concept as a minimum required and maximum allowed number of times it may occur, which is the same mechanism as in FHIR. However, one needs to be careful as the cardinality can only be restricted in derived profiles, and never widened. Being too strict could thus hinder the re-use of these profiles. This is especially true for cardinalities in CBBs, which should be interpreted as 'purely conceptual'; a use case might allow for data that conceptually always should be there to be absent in practice.
 
 For CBB profiles:
@@ -146,10 +146,16 @@ Example:
 ```
 ## zib [Patient-v3.2](https://zibs.nl/wiki/Patient-v3.2(2020EN)) difference
 
-| Concept     | Category          | Description of change                   |
-|-------------|-------------------|-----------------------------------------|-----------------|
-|`patient_identification_number`|textual|Replaced Dutch context (BSN) in the definition with patient identification according to SSIN (NISS-INSZ).
-| `specimen.container_type`| terminology | Relaxed binding from required to preferred. ([zib ticket #1552](https://bits.nictiz.nl/browse/ZIB-1552))|
+| Concept     | Category          | Description            |
+|-------------|-------------------|------------------------|
+|`PatientIdentificationNumber` | textual | Replaced the Dutch context (BSN) with the Belgian equivalent (NISS-INSZ). |
+  
+ 
+## zib [LaboratoryTestResult-v4.6](https://zibs.nl/wiki/LaboratoryTestResult-v4.6(2020EN)) difference
+
+| Concept         | Category          | Description            |  
+|-----------------|-------------------|------------------------|
+|`Specimen.ContainerType`| terminology | Relaxed binding from required to preferred. ([zib ticket #1552](https://bits.nictiz.nl/browse/ZIB-1552))|
 ```
 
 ### Definition of changelog's category<a name="changelog_def"></a>
