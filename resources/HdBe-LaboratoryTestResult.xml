@@ -128,9 +128,6 @@
       <comment value="If this resource represents a singular test result or a single test in a cluster/panel, this will be the status of this particular test result. However, if it represents the overall result of a panel/cluster, this status should represent the status of the panel/cluster and should be in accordance with the test result statuses of the individual tests." />
       <alias value="TestUitslagStatus" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ObservationStatus" />
-        </extension>
         <strength value="required" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/TestResultStatus" />
       </binding>
@@ -183,9 +180,6 @@
       <alias value="ResultaatType" />
       <max value="1" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ObservationCategory" />
-        </extension>
         <strength value="required" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/ResultType" />
       </binding>
@@ -330,9 +324,6 @@
       <definition value="Attention codes indicating whether the result of a quantitative test is above or below certain reference values or interpreting the result otherwise.(Resistent). The values Resistant, Intermediate en Susceptible are used with microbiological test results." />
       <alias value="InterpretatieVlaggen" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ObservationInterpretation" />
-        </extension>
         <strength value="extensible" />
         <description value="Use ConceptMap 'ResultFlags-to-ObservationInterpretation' to translate CBB terminology to profile terminology in ValueSet 'Observation-interpretation'" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/ResultFlags">
@@ -404,9 +395,6 @@
       <definition value="The test method used to obtain the result." />
       <alias value="Testmethode" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ObservationMethod" />
-        </extension>
         <strength value="required" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/TestMethod" />
       </binding>
