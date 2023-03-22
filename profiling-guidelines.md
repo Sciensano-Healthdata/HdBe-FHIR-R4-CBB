@@ -69,7 +69,7 @@ Changes to the zib are recorded in a [changelog file](#changelog) for every CBB.
 The FHIR conformance resources will be created based on the healthdata.be CBBs.
 
 #### Use case specific models<a name="usecasespecificmodels"></a>
-Use cases and exchange patterns use and potentially refine the healthdata.be CBBs information model to specific situations or applications.
+Use cases and exchange patterns use and potentially refine the healthdata.be CBBs information model to specific situations or applications. Use case specific profiles shall only be derived from the HdBe-profiles to further restrict or enhance these profiles for a specific use case. We do not create derived profiles if its sole purpose is keeping referential integrity.
 
 ### Associating the logical definition to StructureDefinitions <a name="associatingthelogicaldefinitiontostructuredefinitions"></a>
 Any StructureDefinition that profiles a Resource does so because there is some kind of logical definition "dictating" how. Profiles SHALL have a traceable relationship with their logical counterpart(s).
@@ -91,7 +91,7 @@ A specific element can then be mapped using:
     <path value="Patient.identifier" />
     <mapping>
         <identity value="HdBe-Patient" />
-        <map value="patient_identification_number" />
+        <map value="Patient.PatientIdentificationNumber" />
     </mapping>
 </element>
 ```
@@ -99,7 +99,7 @@ A specific element can then be mapped using:
 
 Mappings should only be added. There is no need to replace existing mappings as they are valid mappings and provide traceability to the original profiles. It shows the relation between zib and HdBe concepts.
 
-### Cardinalities <a name="Cardinalities"></a>
+### Cardinalities <a name="cardinalities"></a>
 The functional description will specify the cardinality for each concept as a minimum required and maximum allowed number of times it may occur, which is the same mechanism as in FHIR. However, one needs to be careful as the cardinality can only be restricted in derived profiles, and never widened. Being too strict could thus hinder the re-use of these profiles. This is especially true for cardinalities in CBBs, which should be interpreted as 'purely conceptual'; a use case might allow for data that conceptually always should be there to be absent in practice.
 
 For CBB profiles:
@@ -142,14 +142,20 @@ Template for changelog:
 |-----------------|-------------------|-----------------------------------------|
 |`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
 ```
-Example:
+Examples:
 ```
 ## zib [Patient-v3.2](https://zibs.nl/wiki/Patient-v3.2(2020EN)) difference
 
-| Concept     | Category          | Description of change                   |
-|-------------|-------------------|-----------------------------------------|-----------------|
-|`patient_identification_number`|textual|Replaced Dutch context (BSN) in the definition with patient identification according to SSIN (NISS-INSZ).
-| `specimen.container_type`| terminology | Relaxed binding from required to preferred. ([zib ticket #1552](https://bits.nictiz.nl/browse/ZIB-1552))|
+| Concept     | Category          | Description            |
+|-------------|-------------------|------------------------|
+|`PatientIdentificationNumber` | textual | Replaced the Dutch context (BSN) with the Belgian equivalent (NISS-INSZ). |
+  
+ 
+## zib [LaboratoryTestResult-v4.6](https://zibs.nl/wiki/LaboratoryTestResult-v4.6(2020EN)) difference
+
+| Concept         | Category          | Description            |  
+|-----------------|-------------------|------------------------|
+|`Specimen.ContainerType`| terminology | Relaxed binding from required to preferred. ([zib ticket #1552](https://bits.nictiz.nl/browse/ZIB-1552))|
 ```
 
 ### Definition of changelog's category<a name="changelog_def"></a>
@@ -325,7 +331,7 @@ However, for the CBBs, we have decided not to take over these DefintionCodes bec
 ### Constraining a target CBB <a name="ConstrainingCBB"></a>  
 A few CBBs (e.g. [VisualFunction](https://zibs.nl/wiki/VisualFunction-v3.1(2020EN))) constrain a target CBB. To visualize this in a Logical Model, we defined the following guidelines, which should be modelled outside of Forge:
 - Add an element of the reference type with a reference to the target CBB. Match the cardinality with the cardinality of the zib. Add the following comment to this element: _"This CBB ([name CBB]) constrains the target CBB ([name target CBB]). The following child elements describe only the differences relative to the CBB in the target reference."_
-- Add an child element of the BackBoneElement type and give it the name of the target CBB. Set the cardinality to 1..1.
+- Add an child element of the BackboneElement type and give it the name of the target CBB. Set the cardinality to 1..1.
 - Finally only add the elements of the target CBB that are constrained. Keep the hierarchy and cardinality as is in the target CBB.
 
 ### Usage of zib concept examples <a name="ZibConceptExamples"></a>
@@ -350,19 +356,32 @@ Examples are a vital part of any specification as they will allow the reader to 
 Logical models examples are functional in nature: they provide examples of what kind of information belongs to a CBB in a non-technical format. FHIR profile examples are technical in nature. The logical model examples are primarily aimed at researchers and non-technical people. They provide an example of how a CBB  is initialized in the FHIR standard, in XML or JSON format, conforming to the FHIR-profile for the respective CBB. These examples are aimed at developers and implementers of the technical specifications.   
 
 ### Logical model examples <a name="LogicalModelExamples"></a>
-Examples of logical models are not conformant to FHIR, and are therefore not represented in XML or JSON. Examples are provided in  table format in a seperate markdown file. The file has the same name as the CBB logical model but ends with `.example.md.` For example `HdBe-BodyHeight.xml` <-> `HdBe-BodyHeight.example.md`.
-The following conventions exist:
+Examples of logical models are not conformant to FHIR, and are therefore not represented in XML or JSON. Examples are provided in table format in a separate markdown file. The file has the same name as the CBB logical model but ends with `.example.md.` For example `HdBe-BodyHeight.xml` <-> `HdBe-BodyHeight.example.md`. For each element, the element path is taken, without the root. To represent BackboneElements, add an additional line containing the element name in bold.
+
+  The following conventions exist:
 - For elements that represent a quantity, also provide the unit.
+- For elements that represent a date, the format is: [YYYY-MM-DD].
+- For elements that represent a datetime, the format is: [YYYY-MM-DD]T[HH:MM:SS].
 - For elements that hold coded values: provide a code, the preferred display name and the CodeSystem. This format is used: [code] - [display name] (code by [CodeSystem]).
+- For elements that contain a reference to another CBB, provide the name of the CBB and an example value. This format is used: Reference to [CBB name] ([example value]).
+
 
 *Example*:
 ```
-| body_height      |                    |
-|------------------|--------------------|
-| height_value     |165 cm              | 
-| height_date_time |2022-01-02          |
-| comment          |                    |
-| position         |10904000 - Orthostatic body position (code by SNOMED CT)  |
+| Encounter                             |                   |
+|---------------------------------------|-------------------|        
+| ContactType	                          | CT0005 - Inpatient (code by Healtdata.Be (Sciensano)) |                   
+| ContactWith                           | Reference to HealthProfessional (E. Penninx) |
+| Location	                            | Reference to HealthcareProvider (GRAND HOPITAL DE CHARLEROI - SAINT-JOSEPH) |
+| StartDateTime                         | 2012-08-16T08:30:00 |
+| EndDateTime	                          | 2012-08-19T10:20:00 |
+| **ContactReason**                     | - |
+| ContactReason.Problem                 |  |
+| ContactReason.Procedure               |  |
+| ContactReason.DeviatingResult	        |  |
+| ContactReason.CommentContactReason	  | stomach ache  |
+| Origin                                | 264362003 - Home (code by SNOMED CT) |
+| Destination                           | 22232009 - Hospital (code by SNOMED CT) |
 ```
 
 ### FHIR profile examples <a name="FHIRProfileExamples"></a>
