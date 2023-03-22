@@ -17,23 +17,27 @@
     1. [Definition of changelog's category](#changelog_def)
     2. [CBB overarching changes](#CBB_overarching_changes)
 6. [Extensions](#Extensions)
+7. [Negation](#Negation)
+    1. [Open World Assumption vs. Closed World Assumption](#OWA-vs-CWA)
+    2. [Negation in QI-Core](#NegationInQICore)
+    3. [Negation in zibs and CBBs](#NegationInZibsAndCbbs)
 
    **[Practical guidelines](#practicalguidelines)**
 
-7. [Identity of artifacts](#identityofartifacts)
+8. [Identity of artifacts](#identityofartifacts)
     1. [Canonical URL, id, name and title](#CanonicalURLIdNameTitle)
     2. [Folder structure and file name](FolderStructureAndFileName)
-8. [Metadata](#metadata)
+9. [Metadata](#metadata)
     1. [StructureDefinition](#StructureDefinition)
-9.  [ElementDefinition](#ElementDefinition)
+10. [ElementDefinition](#ElementDefinition)
     1. [Usage of DefinitionCodes](#DefinitionCodes)
     2. [Constraining a target CBB](#ConstrainingCBB)
     3. [Usage of zib concept examples](#ZibConceptExamples)
-10. [Terminology](#terminology)
+11. [Terminology](#terminology)
     1. [Netherlands Edition SNOMED codes](#DutchSnomed)
     2. [Custom codes](#CustomCodes)
-11. [Examples](#Examples)
-    1. [Logical model examples](#LogicalModelExamples)
+12. [Examples](#Examples)
+    1. [CBB examples](#CBBExamples)
     2. [FHIR profile examples](#FHIRProfileExamples)
 
 # General guidelines<a name="general"></a>
@@ -199,10 +203,10 @@ All canonical references to the ValueSet and ConceptMap should be adjusted accor
 - **Replacement of NullFlavor codes with SNOMED CT codes** - The zibs ValueSet often contain [Nullflavor](https://www.hl7.org/fhir/v3/NullFlavor/cs.html) codes to indicate that a particular concept value is _unknown_ or _other_ than one of the codes listed in the bound ValueSet. As a design principle, SNOMED CT is the preferred CodeSystem in use for the CBB and CBB profiles because this is the most adopted CodeSystem. Therefore every NullFlavor code is replaced with an equivalent SNOMED CT code. For example, the code UNK - Unknown (code by NullFlavor) is replaced by 261665006 - Unknown (code by SNOMED CT).
 
 #### Example instances
-- Most example instances are in Dutch. If the examples are used as a basis, there are translated into English. A custom script can convert coded display values if it can find them in a terminology service.
+- Most example instances are in Dutch. If the examples are used as a basis, they are translated into English. A custom script can convert coded display values if it can find them in a terminology service.
 
 ## Extensions<a name="Extensions"></a>
-Sometimes a concept cannot be implemented using the building blocks FHIR offers by default. In this case, an extension might be used to implement such a concept. Keep in mind that extensions are often seen as a burden for implementers:
+Sometimes a concept cannot be implemented using elements that FHIR offers by default. In this case, an extension might be used to implement such a concept. Keep in mind that extensions are often seen as a burden for implementers:
 
 - If it is possible to model the concept (cleanly) without an extension, this is usually the preferred way.
 - If that's not possible, check if HL7 or other reliable standardization organizations provide an extension to implement the concept.
@@ -210,6 +214,20 @@ Sometimes a concept cannot be implemented using the building blocks FHIR offers 
 - If that's not possible, create an extension specific to the resource/profile.
 
 Usually, mappings for the concept, bindings to specific ValueSets and any functional descriptions will be added when the extension is used within a profile. When the extension pertains to a particular profile or resource, this information SHALL be added to the extension. To aid rendering purposes, functional descriptions and implementation guidance are placed on the extension root rather than the `Extension.value[x]` (except for terminology bindings). Without constraints, most snapshots generators will only include the root element in the profile that hosts the extension. So placing the information on the extension makes sure the information is visible in the profile without the need to navigate into the extension by the implementer.
+
+## Negation<a name="Negation"></a>
+In the context of healthcare and research, it is often important to know whether a specific event, medication administration, or treatment has taken place or not. However, healthcare systems generally only record information when an event takes place, making it challenging to discern the absence of events. This issue relates to the traditional problem in information systems and logic known as the Open World Assumption vs. Closed World Assumption. This chapter summarizes our latest understanding of handling negation in FHIR profiling.
+
+### Open World Assumption vs. Closed World Assumption <a name="OWA-vs-CWA"></a>
+The Open World Assumption posits that the absence of information does not imply its negation. In contrast, the Closed World Assumption suggests that any information not explicitly present is considered false. The key to solving this problem lies in the term "Assumption." When defining your system, it is essential to clearly document whether it supports the Open World or Closed World Assumption. Neither approach is inherently superior, but it is crucial to understand which one your system operates under. For healthcare systems on a national level, it seems we are handling the Open World Assumption. For more information, refer to the [Wikipedia article](https://en.wikipedia.org/wiki/Open-world_assumption) on this topic.
+
+### Negation in QI-Core <a name="NegationInQICore"></a>
+The [QI-Core Implementation Guide](http://hl7.org/fhir/us/qicore/index.html#negation-in-qi-core) provides a comprehensive approach to handling negation in FHIR. It encompasses the creation of profiles and other specifications to capture events that have not occurred and the reasons for their non-occurrence. QI-Core can serve as a valuable reference for implementing negation in our FHIR profiling. However, ideally, this should be documented and anchored in the conceptual layer (CBBs) before profiling.
+
+### Negation in zibs and CBBs <a name="NegationInZibsAndCbbs"></a>
+Some zibs, and their counterpart CBBs, contain concepts that enable the negation of the CBB, such as the UseIndicator concept in MedicationUse2, which indicates whether a medication has been taken or not. However, most CBBs do not support negation, and no overarching guidance or method exists. This issue has been raised in [ZIB-1843](
+https://bits.nictiz.nl/browse/ZIB-1843), but to date, no solution or guidance has been proposed. 
+
 
 #   Practical guidelines <a name="practicalguidelines"></a>
 
@@ -355,8 +373,8 @@ When a code from a custom CodeSystem has been adopted by an internationally util
 Examples are a vital part of any specification as they will allow the reader to easier understand the expectations. Every logical model and profile shall have at least one example. 
 Logical models examples are functional in nature: they provide examples of what kind of information belongs to a CBB in a non-technical format. FHIR profile examples are technical in nature. The logical model examples are primarily aimed at researchers and non-technical people. They provide an example of how a CBB  is initialized in the FHIR standard, in XML or JSON format, conforming to the FHIR-profile for the respective CBB. These examples are aimed at developers and implementers of the technical specifications.   
 
-### Logical model examples <a name="LogicalModelExamples"></a>
-Examples of logical models are not conformant to FHIR, and are therefore not represented in XML or JSON. Examples are provided in table format in a separate markdown file. The file has the same name as the CBB logical model but ends with `.example.md.` For example `HdBe-BodyHeight.xml` <-> `HdBe-BodyHeight.example.md`. For each element, the element path is taken, without the root. To represent BackboneElements, add an additional line containing the element name in bold.
+### CBB examples <a name="CBBExamples"></a>
+Examples of CBBd are not conformant to FHIR, and are therefore not represented in XML or JSON. Examples are provided in table format in a separate markdown file. The file has the same name as the CBB logical model but ends with `.example.md.` For example `HdBe-BodyHeight.xml` <-> `HdBe-BodyHeight.example.md`. For each element, the element path is taken, without the root. To represent BackboneElements, add an additional line containing the element name in bold.
 
   The following conventions exist:
 - For elements that represent a quantity, also provide the unit.
@@ -365,21 +383,20 @@ Examples of logical models are not conformant to FHIR, and are therefore not rep
 - For elements that hold coded values: provide a code, the preferred display name and the CodeSystem. This format is used: [code] - [display name] (code by [CodeSystem]).
 - For elements that contain a reference to another CBB, provide the name of the CBB and an example value. This format is used: Reference to [CBB name] ([example value]).
 
-
 *Example*:
 ```
 | Encounter                             |                   |
 |---------------------------------------|-------------------|        
-| ContactType	                          | CT0005 - Inpatient (code by Healtdata.Be (Sciensano)) |                   
+| ContactType	                        | CT0005 - Inpatient (code by Healtdata.Be (Sciensano)) |                   
 | ContactWith                           | Reference to HealthProfessional (E. Penninx) |
 | Location	                            | Reference to HealthcareProvider (GRAND HOPITAL DE CHARLEROI - SAINT-JOSEPH) |
 | StartDateTime                         | 2012-08-16T08:30:00 |
-| EndDateTime	                          | 2012-08-19T10:20:00 |
+| EndDateTime	                        | 2012-08-19T10:20:00 |
 | **ContactReason**                     | - |
-| ContactReason.Problem                 |  |
-| ContactReason.Procedure               |  |
-| ContactReason.DeviatingResult	        |  |
-| ContactReason.CommentContactReason	  | stomach ache  |
+| ContactReason.Problem                 |   |
+| ContactReason.Procedure               |   |
+| ContactReason.DeviatingResult	        |   |
+| ContactReason.CommentContactReason	| stomach ache |
 | Origin                                | 264362003 - Home (code by SNOMED CT) |
 | Destination                           | 22232009 - Hospital (code by SNOMED CT) |
 ```
