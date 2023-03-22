@@ -69,7 +69,7 @@ Changes to the zib are recorded in a [changelog file](#changelog) for every CBB.
 The FHIR conformance resources will be created based on the healthdata.be CBBs.
 
 #### Use case specific models<a name="usecasespecificmodels"></a>
-Use cases and exchange patterns use and potentially refine the healthdata.be CBBs information model to specific situations or applications. Use case specific profiles shall only be derived from the HdBe-profiles to further restrict or enhance these profiles for a specific use case. We do not create derived profiles for the sole purpose of keeping referential integrity.
+Use cases and exchange patterns use and potentially refine the healthdata.be CBBs information model to specific situations or applications. Use case specific profiles shall only be derived from the HdBe-profiles to further restrict or enhance these profiles for a specific use case. We do not create derived profiles if its sole purpose is keeping referential integrity.
 
 ### Associating the logical definition to StructureDefinitions <a name="associatingthelogicaldefinitiontostructuredefinitions"></a>
 Any StructureDefinition that profiles a Resource does so because there is some kind of logical definition "dictating" how. Profiles SHALL have a traceable relationship with their logical counterpart(s).
