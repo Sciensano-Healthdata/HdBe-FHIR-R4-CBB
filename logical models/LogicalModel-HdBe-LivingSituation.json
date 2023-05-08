@@ -1,1 +1,322 @@
-{"resourceType":"StructureDefinition","id":"HdBe-LivingSituation","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LivingSituation","name":"HdBeLivingSituation","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-Woonsituatie"}]}]},"title":"HdBe LivingSituation","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"The living situation is the physical environment in which the patient normally lives, sleeps, keeps their clothing, etc.\r\n#### Purpose\r\nThe goal is to take stock of the patient’s current living situation. This is in regard to any current or future problems the patient encounters or could encounter when living with the disease and the patient’s (future) constraints. \r\nThere are many reasons to ask about the patient’s living situation. The living situation can be relevant in the patient’s wish to live in their own home independently in the event of disease and/or disability. Furthermore, the living situation is important in evaluating the risks of falling, particularly among people living alone.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De woonsituatie is de fysieke omgeving waarin de patiënt normaliter woont, slaapt, kleding bewaart, enz.\r\n#### Purpose\r\nHet doel is om de huidige woonsituatie van de patiënt in kaart te brengen. Dit in verband met huidige of eventuele toekomstige problemen die de patiënt ondervindt of zou kunnen ondervinden met betrekking tot het wonen in relatie met ziekte en de (toekomstige) beperkingen van de patiënt. \r\nHet vragen naar de woonsituatie van de patiënt kent meerdere redenen. Zo kan de woonsituatie van belang zijn bij de wens zelfstandig in de eigen woning te willen blijven wonen in het geval van ziekte en/of beperkingen. Daarnaast is de woonsituatie van belang bij het inschatten van het valrisico, met name bij alleenwonenden."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/LivingSituation","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"LivingSituation","path":"LivingSituation","short":"LivingSituation","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Woonsituatie"}]}]},"definition":"Root concept of the LivingSituation information model. This root concept contains all data elements of the LivingSituation information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de bouwsteen Woonsituatie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Woonsituatie."}]}]},"min":0,"max":"*"},{"id":"LivingSituation.HouseType","path":"LivingSituation.HouseType","short":"HouseType","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"WoningType"}]}]},"definition":"Type of home the patient lives in.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Type woning waarin de patiënt woont."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"HouseType codes","valueSet":"https://fhir.healthdata.be/ValueSet/TypeOfHome"}},{"id":"LivingSituation.HomeAdaption","path":"LivingSituation.HomeAdaption","short":"HomeAdaption","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"WoningAanpassing"}]}]},"definition":"Adaptions present in the home that have been made in the context of the illness or disability to make the functioning of the patient safer and more comfortable and to enable independent living.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"In de woning aanwezige aanpassingen die in het kader van de ziekte of beperking aangebracht zijn om het functioneren van de patiënt veiliger en comfortabeler maken en zelfstandig wonen mogelijk maken."}]}]},"min":0,"max":"*","type":[{"code":"CodeableConcept"}],"binding":{"strength":"extensible","description":"HomeAdaption codes","valueSet":"https://fhir.healthdata.be/ValueSet/HomeAdaption"}},{"id":"LivingSituation.LivingCondition","path":"LivingSituation.LivingCondition","short":"LivingCondition","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"WoonOmstandigheid"}]}]},"definition":"Conditions that affect the accessibility of the home or the stay in the home.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Omstandigheden die de toegankelijkheid van de woning of het verblijf in de woning beïnvloeden."}]}]},"min":0,"max":"*","type":[{"code":"CodeableConcept"}],"binding":{"strength":"extensible","description":"LivingCondition codes","valueSet":"https://fhir.healthdata.be/ValueSet/HomeAccessibility"}},{"id":"LivingSituation.Comment","path":"LivingSituation.Comment","short":"Comment","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Toelichting"}]}]},"definition":"Comments in free text on problems or details of the patient’s living situation that may be relevant.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Opmerkingen in vrije tekst over problemen of details rondom de woonsituatie van de patiënt die relevant kunnen zijn."}]}]},"min":0,"max":"1","type":[{"code":"string"}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-LivingSituation",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LivingSituation",
+  "name": "HdBeLivingSituation",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-Woonsituatie"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe LivingSituation",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "The living situation is the physical environment in which the patient normally lives, sleeps, keeps their clothing, etc.\r\n#### Purpose\r\nThe goal is to take stock of the patient’s current living situation. This is in regard to any current or future problems the patient encounters or could encounter when living with the disease and the patient’s (future) constraints. \r\nThere are many reasons to ask about the patient’s living situation. The living situation can be relevant in the patient’s wish to live in their own home independently in the event of disease and/or disability. Furthermore, the living situation is important in evaluating the risks of falling, particularly among people living alone.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "De woonsituatie is de fysieke omgeving waarin de patiënt normaliter woont, slaapt, kleding bewaart, enz.\r\n#### Purpose\r\nHet doel is om de huidige woonsituatie van de patiënt in kaart te brengen. Dit in verband met huidige of eventuele toekomstige problemen die de patiënt ondervindt of zou kunnen ondervinden met betrekking tot het wonen in relatie met ziekte en de (toekomstige) beperkingen van de patiënt. \r\nHet vragen naar de woonsituatie van de patiënt kent meerdere redenen. Zo kan de woonsituatie van belang zijn bij de wens zelfstandig in de eigen woning te willen blijven wonen in het geval van ziekte en/of beperkingen. Daarnaast is de woonsituatie van belang bij het inschatten van het valrisico, met name bij alleenwonenden."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/LivingSituation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "LivingSituation",
+        "path": "LivingSituation",
+        "short": "LivingSituation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Woonsituatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the LivingSituation information model. This root concept contains all data elements of the LivingSituation information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Woonsituatie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Woonsituatie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "LivingSituation.HouseType",
+        "path": "LivingSituation.HouseType",
+        "short": "HouseType",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "WoningType"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Type of home the patient lives in.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Type woning waarin de patiënt woont."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "HouseType codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/TypeOfHome"
+        }
+      },
+      {
+        "id": "LivingSituation.HomeAdaption",
+        "path": "LivingSituation.HomeAdaption",
+        "short": "HomeAdaption",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "WoningAanpassing"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Adaptions present in the home that have been made in the context of the illness or disability to make the functioning of the patient safer and more comfortable and to enable independent living.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "In de woning aanwezige aanpassingen die in het kader van de ziekte of beperking aangebracht zijn om het functioneren van de patiënt veiliger en comfortabeler maken en zelfstandig wonen mogelijk maken."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "HomeAdaption codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/HomeAdaption"
+        }
+      },
+      {
+        "id": "LivingSituation.LivingCondition",
+        "path": "LivingSituation.LivingCondition",
+        "short": "LivingCondition",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "WoonOmstandigheid"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Conditions that affect the accessibility of the home or the stay in the home.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Omstandigheden die de toegankelijkheid van de woning of het verblijf in de woning beïnvloeden."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "LivingCondition codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/HomeAccessibility"
+        }
+      },
+      {
+        "id": "LivingSituation.Comment",
+        "path": "LivingSituation.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Comments in free text on problems or details of the patient’s living situation that may be relevant.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Opmerkingen in vrije tekst over problemen of details rondom de woonsituatie van de patiënt die relevant kunnen zijn."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

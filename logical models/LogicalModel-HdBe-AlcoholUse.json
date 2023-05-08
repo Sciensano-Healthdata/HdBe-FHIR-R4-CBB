@@ -1,1 +1,405 @@
-{"resourceType":"StructureDefinition","id":"HdBe-AlcoholUse","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AlcoholUse","name":"HdBeAlcoholUse","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-AlcoholGebruik"}]}]},"title":"HdBe AlcoholUse","status":"draft","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"In the context of this information model, alcohol is the collective term for alcoholic beverages consumed as a leisure product. This information model describes the information asked of the patient about their alcohol use.\r\n#### Purpose\r\nDuring the social anamnesis, the patient is frequently asked about their alcohol consumption. Excessive (episodic) alcohol consumption may influence the current treatment and diagnostics. Alcohol-related problems are diagnosed as secondary diagnoses more and more often. Source: Guidelines - Multidisciplinary guidelines for Disorders in alcohol use (CBO, 2009) \r\n\r\n\r\n\r\n\r\n\r\n#### Instructions\r\nIf the exchange of information on past alcohol consumption is desired in the event that the patient has by now stopped or significantly reduced their alcohol intake, then this can be done by applying the information model a second time with an entered stop date, so that it is clear that the amount of units per day is the past amount. \r\n\r\nIf desired, the sender can include the type of alcohol used in the ‘Comment’ field.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Alcohol is in de context van deze bouwsteen de verzamelnaam voor alcoholische dranken die als genotsmiddel genuttigd worden. Deze bouwsteen beschrijft de bij de patiënt uitgevraagde gegevens over het gebruik van alcohol.\r\n#### Purpose\r\nTijdens de sociale anamnese wordt frequent gevraagd naar het gebruik van alcohol. Overmatig of excessief (episodisch) alcoholgebruik kan van invloed zijn op de huidige behandeling en diagnostiek. Ook wordt alcoholproblematiek steeds vaker als nevendiagnose gesteld. Bron: Richtlijn - Multidisciplinaire richtlijn Stoornissen in het gebruik van alcohol (CBO, 2009)\r\n\r\n\r\n\r\n\r\n\r\n#### Instructions\r\nAls het wenselijk is om ook informatie over alcohol consumptie in het verleden uit te wisselen wanneer de patiënt inmiddels is gestopt of sterk is geminderd dan kan dit door de bouwsteen een tweede maal toe te passen met daarbij een ingevulde stopdatum zodat het duidelijk is dat het de hoeveelheid eenheden per dag in het verleden betreft. \r\n\r\nIndien gewenst kan de verzender het soort alcohol, dat gebruikt wordt, vermelden in het 'Toelichting' veld."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/AlcoholUse","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"AlcoholUse","path":"AlcoholUse","short":"AlcoholUse","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"AlcoholGebruik"}]}]},"definition":"Root concept of the AlcoholUse information model. This concept contains all data elements of the AlcoholUse information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de bouwsteen AlcoholGebruik. Dit concept bevat alle gegevenselementen van de bouwsteen AlcoholGebruik."}]}]},"min":0,"max":"*"},{"id":"AlcoholUse.Comment","path":"AlcoholUse.Comment","short":"Comment","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Toelichting"}]}]},"definition":"Relevant comments on the alcohol consumption.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Relevante opmerkingen over het gebruik."}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"AlcoholUse.AlcoholUseStatus","path":"AlcoholUse.AlcoholUseStatus","short":"AlcoholUseStatus","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"AlcoholGebruikStatus"}]}]},"definition":"The status of the patient’s alcohol use.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De status van het alcoholgebruik van de patiënt."}]}]},"min":1,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"AlcoholUseStatus codes","valueSet":"https://fhir.healthdata.be/ValueSet/AlcoholUseStatus"}},{"id":"AlcoholUse.ObservationOfUse","path":"AlcoholUse.ObservationOfUse","short":"ObservationOfUse","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"WaarnemingGebruik"}]}]},"definition":"Container of the ObservationOfUse concept. This container contains all data elements of the observation of alcohol use.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Container van het concept WaarnemingGebruik. Deze container bevat alle gegevenselementen over de waarneming van het gebruik van alcohol."}]}]},"min":0,"max":"1","type":[{"code":"BackboneElement"}]},{"id":"AlcoholUse.ObservationOfUse.StartDate","path":"AlcoholUse.ObservationOfUse.StartDate","short":"StartDate","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"StartDatum"}]}]},"definition":"The date on which the patient started using alcohol.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De datum waarop is gestart met het gebruik."}]}]},"min":0,"max":"1","type":[{"code":"dateTime"}]},{"id":"AlcoholUse.ObservationOfUse.StopDate","path":"AlcoholUse.ObservationOfUse.StopDate","short":"StopDate","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"StopDatum"}]}]},"definition":"The date on which the patient stopped consuming alcohol.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De datum waarop is gestopt met het gebruik."}]}]},"min":0,"max":"1","type":[{"code":"dateTime"}]},{"id":"AlcoholUse.ObservationOfUse.Amount","path":"AlcoholUse.ObservationOfUse.Amount","short":"Amount","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Hoeveelheid"}]}]},"definition":"The extent of the patient’s alcohol use in units of alcohol per time period.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Omvang van het alcoholgebruik van de patiënt in eenheden alcoholische drank per tijdseenheid."}]}]},"min":0,"max":"1","type":[{"code":"Quantity"}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-AlcoholUse",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AlcoholUse",
+  "name": "HdBeAlcoholUse",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-AlcoholGebruik"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe AlcoholUse",
+  "status": "draft",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "In the context of this information model, alcohol is the collective term for alcoholic beverages consumed as a leisure product. This information model describes the information asked of the patient about their alcohol use.\r\n#### Purpose\r\nDuring the social anamnesis, the patient is frequently asked about their alcohol consumption. Excessive (episodic) alcohol consumption may influence the current treatment and diagnostics. Alcohol-related problems are diagnosed as secondary diagnoses more and more often. Source: Guidelines - Multidisciplinary guidelines for Disorders in alcohol use (CBO, 2009) \r\n\r\n\r\n\r\n\r\n\r\n#### Instructions\r\nIf the exchange of information on past alcohol consumption is desired in the event that the patient has by now stopped or significantly reduced their alcohol intake, then this can be done by applying the information model a second time with an entered stop date, so that it is clear that the amount of units per day is the past amount. \r\n\r\nIf desired, the sender can include the type of alcohol used in the ‘Comment’ field.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Alcohol is in de context van deze bouwsteen de verzamelnaam voor alcoholische dranken die als genotsmiddel genuttigd worden. Deze bouwsteen beschrijft de bij de patiënt uitgevraagde gegevens over het gebruik van alcohol.\r\n#### Purpose\r\nTijdens de sociale anamnese wordt frequent gevraagd naar het gebruik van alcohol. Overmatig of excessief (episodisch) alcoholgebruik kan van invloed zijn op de huidige behandeling en diagnostiek. Ook wordt alcoholproblematiek steeds vaker als nevendiagnose gesteld. Bron: Richtlijn - Multidisciplinaire richtlijn Stoornissen in het gebruik van alcohol (CBO, 2009)\r\n\r\n\r\n\r\n\r\n\r\n#### Instructions\r\nAls het wenselijk is om ook informatie over alcohol consumptie in het verleden uit te wisselen wanneer de patiënt inmiddels is gestopt of sterk is geminderd dan kan dit door de bouwsteen een tweede maal toe te passen met daarbij een ingevulde stopdatum zodat het duidelijk is dat het de hoeveelheid eenheden per dag in het verleden betreft. \r\n\r\nIndien gewenst kan de verzender het soort alcohol, dat gebruikt wordt, vermelden in het 'Toelichting' veld."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/AlcoholUse",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "AlcoholUse",
+        "path": "AlcoholUse",
+        "short": "AlcoholUse",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AlcoholGebruik"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the AlcoholUse information model. This concept contains all data elements of the AlcoholUse information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen AlcoholGebruik. Dit concept bevat alle gegevenselementen van de bouwsteen AlcoholGebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "AlcoholUse.Comment",
+        "path": "AlcoholUse.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Relevant comments on the alcohol consumption.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Relevante opmerkingen over het gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "AlcoholUse.AlcoholUseStatus",
+        "path": "AlcoholUse.AlcoholUseStatus",
+        "short": "AlcoholUseStatus",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AlcoholGebruikStatus"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The status of the patient’s alcohol use.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De status van het alcoholgebruik van de patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "AlcoholUseStatus codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/AlcoholUseStatus"
+        }
+      },
+      {
+        "id": "AlcoholUse.ObservationOfUse",
+        "path": "AlcoholUse.ObservationOfUse",
+        "short": "ObservationOfUse",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "WaarnemingGebruik"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the ObservationOfUse concept. This container contains all data elements of the observation of alcohol use.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept WaarnemingGebruik. Deze container bevat alle gegevenselementen over de waarneming van het gebruik van alcohol."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "AlcoholUse.ObservationOfUse.StartDate",
+        "path": "AlcoholUse.ObservationOfUse.StartDate",
+        "short": "StartDate",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "StartDatum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date on which the patient started using alcohol.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum waarop is gestart met het gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "AlcoholUse.ObservationOfUse.StopDate",
+        "path": "AlcoholUse.ObservationOfUse.StopDate",
+        "short": "StopDate",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "StopDatum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date on which the patient stopped consuming alcohol.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum waarop is gestopt met het gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "AlcoholUse.ObservationOfUse.Amount",
+        "path": "AlcoholUse.ObservationOfUse.Amount",
+        "short": "Amount",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Hoeveelheid"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The extent of the patient’s alcohol use in units of alcohol per time period.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Omvang van het alcoholgebruik van de patiënt in eenheden alcoholische drank per tijdseenheid."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      }
+    ]
+  }
+}

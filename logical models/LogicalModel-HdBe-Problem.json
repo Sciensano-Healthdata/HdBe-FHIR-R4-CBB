@@ -1,1 +1,666 @@
-{"resourceType":"StructureDefinition","id":"HdBe-Problem","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem","name":"HdBeProblem","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-Probleem"}]}]},"title":"HdBe Problem","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the person involved (the patient) themselves (in the form of a complaint), or by their healthcare professional (in the form of a diagnosis, for example). The situation can form cause for diagnostic or therapeutic policy. \r\nA problem includes all kinds of medical or nursing information that represents a health problem. A problem can represent various types of health problems: \r\n \r\n\r\n* A complaint, finding by patient: a subjective, negatively experienced observation of the patient’s health. Examples: stomach ache, amnesia.\r\n* A symptom: an observation by or about the patient which may indicate a certain disease. Examples: fever, blood in stool, white spots on the roof of the mouth.\r\n* A diagnosis: medical interpretation of complaints and findings. Examples: Diabetes Mellitus type II, pneumonia, hemolytic-uremic syndrome.\r\n* A functional limitation: a reduction of functional options. Examples: reduced mobility, help required for dressing.\r\n* A complication: Every diagnosis seen by the healthcare professional as an unforeseen and undesired result of medical action. Examples: post-operative wound infections, loss of hearing through the use of antibiotics.\r\n\r\n\r\n\r\n#### Purpose\r\nAn overview of a patient’s health problems has the purpose of informing all healthcare professionals involved in the patient’s care on the patient’s current and past health condition. It provides insight into which problems require medical action, which are under control and which are no longer current. The problem overview also directly provides medical context for medication administered and procedures carried out. \r\nThe overview promotes an efficient, targeted continuation of the patient’s care. \r\nA complete list of problems is of importance for automated decision support and determining contraindications.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Een probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de betroffene (de patiënt) zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose). De toestand kan aanleiding zijn voor diagnostisch of therapeutisch beleid.\r\nEen probleem omvat allerlei soorten medische of verpleegkundige gegevens, die een gezondheidsprobleem representeren. Een probleem kan verschillende typen gezondheidsproblemen representeren:\r\n \r\n\r\n* Een klacht (Complaint, finding by patient): een subjectieve, als negatief ervaren waarneming van de gezondheid. Voorbeelden: buikpijn, geheugenverlies\r\n* Een symptoom (Symptom): een waarneming door of over de patiënt die betrekking zou kunnen hebben op een bepaalde ziekte. Voorbeelden : koorts, bloed bij de ontlasting, witte vlekken op het gehemelte;\r\n* Een diagnose (Diagnosis): medische interpretatie van klachten en bevindingen. Voorbeelden: Diabetes Mellitus type II, pneumonie, Hemolytisch Uremisch Syndroom.\r\n* Een functionele beperking (Functional Limitation): een vermindering van functionele mogelijkheden. Voorbeelden: verminderde mobiliteit, hulp nodig bij aankleden.\r\n* Een complicatie (Complication): Iedere diagnose die door de zorgverlener gezien wordt als een onvoorzien en ongewenst gevolg van medisch handelen. Voorbeelden: wondinfectie na chirurgie, gehoorverlies door antibioticagebruik.\r\n\r\n\r\n\r\n#### Purpose\r\nEen overzicht van de problemen met betrekking tot de gezondheid van een patiënt heeft tot doel om alle bij de patiënt betrokken zorgverleners te informeren over de gezondheidstoestand van de patiënt in het heden en het verleden. Het geeft inzicht in welke problemen medisch handelen verlangen en welke niet meer actueel zijn. Het probleemoverzicht geeft ook direct de medische context weer voor toegediende medicatie en uitgevoerde procedures.\r\nHet overzicht bevordert een gerichte en efficiënte voortzetting van de zorg voor de patiënt.\r\nEen volledige probleemlijst is van belang ten behoeve van geautomatiseerde beslissingsondersteuning en het bepalen van contra-indicaties."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/Problem","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"Problem","path":"Problem","short":"Problem","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Probleem"}]}]},"definition":"Root concept of the Problem information model.\r\nA problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient themselves (in the form of a complaint) or by their health professional (in the form of a diagnosis, for example).","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de bouwsteen Probleem.\r\nEen probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de patiënt zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose)."}]}]},"min":0,"max":"*"},{"id":"Problem.ProblemType","path":"Problem.ProblemType","short":"ProblemType","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"ProbleemType"}]}]},"definition":"The type of problem; see the concept description.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het type probleem, zie de conceptbeschrijving."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"extensible","description":"ProblemType codes","valueSet":"https://fhir.healthdata.be/ValueSet/ProblemType"}},{"id":"Problem.ProblemName","path":"Problem.ProblemName","short":"ProblemName","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"ProbleemNaam"}]}]},"definition":"The problem name defines the problem.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De probleemnaam definieert het probleem."}]}]},"min":1,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"extensible","description":"ProblemName codes","valueSet":"https://fhir.healthdata.be/ValueSet/ProblemName"}},{"id":"Problem.FurtherSpecificationProblemName","path":"Problem.FurtherSpecificationProblemName","short":"FurtherSpecificationProblemName","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"NadereSpecificatieProbleemNaam"}]}]},"definition":"Further specification of problem name when it is recorded via a thesaurus or code system in which the required level of detail is not (yet) available.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Nadere specificatie van de probleem naam wanneer deze via een thesaurus of codesysteem wordt vastgelegd en de vereiste mate van detail (nog) niet beschikbaar is."}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"Problem.ProblemAnatomicalLocation","path":"Problem.ProblemAnatomicalLocation","short":"ProblemAnatomicalLocation","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"ProbleemAnatomischeLocatie"}]}]},"definition":"Anatomical location which is the focus of the problem.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Anatomische locatie die de focus is van het probleem."}]}]},"min":0,"max":"1","type":[{"code":"BackboneElement"}]},{"id":"Problem.ProblemAnatomicalLocation.Location","path":"Problem.ProblemAnatomicalLocation.Location","short":"Location","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Locatie"}]}]},"definition":"Location on/in the body.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Localisatie op/in het lichaam."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"Location codes","valueSet":"https://fhir.healthdata.be/ValueSet/Location"}},{"id":"Problem.ProblemAnatomicalLocation.Laterality","path":"Problem.ProblemAnatomicalLocation.Laterality","short":"Laterality","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Lateraliteit"}]}]},"definition":"Laterality adds information about body site to the anatomic location, e.g. left.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"Laterality codes","valueSet":"https://fhir.healthdata.be/ValueSet/Laterality"}},{"id":"Problem.ProblemStartDate","path":"Problem.ProblemStartDate","short":"ProblemStartDate","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"ProbleemBeginDatum"}]}]},"definition":"Onset of the symptom, complaint, functional limitation, complication or date of diagnosis. A ‘vague’ date, such as only the year or the month and the year, is permitted.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Begin van de klacht, beperking, complicatie of het symptoom of de datum van de diagnose waarop het probleem betrekking heeft. Een vage datum, bijv. alleen een jaartal of een maand en een jaartal, is toegestaan."}]}]},"min":0,"max":"1","type":[{"code":"dateTime"}]},{"id":"Problem.ProblemEndDate","path":"Problem.ProblemEndDate","short":"ProblemEndDate","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"ProbleemEindDatum"}]}]},"definition":"Date on which the disorder to which the problem applies, is considered not to be present anymore.This datum needs not to be the same as the date of the change in problem status. A ‘vague’ date, such as only the year or the month and the year, is permitted.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Datum waarop de aandoening, waarop het probleem betrekking heeft, als niet meer aanwezig wordt beschouwd. Deze datum hoeft niet gelijk te zijn aan de datum waarop de statuswijzinging van het probleem is vastgelegd. Een vage datum, bijv. alleen een jaartal of een maand en een jaartal, is toegestaan."}]}]},"min":0,"max":"1","type":[{"code":"dateTime"}]},{"id":"Problem.ProblemStatus","path":"Problem.ProblemStatus","short":"ProblemStatus","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"ProbleemStatus"}]}]},"definition":"The problem status describes the condition of the problem: \r\n\r\n1. Active problems are problems of which the patient experiences symptoms or for which evidence exists. \r\n\r\n1. Problems with the status 'Inactive' refer to problems that don't affect the patient anymore or that of which there is no evidence of existence anymore.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De probleemstatus beschrijft de toestand van het probleem: \r\n\r\n1. Actuele problemen zijn problemen waar de patiënt symptomen van ondervindt of waar bewijsmateriaal voor is. \r\n\r\n1. Problemen met status 'Niet actueel' verwijzen naar problemen waar de patiënt geen last meer van heeft of waar geen aanwijzingen meer voor zijn."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"ProblemStatus codes","valueSet":"https://fhir.healthdata.be/ValueSet/ProblemStatus"}},{"id":"Problem.VerificationStatus","path":"Problem.VerificationStatus","short":"VerificationStatus","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"VerificatieStatus"}]}]},"definition":"Clinical status of the problem or the diagnosis.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Klinische status van het probleem of de diagnose."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"VerificationStatus codes","valueSet":"https://fhir.healthdata.be/ValueSet/VerificationStatus"}},{"id":"Problem.Comment","path":"Problem.Comment","short":"Comment","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Toelichting"}]}]},"definition":"Comment by the one who determined or updated the Problem.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Toelichting van diegene die het Probleem heeft vastgesteld of bijgewerkt."}]}]},"min":0,"max":"1","type":[{"code":"string"}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-Problem",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem",
+  "name": "HdBeProblem",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-Probleem"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe Problem",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the person involved (the patient) themselves (in the form of a complaint), or by their healthcare professional (in the form of a diagnosis, for example). The situation can form cause for diagnostic or therapeutic policy. \r\nA problem includes all kinds of medical or nursing information that represents a health problem. A problem can represent various types of health problems: \r\n \r\n\r\n* A complaint, finding by patient: a subjective, negatively experienced observation of the patient’s health. Examples: stomach ache, amnesia.\r\n* A symptom: an observation by or about the patient which may indicate a certain disease. Examples: fever, blood in stool, white spots on the roof of the mouth.\r\n* A diagnosis: medical interpretation of complaints and findings. Examples: Diabetes Mellitus type II, pneumonia, hemolytic-uremic syndrome.\r\n* A functional limitation: a reduction of functional options. Examples: reduced mobility, help required for dressing.\r\n* A complication: Every diagnosis seen by the healthcare professional as an unforeseen and undesired result of medical action. Examples: post-operative wound infections, loss of hearing through the use of antibiotics.\r\n\r\n\r\n\r\n#### Purpose\r\nAn overview of a patient’s health problems has the purpose of informing all healthcare professionals involved in the patient’s care on the patient’s current and past health condition. It provides insight into which problems require medical action, which are under control and which are no longer current. The problem overview also directly provides medical context for medication administered and procedures carried out. \r\nThe overview promotes an efficient, targeted continuation of the patient’s care. \r\nA complete list of problems is of importance for automated decision support and determining contraindications.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Een probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de betroffene (de patiënt) zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose). De toestand kan aanleiding zijn voor diagnostisch of therapeutisch beleid.\r\nEen probleem omvat allerlei soorten medische of verpleegkundige gegevens, die een gezondheidsprobleem representeren. Een probleem kan verschillende typen gezondheidsproblemen representeren:\r\n \r\n\r\n* Een klacht (Complaint, finding by patient): een subjectieve, als negatief ervaren waarneming van de gezondheid. Voorbeelden: buikpijn, geheugenverlies\r\n* Een symptoom (Symptom): een waarneming door of over de patiënt die betrekking zou kunnen hebben op een bepaalde ziekte. Voorbeelden : koorts, bloed bij de ontlasting, witte vlekken op het gehemelte;\r\n* Een diagnose (Diagnosis): medische interpretatie van klachten en bevindingen. Voorbeelden: Diabetes Mellitus type II, pneumonie, Hemolytisch Uremisch Syndroom.\r\n* Een functionele beperking (Functional Limitation): een vermindering van functionele mogelijkheden. Voorbeelden: verminderde mobiliteit, hulp nodig bij aankleden.\r\n* Een complicatie (Complication): Iedere diagnose die door de zorgverlener gezien wordt als een onvoorzien en ongewenst gevolg van medisch handelen. Voorbeelden: wondinfectie na chirurgie, gehoorverlies door antibioticagebruik.\r\n\r\n\r\n\r\n#### Purpose\r\nEen overzicht van de problemen met betrekking tot de gezondheid van een patiënt heeft tot doel om alle bij de patiënt betrokken zorgverleners te informeren over de gezondheidstoestand van de patiënt in het heden en het verleden. Het geeft inzicht in welke problemen medisch handelen verlangen en welke niet meer actueel zijn. Het probleemoverzicht geeft ook direct de medische context weer voor toegediende medicatie en uitgevoerde procedures.\r\nHet overzicht bevordert een gerichte en efficiënte voortzetting van de zorg voor de patiënt.\r\nEen volledige probleemlijst is van belang ten behoeve van geautomatiseerde beslissingsondersteuning en het bepalen van contra-indicaties."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/Problem",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Problem",
+        "path": "Problem",
+        "short": "Problem",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Probleem"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Problem information model.\r\nA problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the patient themselves (in the form of a complaint) or by their health professional (in the form of a diagnosis, for example).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Probleem.\r\nEen probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de patiënt zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Problem.ProblemType",
+        "path": "Problem.ProblemType",
+        "short": "ProblemType",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ProbleemType"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The type of problem; see the concept description.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het type probleem, zie de conceptbeschrijving."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "ProblemType codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/ProblemType"
+        }
+      },
+      {
+        "id": "Problem.ProblemName",
+        "path": "Problem.ProblemName",
+        "short": "ProblemName",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ProbleemNaam"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The problem name defines the problem.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De probleemnaam definieert het probleem."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "ProblemName codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/ProblemName"
+        }
+      },
+      {
+        "id": "Problem.FurtherSpecificationProblemName",
+        "path": "Problem.FurtherSpecificationProblemName",
+        "short": "FurtherSpecificationProblemName",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "NadereSpecificatieProbleemNaam"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Further specification of problem name when it is recorded via a thesaurus or code system in which the required level of detail is not (yet) available.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Nadere specificatie van de probleem naam wanneer deze via een thesaurus of codesysteem wordt vastgelegd en de vereiste mate van detail (nog) niet beschikbaar is."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Problem.ProblemAnatomicalLocation",
+        "path": "Problem.ProblemAnatomicalLocation",
+        "short": "ProblemAnatomicalLocation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ProbleemAnatomischeLocatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Anatomical location which is the focus of the problem.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Anatomische locatie die de focus is van het probleem."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Problem.ProblemAnatomicalLocation.Location",
+        "path": "Problem.ProblemAnatomicalLocation.Location",
+        "short": "Location",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Location on/in the body.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Localisatie op/in het lichaam."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Location codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/Location"
+        }
+      },
+      {
+        "id": "Problem.ProblemAnatomicalLocation.Laterality",
+        "path": "Problem.ProblemAnatomicalLocation.Laterality",
+        "short": "Laterality",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Lateraliteit"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Laterality adds information about body site to the anatomic location, e.g. left.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Laterality codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/Laterality"
+        }
+      },
+      {
+        "id": "Problem.ProblemStartDate",
+        "path": "Problem.ProblemStartDate",
+        "short": "ProblemStartDate",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ProbleemBeginDatum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Onset of the symptom, complaint, functional limitation, complication or date of diagnosis. A ‘vague’ date, such as only the year or the month and the year, is permitted.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Begin van de klacht, beperking, complicatie of het symptoom of de datum van de diagnose waarop het probleem betrekking heeft. Een vage datum, bijv. alleen een jaartal of een maand en een jaartal, is toegestaan."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Problem.ProblemEndDate",
+        "path": "Problem.ProblemEndDate",
+        "short": "ProblemEndDate",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ProbleemEindDatum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Date on which the disorder to which the problem applies, is considered not to be present anymore.This datum needs not to be the same as the date of the change in problem status. A ‘vague’ date, such as only the year or the month and the year, is permitted.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum waarop de aandoening, waarop het probleem betrekking heeft, als niet meer aanwezig wordt beschouwd. Deze datum hoeft niet gelijk te zijn aan de datum waarop de statuswijzinging van het probleem is vastgelegd. Een vage datum, bijv. alleen een jaartal of een maand en een jaartal, is toegestaan."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Problem.ProblemStatus",
+        "path": "Problem.ProblemStatus",
+        "short": "ProblemStatus",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ProbleemStatus"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The problem status describes the condition of the problem: \r\n\r\n1. Active problems are problems of which the patient experiences symptoms or for which evidence exists. \r\n\r\n1. Problems with the status 'Inactive' refer to problems that don't affect the patient anymore or that of which there is no evidence of existence anymore.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De probleemstatus beschrijft de toestand van het probleem: \r\n\r\n1. Actuele problemen zijn problemen waar de patiënt symptomen van ondervindt of waar bewijsmateriaal voor is. \r\n\r\n1. Problemen met status 'Niet actueel' verwijzen naar problemen waar de patiënt geen last meer van heeft of waar geen aanwijzingen meer voor zijn."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "ProblemStatus codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/ProblemStatus"
+        }
+      },
+      {
+        "id": "Problem.VerificationStatus",
+        "path": "Problem.VerificationStatus",
+        "short": "VerificationStatus",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VerificatieStatus"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Clinical status of the problem or the diagnosis.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Klinische status van het probleem of de diagnose."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "VerificationStatus codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/VerificationStatus"
+        }
+      },
+      {
+        "id": "Problem.Comment",
+        "path": "Problem.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Comment by the one who determined or updated the Problem.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting van diegene die het Probleem heeft vastgesteld of bijgewerkt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

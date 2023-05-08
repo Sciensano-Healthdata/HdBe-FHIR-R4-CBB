@@ -1,1 +1,658 @@
-{"resourceType":"StructureDefinition","id":"HdBe-MedicationUse2","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationUse2","name":"HdBeMedicationUse2","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-MedicatieGebruik2"}]}]},"title":"HdBe MedicationUse2","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"MedicationUse is a statement on the historic, current or intended use of a certain medicine.\r\n#### Purpose\r\nThe goal of the medication use is to provide insight into the patient’s pattern of use.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Medicatiegebruik is een uitspraak over historisch, huidig of voorgenomen gebruik van een geneesmiddel.\r\n#### Purpose\r\nHet doel van medicatiegebruik is inzicht te geven in het gebruikspatroon van de patiënt.\r\n\r\n\r\n**Revision History**\r\nPublicatieversie 1.0 (04-09-2017)\r\n\r\nPublicatieversie 1.0.1 (31-12-2017)\r\nBevat: [ZIB-618](https://bits.nictiz.nl/browse/ZIB-618), [ZIB-643](https://bits.nictiz.nl/browse/ZIB-643).\r\n\r\nPublicatieversie 1.1 (31-01-2020)\r\nBevat: [ZIB-906](https://bits.nictiz.nl/browse/ZIB-906), [ZIB-888](https://bits.nictiz.nl/browse/ZIB-888).\r\n\r\nPublicatieversie 1.1.1 (01-09-2020)\r\nBevat: [ZIB-911](https://bits.nictiz.nl/browse/ZIB-911)."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/MedicationUse2","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"MedicationUse2","path":"MedicationUse2","short":"MedicationUse2","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"MedicatieGebruik"}]}]},"definition":"Root concept of the MedicationUse2 information model. This root concept contains all data elements of the MedicationUse2 information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de bouwsteen MedicatieGebruik2. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedicatieGebruik2."}]}]},"min":0,"max":"*"},{"id":"MedicationUse2.Prescriber","path":"MedicationUse2.Prescriber","short":"Prescriber","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Voorschrijver"}]}]},"definition":"The health professional that entered the medication agreement with the patient.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De zorgverlener die de medicatieafspraak met de patiënt heeft vastgesteld."}]}]},"min":0,"max":"1","type":[{"code":"Reference","targetProfile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"]}]},{"id":"MedicationUse2.ProductUsed","path":"MedicationUse2.ProductUsed","short":"ProductUsed","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Gebruiksproduct"}]}]},"definition":"The product used. This is usually medication. Food, blood products, aids and bandages do not strictly fall under the category of medication, but can be recorded as well. \r\n\r\nIn principle, this will be the prescribed product, but the product used may differ from the prescribed product.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het gebruikte middel. Dit is vrijwel steeds een geneesmiddel. Voedingsmiddelen, bloedproducten, hulp- en verbandmiddelen vallen strikt genomen niet onder de categorie geneesmiddelen, maar kunnen ook worden worden vastgelegd.\r\n\r\nIn principe betreft dit het voorgeschreven product, maar het daadwerkelijk gebruikte product kan afwijken van het voorgeschreven product."}]}]},"min":1,"max":"1","type":[{"code":"Reference","targetProfile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct"]}]},{"id":"MedicationUse2.InstructionsForUse","path":"MedicationUse2.InstructionsForUse","short":"InstructionsForUse","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Gebruiksinstructie"}]}]},"definition":"Instructions for the use of the medication, e.g. dose and route of administration. In the event of medication use, this is the pattern of use established by the patient or that the patient followed.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Aanwijzingen voor het gebruik van de medicatie, bijvoorbeeld dosering en toedieningsweg. Bij medicatiegebruik is dit het gebruikspatroon dat de patiënt heeft gevolgd of met zichzelf heeft afgesproken."}]}]},"min":0,"max":"1","type":[{"code":"Dosage","profile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-InstructionsForUse"]}]},{"id":"MedicationUse2.MedicationUseDateTime","path":"MedicationUse2.MedicationUseDateTime","short":"MedicationUseDateTime","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"MedicatieGebruikDatumTijd"}]}]},"definition":"Date on which this use is entered.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Datum waarop het onderliggende gebruik is vastgelegd."}]}]},"min":1,"max":"1","type":[{"code":"dateTime"}]},{"id":"MedicationUse2.PeriodOfUse","path":"MedicationUse2.PeriodOfUse","short":"PeriodOfUse","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Gebruiksperiode"}]}]},"definition":"Medication use can be recorded for a certain moment or over a certain period. Thus, medication use can be recorded multiple times during the use of medication. The usage period is the period or moment over which the data is recorded.\r\n**Start date**: This is the time at which the agreement was to take effect (or took effect or will take effect). \r\n**Duration**: The intended duration of use. E.g. 5 days or 8 weeks. It is not allowed to indicate the duration in months, because different months have a variable duration in days. \r\n**End date**: The time at which the period of use ends (or ended or will end). To avoid confusion between 'to' and 'up to', the submission of time is always mandatory for the end date.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Medicatiegebruik kan voor een bepaald moment of over een bepaalde periode worden vastgelegd. Gedurende het gebruik van medicatie kan er dus meerdere keren medicatiegebruik worden vastgelegd. Het betreft hier de periode of het moment waarover de gegevens worden vastgelegd. \r\n**Ingangsdatum**: Dit is het tijdstip waarop het gebruik is gestart. \r\n**Gebruiksduur**: De beoogde gebruiksduur. Bijvoorbeeld 5 dagen of 8 weken. Het is niet toegestaan om de gebruiksduur in maanden aan te geven, omdat verschillende maanden een variabele duur in dagen hebben. \r\n**Einddatum**: Het tijdstip waarop de gebruiksperiode eindigt (of geëindigd is of zal eindigen). Om verwarring te voorkomen tussen 'tot' en 'tot en met' is het meegeven van de tijd altijd verplicht bij einddatum."}]}]},"min":0,"max":"1","type":[{"code":"Range","profile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-TimeInterval"]}]},{"id":"MedicationUse2.AsAgreedIndicator","path":"MedicationUse2.AsAgreedIndicator","short":"AsAgreedIndicator","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"VolgensAfspraakIndicator"}]}]},"definition":"Is the medicine used as outlined in the medication agreement?","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Wordt het geneesmiddel gebruikt zoals afgesproken in de medicatieafspraak?"}]}]},"min":0,"max":"1","type":[{"code":"boolean"}]},{"id":"MedicationUse2.UseIndicator","path":"MedicationUse2.UseIndicator","short":"UseIndicator","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"GebruikIndicator"}]}]},"definition":"Is this medicine used or not?","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Wordt dit geneesmiddel gebruikt of niet."}]}]},"min":1,"max":"1","type":[{"code":"boolean"}]},{"id":"MedicationUse2.ReasonForUse","path":"MedicationUse2.ReasonForUse","short":"ReasonForUse","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"RedenGebruik"}]}]},"definition":"The reason for using the medication, particularly in self-care medicine purchased by the patient themselves.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De reden om medicatie te gebruiken, m.n. bij zelfzorgmiddelen die de patiënt zelf aanschaft."}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"MedicationUse2.MedicationUseStopType","path":"MedicationUse2.MedicationUseStopType","short":"MedicationUseStopType","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"MedicatieGebruikStopType"}]}]},"definition":"Stop type, the manner in which this medication is discontinued (temporary or definitive).","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Stop type, de manier waarop gestopt wordt met deze medicatie (tijdelijk of definitief)."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"MedicationUseStopType codes","valueSet":"https://fhir.healthdata.be/ValueSet/MedicationStopType"}},{"id":"MedicationUse2.ReasonForChangeOrDiscontinuationOfUse","path":"MedicationUse2.ReasonForChangeOrDiscontinuationOfUse","short":"ReasonForChangeOrDiscontinuationOfUse","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"RedenWijzigenOfStoppenGebruik"}]}]},"definition":"Reason for changing or discontinuing use of medication.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Reden van wijzigen of stoppen met medicatiegebruik"}]}]},"min":0,"max":"*","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"ReasonForChangeOrDiscontinuationOfUse codes","valueSet":"https://fhir.healthdata.be/ValueSet/MedicationReason"}},{"id":"MedicationUse2.Comment","path":"MedicationUse2.Comment","short":"Comment","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Toelichting"}]}]},"definition":"Comments on the medication use.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Opmerkingen met betrekking tot het medicatie gebruik."}]}]},"min":0,"max":"1","type":[{"code":"string"}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-MedicationUse2",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationUse2",
+  "name": "HdBeMedicationUse2",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-MedicatieGebruik2"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe MedicationUse2",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "MedicationUse is a statement on the historic, current or intended use of a certain medicine.\r\n#### Purpose\r\nThe goal of the medication use is to provide insight into the patient’s pattern of use.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Medicatiegebruik is een uitspraak over historisch, huidig of voorgenomen gebruik van een geneesmiddel.\r\n#### Purpose\r\nHet doel van medicatiegebruik is inzicht te geven in het gebruikspatroon van de patiënt.\r\n\r\n\r\n**Revision History**\r\nPublicatieversie 1.0 (04-09-2017)\r\n\r\nPublicatieversie 1.0.1 (31-12-2017)\r\nBevat: [ZIB-618](https://bits.nictiz.nl/browse/ZIB-618), [ZIB-643](https://bits.nictiz.nl/browse/ZIB-643).\r\n\r\nPublicatieversie 1.1 (31-01-2020)\r\nBevat: [ZIB-906](https://bits.nictiz.nl/browse/ZIB-906), [ZIB-888](https://bits.nictiz.nl/browse/ZIB-888).\r\n\r\nPublicatieversie 1.1.1 (01-09-2020)\r\nBevat: [ZIB-911](https://bits.nictiz.nl/browse/ZIB-911)."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/MedicationUse2",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationUse2",
+        "path": "MedicationUse2",
+        "short": "MedicationUse2",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MedicatieGebruik"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the MedicationUse2 information model. This root concept contains all data elements of the MedicationUse2 information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen MedicatieGebruik2. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedicatieGebruik2."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationUse2.Prescriber",
+        "path": "MedicationUse2.Prescriber",
+        "short": "Prescriber",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Voorschrijver"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The health professional that entered the medication agreement with the patient.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De zorgverlener die de medicatieafspraak met de patiënt heeft vastgesteld."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationUse2.ProductUsed",
+        "path": "MedicationUse2.ProductUsed",
+        "short": "ProductUsed",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gebruiksproduct"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The product used. This is usually medication. Food, blood products, aids and bandages do not strictly fall under the category of medication, but can be recorded as well. \r\n\r\nIn principle, this will be the prescribed product, but the product used may differ from the prescribed product.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het gebruikte middel. Dit is vrijwel steeds een geneesmiddel. Voedingsmiddelen, bloedproducten, hulp- en verbandmiddelen vallen strikt genomen niet onder de categorie geneesmiddelen, maar kunnen ook worden worden vastgelegd.\r\n\r\nIn principe betreft dit het voorgeschreven product, maar het daadwerkelijk gebruikte product kan afwijken van het voorgeschreven product."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationUse2.InstructionsForUse",
+        "path": "MedicationUse2.InstructionsForUse",
+        "short": "InstructionsForUse",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gebruiksinstructie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Instructions for the use of the medication, e.g. dose and route of administration. In the event of medication use, this is the pattern of use established by the patient or that the patient followed.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanwijzingen voor het gebruik van de medicatie, bijvoorbeeld dosering en toedieningsweg. Bij medicatiegebruik is dit het gebruikspatroon dat de patiënt heeft gevolgd of met zichzelf heeft afgesproken."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Dosage",
+            "profile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-InstructionsForUse"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationUse2.MedicationUseDateTime",
+        "path": "MedicationUse2.MedicationUseDateTime",
+        "short": "MedicationUseDateTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MedicatieGebruikDatumTijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Date on which this use is entered.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum waarop het onderliggende gebruik is vastgelegd."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "MedicationUse2.PeriodOfUse",
+        "path": "MedicationUse2.PeriodOfUse",
+        "short": "PeriodOfUse",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gebruiksperiode"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Medication use can be recorded for a certain moment or over a certain period. Thus, medication use can be recorded multiple times during the use of medication. The usage period is the period or moment over which the data is recorded.\r\n**Start date**: This is the time at which the agreement was to take effect (or took effect or will take effect). \r\n**Duration**: The intended duration of use. E.g. 5 days or 8 weeks. It is not allowed to indicate the duration in months, because different months have a variable duration in days. \r\n**End date**: The time at which the period of use ends (or ended or will end). To avoid confusion between 'to' and 'up to', the submission of time is always mandatory for the end date.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Medicatiegebruik kan voor een bepaald moment of over een bepaalde periode worden vastgelegd. Gedurende het gebruik van medicatie kan er dus meerdere keren medicatiegebruik worden vastgelegd. Het betreft hier de periode of het moment waarover de gegevens worden vastgelegd. \r\n**Ingangsdatum**: Dit is het tijdstip waarop het gebruik is gestart. \r\n**Gebruiksduur**: De beoogde gebruiksduur. Bijvoorbeeld 5 dagen of 8 weken. Het is niet toegestaan om de gebruiksduur in maanden aan te geven, omdat verschillende maanden een variabele duur in dagen hebben. \r\n**Einddatum**: Het tijdstip waarop de gebruiksperiode eindigt (of geëindigd is of zal eindigen). Om verwarring te voorkomen tussen 'tot' en 'tot en met' is het meegeven van de tijd altijd verplicht bij einddatum."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Range",
+            "profile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-TimeInterval"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationUse2.AsAgreedIndicator",
+        "path": "MedicationUse2.AsAgreedIndicator",
+        "short": "AsAgreedIndicator",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VolgensAfspraakIndicator"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Is the medicine used as outlined in the medication agreement?",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Wordt het geneesmiddel gebruikt zoals afgesproken in de medicatieafspraak?"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "MedicationUse2.UseIndicator",
+        "path": "MedicationUse2.UseIndicator",
+        "short": "UseIndicator",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GebruikIndicator"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Is this medicine used or not?",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Wordt dit geneesmiddel gebruikt of niet."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "MedicationUse2.ReasonForUse",
+        "path": "MedicationUse2.ReasonForUse",
+        "short": "ReasonForUse",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "RedenGebruik"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The reason for using the medication, particularly in self-care medicine purchased by the patient themselves.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De reden om medicatie te gebruiken, m.n. bij zelfzorgmiddelen die de patiënt zelf aanschaft."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "MedicationUse2.MedicationUseStopType",
+        "path": "MedicationUse2.MedicationUseStopType",
+        "short": "MedicationUseStopType",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MedicatieGebruikStopType"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Stop type, the manner in which this medication is discontinued (temporary or definitive).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Stop type, de manier waarop gestopt wordt met deze medicatie (tijdelijk of definitief)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "MedicationUseStopType codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/MedicationStopType"
+        }
+      },
+      {
+        "id": "MedicationUse2.ReasonForChangeOrDiscontinuationOfUse",
+        "path": "MedicationUse2.ReasonForChangeOrDiscontinuationOfUse",
+        "short": "ReasonForChangeOrDiscontinuationOfUse",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "RedenWijzigenOfStoppenGebruik"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Reason for changing or discontinuing use of medication.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Reden van wijzigen of stoppen met medicatiegebruik"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "ReasonForChangeOrDiscontinuationOfUse codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/MedicationReason"
+        }
+      },
+      {
+        "id": "MedicationUse2.Comment",
+        "path": "MedicationUse2.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Comments on the medication use.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Opmerkingen met betrekking tot het medicatie gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

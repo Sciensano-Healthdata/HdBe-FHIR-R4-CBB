@@ -1,1 +1,603 @@
-{"resourceType":"StructureDefinition","id":"HdBe-FamilySituationChild","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FamilySituationChild","name":"HdBeFamilySituationChild","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-GezinssituatieKind"}]}]},"title":"HdBe FamilySituationChild","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"Traditionally, a family is defined as a group of people of one or more adults who carry responsibility for caring for and raising one or more children. \r\nChildren can have multiple family situations when they live partly with their father and partly with their mother* e.g*. after a divorce. \r\nCurrently, the term is used more broadly for all forms of cohabitation which form a recognizable social unit, of people who are or who are not related and who have long-lasting, affective bonds and provide each other with support and care.\r\n\r\n#### Purpose\r\nInformation on the child’s family situation is important in determining the extent to which the child and its family need care and support.\r\n\r\n\r\n#### Instructions\r\nIf the child has multiple family situations,* e.g*. as a result of a divorce or due to part-time residence in an institution, information about these situations can be provided by multiple use of the information model. By indicating if the mother or father is involved in the described context, it becomes clear with whom the child lives in that situation.\r\n#### Patient Population\r\nThe information model is meant for describing the family situation of children aged 0 to 18 years.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Traditioneel is een gezin gedefinieerd als een leefverband van een of meer volwassenen die verantwoordelijkheid dragen voor de verzorging en de opvoeding van een of meer kinderen.\r\nVoor kinderen kan het voorkomen dat zij meedere gezinssituaties kennen, zoals na een scheiding waarna het kind deels bij vader en deels bij de moeder woont.\r\nTegenwoordig wordt de term breder gebruikt voor alle samenlevingsvormen die een herkenbare sociale eenheid vormen, met al dan niet verwante personen die duurzame en affectieve banden hebben en elkaar onderling steun en verzorging verlenen.\r\n#### Purpose\r\nInformatie over de gezinssituatie van het kind is van belang bij het vaststellen van de mate waarin het kind en het gezin thuis zorg en ondersteuning nodig heeft.\r\n\r\n\r\n#### Instructions\r\nIndien het kind meerdere gezinssituaties heeft, bv. naar aanleiding van een scheiding of wegens deeltijds verblijf in een instelling, kunnen deze situaties meegegeven worden door de bouwsteen meerdere malen toe te passen. Door bij verzorger aan te geven of de moeder of de vader in de betreffende situatie betrokken is, wordt duidelijk bij wie het kind in die situatie woont.\r\n#### Patient Population\r\nDeze bouwsteen is bedoeld voor het beschrijven van gezinssituatie van kinderen van 0-18 jaar.\r\n**Revision History**\r\nPublicatieversie 1.0 (04-09-2017)\r\n\r\nPublicatieversie 1.1 (31-12-2017)\r\nBevat: [ZIB-646](https://bits.nictiz.nl/browse/ZIB-646).\r\n\r\nPublicatieversie 1.2 (26-02-2019)\r\nBevat: [ZIB-697](https://bits.nictiz.nl/browse/ZIB-697)."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/FamilySituationChild","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"FamilySituationChild","path":"FamilySituationChild","short":"FamilySituationChild","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"GezinssituatieKind"}]}]},"definition":"Root concept of the FamilySituationChild information model. This concept contains all data elements of the FamilySituationChild information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de bouwsteen GezinssituatieKind. Dit concept bevat alle gegevenselementen van de bouwsteen GezinssituatieKind."}]}]},"min":0,"max":"*"},{"id":"FamilySituationChild.FamilyComposition","path":"FamilySituationChild.FamilyComposition","short":"FamilyComposition","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"GezinssamenstellingKind"}]}]},"definition":"The family composition describes the cjhild’s home situation and the form of cohabitation. \r\nA family can consist of one or more people.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De gezinssamenstelling beschrijft de thuissituatie van het kind en de samenlevingsvorm. \r\nEen gezin kan uit één of meer personen bestaan."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"extensible","description":"FamilyComposition codes","valueSet":"https://fhir.healthdata.be/ValueSet/GezinssamenstellingKind"}},{"id":"FamilySituationChild.ParentCarer","path":"FamilySituationChild.ParentCarer","short":"ParentCarer","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"OuderVerzorger"}]}]},"definition":"Person who has taken on the role of the child's caregiver in the family situation involved. This could be a parent or other family member.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Persoon die in de betrokken gezinssituatie de rol van verzorger van het kind op zich heeft genomen. Dit kan een ouder zijn of een andere huisgenoot."}]}]},"min":0,"max":"*","type":[{"code":"Reference","targetProfile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson"]}]},{"id":"FamilySituationChild.Child","path":"FamilySituationChild.Child","short":"Child","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Kind"}]}]},"definition":"Container of the Child concept. This container contains all data elements of the Child concept.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Container van het concept Kind. Deze container bevat alle gegevenselementen van het concept Kind."}]}]},"min":0,"max":"*","type":[{"code":"BackboneElement"}]},{"id":"FamilySituationChild.Child.ContactPerson","path":"FamilySituationChild.Child.ContactPerson","short":"ContactPerson","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Kind"}]}]},"definition":"Child of the child receiving care","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Kind van het kind dat zorg ontvangt"}]}]},"min":0,"max":"1","type":[{"code":"Reference","targetProfile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson"]}]},{"id":"FamilySituationChild.Child.DateOfBirth","path":"FamilySituationChild.Child.DateOfBirth","short":"DateOfBirth","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"GeboortedatumKind"}]}]},"definition":"The child’s date of birth.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De geboortedatum van het kind."}]}]},"min":0,"max":"1","type":[{"code":"dateTime"}]},{"id":"FamilySituationChild.NumberOfSiblings","path":"FamilySituationChild.NumberOfSiblings","short":"NumberOfSiblings","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"AantalBroersEnZussen"}]}]},"definition":"Number of brothers and sisters of the child, living at the same house. Children in this context can be biological and adopted children, stepchildren and foster children.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Aantal broers en zussen die het kind heeft, die in hetzelfde gezin woonachtend zijn. Kinderen in deze context zijn biologische en geadopteerde kinderen, stiefkinderen en pleegkinderen."}]}]},"min":0,"max":"1","type":[{"code":"Count"}]},{"id":"FamilySituationChild.Sibling","path":"FamilySituationChild.Sibling","short":"Sibling","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"BroerOfZus"}]}]},"definition":"Container of the Sibling concept. This container contains all data elements of the Sibling concept.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Container van het concept BroerOfZus. Deze container bevat alle gegevenselementen van het concept BroerOfZus."}]}]},"min":0,"max":"*","type":[{"code":"BackboneElement"}]},{"id":"FamilySituationChild.Sibling.ContactPerson","path":"FamilySituationChild.Sibling.ContactPerson","short":"ContactPerson","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"BroerOfZus"}]}]},"definition":"Sister or brother, which is also part of concerning household. This includes not only biological siblings, but also half, step, foster and adoptive siblings","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Zus of broer van het kind, die deel uitmaakt van betreffende huishouden. Het betreft niet alleen biologische zussen en broers maar ook half-, stief, -pleeg en adoptief broers en zussen"}]}]},"min":0,"max":"1","type":[{"code":"Reference","targetProfile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson"]}]},{"id":"FamilySituationChild.Sibling.DateOfBirthSibling","path":"FamilySituationChild.Sibling.DateOfBirthSibling","short":"DateOfBirthSibling","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"GeboortedatumZusBroer"}]}]},"definition":"Date of birth of the sister or brother.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Geboortedatum van de zus of broer."}]}]},"min":0,"max":"1","type":[{"code":"dateTime"}]},{"id":"FamilySituationChild.Comment","path":"FamilySituationChild.Comment","short":"Comment","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Toelichting"}]}]},"definition":"A comment on the childs family situation.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Een toelichting op de gezinssituatie van het kind."}]}]},"min":0,"max":"1","type":[{"code":"string"}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-FamilySituationChild",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FamilySituationChild",
+  "name": "HdBeFamilySituationChild",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-GezinssituatieKind"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe FamilySituationChild",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Traditionally, a family is defined as a group of people of one or more adults who carry responsibility for caring for and raising one or more children. \r\nChildren can have multiple family situations when they live partly with their father and partly with their mother* e.g*. after a divorce. \r\nCurrently, the term is used more broadly for all forms of cohabitation which form a recognizable social unit, of people who are or who are not related and who have long-lasting, affective bonds and provide each other with support and care.\r\n\r\n#### Purpose\r\nInformation on the child’s family situation is important in determining the extent to which the child and its family need care and support.\r\n\r\n\r\n#### Instructions\r\nIf the child has multiple family situations,* e.g*. as a result of a divorce or due to part-time residence in an institution, information about these situations can be provided by multiple use of the information model. By indicating if the mother or father is involved in the described context, it becomes clear with whom the child lives in that situation.\r\n#### Patient Population\r\nThe information model is meant for describing the family situation of children aged 0 to 18 years.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Traditioneel is een gezin gedefinieerd als een leefverband van een of meer volwassenen die verantwoordelijkheid dragen voor de verzorging en de opvoeding van een of meer kinderen.\r\nVoor kinderen kan het voorkomen dat zij meedere gezinssituaties kennen, zoals na een scheiding waarna het kind deels bij vader en deels bij de moeder woont.\r\nTegenwoordig wordt de term breder gebruikt voor alle samenlevingsvormen die een herkenbare sociale eenheid vormen, met al dan niet verwante personen die duurzame en affectieve banden hebben en elkaar onderling steun en verzorging verlenen.\r\n#### Purpose\r\nInformatie over de gezinssituatie van het kind is van belang bij het vaststellen van de mate waarin het kind en het gezin thuis zorg en ondersteuning nodig heeft.\r\n\r\n\r\n#### Instructions\r\nIndien het kind meerdere gezinssituaties heeft, bv. naar aanleiding van een scheiding of wegens deeltijds verblijf in een instelling, kunnen deze situaties meegegeven worden door de bouwsteen meerdere malen toe te passen. Door bij verzorger aan te geven of de moeder of de vader in de betreffende situatie betrokken is, wordt duidelijk bij wie het kind in die situatie woont.\r\n#### Patient Population\r\nDeze bouwsteen is bedoeld voor het beschrijven van gezinssituatie van kinderen van 0-18 jaar.\r\n**Revision History**\r\nPublicatieversie 1.0 (04-09-2017)\r\n\r\nPublicatieversie 1.1 (31-12-2017)\r\nBevat: [ZIB-646](https://bits.nictiz.nl/browse/ZIB-646).\r\n\r\nPublicatieversie 1.2 (26-02-2019)\r\nBevat: [ZIB-697](https://bits.nictiz.nl/browse/ZIB-697)."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/FamilySituationChild",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "FamilySituationChild",
+        "path": "FamilySituationChild",
+        "short": "FamilySituationChild",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GezinssituatieKind"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the FamilySituationChild information model. This concept contains all data elements of the FamilySituationChild information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen GezinssituatieKind. Dit concept bevat alle gegevenselementen van de bouwsteen GezinssituatieKind."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "FamilySituationChild.FamilyComposition",
+        "path": "FamilySituationChild.FamilyComposition",
+        "short": "FamilyComposition",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GezinssamenstellingKind"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The family composition describes the cjhild’s home situation and the form of cohabitation. \r\nA family can consist of one or more people.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De gezinssamenstelling beschrijft de thuissituatie van het kind en de samenlevingsvorm. \r\nEen gezin kan uit één of meer personen bestaan."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "FamilyComposition codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/GezinssamenstellingKind"
+        }
+      },
+      {
+        "id": "FamilySituationChild.ParentCarer",
+        "path": "FamilySituationChild.ParentCarer",
+        "short": "ParentCarer",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "OuderVerzorger"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Person who has taken on the role of the child's caregiver in the family situation involved. This could be a parent or other family member.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Persoon die in de betrokken gezinssituatie de rol van verzorger van het kind op zich heeft genomen. Dit kan een ouder zijn of een andere huisgenoot."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "FamilySituationChild.Child",
+        "path": "FamilySituationChild.Child",
+        "short": "Child",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Kind"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the Child concept. This container contains all data elements of the Child concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept Kind. Deze container bevat alle gegevenselementen van het concept Kind."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "FamilySituationChild.Child.ContactPerson",
+        "path": "FamilySituationChild.Child.ContactPerson",
+        "short": "ContactPerson",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Kind"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Child of the child receiving care",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Kind van het kind dat zorg ontvangt"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "FamilySituationChild.Child.DateOfBirth",
+        "path": "FamilySituationChild.Child.DateOfBirth",
+        "short": "DateOfBirth",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GeboortedatumKind"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The child’s date of birth.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De geboortedatum van het kind."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "FamilySituationChild.NumberOfSiblings",
+        "path": "FamilySituationChild.NumberOfSiblings",
+        "short": "NumberOfSiblings",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AantalBroersEnZussen"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Number of brothers and sisters of the child, living at the same house. Children in this context can be biological and adopted children, stepchildren and foster children.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aantal broers en zussen die het kind heeft, die in hetzelfde gezin woonachtend zijn. Kinderen in deze context zijn biologische en geadopteerde kinderen, stiefkinderen en pleegkinderen."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "FamilySituationChild.Sibling",
+        "path": "FamilySituationChild.Sibling",
+        "short": "Sibling",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "BroerOfZus"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the Sibling concept. This container contains all data elements of the Sibling concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept BroerOfZus. Deze container bevat alle gegevenselementen van het concept BroerOfZus."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "FamilySituationChild.Sibling.ContactPerson",
+        "path": "FamilySituationChild.Sibling.ContactPerson",
+        "short": "ContactPerson",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "BroerOfZus"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Sister or brother, which is also part of concerning household. This includes not only biological siblings, but also half, step, foster and adoptive siblings",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Zus of broer van het kind, die deel uitmaakt van betreffende huishouden. Het betreft niet alleen biologische zussen en broers maar ook half-, stief, -pleeg en adoptief broers en zussen"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "FamilySituationChild.Sibling.DateOfBirthSibling",
+        "path": "FamilySituationChild.Sibling.DateOfBirthSibling",
+        "short": "DateOfBirthSibling",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GeboortedatumZusBroer"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Date of birth of the sister or brother.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geboortedatum van de zus of broer."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "FamilySituationChild.Comment",
+        "path": "FamilySituationChild.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A comment on the childs family situation.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een toelichting op de gezinssituatie van het kind."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

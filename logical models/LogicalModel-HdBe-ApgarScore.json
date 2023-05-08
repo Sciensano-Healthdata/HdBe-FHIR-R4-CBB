@@ -1,1 +1,520 @@
-{"resourceType":"StructureDefinition","id":"HdBe-ApgarScore","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ApgarScore","name":"HdBeApgarScore","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-ApgarScore"}]}]},"title":"HdBe ApgarScore","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"The Apgar score represents the overall clinical status of a newborn child. This is evaluated one, five and ten minutes after birth based on 5 parameters: Appearance, Pulse, Grimace, Activity, Respiration. If the score measured at 5 minutes is < 8, the Apgar score is measured again at 10, 15, 20 minutes etc. until the score = 8.\r\n#### Purpose\r\nThe Apgar score is primarily meant to rapidly determine the clinical condition of the newborn child and whether extra care is required. A low Apgar score can be caused by developmental disorders, prenatal accidents or negative influences during birth. The Apgar score remains a snapshot in time and cannot be used to predict the locomotive or mental development of a child.\r\n#### Evidence Base\r\nThe definitions of the concepts are based on the Apgar score (as defined in Dutch by the KNOV), the guidelines Fetal Monitoring of the NVOG and Reanimation of Newborn of the NVK.\r\n\r\n\r\n#### Patient Population\r\nThe ApgarScore information model is meant for children up to the age of 12 month.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De Apgar score geeft de algemene klinische toestand van een pasgeborene weer. Deze wordt één, vijf en tien minuten na de geboorte beoordeeld aan de hand van 5 parameters: ademhaling, hartslag/pols, spierspanning, huidskleur, reflexen/reactie op prikkels. Indien de score bij vijf minuten < 8 is wordt opnieuw gescoord bij 10, 15, 20 minuten etc. tot de score = 8.\r\n#### Purpose\r\nDe Apgarscore is vooral bedoeld om snel te beoordelen hoe de klinische conditie van de pasgeborene post-partum is en of er extra zorg nodig is. Een lage Apgarscore kan het gevolg zijn van aanlegstoornissen, prenatale accidenten of negatieve invloeden tijdens de baring. De Apgarscore is een momentopname en mag niet gebruikt worden om de motorische of mentale ontwikkeling van een kind te voorspellen.\r\n#### Evidence Base\r\nDe definities van de concepten zijn gebaseerd op de Apgar score (zoals gedefinieerd door de KNOV), de richtlijnen Foetale Bewaking van de NVOG en Reanimatie van Pasgeborenen van de NVK.\r\n\r\n\r\n#### Patient Population\r\nDe ApgarScore bouwsteen is bedoeld voor kinderen in de leeftijd tot 12 maanden.\r\n**Revision History**\r\nPublicatieversie 1.0 (04-09-2017)\r\n\r\nPublicatieversie 1.0.1 (01-09-2020)\r\nBevat: [ZIB-891](https://bits.nictiz.nl/browse/ZIB-891)."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/ApgarScore","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"ApgarScore","path":"ApgarScore","short":"ApgarScore","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"ApgarScore"}]}]},"definition":"Root concept of the ApgarScore information model. This root concept contains all data elements of the ApgarScore information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de bouwsteen ApgarScore. Dit rootconcept bevat alle gegevenselementen van de bouwsteen ApgarScore."}]}]},"min":0,"max":"*"},{"id":"ApgarScore.ApgarScoreDateTime","path":"ApgarScore.ApgarScoreDateTime","short":"ApgarScoreDateTime","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"ApgarScoreDatumTijd"}]}]},"definition":"The day and time at which the Apgar score is registered.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De dag en tijdstip waarop de Apgar score is vastgelegd."}]}]},"min":1,"max":"1","type":[{"code":"dateTime"}]},{"id":"ApgarScore.ApgarScoreTotal","path":"ApgarScore.ApgarScoreTotal","short":"ApgarScoreTotal","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"ApgarScoreTotaal"}]}]},"definition":"Total of the Apgar score. The total score has a range from 0 - 10.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Totaal van de Apgar score. Het bereik van de totaalscore is 0 tot 10."}]}]},"min":1,"max":"1","type":[{"code":"Count"}]},{"id":"ApgarScore.RespiratoryScore","path":"ApgarScore.RespiratoryScore","short":"RespiratoryScore","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"AdemhalingScore"}]}]},"definition":"The Apgar subscore for respiration.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De Apgar deelscore voor de ademhaling."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"RespiratoryScore codes","valueSet":"https://fhir.healthdata.be/ValueSet/AdemhalingScore"}},{"id":"ApgarScore.AppearanceScore","path":"ApgarScore.AppearanceScore","short":"AppearanceScore","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HuidskleurScore"}]}]},"definition":"The Apgar subscore for skin color/appearance.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De Apgar deelscore voor de huidskleur/aspect."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"AppearanceScore codes","valueSet":"https://fhir.healthdata.be/ValueSet/HuidskleurScore"}},{"id":"ApgarScore.PulseScore","path":"ApgarScore.PulseScore","short":"PulseScore","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HartslagScore"}]}]},"definition":"The Apgar subscore for pulse.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De Apgar deelscore voor de hartslag/pols."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"PulseScore codes","valueSet":"https://fhir.healthdata.be/ValueSet/HartslagScore"}},{"id":"ApgarScore.GrimaceScore","path":"ApgarScore.GrimaceScore","short":"GrimaceScore","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"ReflexenScore"}]}]},"definition":"The Apgar subscore for grimace.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De Apgar deelscore voor de reactie op prikkels."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"GrimaceScore codes","valueSet":"https://fhir.healthdata.be/ValueSet/ReflexenScore"}},{"id":"ApgarScore.MusleToneScore","path":"ApgarScore.MusleToneScore","short":"MusleToneScore","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"SpierspanningScore"}]}]},"definition":"The Apgar subscore for activity/muscle tone.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De Apgar deelscore voor de spierspanning/tonus."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"MusleToneScore codes","valueSet":"https://fhir.healthdata.be/ValueSet/SpierspanningScore"}},{"id":"ApgarScore.Comment","path":"ApgarScore.Comment","short":"Comment","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Toelichting"}]}]},"definition":"Comment on the Apgar score.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De toelichting op de Apgar score."}]}]},"min":0,"max":"1","type":[{"code":"string"}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-ApgarScore",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ApgarScore",
+  "name": "HdBeApgarScore",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-ApgarScore"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe ApgarScore",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "The Apgar score represents the overall clinical status of a newborn child. This is evaluated one, five and ten minutes after birth based on 5 parameters: Appearance, Pulse, Grimace, Activity, Respiration. If the score measured at 5 minutes is < 8, the Apgar score is measured again at 10, 15, 20 minutes etc. until the score = 8.\r\n#### Purpose\r\nThe Apgar score is primarily meant to rapidly determine the clinical condition of the newborn child and whether extra care is required. A low Apgar score can be caused by developmental disorders, prenatal accidents or negative influences during birth. The Apgar score remains a snapshot in time and cannot be used to predict the locomotive or mental development of a child.\r\n#### Evidence Base\r\nThe definitions of the concepts are based on the Apgar score (as defined in Dutch by the KNOV), the guidelines Fetal Monitoring of the NVOG and Reanimation of Newborn of the NVK.\r\n\r\n\r\n#### Patient Population\r\nThe ApgarScore information model is meant for children up to the age of 12 month.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "De Apgar score geeft de algemene klinische toestand van een pasgeborene weer. Deze wordt één, vijf en tien minuten na de geboorte beoordeeld aan de hand van 5 parameters: ademhaling, hartslag/pols, spierspanning, huidskleur, reflexen/reactie op prikkels. Indien de score bij vijf minuten < 8 is wordt opnieuw gescoord bij 10, 15, 20 minuten etc. tot de score = 8.\r\n#### Purpose\r\nDe Apgarscore is vooral bedoeld om snel te beoordelen hoe de klinische conditie van de pasgeborene post-partum is en of er extra zorg nodig is. Een lage Apgarscore kan het gevolg zijn van aanlegstoornissen, prenatale accidenten of negatieve invloeden tijdens de baring. De Apgarscore is een momentopname en mag niet gebruikt worden om de motorische of mentale ontwikkeling van een kind te voorspellen.\r\n#### Evidence Base\r\nDe definities van de concepten zijn gebaseerd op de Apgar score (zoals gedefinieerd door de KNOV), de richtlijnen Foetale Bewaking van de NVOG en Reanimatie van Pasgeborenen van de NVK.\r\n\r\n\r\n#### Patient Population\r\nDe ApgarScore bouwsteen is bedoeld voor kinderen in de leeftijd tot 12 maanden.\r\n**Revision History**\r\nPublicatieversie 1.0 (04-09-2017)\r\n\r\nPublicatieversie 1.0.1 (01-09-2020)\r\nBevat: [ZIB-891](https://bits.nictiz.nl/browse/ZIB-891)."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/ApgarScore",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ApgarScore",
+        "path": "ApgarScore",
+        "short": "ApgarScore",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ApgarScore"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the ApgarScore information model. This root concept contains all data elements of the ApgarScore information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen ApgarScore. Dit rootconcept bevat alle gegevenselementen van de bouwsteen ApgarScore."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ApgarScore.ApgarScoreDateTime",
+        "path": "ApgarScore.ApgarScoreDateTime",
+        "short": "ApgarScoreDateTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ApgarScoreDatumTijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The day and time at which the Apgar score is registered.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De dag en tijdstip waarop de Apgar score is vastgelegd."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "ApgarScore.ApgarScoreTotal",
+        "path": "ApgarScore.ApgarScoreTotal",
+        "short": "ApgarScoreTotal",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ApgarScoreTotaal"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Total of the Apgar score. The total score has a range from 0 - 10.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Totaal van de Apgar score. Het bereik van de totaalscore is 0 tot 10."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "ApgarScore.RespiratoryScore",
+        "path": "ApgarScore.RespiratoryScore",
+        "short": "RespiratoryScore",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AdemhalingScore"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The Apgar subscore for respiration.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De Apgar deelscore voor de ademhaling."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "RespiratoryScore codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/AdemhalingScore"
+        }
+      },
+      {
+        "id": "ApgarScore.AppearanceScore",
+        "path": "ApgarScore.AppearanceScore",
+        "short": "AppearanceScore",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "HuidskleurScore"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The Apgar subscore for skin color/appearance.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De Apgar deelscore voor de huidskleur/aspect."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "AppearanceScore codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/HuidskleurScore"
+        }
+      },
+      {
+        "id": "ApgarScore.PulseScore",
+        "path": "ApgarScore.PulseScore",
+        "short": "PulseScore",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "HartslagScore"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The Apgar subscore for pulse.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De Apgar deelscore voor de hartslag/pols."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "PulseScore codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/HartslagScore"
+        }
+      },
+      {
+        "id": "ApgarScore.GrimaceScore",
+        "path": "ApgarScore.GrimaceScore",
+        "short": "GrimaceScore",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ReflexenScore"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The Apgar subscore for grimace.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De Apgar deelscore voor de reactie op prikkels."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "GrimaceScore codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/ReflexenScore"
+        }
+      },
+      {
+        "id": "ApgarScore.MusleToneScore",
+        "path": "ApgarScore.MusleToneScore",
+        "short": "MusleToneScore",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SpierspanningScore"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The Apgar subscore for activity/muscle tone.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De Apgar deelscore voor de spierspanning/tonus."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "MusleToneScore codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/SpierspanningScore"
+        }
+      },
+      {
+        "id": "ApgarScore.Comment",
+        "path": "ApgarScore.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Comment on the Apgar score.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De toelichting op de Apgar score."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,1 +1,409 @@
-{"resourceType":"StructureDefinition","id":"HdBe-HearingFunction","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HearingFunction","name":"HdBeHearingFunction","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-FunctieHoren"}]}]},"title":"HdBe HearingFunction","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"Hearing is the ability to observe sound, with the purpose of communicating with others, localizing the source of the sound and recognizing certain sounds. This pertains to observing the sound waves, and not processing the sounds in the brain. \r\nA hearing disorder can lead to things including communication problems.\r\n\r\n#### Purpose\r\nInformation on hearing function disorders is important in patient nursing and care and particularly in communication with the patient.\r\n#### Evidence Base\r\nThe definitions of the concepts were (partially) taken from the ICNP definitions.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Horen is het vermogen om geluid waar te nemen, met als doel het communiceren met anderen, het localiseren van een geluidsbron en het herkennen van geluiden. Het gaat daarbij om de waarneming van de geluidsgolven en niet om de verwerking er van in de hersenen.\r\nEen stoornis van de hoorfunctie kan leiden tot onder andere communicatieproblemen.\r\n#### Purpose\r\nInformatie over de aanwezigheid van stoornissen in de hoorfunctie is van belang bij de verpleging en behandeling van en vooral bij de commununicatie met de patiënt. \r\n#### Evidence Base\r\nDe definities van de concepten zijn (deels) ontleend aan de Nederlandse vertaling van de ICNP begrippen.\r\n\r\n\r\n**References**\r\n1. International Classification of Functioning Disability and Health (ICF) [Online] Beschikbaar op: [http:/www.rivm.nl/who-fic/icf.htm](http:/www.rivm.nl/who-fic/icf.htm) [Geraadpleegd: 13 februari 2015]"}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HearingFunction","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"HearingFunction","path":"HearingFunction","short":"HearingFunction","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"FunctieHoren"}]}]},"definition":"Root concept of the HearingFunction information model. This concept contains all data elements of the HearingFunction information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de bouwsteen FunctieHoren. Dit concept bevat alle gegevenselementen van de bouwsteen FunctieHoren."}]}]},"min":0,"max":"*"},{"id":"HearingFunction.HearingFunction","path":"HearingFunction.HearingFunction","short":"HearingFunction","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HoorFunctie"}]}]},"definition":"The faculty of hearing due to responses to stimuli from auditory organs, capacity to hear.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het vermogen om te horen als reactie op prikkels van de (auditieve) hoor-organen."}]}]},"min":1,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"HearingFunction codes","valueSet":"https://fhir.healthdata.be/ValueSet/HearingFunction"}},{"id":"HearingFunction.HearingAid","path":"HearingFunction.HearingAid","short":"HearingAid","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HorenHulpmiddel"}]}]},"definition":"The medical aid used to help the patient hear.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het medische hulpmiddel dat gebruikt wordt ter ondersteuning van het horen."}]}]},"comment":"This CBB (HearingFunction) constrains the target CBB (MedicalDevice). The following child elements describe only the differences relative to the CBB in the target reference.","min":0,"max":"*","type":[{"code":"Reference","targetProfile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicalDevice"]}]},{"id":"HearingFunction.HearingAid.MedicalDevice","path":"HearingFunction.HearingAid.MedicalDevice","min":1,"max":"1","type":[{"code":"BackboneElement"}]},{"id":"HearingFunction.HearingAid.MedicalDevice.Product","path":"HearingFunction.HearingAid.MedicalDevice.Product","min":1,"max":"1","type":[{"code":"BackboneElement"}]},{"id":"HearingFunction.HearingAid.MedicalDevice.Product.ProductType","path":"HearingFunction.HearingAid.MedicalDevice.Product.ProductType","short":"ProductType","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"ProductType"}]}]},"definition":"The type of product used to help the patient hear.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het type product dat gebruikt wordt om het horen te ondersteunen."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"extensible","description":"ProductType codes","valueSet":"https://fhir.healthdata.be/ValueSet/HearingAidType"}},{"id":"HearingFunction.HearingAid.MedicalDevice.AnatomicalLocation","path":"HearingFunction.HearingAid.MedicalDevice.AnatomicalLocation","min":0,"max":"1","type":[{"code":"AnatomicalLocation","profile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"]}]},{"id":"HearingFunction.HearingAid.MedicalDevice.AnatomicalLocation.Location","path":"HearingFunction.HearingAid.MedicalDevice.AnatomicalLocation.Location","short":"Location","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Locatie"}]}]},"definition":"Location on/in the body.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Localisatie op/in het lichaam."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"DeviceAnatomicalLocation codes","valueSet":"https://fhir.healthdata.be/ValueSet/DeviceAnatomicalLocation"}},{"id":"HearingFunction.Comment","path":"HearingFunction.Comment","short":"Comment","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Toelichting"}]}]},"definition":"A comment on the hearing function.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Een toelichting op de hoorfunctie."}]}]},"min":0,"max":"1","type":[{"code":"string"}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-HearingFunction",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HearingFunction",
+  "name": "HdBeHearingFunction",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-FunctieHoren"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe HearingFunction",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Hearing is the ability to observe sound, with the purpose of communicating with others, localizing the source of the sound and recognizing certain sounds. This pertains to observing the sound waves, and not processing the sounds in the brain. \r\nA hearing disorder can lead to things including communication problems.\r\n\r\n#### Purpose\r\nInformation on hearing function disorders is important in patient nursing and care and particularly in communication with the patient.\r\n#### Evidence Base\r\nThe definitions of the concepts were (partially) taken from the ICNP definitions.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Horen is het vermogen om geluid waar te nemen, met als doel het communiceren met anderen, het localiseren van een geluidsbron en het herkennen van geluiden. Het gaat daarbij om de waarneming van de geluidsgolven en niet om de verwerking er van in de hersenen.\r\nEen stoornis van de hoorfunctie kan leiden tot onder andere communicatieproblemen.\r\n#### Purpose\r\nInformatie over de aanwezigheid van stoornissen in de hoorfunctie is van belang bij de verpleging en behandeling van en vooral bij de commununicatie met de patiënt. \r\n#### Evidence Base\r\nDe definities van de concepten zijn (deels) ontleend aan de Nederlandse vertaling van de ICNP begrippen.\r\n\r\n\r\n**References**\r\n1. International Classification of Functioning Disability and Health (ICF) [Online] Beschikbaar op: [http:/www.rivm.nl/who-fic/icf.htm](http:/www.rivm.nl/who-fic/icf.htm) [Geraadpleegd: 13 februari 2015]"
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HearingFunction",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "HearingFunction",
+        "path": "HearingFunction",
+        "short": "HearingFunction",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "FunctieHoren"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the HearingFunction information model. This concept contains all data elements of the HearingFunction information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen FunctieHoren. Dit concept bevat alle gegevenselementen van de bouwsteen FunctieHoren."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "HearingFunction.HearingFunction",
+        "path": "HearingFunction.HearingFunction",
+        "short": "HearingFunction",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "HoorFunctie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The faculty of hearing due to responses to stimuli from auditory organs, capacity to hear.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het vermogen om te horen als reactie op prikkels van de (auditieve) hoor-organen."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "HearingFunction codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/HearingFunction"
+        }
+      },
+      {
+        "id": "HearingFunction.HearingAid",
+        "path": "HearingFunction.HearingAid",
+        "short": "HearingAid",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "HorenHulpmiddel"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The medical aid used to help the patient hear.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het medische hulpmiddel dat gebruikt wordt ter ondersteuning van het horen."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "This CBB (HearingFunction) constrains the target CBB (MedicalDevice). The following child elements describe only the differences relative to the CBB in the target reference.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicalDevice"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HearingFunction.HearingAid.MedicalDevice",
+        "path": "HearingFunction.HearingAid.MedicalDevice",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "HearingFunction.HearingAid.MedicalDevice.Product",
+        "path": "HearingFunction.HearingAid.MedicalDevice.Product",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "HearingFunction.HearingAid.MedicalDevice.Product.ProductType",
+        "path": "HearingFunction.HearingAid.MedicalDevice.Product.ProductType",
+        "short": "ProductType",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ProductType"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The type of product used to help the patient hear.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het type product dat gebruikt wordt om het horen te ondersteunen."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "ProductType codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/HearingAidType"
+        }
+      },
+      {
+        "id": "HearingFunction.HearingAid.MedicalDevice.AnatomicalLocation",
+        "path": "HearingFunction.HearingAid.MedicalDevice.AnatomicalLocation",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "AnatomicalLocation",
+            "profile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HearingFunction.HearingAid.MedicalDevice.AnatomicalLocation.Location",
+        "path": "HearingFunction.HearingAid.MedicalDevice.AnatomicalLocation.Location",
+        "short": "Location",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Location on/in the body.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Localisatie op/in het lichaam."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "DeviceAnatomicalLocation codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/DeviceAnatomicalLocation"
+        }
+      },
+      {
+        "id": "HearingFunction.Comment",
+        "path": "HearingFunction.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A comment on the hearing function.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een toelichting op de hoorfunctie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

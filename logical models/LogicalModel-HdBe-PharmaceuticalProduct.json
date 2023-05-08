@@ -1,1 +1,602 @@
-{"resourceType":"StructureDefinition","id":"HdBe-PharmaceuticalProduct","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct","name":"HdBePharmaceuticalProduct","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-FarmaceutischProduct"}]}]},"title":"HdBe PharmaceuticalProduct","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"The prescribed substance is usually medication. However, medical aids and bandages can also be prescribed and supplied via the pharmacy. Food and blood products do not strictly belong in the medication category, but can be prescribed and supplied by a pharmacy as well. \r\n\r\nA type of medication can be indicated with **a single code**. Entering multiple ingredients will enable you to display a compound product. If one of the composite parts is liquid, the dosage will be given in milliliters; otherwise it will be given in ‘units’. \r\n\r\nIn that case, the **composition of the medication** can be specified implicitly (with the use of a medication code) or explicitly, for example by listing the (active) ingredient(s) of the medication. \r\n\r\n**Magistral prescriptions** can be entered as well. This can be done by means of the option listed above to enter coded ingredients and/or by entering the composition and preparation method as free text. \r\nThis is a partial information model\r\n#### Purpose\r\nThe purpose of Product is to unambiguously describe the medication to be used.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het voorgeschreven middel is vrijwel steeds een geneesmiddel. Hulp- en verbandmiddelen kunnen echter ook voorgeschreven en via de apotheek geleverd worden. Voedingsmiddelen en bloedproducten vallen strikt genomen niet onder de categorie geneesmiddelen, maar kunnen worden voorgeschreven, en door een apotheek geleverd worden.\r\n\r\nHet is mogelijk om met **één enkele code **een medicatiesoort aan te duiden, waarbij die code gekozen kan zijn uit meerdere mogelijke coderingssystemen (concreet GPK, PRK, HPK of artikelnummers). Door een juiste toepassing van deze codes in de softwaresystemen leggen deze codes de samenstelling van het gebruikte middel voldoende vast en is een complete productspecificatie niet nodig.\r\n\r\nHet is mogelijk om naast een primaire code ook **alternatieve codes **uit andere coderingssystemen aan te duiden (zodat bijvoorbeeld de GPK kan worden meegestuurd als is geregistreerd op basis van PRK). \r\n\r\nDoor meerdere ingrediënten op te geven wordt het mogelijk om een samengesteld product weer te geven. \r\nHet is dan mogelijk om zowel impliciet te specificeren (door een medicatiecode te gebruiken) als expliciet de **samenstelling van de medicatie **aan te duiden, bijvoorbeeld door de (actieve) ingrediënt(en) van de medicatie te benoemen. \r\n\r\nHet is mogelijk om **magistrale receptuur **door te geven. Dit kan door bovenbedoelde mogelijkheid om gecodeerd ingrediënten aan te duiden en/of door de samenstelling en bereidingswijze als vrije tekst door te geven.Dit is een subbouwsteen\r\n#### Purpose\r\nHet doel van Product is het eenduidig omschrijven van een te gebruiken geneesmiddel.\r\n\r\n\r\n**Revision History**\r\nPublicatieversie 1.0 (04-09-2017)\r\n\r\nPublicatieversie 2.0 (31-12-2017)\r\nBevat: [ZIB-472](https://bits.nictiz.nl/browse/ZIB-472), [ZIB-618](https://bits.nictiz.nl/browse/ZIB-618).\r\n\r\nPublicatieversie 2.1 (06-07-2019)\r\nBevat: [ZIB-781](https://bits.nictiz.nl/browse/ZIB-781), [ZIB-788](https://bits.nictiz.nl/browse/ZIB-788), ZIB- 792, [ZIB-795](https://bits.nictiz.nl/browse/ZIB-795), [ZIB-796](https://bits.nictiz.nl/browse/ZIB-796), [ZIB-797](https://bits.nictiz.nl/browse/ZIB-797).\r\n\r\nPublicatieversie 2.1.1 (31-01-2020)\r\nBevat: [ZIB-789](https://bits.nictiz.nl/browse/ZIB-789).\r\n\r\nPublicatieversie 2.1.2 (01-09-2020)\r\nBevat: [ZIB-911](https://bits.nictiz.nl/browse/ZIB-911)."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/PharmaceuticalProduct","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"PharmaceuticalProduct","path":"PharmaceuticalProduct","short":"PharmaceuticalProduct","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"FarmaceutischProduct"}]}]},"definition":"Root concept of the PharmaceuticalProduct partial information model.This root concept contains all data elements of the PharmaceuticalProduct partial information model.\r\n\r\nThe prescribed product is usually a medicine. However, medical aids and bandages can also be prescribed and supplied via the pharmacy. Strictly speaking, food and blood products do not belong in the medication category, but can be prescribed and supplied by a pharmacy as well.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de subbouwsteen FarmaceutischProduct. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen FarmaceutischProduct.\r\n\r\nHet voorgeschreven middel is vrijwel steeds een geneesmiddel. Hulp- en verbandmiddelen kunnen echter ook voorgeschreven en via de apotheek geleverd worden. Voedingsmiddelen en bloedproducten vallen strikt genomen niet onder de categorie geneesmiddelen, maar kunnen worden voorgeschreven, en door een apotheek geleverd worden.\r\n\r\nHet is mogelijk om met **één enkele code **een medicatiesoort aan te duiden, waarbij die code gekozen kan zijn uit meerdere mogelijke coderingssystemen (concreet GPK, PRK, HPK of artikelnummers). Door een juiste toepassing van deze codes in de softwaresystemen leggen deze codes de samenstelling van het gebruikte middel voldoende vast en is een complete productspecificatie niet nodig.\r\n\r\nHet is mogelijk om naast een primaire code ook **alternatieve codes **uit andere coderingssystemen aan te duiden (zodat bijvoorbeeld de GPK kan worden meegestuurd als is geregistreerd op basis van PRK). \r\n\r\nDoor meerdere ingrediënten op te geven wordt het mogelijk om een samengesteld product weer te geven. \r\n\r\nHet is dan mogelijk om zowel impliciet te specificeren (door een medicatiecode te gebruiken) als expliciet de **samenstelling van de medicatie **aan te duiden, bijvoorbeeld door de (actieve) ingrediënt(en) van de medicatie te benoemen. \r\n\r\nHet is mogelijk om **magistrale receptuur **door te geven. Dit kan door bovenbedoelde mogelijkheid om gecodeerd ingrediënten aan te duiden en/of door de samenstelling en bereidingswijze als vrije tekst door te geven."}]}]},"min":0,"max":"*"},{"id":"PharmaceuticalProduct.MedicationCode","path":"PharmaceuticalProduct.MedicationCode","short":"MedicationCode","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"ProductCode"}]}]},"definition":"Code of the Medication.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De codering van geneesmiddelen wordt in Nederland ontleend aan de G-Standaard (uitgegeven door Z-Index), die onder regie van de KNMP wordt gevuld.\r\nHet gecodeerde geneesmiddel kan worden uitgedrukt als:\r\n\r\n* GTIN Global Trade Item Number\r\n* ZI-nummer (2.16.840.1.113883.2.4.4.8)\r\n* Handelsproductcode (HPK)\r\n* Voorschrijfcode (PRK)\r\n* Generieke productcode (GPK)\r\n* Anatomic Therapeutic Classification code (ATC)\r\n* Stofnaamcode (SNK)\r\n* Stofnaamcode i.c.m. stamtoedieningsweg (SSK)\r\n* SNOMED CT code\r\n\r\n\r\nDe GTIN maakt het mogelijk het product incl. de herkomst met een barcode te identificeren.\r\nHet ZI-nummer is het handelsproduct inclusief de verpakkingsgrootte.\r\nDe HPK is het handelsproduct zoals de fabrikant het registreert en in de handel brengt.\r\nDe PRK bevat alle GPK-kenmerken, aangevuld met een aantal kenmerken die nodig zijn om het juiste middel te kunnen voorschrijven. Dit niveau is bedoeld om generiek te kunnen voorschrijven.\r\nDe GPK definieert de farmaceutische kenmerken van een product, namelijk samenstelling, sterkte, eenheden, farmaceutische vorm en toedieningsweg..\r\nDe SSK is de combinatie van één enkele werkzame stof plus stamtoedieningsweg.\r\nDe SNK is de (werkzame) stof.\r\n\r\nVoor de verdere toelichting op deze niveaus uit de G-Standaard zie https://www.z-index.nl \r\nDaarnaast bestaan er in de lokale systemen ook 90.000.000 nummers. Deze nummers dienen NIET te worden gecommuniceerd, in dat geval dient slechts de omschrijving te worden gecommuniceerd. Dit overeenkomstig de standaard van Nictiz."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"extensible","valueSet":"https://fhir.healthdata.be/ValueSet/ProductCode"}},{"id":"PharmaceuticalProduct.ProductSpecifications","path":"PharmaceuticalProduct.ProductSpecifications","short":"ProductSpecifications","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"ProductSpecificatie"}]}]},"definition":"Container of the ProductSpecifications concept. This container contains all data elements of the ProductSpecifications concept. \r\n\r\nProduct specifications are required if the product code is not sufficient to ascertain the active substances and strength.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De container van het concept ProductSpecificatie. Deze container bevat alle gegevenselementen van de concept ProductSpecificatie.\r\n\r\nDe productspecificatie is nodig, wanneer de productcode niet volstaat om de werkzame stoffen en de sterkte te achterhalen."}]}]},"min":0,"max":"1","type":[{"code":"BackboneElement"}]},{"id":"PharmaceuticalProduct.ProductSpecifications.PharmaceuticalForm","path":"PharmaceuticalProduct.ProductSpecifications.PharmaceuticalForm","short":"PharmaceuticalForm","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"FarmaceutischeVorm"}]}]},"definition":"The pharmaceutical form indicates the form of the medication. Examples include: tablet, suppository, infusion liquid, ointment.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De farmaceutische vorm geeft de vorm van een geneesmiddel weer. Voorbeelden zijn: tablet, zetpil, infusievloeistof, zalf. Indien het middel een GPK uit de G-standaard kent dan is de vorm via de G-standaard bekend. Voor producten zonder code (vrije tekst, magistrale bereiding), kan de toedieningsvorm worden opgegeven."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"extensible","description":"PharmaceuticalForm codes","valueSet":"https://fhir.healthdata.be/ValueSet/PharmaceuticalForm"}},{"id":"PharmaceuticalProduct.ProductSpecifications.Medication","path":"PharmaceuticalProduct.ProductSpecifications.Medication","short":"Medication","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"ProductNaam"}]}]},"definition":"There is no code for medication entered in free text. In these cases, enter the complete description.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Voor geneesmiddelen die in vrije tekst zijn opgegeven is geen code voorhanden, en dient de volledige omschrijving hier vermeld te worden."}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"PharmaceuticalProduct.ProductSpecifications.Description","path":"PharmaceuticalProduct.ProductSpecifications.Description","short":"Description","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Omschrijving"}]}]},"definition":"A textual description of the type of medication (including relevant properties of the composition and preparation method if possible).","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Een tekstuele beschrijving van de medicatiesoort (inclusief relevante kenmerken van de samenstelling en eventueel de bereidingswijze), die alleen gebruikt wordt als geen gecodeerde aanduiding uit de G-Standaard beschikbaar is (magistrale receptuur)."}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"PharmaceuticalProduct.ProductSpecifications.Ingredient","path":"PharmaceuticalProduct.ProductSpecifications.Ingredient","short":"Ingredient","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Ingredient"}]}]},"definition":"Container of the Ingredient concept. This container contains all data elements of the Ingredient concept. \r\n\r\nA product contains one or more active substances and excipients. These are usually determined by the product code. For medication prepared or compounded by the local pharmacy, each ingredient must be entered separately. \r\n\r\nThe active substances play an important role, as they: \r\na) determine the pharmacotherapeutic effect of the medication and \r\nb) serve as the basis for the indication of the strength of the medication (e.g. 200mg).","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De container van het concept Ingredient. Deze container bevat alle gegevenselementen van de concept Ingredient.\r\n\r\nEen product bevat één of meer werkzame stoffen en hulpstoffen. Deze zijn meestal al door de productcode bepaald. Voor magistrale medicatie of door de lokale apotheek samengestelde medicamenten moeten de ingrediënten afzonderlijk worden opgegeven.\r\n\r\nDe werkzame stoffen spelen een bijzondere rol, omdat deze:\r\na) bepalend zijn voor de farmacotherapeutische werking van de medicatie en\r\nb) de basis zijn voor aanduiding van de sterkte van de medicatie (bijv. 200 mg)."}]}]},"min":0,"max":"*","type":[{"code":"BackboneElement"}]},{"id":"PharmaceuticalProduct.ProductSpecifications.Ingredient.SubstanceCode","path":"PharmaceuticalProduct.ProductSpecifications.Ingredient.SubstanceCode","short":"SubstanceCode","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"SubstanceCode"}]}]},"definition":"Active substance or excipient.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Werkzame stof of hulpstof. \r\nHier kunnen dezelfde codes worden gebruikt als voor de ProductCode (met name voor verdunningen en samenstellingen), maar nu kunnen ook de ATC, SSK en SNK gebruikt worden om een stof aan te duiden (voor het opgeven van ingrediënten van lokaal magistraal bereide producten). \r\n\r\n* GTIN International Article Number \r\n\r\n* KNMP artikelnummerHandelsproductcode (HPK) \r\n\r\n* Voorschrijfcode (PRK) \r\n\r\n* Generieke productcode (GPK) \r\n\r\n* ATC (anatomic therapeutic classification) \r\n\r\n* SSK (stofnaamcode met toedieningsweg) \r\n\r\n* SNK (stofnaamcode) \r\n\r\nVoor verdere toelichting over ATC zie https://www.whocc.no/atc/structure_and_principles/"}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"extensible","valueSet":"https://fhir.healthdata.be/ValueSet/SubstanceCode"}},{"id":"PharmaceuticalProduct.ProductSpecifications.Ingredient.Concentration","path":"PharmaceuticalProduct.ProductSpecifications.Ingredient.Concentration","short":"Concentration","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Sterkte"}]}]},"definition":"The relative amount of this ingredient in this product. \r\nCalculation of Concentration = Ingredient Amount ÷ Product Amount. \r\n\r\nThis could be a concentration if the medication is dissolved in liquid, for example.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De relatieve hoeveelheid van dit ingrediënt in dit product. \r\nBerekening van de sterkte = Hoeveelheid ingrediënt ÷ Hoeveelheid product.\r\n\r\nDit kan bijvoorbeeld een concentratie zijn als het geneesmiddel is opgelost in een draagvloeistof."}]}]},"min":0,"max":"1","type":[{"code":"BackboneElement"}]},{"id":"PharmaceuticalProduct.ProductSpecifications.Ingredient.Concentration.IngredientAmount","path":"PharmaceuticalProduct.ProductSpecifications.Ingredient.Concentration.IngredientAmount","short":"IngredientAmount","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"IngredientHoeveelheid"}]}]},"definition":"The amount and unit of this ingredient. This is the numerator for the calculation of the concentration.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De hoeveelheid en eenheid van dit ingrediënt. Dit is de numerator voor de berekening van de sterkte. De eenheid moet gekozen worden uit de G-standaard (tabel 902)."}]}]},"min":0,"max":"1","type":[{"code":"Quantity"}]},{"id":"PharmaceuticalProduct.ProductSpecifications.Ingredient.Concentration.ProductAmount","path":"PharmaceuticalProduct.ProductSpecifications.Ingredient.Concentration.ProductAmount","short":"ProductAmount","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"ProductHoeveelheid"}]}]},"definition":"Amount of the product. This is the denominator for the calculation of the concentration.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Hoeveelheid van het product. Dit is de denominator in de berekening van de sterkte. Optioneel is voor de eenheid in plaats van gebruik van UCUM eenheden ook een vertaling toegestaan naar NHG tabel Gebruiksvoorschriften (tabel 25)."}]}]},"min":0,"max":"1","type":[{"code":"Quantity"}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-PharmaceuticalProduct",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct",
+  "name": "HdBePharmaceuticalProduct",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-FarmaceutischProduct"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe PharmaceuticalProduct",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "The prescribed substance is usually medication. However, medical aids and bandages can also be prescribed and supplied via the pharmacy. Food and blood products do not strictly belong in the medication category, but can be prescribed and supplied by a pharmacy as well. \r\n\r\nA type of medication can be indicated with **a single code**. Entering multiple ingredients will enable you to display a compound product. If one of the composite parts is liquid, the dosage will be given in milliliters; otherwise it will be given in ‘units’. \r\n\r\nIn that case, the **composition of the medication** can be specified implicitly (with the use of a medication code) or explicitly, for example by listing the (active) ingredient(s) of the medication. \r\n\r\n**Magistral prescriptions** can be entered as well. This can be done by means of the option listed above to enter coded ingredients and/or by entering the composition and preparation method as free text. \r\nThis is a partial information model\r\n#### Purpose\r\nThe purpose of Product is to unambiguously describe the medication to be used.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Het voorgeschreven middel is vrijwel steeds een geneesmiddel. Hulp- en verbandmiddelen kunnen echter ook voorgeschreven en via de apotheek geleverd worden. Voedingsmiddelen en bloedproducten vallen strikt genomen niet onder de categorie geneesmiddelen, maar kunnen worden voorgeschreven, en door een apotheek geleverd worden.\r\n\r\nHet is mogelijk om met **één enkele code **een medicatiesoort aan te duiden, waarbij die code gekozen kan zijn uit meerdere mogelijke coderingssystemen (concreet GPK, PRK, HPK of artikelnummers). Door een juiste toepassing van deze codes in de softwaresystemen leggen deze codes de samenstelling van het gebruikte middel voldoende vast en is een complete productspecificatie niet nodig.\r\n\r\nHet is mogelijk om naast een primaire code ook **alternatieve codes **uit andere coderingssystemen aan te duiden (zodat bijvoorbeeld de GPK kan worden meegestuurd als is geregistreerd op basis van PRK). \r\n\r\nDoor meerdere ingrediënten op te geven wordt het mogelijk om een samengesteld product weer te geven. \r\nHet is dan mogelijk om zowel impliciet te specificeren (door een medicatiecode te gebruiken) als expliciet de **samenstelling van de medicatie **aan te duiden, bijvoorbeeld door de (actieve) ingrediënt(en) van de medicatie te benoemen. \r\n\r\nHet is mogelijk om **magistrale receptuur **door te geven. Dit kan door bovenbedoelde mogelijkheid om gecodeerd ingrediënten aan te duiden en/of door de samenstelling en bereidingswijze als vrije tekst door te geven.Dit is een subbouwsteen\r\n#### Purpose\r\nHet doel van Product is het eenduidig omschrijven van een te gebruiken geneesmiddel.\r\n\r\n\r\n**Revision History**\r\nPublicatieversie 1.0 (04-09-2017)\r\n\r\nPublicatieversie 2.0 (31-12-2017)\r\nBevat: [ZIB-472](https://bits.nictiz.nl/browse/ZIB-472), [ZIB-618](https://bits.nictiz.nl/browse/ZIB-618).\r\n\r\nPublicatieversie 2.1 (06-07-2019)\r\nBevat: [ZIB-781](https://bits.nictiz.nl/browse/ZIB-781), [ZIB-788](https://bits.nictiz.nl/browse/ZIB-788), ZIB- 792, [ZIB-795](https://bits.nictiz.nl/browse/ZIB-795), [ZIB-796](https://bits.nictiz.nl/browse/ZIB-796), [ZIB-797](https://bits.nictiz.nl/browse/ZIB-797).\r\n\r\nPublicatieversie 2.1.1 (31-01-2020)\r\nBevat: [ZIB-789](https://bits.nictiz.nl/browse/ZIB-789).\r\n\r\nPublicatieversie 2.1.2 (01-09-2020)\r\nBevat: [ZIB-911](https://bits.nictiz.nl/browse/ZIB-911)."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/PharmaceuticalProduct",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PharmaceuticalProduct",
+        "path": "PharmaceuticalProduct",
+        "short": "PharmaceuticalProduct",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "FarmaceutischProduct"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the PharmaceuticalProduct partial information model.This root concept contains all data elements of the PharmaceuticalProduct partial information model.\r\n\r\nThe prescribed product is usually a medicine. However, medical aids and bandages can also be prescribed and supplied via the pharmacy. Strictly speaking, food and blood products do not belong in the medication category, but can be prescribed and supplied by a pharmacy as well.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen FarmaceutischProduct. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen FarmaceutischProduct.\r\n\r\nHet voorgeschreven middel is vrijwel steeds een geneesmiddel. Hulp- en verbandmiddelen kunnen echter ook voorgeschreven en via de apotheek geleverd worden. Voedingsmiddelen en bloedproducten vallen strikt genomen niet onder de categorie geneesmiddelen, maar kunnen worden voorgeschreven, en door een apotheek geleverd worden.\r\n\r\nHet is mogelijk om met **één enkele code **een medicatiesoort aan te duiden, waarbij die code gekozen kan zijn uit meerdere mogelijke coderingssystemen (concreet GPK, PRK, HPK of artikelnummers). Door een juiste toepassing van deze codes in de softwaresystemen leggen deze codes de samenstelling van het gebruikte middel voldoende vast en is een complete productspecificatie niet nodig.\r\n\r\nHet is mogelijk om naast een primaire code ook **alternatieve codes **uit andere coderingssystemen aan te duiden (zodat bijvoorbeeld de GPK kan worden meegestuurd als is geregistreerd op basis van PRK). \r\n\r\nDoor meerdere ingrediënten op te geven wordt het mogelijk om een samengesteld product weer te geven. \r\n\r\nHet is dan mogelijk om zowel impliciet te specificeren (door een medicatiecode te gebruiken) als expliciet de **samenstelling van de medicatie **aan te duiden, bijvoorbeeld door de (actieve) ingrediënt(en) van de medicatie te benoemen. \r\n\r\nHet is mogelijk om **magistrale receptuur **door te geven. Dit kan door bovenbedoelde mogelijkheid om gecodeerd ingrediënten aan te duiden en/of door de samenstelling en bereidingswijze als vrije tekst door te geven."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "PharmaceuticalProduct.MedicationCode",
+        "path": "PharmaceuticalProduct.MedicationCode",
+        "short": "MedicationCode",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ProductCode"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Code of the Medication.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De codering van geneesmiddelen wordt in Nederland ontleend aan de G-Standaard (uitgegeven door Z-Index), die onder regie van de KNMP wordt gevuld.\r\nHet gecodeerde geneesmiddel kan worden uitgedrukt als:\r\n\r\n* GTIN Global Trade Item Number\r\n* ZI-nummer (2.16.840.1.113883.2.4.4.8)\r\n* Handelsproductcode (HPK)\r\n* Voorschrijfcode (PRK)\r\n* Generieke productcode (GPK)\r\n* Anatomic Therapeutic Classification code (ATC)\r\n* Stofnaamcode (SNK)\r\n* Stofnaamcode i.c.m. stamtoedieningsweg (SSK)\r\n* SNOMED CT code\r\n\r\n\r\nDe GTIN maakt het mogelijk het product incl. de herkomst met een barcode te identificeren.\r\nHet ZI-nummer is het handelsproduct inclusief de verpakkingsgrootte.\r\nDe HPK is het handelsproduct zoals de fabrikant het registreert en in de handel brengt.\r\nDe PRK bevat alle GPK-kenmerken, aangevuld met een aantal kenmerken die nodig zijn om het juiste middel te kunnen voorschrijven. Dit niveau is bedoeld om generiek te kunnen voorschrijven.\r\nDe GPK definieert de farmaceutische kenmerken van een product, namelijk samenstelling, sterkte, eenheden, farmaceutische vorm en toedieningsweg..\r\nDe SSK is de combinatie van één enkele werkzame stof plus stamtoedieningsweg.\r\nDe SNK is de (werkzame) stof.\r\n\r\nVoor de verdere toelichting op deze niveaus uit de G-Standaard zie https://www.z-index.nl \r\nDaarnaast bestaan er in de lokale systemen ook 90.000.000 nummers. Deze nummers dienen NIET te worden gecommuniceerd, in dat geval dient slechts de omschrijving te worden gecommuniceerd. Dit overeenkomstig de standaard van Nictiz."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/ProductCode"
+        }
+      },
+      {
+        "id": "PharmaceuticalProduct.ProductSpecifications",
+        "path": "PharmaceuticalProduct.ProductSpecifications",
+        "short": "ProductSpecifications",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ProductSpecificatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the ProductSpecifications concept. This container contains all data elements of the ProductSpecifications concept. \r\n\r\nProduct specifications are required if the product code is not sufficient to ascertain the active substances and strength.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De container van het concept ProductSpecificatie. Deze container bevat alle gegevenselementen van de concept ProductSpecificatie.\r\n\r\nDe productspecificatie is nodig, wanneer de productcode niet volstaat om de werkzame stoffen en de sterkte te achterhalen."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PharmaceuticalProduct.ProductSpecifications.PharmaceuticalForm",
+        "path": "PharmaceuticalProduct.ProductSpecifications.PharmaceuticalForm",
+        "short": "PharmaceuticalForm",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "FarmaceutischeVorm"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The pharmaceutical form indicates the form of the medication. Examples include: tablet, suppository, infusion liquid, ointment.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De farmaceutische vorm geeft de vorm van een geneesmiddel weer. Voorbeelden zijn: tablet, zetpil, infusievloeistof, zalf. Indien het middel een GPK uit de G-standaard kent dan is de vorm via de G-standaard bekend. Voor producten zonder code (vrije tekst, magistrale bereiding), kan de toedieningsvorm worden opgegeven."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "PharmaceuticalForm codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/PharmaceuticalForm"
+        }
+      },
+      {
+        "id": "PharmaceuticalProduct.ProductSpecifications.Medication",
+        "path": "PharmaceuticalProduct.ProductSpecifications.Medication",
+        "short": "Medication",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ProductNaam"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "There is no code for medication entered in free text. In these cases, enter the complete description.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Voor geneesmiddelen die in vrije tekst zijn opgegeven is geen code voorhanden, en dient de volledige omschrijving hier vermeld te worden."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "PharmaceuticalProduct.ProductSpecifications.Description",
+        "path": "PharmaceuticalProduct.ProductSpecifications.Description",
+        "short": "Description",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Omschrijving"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A textual description of the type of medication (including relevant properties of the composition and preparation method if possible).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een tekstuele beschrijving van de medicatiesoort (inclusief relevante kenmerken van de samenstelling en eventueel de bereidingswijze), die alleen gebruikt wordt als geen gecodeerde aanduiding uit de G-Standaard beschikbaar is (magistrale receptuur)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "PharmaceuticalProduct.ProductSpecifications.Ingredient",
+        "path": "PharmaceuticalProduct.ProductSpecifications.Ingredient",
+        "short": "Ingredient",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Ingredient"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the Ingredient concept. This container contains all data elements of the Ingredient concept. \r\n\r\nA product contains one or more active substances and excipients. These are usually determined by the product code. For medication prepared or compounded by the local pharmacy, each ingredient must be entered separately. \r\n\r\nThe active substances play an important role, as they: \r\na) determine the pharmacotherapeutic effect of the medication and \r\nb) serve as the basis for the indication of the strength of the medication (e.g. 200mg).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De container van het concept Ingredient. Deze container bevat alle gegevenselementen van de concept Ingredient.\r\n\r\nEen product bevat één of meer werkzame stoffen en hulpstoffen. Deze zijn meestal al door de productcode bepaald. Voor magistrale medicatie of door de lokale apotheek samengestelde medicamenten moeten de ingrediënten afzonderlijk worden opgegeven.\r\n\r\nDe werkzame stoffen spelen een bijzondere rol, omdat deze:\r\na) bepalend zijn voor de farmacotherapeutische werking van de medicatie en\r\nb) de basis zijn voor aanduiding van de sterkte van de medicatie (bijv. 200 mg)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PharmaceuticalProduct.ProductSpecifications.Ingredient.SubstanceCode",
+        "path": "PharmaceuticalProduct.ProductSpecifications.Ingredient.SubstanceCode",
+        "short": "SubstanceCode",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SubstanceCode"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Active substance or excipient.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Werkzame stof of hulpstof. \r\nHier kunnen dezelfde codes worden gebruikt als voor de ProductCode (met name voor verdunningen en samenstellingen), maar nu kunnen ook de ATC, SSK en SNK gebruikt worden om een stof aan te duiden (voor het opgeven van ingrediënten van lokaal magistraal bereide producten). \r\n\r\n* GTIN International Article Number \r\n\r\n* KNMP artikelnummerHandelsproductcode (HPK) \r\n\r\n* Voorschrijfcode (PRK) \r\n\r\n* Generieke productcode (GPK) \r\n\r\n* ATC (anatomic therapeutic classification) \r\n\r\n* SSK (stofnaamcode met toedieningsweg) \r\n\r\n* SNK (stofnaamcode) \r\n\r\nVoor verdere toelichting over ATC zie https://www.whocc.no/atc/structure_and_principles/"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/SubstanceCode"
+        }
+      },
+      {
+        "id": "PharmaceuticalProduct.ProductSpecifications.Ingredient.Concentration",
+        "path": "PharmaceuticalProduct.ProductSpecifications.Ingredient.Concentration",
+        "short": "Concentration",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Sterkte"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The relative amount of this ingredient in this product. \r\nCalculation of Concentration = Ingredient Amount ÷ Product Amount. \r\n\r\nThis could be a concentration if the medication is dissolved in liquid, for example.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De relatieve hoeveelheid van dit ingrediënt in dit product. \r\nBerekening van de sterkte = Hoeveelheid ingrediënt ÷ Hoeveelheid product.\r\n\r\nDit kan bijvoorbeeld een concentratie zijn als het geneesmiddel is opgelost in een draagvloeistof."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "PharmaceuticalProduct.ProductSpecifications.Ingredient.Concentration.IngredientAmount",
+        "path": "PharmaceuticalProduct.ProductSpecifications.Ingredient.Concentration.IngredientAmount",
+        "short": "IngredientAmount",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "IngredientHoeveelheid"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The amount and unit of this ingredient. This is the numerator for the calculation of the concentration.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De hoeveelheid en eenheid van dit ingrediënt. Dit is de numerator voor de berekening van de sterkte. De eenheid moet gekozen worden uit de G-standaard (tabel 902)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "PharmaceuticalProduct.ProductSpecifications.Ingredient.Concentration.ProductAmount",
+        "path": "PharmaceuticalProduct.ProductSpecifications.Ingredient.Concentration.ProductAmount",
+        "short": "ProductAmount",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ProductHoeveelheid"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Amount of the product. This is the denominator for the calculation of the concentration.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Hoeveelheid van het product. Dit is de denominator in de berekening van de sterkte. Optioneel is voor de eenheid in plaats van gebruik van UCUM eenheden ook een vertaling toegestaan naar NHG tabel Gebruiksvoorschriften (tabel 25)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      }
+    ]
+  }
+}

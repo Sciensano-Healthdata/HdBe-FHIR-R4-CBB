@@ -1,1 +1,426 @@
-{"resourceType":"StructureDefinition","id":"HdBe-LanguageProficiency","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LanguageProficiency","name":"HdBeLanguageProficiency","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-Taalvaardigheid"}]}]},"title":"HdBe LanguageProficiency","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"Linguistic proficiency is the ability to express oneself in a certain language and understand statements made in that language. This includes both oral and written communication.\r\n#### Purpose\r\nPatients who are not fluent in the language of communication often have trouble asking for help and understanding the aids. Recording and communicating language problems offers other health professionals this knowledge. This informs them of any possible communication problems. \r\nFurthermore, you can record whether the patient is fluent in another language, so that a translator can be called in to communicate with the patient if needed.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Taalvaardigheid is het vermogen zich uit te drukken in een taal en mededelingen gedaan in die taal te begrijpen. Het gaat daarbij zowel om mondelinge als schriftelijke communicatie.\r\n#### Purpose\r\nPatiënten die de communicatie taal niet of niet goed beheersen hebben vaak moeite met het vragen om hulp en het begrijpen van de hulpverlening. Het vastleggen en communiceren van taalproblemen biedt andere zorgverleners hiervan kennis te nemen. Hierdoor zijn zij geattendeerd op mogelijke communicatieproblemen.\r\nBovendien kan vastgelegd worden of er een andere taal is die de patiënt wel beheerst, zodat voor de communicatie met de patiënt eventueel de hulp van een tolk ingeroepen kan worden.\r\n\r\n\r\n**Revision History**\r\nPublicatieversie 1.0 (01-07-2015)\r\n\r\nPublicatieversie 3.0 (01-05-2016)\r\nBevat: [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453)\r\n\r\nPublicatieversie 3.1 (04-09-2017)\r\nBevat: [ZIB-530](https://bits.nictiz.nl/browse/ZIB-530), [ZIB-538](https://bits.nictiz.nl/browse/ZIB-538), [ZIB-549](https://bits.nictiz.nl/browse/ZIB-549)\r\n\r\nPublicatieversie 3.2 (01-09-2020)\r\nBevat: [ZIB-983](https://bits.nictiz.nl/browse/ZIB-983), [ZIB-1192](https://bits.nictiz.nl/browse/ZIB-1192)."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/LanguageProficiency","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"LanguageProficiency","path":"LanguageProficiency","short":"LanguageProficiency","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Taalvaardigheid"}]}]},"definition":"Root concept of the LanguageProficiency information model. This concept contains all data elements of the LanguageProficiency information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de bouwsteen Taalvaardigheid. Dit concept bevat alle gegevenselementen van de bouwsteen Taalvaardigheid."}]}]},"min":0,"max":"*"},{"id":"LanguageProficiency.CommunicationLanguage","path":"LanguageProficiency.CommunicationLanguage","short":"CommunicationLanguage","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"CommunicatieTaal"}]}]},"definition":"The language of communication.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De taal waarin de communicatie plaatsvindt."}]}]},"min":1,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"CommunicationLanguage codes","valueSet":"https://fhir.healthdata.be/ValueSet/CommunicatieTaal"}},{"id":"LanguageProficiency.LanguageControlListening","path":"LanguageProficiency.LanguageControlListening","short":"LanguageControlListening","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"TaalvaardigheidBegrijpen"}]}]},"definition":"The ability to understand spoken text in the language in question.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het vermogen om in de betreffende taal uitgesproken tekst te verstaan en begrijpen. Het gaat hierbij om het taaltechnische aspect"}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"LanguageControlListening codes","valueSet":"https://fhir.healthdata.be/ValueSet/TaalvaardigheidBegrijpen"}},{"id":"LanguageProficiency.LanguageControlSpeaking","path":"LanguageProficiency.LanguageControlSpeaking","short":"LanguageControlSpeaking","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"TaalvaardigheidSpreken"}]}]},"definition":"The ability to express oneself in spoken language.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het vermogen om zich in de betreffende taal mondeling uit te kunnen drukken."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"LanguageControlSpeaking codes","valueSet":"https://fhir.healthdata.be/ValueSet/TaalvaardigheidSpreken"}},{"id":"LanguageProficiency.LanguageControlReading","path":"LanguageProficiency.LanguageControlReading","short":"LanguageControlReading","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"TaalvaardigheidLezen"}]}]},"definition":"The ability to understand written text in he language in question.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het vermogen om in de betreffende taal geschreven tekst te kunnen lezen en begrijpen. Het gaat hierbij om het taaltechnische aspect"}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"LanguageControlReading codes","valueSet":"https://fhir.healthdata.be/ValueSet/TaalvaardigheidLezen"}},{"id":"LanguageProficiency.CommunicationDetails","path":"LanguageProficiency.CommunicationDetails","short":"CommunicationDetails","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"CommunicatieBijzonderheden"}]}]},"definition":"Additional ways or tools that the person uses to communicate, such as braille, sign language, etc.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Additionele wijzen of hulpmiddelen die de persoon gebruikt om te kunnen communiceren, zoals brailleschrift, gebarentaal etc."}]}]},"min":0,"max":"*","type":[{"code":"CodeableConcept"}],"binding":{"strength":"extensible","description":"CommunicationDetails codes","valueSet":"https://fhir.healthdata.be/ValueSet/CommunicatieBijzonderheden"}},{"id":"LanguageProficiency.Comment","path":"LanguageProficiency.Comment","short":"Comment","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Toelichting"}]}]},"definition":"A comment on the linguistic proficiency. When using sign language, this field can be used to clarify, for example, which sign language is used. This can be informative, as there is not always a one-to-one relationship between the spoken language and sign language.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Een toelichting op de taalvaardigheid. Bij gebruik van gebarentaal kan dit veld worden gebruikt om bijvoorbeeld te verduidelijken welke gebarentaal wordt gebruikt. Dit kan informatief zijn, omdat er niet altijd een één-op-één-relatie is tussen de gesproken taal en gebarentaal."}]}]},"min":0,"max":"1","type":[{"code":"string"}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-LanguageProficiency",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LanguageProficiency",
+  "name": "HdBeLanguageProficiency",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-Taalvaardigheid"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe LanguageProficiency",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Linguistic proficiency is the ability to express oneself in a certain language and understand statements made in that language. This includes both oral and written communication.\r\n#### Purpose\r\nPatients who are not fluent in the language of communication often have trouble asking for help and understanding the aids. Recording and communicating language problems offers other health professionals this knowledge. This informs them of any possible communication problems. \r\nFurthermore, you can record whether the patient is fluent in another language, so that a translator can be called in to communicate with the patient if needed.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Taalvaardigheid is het vermogen zich uit te drukken in een taal en mededelingen gedaan in die taal te begrijpen. Het gaat daarbij zowel om mondelinge als schriftelijke communicatie.\r\n#### Purpose\r\nPatiënten die de communicatie taal niet of niet goed beheersen hebben vaak moeite met het vragen om hulp en het begrijpen van de hulpverlening. Het vastleggen en communiceren van taalproblemen biedt andere zorgverleners hiervan kennis te nemen. Hierdoor zijn zij geattendeerd op mogelijke communicatieproblemen.\r\nBovendien kan vastgelegd worden of er een andere taal is die de patiënt wel beheerst, zodat voor de communicatie met de patiënt eventueel de hulp van een tolk ingeroepen kan worden.\r\n\r\n\r\n**Revision History**\r\nPublicatieversie 1.0 (01-07-2015)\r\n\r\nPublicatieversie 3.0 (01-05-2016)\r\nBevat: [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453)\r\n\r\nPublicatieversie 3.1 (04-09-2017)\r\nBevat: [ZIB-530](https://bits.nictiz.nl/browse/ZIB-530), [ZIB-538](https://bits.nictiz.nl/browse/ZIB-538), [ZIB-549](https://bits.nictiz.nl/browse/ZIB-549)\r\n\r\nPublicatieversie 3.2 (01-09-2020)\r\nBevat: [ZIB-983](https://bits.nictiz.nl/browse/ZIB-983), [ZIB-1192](https://bits.nictiz.nl/browse/ZIB-1192)."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/LanguageProficiency",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "LanguageProficiency",
+        "path": "LanguageProficiency",
+        "short": "LanguageProficiency",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Taalvaardigheid"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the LanguageProficiency information model. This concept contains all data elements of the LanguageProficiency information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Taalvaardigheid. Dit concept bevat alle gegevenselementen van de bouwsteen Taalvaardigheid."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "LanguageProficiency.CommunicationLanguage",
+        "path": "LanguageProficiency.CommunicationLanguage",
+        "short": "CommunicationLanguage",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "CommunicatieTaal"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The language of communication.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De taal waarin de communicatie plaatsvindt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "CommunicationLanguage codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/CommunicatieTaal"
+        }
+      },
+      {
+        "id": "LanguageProficiency.LanguageControlListening",
+        "path": "LanguageProficiency.LanguageControlListening",
+        "short": "LanguageControlListening",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TaalvaardigheidBegrijpen"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The ability to understand spoken text in the language in question.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het vermogen om in de betreffende taal uitgesproken tekst te verstaan en begrijpen. Het gaat hierbij om het taaltechnische aspect"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "LanguageControlListening codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/TaalvaardigheidBegrijpen"
+        }
+      },
+      {
+        "id": "LanguageProficiency.LanguageControlSpeaking",
+        "path": "LanguageProficiency.LanguageControlSpeaking",
+        "short": "LanguageControlSpeaking",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TaalvaardigheidSpreken"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The ability to express oneself in spoken language.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het vermogen om zich in de betreffende taal mondeling uit te kunnen drukken."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "LanguageControlSpeaking codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/TaalvaardigheidSpreken"
+        }
+      },
+      {
+        "id": "LanguageProficiency.LanguageControlReading",
+        "path": "LanguageProficiency.LanguageControlReading",
+        "short": "LanguageControlReading",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TaalvaardigheidLezen"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The ability to understand written text in he language in question.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het vermogen om in de betreffende taal geschreven tekst te kunnen lezen en begrijpen. Het gaat hierbij om het taaltechnische aspect"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "LanguageControlReading codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/TaalvaardigheidLezen"
+        }
+      },
+      {
+        "id": "LanguageProficiency.CommunicationDetails",
+        "path": "LanguageProficiency.CommunicationDetails",
+        "short": "CommunicationDetails",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "CommunicatieBijzonderheden"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Additional ways or tools that the person uses to communicate, such as braille, sign language, etc.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Additionele wijzen of hulpmiddelen die de persoon gebruikt om te kunnen communiceren, zoals brailleschrift, gebarentaal etc."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "CommunicationDetails codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/CommunicatieBijzonderheden"
+        }
+      },
+      {
+        "id": "LanguageProficiency.Comment",
+        "path": "LanguageProficiency.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A comment on the linguistic proficiency. When using sign language, this field can be used to clarify, for example, which sign language is used. This can be informative, as there is not always a one-to-one relationship between the spoken language and sign language.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een toelichting op de taalvaardigheid. Bij gebruik van gebarentaal kan dit veld worden gebruikt om bijvoorbeeld te verduidelijken welke gebarentaal wordt gebruikt. Dit kan informatief zijn, omdat er niet altijd een één-op-één-relatie is tussen de gesproken taal en gebarentaal."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

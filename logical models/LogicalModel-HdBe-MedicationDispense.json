@@ -1,1 +1,655 @@
-{"resourceType":"StructureDefinition","id":"HdBe-MedicationDispense","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationDispense","name":"HdBeMedicationDispense","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-Medicatieverstrekking"}]}]},"title":"HdBe MedicationDispense","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"A dispense is the delivery of an amount of medicine to the patient, their administrator or their representative.\r\n#### Purpose\r\nThe goal of the dispense is to provide insight into which products are delivered by the pharmacist to the patient (or their representative).","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Een verstrekking is de terhandstelling van een hoeveelheid van een geneesmiddel aan de patiënt, zijn toediener of zijn vertegenwoordiger.\r\n#### Purpose\r\nHet doel van de verstrekking is inzicht te geven in welke producten ter hand gesteld zijn door de apotheker aan de patiënt (of zijn vertegenwoordiger).\r\n\r\n\r\n**Revision History**\r\nPublicatieversie 1.0 (04-09-2017)\r\n\r\nPublicatieversie 2.0 (31-12-2017)\r\nBevat: [ZIB-618](https://bits.nictiz.nl/browse/ZIB-618), [ZIB-643](https://bits.nictiz.nl/browse/ZIB-643).\r\n\r\nPublicatieversie 2.0.1 (06-07-2019)\r\nBevat: [ZIB-807](https://bits.nictiz.nl/browse/ZIB-807).\r\n\r\nPublicatieversie 2.0.2 (01-09-2020)\r\nBevat: [ZIB-911](https://bits.nictiz.nl/browse/ZIB-911), [ZIB-1195](https://bits.nictiz.nl/browse/ZIB-1195)."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/MedicationDispense","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"MedicationDispense","path":"MedicationDispense","short":"MedicationDispense","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Medicatieverstrekking"}]}]},"definition":"Root concept of the MedicationDispense information model. This root concept contains all data elements of the MedicationDispense information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de bouwsteen Medicatieverstrekking. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Medicatieverstrekking."}]}]},"min":0,"max":"*"},{"id":"MedicationDispense.Supplier","path":"MedicationDispense.Supplier","short":"Supplier","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Verstrekker"}]}]},"definition":"In almost all cases, the supplier will be a pharmacist. It could also be supplied by a webshop (in case of an online order), a drug store or a foreign pharmacist.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De verstrekker is in vrijwel alle gevallen een apotheker. Het kan ook gaan om een webwinkel (online bestelling), een drogisterij of een buitenlandse apotheker."}]}]},"min":0,"max":"1","type":[{"code":"Reference","targetProfile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareOrganization"]}]},{"id":"MedicationDispense.DispenseRequest","path":"MedicationDispense.DispenseRequest","short":"DispenseRequest","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Verstrekkingsverzoek"}]}]},"definition":"Relationship to the dispense request.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Relatie naar verstrekkingsverzoek."}]}]},"min":0,"max":"1","type":[{"code":"Reference","targetProfile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-DispenseRequest"]}]},{"id":"MedicationDispense.DispensedMedicine","path":"MedicationDispense.DispensedMedicine","short":"DispensedMedicine","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"VerstrektGeneesmiddel"}]}]},"definition":"The dispensed medicine.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Verstrekt geneesmiddel."}]}]},"min":1,"max":"1","type":[{"code":"Reference","targetProfile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct"]}]},{"id":"MedicationDispense.MedicationDispenseDateTime","path":"MedicationDispense.MedicationDispenseDateTime","short":"MedicationDispenseDateTime","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"MedicatieverstrekkingsDatumTijd"}]}]},"definition":"The time at which the medicine was supplied. The date and time at which the medicine is delivered. \r\nNote: this is the time at which the medicine was delivered to the patient (or their administrator/representative) and not the request date.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het tijdstip van uitgifte. De datumtijd waarop het geneesmiddel ter hand gesteld wordt. \r\nNoot: het gaat dus om het tijdstip waarop het geneesmiddel aan de patiënt (of diens toediener/vertegenwoordiger) is uitgegeven en niet om de aanschrijfdatum."}]}]},"min":0,"max":"1","type":[{"code":"dateTime"}]},{"id":"MedicationDispense.RequestDate","path":"MedicationDispense.RequestDate","short":"RequestDate","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"AanschrijfDatum"}]}]},"definition":"The request date is the time at which a pharmacist records an intended dispense.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De aanschrijfdatum is het tijdstip waarop een apotheker een voorgenomen uitgifte vastlegt."}]}]},"min":0,"max":"1","type":[{"code":"dateTime"}]},{"id":"MedicationDispense.DistributionForm","path":"MedicationDispense.DistributionForm","short":"DistributionForm","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Distributievorm"}]}]},"definition":"Distribution form","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Distributievorm"}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"DistributionForm codes","valueSet":"https://fhir.healthdata.be/ValueSet/MedicatieverstrekkingDistributievorm"}},{"id":"MedicationDispense.DurationOfUse","path":"MedicationDispense.DurationOfUse","short":"DurationOfUse","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Verbruiksduur"}]}]},"definition":"The period in which the medication is expected to be used. The value depends on the dose and the dispensed amount.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De verwachte periode, dat het medicament gebruikt zal worden. De waarde hangt samen met de dosering en de verstrekte hoeveelheid."}]}]},"min":0,"max":"1","type":[{"code":"Quantity"}]},{"id":"MedicationDispense.MedicationDispenseAdditionalInformation","path":"MedicationDispense.MedicationDispenseAdditionalInformation","short":"MedicationDispenseAdditionalInformation","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"MedicatieverstrekkingAanvullendeInformatie"}]}]},"definition":"Additional information includes details on the structure of the medical dispense. This can be e.g. a reason for deviating from the dispense request. \r\nFor now, this list is used. This list will be replaced by a thesaurus in the G standard at a later stage.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Aanvullende informatie bevat bijzonderheden over de invulling van de medicatieverstrekking. Dit kan bijvoorbeeld een reden zijn om af te wijken van het verstrekkingsverzoek.\r\nVooralsnog wordt deze lijst gebruikt. In een later stadium zal deze lijst vervangen worden door een thesaurus in de G-standaard."}]}]},"min":0,"max":"*","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"MedicationDispenseAdditionalInformation codes","valueSet":"https://fhir.healthdata.be/ValueSet/MedicatieverstrekkingAanvullendeInformatie"}},{"id":"MedicationDispense.DispensedAmount","path":"MedicationDispense.DispensedAmount","short":"DispensedAmount","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"VerstrekteHoeveelheid"}]}]},"definition":"Number of units of the product (measured based on the relevant product code) supplied. Optionally a translation to NHG table Gebruiksvoorschriften(Table 25) is also allowed.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Aantal eenheden van het product (gemeten op basis van de relevante productcode) dat is afgeleverd. Optioneel is voor de eenheid in plaats van gebruik van UCUM eenheden ook een vertaling toegestaan naar NHG tabel Gebruiksvoorschriften (tabel 25)"}]}]},"min":0,"max":"1","type":[{"code":"Quantity"}]},{"id":"MedicationDispense.DispenseLocation","path":"MedicationDispense.DispenseLocation","short":"DispenseLocation","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Afleverlocatie"}]}]},"definition":"Dispense location","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Afleverlocatie"}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"MedicationDispense.Comment","path":"MedicationDispense.Comment","short":"Comment","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Toelichting"}]}]},"definition":"Comments on the dispense.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Opmerkingen met betrekking tot de verstrekking."}]}]},"min":0,"max":"1","type":[{"code":"string"}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-MedicationDispense",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationDispense",
+  "name": "HdBeMedicationDispense",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-Medicatieverstrekking"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe MedicationDispense",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "A dispense is the delivery of an amount of medicine to the patient, their administrator or their representative.\r\n#### Purpose\r\nThe goal of the dispense is to provide insight into which products are delivered by the pharmacist to the patient (or their representative).",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Een verstrekking is de terhandstelling van een hoeveelheid van een geneesmiddel aan de patiënt, zijn toediener of zijn vertegenwoordiger.\r\n#### Purpose\r\nHet doel van de verstrekking is inzicht te geven in welke producten ter hand gesteld zijn door de apotheker aan de patiënt (of zijn vertegenwoordiger).\r\n\r\n\r\n**Revision History**\r\nPublicatieversie 1.0 (04-09-2017)\r\n\r\nPublicatieversie 2.0 (31-12-2017)\r\nBevat: [ZIB-618](https://bits.nictiz.nl/browse/ZIB-618), [ZIB-643](https://bits.nictiz.nl/browse/ZIB-643).\r\n\r\nPublicatieversie 2.0.1 (06-07-2019)\r\nBevat: [ZIB-807](https://bits.nictiz.nl/browse/ZIB-807).\r\n\r\nPublicatieversie 2.0.2 (01-09-2020)\r\nBevat: [ZIB-911](https://bits.nictiz.nl/browse/ZIB-911), [ZIB-1195](https://bits.nictiz.nl/browse/ZIB-1195)."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/MedicationDispense",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationDispense",
+        "path": "MedicationDispense",
+        "short": "MedicationDispense",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Medicatieverstrekking"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the MedicationDispense information model. This root concept contains all data elements of the MedicationDispense information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Medicatieverstrekking. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Medicatieverstrekking."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationDispense.Supplier",
+        "path": "MedicationDispense.Supplier",
+        "short": "Supplier",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Verstrekker"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "In almost all cases, the supplier will be a pharmacist. It could also be supplied by a webshop (in case of an online order), a drug store or a foreign pharmacist.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De verstrekker is in vrijwel alle gevallen een apotheker. Het kan ook gaan om een webwinkel (online bestelling), een drogisterij of een buitenlandse apotheker."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareOrganization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.DispenseRequest",
+        "path": "MedicationDispense.DispenseRequest",
+        "short": "DispenseRequest",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Verstrekkingsverzoek"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Relationship to the dispense request.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Relatie naar verstrekkingsverzoek."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-DispenseRequest"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.DispensedMedicine",
+        "path": "MedicationDispense.DispensedMedicine",
+        "short": "DispensedMedicine",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VerstrektGeneesmiddel"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The dispensed medicine.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Verstrekt geneesmiddel."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.MedicationDispenseDateTime",
+        "path": "MedicationDispense.MedicationDispenseDateTime",
+        "short": "MedicationDispenseDateTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MedicatieverstrekkingsDatumTijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The time at which the medicine was supplied. The date and time at which the medicine is delivered. \r\nNote: this is the time at which the medicine was delivered to the patient (or their administrator/representative) and not the request date.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het tijdstip van uitgifte. De datumtijd waarop het geneesmiddel ter hand gesteld wordt. \r\nNoot: het gaat dus om het tijdstip waarop het geneesmiddel aan de patiënt (of diens toediener/vertegenwoordiger) is uitgegeven en niet om de aanschrijfdatum."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.RequestDate",
+        "path": "MedicationDispense.RequestDate",
+        "short": "RequestDate",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AanschrijfDatum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The request date is the time at which a pharmacist records an intended dispense.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De aanschrijfdatum is het tijdstip waarop een apotheker een voorgenomen uitgifte vastlegt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.DistributionForm",
+        "path": "MedicationDispense.DistributionForm",
+        "short": "DistributionForm",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Distributievorm"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Distribution form",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Distributievorm"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "DistributionForm codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/MedicatieverstrekkingDistributievorm"
+        }
+      },
+      {
+        "id": "MedicationDispense.DurationOfUse",
+        "path": "MedicationDispense.DurationOfUse",
+        "short": "DurationOfUse",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Verbruiksduur"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The period in which the medication is expected to be used. The value depends on the dose and the dispensed amount.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De verwachte periode, dat het medicament gebruikt zal worden. De waarde hangt samen met de dosering en de verstrekte hoeveelheid."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.MedicationDispenseAdditionalInformation",
+        "path": "MedicationDispense.MedicationDispenseAdditionalInformation",
+        "short": "MedicationDispenseAdditionalInformation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MedicatieverstrekkingAanvullendeInformatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Additional information includes details on the structure of the medical dispense. This can be e.g. a reason for deviating from the dispense request. \r\nFor now, this list is used. This list will be replaced by a thesaurus in the G standard at a later stage.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie bevat bijzonderheden over de invulling van de medicatieverstrekking. Dit kan bijvoorbeeld een reden zijn om af te wijken van het verstrekkingsverzoek.\r\nVooralsnog wordt deze lijst gebruikt. In een later stadium zal deze lijst vervangen worden door een thesaurus in de G-standaard."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "MedicationDispenseAdditionalInformation codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/MedicatieverstrekkingAanvullendeInformatie"
+        }
+      },
+      {
+        "id": "MedicationDispense.DispensedAmount",
+        "path": "MedicationDispense.DispensedAmount",
+        "short": "DispensedAmount",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VerstrekteHoeveelheid"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Number of units of the product (measured based on the relevant product code) supplied. Optionally a translation to NHG table Gebruiksvoorschriften(Table 25) is also allowed.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aantal eenheden van het product (gemeten op basis van de relevante productcode) dat is afgeleverd. Optioneel is voor de eenheid in plaats van gebruik van UCUM eenheden ook een vertaling toegestaan naar NHG tabel Gebruiksvoorschriften (tabel 25)"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.DispenseLocation",
+        "path": "MedicationDispense.DispenseLocation",
+        "short": "DispenseLocation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Afleverlocatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Dispense location",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Afleverlocatie"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.Comment",
+        "path": "MedicationDispense.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Comments on the dispense.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Opmerkingen met betrekking tot de verstrekking."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

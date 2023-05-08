@@ -1,1 +1,226 @@
-{"resourceType":"StructureDefinition","id":"HdBe-AnatomicalLocation","meta":{"lastUpdated":"2022-10-18T08:45:47.7337511+00:00"},"language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation","name":"HdBeAnatomicalLocation","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-AnatomischeLocatie"}]}]},"title":"HdBe AnatomicalLocation","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"An anatomical location specifies the location (e.g. foot) and laterality (e.g. links) of a bodypart.\r\n#### Purpose\r\nAn anatomic location is used to specify the location of a finding, procedure or measurement.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Een anatomische locatie specificeert de locatie (bijv. voet) en lateraliteit (bijv. links) van een lichaamsonderdeel .\r\n#### Purpose\r\nEen anatomische locatie wordt gebruikt om de locatie van een bevinding, verrichting of meting te specificieren."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/AnatomicalLocation","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"AnatomicalLocation","path":"AnatomicalLocation","short":"AnatomicalLocation","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"AnatomischeLocatie"}]}]},"definition":"Root concept of the AnatomicalLocation partial information model.This root concept contains all data elements of the AnatomicalLocation partial information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de subbouwsteen AnatomischeLocatie. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen AnatomischeLocatie."}]}]},"min":0,"max":"*"},{"id":"AnatomicalLocation.Location","path":"AnatomicalLocation.Location","short":"Location","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Locatie"}]}]},"definition":"Location on/in the body.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Localisatie op/in het lichaam."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"Location codes","valueSet":"https://fhir.healthdata.be/ValueSet/Location"}},{"id":"AnatomicalLocation.Laterality","path":"AnatomicalLocation.Laterality","short":"Laterality","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Lateraliteit"}]}]},"definition":"Laterality adds information about the body site to the anatomic location, e.g. left.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"Laterality codes","valueSet":"https://fhir.healthdata.be/ValueSet/Laterality"}}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-AnatomicalLocation",
+  "meta": {
+    "lastUpdated": "2022-10-18T08:45:47.7337511+00:00"
+  },
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation",
+  "name": "HdBeAnatomicalLocation",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-AnatomischeLocatie"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe AnatomicalLocation",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "An anatomical location specifies the location (e.g. foot) and laterality (e.g. links) of a bodypart.\r\n#### Purpose\r\nAn anatomic location is used to specify the location of a finding, procedure or measurement.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Een anatomische locatie specificeert de locatie (bijv. voet) en lateraliteit (bijv. links) van een lichaamsonderdeel .\r\n#### Purpose\r\nEen anatomische locatie wordt gebruikt om de locatie van een bevinding, verrichting of meting te specificieren."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/AnatomicalLocation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "AnatomicalLocation",
+        "path": "AnatomicalLocation",
+        "short": "AnatomicalLocation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AnatomischeLocatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the AnatomicalLocation partial information model.This root concept contains all data elements of the AnatomicalLocation partial information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen AnatomischeLocatie. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen AnatomischeLocatie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "AnatomicalLocation.Location",
+        "path": "AnatomicalLocation.Location",
+        "short": "Location",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Location on/in the body.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Localisatie op/in het lichaam."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Location codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/Location"
+        }
+      },
+      {
+        "id": "AnatomicalLocation.Laterality",
+        "path": "AnatomicalLocation.Laterality",
+        "short": "Laterality",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Lateraliteit"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Laterality adds information about the body site to the anatomic location, e.g. left.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Laterality codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/Laterality"
+        }
+      }
+    ]
+  }
+}

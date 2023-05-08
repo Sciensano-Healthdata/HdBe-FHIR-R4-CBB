@@ -1,1 +1,428 @@
-{"resourceType":"StructureDefinition","id":"HdBe-Alert","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Alert","name":"HdBeAlert","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-Alert"}]}]},"title":"HdBe Alert","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"An alert describes a clinical or administrative fact brought to the attention of the users of the clinical systems to be taken into account when shaping diagnostic and therapeutic policy or in dealing with the patient, usually because of a safety risk. \r\nDisorders that describe the body’s sensitivity to a substance which results in a specific physiological reaction after being exposed to that substance are referred to as allergies. These are described in a separate information model. \r\nWarnings for non-allergic disorders can concern: \r\n\r\n* A disorder, condition or diagnosis which can be considered as a contraindication for undergoing a certain type of therapy, such as pregnancy or long QT syndrome; \r\n\r\n* Impaired functioning of an organ system (heart failure, impaired liver or kidney function, weakened immune system); \r\n\r\n* Risk of spreading certain microorganisms (multi-resistant bacteria, tubercle bacilli, HIV, HBV, Ebola virus); \r\n\r\n* Other risks \r\n\r\n\r\n#### Purpose\r\nDocumenting and entering disorders or conditions that require attention is an important part of medical registration. It concerns the core of patient safety. In the execution of research and treatment, these patient characteristics - which are marked as a warning - constantly have to be taken into account. They provide information that is important for the patient’s condition and the options a healthcare professional has for therapy. Disorders that are registered or transferred as an Alert can also be described as a Problem. The difference is in the fact that the healthcare professional considers the problem as an Alert = warning. In many cases, transfer will be subject to strict privacy rules, as the warning will not always elicit an adequate reaction in the informed environment.\r\n\r\n\r\n#### Instructions\r\nIf there is a contraindication which is also important for medication safety, it should also be registered via MedicationContraIndication.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Een alert beschrijft een klinisch of administratief feit dat onder de aandacht van de gebruikers van de klinische systemen wordt gebracht, om er bij het vormen van diagnostisch en therapeutisch beleid of bij de omgang met de patiënt rekening mee te houden, meestal wegens een veiligheidsrisico. \r\nAandoeningen, die de overgevoeligheid van het lichaam voor een stof beschrijven, zich uitend in een specifieke fysiologische reactie na blootstelling, worden allergieën genoemd. Deze worden in een aparte bouwsteen beschreven\r\nWaarschuwingen voor niet allergische aandoeningen kunnen betreffen: \r\n\r\n* Een aandoening, conditie of diagnose die beschouwd kan worden als contra-indicatie voor het ondergaan van een bepaalde therapie, zoals zwangerschap of een verlengd QT-syndroom; \r\n\r\n* Verminderde functie van een orgaansysteem (hartfalen, verminder lever- of nierfunctie, verminderde afweer); \r\n\r\n* Kans op verspreiding van bepaalde micro-organismen (multiresistente bacterie, tuberkelbacterie, HIV, HBV, Ebola virus); \r\n\r\n* Andere risico’s. \r\n\r\n\r\n#### Purpose\r\nHet vastleggen en doorgeven van aandoeningen of condities die aandacht behoeven, is een belangrijk onderdeel van de medische registratie. Het raakt de kern van patiëntveiligheid. In de uitvoering van onderzoek en behandeling moet veelal continu rekening worden gehouden met deze, als waarschuwing gemarkeerde, patiëntkenmerken. Ze verschaffen informatie die belangrijk is in relatie met de conditie van de patiënt en de opties die een zorgverlener heeft voor therapie. Aandoeningen die als Alert worden geregistreerd of overgedragen, kunnen ook als Probleem worden beschreven. Het verschil is hierin gelegen, dat de zorgverlener het probleem heeft aangemerkt als Alert = waarschuwing. In veel gevallen zal overdracht onderworpen zijn aan sterke privacy regels, aangezien de waarschuwing niet altijd een adequate reactie van de geïnformeerde omgeving kan uitlokken.\r\n\r\n\r\n#### Instructions\r\nIndien sprake is van een contra-indicatie die tevens van belang is voor de medicatieveiligheid dient deze ook via de g-standaard (Thesaurus 40) te worden vastgelegd.  Zie hiervoor de bouwsteen MedicatieContraIndicatie\r\n**Revision History**\r\nPublicatieversie 1.0 (01-04-2015)\r\nBevat: [ZIB-109](https://bits.nictiz.nl/browse/ZIB-109), [ZIB-132](https://bits.nictiz.nl/browse/ZIB-132), [ZIB-203](https://bits.nictiz.nl/browse/ZIB-203), [ZIB-204](https://bits.nictiz.nl/browse/ZIB-204), [ZIB-306](https://bits.nictiz.nl/browse/ZIB-306), [ZIB-308](https://bits.nictiz.nl/browse/ZIB-308), [ZIB-352](https://bits.nictiz.nl/browse/ZIB-352).\r\n\r\nIncl. algemene wijzigingsverzoeken: \r\n[ZIB-94](https://bits.nictiz.nl/browse/ZIB-94), [ZIB-154](https://bits.nictiz.nl/browse/ZIB-154), [ZIB-200](https://bits.nictiz.nl/browse/ZIB-200), [ZIB-201](https://bits.nictiz.nl/browse/ZIB-201), [ZIB-309](https://bits.nictiz.nl/browse/ZIB-309), [ZIB-324](https://bits.nictiz.nl/browse/ZIB-324), [ZIB-326](https://bits.nictiz.nl/browse/ZIB-326).\r\n\r\nPublicatieversie 3.0 (01-05-2016)\r\nBevat: [ZIB-438](https://bits.nictiz.nl/browse/ZIB-438), [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453), [ZIB-574](https://bits.nictiz.nl/browse/ZIB-574).\r\n\r\nPublicatieversie 3.1 (04-09-2017)\r\nBevat: [ZIB-546](https://bits.nictiz.nl/browse/ZIB-546).\r\n\r\nPublicatieversie 3.2 (31-12-2017)\r\nBevat: [ZIB-593](https://bits.nictiz.nl/browse/ZIB-593). \r\n\r\nPublicatieversie 3.3 (26-02-2019)\r\nBevat: [ZIB-682](https://bits.nictiz.nl/browse/ZIB-682). \r\n\r\nPublicatieversie 3.4 (06-07-2019)\r\nBevat: [ZIB-813](https://bits.nictiz.nl/browse/ZIB-813). \r\n\r\nPublicatieversie 4.0 (31-01-2020)\r\nBevat: [ZIB-905](https://bits.nictiz.nl/browse/ZIB-905), [ZIB-526](https://bits.nictiz.nl/browse/ZIB-526).\r\n\r\nPublicatieversie 4.1 (01-09-2020)\r\nBevat: [ZIB-1160](https://bits.nictiz.nl/browse/ZIB-1160), [ZIB-1209](https://bits.nictiz.nl/browse/ZIB-1209)."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/Alert","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"Alert","path":"Alert","short":"Alert","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Alert"}]}]},"definition":"Root concept of the Alert information model. This root concept contains all data elements of the Alert information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de bouwsteen Alert. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Alert."}]}]},"min":0,"max":"*","constraint":[{"key":"HdBe-Alert-1","severity":"error","human":"One concept from Condition and AlertName must be selected.","expression":"Condition.exists() xor AlertName.exists()"}]},{"id":"Alert.EndDateTime","path":"Alert.EndDateTime","short":"EndDateTime","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"EindDatumTijd"}]}]},"definition":"The date and time at which the described condition was retracted as a warning. \r\nThis can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year).","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De datum en tijd waarop de beschreven toestand als waarschuwing is ingetrokken. \r\nDit kan een exacte datum en tijd zijn maar ook een globale aanduiding van de datum (bijvoorbeeld alleen jaar of jaar en maand)."}]}]},"min":0,"max":"1","type":[{"code":"dateTime"}]},{"id":"Alert.Condition","path":"Alert.Condition","short":"Condition","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Conditie"}]}]},"definition":"The patient’s health problem or condition that is the subject of the alert. This could involve a patient’s problem, condition or diagnosis that is seen as a contraindication in prescribing medication or which has to be taken into account when shaping diagnostic and therapeutic policy. This can be in the patient’s own interest, or it can involve a problem or disorder that can make the patient a risk to their surroundings, such as an infection hazard. These are references to conditions included on the patient’s problem list.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Een gezondheidsprobleem of toestand van de patiënt die de reden is van het alert. Het kan hierbij gaan om een probleem,toestand of diagnose van de patiënt die geldt als contra-indicatie bij het voorschrijven van medicatie of waarmee rekening moet worden gehouden bij het vormen van diagnostisch en therapeutisch beleid. Dit kan zijn in het belang van de patiënt zelf, maar het kan ook gaan om een probleem of aandoening waardoor de patiënt een risico vormt voor zijn omgeving, bijvoorbeeld besmettingsgevaar. Het betreft hier verwijzigingen naar condities die vermeld staan op de probleemlijst van de patiënt."}]}]},"min":0,"max":"1","type":[{"code":"Reference","targetProfile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"]}],"condition":["HdBe-Alert-1"]},{"id":"Alert.AlertName","path":"Alert.AlertName","short":"AlertName","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"AlertNaam"}]}]},"definition":"A warning, other than a condition or problem. For example, a patient can be given an ‘Aggressive patient' alert.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Een waarschuwing, anders dan een conditie of probleem. Zo kan bijvoorbeeld als alert 'Agressieve patient' meegegeven worden.\r\nDe waarschuwing kan als een gecodeerd gegeven worden vastgelegd (voor veelvoorkomende alerts zijn codes voorzien), maar gezien het dynamische karakter van de waarschuwingen cf. Sars en Ebola, zullen deze alerts vaak als vrije tekst doorgegeven worden."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"condition":["HdBe-Alert-1"],"binding":{"strength":"extensible","description":"AlertName codes","valueSet":"https://fhir.healthdata.be/ValueSet/AlertName"}},{"id":"Alert.StartDateTime","path":"Alert.StartDateTime","short":"StartDateTime","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"BeginDatumTijd"}]}]},"definition":"The date and time at which the described condition was entered as a warning. \r\nThis can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year).","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De datum en tijd waarop de beschreven toestand als waarschuwing is aangemerkt. \r\nDit kan een exacte datum en tijd zijn maar ook een globale aanduiding van de datum (bijvoorbeeld alleen jaar of jaar en maand)."}]}]},"min":0,"max":"1","type":[{"code":"dateTime"}]},{"id":"Alert.AlertType","path":"Alert.AlertType","short":"AlertType","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"AlertType"}]}]},"definition":"Indicates the type of alert, meaning a rough description of the cause or origin of the warning.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Geeft het type alert aan, dat wil zeggen een grove indeling van de oorzaak of oorsprong waaruit de waarschuwing voort komt."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"AlertType codes","valueSet":"https://fhir.healthdata.be/ValueSet/AlertType"}},{"id":"Alert.Comment","path":"Alert.Comment","short":"Comment","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Toelichting"}]}]},"definition":"Explanatory comments to the alert that cannot be expressed in any of the other elements.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Toelichtende opmerking bij de alert die niet in een van de andere elementen uitgedrukt kan worden."}]}]},"min":0,"max":"1","type":[{"code":"string"}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-Alert",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Alert",
+  "name": "HdBeAlert",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-Alert"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe Alert",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "An alert describes a clinical or administrative fact brought to the attention of the users of the clinical systems to be taken into account when shaping diagnostic and therapeutic policy or in dealing with the patient, usually because of a safety risk. \r\nDisorders that describe the body’s sensitivity to a substance which results in a specific physiological reaction after being exposed to that substance are referred to as allergies. These are described in a separate information model. \r\nWarnings for non-allergic disorders can concern: \r\n\r\n* A disorder, condition or diagnosis which can be considered as a contraindication for undergoing a certain type of therapy, such as pregnancy or long QT syndrome; \r\n\r\n* Impaired functioning of an organ system (heart failure, impaired liver or kidney function, weakened immune system); \r\n\r\n* Risk of spreading certain microorganisms (multi-resistant bacteria, tubercle bacilli, HIV, HBV, Ebola virus); \r\n\r\n* Other risks \r\n\r\n\r\n#### Purpose\r\nDocumenting and entering disorders or conditions that require attention is an important part of medical registration. It concerns the core of patient safety. In the execution of research and treatment, these patient characteristics - which are marked as a warning - constantly have to be taken into account. They provide information that is important for the patient’s condition and the options a healthcare professional has for therapy. Disorders that are registered or transferred as an Alert can also be described as a Problem. The difference is in the fact that the healthcare professional considers the problem as an Alert = warning. In many cases, transfer will be subject to strict privacy rules, as the warning will not always elicit an adequate reaction in the informed environment.\r\n\r\n\r\n#### Instructions\r\nIf there is a contraindication which is also important for medication safety, it should also be registered via MedicationContraIndication.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Een alert beschrijft een klinisch of administratief feit dat onder de aandacht van de gebruikers van de klinische systemen wordt gebracht, om er bij het vormen van diagnostisch en therapeutisch beleid of bij de omgang met de patiënt rekening mee te houden, meestal wegens een veiligheidsrisico. \r\nAandoeningen, die de overgevoeligheid van het lichaam voor een stof beschrijven, zich uitend in een specifieke fysiologische reactie na blootstelling, worden allergieën genoemd. Deze worden in een aparte bouwsteen beschreven\r\nWaarschuwingen voor niet allergische aandoeningen kunnen betreffen: \r\n\r\n* Een aandoening, conditie of diagnose die beschouwd kan worden als contra-indicatie voor het ondergaan van een bepaalde therapie, zoals zwangerschap of een verlengd QT-syndroom; \r\n\r\n* Verminderde functie van een orgaansysteem (hartfalen, verminder lever- of nierfunctie, verminderde afweer); \r\n\r\n* Kans op verspreiding van bepaalde micro-organismen (multiresistente bacterie, tuberkelbacterie, HIV, HBV, Ebola virus); \r\n\r\n* Andere risico’s. \r\n\r\n\r\n#### Purpose\r\nHet vastleggen en doorgeven van aandoeningen of condities die aandacht behoeven, is een belangrijk onderdeel van de medische registratie. Het raakt de kern van patiëntveiligheid. In de uitvoering van onderzoek en behandeling moet veelal continu rekening worden gehouden met deze, als waarschuwing gemarkeerde, patiëntkenmerken. Ze verschaffen informatie die belangrijk is in relatie met de conditie van de patiënt en de opties die een zorgverlener heeft voor therapie. Aandoeningen die als Alert worden geregistreerd of overgedragen, kunnen ook als Probleem worden beschreven. Het verschil is hierin gelegen, dat de zorgverlener het probleem heeft aangemerkt als Alert = waarschuwing. In veel gevallen zal overdracht onderworpen zijn aan sterke privacy regels, aangezien de waarschuwing niet altijd een adequate reactie van de geïnformeerde omgeving kan uitlokken.\r\n\r\n\r\n#### Instructions\r\nIndien sprake is van een contra-indicatie die tevens van belang is voor de medicatieveiligheid dient deze ook via de g-standaard (Thesaurus 40) te worden vastgelegd.  Zie hiervoor de bouwsteen MedicatieContraIndicatie\r\n**Revision History**\r\nPublicatieversie 1.0 (01-04-2015)\r\nBevat: [ZIB-109](https://bits.nictiz.nl/browse/ZIB-109), [ZIB-132](https://bits.nictiz.nl/browse/ZIB-132), [ZIB-203](https://bits.nictiz.nl/browse/ZIB-203), [ZIB-204](https://bits.nictiz.nl/browse/ZIB-204), [ZIB-306](https://bits.nictiz.nl/browse/ZIB-306), [ZIB-308](https://bits.nictiz.nl/browse/ZIB-308), [ZIB-352](https://bits.nictiz.nl/browse/ZIB-352).\r\n\r\nIncl. algemene wijzigingsverzoeken: \r\n[ZIB-94](https://bits.nictiz.nl/browse/ZIB-94), [ZIB-154](https://bits.nictiz.nl/browse/ZIB-154), [ZIB-200](https://bits.nictiz.nl/browse/ZIB-200), [ZIB-201](https://bits.nictiz.nl/browse/ZIB-201), [ZIB-309](https://bits.nictiz.nl/browse/ZIB-309), [ZIB-324](https://bits.nictiz.nl/browse/ZIB-324), [ZIB-326](https://bits.nictiz.nl/browse/ZIB-326).\r\n\r\nPublicatieversie 3.0 (01-05-2016)\r\nBevat: [ZIB-438](https://bits.nictiz.nl/browse/ZIB-438), [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453), [ZIB-574](https://bits.nictiz.nl/browse/ZIB-574).\r\n\r\nPublicatieversie 3.1 (04-09-2017)\r\nBevat: [ZIB-546](https://bits.nictiz.nl/browse/ZIB-546).\r\n\r\nPublicatieversie 3.2 (31-12-2017)\r\nBevat: [ZIB-593](https://bits.nictiz.nl/browse/ZIB-593). \r\n\r\nPublicatieversie 3.3 (26-02-2019)\r\nBevat: [ZIB-682](https://bits.nictiz.nl/browse/ZIB-682). \r\n\r\nPublicatieversie 3.4 (06-07-2019)\r\nBevat: [ZIB-813](https://bits.nictiz.nl/browse/ZIB-813). \r\n\r\nPublicatieversie 4.0 (31-01-2020)\r\nBevat: [ZIB-905](https://bits.nictiz.nl/browse/ZIB-905), [ZIB-526](https://bits.nictiz.nl/browse/ZIB-526).\r\n\r\nPublicatieversie 4.1 (01-09-2020)\r\nBevat: [ZIB-1160](https://bits.nictiz.nl/browse/ZIB-1160), [ZIB-1209](https://bits.nictiz.nl/browse/ZIB-1209)."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/Alert",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Alert",
+        "path": "Alert",
+        "short": "Alert",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Alert"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Alert information model. This root concept contains all data elements of the Alert information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Alert. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Alert."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "HdBe-Alert-1",
+            "severity": "error",
+            "human": "One concept from Condition and AlertName must be selected.",
+            "expression": "Condition.exists() xor AlertName.exists()"
+          }
+        ]
+      },
+      {
+        "id": "Alert.EndDateTime",
+        "path": "Alert.EndDateTime",
+        "short": "EndDateTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "EindDatumTijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date and time at which the described condition was retracted as a warning. \r\nThis can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en tijd waarop de beschreven toestand als waarschuwing is ingetrokken. \r\nDit kan een exacte datum en tijd zijn maar ook een globale aanduiding van de datum (bijvoorbeeld alleen jaar of jaar en maand)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Alert.Condition",
+        "path": "Alert.Condition",
+        "short": "Condition",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Conditie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The patient’s health problem or condition that is the subject of the alert. This could involve a patient’s problem, condition or diagnosis that is seen as a contraindication in prescribing medication or which has to be taken into account when shaping diagnostic and therapeutic policy. This can be in the patient’s own interest, or it can involve a problem or disorder that can make the patient a risk to their surroundings, such as an infection hazard. These are references to conditions included on the patient’s problem list.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een gezondheidsprobleem of toestand van de patiënt die de reden is van het alert. Het kan hierbij gaan om een probleem,toestand of diagnose van de patiënt die geldt als contra-indicatie bij het voorschrijven van medicatie of waarmee rekening moet worden gehouden bij het vormen van diagnostisch en therapeutisch beleid. Dit kan zijn in het belang van de patiënt zelf, maar het kan ook gaan om een probleem of aandoening waardoor de patiënt een risico vormt voor zijn omgeving, bijvoorbeeld besmettingsgevaar. Het betreft hier verwijzigingen naar condities die vermeld staan op de probleemlijst van de patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"
+            ]
+          }
+        ],
+        "condition": [
+          "HdBe-Alert-1"
+        ]
+      },
+      {
+        "id": "Alert.AlertName",
+        "path": "Alert.AlertName",
+        "short": "AlertName",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AlertNaam"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A warning, other than a condition or problem. For example, a patient can be given an ‘Aggressive patient' alert.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een waarschuwing, anders dan een conditie of probleem. Zo kan bijvoorbeeld als alert 'Agressieve patient' meegegeven worden.\r\nDe waarschuwing kan als een gecodeerd gegeven worden vastgelegd (voor veelvoorkomende alerts zijn codes voorzien), maar gezien het dynamische karakter van de waarschuwingen cf. Sars en Ebola, zullen deze alerts vaak als vrije tekst doorgegeven worden."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "condition": [
+          "HdBe-Alert-1"
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "AlertName codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/AlertName"
+        }
+      },
+      {
+        "id": "Alert.StartDateTime",
+        "path": "Alert.StartDateTime",
+        "short": "StartDateTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "BeginDatumTijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date and time at which the described condition was entered as a warning. \r\nThis can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en tijd waarop de beschreven toestand als waarschuwing is aangemerkt. \r\nDit kan een exacte datum en tijd zijn maar ook een globale aanduiding van de datum (bijvoorbeeld alleen jaar of jaar en maand)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Alert.AlertType",
+        "path": "Alert.AlertType",
+        "short": "AlertType",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AlertType"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Indicates the type of alert, meaning a rough description of the cause or origin of the warning.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft het type alert aan, dat wil zeggen een grove indeling van de oorzaak of oorsprong waaruit de waarschuwing voort komt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "AlertType codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/AlertType"
+        }
+      },
+      {
+        "id": "Alert.Comment",
+        "path": "Alert.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Explanatory comments to the alert that cannot be expressed in any of the other elements.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichtende opmerking bij de alert die niet in een van de andere elementen uitgedrukt kan worden."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

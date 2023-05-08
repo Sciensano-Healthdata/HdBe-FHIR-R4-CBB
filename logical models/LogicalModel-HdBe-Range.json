@@ -1,1 +1,260 @@
-{"resourceType":"StructureDefinition","id":"HdBe-Range","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Range","name":"HdBeRange","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-Bereik"}]}]},"title":"HdBe Range","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"The range gives either a fixed value or a minimum and maximum value a quantity can take on.\r\nThis is a partial information model.\r\n#### Purpose\r\nThe range is used to limit the value a quantity can take on.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het bereik geeft ofwel een vaste waarde ofwel een minimale en maximale waarde aan die een hoeveelheid kan aannemen. \r\nDit is een subbouwsteen.\r\n#### Purpose\r\nHet bereik wordt gebruikt om de waarden die een variabele kan aannemen in te perken."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/Range","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"Range","path":"Range","short":"Range","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Bereik"}]}]},"definition":"Root concept of the Range partial information model. This root concept contains all data elements of the Range partial information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de subbouwsteen Bereik. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Bereik."}]}]},"min":0,"max":"*"},{"id":"Range.MinimumValue","path":"Range.MinimumValue","short":"minimumValue","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"minimumWaarde"}]}]},"definition":"The minimal value of the range.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De minimale waarde van het bereik"}]}]},"min":0,"max":"1","type":[{"code":"Quantity"}]},{"id":"Range.MaximumValue","path":"Range.MaximumValue","short":"maximumValue","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"maximumWaarde"}]}]},"definition":"The maximum value of the range.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De maximale waarde van het bereik"}]}]},"min":0,"max":"1","type":[{"code":"Quantity"}]},{"id":"Range.NominalValue","path":"Range.NominalValue","short":"nominalValue","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"nominaleWaarde"}]}]},"definition":"The nominal value of the quantity. This element cannot be used in combination with a minimum and maximum value.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De nominale waarde van de hoeveelheid. Dit element kan niet in combinatie met een minimale en maximale waarde gebruikt worden."}]}]},"min":0,"max":"1","type":[{"code":"Quantity"}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-Range",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Range",
+  "name": "HdBeRange",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-Bereik"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe Range",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "The range gives either a fixed value or a minimum and maximum value a quantity can take on.\r\nThis is a partial information model.\r\n#### Purpose\r\nThe range is used to limit the value a quantity can take on.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Het bereik geeft ofwel een vaste waarde ofwel een minimale en maximale waarde aan die een hoeveelheid kan aannemen. \r\nDit is een subbouwsteen.\r\n#### Purpose\r\nHet bereik wordt gebruikt om de waarden die een variabele kan aannemen in te perken."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/Range",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Range",
+        "path": "Range",
+        "short": "Range",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bereik"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Range partial information model. This root concept contains all data elements of the Range partial information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Bereik. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Bereik."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Range.MinimumValue",
+        "path": "Range.MinimumValue",
+        "short": "minimumValue",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "minimumWaarde"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The minimal value of the range.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De minimale waarde van het bereik"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Range.MaximumValue",
+        "path": "Range.MaximumValue",
+        "short": "maximumValue",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "maximumWaarde"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The maximum value of the range.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De maximale waarde van het bereik"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Range.NominalValue",
+        "path": "Range.NominalValue",
+        "short": "nominalValue",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "nominaleWaarde"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The nominal value of the quantity. This element cannot be used in combination with a minimum and maximum value.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De nominale waarde van de hoeveelheid. Dit element kan niet in combinatie met een minimale en maximale waarde gebruikt worden."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      }
+    ]
+  }
+}

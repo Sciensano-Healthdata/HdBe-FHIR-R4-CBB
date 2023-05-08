@@ -1,1 +1,310 @@
-{"resourceType":"StructureDefinition","id":"HdBe-NutritionAdvice","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NutritionAdvice","name":"HdBeNutritionAdvice","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-Voedingsadvies"}]}]},"title":"HdBe NutritionAdvice","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"A nutritional advice is a description of nourishment for the patient, which must meet specific requirements in view of the health condition of the patient. Allergies and food intolerances or chewing and swallowing problems may be a reason for special nutrition.\r\n#### Purpose\r\nRecording and communicating nutrition advice provides insight in policy regarding the patient’s diet. If this information is not available, it can lead to unsafe situations for the patient. \r\nEspecially in transfer cases, it is important for nutrition advices to be clearly communicated.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Een voedingsadvies is een beschrijving van voeding voor de patiënt, die aan specifieke eisen moet voldoen in verband met de gezondheidstoestand van de patiënt. Allergieën en overgevoeligheden of kauw- en slikproblemen kunnen aanleiding zijn voor speciale voeding.\r\n#### Purpose\r\nHet vastleggen en communiceren van het voedingsadvies geeft inzicht in beleid ten aanzien van de voeding. Indien deze informatie niet beschikbaar is, kan dit tot onveilige situaties voor de patiënt leiden. \r\nZeker bij overplaatsing is het van belang dat het voedingsadvies meegegeven wordt."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/NutritionAdvice","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"NutritionAdvice","path":"NutritionAdvice","short":"NutritionAdvice","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Voedingsadvies"}]}]},"definition":"Root concept of the NutritionAdvice information model. This concept contains all data elements of the NutritionAdvice information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de bouwsteen Voedingsadvies. Dit concept bevat alle gegevenselementen van de bouwsteen Voedingsadvies."}]}]},"min":0,"max":"*"},{"id":"NutritionAdvice.DietType","path":"NutritionAdvice.DietType","short":"DietType","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"DieetType"}]}]},"definition":"Description of the type of diet.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De omschrijving van het type dieet."}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"NutritionAdvice.Consistency","path":"NutritionAdvice.Consistency","short":"Consistency","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Consistentie"}]}]},"definition":"A description of the consistency of the food.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De omschrijving van consistentie van de voeding."}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"NutritionAdvice.Indication","path":"NutritionAdvice.Indication","short":"Indication","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Indicatie"}]}]},"definition":"The indication is the reason for advising the diet.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De indicatie is de reden voor het adviseren van de dieet"}]}]},"min":0,"max":"1","type":[{"code":"Reference","targetProfile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"]}]},{"id":"NutritionAdvice.Comment","path":"NutritionAdvice.Comment","short":"Comment","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Toelichting"}]}]},"definition":"A comment on the nutrition advice.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Een toelichting op het voedingsadvies."}]}]},"min":0,"max":"1","type":[{"code":"string"}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-NutritionAdvice",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NutritionAdvice",
+  "name": "HdBeNutritionAdvice",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-Voedingsadvies"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe NutritionAdvice",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "A nutritional advice is a description of nourishment for the patient, which must meet specific requirements in view of the health condition of the patient. Allergies and food intolerances or chewing and swallowing problems may be a reason for special nutrition.\r\n#### Purpose\r\nRecording and communicating nutrition advice provides insight in policy regarding the patient’s diet. If this information is not available, it can lead to unsafe situations for the patient. \r\nEspecially in transfer cases, it is important for nutrition advices to be clearly communicated.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Een voedingsadvies is een beschrijving van voeding voor de patiënt, die aan specifieke eisen moet voldoen in verband met de gezondheidstoestand van de patiënt. Allergieën en overgevoeligheden of kauw- en slikproblemen kunnen aanleiding zijn voor speciale voeding.\r\n#### Purpose\r\nHet vastleggen en communiceren van het voedingsadvies geeft inzicht in beleid ten aanzien van de voeding. Indien deze informatie niet beschikbaar is, kan dit tot onveilige situaties voor de patiënt leiden. \r\nZeker bij overplaatsing is het van belang dat het voedingsadvies meegegeven wordt."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/NutritionAdvice",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "NutritionAdvice",
+        "path": "NutritionAdvice",
+        "short": "NutritionAdvice",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Voedingsadvies"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the NutritionAdvice information model. This concept contains all data elements of the NutritionAdvice information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Voedingsadvies. Dit concept bevat alle gegevenselementen van de bouwsteen Voedingsadvies."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "NutritionAdvice.DietType",
+        "path": "NutritionAdvice.DietType",
+        "short": "DietType",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DieetType"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Description of the type of diet.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De omschrijving van het type dieet."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "NutritionAdvice.Consistency",
+        "path": "NutritionAdvice.Consistency",
+        "short": "Consistency",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Consistentie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A description of the consistency of the food.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De omschrijving van consistentie van de voeding."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "NutritionAdvice.Indication",
+        "path": "NutritionAdvice.Indication",
+        "short": "Indication",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Indicatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The indication is the reason for advising the diet.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De indicatie is de reden voor het adviseren van de dieet"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionAdvice.Comment",
+        "path": "NutritionAdvice.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A comment on the nutrition advice.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een toelichting op het voedingsadvies."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

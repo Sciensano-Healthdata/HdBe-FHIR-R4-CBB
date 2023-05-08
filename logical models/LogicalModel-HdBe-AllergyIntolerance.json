@@ -1,1 +1,817 @@
-{"resourceType":"StructureDefinition","id":"HdBe-AllergyIntolerance","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AllergyIntolerance","name":"HdBeAllergyIntolerance","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-AllergieIntolerantie"}]}]},"title":"HdBe AllergyIntolerance","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"An allergy or intolerance describes a patient’s tendency towards hypersensitivity to a certain substance, so that an unwanted physiological reaction is expected after exposure to the substance, while most people would not exhibit such a reaction to that amount. The observed physiological changes are usually the result of an immunological reaction. \r\nThe substances can be categorized as follows: \r\n\r\n* Medicine\r\n* Medicine category\r\n* Ingredient/addition\r\n* Nutrition\r\n* Environmental factor\r\n* Animal\r\n* Plants\r\n* Chemicals\r\n* Inhaled allergenic\r\n\r\n\r\n\r\n#### Purpose\r\nDocumenting and communicating allergies and intolerances is an important part of medical registration. It concerns the core of patient safety in general and medication safety in particular. In the execution of research, treatment and care, these patient characteristics constantly have to be taken into account. \r\nIn principle, allergies and intolerances are also disorders and also could be entered as a problem. Nevertheless, these are usually entered separately. \r\nAllergies/Intolerances have a lot in common with warnings (Alert). An important difference is that with allergies and intolerances, a lot of detailed information is recorded on things such as the reactions to the causative substance. Furthermore, not every warning is a problem or medical condition.\r\n\r\n#### Evidence Base\r\nComplete medicinal allergies are insufficient when it comes to reactions to exposure to food products, items (such as bandages and band-aids), plants and animals. For these items, the standard allows the use of free text or the use of SNOMED CT code. However, no validated value set is currently available for this purpose for SNOMED CT.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Een allergie of intolerantie beschrijft de geneigdheid tot overgevoeligheid van een patiënt voor een stof, zodat na blootstelling een ongewenste fysiologische reactie verwacht wordt, terwijl bij de meeste mensen bij die hoeveelheid geen reactie zou optreden. De waargenomen fysiologische veranderingen zijn meestal het resultaat van een immunologische reactie. \r\nDe stoffen kunnen als volgt worden ingedeeld:\r\n\r\n* Geneesmiddel\r\n* Geneesmiddelgroep\r\n* Ingrediënt/toevoeging\r\n* Voeding\r\n* Omgevingsfactor\r\n* Dier\r\n* Planten\r\n* Chemicaliën\r\n* Inhalatieallergenen\r\n\r\n\r\n\r\n#### Purpose\r\nHet vastleggen en doorgeven van allergieën en intoleranties, is een belangrijk onderdeel van de medische registratie. Het raakt de kern van patiëntveiligheid in het algemeen en medicatieveiligheid in het bijzonder. In de uitvoering van onderzoek, behandeling en verzorging moet veelal continu rekening worden gehouden met deze patiëntkenmerken. \r\nAllergieën en intoleranties zijn in principe ook aandoeningen en zouden ook als probleem vastegelegd kunnen worden. Het is niettemin gebruikelijk deze separaat vast te leggen.\r\nAllergieën/Intoleraties hebben veel gemeen met waarschuwingen (Alert). Belangrijk verschil is dat bij allergieën en intoleranties veel getailleerdere informatie wordt vast gelegd o.a over de reacties op de veroorzakende stof. Daarnaast is niet iedere waarschuwing een probleem of medische conditie. Bij allergie/intolerantie is dit wel het geval, terwijl niet iedere allergie of intolerentie een waarschuwing inhoudt.\r\n#### Evidence Base\r\nOm geneesmiddelallergieën in het werkproces van voorschrijvers en apothekers te kunnen registreren en afhandelen (in de medicatiebewaking) wordt in Nederland voor allergieën gebruik gemaakt van de beschikbare coderingen in de G-standaard. Dit is beschreven in het document “Allergieën en ongewenste middelen IR V-2-3-1”.\r\n\r\nDeze codering is niet toereikend waar het gaat om reacties bij blootstelling aan voedingsmiddelen, artikelen (zoals verbandmiddelen en pleisters), planten en dieren. Voor deze items staat de standaard het gebruik van vrije tekst toe of van SNOMED CT codering. Voor SNOMED CT is echter voor dit doel op dit moment geen gevalideerde valueset beschikbaar.\r\n\r\n\r\n**Issues**\r\n**Geen bekende allergieën**\r\nDe vraag is of we in deze bouwsteen een code voor \"No known allergies (SNOMED CT 160244002)\" en kinderen hiervan aanbieden of dat we stellen dat, waar van toepassing, dat geregeld moet worden in het document waar de bouwsteen wordt toegepast .\r\n**Valueset voor het concept 'Veroorzakende Stof'**\r\nEr is momenteel nog geen afgebakende codelijst beschikbaar voor allergene stoffen anders dan medicatie. Daarom is volstaan met het noemen van SNOMED CT voor de codering van allergene stoffen. Voor de codering van medicatieproducten wordt de G-standaard gebruikt.\r\n**References**\r\n1. Z-INDEX. (2011) *Allergieën en ongewenste middelen *[Online] v. R V-2-3-1 Beschikbaar op: http://www.z-index.nl/g-standaard/beschrijvingen/functioneel/wijzigingen/mb/bewaking-op-allergie/IR%20Allergieen%20V%202-1-1.pdf [Geraadpleegd: 15 oktober 2014]\r\n\r\n2. HL7 FHIR *Resource AllergyIntolerance.* [Online] Continuous Build. Beschikbaar op: http://hl7-fhir.github.io/allergyintolerance.html [Geraadpleegd: 12 maart 2014]"}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/AllergyIntolerance","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"AllergyIntolerance","path":"AllergyIntolerance","short":"AllergyIntolerance","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"AllergieIntolerantie"}]}]},"definition":"Root concept of the AllergyIntolerance information model. This root concept contains all data elements of the AllergyIntolerance information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de bouwsteen AllergieIntolerantie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen AllergieIntolerantie."}]}]},"min":0,"max":"*"},{"id":"AllergyIntolerance.CausativeAgent","path":"AllergyIntolerance.CausativeAgent","short":"CausativeAgent","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"VeroorzakendeStof"}]}]},"definition":"Substance, group of substances or environmental factor to which the patient is allergic or hypersensitive.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Stof, groep stoffen of omgevingsfactor waar de patiënt allergisch of overgevoelig voor is."}]}]},"min":1,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"Belgian refset for causative agent, no drug","valueSet":"https://fhir.healthdata.be/ValueSet/CausativeAgent"}},{"id":"AllergyIntolerance.AllergyCategory","path":"AllergyIntolerance.AllergyCategory","short":"AllergyCategory","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"AllergieCategorie"}]}]},"definition":"Identifies the allergy category such as medication, food or environment.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Identificeert de categorie van de overgevoeligheid aan zoals medicatie, voedsel of omgeving."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"AllergyCategory codes","valueSet":"https://fhir.healthdata.be/ValueSet/AllergyCategory"}},{"id":"AllergyIntolerance.AllergyStatus","path":"AllergyIntolerance.AllergyStatus","short":"AllergyStatus","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"AllergieStatus"}]}]},"definition":"Statement on the status of the patient’s hypersensitivity.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Bewering over de status van de overgevoeligheid."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"AllergyStatus codes","valueSet":"https://fhir.healthdata.be/ValueSet/AllergyStatus"}},{"id":"AllergyIntolerance.StartDateTime","path":"AllergyIntolerance.StartDateTime","short":"StartDateTime","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"BeginDatumTijd"}]}]},"definition":"The date and time at which the allergy or undesired reaction was determined. \r\nThis can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year).","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De datum en tijd dat de allergie of de ongewenste reactie is vastgesteld. \r\nDit kan een exacte datum en tijd zijn maar ook een globale aanduiding van de datum (bijvoorbeeld alleen jaar of jaar en maand)."}]}]},"min":0,"max":"1","type":[{"code":"dateTime"}]},{"id":"AllergyIntolerance.Criticality","path":"AllergyIntolerance.Criticality","short":"Criticality","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"MateVanKritiekZijn"}]}]},"definition":"Critical extent is defined as “the potential severity of future reactions.” \r\nThis represents a clinical evaluation of the worst case scenario for a future reaction. It can be based on the severity of past reactions, the dose and manner of exposure which caused reactions in the past, and the life-threatening potential of the type of reaction. Critical extent is a property of the allergy, and not of the reaction itself.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Mate van kritiek zijn wordt gedefinieerd als \"de potentiële ernst van toekomstige reacties.\"\r\nDit vertegenwoordigt een klinisch oordeel over het worst case scenario voor een toekomstige reactie. Het kan worden gebaseerd op de ernst van de reacties in het verleden, de dosis en de wijze van blootstelling die in het verleden reacties veroorzaakten, en de levensbedreigende potentie van het type reactie. Mate van kritiek zijn is een kenmerk van de allergische aandoening, niet van de reactie."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"Criticality codes","valueSet":"https://fhir.healthdata.be/ValueSet/CriticalExtent"}},{"id":"AllergyIntolerance.LastReactionDateTime","path":"AllergyIntolerance.LastReactionDateTime","short":"LastReactionDateTime","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"LaatsteReactieDatumTijd"}]}]},"definition":"Entry of the last time a hypersensitive reaction took place.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Opgave van de laatste maal dat een reactie in het licht van de overgevoeligheid is opgetreden."}]}]},"min":0,"max":"1","type":[{"code":"dateTime"}]},{"id":"AllergyIntolerance.Comment","path":"AllergyIntolerance.Comment","short":"Comment","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Toelichting"}]}]},"definition":"Textual explanation of the hypersensitivity which cannot be entered in any of the other fields.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Tekstuele toelichting op de overgevoeligheid die niet in één van de andere velden kan worden weergegeven."}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"AllergyIntolerance.Reaction","path":"AllergyIntolerance.Reaction","short":"Reaction","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Reactie"}]}]},"definition":"Container of the Reaction concept. This container contains all data elements of the Reaction concept.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Container van het concept Reactie. Deze container bevat alle gegevenselementen van het concept Reactie."}]}]},"min":0,"max":"*","type":[{"code":"BackboneElement"}]},{"id":"AllergyIntolerance.Reaction.Symptom","path":"AllergyIntolerance.Reaction.Symptom","short":"Symptom","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Symptoom"}]}]},"definition":"The content specifications of the reaction that takes place when the patient is exposed to the causative substance.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De inhoudelijke specificatie van de reactie die optreedt indien de patiënt wordt blootgesteld aan de veroorzakende stof."}]}]},"min":1,"max":"*","type":[{"code":"CodeableConcept"}],"binding":{"strength":"extensible","description":"Symptom codes","valueSet":"https://fhir.healthdata.be/ValueSet/Symptom"}},{"id":"AllergyIntolerance.Reaction.SpecificSubstance","path":"AllergyIntolerance.Reaction.SpecificSubstance","short":"SpecificSubstance","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"SpecifiekeStof"}]}]},"definition":"More specific indication of the substance that caused the reaction. This can be a specific substance from a group of substances to which the patient is allergic or hypersensitive.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Meer specifieke aanduiding van de stof die de reactie opriep. Dit kan een specifieke stof uit een groep stoffen zijn waarvoor de patiënt allergisch of overgevoelig is."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"Belgian refset for causative agent, no drug","valueSet":"https://fhir.healthdata.be/ValueSet/CausativeAgent"}},{"id":"AllergyIntolerance.Reaction.ReactionDescription","path":"AllergyIntolerance.Reaction.ReactionDescription","short":"ReactionDescription","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"ReactieBeschrijving"}]}]},"definition":"Textual description of the reaction as a whole.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Tekstuele beschrijving van de reactie als geheel."}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"AllergyIntolerance.Reaction.Severity","path":"AllergyIntolerance.Reaction.Severity","short":"Severity","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Ernst"}]}]},"definition":"The severity of the reaction as a result of exposure to the causative substance.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De ernst van de reactie ten gevolge van de blootgestelling aan de veroorzakende stof."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"Severity codes","valueSet":"https://fhir.healthdata.be/ValueSet/CriticalExtent"}},{"id":"AllergyIntolerance.Reaction.RouteOfExposure","path":"AllergyIntolerance.Reaction.RouteOfExposure","short":"RouteOfExposure","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"WijzeVanBlootstelling"}]}]},"definition":"Way in which the patient came into contact with the causative agent or the way in which the agent was administered.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Wijze waarop de patiënt in aanraking is gekomen met de veroorzakende stof of de wijze waarop de stof toegediend is."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"RouteOfExposure codes","valueSet":"https://fhir.healthdata.be/ValueSet/RouteOfExposure"}},{"id":"AllergyIntolerance.Reaction.ReactionTime","path":"AllergyIntolerance.Reaction.ReactionTime","short":"ReactionTime","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"ReactieTijdstip"}]}]},"definition":"Date and time at which the reaction took place. This may also be just the date or a partial date, in the event that the exact date is unknown.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Datum en tijd waarop de reactie plaats gevonden heeft. Dit mag ook alleen een datum of een gedeeltelijke datum zijn, indien dit niet nauwkeuriger bekend is."}]}]},"min":0,"max":"1","type":[{"code":"dateTime"}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-AllergyIntolerance",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AllergyIntolerance",
+  "name": "HdBeAllergyIntolerance",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-AllergieIntolerantie"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe AllergyIntolerance",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "An allergy or intolerance describes a patient’s tendency towards hypersensitivity to a certain substance, so that an unwanted physiological reaction is expected after exposure to the substance, while most people would not exhibit such a reaction to that amount. The observed physiological changes are usually the result of an immunological reaction. \r\nThe substances can be categorized as follows: \r\n\r\n* Medicine\r\n* Medicine category\r\n* Ingredient/addition\r\n* Nutrition\r\n* Environmental factor\r\n* Animal\r\n* Plants\r\n* Chemicals\r\n* Inhaled allergenic\r\n\r\n\r\n\r\n#### Purpose\r\nDocumenting and communicating allergies and intolerances is an important part of medical registration. It concerns the core of patient safety in general and medication safety in particular. In the execution of research, treatment and care, these patient characteristics constantly have to be taken into account. \r\nIn principle, allergies and intolerances are also disorders and also could be entered as a problem. Nevertheless, these are usually entered separately. \r\nAllergies/Intolerances have a lot in common with warnings (Alert). An important difference is that with allergies and intolerances, a lot of detailed information is recorded on things such as the reactions to the causative substance. Furthermore, not every warning is a problem or medical condition.\r\n\r\n#### Evidence Base\r\nComplete medicinal allergies are insufficient when it comes to reactions to exposure to food products, items (such as bandages and band-aids), plants and animals. For these items, the standard allows the use of free text or the use of SNOMED CT code. However, no validated value set is currently available for this purpose for SNOMED CT.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Een allergie of intolerantie beschrijft de geneigdheid tot overgevoeligheid van een patiënt voor een stof, zodat na blootstelling een ongewenste fysiologische reactie verwacht wordt, terwijl bij de meeste mensen bij die hoeveelheid geen reactie zou optreden. De waargenomen fysiologische veranderingen zijn meestal het resultaat van een immunologische reactie. \r\nDe stoffen kunnen als volgt worden ingedeeld:\r\n\r\n* Geneesmiddel\r\n* Geneesmiddelgroep\r\n* Ingrediënt/toevoeging\r\n* Voeding\r\n* Omgevingsfactor\r\n* Dier\r\n* Planten\r\n* Chemicaliën\r\n* Inhalatieallergenen\r\n\r\n\r\n\r\n#### Purpose\r\nHet vastleggen en doorgeven van allergieën en intoleranties, is een belangrijk onderdeel van de medische registratie. Het raakt de kern van patiëntveiligheid in het algemeen en medicatieveiligheid in het bijzonder. In de uitvoering van onderzoek, behandeling en verzorging moet veelal continu rekening worden gehouden met deze patiëntkenmerken. \r\nAllergieën en intoleranties zijn in principe ook aandoeningen en zouden ook als probleem vastegelegd kunnen worden. Het is niettemin gebruikelijk deze separaat vast te leggen.\r\nAllergieën/Intoleraties hebben veel gemeen met waarschuwingen (Alert). Belangrijk verschil is dat bij allergieën en intoleranties veel getailleerdere informatie wordt vast gelegd o.a over de reacties op de veroorzakende stof. Daarnaast is niet iedere waarschuwing een probleem of medische conditie. Bij allergie/intolerantie is dit wel het geval, terwijl niet iedere allergie of intolerentie een waarschuwing inhoudt.\r\n#### Evidence Base\r\nOm geneesmiddelallergieën in het werkproces van voorschrijvers en apothekers te kunnen registreren en afhandelen (in de medicatiebewaking) wordt in Nederland voor allergieën gebruik gemaakt van de beschikbare coderingen in de G-standaard. Dit is beschreven in het document “Allergieën en ongewenste middelen IR V-2-3-1”.\r\n\r\nDeze codering is niet toereikend waar het gaat om reacties bij blootstelling aan voedingsmiddelen, artikelen (zoals verbandmiddelen en pleisters), planten en dieren. Voor deze items staat de standaard het gebruik van vrije tekst toe of van SNOMED CT codering. Voor SNOMED CT is echter voor dit doel op dit moment geen gevalideerde valueset beschikbaar.\r\n\r\n\r\n**Issues**\r\n**Geen bekende allergieën**\r\nDe vraag is of we in deze bouwsteen een code voor \"No known allergies (SNOMED CT 160244002)\" en kinderen hiervan aanbieden of dat we stellen dat, waar van toepassing, dat geregeld moet worden in het document waar de bouwsteen wordt toegepast .\r\n**Valueset voor het concept 'Veroorzakende Stof'**\r\nEr is momenteel nog geen afgebakende codelijst beschikbaar voor allergene stoffen anders dan medicatie. Daarom is volstaan met het noemen van SNOMED CT voor de codering van allergene stoffen. Voor de codering van medicatieproducten wordt de G-standaard gebruikt.\r\n**References**\r\n1. Z-INDEX. (2011) *Allergieën en ongewenste middelen *[Online] v. R V-2-3-1 Beschikbaar op: http://www.z-index.nl/g-standaard/beschrijvingen/functioneel/wijzigingen/mb/bewaking-op-allergie/IR%20Allergieen%20V%202-1-1.pdf [Geraadpleegd: 15 oktober 2014]\r\n\r\n2. HL7 FHIR *Resource AllergyIntolerance.* [Online] Continuous Build. Beschikbaar op: http://hl7-fhir.github.io/allergyintolerance.html [Geraadpleegd: 12 maart 2014]"
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/AllergyIntolerance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "AllergyIntolerance",
+        "path": "AllergyIntolerance",
+        "short": "AllergyIntolerance",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AllergieIntolerantie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the AllergyIntolerance information model. This root concept contains all data elements of the AllergyIntolerance information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen AllergieIntolerantie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen AllergieIntolerantie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "AllergyIntolerance.CausativeAgent",
+        "path": "AllergyIntolerance.CausativeAgent",
+        "short": "CausativeAgent",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VeroorzakendeStof"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Substance, group of substances or environmental factor to which the patient is allergic or hypersensitive.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Stof, groep stoffen of omgevingsfactor waar de patiënt allergisch of overgevoelig voor is."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Belgian refset for causative agent, no drug",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/CausativeAgent"
+        }
+      },
+      {
+        "id": "AllergyIntolerance.AllergyCategory",
+        "path": "AllergyIntolerance.AllergyCategory",
+        "short": "AllergyCategory",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AllergieCategorie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identifies the allergy category such as medication, food or environment.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificeert de categorie van de overgevoeligheid aan zoals medicatie, voedsel of omgeving."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "AllergyCategory codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/AllergyCategory"
+        }
+      },
+      {
+        "id": "AllergyIntolerance.AllergyStatus",
+        "path": "AllergyIntolerance.AllergyStatus",
+        "short": "AllergyStatus",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AllergieStatus"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Statement on the status of the patient’s hypersensitivity.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bewering over de status van de overgevoeligheid."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "AllergyStatus codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/AllergyStatus"
+        }
+      },
+      {
+        "id": "AllergyIntolerance.StartDateTime",
+        "path": "AllergyIntolerance.StartDateTime",
+        "short": "StartDateTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "BeginDatumTijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date and time at which the allergy or undesired reaction was determined. \r\nThis can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en tijd dat de allergie of de ongewenste reactie is vastgesteld. \r\nDit kan een exacte datum en tijd zijn maar ook een globale aanduiding van de datum (bijvoorbeeld alleen jaar of jaar en maand)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "AllergyIntolerance.Criticality",
+        "path": "AllergyIntolerance.Criticality",
+        "short": "Criticality",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MateVanKritiekZijn"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Critical extent is defined as “the potential severity of future reactions.” \r\nThis represents a clinical evaluation of the worst case scenario for a future reaction. It can be based on the severity of past reactions, the dose and manner of exposure which caused reactions in the past, and the life-threatening potential of the type of reaction. Critical extent is a property of the allergy, and not of the reaction itself.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Mate van kritiek zijn wordt gedefinieerd als \"de potentiële ernst van toekomstige reacties.\"\r\nDit vertegenwoordigt een klinisch oordeel over het worst case scenario voor een toekomstige reactie. Het kan worden gebaseerd op de ernst van de reacties in het verleden, de dosis en de wijze van blootstelling die in het verleden reacties veroorzaakten, en de levensbedreigende potentie van het type reactie. Mate van kritiek zijn is een kenmerk van de allergische aandoening, niet van de reactie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Criticality codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/CriticalExtent"
+        }
+      },
+      {
+        "id": "AllergyIntolerance.LastReactionDateTime",
+        "path": "AllergyIntolerance.LastReactionDateTime",
+        "short": "LastReactionDateTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "LaatsteReactieDatumTijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Entry of the last time a hypersensitive reaction took place.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Opgave van de laatste maal dat een reactie in het licht van de overgevoeligheid is opgetreden."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "AllergyIntolerance.Comment",
+        "path": "AllergyIntolerance.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Textual explanation of the hypersensitivity which cannot be entered in any of the other fields.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele toelichting op de overgevoeligheid die niet in één van de andere velden kan worden weergegeven."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "AllergyIntolerance.Reaction",
+        "path": "AllergyIntolerance.Reaction",
+        "short": "Reaction",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Reactie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the Reaction concept. This container contains all data elements of the Reaction concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept Reactie. Deze container bevat alle gegevenselementen van het concept Reactie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "AllergyIntolerance.Reaction.Symptom",
+        "path": "AllergyIntolerance.Reaction.Symptom",
+        "short": "Symptom",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Symptoom"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The content specifications of the reaction that takes place when the patient is exposed to the causative substance.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De inhoudelijke specificatie van de reactie die optreedt indien de patiënt wordt blootgesteld aan de veroorzakende stof."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "Symptom codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/Symptom"
+        }
+      },
+      {
+        "id": "AllergyIntolerance.Reaction.SpecificSubstance",
+        "path": "AllergyIntolerance.Reaction.SpecificSubstance",
+        "short": "SpecificSubstance",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SpecifiekeStof"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "More specific indication of the substance that caused the reaction. This can be a specific substance from a group of substances to which the patient is allergic or hypersensitive.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Meer specifieke aanduiding van de stof die de reactie opriep. Dit kan een specifieke stof uit een groep stoffen zijn waarvoor de patiënt allergisch of overgevoelig is."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Belgian refset for causative agent, no drug",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/CausativeAgent"
+        }
+      },
+      {
+        "id": "AllergyIntolerance.Reaction.ReactionDescription",
+        "path": "AllergyIntolerance.Reaction.ReactionDescription",
+        "short": "ReactionDescription",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ReactieBeschrijving"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Textual description of the reaction as a whole.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele beschrijving van de reactie als geheel."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "AllergyIntolerance.Reaction.Severity",
+        "path": "AllergyIntolerance.Reaction.Severity",
+        "short": "Severity",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Ernst"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The severity of the reaction as a result of exposure to the causative substance.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De ernst van de reactie ten gevolge van de blootgestelling aan de veroorzakende stof."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Severity codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/CriticalExtent"
+        }
+      },
+      {
+        "id": "AllergyIntolerance.Reaction.RouteOfExposure",
+        "path": "AllergyIntolerance.Reaction.RouteOfExposure",
+        "short": "RouteOfExposure",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "WijzeVanBlootstelling"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Way in which the patient came into contact with the causative agent or the way in which the agent was administered.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Wijze waarop de patiënt in aanraking is gekomen met de veroorzakende stof of de wijze waarop de stof toegediend is."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "RouteOfExposure codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/RouteOfExposure"
+        }
+      },
+      {
+        "id": "AllergyIntolerance.Reaction.ReactionTime",
+        "path": "AllergyIntolerance.Reaction.ReactionTime",
+        "short": "ReactionTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ReactieTijdstip"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Date and time at which the reaction took place. This may also be just the date or a partial date, in the event that the exact date is unknown.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum en tijd waarop de reactie plaats gevonden heeft. Dit mag ook alleen een datum of een gedeeltelijke datum zijn, indien dit niet nauwkeuriger bekend is."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      }
+    ]
+  }
+}

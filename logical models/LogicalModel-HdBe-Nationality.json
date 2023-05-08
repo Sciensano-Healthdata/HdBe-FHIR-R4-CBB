@@ -1,1 +1,174 @@
-{"resourceType":"StructureDefinition","id":"HdBe-Nationality","meta":{"lastUpdated":"2022-12-13T09:47:03.8292216+00:00"},"language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Nationality","name":"HdBeNationality","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-Nationaliteit"}]}]},"title":"HdBe Nationality","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"Nationality is used as an indication of the country of citizenship.\r\n#### Purpose\r\nNationality is recorded for administrative purposes. The information model is not intended for documenting ethnicity.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De nationaliteit wordt gebruikt als aanduiding voor het land van staatsburgerschap.\r\n#### Purpose\r\nNationaliteit wordt vastgelegd voor administratieve doeleinden. De bouwsteen is dan ook niet bedoeld voor het vastleggen van etniciteiten."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/NationalityRC","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"NationalityRC","path":"NationalityRC","short":"NationalityRC","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"NationaliteitRC"}]}]},"definition":"Root concept of the Nationality information model. This concept contains all data elements of the Nationality information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de bouwsteen Nationaliteit. Dit concept bevat alle gegevenselementen van de bouwsteen Nationaliteit."}]}]},"min":0,"max":"*"},{"id":"NationalityRC.Nationality","path":"NationalityRC.Nationality","short":"Nationality","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Nationaliteit"}]}]},"definition":"Indicates the country of citizenship.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De aanduiding van het land van staatsburgerschap."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"extensible","description":"Iso 3166 Part 1: 2 Letter Codes","valueSet":"https://fhir.healthdata.be/ValueSet/CountryISO"}}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-Nationality",
+  "meta": {
+    "lastUpdated": "2022-12-13T09:47:03.8292216+00:00"
+  },
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Nationality",
+  "name": "HdBeNationality",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-Nationaliteit"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe Nationality",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Nationality is used as an indication of the country of citizenship.\r\n#### Purpose\r\nNationality is recorded for administrative purposes. The information model is not intended for documenting ethnicity.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "De nationaliteit wordt gebruikt als aanduiding voor het land van staatsburgerschap.\r\n#### Purpose\r\nNationaliteit wordt vastgelegd voor administratieve doeleinden. De bouwsteen is dan ook niet bedoeld voor het vastleggen van etniciteiten."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/NationalityRC",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "NationalityRC",
+        "path": "NationalityRC",
+        "short": "NationalityRC",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "NationaliteitRC"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Nationality information model. This concept contains all data elements of the Nationality information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Nationaliteit. Dit concept bevat alle gegevenselementen van de bouwsteen Nationaliteit."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "NationalityRC.Nationality",
+        "path": "NationalityRC.Nationality",
+        "short": "Nationality",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Nationaliteit"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Indicates the country of citizenship.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De aanduiding van het land van staatsburgerschap."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "Iso 3166 Part 1: 2 Letter Codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/CountryISO"
+        }
+      }
+    ]
+  }
+}

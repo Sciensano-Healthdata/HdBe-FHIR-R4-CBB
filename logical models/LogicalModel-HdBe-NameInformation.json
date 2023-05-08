@@ -1,1 +1,642 @@
-{"resourceType":"StructureDefinition","id":"HdBe-NameInformation","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NameInformation","name":"HdBeNameInformation","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-Naamgegevens"}]}]},"title":"HdBe NameInformation","status":"draft","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"Name information includes a person's given names, nickname, last name and possibly the partner's last name.\r\nThis is a partial information model.\r\n\r\n#### Purpose\r\nName information is used to identify and address a person.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De naamgegevens van een persoon bevatten voornamen, roepnaam, achternaam en eventueel de achternaam van de partner.\r\nDit is een subbouwsteen.\r\n#### Purpose\r\nNaamgegevens worden gebruikt om een persoon te identificeren en aan te spreken."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/NameInformation","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"NameInformation","path":"NameInformation","short":"NameInformation","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Naamgegevens"}]}]},"definition":"Root concept of the NameInformation partial information model. This root concept contains all data elements of the NameInformation partial information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de subbouwsteen Naamgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Naamgegevens."}]}]},"min":0,"max":"*"},{"id":"NameInformation.FirstNames","path":"NameInformation.FirstNames","short":"FirstNames","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Voornamen"}]}]},"definition":"The person’s official first names.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Officiële voornamen van de persoon."}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"NameInformation.Initials","path":"NameInformation.Initials","short":"Initials","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Initialen"}]}]},"definition":"The person’s initials.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Initialen van de persoon."}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"NameInformation.GivenName","path":"NameInformation.GivenName","short":"GivenName","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Roepnaam"}]}]},"definition":"The name normally used to address the person.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De naam waarmee de persoon gebruikelijk aangesproken wordt."}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"NameInformation.NameUsage","path":"NameInformation.NameUsage","short":"NameUsage","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Naamgebruik"}]}]},"definition":"This concept indicates the last name or order of last names with which the person is to be addressed.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Dit concept geeft de achternaam of volgorde van achternamen aan waarmee de persoon aangesproken of aangeschreven wil worden."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"NameUsage codes","valueSet":"https://fhir.healthdata.be/ValueSet/NameUsage"}},{"id":"NameInformation.LastName","path":"NameInformation.LastName","short":"LastName","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Familienaam"}]}]},"definition":"Container of the LastName concept. This container contains all data elements of the LastName concept.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Container van het concept Familienaam. Deze container bevat alle gegevenselementen van het concept Familienaam"}]}]},"comment":"* 0..1 The person’s own last name or partner’s last name must be entered. Entering both is also allowed.","min":0,"max":"1","type":[{"code":"BackboneElement"}]},{"id":"NameInformation.LastName.Prefix","path":"NameInformation.LastName.Prefix","short":"Prefix","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Voorvoegsels"}]}]},"definition":"Prefix to the person’s own last name if not provided in LastName.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Bij de eigen achternaam behorende voorvoegsels."}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"NameInformation.LastName.LastName","path":"NameInformation.LastName.LastName","short":"LastName","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Achternaam"}]}]},"definition":"The person’s official last name. \r\n\r\nPreferrably, the last name prefix is captured using the `.Prefix` element. It may however be included here for systems that do not record this separately.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Officiële achternaam van de persoon."}]}]},"min":1,"max":"1","type":[{"code":"string"}]},{"id":"NameInformation.LastNamePartner","path":"NameInformation.LastNamePartner","short":"LastNamePartner","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"FamilienaamPartner"}]}]},"definition":"Container of the LastNamePartner concept. This container contains all data elements of the LastNamePartner concept.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Container van het concept FamilienaamPartner. Deze container bevat alle gegevenselementen van het concept FamilienaamPartner."}]}]},"comment":"* 0..1 The person’s own last name or partner’s last name must be entered. Entering both is also allowed.","min":0,"max":"1","type":[{"code":"BackboneElement"}]},{"id":"NameInformation.LastNamePartner.PartnerPrefix","path":"NameInformation.LastNamePartner.PartnerPrefix","short":"PartnerPrefix","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"VoorvoegselsPartner"}]}]},"definition":"Prefix to the partner’s last name if not provided in PartnerLastName.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Bij de achternaam van de partner behorende voorvoegsels"}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"NameInformation.LastNamePartner.PartnerLastName","path":"NameInformation.LastNamePartner.PartnerLastName","short":"PartnerLastName","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"AchternaamPartner"}]}]},"definition":"Partner’s official last name.\r\n\r\nPreferrably, the partner' last name prefix is captured using the `.PartnerPrefix` element. It may however be included here for systems that do not record this separately.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Officiële achternaam van de partner."}]}]},"min":1,"max":"1","type":[{"code":"string"}]},{"id":"NameInformation.Titles","path":"NameInformation.Titles","short":"Titles","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Titels"}]}]},"definition":"Noble and scientific titles. These can assist in formulating oral and formal addresing titles.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Adellijke en wetenschappelijke titels. Deze kunnen behulpzaam zijn bij het formuleren van aanspreek- en aanschrijftitels."}]}]},"min":0,"max":"1","type":[{"code":"string"}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-NameInformation",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NameInformation",
+  "name": "HdBeNameInformation",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-Naamgegevens"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe NameInformation",
+  "status": "draft",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Name information includes a person's given names, nickname, last name and possibly the partner's last name.\r\nThis is a partial information model.\r\n\r\n#### Purpose\r\nName information is used to identify and address a person.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "De naamgegevens van een persoon bevatten voornamen, roepnaam, achternaam en eventueel de achternaam van de partner.\r\nDit is een subbouwsteen.\r\n#### Purpose\r\nNaamgegevens worden gebruikt om een persoon te identificeren en aan te spreken."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/NameInformation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "NameInformation",
+        "path": "NameInformation",
+        "short": "NameInformation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naamgegevens"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the NameInformation partial information model. This root concept contains all data elements of the NameInformation partial information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Naamgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Naamgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "NameInformation.FirstNames",
+        "path": "NameInformation.FirstNames",
+        "short": "FirstNames",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Voornamen"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The person’s official first names.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Officiële voornamen van de persoon."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "NameInformation.Initials",
+        "path": "NameInformation.Initials",
+        "short": "Initials",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Initialen"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The person’s initials.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Initialen van de persoon."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "NameInformation.GivenName",
+        "path": "NameInformation.GivenName",
+        "short": "GivenName",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Roepnaam"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The name normally used to address the person.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De naam waarmee de persoon gebruikelijk aangesproken wordt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "NameInformation.NameUsage",
+        "path": "NameInformation.NameUsage",
+        "short": "NameUsage",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naamgebruik"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "This concept indicates the last name or order of last names with which the person is to be addressed.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dit concept geeft de achternaam of volgorde van achternamen aan waarmee de persoon aangesproken of aangeschreven wil worden."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "NameUsage codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/NameUsage"
+        }
+      },
+      {
+        "id": "NameInformation.LastName",
+        "path": "NameInformation.LastName",
+        "short": "LastName",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Familienaam"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the LastName concept. This container contains all data elements of the LastName concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept Familienaam. Deze container bevat alle gegevenselementen van het concept Familienaam"
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "* 0..1 The person’s own last name or partner’s last name must be entered. Entering both is also allowed.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "NameInformation.LastName.Prefix",
+        "path": "NameInformation.LastName.Prefix",
+        "short": "Prefix",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Voorvoegsels"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Prefix to the person’s own last name if not provided in LastName.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bij de eigen achternaam behorende voorvoegsels."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "NameInformation.LastName.LastName",
+        "path": "NameInformation.LastName.LastName",
+        "short": "LastName",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Achternaam"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The person’s official last name. \r\n\r\nPreferrably, the last name prefix is captured using the `.Prefix` element. It may however be included here for systems that do not record this separately.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Officiële achternaam van de persoon."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "NameInformation.LastNamePartner",
+        "path": "NameInformation.LastNamePartner",
+        "short": "LastNamePartner",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "FamilienaamPartner"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the LastNamePartner concept. This container contains all data elements of the LastNamePartner concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept FamilienaamPartner. Deze container bevat alle gegevenselementen van het concept FamilienaamPartner."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "* 0..1 The person’s own last name or partner’s last name must be entered. Entering both is also allowed.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "NameInformation.LastNamePartner.PartnerPrefix",
+        "path": "NameInformation.LastNamePartner.PartnerPrefix",
+        "short": "PartnerPrefix",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VoorvoegselsPartner"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Prefix to the partner’s last name if not provided in PartnerLastName.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bij de achternaam van de partner behorende voorvoegsels"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "NameInformation.LastNamePartner.PartnerLastName",
+        "path": "NameInformation.LastNamePartner.PartnerLastName",
+        "short": "PartnerLastName",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AchternaamPartner"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Partner’s official last name.\r\n\r\nPreferrably, the partner' last name prefix is captured using the `.PartnerPrefix` element. It may however be included here for systems that do not record this separately.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Officiële achternaam van de partner."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "NameInformation.Titles",
+        "path": "NameInformation.Titles",
+        "short": "Titles",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Titels"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Noble and scientific titles. These can assist in formulating oral and formal addresing titles.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adellijke en wetenschappelijke titels. Deze kunnen behulpzaam zijn bij het formuleren van aanspreek- en aanschrijftitels."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,1 +1,192 @@
-{"resourceType":"StructureDefinition","id":"HdBe-ContactInformation","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation","name":"HdBeContactInformation","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-Contactgegevens"}]}]},"title":"HdBe ContactInformation","status":"draft","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"Contact information includes a person's telephone numbers and e-mail addresses.\r\nThis is a partial information model.\r\n\r\n#### Purpose\r\nContact information is used to contact a person.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Contactgegevens bevatten de telefoonnummers en e-mail adressen van een persoon.\r\nDit is een subbouwsteen.\r\n#### Purpose\r\nContactgegevens worden gebruikt om met een persoon in contact te treden."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/ContactInformation","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"ContactInformation","path":"ContactInformation","short":"ContactInformation","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Contactgegevens"}]}]},"definition":"Root concept of the ContactInformation partial information model. This root concept contains all data elements of the ContactInformation partial information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de sub-bouwsteen Contactgegevens. Dit rootconcept bevat alle gegevenselementen van de sub-bouwsteen Contactgegevens."}]}]},"min":0,"max":"*"},{"id":"ContactInformation.Type","path":"ContactInformation.Type","short":"Type","definition":"The type of contact information.","min":0,"max":"1","type":[{"code":"CodeableConcept","profile":["http://hl7.org/fhir/StructureDefinition/CodeableConcept"]}],"binding":{"strength":"required","description":"Telecommunications form for contact point.","valueSet":"http://hl7.org/fhir/ValueSet/contact-point-system"}},{"id":"ContactInformation.Value","path":"ContactInformation.Value","short":"Value","definition":"The actual contact information details.","min":1,"max":"1","type":[{"code":"string","profile":["http://hl7.org/fhir/StructureDefinition/string"]}]},{"id":"ContactInformation.Use","path":"ContactInformation.Use","short":"Use","definition":"Purpose or use of the contact information. For example whether it is a private or business telephone number.","min":0,"max":"1","type":[{"code":"CodeableConcept","profile":["http://hl7.org/fhir/StructureDefinition/CodeableConcept"]}],"binding":{"strength":"required","description":"Use of contact point.","valueSet":"http://hl7.org/fhir/ValueSet/contact-point-use"}},{"id":"ContactInformation.Comment","path":"ContactInformation.Comment","short":"Comment","definition":"Explanation about the contact information and how to use it. It can be indicated, for example, that a telephone number concerns a department number (for healthcare professionals) or that availability by phone is only possible during a specified part of the day.","min":0,"max":"1","type":[{"code":"string","profile":["http://hl7.org/fhir/StructureDefinition/string"]}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-ContactInformation",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation",
+  "name": "HdBeContactInformation",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-Contactgegevens"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe ContactInformation",
+  "status": "draft",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Contact information includes a person's telephone numbers and e-mail addresses.\r\nThis is a partial information model.\r\n\r\n#### Purpose\r\nContact information is used to contact a person.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Contactgegevens bevatten de telefoonnummers en e-mail adressen van een persoon.\r\nDit is een subbouwsteen.\r\n#### Purpose\r\nContactgegevens worden gebruikt om met een persoon in contact te treden."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/ContactInformation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ContactInformation",
+        "path": "ContactInformation",
+        "short": "ContactInformation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the ContactInformation partial information model. This root concept contains all data elements of the ContactInformation partial information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de sub-bouwsteen Contactgegevens. Dit rootconcept bevat alle gegevenselementen van de sub-bouwsteen Contactgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ContactInformation.Type",
+        "path": "ContactInformation.Type",
+        "short": "Type",
+        "definition": "The type of contact information.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/CodeableConcept"
+            ]
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Telecommunications form for contact point.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-system"
+        }
+      },
+      {
+        "id": "ContactInformation.Value",
+        "path": "ContactInformation.Value",
+        "short": "Value",
+        "definition": "The actual contact information details.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/string"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ContactInformation.Use",
+        "path": "ContactInformation.Use",
+        "short": "Use",
+        "definition": "Purpose or use of the contact information. For example whether it is a private or business telephone number.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/CodeableConcept"
+            ]
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Use of contact point.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-use"
+        }
+      },
+      {
+        "id": "ContactInformation.Comment",
+        "path": "ContactInformation.Comment",
+        "short": "Comment",
+        "definition": "Explanation about the contact information and how to use it. It can be indicated, for example, that a telephone number concerns a department number (for healthcare professionals) or that availability by phone is only possible during a specified part of the day.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/string"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

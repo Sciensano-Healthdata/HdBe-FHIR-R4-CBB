@@ -1,1 +1,791 @@
-{"resourceType":"StructureDefinition","id":"HdBe-DAS","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-DAS","name":"HdBeDAS","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-DAS"}]}]},"title":"HdBe DAS","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"The Disease Activity Score (DAS) is a combined index developed in Nijmegen around 1990 to measure disease activity in patients with rheumatoid arthritis (RA). It concerns a formula with 28 or 44 painful and swollen joints, a blood value for inflammation (BSE or CRP) and the overall experience of disease activity by the patient. The DAS results in a number between 0 and 10, which indicates how active rheumatoid arthritis is at present. The score has been validated for use in clinical trials in combination with the EULAR response criteria. \r\n\r\n#### Purpose\r\n In addition to frequent use in trials, the DAS is used to measure the disease activity of RA patients in daily clinical practice, supporting the \"treat-to-target\" strategy recommended in guidelines. The DAS is also used as an outcome measure for the care of RA patients in a national quality registration. \r\n\r\n\r\n#### Patient Population\r\nAdult patients with rheumatoid arthritis (RA).","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De Disease Activity Score (DAS) is een gecombineerde index die rond 1990 in Nijmegen is ontwikkeld om de ziekteactiviteit bij patiënten met reumatoïde artritis (RA) te meten. Het betreft een formule met 28 of 44 pijnlijke en gezwollen gewrichten, een bloedwaarde voor ontsteking (BSE of CRP) en de globale beleving van ziekteactiviteit door de patiënt. De DAS geeft een getal tussen 0 en 10, waarmee wordt aangegeven hoe actief de reumatoïde artritis op dit moment is. De score is gevalideerd voor gebruik in klinische trials in combinatie met de EULAR-responscriteria. \r\n#### Purpose\r\nNaast veelvuldig gebruik in trials wordt de DAS gebruikt om ziekteactiviteit van RA-patiënten in de dagelijkse klinische praktijk te meten, waarmee de in richtlijnen aanbevolen “treat-to-target” strategie wordt ondersteund. Ook wordt de DAS gebruikt als uitkomstmaat voor de zorg voor RA-patiënten in een landelijke kwaliteitsregistratie.\r\n\r\n\r\n#### Patient Population\r\nVolwassen patiënten met reumatoïde artritis (RA).\r\n**References**\r\nInformatie over het DAS instrument [Online] Beschikbaar op: https://www.das-score.nl/das28/en/ [Geraadpleegd: 8 oktober 2019] \r\n**Revision History**\r\nPublicatieversie 1.0 (01-09-2020)"}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/DAS","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"Das","path":"Das","short":"DAS","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"DAS"}]}]},"definition":"Root concept of the information model.This root concept contains all data elements of the information model DAS.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de bouwsteen DAS. Dit rootconcept bevat alle gegevenselementen van de bouwsteen DAS."}]}]},"min":0,"max":"*"},{"id":"Das.Dasvalue","path":"Das.Dasvalue","short":"DASValue","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"DASWaarde"}]}]},"definition":"The result (value).","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De uitkomst (waarde)."}]}]},"min":0,"max":"1","type":[{"code":"Quantity"}]},{"id":"Das.Dasmethod","path":"Das.Dasmethod","short":"DASMethod","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"DASMethode"}]}]},"definition":"The specification of the DAS method used. \r\nThere are different DAS scores. Each type has a different formula. DAS-28 or DAS-44 stands for 28 or 44 painful and swollen joints. One blood value for inflammation (a ESR or a CRP laboratory result) and the overall experience of disease activity by the patient via a Visual Analog Scale (VAS).","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De specificatie van de gebruikte methode DAS. \r\nEr zijn verschillende DAS scores. Elke type heeft een andere formule. DAS-28 of DAS-44 staat voor 28 of 44 pijnlijke en gezwollen gewrichten. Eén bloedwaarde voor ontsteking (een BSE of een CRP laboratorium uitslag) en de globale beleving van ziekteactiviteit door de patiënt via een Visual Analog Scale (VAS)."}]}]},"min":1,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"extensible","description":"DASMethod codes","valueSet":"https://fhir.healthdata.be/ValueSet/DASMethode"}},{"id":"Das.Dasformula","path":"Das.Dasformula","short":"DASFormula","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"DASFormule"}]}]},"definition":"The specification of the type of DAS. \r\nThere are different DAS scores. Each type has a different formula.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De specificatie van het type DAS. \r\nEr zijn verschillende DAS scores. Elke type heeft een andere formule."}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"Das.AffectedJoint","path":"Das.AffectedJoint","short":"AffectedJoint","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"AangedaanGewricht"}]}]},"definition":"Container of the AffectedJoint concept.This container contains all data elements of the AffectedJoint concept.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Container van het concept AangedaanGewricht. Deze container bevat alle gegevenselementen van het concept AangedaanGewricht."}]}]},"min":0,"max":"*","type":[{"code":"BackboneElement"}]},{"id":"Das.AffectedJoint.AnatomicalLocation","path":"Das.AffectedJoint.AnatomicalLocation","short":"AnatomicalLocation","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"AnatomischeLocatie"}]}]},"definition":"Joints that are tender and/or swollen.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Gewrichten uit die pijnlijk en/of gezwollen zijn."}]}]},"min":0,"max":"1","type":[{"code":"Reference","targetProfile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"]}]},{"id":"Das.AffectedJoint.Swollen","path":"Das.AffectedJoint.Swollen","short":"Swollen","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Gezwollen"}]}]},"definition":"Swolen joint indicator.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Indicator die aangeeft dat het gewricht gewollen is."}]}]},"min":0,"max":"1","type":[{"code":"boolean"}]},{"id":"Das.AffectedJoint.Tender","path":"Das.AffectedJoint.Tender","short":"Tender","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Pijnlijk"}]}]},"definition":"Tender joint indicator.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Indicator die aangeeft dat het gewricht pijnlijk is."}]}]},"min":0,"max":"1","type":[{"code":"boolean"}]},{"id":"Das.CountOfTenderJoints","path":"Das.CountOfTenderJoints","short":"CountOfTenderJoints","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"AantalPijnlijkeGewrichten"}]}]},"definition":"Count of tender joints as reported by the patient.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Aantal pijnlijke gewrichten gerapporteerd door de patiënt."}]}]},"min":0,"max":"1","type":[{"code":"Count"}]},{"id":"Das.CountOfSwolenJoints","path":"Das.CountOfSwolenJoints","short":"CountOfSwolenJoints","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"AantalGezwollenGewrichten"}]}]},"definition":"Count of swollen joints.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Aantal gezwollen gewrichten."}]}]},"min":0,"max":"1","type":[{"code":"Count"}]},{"id":"Das.InflammationIndicator","path":"Das.InflammationIndicator","short":"InflammationIndicator","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"OntstekingIndicator"}]}]},"definition":"Container of the InflammationIndicator concept.This container contains all data elements of the InflammationIndicator concept.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Container van het concept OntstekingIndicator. Deze container bevat alle gegevenselementen van het concept OntstekingIndicator."}]}]},"min":0,"max":"1","type":[{"code":"BackboneElement"}]},{"id":"Das.InflammationIndicator.Esr","path":"Das.InflammationIndicator.Esr","short":"ESR","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"BSE"}]}]},"definition":"The C-reactive protein (CRP) is a laboratory measurment valuable for determining the presence of inflammation or to monitor the effect of a medical treatment on the inflammation. The erythrocyte sedimentation rate (ESR or sed rate) is the rate at which red blood cells in anticoagulated whole blood descend in a standardized tube over a period of one hour. Both test results can be used to calculate the DAS.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het C-reactief proteïne (CRP) is een laboratorium bepaling waardevol voor het vaststellen van de aanwezigheid van een ontsteking of om het effect van een medische behandeling op de ontsteking te volgen. De erytrocytbezinkingssnelheid, ook wel bezinking (sedimentatie) of BSE is de snelheid (mm/uur) waarmee de rode bloedcellen in een buisje bloed onder invloed van de zwaartekracht naar beneden zakken. Beide bepalingen kunnen worden gebruikt om de DAS te berekenen."}]}]},"min":0,"max":"1","type":[{"code":"Reference","targetProfile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LaboratoryTestResult"]}]},{"id":"Das.InflammationIndicator.Crp","path":"Das.InflammationIndicator.Crp","short":"CRP","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"CRP"}]}]},"definition":"The C-reactive protein (CRP) is a laboratory measurment valuable for determining the presence of inflammation or to monitor the effect of a medical treatment on the inflammation. The erythrocyte sedimentation rate (ESR or sed rate) is the rate at which red blood cells in anticoagulated whole blood descend in a standardized tube over a period of one hour. Both test results can be used to calculate the DAS.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het C-reactief proteïne (CRP) is een laboratorium bepaling waardevol voor het vaststellen van de aanwezigheid van een ontsteking of om het effect van een medische behandeling op de ontsteking te volgen. De erytrocytbezinkingssnelheid, ook wel bezinking (sedimentatie) of BSE is de snelheid (mm/uur) waarmee de rode bloedcellen in een buisje bloed onder invloed van de zwaartekracht naar beneden zakken. Beide bepalingen kunnen worden gebruikt om de DAS te berekenen."}]}]},"min":0,"max":"1","type":[{"code":"Reference","targetProfile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LaboratoryTestResult"]}]},{"id":"Das.DasdateTime","path":"Das.DasdateTime","short":"DASDateTime","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"DASDatumTijd"}]}]},"definition":"The date and possibly time when the DAS score measurement was carried out.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De datum en eventueel tijd waarop de DAS score meting is vastgesteld."}]}]},"min":0,"max":"1","type":[{"code":"dateTime"}]},{"id":"Das.VasgeneralHealth","path":"Das.VasgeneralHealth","short":"VASGeneralHealth","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"VASAlgemeneGezondheid"}]}]},"definition":"The VAS score for general health as experienced by the patient on a scale of 1 to 100","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De VAS score voor algemene gezondheid zoals ervaren door de patiënt op een schaal van 1 tot 100"}]}]},"min":0,"max":"1","type":[{"code":"Count"}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-DAS",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-DAS",
+  "name": "HdBeDAS",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-DAS"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe DAS",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "The Disease Activity Score (DAS) is a combined index developed in Nijmegen around 1990 to measure disease activity in patients with rheumatoid arthritis (RA). It concerns a formula with 28 or 44 painful and swollen joints, a blood value for inflammation (BSE or CRP) and the overall experience of disease activity by the patient. The DAS results in a number between 0 and 10, which indicates how active rheumatoid arthritis is at present. The score has been validated for use in clinical trials in combination with the EULAR response criteria. \r\n\r\n#### Purpose\r\n In addition to frequent use in trials, the DAS is used to measure the disease activity of RA patients in daily clinical practice, supporting the \"treat-to-target\" strategy recommended in guidelines. The DAS is also used as an outcome measure for the care of RA patients in a national quality registration. \r\n\r\n\r\n#### Patient Population\r\nAdult patients with rheumatoid arthritis (RA).",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "De Disease Activity Score (DAS) is een gecombineerde index die rond 1990 in Nijmegen is ontwikkeld om de ziekteactiviteit bij patiënten met reumatoïde artritis (RA) te meten. Het betreft een formule met 28 of 44 pijnlijke en gezwollen gewrichten, een bloedwaarde voor ontsteking (BSE of CRP) en de globale beleving van ziekteactiviteit door de patiënt. De DAS geeft een getal tussen 0 en 10, waarmee wordt aangegeven hoe actief de reumatoïde artritis op dit moment is. De score is gevalideerd voor gebruik in klinische trials in combinatie met de EULAR-responscriteria. \r\n#### Purpose\r\nNaast veelvuldig gebruik in trials wordt de DAS gebruikt om ziekteactiviteit van RA-patiënten in de dagelijkse klinische praktijk te meten, waarmee de in richtlijnen aanbevolen “treat-to-target” strategie wordt ondersteund. Ook wordt de DAS gebruikt als uitkomstmaat voor de zorg voor RA-patiënten in een landelijke kwaliteitsregistratie.\r\n\r\n\r\n#### Patient Population\r\nVolwassen patiënten met reumatoïde artritis (RA).\r\n**References**\r\nInformatie over het DAS instrument [Online] Beschikbaar op: https://www.das-score.nl/das28/en/ [Geraadpleegd: 8 oktober 2019] \r\n**Revision History**\r\nPublicatieversie 1.0 (01-09-2020)"
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/DAS",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Das",
+        "path": "Das",
+        "short": "DAS",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DAS"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the information model.This root concept contains all data elements of the information model DAS.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen DAS. Dit rootconcept bevat alle gegevenselementen van de bouwsteen DAS."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Das.Dasvalue",
+        "path": "Das.Dasvalue",
+        "short": "DASValue",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DASWaarde"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The result (value).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De uitkomst (waarde)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Das.Dasmethod",
+        "path": "Das.Dasmethod",
+        "short": "DASMethod",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DASMethode"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The specification of the DAS method used. \r\nThere are different DAS scores. Each type has a different formula. DAS-28 or DAS-44 stands for 28 or 44 painful and swollen joints. One blood value for inflammation (a ESR or a CRP laboratory result) and the overall experience of disease activity by the patient via a Visual Analog Scale (VAS).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De specificatie van de gebruikte methode DAS. \r\nEr zijn verschillende DAS scores. Elke type heeft een andere formule. DAS-28 of DAS-44 staat voor 28 of 44 pijnlijke en gezwollen gewrichten. Eén bloedwaarde voor ontsteking (een BSE of een CRP laboratorium uitslag) en de globale beleving van ziekteactiviteit door de patiënt via een Visual Analog Scale (VAS)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "DASMethod codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/DASMethode"
+        }
+      },
+      {
+        "id": "Das.Dasformula",
+        "path": "Das.Dasformula",
+        "short": "DASFormula",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DASFormule"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The specification of the type of DAS. \r\nThere are different DAS scores. Each type has a different formula.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De specificatie van het type DAS. \r\nEr zijn verschillende DAS scores. Elke type heeft een andere formule."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Das.AffectedJoint",
+        "path": "Das.AffectedJoint",
+        "short": "AffectedJoint",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AangedaanGewricht"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the AffectedJoint concept.This container contains all data elements of the AffectedJoint concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept AangedaanGewricht. Deze container bevat alle gegevenselementen van het concept AangedaanGewricht."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Das.AffectedJoint.AnatomicalLocation",
+        "path": "Das.AffectedJoint.AnatomicalLocation",
+        "short": "AnatomicalLocation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AnatomischeLocatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Joints that are tender and/or swollen.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gewrichten uit die pijnlijk en/of gezwollen zijn."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Das.AffectedJoint.Swollen",
+        "path": "Das.AffectedJoint.Swollen",
+        "short": "Swollen",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gezwollen"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Swolen joint indicator.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Indicator die aangeeft dat het gewricht gewollen is."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "Das.AffectedJoint.Tender",
+        "path": "Das.AffectedJoint.Tender",
+        "short": "Tender",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Pijnlijk"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Tender joint indicator.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Indicator die aangeeft dat het gewricht pijnlijk is."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "Das.CountOfTenderJoints",
+        "path": "Das.CountOfTenderJoints",
+        "short": "CountOfTenderJoints",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AantalPijnlijkeGewrichten"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Count of tender joints as reported by the patient.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aantal pijnlijke gewrichten gerapporteerd door de patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "Das.CountOfSwolenJoints",
+        "path": "Das.CountOfSwolenJoints",
+        "short": "CountOfSwolenJoints",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AantalGezwollenGewrichten"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Count of swollen joints.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aantal gezwollen gewrichten."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "Das.InflammationIndicator",
+        "path": "Das.InflammationIndicator",
+        "short": "InflammationIndicator",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "OntstekingIndicator"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the InflammationIndicator concept.This container contains all data elements of the InflammationIndicator concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept OntstekingIndicator. Deze container bevat alle gegevenselementen van het concept OntstekingIndicator."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Das.InflammationIndicator.Esr",
+        "path": "Das.InflammationIndicator.Esr",
+        "short": "ESR",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "BSE"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The C-reactive protein (CRP) is a laboratory measurment valuable for determining the presence of inflammation or to monitor the effect of a medical treatment on the inflammation. The erythrocyte sedimentation rate (ESR or sed rate) is the rate at which red blood cells in anticoagulated whole blood descend in a standardized tube over a period of one hour. Both test results can be used to calculate the DAS.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het C-reactief proteïne (CRP) is een laboratorium bepaling waardevol voor het vaststellen van de aanwezigheid van een ontsteking of om het effect van een medische behandeling op de ontsteking te volgen. De erytrocytbezinkingssnelheid, ook wel bezinking (sedimentatie) of BSE is de snelheid (mm/uur) waarmee de rode bloedcellen in een buisje bloed onder invloed van de zwaartekracht naar beneden zakken. Beide bepalingen kunnen worden gebruikt om de DAS te berekenen."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LaboratoryTestResult"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Das.InflammationIndicator.Crp",
+        "path": "Das.InflammationIndicator.Crp",
+        "short": "CRP",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "CRP"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The C-reactive protein (CRP) is a laboratory measurment valuable for determining the presence of inflammation or to monitor the effect of a medical treatment on the inflammation. The erythrocyte sedimentation rate (ESR or sed rate) is the rate at which red blood cells in anticoagulated whole blood descend in a standardized tube over a period of one hour. Both test results can be used to calculate the DAS.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het C-reactief proteïne (CRP) is een laboratorium bepaling waardevol voor het vaststellen van de aanwezigheid van een ontsteking of om het effect van een medische behandeling op de ontsteking te volgen. De erytrocytbezinkingssnelheid, ook wel bezinking (sedimentatie) of BSE is de snelheid (mm/uur) waarmee de rode bloedcellen in een buisje bloed onder invloed van de zwaartekracht naar beneden zakken. Beide bepalingen kunnen worden gebruikt om de DAS te berekenen."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LaboratoryTestResult"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Das.DasdateTime",
+        "path": "Das.DasdateTime",
+        "short": "DASDateTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DASDatumTijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date and possibly time when the DAS score measurement was carried out.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en eventueel tijd waarop de DAS score meting is vastgesteld."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Das.VasgeneralHealth",
+        "path": "Das.VasgeneralHealth",
+        "short": "VASGeneralHealth",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VASAlgemeneGezondheid"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The VAS score for general health as experienced by the patient on a scale of 1 to 100",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De VAS score voor algemene gezondheid zoals ervaren door de patiënt op een schaal van 1 tot 100"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      }
+    ]
+  }
+}

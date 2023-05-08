@@ -1,1 +1,414 @@
-{"resourceType":"StructureDefinition","id":"HdBe-SOAPReport","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-SOAPReport","name":"HdBeSOAPReport","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-SOEPVerslag"}]}]},"title":"HdBe SOAPReport","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"A SOUP report is a textual report of (part of the consult) according to the SOUP structure. SOUP (acronym for subjective, objective, evaluation, plan) is a method used by health professionals to structurally record information that comes up during contact between the patient and a health professionals in the patient's record.The following standardized format is used for reporting: \r\n\r\n* Subjective: the patient's complaint and request for help and the amnesic data \r\n* Objective: the findings from the physical and supplementary examination. \r\n* Assessment: the working hypothesis and the thinking process, for example a differential diagnosis of the healthcare professional. \r\n* Plan: the diagnostic plan or treatment plan and what has been discussed or agreed with the patient. \r\n\r\nThe SOAP report is mainly used in general practice care.\r\n#### Purpose\r\nA contact note using the SOAP format offers a healthcare professional the possibility to record in a structured manner information of a contact with a patient in free text. Due to the standardized method of recording, an SOAP report also makes it possible to monitor the patient's condition and its treatment over time.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Een SOEP verslag is een tekstueel verslag van (een deel van het consult) volgens de SOEP-structuur. SOEP (acroniem voor subjectief, objectief, evaluatie, plan) is een methode die gebruikt wordt door zorgverleners om informatie die bij een contact tussen de patiënt en een zorgverlener aan de orde komt, gestructureerd vast te leggen in het dossier van de patiënt. Bij de verslaglegging wordt de volgende gestandaardiseerde indeling aangehouden: \r\n\r\n* Subjectief: de klacht en hulpvraag van de patiënt en de anamnestische gegevens \r\n\r\n* Objectief: de bevindingen uit het lichamelijk en aanvullend onderzoek. \r\n\r\n* Evaluatie: de werkhypothese en het denkproces, bijvoorbeeld een differentiaaldiagnose van de zorgverlener. \r\n\r\n* Plan: het diagnostisch plan of behandelplan en wat met de patiënt is besproken of afgesproken. \r\n\r\nHet SOEP verslag wordt met name in de huisartsenzorg gebruikt.\r\n#### Purpose\r\nEen contactverslag volgens de SOEP structuur biedt een zorgverlener mogelijkheid op gestructureerde wijze in vrije tekst informatie rond een contact met een patiënt vast te leggen. Door de gestandaardiseerde wijze van vastleggen maakt een SOEP verslag het tevens mogelijk om de aandoening van de patiënt en de behandeling daarvan te volgen in de tijd.\r\n\r\n\r\n#### Traceability to other Standards\r\nDeze zorginformatie bouwsteen is gebaseerd op de bouwsteen blauwdruk ZorgNotitie-v1.0.\r\n**Revision History**\r\nPublicatieversie 1.0 (01-09-2020)"}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/SOAPReport","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"SOAPReport","path":"SOAPReport","short":"SOAPReport","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"SOEPVerslag"}]}]},"definition":"Root concept of the SOAPReport information model.This root concept contains all data elements of the SOAPReport information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de bouwsteen SOEPVerslag. Dit rootconcept bevat alle gegevenselementen van de bouwsteen SOEPVerslag."}]}]},"min":0,"max":"*"},{"id":"SOAPReport.SoapreportDateTime","path":"SOAPReport.SoapreportDateTime","short":"SOAPReportDateTime","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"SOEPVerslagDatumTijd"}]}]},"definition":"Date and time when the report was recorded","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Datum en tijd waarop het verslag vastgelegd is"}]}]},"min":0,"max":"1","type":[{"code":"dateTime"}]},{"id":"SOAPReport.Author","path":"SOAPReport.Author","short":"Author","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Auteur"}]}]},"definition":"The healthcare professional who prepared the report and who is responsible for its content.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De zorgverlener die het verslag heeft opgesteld en verantwoordelijk is voor de inhoud."}]}]},"min":0,"max":"1","type":[{"code":"Reference","targetProfile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"]}]},{"id":"SOAPReport.Soapline","path":"SOAPReport.Soapline","short":"SOAPLine","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"SOEPRegel"}]}]},"definition":"Container of the SOAPLine concept.This container contains all data elements of the SOAPLine concept.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Container van het concept SOEPRegel. Deze container bevat alle gegevenselementen van het concept SOEPRegel."}]}]},"min":1,"max":"4","type":[{"code":"BackboneElement"}]},{"id":"SOAPReport.Soapline.SoaplineCode","path":"SOAPReport.Soapline.SoaplineCode","short":"SOAPLineCode","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"SOEPRegelCode"}]}]},"definition":"Coded values can be added to a line that describe essential aspects of the line.\r\nIn a SOAP report an ICPC code may be assigned, but only to the S and E line.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Aan een regel kunnen eventueel gecodeerde waarden toegevoegd worden die essentiële aspecten van de regel beschrijven.\r\nBij een SOEP verslag worden alleen aan de S en E regel eventueel een ICPC code toegekend."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"SOAPLineCode codes","valueSet":"https://fhir.healthdata.be/ValueSet/SOEPRegelCode"}},{"id":"SOAPReport.Soapline.SoaplineHeader","path":"SOAPReport.Soapline.SoaplineHeader","short":"SOAPLineHeader","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"SOEPRegelNaam"}]}]},"definition":"The name of the SOAP line as an coded description. In a SOAP report this can be one of the following: subjective, objective, assessment or plan.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De naam van de SOEP regel als gecodeerde omschrijving. Voor een SOEP verslag kan dit één van de volgende waarden zijn: subjectief, objectief, evaluatie of plan."}]}]},"min":1,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","description":"SOAPLineHeader codes","valueSet":"https://fhir.healthdata.be/ValueSet/SOEPRegelNaam"}},{"id":"SOAPReport.Soapline.SoaplineText","path":"SOAPReport.Soapline.SoaplineText","short":"SOAPLineText","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"SOEPRegelTekst"}]}]},"definition":"The actual content of the section as free formatted text.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De feitelijke inhoud van de sectie als vrije tekst."}]}]},"min":1,"max":"1","type":[{"code":"string"}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-SOAPReport",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-SOAPReport",
+  "name": "HdBeSOAPReport",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-SOEPVerslag"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe SOAPReport",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "A SOUP report is a textual report of (part of the consult) according to the SOUP structure. SOUP (acronym for subjective, objective, evaluation, plan) is a method used by health professionals to structurally record information that comes up during contact between the patient and a health professionals in the patient's record.The following standardized format is used for reporting: \r\n\r\n* Subjective: the patient's complaint and request for help and the amnesic data \r\n* Objective: the findings from the physical and supplementary examination. \r\n* Assessment: the working hypothesis and the thinking process, for example a differential diagnosis of the healthcare professional. \r\n* Plan: the diagnostic plan or treatment plan and what has been discussed or agreed with the patient. \r\n\r\nThe SOAP report is mainly used in general practice care.\r\n#### Purpose\r\nA contact note using the SOAP format offers a healthcare professional the possibility to record in a structured manner information of a contact with a patient in free text. Due to the standardized method of recording, an SOAP report also makes it possible to monitor the patient's condition and its treatment over time.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Een SOEP verslag is een tekstueel verslag van (een deel van het consult) volgens de SOEP-structuur. SOEP (acroniem voor subjectief, objectief, evaluatie, plan) is een methode die gebruikt wordt door zorgverleners om informatie die bij een contact tussen de patiënt en een zorgverlener aan de orde komt, gestructureerd vast te leggen in het dossier van de patiënt. Bij de verslaglegging wordt de volgende gestandaardiseerde indeling aangehouden: \r\n\r\n* Subjectief: de klacht en hulpvraag van de patiënt en de anamnestische gegevens \r\n\r\n* Objectief: de bevindingen uit het lichamelijk en aanvullend onderzoek. \r\n\r\n* Evaluatie: de werkhypothese en het denkproces, bijvoorbeeld een differentiaaldiagnose van de zorgverlener. \r\n\r\n* Plan: het diagnostisch plan of behandelplan en wat met de patiënt is besproken of afgesproken. \r\n\r\nHet SOEP verslag wordt met name in de huisartsenzorg gebruikt.\r\n#### Purpose\r\nEen contactverslag volgens de SOEP structuur biedt een zorgverlener mogelijkheid op gestructureerde wijze in vrije tekst informatie rond een contact met een patiënt vast te leggen. Door de gestandaardiseerde wijze van vastleggen maakt een SOEP verslag het tevens mogelijk om de aandoening van de patiënt en de behandeling daarvan te volgen in de tijd.\r\n\r\n\r\n#### Traceability to other Standards\r\nDeze zorginformatie bouwsteen is gebaseerd op de bouwsteen blauwdruk ZorgNotitie-v1.0.\r\n**Revision History**\r\nPublicatieversie 1.0 (01-09-2020)"
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/SOAPReport",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "SOAPReport",
+        "path": "SOAPReport",
+        "short": "SOAPReport",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SOEPVerslag"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the SOAPReport information model.This root concept contains all data elements of the SOAPReport information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen SOEPVerslag. Dit rootconcept bevat alle gegevenselementen van de bouwsteen SOEPVerslag."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SOAPReport.SoapreportDateTime",
+        "path": "SOAPReport.SoapreportDateTime",
+        "short": "SOAPReportDateTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SOEPVerslagDatumTijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Date and time when the report was recorded",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum en tijd waarop het verslag vastgelegd is"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "SOAPReport.Author",
+        "path": "SOAPReport.Author",
+        "short": "Author",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Auteur"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The healthcare professional who prepared the report and who is responsible for its content.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De zorgverlener die het verslag heeft opgesteld en verantwoordelijk is voor de inhoud."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SOAPReport.Soapline",
+        "path": "SOAPReport.Soapline",
+        "short": "SOAPLine",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SOEPRegel"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the SOAPLine concept.This container contains all data elements of the SOAPLine concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept SOEPRegel. Deze container bevat alle gegevenselementen van het concept SOEPRegel."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "4",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "SOAPReport.Soapline.SoaplineCode",
+        "path": "SOAPReport.Soapline.SoaplineCode",
+        "short": "SOAPLineCode",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SOEPRegelCode"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Coded values can be added to a line that describe essential aspects of the line.\r\nIn a SOAP report an ICPC code may be assigned, but only to the S and E line.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aan een regel kunnen eventueel gecodeerde waarden toegevoegd worden die essentiële aspecten van de regel beschrijven.\r\nBij een SOEP verslag worden alleen aan de S en E regel eventueel een ICPC code toegekend."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "SOAPLineCode codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/SOEPRegelCode"
+        }
+      },
+      {
+        "id": "SOAPReport.Soapline.SoaplineHeader",
+        "path": "SOAPReport.Soapline.SoaplineHeader",
+        "short": "SOAPLineHeader",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SOEPRegelNaam"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The name of the SOAP line as an coded description. In a SOAP report this can be one of the following: subjective, objective, assessment or plan.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De naam van de SOEP regel als gecodeerde omschrijving. Voor een SOEP verslag kan dit één van de volgende waarden zijn: subjectief, objectief, evaluatie of plan."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "SOAPLineHeader codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/SOEPRegelNaam"
+        }
+      },
+      {
+        "id": "SOAPReport.Soapline.SoaplineText",
+        "path": "SOAPReport.Soapline.SoaplineText",
+        "short": "SOAPLineText",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SOEPRegelTekst"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The actual content of the section as free formatted text.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De feitelijke inhoud van de sectie als vrije tekst."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

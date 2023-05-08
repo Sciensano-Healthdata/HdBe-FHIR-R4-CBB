@@ -1,1 +1,312 @@
-{"resourceType":"StructureDefinition","id":"HdBe-BodyTemperature","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BodyTemperature","name":"HdBeBodyTemperature","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-Lichaamstemperatuur"}]}]},"title":"HdBe BodyTemperature","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"Measuring and documenting the body temperature of a person as a surrogate for a person’s central body temperature (the highest temperature at the centre of the torso)\r\n#### Purpose\r\nMeasuring the body temperature is of medical importance. A number of diseases are accompanied by characteristic changes in body temperature. The symptoms of some diseases can be tracked by measuring the body temperature. The healthcare professional can use this temperature development to determine the effect of the treatment.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het meten en vastleggen van de lichaamstemperatuur van een persoon als surrogaat voor de centrale lichaamstemperatuur (de hoogste temperatuur midden in de romp) van een persoon\r\n#### Purpose\r\nHet meten van de lichaamstemperatuur is van medisch belang. Een aantal ziekten gaat gepaard met karakteristieke veranderingen in de lichaamstemperatuur. Ook kan het verloop van sommige ziekten worden gevolgd door het meten van de lichaamstemperatuur en de zorgverlener kan aan de hand van het temperatuurverloop het effect van de behandeling beoordelen.\r\n\r\n\r\n#### Traceability to other Standards\r\nDeze zorginformatie bouwsteen is in lijn met de bouwsteen blauwdruk Meting v1.0."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/BodyTemperature","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"BodyTemperature","path":"BodyTemperature","short":"BodyTemperature","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Lichaamstemperatuur"}]}]},"definition":"Root concept of the BodyTemperature information model. This root concept contains all data elements of the BodyTemperature information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de bouwsteen Lichaamstemperatuur. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Lichaamstemperatuur."}]}]},"min":0,"max":"*"},{"id":"BodyTemperature.TemperatureValue","path":"BodyTemperature.TemperatureValue","short":"TemperatureValue","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"TemperatuurWaarde"}]}]},"definition":"Body temperature is the temperature inside the body, measured in °C (degrees Celsius). The measurement method must be specified for a correct interpretation of the measurement value.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De lichaamstemperatuur is de temperatuur, gemeten in °C (graden Celsius), die binnen in het menselijk lichaam heerst. Voor een juiste interpretatie van de gemeten waarde, moet de meetmethodiek worden gespecificeerd."}]}]},"min":1,"max":"1","type":[{"code":"Quantity"}]},{"id":"BodyTemperature.TemperatureDateTime","path":"BodyTemperature.TemperatureDateTime","short":"TemperatureDateTime","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"TemperatuurDatumTijd"}]}]},"definition":"Date and time of measurement.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Datum en tijd van de meting."}]}]},"min":1,"max":"1","type":[{"code":"dateTime"}]},{"id":"BodyTemperature.Comment","path":"BodyTemperature.Comment","short":"Comment","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Toelichting"}]}]},"definition":"Comments or details that may be of importance in interpreting the measurement value.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Opmerkingen of bijzonderheden, die van belang zijn om de meetwaarde te interpreteren."}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"BodyTemperature.TemperatureType","path":"BodyTemperature.TemperatureType","short":"TemperatureType","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"TemperatuurType"}]}]},"definition":"The TemperatureType indicates the way and place the measurement (temperature) has been performed.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het TemperatuurType geeft aan op welke wijze en plaats de meting (temperatuur) verricht is."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"extensible","description":"TemperatureType codes","valueSet":"https://fhir.healthdata.be/ValueSet/TemperatureType"}}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-BodyTemperature",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BodyTemperature",
+  "name": "HdBeBodyTemperature",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-Lichaamstemperatuur"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe BodyTemperature",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Measuring and documenting the body temperature of a person as a surrogate for a person’s central body temperature (the highest temperature at the centre of the torso)\r\n#### Purpose\r\nMeasuring the body temperature is of medical importance. A number of diseases are accompanied by characteristic changes in body temperature. The symptoms of some diseases can be tracked by measuring the body temperature. The healthcare professional can use this temperature development to determine the effect of the treatment.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Het meten en vastleggen van de lichaamstemperatuur van een persoon als surrogaat voor de centrale lichaamstemperatuur (de hoogste temperatuur midden in de romp) van een persoon\r\n#### Purpose\r\nHet meten van de lichaamstemperatuur is van medisch belang. Een aantal ziekten gaat gepaard met karakteristieke veranderingen in de lichaamstemperatuur. Ook kan het verloop van sommige ziekten worden gevolgd door het meten van de lichaamstemperatuur en de zorgverlener kan aan de hand van het temperatuurverloop het effect van de behandeling beoordelen.\r\n\r\n\r\n#### Traceability to other Standards\r\nDeze zorginformatie bouwsteen is in lijn met de bouwsteen blauwdruk Meting v1.0."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/BodyTemperature",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "BodyTemperature",
+        "path": "BodyTemperature",
+        "short": "BodyTemperature",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Lichaamstemperatuur"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the BodyTemperature information model. This root concept contains all data elements of the BodyTemperature information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Lichaamstemperatuur. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Lichaamstemperatuur."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "BodyTemperature.TemperatureValue",
+        "path": "BodyTemperature.TemperatureValue",
+        "short": "TemperatureValue",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TemperatuurWaarde"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Body temperature is the temperature inside the body, measured in °C (degrees Celsius). The measurement method must be specified for a correct interpretation of the measurement value.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De lichaamstemperatuur is de temperatuur, gemeten in °C (graden Celsius), die binnen in het menselijk lichaam heerst. Voor een juiste interpretatie van de gemeten waarde, moet de meetmethodiek worden gespecificeerd."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "BodyTemperature.TemperatureDateTime",
+        "path": "BodyTemperature.TemperatureDateTime",
+        "short": "TemperatureDateTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TemperatuurDatumTijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Date and time of measurement.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum en tijd van de meting."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "BodyTemperature.Comment",
+        "path": "BodyTemperature.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Comments or details that may be of importance in interpreting the measurement value.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Opmerkingen of bijzonderheden, die van belang zijn om de meetwaarde te interpreteren."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "BodyTemperature.TemperatureType",
+        "path": "BodyTemperature.TemperatureType",
+        "short": "TemperatureType",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TemperatuurType"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The TemperatureType indicates the way and place the measurement (temperature) has been performed.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het TemperatuurType geeft aan op welke wijze en plaats de meting (temperatuur) verricht is."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "TemperatureType codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/TemperatureType"
+        }
+      }
+    ]
+  }
+}

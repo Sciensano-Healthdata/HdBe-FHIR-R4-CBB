@@ -1,1 +1,592 @@
-{"resourceType":"StructureDefinition","id":"HdBe-HealthcareOrganization","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareOrganization","name":"HdBeHealthcareOrganization","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-Zorgaanbieder"}]}]},"title":"HdBe HealthcareOrganization","status":"draft","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"A healthcare organization (sometimes called a healthcare provider) is an organization that offers and provides medical, paramedic and/or nursing care to patients/clients. Examples include: hospitals, nursing homes, doctor’s offices.\r\n\r\n#### Purpose\r\nRecording relevant information to identify the organization for administrative purposes.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Een zorgaanbieder is een organisatie die medische-, paramedische- en/of verpleegkundige zorg aanbiedt, en ook daadwerkelijk verleent, aan cliënten/patiënten. Voorbeelden zijn: ziekenhuis, verpleeghuis, huisartsenpraktijk.\r\n#### Purpose\r\nHet vastleggen van de relevante gegevens ten behoeve van identificatie van de organisatie, voor administratieve doeleinden."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HealthcareOrganization","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"HealthcareOrganization","path":"HealthcareOrganization","short":"HealthcareOrganization","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Zorgaanbieder"}]}]},"definition":"Root concept of the Healthcare Organization information model. This root concept contains all data elements of the Healthcare Organization information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de bouwsteen Zorgaanbieder. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgaanbieder."}]}]},"min":0,"max":"*"},{"id":"HealthcareOrganization.HealthcareOrganizationIdentificationNumber","path":"HealthcareOrganization.HealthcareOrganizationIdentificationNumber","short":"HealthcareOrganizationIdentificationNumber","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"ZorgaanbiederIdentificatienummer"}]}]},"definition":"The organization’s identification number. For Belgian healthcare organizations, the NIHDI (National Institute for Health and Disability Insurance) and/or the CBE (Crossroads Bank for Enterprises) is used, if possible. Depending on the context other IDs are also possible. For foreign or non-affiliated healthcare organizations, another unique identification number can be used. This must be accompanied by the name and/or code of the issuing organization.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Identificerend nummer van de organisatie. Voor Belgische zorgaanbieders wordt hiervoor, indien mogelijk, het RIVIZ nummer (Rijksinstituut voor Ziekte- en Invaliditeitsverzekering) en/of het KBO nummer (Kruispuntbank van Ondernemingen) gebruikt. Afhankelijk van de context zijn ook andere ID's mogelijk. Voor buitenlandse of niet aangesloten zorgaanbieders kan een ander uniek identificerend nummer gebruikt worden. Dit moet vergezeld gaan met de naam en/of code van de uitgevende organisatie."}]}]},"min":0,"max":"*","type":[{"code":"Identifier"}]},{"id":"HealthcareOrganization.OrganizationName","path":"HealthcareOrganization.OrganizationName","short":"OrganizationName","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"OrganisatieNaam"}]}]},"definition":"Name of the organization. If an identification number is given, the name must match the name that corresponds to the identification number.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Naam van de organisatie. Indien een identificatienummer meegegeven wordt, moet de naam overeenkomen met de naam die bij het identificatienummer hoort."}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"HealthcareOrganization.DepartmentSpecialty","path":"HealthcareOrganization.DepartmentSpecialty","short":"DepartmentSpecialty","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"AfdelingSpecialisme"}]}]},"definition":"The specialty of the healthcare organization's department. The departmental specialty can be filled in if further indication of the healthcare organization is needed.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het specialisme van de betrokken afdeling van de zorgaanbieder. Het afdelingsspecialisme kan gevuld worden indien bij het vermelden van een zorgaanbieder een nadere aanduiding gewenst is."}]}]},"min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"required","valueSet":"https://fhir.healthdata.be/ValueSet/DepartmentSpecialty"}},{"id":"HealthcareOrganization.ContactInformation","path":"HealthcareOrganization.ContactInformation","short":"ContactInformation","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Contactgegevens"}]}]},"definition":"The information needed to contact the healthcare organization via telephone and/or e-mail.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De gegevens noodzakelijk om via telefoon en/of e-mail met de zorgaanbiedende organisatie contact op te nemen."}]}]},"min":0,"max":"*","type":[{"code":"ContactPoint","profile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation"]}]},{"id":"HealthcareOrganization.AddressInformation","path":"HealthcareOrganization.AddressInformation","short":"AddressInformation","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Adresgegevens"}]}]},"definition":"The physical address of the healthcare organization's location.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het fysieke adres van de locatie van de zorgaanbieder."}]}]},"min":0,"max":"*","type":[{"code":"Address","profile":["https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AddressInformation"]}]},{"id":"HealthcareOrganization.OrganizationType","path":"HealthcareOrganization.OrganizationType","short":"OrganizationType","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"OrganisatieType"}]}]},"definition":"The type of healthcare organization, such as general hospital, or nursing home.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De type zorgaanbieder, bijvoorbeeld algemeen ziekenhuis en verpleeghuis."}]}]},"comment":"Appropriated terminology codes for OrganizationType are in development and will be bound in a future version. The ValueSet 'OrganizationType' illustrates the purpose of this element. Although the bound concepts will likely be used, the exact codes and system identification is not yet defined. [HL7 BE GitHub issue #32](https://github.com/hl7-be/core/issues/32) requests to standardize terminology on a federal level for Belgium.","min":0,"max":"1","type":[{"code":"CodeableConcept"}],"binding":{"strength":"example","valueSet":"https://fhir.healthdata.be/ValueSet/OrganizationType"}},{"id":"HealthcareOrganization.OrganizationLocation","path":"HealthcareOrganization.OrganizationLocation","short":"OrganizationLocation","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"OrganisatieLocatie"}]}]},"definition":"Container of the OrganizationLocation concept. This container contains all data elements of the OrganizationLocation concept.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Container van het concept OrganisatieLocatie. Deze container bevat alle gegevenselementen van het concept OrganisatieLocatie."}]}]},"min":0,"max":"1","type":[{"code":"BackboneElement"}]},{"id":"HealthcareOrganization.OrganizationLocation.LocationName","path":"HealthcareOrganization.OrganizationLocation.LocationName","short":"LocationName","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"LocatieNaam"}]}]},"definition":"Name of the location, in case a healthcare organization has more than one location.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Naam van de locatie, indien een zorgorganisatie meer dan één locatie heeft."}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"HealthcareOrganization.OrganizationLocation.LocationIdentificationNumber","path":"HealthcareOrganization.OrganizationLocation.LocationIdentificationNumber","short":"LocationIdentificationNumber","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"LocatieNummer"}]}]},"definition":"Identification number of the location, if a numerical location identification is used next to or instead of a location name.\r\n\r\nThe identifier value is equal to the HCOrganization.Site.SiteID (or site number) value as found in the [Common Base Registry for HealthCare Actor (CoBRHA)](https://www.ehealth.fgov.be/ehealthplatform/nl/service-cobrha-common-base-registry-for-healthcare-actor).","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Nummer van de locatie, indien naast of in plaats een locatienaam een getalsmatige locatie-identificatie gehanteerd wordt."}]}]},"min":0,"max":"1","type":[{"code":"Identifier","profile":["http://hl7.org/fhir/StructureDefinition/Identifier"]}]},{"id":"HealthcareOrganization.OrganizationLocation.DepartmentIdentificationNumber","path":"HealthcareOrganization.OrganizationLocation.DepartmentIdentificationNumber","short":"DepartmentIdentificationNumber","definition":"The healthcare organization's internal department's identification number ('department' is also referred to as ‘ward’). \r\n\r\nThis needs to be an identification number listed in [fair.healthdata.be dataset Internal organization of departments within Belgian healthcare organizations](https://fair.healthdata.be/dataset/53c8b040-0b48-4c41-ab65-4c9d1600e908). Please note that this dataset is a temporary solution. A more structured and standardized version will follow in the future, which will then be documented here.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Identificerend nummer van de afdeling, indien aanwezig."}]}]},"min":0,"max":"1","type":[{"code":"Identifier","profile":["http://hl7.org/fhir/StructureDefinition/Identifier"]}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-HealthcareOrganization",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareOrganization",
+  "name": "HdBeHealthcareOrganization",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-Zorgaanbieder"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe HealthcareOrganization",
+  "status": "draft",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "A healthcare organization (sometimes called a healthcare provider) is an organization that offers and provides medical, paramedic and/or nursing care to patients/clients. Examples include: hospitals, nursing homes, doctor’s offices.\r\n\r\n#### Purpose\r\nRecording relevant information to identify the organization for administrative purposes.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Een zorgaanbieder is een organisatie die medische-, paramedische- en/of verpleegkundige zorg aanbiedt, en ook daadwerkelijk verleent, aan cliënten/patiënten. Voorbeelden zijn: ziekenhuis, verpleeghuis, huisartsenpraktijk.\r\n#### Purpose\r\nHet vastleggen van de relevante gegevens ten behoeve van identificatie van de organisatie, voor administratieve doeleinden."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HealthcareOrganization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "HealthcareOrganization",
+        "path": "HealthcareOrganization",
+        "short": "HealthcareOrganization",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Zorgaanbieder"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Healthcare Organization information model. This root concept contains all data elements of the Healthcare Organization information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Zorgaanbieder. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgaanbieder."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "HealthcareOrganization.HealthcareOrganizationIdentificationNumber",
+        "path": "HealthcareOrganization.HealthcareOrganizationIdentificationNumber",
+        "short": "HealthcareOrganizationIdentificationNumber",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ZorgaanbiederIdentificatienummer"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The organization’s identification number. For Belgian healthcare organizations, the NIHDI (National Institute for Health and Disability Insurance) and/or the CBE (Crossroads Bank for Enterprises) is used, if possible. Depending on the context other IDs are also possible. For foreign or non-affiliated healthcare organizations, another unique identification number can be used. This must be accompanied by the name and/or code of the issuing organization.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificerend nummer van de organisatie. Voor Belgische zorgaanbieders wordt hiervoor, indien mogelijk, het RIVIZ nummer (Rijksinstituut voor Ziekte- en Invaliditeitsverzekering) en/of het KBO nummer (Kruispuntbank van Ondernemingen) gebruikt. Afhankelijk van de context zijn ook andere ID's mogelijk. Voor buitenlandse of niet aangesloten zorgaanbieders kan een ander uniek identificerend nummer gebruikt worden. Dit moet vergezeld gaan met de naam en/of code van de uitgevende organisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "HealthcareOrganization.OrganizationName",
+        "path": "HealthcareOrganization.OrganizationName",
+        "short": "OrganizationName",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "OrganisatieNaam"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Name of the organization. If an identification number is given, the name must match the name that corresponds to the identification number.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van de organisatie. Indien een identificatienummer meegegeven wordt, moet de naam overeenkomen met de naam die bij het identificatienummer hoort."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "HealthcareOrganization.DepartmentSpecialty",
+        "path": "HealthcareOrganization.DepartmentSpecialty",
+        "short": "DepartmentSpecialty",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AfdelingSpecialisme"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The specialty of the healthcare organization's department. The departmental specialty can be filled in if further indication of the healthcare organization is needed.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het specialisme van de betrokken afdeling van de zorgaanbieder. Het afdelingsspecialisme kan gevuld worden indien bij het vermelden van een zorgaanbieder een nadere aanduiding gewenst is."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/DepartmentSpecialty"
+        }
+      },
+      {
+        "id": "HealthcareOrganization.ContactInformation",
+        "path": "HealthcareOrganization.ContactInformation",
+        "short": "ContactInformation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The information needed to contact the healthcare organization via telephone and/or e-mail.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De gegevens noodzakelijk om via telefoon en/of e-mail met de zorgaanbiedende organisatie contact op te nemen."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ContactPoint",
+            "profile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HealthcareOrganization.AddressInformation",
+        "path": "HealthcareOrganization.AddressInformation",
+        "short": "AddressInformation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adresgegevens"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The physical address of the healthcare organization's location.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het fysieke adres van de locatie van de zorgaanbieder."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Address",
+            "profile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AddressInformation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HealthcareOrganization.OrganizationType",
+        "path": "HealthcareOrganization.OrganizationType",
+        "short": "OrganizationType",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "OrganisatieType"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The type of healthcare organization, such as general hospital, or nursing home.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De type zorgaanbieder, bijvoorbeeld algemeen ziekenhuis en verpleeghuis."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Appropriated terminology codes for OrganizationType are in development and will be bound in a future version. The ValueSet 'OrganizationType' illustrates the purpose of this element. Although the bound concepts will likely be used, the exact codes and system identification is not yet defined. [HL7 BE GitHub issue #32](https://github.com/hl7-be/core/issues/32) requests to standardize terminology on a federal level for Belgium.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/OrganizationType"
+        }
+      },
+      {
+        "id": "HealthcareOrganization.OrganizationLocation",
+        "path": "HealthcareOrganization.OrganizationLocation",
+        "short": "OrganizationLocation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "OrganisatieLocatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the OrganizationLocation concept. This container contains all data elements of the OrganizationLocation concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept OrganisatieLocatie. Deze container bevat alle gegevenselementen van het concept OrganisatieLocatie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "HealthcareOrganization.OrganizationLocation.LocationName",
+        "path": "HealthcareOrganization.OrganizationLocation.LocationName",
+        "short": "LocationName",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "LocatieNaam"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Name of the location, in case a healthcare organization has more than one location.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van de locatie, indien een zorgorganisatie meer dan één locatie heeft."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "HealthcareOrganization.OrganizationLocation.LocationIdentificationNumber",
+        "path": "HealthcareOrganization.OrganizationLocation.LocationIdentificationNumber",
+        "short": "LocationIdentificationNumber",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "LocatieNummer"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identification number of the location, if a numerical location identification is used next to or instead of a location name.\r\n\r\nThe identifier value is equal to the HCOrganization.Site.SiteID (or site number) value as found in the [Common Base Registry for HealthCare Actor (CoBRHA)](https://www.ehealth.fgov.be/ehealthplatform/nl/service-cobrha-common-base-registry-for-healthcare-actor).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Nummer van de locatie, indien naast of in plaats een locatienaam een getalsmatige locatie-identificatie gehanteerd wordt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Identifier"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HealthcareOrganization.OrganizationLocation.DepartmentIdentificationNumber",
+        "path": "HealthcareOrganization.OrganizationLocation.DepartmentIdentificationNumber",
+        "short": "DepartmentIdentificationNumber",
+        "definition": "The healthcare organization's internal department's identification number ('department' is also referred to as ‘ward’). \r\n\r\nThis needs to be an identification number listed in [fair.healthdata.be dataset Internal organization of departments within Belgian healthcare organizations](https://fair.healthdata.be/dataset/53c8b040-0b48-4c41-ab65-4c9d1600e908). Please note that this dataset is a temporary solution. A more structured and standardized version will follow in the future, which will then be documented here.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificerend nummer van de afdeling, indien aanwezig."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Identifier"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

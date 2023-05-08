@@ -1,1 +1,354 @@
-{"resourceType":"StructureDefinition","id":"HdBe-FluidBalance","language":"en-US","extension":[{"url":"http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod","valuePeriod":{"start":"2020-09-01T00:00:00+02:00"}}],"url":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FluidBalance","name":"HdBeFluidBalance","_name":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"HdBe-Vochtbalans"}]}]},"title":"HdBe FluidBalance","status":"draft","date":"2022-07-07T15:04:03.2592055+00:00","publisher":"Healthdata.be (Sciensano)","contact":[{"name":"Service portal – healthdata.be","telecom":[{"system":"url","value":"https://sciensano.service-now.com/sp","use":"work"}]}],"description":"The total water intake and water excretion within a certain time period: a disbalance can lead to for example dehydration or overfilling.\r\n#### Purpose\r\nInformation about the water balance provides insight in the care plan for drinking and possibly administering extra fluids, when the balance is disrupted such as dehydration or overfilling.\r\n#### Evidence Base\r\nThe definitions of the concepts were (partly) based on the guideline Dehydration by the VvOV.","_description":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De totale vochtinname en totale vochtuitscheiding binnen een bepaalde tijdsperiode: een disbalans kan leiden tot bijvoorbeeld uitdroging of overvulling.\r\n#### Purpose\r\nHet vastleggen van de vochtbalans geeft inzage in het beleid rondom het drinken en eventueel extra toedienen van vocht, wanneer het evenwicht verstoord is zoals bij uitdroging of overvulling.\r\n#### Evidence Base\r\nDe definities van de concepten zijn (deels) gebaseerd op de richtlijn Vochttekort van de VvOV.\r\n\r\n\r\n**Revision History**\r\nPublicatieversie 1.0 (04-09-2017)\r\n\r\nPublicatieversie 1.0.1 (01-09-2020)\r\nBevat: [ZIB-1188](https://bits.nictiz.nl/browse/ZIB-1188)."}]}]},"copyright":"Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.","fhirVersion":"4.0.1","kind":"logical","abstract":true,"type":"https://fhir.healthdata.be/StructureDefinition/LogicalModel/FluidBalance","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Element","derivation":"specialization","differential":{"element":[{"id":"FluidBalance","path":"FluidBalance","short":"FluidBalance","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Vochtbalans"}]}]},"definition":"Root concept of the FluidBalance information model. This root concept contains all data elements of the FluidBalance information model.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Rootconcept van de bouwsteen Vochtbalans. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Vochtbalans."}]}]},"min":0,"max":"*"},{"id":"FluidBalance.Comment","path":"FluidBalance.Comment","short":"Comment","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Toelichting"}]}]},"definition":"Comment on the fluid balance.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"De toelichting op de vochtbalans."}]}]},"min":0,"max":"1","type":[{"code":"string"}]},{"id":"FluidBalance.FluidTotalIn","path":"FluidBalance.FluidTotalIn","short":"FluidTotalIn","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"VochtTotaalIn"}]}]},"definition":"The total of fluid intake (e.g. by mouth, drip or tube feeding) in mL.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het totaal aan vochtinname (o.a. per os, infuus, sonde) in mL."}]}]},"min":0,"max":"1","type":[{"code":"Quantity"}]},{"id":"FluidBalance.FluidTotalOut","path":"FluidBalance.FluidTotalOut","short":"FluidTotalOut","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"VochtTotaalUit"}]}]},"definition":"The total of fluid excretion (e.g. urine production, drain, watery defecation) in mL.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het totaal aan vochtuitscheiding (o.a. urineproductie, drain, waterdunne ontlasting) in mL."}]}]},"min":0,"max":"1","type":[{"code":"Quantity"}]},{"id":"FluidBalance.FluidBalanceStartTime","path":"FluidBalance.FluidBalanceStartTime","short":"FluidBalanceStartTime","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"VochtbalansStarttijd"}]}]},"definition":"The time at which the measurement of the fluid balance was started.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het tijdstip waarop gestart is met de vochtbalans meting."}]}]},"min":1,"max":"1","type":[{"code":"dateTime"}]},{"id":"FluidBalance.FluidBalanceStopTime","path":"FluidBalance.FluidBalanceStopTime","short":"FluidBalanceStopTime","_short":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"VochtbalansStoptijd"}]}]},"definition":"The time at which the measurement of the fluid balance was stopped.","_definition":{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/translation","extension":[{"url":"lang","valueCode":"nl-NL"},{"url":"content","valueMarkdown":"Het tijdstip waarop gestopt is met de vochtbalans meting."}]}]},"min":1,"max":"1","type":[{"code":"dateTime"}]}]}}
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-FluidBalance",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FluidBalance",
+  "name": "HdBeFluidBalance",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-Vochtbalans"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe FluidBalance",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "The total water intake and water excretion within a certain time period: a disbalance can lead to for example dehydration or overfilling.\r\n#### Purpose\r\nInformation about the water balance provides insight in the care plan for drinking and possibly administering extra fluids, when the balance is disrupted such as dehydration or overfilling.\r\n#### Evidence Base\r\nThe definitions of the concepts were (partly) based on the guideline Dehydration by the VvOV.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "De totale vochtinname en totale vochtuitscheiding binnen een bepaalde tijdsperiode: een disbalans kan leiden tot bijvoorbeeld uitdroging of overvulling.\r\n#### Purpose\r\nHet vastleggen van de vochtbalans geeft inzage in het beleid rondom het drinken en eventueel extra toedienen van vocht, wanneer het evenwicht verstoord is zoals bij uitdroging of overvulling.\r\n#### Evidence Base\r\nDe definities van de concepten zijn (deels) gebaseerd op de richtlijn Vochttekort van de VvOV.\r\n\r\n\r\n**Revision History**\r\nPublicatieversie 1.0 (04-09-2017)\r\n\r\nPublicatieversie 1.0.1 (01-09-2020)\r\nBevat: [ZIB-1188](https://bits.nictiz.nl/browse/ZIB-1188)."
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/FluidBalance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "FluidBalance",
+        "path": "FluidBalance",
+        "short": "FluidBalance",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Vochtbalans"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the FluidBalance information model. This root concept contains all data elements of the FluidBalance information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Vochtbalans. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Vochtbalans."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "FluidBalance.Comment",
+        "path": "FluidBalance.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Comment on the fluid balance.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De toelichting op de vochtbalans."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "FluidBalance.FluidTotalIn",
+        "path": "FluidBalance.FluidTotalIn",
+        "short": "FluidTotalIn",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VochtTotaalIn"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The total of fluid intake (e.g. by mouth, drip or tube feeding) in mL.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het totaal aan vochtinname (o.a. per os, infuus, sonde) in mL."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "FluidBalance.FluidTotalOut",
+        "path": "FluidBalance.FluidTotalOut",
+        "short": "FluidTotalOut",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VochtTotaalUit"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The total of fluid excretion (e.g. urine production, drain, watery defecation) in mL.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het totaal aan vochtuitscheiding (o.a. urineproductie, drain, waterdunne ontlasting) in mL."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "FluidBalance.FluidBalanceStartTime",
+        "path": "FluidBalance.FluidBalanceStartTime",
+        "short": "FluidBalanceStartTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VochtbalansStarttijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The time at which the measurement of the fluid balance was started.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het tijdstip waarop gestart is met de vochtbalans meting."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "FluidBalance.FluidBalanceStopTime",
+        "path": "FluidBalance.FluidBalanceStopTime",
+        "short": "FluidBalanceStopTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VochtbalansStoptijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The time at which the measurement of the fluid balance was stopped.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het tijdstip waarop gestopt is met de vochtbalans meting."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      }
+    ]
+  }
+}
