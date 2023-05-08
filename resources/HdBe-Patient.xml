@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-Patient" />
   <meta>
-    <lastUpdated value="2022-12-13T09:47:21.7895743+00:00" />
+    <lastUpdated value="2023-05-08T17:11:08.6472828+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
   <name value="HdBePatient" />
@@ -257,12 +257,6 @@
       <definition value="Patient’s administrative gender. The gender that that the patient is considered to have for administration and record keeping purposes. Note that the gender might not match the biological sex as determined by genetics or the individual's preferred identification. The Observation resource can deal with specific sex or gender aspect of interest." />
       <alias value="Geslacht" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="AdministrativeGender" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="required" />
         <description value="Use ConceptMap 'GenderCodelijst-to-AdministrativeGender' to translate CBB terminology to profile terminology in ValueSet 'AdministrativeGender'" />
         <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1">
@@ -419,12 +413,6 @@
       <definition value="A person’s marital status." />
       <alias value="BurgerlijkeStaat" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="MaritalStatus" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="required" />
         <description value="Use ConceptMap 'BeCivilstate-to-MaritalStatus' to translate CBB terminology to profile terminology in ValueSet 'MaritalStatus'" />
         <valueSet value="https://www.ehealth.fgov.be/standards/fhir/core/ValueSet/be-civilstate">
@@ -563,9 +551,6 @@
       <definition value="Defines the role of the contact in relation to the patient." />
       <alias value="Rol" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ContactRelationship" />
-        </extension>
         <strength value="required" />
         <description value="RolCodelijst" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/Role" />
@@ -587,9 +572,6 @@
       <definition value="Defines the contact’s familial relationship to the patient." />
       <alias value="Relatie" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ContactRelationship" />
-        </extension>
         <strength value="required" />
         <description value="RelatieCodelijst" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/Relationship" />

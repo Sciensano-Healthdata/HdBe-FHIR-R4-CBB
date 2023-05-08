@@ -174,9 +174,6 @@
       <alias value="GebruikIndicator" />
       <alias value="Gebruiksperiode" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="MedicationStatementStatus" />
-        </extension>
         <strength value="required" />
         <description value="Use ConceptMap 'MedicationStopType-to-MedicationStatementStatus' to translate CBB terminology to profile terminology in ValueSet 'Medication Status Codes'." />
         <valueSet value="http://hl7.org/fhir/ValueSet/medication-statement-status|4.0.1">
@@ -221,9 +218,6 @@
       <definition value="Reason for changing or discontinuing use of medication." />
       <alias value="RedenWijzigenOfStoppenGebruik" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="MedicationStatementStatusReason" />
-        </extension>
         <strength value="required" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/MedicationReason" />
       </binding>
@@ -268,9 +262,6 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-PharmaceuticalProduct" />
       </type>
-      <binding>
-        <strength value="example" />
-      </binding>
       <mapping>
         <identity value="zib-medicationuse2-v1.1.1-2020EN" />
         <map value="NL-CM:9.11.21339" />

@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult.Specimen" />
   <meta>
-    <lastUpdated value="2022-12-12T14:09:14.3783026+00:00" />
+    <lastUpdated value="2023-05-08T17:10:42.1449321+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen" />
   <name value="HdBeLaboratoryTestResultSpecimen" />
@@ -74,9 +74,6 @@
       <alias value="Monstermateriaal" />
       <alias value="Microorganisme" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="SpecimenType" />
-        </extension>
         <strength value="extensible" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/SpecimenMaterial-and-Microorganism" />
       </binding>
@@ -237,9 +234,6 @@
       <definition value="If relevant for the results, the method of obtaining the specimen can be entered as well." />
       <alias value="Afnameprocedure" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="SpecimenCollectionMethod" />
-        </extension>
         <strength value="required" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/CollectionMethod" />
       </binding>
@@ -263,9 +257,6 @@
         <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AnatomicalLocation" />
       </type>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="BodySite" />
-        </extension>
         <strength value="required" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/Location" />
       </binding>
@@ -350,9 +341,6 @@
       <definition value="Container type describes the envelope in which the material is collected or sent. Examples include blood tubes, transport container, possibly including culture medium." />
       <alias value="Containertype" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="SpecimenContainerType" />
-        </extension>
         <strength value="preferred" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/ContainerType" />
       </binding>

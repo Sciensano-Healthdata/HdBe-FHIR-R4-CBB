@@ -1,304 +1,302 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="HdBe-NameInformation"/>
-   <meta>
-      <lastUpdated value="2022-04-12T13:56:45.3303523+00:00"/>
-   </meta>
-   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation"/>
-   <name value="HdBeNameInformation"/>
-   <title value="HdBe NameInformation"/>
-   <status value="draft"/>
-   <publisher value="Healthdata.be (Sciensano)"/>
-   <contact>
-      <name value="Service portal – healthdata.be"/>
-      <telecom>
-         <system value="url"/>
-         <value value="https://sciensano.service-now.com/sp"/>
-         <use value="work"/>
-      </telecom>
-   </contact>
-   <description value="A person's official name information, including given names, last name and possibly the partner's last name."/>
-   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-   <fhirVersion value="4.0.1"/>
-   <mapping>
-      <identity value="zib-nameinformation-v1.1-2020EN"/>
-      <uri value="https://zibs.nl/wiki/NameInformation-v1.1(2020EN)"/>
-      <name value="zib NameInformation-v1.1(2020EN)"/>
-   </mapping>
-   <mapping>
-      <identity value="HdBe-NameInformation"/>
-      <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NameInformation"/>
-      <name value="HdBe logical model NameInformation"/>
-   </mapping>
-   <kind value="complex-type"/>
-   <abstract value="false"/>
-   <type value="HumanName"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/HumanName"/>
-   <derivation value="constraint"/>
-   <differential>
-      <element id="HumanName">
-         <path value="HumanName"/>
-         <short value="NameInformation"/>
-         <definition value="This slice represents the person's official name information, including given names, last name and possibly the partner's last name."/>
-         <comment value="This `.name` element represents a Belgian name according to the CBB NameInformation (except for the GivenName concept). A Belgian name is represented in FHIR as an ordinary international name, but is augmented using extensions to specify how the last name is built up according to the Belgian rules. See the guidance on `.family` and on `.extension:nameUsage` for more information. Systems that need to work in a Belgian context SHOULD support these extensions as specified here. In addition, systems SHOULD use the core elements according to the FHIR specifications to provide compatibility outside Belgian contexts. It is encouraged to provide a representation of the full name in the `.text` element.&#xD;&#xA;&#xD;&#xA;**Note 1**: The CBB cannot be represented straightforward in FHIR. Especially note the guidance on `.given` on how to map the FirstNames and Initials concepts, and on `.prefix`/`.suffix` on how to map the Titles concept.&#xD;&#xA;&#xD;&#xA;**Note 2**: This element should only contain a person's _official_ names. The GivenName concept is represented in another `.name` element with `.name.use` = _usual_.&#xD;&#xA;&#xD;&#xA;**Note 3**: The examples illustrate how the CBB is mapped to FHIR."/>
-         <alias value="Naamgegevens"/>
-         <constraint>
-            <key value="zib-NameInformation-1"/>
-            <severity value="error"/>
-            <human value="If a prefix for a familiy name is specified, the family name is expected as well"/>
-            <expression value="name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()"/>
-            <source value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation"/>
-         </constraint>
-         <constraint>
-            <key value="zib-NameInformation-2"/>
-            <severity value="error"/>
-            <human value="If the prefix for a partner family name is specified, the partner family name is expected as well"/>
-            <expression value="name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()"/>
-            <source value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation"/>
-         </constraint>
-         <mapping>
-            <identity value="zib-nameinformation-v1.1-2020EN"/>
-            <map value="NL-CM:20.4.1"/>
-            <comment value="NameInformation"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-NameInformation"/>
-            <map value="NameInformation"/>
-         </mapping>
-      </element>
-      <element id="HumanName.extension">
-         <path value="HumanName.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-         <min value="0"/>
-      </element>
-      <element id="HumanName.extension:nameUsage">
-         <path value="HumanName.extension"/>
-         <sliceName value="nameUsage"/>
-         <min value="0"/>
-         <type>
-            <code value="Extension"/>
-            <profile value="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order"/>
-         </type>
-      </element>
-      <element id="HumanName.extension:nameUsage.value[x]">
-         <path value="HumanName.extension.value[x]"/>
-         <short value="NameUsage"/>
-         <definition value="This concept indicates the last name or order of last names with which the person is to be addressed."/>
-         <alias value="Naamgebruik"/>
-         <binding>
-            <strength value="required"/>
-            <description value="Use ConceptMap NameUsageCodelijst-to-HumanNameAssemblyOrder to translate terminology from the functional model to profile terminology in ValueSet HumanNameAssemblyOrder"/>
-            <valueSet value="http://hl7.org/fhir/ValueSet/name-assembly-order|4.0.1">
-               <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-                  <valueCanonical value="https://fhir.healthdata.be/ConceptMap/NameUsage-to-HumanNameAssemblyOrder"/>
-               </extension>
-            </valueSet>
-         </binding>
-         <mapping>
-            <identity value="zib-nameinformation-v1.1-2020EN"/>
-            <map value="NL-CM:20.4.7"/>
-            <comment value="NameUsage"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-NameInformation"/>
-            <map value="NameInformation.NameUsage"/>
-         </mapping>
-      </element>
-      <element id="HumanName.use">
-         <path value="HumanName.use"/>
-         <min value="1"/>
-         <fixedCode value="official"/>
-      </element>
-      <element id="HumanName.family.extension">
-         <path value="HumanName.family.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-         <min value="0"/>
-      </element>
-      <element id="HumanName.family.extension:prefix">
-         <path value="HumanName.family.extension"/>
-         <sliceName value="prefix"/>
-         <min value="0"/>
-         <type>
-            <code value="Extension"/>
-            <profile value="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix"/>
-         </type>
-      </element>
-      <element id="HumanName.family.extension:prefix.value[x]">
-         <path value="HumanName.family.extension.value[x]"/>
-         <short value="Prefix"/>
-         <definition value="Prefix to the person’s own last name."/>
-         <alias value="Voorvoegsels"/>
-         <mapping>
-            <identity value="zib-nameinformation-v1.1-2020EN"/>
-            <map value="NL-CM:20.4.11"/>
-            <comment value="Prefix"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-NameInformation"/>
-            <map value="NameInformation.LastName.Prefix"/>
-         </mapping>
-      </element>
-      <element id="HumanName.family.extension:lastName">
-         <path value="HumanName.family.extension"/>
-         <sliceName value="lastName"/>
-         <min value="0"/>
-         <type>
-            <code value="Extension"/>
-            <profile value="http://hl7.org/fhir/StructureDefinition/humanname-own-name"/>
-         </type>
-      </element>
-      <element id="HumanName.family.extension:lastName.value[x]">
-         <path value="HumanName.family.extension.value[x]"/>
-         <short value="LastName"/>
-         <definition value="The person’s official last name"/>
-         <alias value="Achternaam"/>
-         <mapping>
-            <identity value="zib-nameinformation-v1.1-2020EN"/>
-            <map value="NL-CM:20.4.10"/>
-            <comment value="LastName"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-NameInformation"/>
-            <map value="NameInformation.LastName.LastName"/>
-         </mapping>
-      </element>
-      <element id="HumanName.family.extension:partnerPrefix">
-         <path value="HumanName.family.extension"/>
-         <sliceName value="partnerPrefix"/>
-         <min value="0"/>
-         <type>
-            <code value="Extension"/>
-            <profile value="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix"/>
-         </type>
-      </element>
-      <element id="HumanName.family.extension:partnerPrefix.value[x]">
-         <path value="HumanName.family.extension.value[x]"/>
-         <short value="PartnerPrefix"/>
-         <definition value="Prefix to the partner’s last name."/>
-         <alias value="VoorvoegselsPartner"/>
-         <mapping>
-            <identity value="zib-nameinformation-v1.1-2020EN"/>
-            <map value="NL-CM:20.4.9"/>
-            <comment value="PartnerPrefix"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-NameInformation"/>
-            <map value="NameInformation.LastNamePartner.PartnerPrefix"/>
-         </mapping>
-      </element>
-      <element id="HumanName.family.extension:partnerLastName">
-         <path value="HumanName.family.extension"/>
-         <sliceName value="partnerLastName"/>
-         <min value="0"/>
-         <type>
-            <code value="Extension"/>
-            <profile value="http://hl7.org/fhir/StructureDefinition/humanname-partner-name"/>
-         </type>
-      </element>
-      <element id="HumanName.family.extension:partnerLastName.value[x]">
-         <path value="HumanName.family.extension.value[x]"/>
-         <short value="PartnerLastName"/>
-         <definition value="Partner’s official last name."/>
-         <alias value="AchternaamPartner"/>
-         <mapping>
-            <identity value="zib-nameinformation-v1.1-2020EN"/>
-            <map value="NL-CM:20.4.8"/>
-            <comment value="PartnerLastName"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-NameInformation"/>
-            <map value="NameInformation.LastNamePartner.PartnerLastName"/>
-         </mapping>
-      </element>
-      <element id="HumanName.given">
-         <path value="HumanName.given"/>
-         <short value="FirstName / Initial"/>
-         <definition value="One of a person’s official first names or the initial if the full name is not known."/>
-         <comment value="This element represents the FirstNames and Initials concepts of zib NameInformation, but the FHIR implementation deviates from the zib model. The zib defines these concepts as a list of official first names (as a single string) and a list of initials (as a single string), both optional. They both represent the official name(s) of a person and thus represent the same concept. In FHIR however, each first name is either a complete name or an initial, but not both. In addition, each name may be defined separately.&#xD;&#xA;&#xD;&#xA;Therefore, the zib concepts are implemented here in the following way:&#xD;&#xA;&#xD;&#xA;* Systems SHOULD use a `.given` element for each official first name that they know of (either as a full name or an initial), in order of appearance (as specified by FHIR).&#xD;&#xA;* Each of these elements:&#xD;&#xA;  * SHOULD be populated with the complete name if it is known, or with the initial if no more information is available.&#xD;&#xA;  * SHALL be augmented with `extension:givenOrInitial` with code _BR_ when it represents a full name or code _IN_ when it represents an initial.&#xD;&#xA;&#xD;&#xA;Initials should thus not be communicated for each complete first name that is known, in contrast to what is specified by the zib. Receiving systems can recreate initials from the full names if needed.&#xD;&#xA;&#xD;&#xA;If a system _does_ however only have a list of official first names and a separate list of official initials, without knowing the relationship between these two, only the full names SHOULD be communicated, while an additional `.name` instance MAY be used to communicate the initials. It is expected that the second instance just contains the initials and no other information from the zib. Receiving systems MAY ignore the second instance.&#xD;&#xA;&#xD;&#xA;**Note 1:** The GivenName concept should not be included here but in a separate `.name` instance where `.use` = _usual_.&#xD;&#xA;&#xD;&#xA;**Note 2**: As specified by FHIR, multiple official first names MAY be combined in a single `.given` element (separated by spaces), as long as the `.given` elements can be concatenated to form the full first name representation, and the 'extension:givenOrInitial` is used to mark the element as containing either full names or the initials. This pattern is strongly discouraged as it is hard to determine if the value pertains multiple names or a single combined name containing spaces."/>
-         <alias value="Voornaam"/>
-         <alias value="Initiaal"/>
-         <mapping>
-            <identity value="zib-nameinformation-v1.1-2020EN"/>
-            <map value="NL-CM:20.4.4"/>
-            <comment value="FirstNames"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-NameInformation"/>
-            <map value="NameInformation.FirstNames"/>
-         </mapping>
-         <mapping>
-            <identity value="zib-nameinformation-v1.1-2020EN"/>
-            <map value="NL-CM:20.4.5"/>
-            <comment value="Initials"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-NameInformation"/>
-            <map value="NameInformation.Initials"/>
-         </mapping>
-      </element>
-      <element id="HumanName.given.extension">
-         <path value="HumanName.given.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-         <min value="1"/>
-      </element>
-      <element id="HumanName.given.extension:givenOrInitial">
-         <path value="HumanName.given.extension"/>
-         <sliceName value="givenOrInitial"/>
-         <min value="1"/>
-         <type>
-            <code value="Extension"/>
-            <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"/>
-         </type>
-      </element>
-      <element id="HumanName.prefix">
-         <path value="HumanName.prefix"/>
-         <short value="Titles"/>
-         <definition value="Noble and scientific titles. These can assist in formulating oral and formal addresing titles."/>
-         <comment value="The CBB concept 'titles' is mapped to elements `HumanName.prefix` and `HumanName.suffix`. Semantically this mapping is not complete: the CBB uses a single concept that contains all the required information about noble and scientific titles, while FHIR captures the same information in a structured way.&#xD;&#xA;&#xD;&#xA;**Export:**&#xD;&#xA;&#xD;&#xA;Systems are expected to transform as much as possible to the FHIR datamodel and thereby to be as explicit as possible. Note that in order to mark the type of a prefix, you can use the FHIR standard extension for ISO 21090 EN Qualifiers. Examples include the use of the qualifier _HON_ to indicate honorific prefixes and _AC_ for academic prefixes.&#xD;&#xA;&#xD;&#xA;If it is not possible to breakup the CBB concept titles to positioned prefixes and suffixes, the prefix element is used to store all information.&#xD;&#xA;&#xD;&#xA;**Import:**&#xD;&#xA;&#xD;&#xA;Systems need to expect and be resilient for a broader range of information stored in the prefix element than stated by it's definition."/>
-         <alias value="Titels"/>
-         <mapping>
-            <identity value="zib-nameinformation-v1.1-2020EN"/>
-            <map value="NL-CM:20.4.12"/>
-            <comment value="Titles"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-NameInformation"/>
-            <map value="NameInformation.Titles"/>
-         </mapping>
-      </element>
-      <element id="HumanName.suffix">
-         <path value="HumanName.suffix"/>
-         <short value="Titles"/>
-         <definition value="Noble and scientific titles. These can assist in formulating oral and formal addresing titles."/>
-         <comment value="The CBB concept 'titles' is mapped to elements `HumanName.prefix` and `HumanName.suffix`. Semantically this mapping is not complete: the CBB uses a single concept that contains all the required information about noble and scientific titles, while FHIR captures the same information in a structured way.&#xD;&#xA;&#xD;&#xA;**Export:**&#xD;&#xA;&#xD;&#xA;Systems are expected to transform as much as possible to the FHIR datamodel and thereby to be as explicit as possible. Note that in order to mark the type of a prefix, you can use the FHIR standard extension for ISO 21090 EN Qualifiers. Examples include the use of the qualifier _HON_ to indicate honorific prefixes and _AC_ for academic prefixes.&#xD;&#xA;&#xD;&#xA;If it is not possible to breakup the CBB concept titles to positioned prefixes and suffixes, the prefix element is used to store all information.&#xD;&#xA;&#xD;&#xA;**Import:**&#xD;&#xA;&#xD;&#xA;Systems need to expect and be resilient for a broader range of information stored in the prefix element than stated by it's definition."/>
-         <alias value="Titels"/>
-         <mapping>
-            <identity value="zib-nameinformation-v1.1-2020EN"/>
-            <map value="NL-CM:20.4.12"/>
-            <comment value="Titles"/>
-         </mapping>
-         <mapping>
-            <identity value="HdBe-NameInformation"/>
-            <map value="NameInformation.Titles"/>
-         </mapping>
-      </element>
-   </differential>
+  <id value="HdBe-NameInformation" />
+  <meta>
+    <lastUpdated value="2023-05-08T17:10:58.0787622+00:00" />
+  </meta>
+  <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation" />
+  <name value="HdBeNameInformation" />
+  <title value="HdBe NameInformation" />
+  <status value="draft" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A person's official name information, including given names, last name and possibly the partner's last name." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-nameinformation-v1.1-2020EN" />
+    <uri value="https://zibs.nl/wiki/NameInformation-v1.1(2020EN)" />
+    <name value="zib NameInformation-v1.1(2020EN)" />
+  </mapping>
+  <mapping>
+    <identity value="HdBe-NameInformation" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NameInformation" />
+    <name value="HdBe logical model NameInformation" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="HumanName" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/HumanName" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="HumanName">
+      <path value="HumanName" />
+      <short value="NameInformation" />
+      <definition value="This slice represents the person's official name information, including given names, last name and possibly the partner's last name." />
+      <comment value="This `.name` element represents a Belgian name according to the CBB NameInformation (except for the GivenName concept). A Belgian name is represented in FHIR as an ordinary international name, but is augmented using extensions to specify how the last name is built up according to the Belgian rules. See the guidance on `.family` and on `.extension:nameUsage` for more information. Systems that need to work in a Belgian context SHOULD support these extensions as specified here. In addition, systems SHOULD use the core elements according to the FHIR specifications to provide compatibility outside Belgian contexts. It is encouraged to provide a representation of the full name in the `.text` element.&#xD;&#xA;&#xD;&#xA;**Note 1**: The CBB cannot be represented straightforward in FHIR. Especially note the guidance on `.given` on how to map the FirstNames and Initials concepts, and on `.prefix`/`.suffix` on how to map the Titles concept.&#xD;&#xA;&#xD;&#xA;**Note 2**: This element should only contain a person's _official_ names. The GivenName concept is represented in another `.name` element with `.name.use` = _usual_.&#xD;&#xA;&#xD;&#xA;**Note 3**: The examples illustrate how the CBB is mapped to FHIR." />
+      <alias value="Naamgegevens" />
+      <constraint>
+        <key value="zib-NameInformation-1" />
+        <severity value="error" />
+        <human value="If a prefix for a familiy name is specified, the family name is expected as well" />
+        <expression value="name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()" />
+      </constraint>
+      <constraint>
+        <key value="zib-NameInformation-2" />
+        <severity value="error" />
+        <human value="If the prefix for a partner family name is specified, the partner family name is expected as well" />
+        <expression value="name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies name.family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()" />
+      </constraint>
+      <mapping>
+        <identity value="zib-nameinformation-v1.1-2020EN" />
+        <map value="NL-CM:20.4.1" />
+        <comment value="NameInformation" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-NameInformation" />
+        <map value="NameInformation" />
+      </mapping>
+    </element>
+    <element id="HumanName.extension">
+      <path value="HumanName.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="HumanName.extension:nameUsage">
+      <path value="HumanName.extension" />
+      <sliceName value="nameUsage" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order" />
+      </type>
+    </element>
+    <element id="HumanName.extension:nameUsage.value[x]">
+      <path value="HumanName.extension.value[x]" />
+      <short value="NameUsage" />
+      <definition value="This concept indicates the last name or order of last names with which the person is to be addressed." />
+      <alias value="Naamgebruik" />
+      <binding>
+        <strength value="required" />
+        <description value="Use ConceptMap NameUsageCodelijst-to-HumanNameAssemblyOrder to translate terminology from the functional model to profile terminology in ValueSet HumanNameAssemblyOrder" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/name-assembly-order|4.0.1">
+          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
+            <valueCanonical value="https://fhir.healthdata.be/ConceptMap/NameUsage-to-HumanNameAssemblyOrder" />
+          </extension>
+        </valueSet>
+      </binding>
+      <mapping>
+        <identity value="zib-nameinformation-v1.1-2020EN" />
+        <map value="NL-CM:20.4.7" />
+        <comment value="NameUsage" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-NameInformation" />
+        <map value="NameInformation.NameUsage" />
+      </mapping>
+    </element>
+    <element id="HumanName.use">
+      <path value="HumanName.use" />
+      <min value="1" />
+      <fixedCode value="official" />
+    </element>
+    <element id="HumanName.family.extension">
+      <path value="HumanName.family.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="HumanName.family.extension:prefix">
+      <path value="HumanName.family.extension" />
+      <sliceName value="prefix" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix" />
+      </type>
+    </element>
+    <element id="HumanName.family.extension:prefix.value[x]">
+      <path value="HumanName.family.extension.value[x]" />
+      <short value="Prefix" />
+      <definition value="Prefix to the person’s own last name." />
+      <alias value="Voorvoegsels" />
+      <mapping>
+        <identity value="zib-nameinformation-v1.1-2020EN" />
+        <map value="NL-CM:20.4.11" />
+        <comment value="Prefix" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-NameInformation" />
+        <map value="NameInformation.LastName.Prefix" />
+      </mapping>
+    </element>
+    <element id="HumanName.family.extension:lastName">
+      <path value="HumanName.family.extension" />
+      <sliceName value="lastName" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/humanname-own-name" />
+      </type>
+    </element>
+    <element id="HumanName.family.extension:lastName.value[x]">
+      <path value="HumanName.family.extension.value[x]" />
+      <short value="LastName" />
+      <definition value="The person’s official last name" />
+      <alias value="Achternaam" />
+      <mapping>
+        <identity value="zib-nameinformation-v1.1-2020EN" />
+        <map value="NL-CM:20.4.10" />
+        <comment value="LastName" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-NameInformation" />
+        <map value="NameInformation.LastName.LastName" />
+      </mapping>
+    </element>
+    <element id="HumanName.family.extension:partnerPrefix">
+      <path value="HumanName.family.extension" />
+      <sliceName value="partnerPrefix" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix" />
+      </type>
+    </element>
+    <element id="HumanName.family.extension:partnerPrefix.value[x]">
+      <path value="HumanName.family.extension.value[x]" />
+      <short value="PartnerPrefix" />
+      <definition value="Prefix to the partner’s last name." />
+      <alias value="VoorvoegselsPartner" />
+      <mapping>
+        <identity value="zib-nameinformation-v1.1-2020EN" />
+        <map value="NL-CM:20.4.9" />
+        <comment value="PartnerPrefix" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-NameInformation" />
+        <map value="NameInformation.LastNamePartner.PartnerPrefix" />
+      </mapping>
+    </element>
+    <element id="HumanName.family.extension:partnerLastName">
+      <path value="HumanName.family.extension" />
+      <sliceName value="partnerLastName" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/humanname-partner-name" />
+      </type>
+    </element>
+    <element id="HumanName.family.extension:partnerLastName.value[x]">
+      <path value="HumanName.family.extension.value[x]" />
+      <short value="PartnerLastName" />
+      <definition value="Partner’s official last name." />
+      <alias value="AchternaamPartner" />
+      <mapping>
+        <identity value="zib-nameinformation-v1.1-2020EN" />
+        <map value="NL-CM:20.4.8" />
+        <comment value="PartnerLastName" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-NameInformation" />
+        <map value="NameInformation.LastNamePartner.PartnerLastName" />
+      </mapping>
+    </element>
+    <element id="HumanName.given">
+      <path value="HumanName.given" />
+      <short value="FirstName / Initial" />
+      <definition value="One of a person’s official first names or the initial if the full name is not known." />
+      <comment value="This element represents the FirstNames and Initials concepts of zib NameInformation, but the FHIR implementation deviates from the zib model. The zib defines these concepts as a list of official first names (as a single string) and a list of initials (as a single string), both optional. They both represent the official name(s) of a person and thus represent the same concept. In FHIR however, each first name is either a complete name or an initial, but not both. In addition, each name may be defined separately.&#xD;&#xA;&#xD;&#xA;Therefore, the zib concepts are implemented here in the following way:&#xD;&#xA;&#xD;&#xA;* Systems SHOULD use a `.given` element for each official first name that they know of (either as a full name or an initial), in order of appearance (as specified by FHIR).&#xD;&#xA;* Each of these elements:&#xD;&#xA;  * SHOULD be populated with the complete name if it is known, or with the initial if no more information is available.&#xD;&#xA;  * SHALL be augmented with `extension:givenOrInitial` with code _BR_ when it represents a full name or code _IN_ when it represents an initial.&#xD;&#xA;&#xD;&#xA;Initials should thus not be communicated for each complete first name that is known, in contrast to what is specified by the zib. Receiving systems can recreate initials from the full names if needed.&#xD;&#xA;&#xD;&#xA;If a system _does_ however only have a list of official first names and a separate list of official initials, without knowing the relationship between these two, only the full names SHOULD be communicated, while an additional `.name` instance MAY be used to communicate the initials. It is expected that the second instance just contains the initials and no other information from the zib. Receiving systems MAY ignore the second instance.&#xD;&#xA;&#xD;&#xA;**Note 1:** The GivenName concept should not be included here but in a separate `.name` instance where `.use` = _usual_.&#xD;&#xA;&#xD;&#xA;**Note 2**: As specified by FHIR, multiple official first names MAY be combined in a single `.given` element (separated by spaces), as long as the `.given` elements can be concatenated to form the full first name representation, and the 'extension:givenOrInitial` is used to mark the element as containing either full names or the initials. This pattern is strongly discouraged as it is hard to determine if the value pertains multiple names or a single combined name containing spaces." />
+      <alias value="Voornaam" />
+      <alias value="Initiaal" />
+      <mapping>
+        <identity value="zib-nameinformation-v1.1-2020EN" />
+        <map value="NL-CM:20.4.4" />
+        <comment value="FirstNames" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-NameInformation" />
+        <map value="NameInformation.FirstNames" />
+      </mapping>
+      <mapping>
+        <identity value="zib-nameinformation-v1.1-2020EN" />
+        <map value="NL-CM:20.4.5" />
+        <comment value="Initials" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-NameInformation" />
+        <map value="NameInformation.Initials" />
+      </mapping>
+    </element>
+    <element id="HumanName.given.extension">
+      <path value="HumanName.given.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="HumanName.given.extension:givenOrInitial">
+      <path value="HumanName.given.extension" />
+      <sliceName value="givenOrInitial" />
+      <min value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier" />
+      </type>
+    </element>
+    <element id="HumanName.prefix">
+      <path value="HumanName.prefix" />
+      <short value="Titles" />
+      <definition value="Noble and scientific titles. These can assist in formulating oral and formal addresing titles." />
+      <comment value="The CBB concept 'titles' is mapped to elements `HumanName.prefix` and `HumanName.suffix`. Semantically this mapping is not complete: the CBB uses a single concept that contains all the required information about noble and scientific titles, while FHIR captures the same information in a structured way.&#xD;&#xA;&#xD;&#xA;**Export:**&#xD;&#xA;&#xD;&#xA;Systems are expected to transform as much as possible to the FHIR datamodel and thereby to be as explicit as possible. Note that in order to mark the type of a prefix, you can use the FHIR standard extension for ISO 21090 EN Qualifiers. Examples include the use of the qualifier _HON_ to indicate honorific prefixes and _AC_ for academic prefixes.&#xD;&#xA;&#xD;&#xA;If it is not possible to breakup the CBB concept titles to positioned prefixes and suffixes, the prefix element is used to store all information.&#xD;&#xA;&#xD;&#xA;**Import:**&#xD;&#xA;&#xD;&#xA;Systems need to expect and be resilient for a broader range of information stored in the prefix element than stated by it's definition." />
+      <alias value="Titels" />
+      <mapping>
+        <identity value="zib-nameinformation-v1.1-2020EN" />
+        <map value="NL-CM:20.4.12" />
+        <comment value="Titles" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-NameInformation" />
+        <map value="NameInformation.Titles" />
+      </mapping>
+    </element>
+    <element id="HumanName.suffix">
+      <path value="HumanName.suffix" />
+      <short value="Titles" />
+      <definition value="Noble and scientific titles. These can assist in formulating oral and formal addresing titles." />
+      <comment value="The CBB concept 'titles' is mapped to elements `HumanName.prefix` and `HumanName.suffix`. Semantically this mapping is not complete: the CBB uses a single concept that contains all the required information about noble and scientific titles, while FHIR captures the same information in a structured way.&#xD;&#xA;&#xD;&#xA;**Export:**&#xD;&#xA;&#xD;&#xA;Systems are expected to transform as much as possible to the FHIR datamodel and thereby to be as explicit as possible. Note that in order to mark the type of a prefix, you can use the FHIR standard extension for ISO 21090 EN Qualifiers. Examples include the use of the qualifier _HON_ to indicate honorific prefixes and _AC_ for academic prefixes.&#xD;&#xA;&#xD;&#xA;If it is not possible to breakup the CBB concept titles to positioned prefixes and suffixes, the prefix element is used to store all information.&#xD;&#xA;&#xD;&#xA;**Import:**&#xD;&#xA;&#xD;&#xA;Systems need to expect and be resilient for a broader range of information stored in the prefix element than stated by it's definition." />
+      <alias value="Titels" />
+      <mapping>
+        <identity value="zib-nameinformation-v1.1-2020EN" />
+        <map value="NL-CM:20.4.12" />
+        <comment value="Titles" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-NameInformation" />
+        <map value="NameInformation.Titles" />
+      </mapping>
+    </element>
+  </differential>
 </StructureDefinition>
