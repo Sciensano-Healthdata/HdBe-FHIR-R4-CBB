@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "HdBe-LaboratoryTestResult",
   "meta": {
-    "lastUpdated": "2022-12-12T13:56:41.0284694+00:00"
+    "lastUpdated": "2022-12-12T13:56:41.028469+00:00"
   },
   "language": "en-US",
   "extension": [
@@ -18,7 +18,6 @@
   "_name": {
     "extension": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/translation",
         "extension": [
           {
             "url": "lang",
@@ -28,11 +27,55 @@
             "url": "content",
             "valueMarkdown": "HdBe-LaboratoriumUitslag"
           }
-        ]
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe RésultatTestLaboratoire"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
       }
     ]
   },
   "title": "HdBe LaboratoryTestResult",
+  "_title": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe-LaboratoriumUitslag"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe RésultatTestLaboratoire"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
   "status": "draft",
   "publisher": "Healthdata.be (Sciensano)",
   "contact": [
@@ -51,7 +94,6 @@
   "_description": {
     "extension": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/translation",
         "extension": [
           {
             "url": "lang",
@@ -59,9 +101,23 @@
           },
           {
             "url": "content",
-            "valueMarkdown": "Een laboratoriumuitslag beschrijft het resultaat van een laboratoriumbepaling. Het gaat hierbij om monster-geörienteerde bepalingen zoals deze verricht worden in laboratoria als Klinische chemie, Serologie, Microbiologie etc.\r\nBehalve de uitkomsten van testen met een enkelvoudig resultaat kan dit concept ook de uitkomsten van meer complexe testen met meervoudige resultaten of 'panel' bevatten.\r\n#### Purpose\r\nLaboratoriumonderzoek wordt gedaan ten behoeve van de diagnose en preventie van ziekte en het vervolgen van de effecten van behandeling. \r\n#### Evidence Base\r\nVoor het vastleggen van laboratoriumuitslagen zijn twee bouwstenen beschikbaar: TekstUitslag en LaboratoriumUitslag. \r\n\r\nBij uitslagen van laboratoriumbepalingen is het moeilijk eenduidig aan te geven wanneer deze bouwsteen gebruikt moet worden en wanneer de bouwsteen TekstUitslagen gebruikt moet worden. \r\nIn het algemeen worden laboratoriumtesten die resulteren in een waarde (7,1 mmol/L), rangtelwoord (++ uit reeks tot ++++) of een kwantitatieve uitslag (Weinig) vastgelegd met deze bouwsteen. De bouwsteen TekstUitslag is meer geschikt voor tekstuele uitslagen die van nature verhalend zijn en langer dan een paar woorden. In vrijwel alle laboratoria komen beide soorten testen voor.\r\nDe toepasbaarheid van bovengenoemde bouwstenen wordt niet door het soort laboratorium maar door het soort uitslag bepaald.\r\n\r\n\r\n**References**\r\n1. Nederlandse Vereniging voor Medische Microbiologie (2010) *ELab en EvT.* [Online] Beschikbaar op: http://www.nvmm.nl/ict/vereniging/werkgroepen_commissies/elab-en-evt [Geraadpleegd: 23 juli 2014].\r\n**Revision History**\r\nPublicatieversie 1.0 (15-02-2013)\r\n\r\nPublicatieversie 1.1 (01-07-2013)\r\n\r\nPublicatieversie 1.2 (01-04-2015)\r\nBevat: [ZIB-238](https://bits.nictiz.nl/browse/ZIB-238), [ZIB-239](https://bits.nictiz.nl/browse/ZIB-239), [ZIB-240](https://bits.nictiz.nl/browse/ZIB-240), [ZIB-241](https://bits.nictiz.nl/browse/ZIB-241), [ZIB-242](https://bits.nictiz.nl/browse/ZIB-242), [ZIB-243](https://bits.nictiz.nl/browse/ZIB-243), [ZIB-244](https://bits.nictiz.nl/browse/ZIB-244), [ZIB-245](https://bits.nictiz.nl/browse/ZIB-245), [ZIB-246](https://bits.nictiz.nl/browse/ZIB-246), [ZIB-353](https://bits.nictiz.nl/browse/ZIB-353), [ZIB-361](https://bits.nictiz.nl/browse/ZIB-361), [ZIB-367](https://bits.nictiz.nl/browse/ZIB-367), [ZIB-370](https://bits.nictiz.nl/browse/ZIB-370).\r\n\r\nIncl. algemene wijzigingsverzoeken: \r\n[ZIB-94](https://bits.nictiz.nl/browse/ZIB-94), [ZIB-154](https://bits.nictiz.nl/browse/ZIB-154), [ZIB-200](https://bits.nictiz.nl/browse/ZIB-200), [ZIB-201](https://bits.nictiz.nl/browse/ZIB-201), [ZIB-309](https://bits.nictiz.nl/browse/ZIB-309), [ZIB-324](https://bits.nictiz.nl/browse/ZIB-324), [ZIB-326](https://bits.nictiz.nl/browse/ZIB-326).\r\n\r\nPublicatieversie 1.2.1 (22-05-2015)\r\nBevat: [ZIB-392](https://bits.nictiz.nl/browse/ZIB-392).\r\n\r\nPublicatieversie 1.2.2 (16-07-2015)\r\nBevat: [ZIB-420](https://bits.nictiz.nl/browse/ZIB-420).\r\n\r\nPublicatieversie 3.0 (01-05-2016)\r\nBevat: [ZIB-423](https://bits.nictiz.nl/browse/ZIB-423), [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453).\r\n\r\nPublicatieversie 4.0 (04-09-2017)\r\nBevat: [ZIB-479](https://bits.nictiz.nl/browse/ZIB-479), [ZIB-549](https://bits.nictiz.nl/browse/ZIB-549), [ZIB-564](https://bits.nictiz.nl/browse/ZIB-564), [ZIB-576](https://bits.nictiz.nl/browse/ZIB-576), [ZIB-481](https://bits.nictiz.nl/browse/ZIB-481), [ZIB-577](https://bits.nictiz.nl/browse/ZIB-577).\r\n\r\nPublicatieversie 4.1 (31-12-2017)\r\nBevat: [ZIB-609](https://bits.nictiz.nl/browse/ZIB-609), [ZIB-611](https://bits.nictiz.nl/browse/ZIB-611), [ZIB-621](https://bits.nictiz.nl/browse/ZIB-621), [ZIB-645](https://bits.nictiz.nl/browse/ZIB-645), [ZIB-646](https://bits.nictiz.nl/browse/ZIB-646).\r\n\r\nPublicatieversie 4.2 (01-10-2018)\r\nBevat: [ZIB-649](https://bits.nictiz.nl/browse/ZIB-649), [ZIB-676](https://bits.nictiz.nl/browse/ZIB-676).\r\n\r\nPublicatieversie 4.3 (26-02-2019)\r\nBevat: [ZIB-639](https://bits.nictiz.nl/browse/ZIB-639), [ZIB-703](https://bits.nictiz.nl/browse/ZIB-703).\r\n\r\nPublicatieversie 4.4 (06-07-2019)\r\nBevat: [ZIB-669](https://bits.nictiz.nl/browse/ZIB-669), [ZIB-880](https://bits.nictiz.nl/browse/ZIB-880).\r\n\r\nPublicatieversie 4.5 (31-01-2020)\r\nBevat: [ZIB-910](https://bits.nictiz.nl/browse/ZIB-910), [ZIB-901](https://bits.nictiz.nl/browse/ZIB-901), [ZIB-902](https://bits.nictiz.nl/browse/ZIB-902).\r\n\r\nPublicatieversie 4.6 (01-09-2020)\r\nBevat: [ZIB-1016](https://bits.nictiz.nl/browse/ZIB-1016), [ZIB-1148](https://bits.nictiz.nl/browse/ZIB-1148)."
+            "valueMarkdown": "Een laboratoriumuitslag beschrijft het resultaat van een laboratoriumbepaling. Het gaat hierbij om monster-geörienteerde bepalingen zoals deze verricht worden in laboratoria als Klinische chemie, Serologie, Microbiologie etc.&#13;\nBehalve de uitkomsten van testen met een enkelvoudig resultaat kan dit concept ook de uitkomsten van meer complexe testen met meervoudige resultaten of 'panel' bevatten.&#13;\n#### Purpose&#13;\nLaboratoriumonderzoek wordt gedaan ten behoeve van de diagnose en preventie van ziekte en het vervolgen van de effecten van behandeling. &#13;\n#### Evidence Base&#13;\nVoor het vastleggen van laboratoriumuitslagen zijn twee bouwstenen beschikbaar: TekstUitslag en LaboratoriumUitslag. &#13;\n&#13;\nBij uitslagen van laboratoriumbepalingen is het moeilijk eenduidig aan te geven wanneer deze bouwsteen gebruikt moet worden en wanneer de bouwsteen TekstUitslagen gebruikt moet worden. &#13;\nIn het algemeen worden laboratoriumtesten die resulteren in een waarde (7,1 mmol/L), rangtelwoord (++ uit reeks tot ++++) of een kwantitatieve uitslag (Weinig) vastgelegd met deze bouwsteen. De bouwsteen TekstUitslag is meer geschikt voor tekstuele uitslagen die van nature verhalend zijn en langer dan een paar woorden. In vrijwel alle laboratoria komen beide soorten testen voor.&#13;\nDe toepasbaarheid van bovengenoemde bouwstenen wordt niet door het soort laboratorium maar door het soort uitslag bepaald.&#13;\n&#13;\n&#13;\n**References**&#13;\n1. Nederlandse Vereniging voor Medische Microbiologie (2010) *ELab en EvT.* [Online] Beschikbaar op: http://www.nvmm.nl/ict/vereniging/werkgroepen_commissies/elab-en-evt [Geraadpleegd: 23 juli 2014].&#13;\n**Revision History**&#13;\nPublicatieversie 1.0 (15-02-2013)&#13;\n&#13;\nPublicatieversie 1.1 (01-07-2013)&#13;\n&#13;\nPublicatieversie 1.2 (01-04-2015)&#13;\nBevat: [ZIB-238](https://bits.nictiz.nl/browse/ZIB-238), [ZIB-239](https://bits.nictiz.nl/browse/ZIB-239), [ZIB-240](https://bits.nictiz.nl/browse/ZIB-240), [ZIB-241](https://bits.nictiz.nl/browse/ZIB-241), [ZIB-242](https://bits.nictiz.nl/browse/ZIB-242), [ZIB-243](https://bits.nictiz.nl/browse/ZIB-243), [ZIB-244](https://bits.nictiz.nl/browse/ZIB-244), [ZIB-245](https://bits.nictiz.nl/browse/ZIB-245), [ZIB-246](https://bits.nictiz.nl/browse/ZIB-246), [ZIB-353](https://bits.nictiz.nl/browse/ZIB-353), [ZIB-361](https://bits.nictiz.nl/browse/ZIB-361), [ZIB-367](https://bits.nictiz.nl/browse/ZIB-367), [ZIB-370](https://bits.nictiz.nl/browse/ZIB-370).&#13;\n&#13;\nIncl. algemene wijzigingsverzoeken: &#13;\n[ZIB-94](https://bits.nictiz.nl/browse/ZIB-94), [ZIB-154](https://bits.nictiz.nl/browse/ZIB-154), [ZIB-200](https://bits.nictiz.nl/browse/ZIB-200), [ZIB-201](https://bits.nictiz.nl/browse/ZIB-201), [ZIB-309](https://bits.nictiz.nl/browse/ZIB-309), [ZIB-324](https://bits.nictiz.nl/browse/ZIB-324), [ZIB-326](https://bits.nictiz.nl/browse/ZIB-326).&#13;\n&#13;\nPublicatieversie 1.2.1 (22-05-2015)&#13;\nBevat: [ZIB-392](https://bits.nictiz.nl/browse/ZIB-392).&#13;\n&#13;\nPublicatieversie 1.2.2 (16-07-2015)&#13;\nBevat: [ZIB-420](https://bits.nictiz.nl/browse/ZIB-420).&#13;\n&#13;\nPublicatieversie 3.0 (01-05-2016)&#13;\nBevat: [ZIB-423](https://bits.nictiz.nl/browse/ZIB-423), [ZIB-453](https://bits.nictiz.nl/browse/ZIB-453).&#13;\n&#13;\nPublicatieversie 4.0 (04-09-2017)&#13;\nBevat: [ZIB-479](https://bits.nictiz.nl/browse/ZIB-479), [ZIB-549](https://bits.nictiz.nl/browse/ZIB-549), [ZIB-564](https://bits.nictiz.nl/browse/ZIB-564), [ZIB-576](https://bits.nictiz.nl/browse/ZIB-576), [ZIB-481](https://bits.nictiz.nl/browse/ZIB-481), [ZIB-577](https://bits.nictiz.nl/browse/ZIB-577).&#13;\n&#13;\nPublicatieversie 4.1 (31-12-2017)&#13;\nBevat: [ZIB-609](https://bits.nictiz.nl/browse/ZIB-609), [ZIB-611](https://bits.nictiz.nl/browse/ZIB-611), [ZIB-621](https://bits.nictiz.nl/browse/ZIB-621), [ZIB-645](https://bits.nictiz.nl/browse/ZIB-645), [ZIB-646](https://bits.nictiz.nl/browse/ZIB-646).&#13;\n&#13;\nPublicatieversie 4.2 (01-10-2018)&#13;\nBevat: [ZIB-649](https://bits.nictiz.nl/browse/ZIB-649), [ZIB-676](https://bits.nictiz.nl/browse/ZIB-676).&#13;\n&#13;\nPublicatieversie 4.3 (26-02-2019)&#13;\nBevat: [ZIB-639](https://bits.nictiz.nl/browse/ZIB-639), [ZIB-703](https://bits.nictiz.nl/browse/ZIB-703).&#13;\n&#13;\nPublicatieversie 4.4 (06-07-2019)&#13;\nBevat: [ZIB-669](https://bits.nictiz.nl/browse/ZIB-669), [ZIB-880](https://bits.nictiz.nl/browse/ZIB-880).&#13;\n&#13;\nPublicatieversie 4.5 (31-01-2020)&#13;\nBevat: [ZIB-910](https://bits.nictiz.nl/browse/ZIB-910), [ZIB-901](https://bits.nictiz.nl/browse/ZIB-901), [ZIB-902](https://bits.nictiz.nl/browse/ZIB-902).&#13;\n&#13;\nPublicatieversie 4.6 (01-09-2020)&#13;\nBevat: [ZIB-1016](https://bits.nictiz.nl/browse/ZIB-1016), [ZIB-1148](https://bits.nictiz.nl/browse/ZIB-1148)."
           }
-        ]
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Un résultat de laboratoire décrit le résultat d'une analyse de laboratoire.  Il s'agit de tests axés sur les échantillons, tels qu'ils sont réalisés dans des laboratoires de chimie clinique, de sérologie, de microbiologie, etc. Outre les résultats des tests ayant un résultat unique, ce concept peut également contenir les résultats de tests plus complexes avec des résultats multiples ou un ‘panel’.\n\n#### Purpose\nLes tests de laboratoire sont réalisés aux fins de diagnostiquer et de prévenir des maladies et de suivre les effets de traitements.\n\n#### Evidence Base\nDeux modèles d'information existent pour l'enregistrement des résultats de tests de laboratoire : RésultatTextuel et RésultatTestLaboratoire. \n\nDans le cas des résultats des tests de laboratoire, il est difficile d'indiquer clairement quand exactement utiliser ce modèle d'information et quand utiliser le modèle d'information RésultatTextuel. \nEn général, les tests de laboratoire qui résultent en une valeur (7,1 mmol/L), un nombre ordinal (++ de la série jusqu'à ++++) ou un résultat quantitatif (faible) sont enregistrés à l'aide de ce modèle d'information. Le modèle d'information RésultatTextuel est mieux adapté aux résultats textuels de nature plus descriptive et plus longs que quelques mots. Les deux types de tests se rencontrent dans presque tous les laboratoires. \nL'applicabilité des modèles d'information susmentionnés n'est pas déterminée par le type de laboratoire mais par le type de résultat."
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
       }
     ]
   },
@@ -81,7 +137,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -91,7 +146,21 @@
                   "url": "content",
                   "valueMarkdown": "LaboratoriumUitslag"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "RésultatTestLaboratoire"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -99,7 +168,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -109,7 +177,21 @@
                   "url": "content",
                   "valueMarkdown": "Rootconcept van de bouwsteen LaboratoriumUitslag. Dit rootconcept bevat alle gegevenselementen van de bouwsteen LaboratoriumUitslag."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Concept root du modèle d'information RésultatTestLaboratoire. Ce concept root contient tous les éléments de données du modèle d'information RésultatTestLaboratoire."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -123,7 +205,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -133,7 +214,21 @@
                   "url": "content",
                   "valueMarkdown": "LaboratoriumTest"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TestLaboratoire"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -141,7 +236,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -151,7 +245,21 @@
                   "url": "content",
                   "valueMarkdown": "Container van het concept LaboratoriumTest. Deze container bevat alle gegevenselementen van het concept LaboratoriumTest."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Conteneur du concept TestLaboratoire. Ce conteneur contient tous les éléments de données du concept TestLaboratoire."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -170,7 +278,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -180,7 +287,21 @@
                   "url": "content",
                   "valueMarkdown": "TestCode"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "CodeTest"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -188,7 +309,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -198,7 +318,21 @@
                   "url": "content",
                   "valueMarkdown": "De naam en code van de uitgevoerde test."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Les nom et code du test exécuté. \n\nLa codification à utiliser DEVRAIT être LOINC, conformément au sous-ensemble défini par le SPF Santé publique, pour la majorité des demandes et des mesures de laboratoire couramment utilisées. Ce sous-ensemble est disponible sur le [site Internet du SPF Santé publique](https://www.vas.ehealth.fgov.be/webretam/retam/home.htm)."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -211,13 +345,12 @@
         ]
       },
       {
-        "id": "LaboratoryTestResult.LaboratoryTest.TestResult[x]",
+        "id": "LaboratoryTestResult.LaboratoryTest.TestResultpolymorphic",
         "path": "LaboratoryTestResult.LaboratoryTest.TestResult[x]",
         "short": "TestResult",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -227,7 +360,21 @@
                   "url": "content",
                   "valueMarkdown": "TestUitslag"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "RésultatTest"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -235,7 +382,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -245,11 +391,42 @@
                   "url": "content",
                   "valueMarkdown": "De uitslag van de test. Afhankelijk van de soort test bestaat de uitslag uit een waarde met eenheid of uit een gecodeerde waarde (ordinaal of nominaal)."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le résultat du test. Selon le type de test, le résultat consistera en une valeur assortie d'une unité ou d'une valeur codée (ordinale ou nominale)."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
         "comment": "For quantitative results, it is mandatory to provide an unit.",
+        "_comment": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Pour les résultats quantitatifs, la fourniture d'une unité est obligatoire."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "type": [
@@ -328,7 +505,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -338,7 +514,21 @@
                   "url": "content",
                   "valueMarkdown": "Testmethode"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MéthodeTest"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -346,7 +536,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -356,11 +545,42 @@
                   "url": "content",
                   "valueMarkdown": "De gebruikte testmethode voor het verkrijgen van de uitslag."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La méthode de test utilisée pour obtenir le résultat."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
         "comment": "* 0..1 If the LOINC test code (in ‘TestCode’) already contains a method, the ‘TestMethod’ value may not conflict with that method. ‘TestMethod’ will then contain the same method, or a specification.",
+        "_comment": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "* 0..1 si le code de test LOINC (dans ‘CodeTest’) contient déjà une méthode, la valeur ‘MéthodeTest’ ne peut pas entrer en conflit avec cette méthode. ‘MéthodeTest’ contiendra alors la même méthode, ou une spécification."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "type": [
@@ -371,6 +591,23 @@
         "binding": {
           "strength": "required",
           "description": "TestMethod codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes MéthodeTest"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
           "valueSet": "https://fhir.healthdata.be/ValueSet/TestMethod"
         }
       },
@@ -381,7 +618,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -391,7 +627,21 @@
                   "url": "content",
                   "valueMarkdown": "TestDatumTijd"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DateHeureTest"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -399,7 +649,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -409,7 +658,21 @@
                   "url": "content",
                   "valueMarkdown": "De datum en eventueel tijdstip waarop de test uitgevoerd is."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La date et, si possible, l'heure auxquelles le test a été effectué."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -428,7 +691,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -438,7 +700,21 @@
                   "url": "content",
                   "valueMarkdown": "TestUitslagStatus"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "StatutRésultatTest"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -446,7 +722,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -456,7 +731,21 @@
                   "url": "content",
                   "valueMarkdown": "De status van de uitslag van de (deel)test. Indien het onderzoek uit meerdere testen bestaat, geeft het de status van het onderzoek de overall status weer."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le statut du résultat de test de ce test. Si le test de laboratoire est un panel/cluster, le statut général est donné dans le statut du panel/cluster."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -470,17 +759,33 @@
         "binding": {
           "strength": "extensible",
           "description": "TestResultStatus codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes StatutRésultatTest"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
           "valueSet": "https://fhir.healthdata.be/ValueSet/TestResultStatus"
         }
       },
       {
-        "id": "LaboratoryTestResult.LaboratoryTest.ReferenceRangeUpperLimit[x]",
+        "id": "LaboratoryTestResult.LaboratoryTest.ReferenceRangeUpperLimitpolymorphic",
         "path": "LaboratoryTestResult.LaboratoryTest.ReferenceRangeUpperLimit[x]",
         "short": "ReferenceRangeUpperLimit",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -490,7 +795,21 @@
                   "url": "content",
                   "valueMarkdown": "ReferentieBovengrens"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "LimiteSupérieurePlageRéférence"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -498,7 +817,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -508,11 +826,42 @@
                   "url": "content",
                   "valueMarkdown": "De voor de patiënt geldende referentie bovenwaarde van de met de test gemeten waarde."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La limite supérieure de référence pour le patient de la valeur mesurée lors du test."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
         "comment": "* If the result has data type PQ and there are reference values, then the unit of the result and reference value must be the same.\n* If the result has reference values, then the data type of the result and reference values must be the same.\r\n* A string datatype may only be used if the reference range cannot be expressed as PQ.",
+        "_comment": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "* Si le résultat a le type de données PQ et qu'il existe des valeurs de référence, alors, l'unité du résultat et celle de la valeur de référence doivent être les mêmes.* Si le résultat a des valeurs de référence, alors, le type de données du résultat et celui des valeurs de référence doivent être les mêmes.* Un type de données chaîne ne peut être utilisé que si la plage de référence ne peut pas être exprimée comme PQ."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "type": [
@@ -531,13 +880,12 @@
         ]
       },
       {
-        "id": "LaboratoryTestResult.LaboratoryTest.ReferenceRangeLowerLimit[x]",
+        "id": "LaboratoryTestResult.LaboratoryTest.ReferenceRangeLowerLimitpolymorphic",
         "path": "LaboratoryTestResult.LaboratoryTest.ReferenceRangeLowerLimit[x]",
         "short": "ReferenceRangeLowerLimit",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -547,7 +895,21 @@
                   "url": "content",
                   "valueMarkdown": "ReferentieOndergrens"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "LimiteInférieurePlageRéférence"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -555,7 +917,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -565,11 +926,42 @@
                   "url": "content",
                   "valueMarkdown": "De voor de patiënt geldende referentie onderwaarde van de met de test gemeten waarde."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La limite inférieure de référence pour le patient de la valeur mesurée lors du test."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
         "comment": "* If the result has data type PQ and there are reference values, then the unit of the result and reference value must be the same.\n* If the result has reference values, then the data type of the result and reference values must be the same.\r\n* A string datatype may only be used if the reference range cannot be expressed as PQ.",
+        "_comment": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "* Si le résultat a le type de données PQ et qu'il existe des valeurs de référence, alors, l'unité du résultat et celle de la valeur de référence doivent être les mêmes.* Si le résultat a des valeurs de référence, alors, le type de données du résultat et celui des valeurs de référence doivent être les mêmes.* Un type de données chaîne ne peut être utilisé que si la plage de référence ne peut pas être exprimée comme PQ."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "type": [
@@ -594,7 +986,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -604,7 +995,21 @@
                   "url": "content",
                   "valueMarkdown": "InterpretatieMethode"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MéthodeInterprétation"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -612,7 +1017,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -622,11 +1026,42 @@
                   "url": "content",
                   "valueMarkdown": "De methode die gebruikt is om interpretatievlaggen te bepalen. Een voorbeeld hiervan is EUCAST, voor het bepalen van afbreekpunten bij microbiologische gevoeligheidsbepalingen"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La méthode utilisée pour déterminer les indicateurs d'interprétation. EUCAST, qui permet de déterminer les points d'arrêt cliniques dans les tests de sensibilité microbiologique, en est un exemple."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
         "comment": "A ValueSet is not yet available for this concept.",
+        "_comment": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Un EnsembleValeurs n'est pas encore disponible pour ce concept."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "type": [
@@ -642,7 +1077,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -652,7 +1086,21 @@
                   "url": "content",
                   "valueMarkdown": "InterpretatieVlaggen"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "IndicateursRésultat"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -660,7 +1108,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -670,7 +1117,21 @@
                   "url": "content",
                   "valueMarkdown": "Attentie codes die aangeven of de uitslag van een kwantitatieve bepaling boven of onder bepaalde referentiewaarden ligt of anderszins een interpretatie van de uitslag geven (Resistent). De waarden Resistent, Intermediair en Sensitief worden gebruikt bij microbiologische bepalingen."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Codes d'attention indiquant si le résultat d'un test quantitatif est supérieur ou inférieur à certaines valeurs de référence ou interprétant le résultat d'une autre manière. (Résistant). Les valeurs Résistant, Intermédiaire et Sensible sont utilisées avec les résultats de tests microbiologiques."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -684,6 +1145,23 @@
         "binding": {
           "strength": "extensible",
           "description": "ResultFlags codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes IndicateursRésultat"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
           "valueSet": "https://fhir.healthdata.be/ValueSet/ResultFlags"
         }
       },
@@ -694,7 +1172,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -704,7 +1181,21 @@
                   "url": "content",
                   "valueMarkdown": "UitslagInterpretatie"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "InterprétationRésultat"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -712,7 +1203,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -722,7 +1212,21 @@
                   "url": "content",
                   "valueMarkdown": "Opmerkingen van de bepaler met betrekking tot duiding van de resultaten"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Commentaire du spécialiste du laboratoire à propos de l'interprétation des résultats"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -741,7 +1245,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -751,7 +1254,21 @@
                   "url": "content",
                   "valueMarkdown": "Monster"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Échantillon"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -759,7 +1276,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -769,7 +1285,21 @@
                   "url": "content",
                   "valueMarkdown": "Container van het concept Monster. Deze container bevat alle gegevenselementen van het concept Monster."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Conteneur du concept Échantillon. Ce conteneur contient tous les éléments de données du concept Échantillon."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -788,7 +1318,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -798,7 +1327,21 @@
                   "url": "content",
                   "valueMarkdown": "Monsternummer"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "IDÉchantillon"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -806,7 +1349,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -816,7 +1358,21 @@
                   "url": "content",
                   "valueMarkdown": "Identificerend nummer van het afgenomen materiaal, ter referentie voor navraag bij bronorganisatie. In de transmurale setting bestaat dit nummer uit een monsternummer inclusief de identificatie van de uitgevende organisatie, om uniek te zijn buiten de grenzen van een organisatie."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Numéro d'identification du matériel obtenu, comme référence aux demandes de renseignements à l'organisation source. Dans un contexte transmural, ce numéro consistera en un numéro d'échantillon comprenant l'identification de l'organisme émetteur, afin d'être unique en dehors des limites d'un organisme."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -835,7 +1391,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -845,7 +1400,21 @@
                   "url": "content",
                   "valueMarkdown": "Monstervolgnummer"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ExtensionNuméroÉchantillon"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -853,7 +1422,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -863,7 +1431,21 @@
                   "url": "content",
                   "valueMarkdown": "Het monstervolgnummer wordt toegepast, als het verzamelde materiaal uit de oorspronkelijke buis of container verdeeld wordt over meerdere buizen. In combinatie met het monsternummer biedt het volgnummer de mogelijkheid de buis of container uniek te identificeren."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "L'extension de numéro d'échantillon est utilisée lorsque le matériel collecté est réparti sur plusieurs tubes à partir du tube ou du conteneur d'origine. En combinaison avec l'ID d'échantillon, l'extension permet une identification unique du tube ou du conteneur"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -882,7 +1464,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -892,7 +1473,21 @@
                   "url": "content",
                   "valueMarkdown": "Containertype"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TypeConteneur"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -900,7 +1495,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -910,7 +1504,21 @@
                   "url": "content",
                   "valueMarkdown": "Containertype beschrijft het omhulsel waarin het materiaal verzameld of verstuurd is. Voorbeelden zijn bloedbuizen, transportcontainer evt incl. kweekmedium."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le type de conteneur décrit l'enveloppe dans laquelle le matériel est collecté ou expédié. Par exemple, les tubes de sang, le conteneur de transport, y compris éventuellement le milieu de culture."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -924,6 +1532,23 @@
         "binding": {
           "strength": "preferred",
           "description": "ContainerType codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes TypeConteneur"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
           "valueSet": "https://fhir.healthdata.be/ValueSet/ContainerType"
         }
       },
@@ -934,7 +1559,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -944,7 +1568,21 @@
                   "url": "content",
                   "valueMarkdown": "Monstermateriaal"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MatérielÉchantillon"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -952,7 +1590,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -960,9 +1597,23 @@
                 },
                 {
                   "url": "content",
-                  "valueMarkdown": "Monstermateriaal beschrijft het afgenomen materiaal. Indien de LOINC testcode impliciet ook een materiaal beschrijft, mag dit element daar niet mee in strijd zijn. Indien gewenst kan dit gegeven wel een meer gedetailleerde beschrijving van het materiaal geven: LOINC codes bevatten de materialen alleen op hoofdniveau.\r\nDit is in lijn met de afspraken die gemaakt zijn in het IHE/Nictiz programma e-Lab.\r\n\r\nIndien de test uitgevoerd is op een afgeleid materiaal (bijv. plasma) bevat dit element toch het afgenomen materiaal (in dit geval bloed). De LOINC code zal in het algemeen in dit geval wel naar plasma wijzen."
+                  "valueMarkdown": "Monstermateriaal beschrijft het afgenomen materiaal. Indien de LOINC testcode impliciet ook een materiaal beschrijft, mag dit element daar niet mee in strijd zijn. Indien gewenst kan dit gegeven wel een meer gedetailleerde beschrijving van het materiaal geven: LOINC codes bevatten de materialen alleen op hoofdniveau.&#13;\nDit is in lijn met de afspraken die gemaakt zijn in het IHE/Nictiz programma e-Lab.&#13;\n&#13;\nIndien de test uitgevoerd is op een afgeleid materiaal (bijv. plasma) bevat dit element toch het afgenomen materiaal (in dit geval bloed). De LOINC code zal in het algemeen in dit geval wel naar plasma wijzen."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MatérielÉchantillon décrit le matériel obtenu. Si le code de test LOINC décrit également implicitement un matériel, cet élément ne peut pas entrer en conflit avec la description. Si on le souhaite, ce composant peut fournir une description plus détaillée du matériel : Les codes LOINC contiennent uniquement les matériels au niveau principal. \nCeci est conforme aux accords conclus dans le programme e-Lab IHE/Nictiz. \n\nSi le test est réalisé sur du matériel dérivé (comme le plasma), cet élément contiendra toujours le matériel prélevé (dans ce cas, le sang). Dans ce cas, le code LOINC se référera généralement au plasma."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -976,6 +1627,23 @@
         "binding": {
           "strength": "extensible",
           "description": "SpecimenMaterial codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes MatérielÉchantillon"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
           "valueSet": "https://fhir.healthdata.be/ValueSet/SpecimenMaterial"
         }
       },
@@ -986,7 +1654,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -996,7 +1663,21 @@
                   "url": "content",
                   "valueMarkdown": "AnatomischeLocatie"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "LocalisationAnatomique"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1004,7 +1685,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1014,7 +1694,21 @@
                   "url": "content",
                   "valueMarkdown": "Anatomische locatie waar het materiaal verzameld is, bijvoorbeeld elleboog."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Localisation anatomique où le matériel est collecté, *par ex. *coude."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1036,7 +1730,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1046,7 +1739,21 @@
                   "url": "content",
                   "valueMarkdown": "Microorganisme"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Micro-organisme"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1054,7 +1761,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1064,7 +1770,21 @@
                   "url": "content",
                   "valueMarkdown": "Bij met name microbiologische bepalingen is soms geen sprake van materiaal maar van een isolaat van een bepaald micro-organisme. Dit concept biedt de mogelijkheid informatie omtrent dit micro-organisme vast te leggen."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "En particulier dans les déterminations microbiologiques, le sujet du test est un isolat d'un certain micro-organisme plutôt qu'un matériel. Ce concept permet de saisir des informations sur ce micro-organisme."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1078,6 +1798,23 @@
         "binding": {
           "strength": "extensible",
           "description": "Microorganism codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes Micro-organisme"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
           "valueSet": "https://fhir.healthdata.be/ValueSet/Microorganism"
         }
       },
@@ -1088,7 +1825,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1098,7 +1834,21 @@
                   "url": "content",
                   "valueMarkdown": "Verzamelvolume"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VolumeCollecté"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1106,7 +1856,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1116,7 +1865,21 @@
                   "url": "content",
                   "valueMarkdown": "Totale volume van het verzamelde materiaal. Indien het noodzakelijk is om de absolute hoeveelheid van een bepaalde stof in het afgenomen of verzamelde materiaal te bepalen, dient het volume hiervan opgegeven te worden."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Volume total du matériel collecté. S'il est nécessaire de déterminer la quantité absolue d'une substance donnée dans le matériel collecté, le volume de ce dernier doit être indiqué."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1140,7 +1903,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1150,7 +1912,21 @@
                   "url": "content",
                   "valueMarkdown": "Verzamelperiode"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "PériodeCollecte"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1158,7 +1934,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1168,11 +1943,42 @@
                   "url": "content",
                   "valueMarkdown": "Indien het materiaal niet op één tijdstip afgenomen is maar gedurende een bepaalde tijd verzameld is, kan deze periode in dit concept vastgelegd worden. Een voorbeeld is 24 uurs urine."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Si le matériel n'a pas été collecté à un moment spécifique donné mais sur une certaine période, cette période peut être saisie dans ce concept. Par exemple, urine de 24 heures."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
         "comment": "TimeInterval.Duration is expressed in minutes (min).",
+        "_comment": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "IntervalleTemps. La durée est exprimée en minutes (min)."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
         "min": 0,
         "max": "1",
         "type": [
@@ -1191,7 +1997,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1201,7 +2006,21 @@
                   "url": "content",
                   "valueMarkdown": "AfnameDatumTijd"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DateHeureCollecte"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1209,7 +2028,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1219,7 +2037,21 @@
                   "url": "content",
                   "valueMarkdown": "Datum en tijdstip van afname van het materiaal."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Date et heure auxquelles le matériel a été collecté."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1238,7 +2070,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1248,7 +2079,21 @@
                   "url": "content",
                   "valueMarkdown": "AannameDatumTijd"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DateHeureRéception"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1256,7 +2101,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1266,7 +2110,21 @@
                   "url": "content",
                   "valueMarkdown": "Datum en tijdstip waarop het materiaal bij het laboratorium of prikpunt is afgegeven."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Date et heure auxquelles le matériel a été remis au laboratoire ou au centre de collecte des échantillons."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1285,7 +2143,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1295,7 +2152,21 @@
                   "url": "content",
                   "valueMarkdown": "Afnameprocedure"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MéthodeCollecte"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1303,7 +2174,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1313,7 +2183,21 @@
                   "url": "content",
                   "valueMarkdown": "Indien relevant voor de uitslag kan de wijze van verkrijgen van het monster opgegeven worden."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Si elle est pertinente pour les résultats, la méthode d'obtention de l'échantillon peut également être saisie."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1327,6 +2211,23 @@
         "binding": {
           "strength": "required",
           "description": "CollectionMethod codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes MéthodeCollecte"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
           "valueSet": "https://fhir.healthdata.be/ValueSet/CollectionMethod"
         }
       },
@@ -1337,7 +2238,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1347,7 +2247,21 @@
                   "url": "content",
                   "valueMarkdown": "Morfologie"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Morphologie"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1355,7 +2269,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1365,7 +2278,21 @@
                   "url": "content",
                   "valueMarkdown": "Morfologie beschrijft morfologische afwijkingen van de normale vorm van de anatomische locatie waar het materiaal is afgenomen, bijvoorbeeld wond, zweer."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La Morphologie décrit les anomalies morphologiques de la localisation anatomique où le matériel est prélevé, par exemple plaie, ulcère."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1379,6 +2306,23 @@
         "binding": {
           "strength": "required",
           "description": "Morphology codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes Morphologie"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
           "valueSet": "https://fhir.healthdata.be/ValueSet/Morphology"
         }
       },
@@ -1389,7 +2333,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1399,7 +2342,21 @@
                   "url": "content",
                   "valueMarkdown": "BronMonster"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SourceÉchantillon"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1407,7 +2364,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1417,7 +2373,21 @@
                   "url": "content",
                   "valueMarkdown": "Indien het materiaal niet rechtstreeks bij de patiënt afgenomen, maar afkomstig is van een aan de patiënt gerelateerd voorwerp, zoals b.v een cathetertip, kan deze bron van het materiaal hier vastgelegd worden."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Si le matériel n'est pas collecté directement sur le patient mais provient d'un objet lié au patient, *par ex.* une extrémité de cathéter, cette source de matériel peut être enregistrée ici."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1434,6 +2404,23 @@
         "binding": {
           "strength": "extensible",
           "description": "The source of the specimen",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "La source de l'échantillon"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
           "valueSet": "https://fhir.healthdata.be/ValueSet/SpecimenSource"
         }
       },
@@ -1444,7 +2431,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1454,7 +2440,21 @@
                   "url": "content",
                   "valueMarkdown": "Toelichting"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Commentaire"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1462,7 +2462,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1472,7 +2471,21 @@
                   "url": "content",
                   "valueMarkdown": "Opmerking over het monster, bijv. afname na (glucose)stimulus of medicijn inname."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Commentaires sur l'échantillon, tels que prélèvement du matériel après un stimulus (glucose) ou la prise de médicaments."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1491,7 +2504,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1501,7 +2513,21 @@
                   "url": "content",
                   "valueMarkdown": "Onderzoek"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "PanelOuBatterie"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1509,7 +2535,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1519,7 +2544,21 @@
                   "url": "content",
                   "valueMarkdown": "Bij een laboratoriumbepaling die uit meerdere subbepalingen bestaat en vaak als één geheel wordt aangevraagd bevat dit concept de naam van de samengestelde aanvraag (vaak aangeduid als panel, battery of cluster). Voorbeelden zijn: bloedgassen en EBV serologie."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Pour les tests de laboratoire comportant plusieurs sous-tests et souvent demandés ensemble, ce concept contient le nom de la demande composée (souvent indiquée comme ‘panel’, ‘batterie’ ou ‘cluster’). Exemples : gaz sanguin et sérologie EBV. \n\nLa codification à utiliser DEVRAIT être LOINC, conformément au sous-ensemble défini par le SPF Santé publique, pour la majorité des demandes et des mesures de laboratoire couramment utilisées. Ce sous-ensemble est disponible sur le [site Internet du SPF Santé publique](https://www.vas.ehealth.fgov.be/webretam/retam/home.htm)."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1538,7 +2577,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1548,7 +2586,21 @@
                   "url": "content",
                   "valueMarkdown": "ResultaatStatus"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "StatutRésultat"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1556,7 +2608,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1566,7 +2617,21 @@
                   "url": "content",
                   "valueMarkdown": "De status van de laboratoriumuitslag. Indien het onderzoek uit meerdere testen bestaat, geeft het de status van het gehele onderzoek aan. Indien tevens de status per deelonderzoek gebruikt wordt, moet deze status daarmee in overeenstemming zijn."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le statut du résultat du test de laboratoire. Si le test de laboratoire est un panel/cluster, ce statut reflète le statut du panel/cluster dans son ensemble. Si l'élément statut par sous-test est également utilisé, ce statut doit être conforme à ces valeurs de statut."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1580,6 +2645,23 @@
         "binding": {
           "strength": "extensible",
           "description": "TestResultStatus codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes StatutRésultatTest"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
           "valueSet": "https://fhir.healthdata.be/ValueSet/TestResultStatus"
         }
       },
@@ -1590,7 +2672,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1600,7 +2681,21 @@
                   "url": "content",
                   "valueMarkdown": "Toelichting"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Commentaire"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1608,7 +2703,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1618,7 +2712,21 @@
                   "url": "content",
                   "valueMarkdown": "Opmerkingen, zoals bv. tekstuele interpretatie of advies bij de uitslag."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Des commentaires, comme une interprétation textuelle ou des conseils accompagnant le résultat, par exemple."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1637,7 +2745,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1647,7 +2754,21 @@
                   "url": "content",
                   "valueMarkdown": "ResultaatType"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TypeRésultat"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1655,7 +2776,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1665,7 +2785,21 @@
                   "url": "content",
                   "valueMarkdown": "Het resultaattype definieert de laboratoriumspecialiteit waaronder de bepaling valt."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le type de résultat définit la spécialité de laboratoire sous laquelle le test est classé."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1679,6 +2813,23 @@
         "binding": {
           "strength": "extensible",
           "description": "ResultType codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes TypeRésultat"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
           "valueSet": "https://fhir.healthdata.be/ValueSet/ResultType"
         }
       },
@@ -1689,7 +2840,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1699,7 +2849,21 @@
                   "url": "content",
                   "valueMarkdown": "GerelateerdeUitslag"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "RésultatLié"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1707,7 +2871,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1717,7 +2880,21 @@
                   "url": "content",
                   "valueMarkdown": "Verwijzing naar een gerelateerd onderzoek, bij voorbeeld bij gepaarde onderzoeken of sequentiele onderzoeken als gramkleuring en microbiologische kweken"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Référence à des tests liés, *par ex.* des tests jumelés ou tests séquentiels comme coloration de Gram et cultures microbiologiques"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1739,7 +2916,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1749,7 +2925,21 @@
                   "url": "content",
                   "valueMarkdown": "Aanvrager"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Demandeur"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1757,7 +2947,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1767,7 +2956,21 @@
                   "url": "content",
                   "valueMarkdown": "De zorgverlener en/of organisatie waar of door wie de LaboratoriumUitslag werd aangevraagd."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le professionnel de la santé et/ou l'organisation qui a demandé le RésultatTestLaboratoire."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1789,7 +2992,6 @@
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1799,7 +3001,21 @@
                   "url": "content",
                   "valueMarkdown": "Uitvoerder"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Exécutant"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -1807,7 +3023,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -1817,7 +3032,21 @@
                   "url": "content",
                   "valueMarkdown": "De zorgaanbieder en/of organisatie waar of door wie de LaboratoriumUitslag werd uitgevoerd."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le ProfessionnelSanté responsable du RésultatTestLaboratoire. Le laboratoire d'exécution (OrganismeSoins) est référencé par le biais du ProfessionnelSanté."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
