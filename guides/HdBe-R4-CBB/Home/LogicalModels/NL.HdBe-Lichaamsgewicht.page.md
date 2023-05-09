@@ -15,7 +15,7 @@ from StructureDefinition
 where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-BodyWeight'
 select 
 CBB: id,
-join for description.extension where extension.valueCode = 'nl-NL' select { Concept: extension.valueMarkdown}, 
+join for description.extension.where(url='http://hl7.org/fhir/StructureDefinition/translation') where extension.where(url='lang').value = 'nl-NL' select {Concept: extension.where(url='content').value}, 
 Version: version,
 Status: status
 ```
