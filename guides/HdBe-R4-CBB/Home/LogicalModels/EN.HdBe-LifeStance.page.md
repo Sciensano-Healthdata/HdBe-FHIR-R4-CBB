@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/NL.HdBe-Levensovertuiging.page.md, text:NL }} </p>
-</div>
+---
+topic: EN.HdBe-LifeStance
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-LifeStance, text:EN}}  {{pagelink:NL.HdBe-Levensovertuiging, text:NL}}  <p>
+</div>
 
 # HdBe-LifeStance
 

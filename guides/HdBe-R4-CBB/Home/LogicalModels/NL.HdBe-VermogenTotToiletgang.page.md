@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-AbilityToUseToilet.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-VermogenTotToiletgang
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-AbilityToUseToilet, text:EN}}  {{pagelink:NL.HdBe-VermogenTotToiletgang, text:NL}}  <p>
+</div>
 
 # HdBe-VermogenTotToiletgang
 

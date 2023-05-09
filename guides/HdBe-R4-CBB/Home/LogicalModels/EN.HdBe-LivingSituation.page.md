@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/NL.HdBe-Woonsituatie.page.md, text:NL }} </p>
-</div>
+---
+topic: EN.HdBe-LivingSituation
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-LivingSituation, text:EN}}  {{pagelink:NL.HdBe-Woonsituatie, text:NL}}  {{pagelink:FR.HdBe-SituationVie, text:FR}}<p>
+</div>
 
 # HdBe-LivingSituation
 

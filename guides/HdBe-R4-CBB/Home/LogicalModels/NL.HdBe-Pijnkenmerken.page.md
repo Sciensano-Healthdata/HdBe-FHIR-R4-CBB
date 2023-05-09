@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-PainCharacteristics.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-Pijnkenmerken
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-PainCharacteristics, text:EN}}  {{pagelink:NL.HdBe-Pijnkenmerken, text:NL}}  <p>
+</div>
 
 # HdBe-Pijnkenmerken
 

@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-Mobility.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-Mobiliteit
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-Mobility, text:EN}}  {{pagelink:NL.HdBe-Mobiliteit, text:NL}}  <p>
+</div>
 
 # HdBe-Mobiliteit
 

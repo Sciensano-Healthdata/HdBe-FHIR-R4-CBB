@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/NL.HdBe-Voedingsadvies.page.md, text:NL }} </p>
-</div>
+---
+topic: EN.HdBe-NutritionAdvice
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-NutritionAdvice, text:EN}}  {{pagelink:NL.HdBe-Voedingsadvies, text:NL}}  {{pagelink:FR.HdBe-ConseilNutritionnel, text:FR}}<p>
+</div>
 
 # HdBe-NutritionAdvice
 

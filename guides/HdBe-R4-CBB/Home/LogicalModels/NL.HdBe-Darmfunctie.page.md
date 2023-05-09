@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-BowelFunction.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-Darmfunctie
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-BowelFunction, text:EN}}  {{pagelink:NL.HdBe-Darmfunctie, text:NL}}  <p>
+</div>
 
 # HdBe-Darmfunctie
 

@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-Payer.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-Betaler
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-Payer, text:EN}}  {{pagelink:NL.HdBe-Betaler, text:NL}}  {{pagelink:FR.HdBe-Payeur, text:FR}}<p>
+</div>
 
 # HdBe-Betaler
 

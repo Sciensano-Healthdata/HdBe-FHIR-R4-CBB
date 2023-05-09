@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/NL.HdBe-SNAQScore.page.md, text:NL }} </p>
-</div>
+---
+topic: EN.HdBe-SNAQScore
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-SNAQScore, text:EN}}  {{pagelink:NL.HdBe-SNAQScore, text:NL}}  <p>
+</div>
 
 # HdBe-SNAQScore
 

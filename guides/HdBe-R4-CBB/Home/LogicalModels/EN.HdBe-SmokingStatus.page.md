@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/NL.HdBe-TabakGebruik.page.md, text:NL }} </p>
-</div>
+---
+topic: EN.HdBe-SmokingStatus
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-SmokingStatus, text:EN}}  {{pagelink:NL.HdBe-TabakGebruik, text:NL}}  {{pagelink:FR.HdBe-StatutTabagique, text:FR}}<p>
+</div>
 
 # HdBe-SmokingStatus
 

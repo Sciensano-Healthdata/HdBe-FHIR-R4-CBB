@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-FeedingPatternInfant.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-VoedingspatroonZuigeling
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-FeedingPatternInfant, text:EN}}  {{pagelink:NL.HdBe-VoedingspatroonZuigeling, text:NL}}  <p>
+</div>
 
 # HdBe-VoedingspatroonZuigeling
 

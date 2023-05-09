@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-BarthelADLIndex.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-BarthelIndex
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-BarthelADLIndex, text:EN}}  {{pagelink:NL.HdBe-BarthelIndex, text:NL}}  <p>
+</div>
 
 # HdBe-BarthelIndex
 

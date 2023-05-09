@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/NL.HdBe-Lichaamslengte.page.md, text:NL }} </p>
-</div>
+---
+topic: EN.HdBe-BodyHeight
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-BodyHeight, text:EN}}  {{pagelink:NL.HdBe-Lichaamslengte, text:NL}}  {{pagelink:FR.HdBe-TailleCorporelle, text:FR}}<p>
+</div>
 
 # HdBe-BodyHeight
 

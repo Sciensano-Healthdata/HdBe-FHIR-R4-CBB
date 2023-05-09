@@ -1,8 +1,12 @@
+---
+topic: profile_index
+---
+
 # FHIR profiles representing Clinical Building Blocks (CBB)
 The table below contains links to FHIR profiles that belong to a CBB. This table gets updated with working links once profiles are created and have gone through the review process.
 
 <div >
-	<table border="0" class="dataframe table">
+	<table class="dataframe table">
   <thead>
     <tr style="text-align: right;">
       <th>A - C</th>

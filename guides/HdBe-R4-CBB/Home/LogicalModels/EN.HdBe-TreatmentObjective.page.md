@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/NL.HdBe-Behandeldoel.page.md, text:NL }} </p>
-</div>
+---
+topic: EN.HdBe-TreatmentObjective
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-TreatmentObjective, text:EN}}  {{pagelink:NL.HdBe-Behandeldoel, text:NL}}  {{pagelink:FR.HdBe-ObjectifTraitement, text:FR}}<p>
+</div>
 
 # HdBe-TreatmentObjective
 

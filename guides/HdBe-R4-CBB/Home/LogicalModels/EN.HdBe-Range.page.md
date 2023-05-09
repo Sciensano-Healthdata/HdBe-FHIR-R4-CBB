@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/NL.HdBe-Bereik.page.md, text:NL }} </p>
-</div>
+---
+topic: EN.HdBe-Range
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-Range, text:EN}}  {{pagelink:NL.HdBe-Bereik, text:NL}}  {{pagelink:FR.HdBe-Plage, text:FR}}<p>
+</div>
 
 # HdBe-Range
 

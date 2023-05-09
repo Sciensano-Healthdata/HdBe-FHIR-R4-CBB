@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/NL.HdBe-AllergieIntolerantie.page.md, text:NL }} </p>
-</div>
+---
+topic: EN.HdBe-AllergyIntolerance
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-AllergyIntolerance, text:EN}}  {{pagelink:NL.HdBe-AllergieIntolerantie, text:NL}}  {{pagelink:FR.HdBe-IntoléranceAllergie, text:FR}}<p>
+</div>
 
 # HdBe-AllergyIntolerance
 

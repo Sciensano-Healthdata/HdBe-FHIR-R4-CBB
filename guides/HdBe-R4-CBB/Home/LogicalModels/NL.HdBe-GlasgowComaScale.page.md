@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-GlasgowComaScale.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-GlasgowComaScale
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-GlasgowComaScale, text:EN}}  {{pagelink:NL.HdBe-GlasgowComaScale, text:NL}}  <p>
+</div>
 
 # HdBe-GlasgowComaScale
 

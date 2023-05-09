@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/NL.HdBe-Opleiding.page.md, text:NL }} </p>
-</div>
+---
+topic: EN.HdBe-Education
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-Education, text:EN}}  {{pagelink:NL.HdBe-Opleiding, text:NL}}  <p>
+</div>
 
 # HdBe-Education
 

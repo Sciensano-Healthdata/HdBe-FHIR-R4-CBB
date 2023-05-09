@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-HeadCircumference.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-Schedelomvang
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-HeadCircumference, text:EN}}  {{pagelink:NL.HdBe-Schedelomvang, text:NL}}  <p>
+</div>
 
 # HdBe-Schedelomvang
 

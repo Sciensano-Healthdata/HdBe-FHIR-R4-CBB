@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/NL.HdBe-VermogenTotZichWassen.page.md, text:NL }} </p>
-</div>
+---
+topic: EN.HdBe-AbilityToWashOneself
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-AbilityToWashOneself, text:EN}}  {{pagelink:NL.HdBe-VermogenTotZichWassen, text:NL}}  <p>
+</div>
 
 # HdBe-AbilityToWashOneself
 

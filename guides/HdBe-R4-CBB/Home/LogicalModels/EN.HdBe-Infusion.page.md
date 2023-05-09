@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/NL.HdBe-Infuus.page.md, text:NL }} </p>
-</div>
+---
+topic: EN.HdBe-Infusion
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-Infusion, text:EN}}  {{pagelink:NL.HdBe-Infuus, text:NL}}  <p>
+</div>
 
 # HdBe-Infusion
 

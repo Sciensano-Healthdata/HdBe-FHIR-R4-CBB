@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/NL.HdBe-VermogenTotVerpleegtechnischeHandelingen.page.md, text:NL }} </p>
-</div>
+---
+topic: EN.HdBe-AbilityToPerformNursingActivities
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-AbilityToPerformNursingActivities, text:EN}}  {{pagelink:NL.HdBe-VermogenTotVerpleegtechnischeHandelingen, text:NL}}  <p>
+</div>
 
 # HdBe-AbilityToPerformNursingActivities
 

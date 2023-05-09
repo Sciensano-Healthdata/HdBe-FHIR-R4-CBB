@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/NL.HdBe-HulpVanAnderen.page.md, text:NL }} </p>
-</div>
+---
+topic: EN.HdBe-HelpFromOthers
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-HelpFromOthers, text:EN}}  {{pagelink:NL.HdBe-HulpVanAnderen, text:NL}}  <p>
+</div>
 
 # HdBe-HelpFromOthers
 

@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-MaritalStatus.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-BurgerlijkeStaat
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-MaritalStatus, text:EN}}  {{pagelink:NL.HdBe-BurgerlijkeStaat, text:NL}}  {{pagelink:FR.HdBe-ÉtatCivil, text:FR}}<p>
+</div>
 
 # HdBe-BurgerlijkeStaat
 

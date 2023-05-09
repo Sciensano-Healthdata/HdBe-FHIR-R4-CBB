@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-DrugUse.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-DrugsGebruik
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-DrugUse, text:EN}}  {{pagelink:NL.HdBe-DrugsGebruik, text:NL}}  {{pagelink:FR.HdBe-ConsommationDrogue, text:FR}}<p>
+</div>
 
 # HdBe-DrugsGebruik
 

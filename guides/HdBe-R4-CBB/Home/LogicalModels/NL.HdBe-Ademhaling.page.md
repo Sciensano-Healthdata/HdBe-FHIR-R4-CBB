@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-Respiration.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-Ademhaling
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-Respiration, text:EN}}  {{pagelink:NL.HdBe-Ademhaling, text:NL}}  <p>
+</div>
 
 # HdBe-Ademhaling
 

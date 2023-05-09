@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/NL.HdBe-Gezinssituatie.page.md, text:NL }} </p>
-</div>
+---
+topic: EN.HdBe-FamilySituation
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-FamilySituation, text:EN}}  {{pagelink:NL.HdBe-Gezinssituatie, text:NL}}  <p>
+</div>
 
 # HdBe-FamilySituation
 

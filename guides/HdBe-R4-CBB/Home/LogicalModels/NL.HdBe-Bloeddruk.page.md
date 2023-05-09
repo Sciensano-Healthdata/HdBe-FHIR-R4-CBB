@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-BloodPressure.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-Bloeddruk
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-BloodPressure, text:EN}}  {{pagelink:NL.HdBe-Bloeddruk, text:NL}}  {{pagelink:FR.HdBe-TensionArtérielle, text:FR}}<p>
+</div>
 
 # HdBe-Bloeddruk
 

@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-TimeInterval.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-TijdsInterval
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-TimeInterval, text:EN}}  {{pagelink:NL.HdBe-TijdsInterval, text:NL}}  {{pagelink:FR.HdBe-IntervalleTemps, text:FR}}<p>
+</div>
 
 # HdBe-TijdsInterval
 

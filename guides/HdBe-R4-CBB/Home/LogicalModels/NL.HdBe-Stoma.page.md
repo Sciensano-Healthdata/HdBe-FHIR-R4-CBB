@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-Stoma.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-Stoma
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-Stoma, text:EN}}  {{pagelink:NL.HdBe-Stoma, text:NL}}  <p>
+</div>
 
 # HdBe-Stoma
 

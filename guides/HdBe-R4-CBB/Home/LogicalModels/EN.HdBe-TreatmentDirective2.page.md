@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/NL.HdBe-BehandelAanwijzing2.page.md, text:NL }} </p>
-</div>
+---
+topic: EN.HdBe-TreatmentDirective2
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-TreatmentDirective2, text:EN}}  {{pagelink:NL.HdBe-BehandelAanwijzing2, text:NL}}  {{pagelink:FR.HdBe-DirectiveTraitement2, text:FR}}<p>
+</div>
 
 # HdBe-TreatmentDirective2
 

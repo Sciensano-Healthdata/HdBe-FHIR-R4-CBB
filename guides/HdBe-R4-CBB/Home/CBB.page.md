@@ -1,3 +1,7 @@
+---
+topic: cbb_index
+---
+
 # Clinical Building Blocks (CBB)  
 
 <div>
@@ -8,7 +12,7 @@
   </div>
 
   <div id="EN" class="tabcontent" style="display: block;border: none;padding-left: 0px;padding-right: 0px;">
-     <table border="0" class="dataframe table">
+     <table class="dataframe table">
   <thead>
     <tr style="text-align: right;">
       <th>A - C</th>
@@ -19,159 +23,159 @@
   </thead>
   <tbody>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-AbilityToDressOneself.page.md, text:AbilityToDressOneself}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-ContactInformation.page.md, text:ContactInformation}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-Infusion.page.md, text:Infusion}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-PharmaceuticalProduct.page.md, text:PharmaceuticalProduct}}</td>
+      <td>{{pagelink:EN.HdBe-AbilityToDressOneself, text:AbilityToDressOneself}}</td>
+      <td>{{pagelink:EN.HdBe-ContactInformation, text:ContactInformation}}</td>
+      <td>{{pagelink:EN.HdBe-Infusion, text:Infusion}}</td>
+      <td>{{pagelink:EN.HdBe-PharmaceuticalProduct, text:PharmaceuticalProduct}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-AbilityToDrink.page.md, text:AbilityToDrink}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-ContactPerson.page.md, text:ContactPerson}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-InstructionsForUse.page.md, text:InstructionsForUse}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-Pregnancy.page.md, text:Pregnancy}}</td>
+      <td>{{pagelink:EN.HdBe-AbilityToDrink, text:AbilityToDrink}}</td>
+      <td>{{pagelink:EN.HdBe-ContactPerson, text:ContactPerson}}</td>
+      <td>{{pagelink:EN.HdBe-InstructionsForUse, text:InstructionsForUse}}</td>
+      <td>{{pagelink:EN.HdBe-Pregnancy, text:Pregnancy}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-AbilityToEat.page.md, text:AbilityToEat}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-DAS.page.md, text:DAS}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-LaboratoryTestResult.page.md, text:LaboratoryTestResult}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-PressureUlcer.page.md, text:PressureUlcer}}</td>
+      <td>{{pagelink:EN.HdBe-AbilityToEat, text:AbilityToEat}}</td>
+      <td>{{pagelink:EN.HdBe-DAS, text:DAS}}</td>
+      <td>{{pagelink:EN.HdBe-LaboratoryTestResult, text:LaboratoryTestResult}}</td>
+      <td>{{pagelink:EN.HdBe-PressureUlcer, text:PressureUlcer}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-AbilityToGroom.page.md, text:AbilityToGroom}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-DevelopmentChild.page.md, text:DevelopmentChild}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-LanguageProficiency.page.md, text:LanguageProficiency}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-Problem.page.md, text:Problem}}</td>
+      <td>{{pagelink:EN.HdBe-AbilityToGroom, text:AbilityToGroom}}</td>
+      <td>{{pagelink:EN.HdBe-DevelopmentChild, text:DevelopmentChild}}</td>
+      <td>{{pagelink:EN.HdBe-LanguageProficiency, text:LanguageProficiency}}</td>
+      <td>{{pagelink:EN.HdBe-Problem, text:Problem}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-AbilityToManageMedication.page.md, text:AbilityToManageMedication}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-DispenseRequest.page.md, text:DispenseRequest}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-LegalSituation.page.md, text:LegalSituation}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-Procedure.page.md, text:Procedure}}</td>
+      <td>{{pagelink:EN.HdBe-AbilityToManageMedication, text:AbilityToManageMedication}}</td>
+      <td>{{pagelink:EN.HdBe-DispenseRequest, text:DispenseRequest}}</td>
+      <td>{{pagelink:EN.HdBe-LegalSituation, text:LegalSituation}}</td>
+      <td>{{pagelink:EN.HdBe-Procedure, text:Procedure}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-AbilityToPerformMouthcareActivities.page.md, text:AbilityToPerformMouthcareActivities}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-DOSScore.page.md, text:DOSScore}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-LifeStance.page.md, text:LifeStance}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-PulseRate.page.md, text:PulseRate}}</td>
+      <td>{{pagelink:EN.HdBe-AbilityToPerformMouthcareActivities, text:AbilityToPerformMouthcareActivities}}</td>
+      <td>{{pagelink:EN.HdBe-DOSScore, text:DOSScore}}</td>
+      <td>{{pagelink:EN.HdBe-LifeStance, text:LifeStance}}</td>
+      <td>{{pagelink:EN.HdBe-PulseRate, text:PulseRate}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-AbilityToPerformNursingActivities.page.md, text:AbilityToPerformNursingActivities}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-DrugUse.page.md, text:DrugUse}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-LivingSituation.page.md, text:LivingSituation}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-Range.page.md, text:Range}}</td>
+      <td>{{pagelink:EN.HdBe-AbilityToPerformNursingActivities, text:AbilityToPerformNursingActivities}}</td>
+      <td>{{pagelink:EN.HdBe-DrugUse, text:DrugUse}}</td>
+      <td>{{pagelink:EN.HdBe-LivingSituation, text:LivingSituation}}</td>
+      <td>{{pagelink:EN.HdBe-Range, text:Range}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-AbilityToUseToilet.page.md, text:AbilityToUseToilet}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-Education.page.md, text:Education}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-MaritalStatus.page.md, text:MaritalStatus}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-Refraction.page.md, text:Refraction}}</td>
+      <td>{{pagelink:EN.HdBe-AbilityToUseToilet, text:AbilityToUseToilet}}</td>
+      <td>{{pagelink:EN.HdBe-Education, text:Education}}</td>
+      <td>{{pagelink:EN.HdBe-MaritalStatus, text:MaritalStatus}}</td>
+      <td>{{pagelink:EN.HdBe-Refraction, text:Refraction}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-AbilityToWashOneself.page.md, text:AbilityToWashOneself}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-Encounter.page.md, text:Encounter}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-MedicalDevice.page.md, text:MedicalDevice}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-Respiration.page.md, text:Respiration}}</td>
+      <td>{{pagelink:EN.HdBe-AbilityToWashOneself, text:AbilityToWashOneself}}</td>
+      <td>{{pagelink:EN.HdBe-Encounter, text:Encounter}}</td>
+      <td>{{pagelink:EN.HdBe-MedicalDevice, text:MedicalDevice}}</td>
+      <td>{{pagelink:EN.HdBe-Respiration, text:Respiration}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-AddressInformation.page.md, text:AddressInformation}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-EpisodeOfCare.page.md, text:EpisodeOfCare}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-MedicationAdministration2.page.md, text:MedicationAdministration2}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-SkinDisorder.page.md, text:SkinDisorder}}</td>
+      <td>{{pagelink:EN.HdBe-AddressInformation, text:AddressInformation}}</td>
+      <td>{{pagelink:EN.HdBe-EpisodeOfCare, text:EpisodeOfCare}}</td>
+      <td>{{pagelink:EN.HdBe-MedicationAdministration2, text:MedicationAdministration2}}</td>
+      <td>{{pagelink:EN.HdBe-SkinDisorder, text:SkinDisorder}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-AdministrationAgreement.page.md, text:AdministrationAgreement}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-FamilyHistory.page.md, text:FamilyHistory}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-MedicationAgreement.page.md, text:MedicationAgreement}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-SmokingStatus.page.md, text:SmokingStatus}}</td>
+      <td>{{pagelink:EN.HdBe-AdministrationAgreement, text:AdministrationAgreement}}</td>
+      <td>{{pagelink:EN.HdBe-FamilyHistory, text:FamilyHistory}}</td>
+      <td>{{pagelink:EN.HdBe-MedicationAgreement, text:MedicationAgreement}}</td>
+      <td>{{pagelink:EN.HdBe-SmokingStatus, text:SmokingStatus}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-AdvanceDirective.page.md, text:AdvanceDirective}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-FamilySituation.page.md, text:FamilySituation}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-MedicationContraIndication.page.md, text:MedicationContraIndication}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-SNAQScore.page.md, text:SNAQScore}}</td>
+      <td>{{pagelink:EN.HdBe-AdvanceDirective, text:AdvanceDirective}}</td>
+      <td>{{pagelink:EN.HdBe-FamilySituation, text:FamilySituation}}</td>
+      <td>{{pagelink:EN.HdBe-MedicationContraIndication, text:MedicationContraIndication}}</td>
+      <td>{{pagelink:EN.HdBe-SNAQScore, text:SNAQScore}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-AlcoholUse.page.md, text:AlcoholUse}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-FamilySituationChild.page.md, text:FamilySituationChild}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-MedicationDispense.page.md, text:MedicationDispense}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-SOAPReport.page.md, text:SOAPReport}}</td>
+      <td>{{pagelink:EN.HdBe-AlcoholUse, text:AlcoholUse}}</td>
+      <td>{{pagelink:EN.HdBe-FamilySituationChild, text:FamilySituationChild}}</td>
+      <td>{{pagelink:EN.HdBe-MedicationDispense, text:MedicationDispense}}</td>
+      <td>{{pagelink:EN.HdBe-SOAPReport, text:SOAPReport}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-Alert.page.md, text:Alert}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-FeedingPatternInfant.page.md, text:FeedingPatternInfant}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-MedicationUse2.page.md, text:MedicationUse2}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-Stoma.page.md, text:Stoma}}</td>
+      <td>{{pagelink:EN.HdBe-Alert, text:Alert}}</td>
+      <td>{{pagelink:EN.HdBe-FeedingPatternInfant, text:FeedingPatternInfant}}</td>
+      <td>{{pagelink:EN.HdBe-MedicationUse2, text:MedicationUse2}}</td>
+      <td>{{pagelink:EN.HdBe-Stoma, text:Stoma}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-AllergyIntolerance.page.md, text:AllergyIntolerance}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-FeedingTubeSystem.page.md, text:FeedingTubeSystem}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-Mobility.page.md, text:Mobility}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-TextResult.page.md, text:TextResult}}</td>
+      <td>{{pagelink:EN.HdBe-AllergyIntolerance, text:AllergyIntolerance}}</td>
+      <td>{{pagelink:EN.HdBe-FeedingTubeSystem, text:FeedingTubeSystem}}</td>
+      <td>{{pagelink:EN.HdBe-Mobility, text:Mobility}}</td>
+      <td>{{pagelink:EN.HdBe-TextResult, text:TextResult}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-AnatomicalLocation.page.md, text:AnatomicalLocation}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-FluidBalance.page.md, text:FluidBalance}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-NameInformation.page.md, text:NameInformation}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-TimeInterval.page.md, text:TimeInterval}}</td>
+      <td>{{pagelink:EN.HdBe-AnatomicalLocation, text:AnatomicalLocation}}</td>
+      <td>{{pagelink:EN.HdBe-FluidBalance, text:FluidBalance}}</td>
+      <td>{{pagelink:EN.HdBe-NameInformation, text:NameInformation}}</td>
+      <td>{{pagelink:EN.HdBe-TimeInterval, text:TimeInterval}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-ApgarScore.page.md, text:ApgarScore}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-FreedomRestrictingIntervention.page.md, text:FreedomRestrictingIntervention}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-Nationality.page.md, text:Nationality}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-TNMTumorClassification.page.md, text:TNMTumorClassification}}</td>
+      <td>{{pagelink:EN.HdBe-ApgarScore, text:ApgarScore}}</td>
+      <td>{{pagelink:EN.HdBe-FreedomRestrictingIntervention, text:FreedomRestrictingIntervention}}</td>
+      <td>{{pagelink:EN.HdBe-Nationality, text:Nationality}}</td>
+      <td>{{pagelink:EN.HdBe-TNMTumorClassification, text:TNMTumorClassification}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-BarthelADLIndex.page.md, text:BarthelADLIndex}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-FunctionalOrMentalStatus.page.md, text:FunctionalOrMentalStatus}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-NursingIntervention.page.md, text:NursingIntervention}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-TreatmentDirective2.page.md, text:TreatmentDirective2}}</td>
+      <td>{{pagelink:EN.HdBe-BarthelADLIndex, text:BarthelADLIndex}}</td>
+      <td>{{pagelink:EN.HdBe-FunctionalOrMentalStatus, text:FunctionalOrMentalStatus}}</td>
+      <td>{{pagelink:EN.HdBe-NursingIntervention, text:NursingIntervention}}</td>
+      <td>{{pagelink:EN.HdBe-TreatmentDirective2, text:TreatmentDirective2}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-BladderFunction.page.md, text:BladderFunction}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-GlasgowComaScale.page.md, text:GlasgowComaScale}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-NutritionAdvice.page.md, text:NutritionAdvice}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-TreatmentObjective.page.md, text:TreatmentObjective}}</td>
+      <td>{{pagelink:EN.HdBe-BladderFunction, text:BladderFunction}}</td>
+      <td>{{pagelink:EN.HdBe-GlasgowComaScale, text:GlasgowComaScale}}</td>
+      <td>{{pagelink:EN.HdBe-NutritionAdvice, text:NutritionAdvice}}</td>
+      <td>{{pagelink:EN.HdBe-TreatmentObjective, text:TreatmentObjective}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-BloodPressure.page.md, text:BloodPressure}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-HeadCircumference.page.md, text:HeadCircumference}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-O2Saturation.page.md, text:O2Saturation}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-Vaccination.page.md, text:Vaccination}}</td>
+      <td>{{pagelink:EN.HdBe-BloodPressure, text:BloodPressure}}</td>
+      <td>{{pagelink:EN.HdBe-HeadCircumference, text:HeadCircumference}}</td>
+      <td>{{pagelink:EN.HdBe-O2Saturation, text:O2Saturation}}</td>
+      <td>{{pagelink:EN.HdBe-Vaccination, text:Vaccination}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-BodyHeight.page.md, text:BodyHeight}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-HealthcareOrganization.page.md, text:HealthcareOrganization}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-OutcomeOfCare.page.md, text:OutcomeOfCare}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-VisualAcuity.page.md, text:VisualAcuity}}</td>
+      <td>{{pagelink:EN.HdBe-BodyHeight, text:BodyHeight}}</td>
+      <td>{{pagelink:EN.HdBe-HealthcareOrganization, text:HealthcareOrganization}}</td>
+      <td>{{pagelink:EN.HdBe-OutcomeOfCare, text:OutcomeOfCare}}</td>
+      <td>{{pagelink:EN.HdBe-VisualAcuity, text:VisualAcuity}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-BodyTemperature.page.md, text:BodyTemperature}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-HealthProfessional.page.md, text:HealthProfessional}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-PainCharacteristics.page.md, text:PainCharacteristics}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-VisualFunction.page.md, text:VisualFunction}}</td>
+      <td>{{pagelink:EN.HdBe-BodyTemperature, text:BodyTemperature}}</td>
+      <td>{{pagelink:EN.HdBe-HealthProfessional, text:HealthProfessional}}</td>
+      <td>{{pagelink:EN.HdBe-PainCharacteristics, text:PainCharacteristics}}</td>
+      <td>{{pagelink:EN.HdBe-VisualFunction, text:VisualFunction}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-BodyWeight.page.md, text:BodyWeight}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-HearingFunction.page.md, text:HearingFunction}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-PainScore.page.md, text:PainScore}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-Wound.page.md, text:Wound}}</td>
+      <td>{{pagelink:EN.HdBe-BodyWeight, text:BodyWeight}}</td>
+      <td>{{pagelink:EN.HdBe-HearingFunction, text:HearingFunction}}</td>
+      <td>{{pagelink:EN.HdBe-PainScore, text:PainScore}}</td>
+      <td>{{pagelink:EN.HdBe-Wound, text:Wound}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-BowelFunction.page.md, text:BowelFunction}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-HeartRate.page.md, text:HeartRate}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-ParticipationInSociety.page.md, text:ParticipationInSociety}}</td>
+      <td>{{pagelink:EN.HdBe-BowelFunction, text:BowelFunction}}</td>
+      <td>{{pagelink:EN.HdBe-HeartRate, text:HeartRate}}</td>
+      <td>{{pagelink:EN.HdBe-ParticipationInSociety, text:ParticipationInSociety}}</td>
       <td></td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-Burnwound.page.md, text:Burnwound}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-HelpFromOthers.page.md, text:HelpFromOthers}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-Patient.page.md, text:Patient}}</td>
+      <td>{{pagelink:EN.HdBe-Burnwound, text:Burnwound}}</td>
+      <td>{{pagelink:EN.HdBe-HelpFromOthers, text:HelpFromOthers}}</td>
+      <td>{{pagelink:EN.HdBe-Patient, text:Patient}}</td>
       <td></td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-CareTeam.page.md, text:CareTeam}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-IllnessPerception.page.md, text:IllnessPerception}}</td>
-      <td>{{pagelink:Home/LogicalModels/EN.HdBe-Payer.page.md, text:Payer}}</td>
+      <td>{{pagelink:EN.HdBe-CareTeam, text:CareTeam}}</td>
+      <td>{{pagelink:EN.HdBe-IllnessPerception, text:IllnessPerception}}</td>
+      <td>{{pagelink:EN.HdBe-Payer, text:Payer}}</td>
       <td></td>
     </tr>
   </tbody>
@@ -179,7 +183,7 @@
   </div>
 
   <div id="NL" class="tabcontent" style="border: none;padding-left: 0px;padding-right: 0px;">
-      <table border="0" class="dataframe table">
+      <table class="dataframe table">
   <thead>
     <tr style="text-align: right;">
       <th>A - F</th>
@@ -190,159 +194,159 @@
   </thead>
   <tbody>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Ademhaling.page.md, text:Ademhaling}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-FunctieHoren.page.md, text:FunctieHoren}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-O2Saturatie.page.md, text:O2Saturatie}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-VermogenTotToiletgang.page.md, text:VermogenTotToiletgang}}</td>
+      <td>{{pagelink:NL.HdBe-Ademhaling, text:Ademhaling}}</td>
+      <td>{{pagelink:NL.HdBe-FunctieHoren, text:FunctieHoren}}</td>
+      <td>{{pagelink:NL.HdBe-O2Saturatie, text:O2Saturatie}}</td>
+      <td>{{pagelink:NL.HdBe-VermogenTotToiletgang, text:VermogenTotToiletgang}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Adresgegevens.page.md, text:Adresgegevens}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-FunctieZien.page.md, text:FunctieZien}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-OntwikkelingKind.page.md, text:OntwikkelingKind}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-VermogenTotUiterlijkeVerzorging.page.md, text:VermogenTotUiterlijkeVerzorging}}</td>
+      <td>{{pagelink:NL.HdBe-Adresgegevens, text:Adresgegevens}}</td>
+      <td>{{pagelink:NL.HdBe-FunctieZien, text:FunctieZien}}</td>
+      <td>{{pagelink:NL.HdBe-OntwikkelingKind, text:OntwikkelingKind}}</td>
+      <td>{{pagelink:NL.HdBe-VermogenTotUiterlijkeVerzorging, text:VermogenTotUiterlijkeVerzorging}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-AlcoholGebruik.page.md, text:AlcoholGebruik}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-FunctioneleOfMentaleStatus.page.md, text:FunctioneleOfMentaleStatus}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Opleiding.page.md, text:Opleiding}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-VermogenTotVerpleegtechnischeHandelingen.page.md, text:VermogenTotVerpleegtechnischeHandelingen}}</td>
+      <td>{{pagelink:NL.HdBe-AlcoholGebruik, text:AlcoholGebruik}}</td>
+      <td>{{pagelink:NL.HdBe-FunctioneleOfMentaleStatus, text:FunctioneleOfMentaleStatus}}</td>
+      <td>{{pagelink:NL.HdBe-Opleiding, text:Opleiding}}</td>
+      <td>{{pagelink:NL.HdBe-VermogenTotVerpleegtechnischeHandelingen, text:VermogenTotVerpleegtechnischeHandelingen}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Alert.page.md, text:Alert}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-GebruiksInstructie.page.md, text:GebruiksInstructie}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-ParticipatieInMaatschappij.page.md, text:ParticipatieInMaatschappij}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-VermogenTotZelfstandigMedicatiegebruik.page.md, text:VermogenTotZelfstandigMedicatiegebruik}}</td>
+      <td>{{pagelink:NL.HdBe-Alert, text:Alert}}</td>
+      <td>{{pagelink:NL.HdBe-GebruiksInstructie, text:GebruiksInstructie}}</td>
+      <td>{{pagelink:NL.HdBe-ParticipatieInMaatschappij, text:ParticipatieInMaatschappij}}</td>
+      <td>{{pagelink:NL.HdBe-VermogenTotZelfstandigMedicatiegebruik, text:VermogenTotZelfstandigMedicatiegebruik}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-AllergieIntolerantie.page.md, text:AllergieIntolerantie}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Gezinssituatie.page.md, text:Gezinssituatie}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Patient.page.md, text:Patient}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-VermogenTotZichKleden.page.md, text:VermogenTotZichKleden}}</td>
+      <td>{{pagelink:NL.HdBe-AllergieIntolerantie, text:AllergieIntolerantie}}</td>
+      <td>{{pagelink:NL.HdBe-Gezinssituatie, text:Gezinssituatie}}</td>
+      <td>{{pagelink:NL.HdBe-Patient, text:Patient}}</td>
+      <td>{{pagelink:NL.HdBe-VermogenTotZichKleden, text:VermogenTotZichKleden}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-AnatomischeLocatie.page.md, text:AnatomischeLocatie}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-GezinssituatieKind.page.md, text:GezinssituatieKind}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Pijnkenmerken.page.md, text:Pijnkenmerken}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-VermogenTotZichWassen.page.md, text:VermogenTotZichWassen}}</td>
+      <td>{{pagelink:NL.HdBe-AnatomischeLocatie, text:AnatomischeLocatie}}</td>
+      <td>{{pagelink:NL.HdBe-GezinssituatieKind, text:GezinssituatieKind}}</td>
+      <td>{{pagelink:NL.HdBe-Pijnkenmerken, text:Pijnkenmerken}}</td>
+      <td>{{pagelink:NL.HdBe-VermogenTotZichWassen, text:VermogenTotZichWassen}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-ApgarScore.page.md, text:ApgarScore}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-GlasgowComaScale.page.md, text:GlasgowComaScale}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Pijnscore.page.md, text:Pijnscore}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-VerpleegkundigeInterventie.page.md, text:VerpleegkundigeInterventie}}</td>
+      <td>{{pagelink:NL.HdBe-ApgarScore, text:ApgarScore}}</td>
+      <td>{{pagelink:NL.HdBe-GlasgowComaScale, text:GlasgowComaScale}}</td>
+      <td>{{pagelink:NL.HdBe-Pijnscore, text:Pijnscore}}</td>
+      <td>{{pagelink:NL.HdBe-VerpleegkundigeInterventie, text:VerpleegkundigeInterventie}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-BarthelIndex.page.md, text:BarthelIndex}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Hartfrequentie.page.md, text:Hartfrequentie}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Polsfrequentie.page.md, text:Polsfrequentie}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Verrichting.page.md, text:Verrichting}}</td>
+      <td>{{pagelink:NL.HdBe-BarthelIndex, text:BarthelIndex}}</td>
+      <td>{{pagelink:NL.HdBe-Hartfrequentie, text:Hartfrequentie}}</td>
+      <td>{{pagelink:NL.HdBe-Polsfrequentie, text:Polsfrequentie}}</td>
+      <td>{{pagelink:NL.HdBe-Verrichting, text:Verrichting}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-BehandelAanwijzing2.page.md, text:BehandelAanwijzing2}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Huidaandoening.page.md, text:Huidaandoening}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Probleem.page.md, text:Probleem}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Verstrekkingsverzoek.page.md, text:Verstrekkingsverzoek}}</td>
+      <td>{{pagelink:NL.HdBe-BehandelAanwijzing2, text:BehandelAanwijzing2}}</td>
+      <td>{{pagelink:NL.HdBe-Huidaandoening, text:Huidaandoening}}</td>
+      <td>{{pagelink:NL.HdBe-Probleem, text:Probleem}}</td>
+      <td>{{pagelink:NL.HdBe-Verstrekkingsverzoek, text:Verstrekkingsverzoek}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Behandeldoel.page.md, text:Behandeldoel}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-HulpVanAnderen.page.md, text:HulpVanAnderen}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Refractie.page.md, text:Refractie}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Visus.page.md, text:Visus}}</td>
+      <td>{{pagelink:NL.HdBe-Behandeldoel, text:Behandeldoel}}</td>
+      <td>{{pagelink:NL.HdBe-HulpVanAnderen, text:HulpVanAnderen}}</td>
+      <td>{{pagelink:NL.HdBe-Refractie, text:Refractie}}</td>
+      <td>{{pagelink:NL.HdBe-Visus, text:Visus}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Bereik.page.md, text:Bereik}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Infuus.page.md, text:Infuus}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-SNAQScore.page.md, text:SNAQScore}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Vochtbalans.page.md, text:Vochtbalans}}</td>
+      <td>{{pagelink:NL.HdBe-Bereik, text:Bereik}}</td>
+      <td>{{pagelink:NL.HdBe-Infuus, text:Infuus}}</td>
+      <td>{{pagelink:NL.HdBe-SNAQScore, text:SNAQScore}}</td>
+      <td>{{pagelink:NL.HdBe-Vochtbalans, text:Vochtbalans}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Betaler.page.md, text:Betaler}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-JuridischeSituatie.page.md, text:JuridischeSituatie}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-SOEPVerslag.page.md, text:SOEPVerslag}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Voedingsadvies.page.md, text:Voedingsadvies}}</td>
+      <td>{{pagelink:NL.HdBe-Betaler, text:Betaler}}</td>
+      <td>{{pagelink:NL.HdBe-JuridischeSituatie, text:JuridischeSituatie}}</td>
+      <td>{{pagelink:NL.HdBe-SOEPVerslag, text:SOEPVerslag}}</td>
+      <td>{{pagelink:NL.HdBe-Voedingsadvies, text:Voedingsadvies}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Blaasfunctie.page.md, text:Blaasfunctie}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-LaboratoriumUitslag.page.md, text:LaboratoriumUitslag}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Schedelomvang.page.md, text:Schedelomvang}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-VoedingspatroonZuigeling.page.md, text:VoedingspatroonZuigeling}}</td>
+      <td>{{pagelink:NL.HdBe-Blaasfunctie, text:Blaasfunctie}}</td>
+      <td>{{pagelink:NL.HdBe-LaboratoriumUitslag, text:LaboratoriumUitslag}}</td>
+      <td>{{pagelink:NL.HdBe-Schedelomvang, text:Schedelomvang}}</td>
+      <td>{{pagelink:NL.HdBe-VoedingspatroonZuigeling, text:VoedingspatroonZuigeling}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Bloeddruk.page.md, text:Bloeddruk}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Levensovertuiging.page.md, text:Levensovertuiging}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-SondeSysteem.page.md, text:SondeSysteem}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-VrijheidsbeperkendeInterventie.page.md, text:VrijheidsbeperkendeInterventie}}</td>
+      <td>{{pagelink:NL.HdBe-Bloeddruk, text:Bloeddruk}}</td>
+      <td>{{pagelink:NL.HdBe-Levensovertuiging, text:Levensovertuiging}}</td>
+      <td>{{pagelink:NL.HdBe-SondeSysteem, text:SondeSysteem}}</td>
+      <td>{{pagelink:NL.HdBe-VrijheidsbeperkendeInterventie, text:VrijheidsbeperkendeInterventie}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Brandwond.page.md, text:Brandwond}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Lichaamsgewicht.page.md, text:Lichaamsgewicht}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Stoma.page.md, text:Stoma}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Wilsverklaring.page.md, text:Wilsverklaring}}</td>
+      <td>{{pagelink:NL.HdBe-Brandwond, text:Brandwond}}</td>
+      <td>{{pagelink:NL.HdBe-Lichaamsgewicht, text:Lichaamsgewicht}}</td>
+      <td>{{pagelink:NL.HdBe-Stoma, text:Stoma}}</td>
+      <td>{{pagelink:NL.HdBe-Wilsverklaring, text:Wilsverklaring}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-BurgerlijkeStaat.page.md, text:BurgerlijkeStaat}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Lichaamslengte.page.md, text:Lichaamslengte}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-TNMTumorClassificatie.page.md, text:TNMTumorClassificatie}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Wond.page.md, text:Wond}}</td>
+      <td>{{pagelink:NL.HdBe-BurgerlijkeStaat, text:BurgerlijkeStaat}}</td>
+      <td>{{pagelink:NL.HdBe-Lichaamslengte, text:Lichaamslengte}}</td>
+      <td>{{pagelink:NL.HdBe-TNMTumorClassificatie, text:TNMTumorClassificatie}}</td>
+      <td>{{pagelink:NL.HdBe-Wond, text:Wond}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Contact.page.md, text:Contact}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Lichaamstemperatuur.page.md, text:Lichaamstemperatuur}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Taalvaardigheid.page.md, text:Taalvaardigheid}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Woonsituatie.page.md, text:Woonsituatie}}</td>
+      <td>{{pagelink:NL.HdBe-Contact, text:Contact}}</td>
+      <td>{{pagelink:NL.HdBe-Lichaamstemperatuur, text:Lichaamstemperatuur}}</td>
+      <td>{{pagelink:NL.HdBe-Taalvaardigheid, text:Taalvaardigheid}}</td>
+      <td>{{pagelink:NL.HdBe-Woonsituatie, text:Woonsituatie}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Contactgegevens.page.md, text:Contactgegevens}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-MedicatieContraIndicatie.page.md, text:MedicatieContraIndicatie}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-TabakGebruik.page.md, text:TabakGebruik}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Ziektebeleving.page.md, text:Ziektebeleving}}</td>
+      <td>{{pagelink:NL.HdBe-Contactgegevens, text:Contactgegevens}}</td>
+      <td>{{pagelink:NL.HdBe-MedicatieContraIndicatie, text:MedicatieContraIndicatie}}</td>
+      <td>{{pagelink:NL.HdBe-TabakGebruik, text:TabakGebruik}}</td>
+      <td>{{pagelink:NL.HdBe-Ziektebeleving, text:Ziektebeleving}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Contactpersoon.page.md, text:Contactpersoon}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-MedicatieGebruik2.page.md, text:MedicatieGebruik2}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-TekstUitslag.page.md, text:TekstUitslag}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-ZorgEpisode.page.md, text:ZorgEpisode}}</td>
+      <td>{{pagelink:NL.HdBe-Contactpersoon, text:Contactpersoon}}</td>
+      <td>{{pagelink:NL.HdBe-MedicatieGebruik2, text:MedicatieGebruik2}}</td>
+      <td>{{pagelink:NL.HdBe-TekstUitslag, text:TekstUitslag}}</td>
+      <td>{{pagelink:NL.HdBe-ZorgEpisode, text:ZorgEpisode}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-DAS.page.md, text:DAS}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-MedicatieToediening2.page.md, text:MedicatieToediening2}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-TijdsInterval.page.md, text:TijdsInterval}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-ZorgTeam.page.md, text:ZorgTeam}}</td>
+      <td>{{pagelink:NL.HdBe-DAS, text:DAS}}</td>
+      <td>{{pagelink:NL.HdBe-MedicatieToediening2, text:MedicatieToediening2}}</td>
+      <td>{{pagelink:NL.HdBe-TijdsInterval, text:TijdsInterval}}</td>
+      <td>{{pagelink:NL.HdBe-ZorgTeam, text:ZorgTeam}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-DOSScore.page.md, text:DOSScore}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Medicatieafspraak.page.md, text:Medicatieafspraak}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Toedieningsafspraak.page.md, text:Toedieningsafspraak}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Zorgaanbieder.page.md, text:Zorgaanbieder}}</td>
+      <td>{{pagelink:NL.HdBe-DOSScore, text:DOSScore}}</td>
+      <td>{{pagelink:NL.HdBe-Medicatieafspraak, text:Medicatieafspraak}}</td>
+      <td>{{pagelink:NL.HdBe-Toedieningsafspraak, text:Toedieningsafspraak}}</td>
+      <td>{{pagelink:NL.HdBe-Zorgaanbieder, text:Zorgaanbieder}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Darmfunctie.page.md, text:Darmfunctie}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Medicatieverstrekking.page.md, text:Medicatieverstrekking}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-UitkomstVanZorg.page.md, text:UitkomstVanZorg}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Zorgverlener.page.md, text:Zorgverlener}}</td>
+      <td>{{pagelink:NL.HdBe-Darmfunctie, text:Darmfunctie}}</td>
+      <td>{{pagelink:NL.HdBe-Medicatieverstrekking, text:Medicatieverstrekking}}</td>
+      <td>{{pagelink:NL.HdBe-UitkomstVanZorg, text:UitkomstVanZorg}}</td>
+      <td>{{pagelink:NL.HdBe-Zorgverlener, text:Zorgverlener}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-DecubitusWond.page.md, text:DecubitusWond}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-MedischHulpmiddel.page.md, text:MedischHulpmiddel}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Vaccinatie.page.md, text:Vaccinatie}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Zwangerschap.page.md, text:Zwangerschap}}</td>
+      <td>{{pagelink:NL.HdBe-DecubitusWond, text:DecubitusWond}}</td>
+      <td>{{pagelink:NL.HdBe-MedischHulpmiddel, text:MedischHulpmiddel}}</td>
+      <td>{{pagelink:NL.HdBe-Vaccinatie, text:Vaccinatie}}</td>
+      <td>{{pagelink:NL.HdBe-Zwangerschap, text:Zwangerschap}}</td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-DrugsGebruik.page.md, text:DrugsGebruik}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Mobiliteit.page.md, text:Mobiliteit}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-VermogenTotDrinken.page.md, text:VermogenTotDrinken}}</td>
+      <td>{{pagelink:NL.HdBe-DrugsGebruik, text:DrugsGebruik}}</td>
+      <td>{{pagelink:NL.HdBe-Mobiliteit, text:Mobiliteit}}</td>
+      <td>{{pagelink:NL.HdBe-VermogenTotDrinken, text:VermogenTotDrinken}}</td>
       <td></td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Familieanamnese.page.md, text:Familieanamnese}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Naamgegevens.page.md, text:Naamgegevens}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-VermogenTotEten.page.md, text:VermogenTotEten}}</td>
+      <td>{{pagelink:NL.HdBe-Familieanamnese, text:Familieanamnese}}</td>
+      <td>{{pagelink:NL.HdBe-Naamgegevens, text:Naamgegevens}}</td>
+      <td>{{pagelink:NL.HdBe-VermogenTotEten, text:VermogenTotEten}}</td>
       <td></td>
     </tr>
     <tr>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-FarmaceutischProduct.page.md, text:FarmaceutischProduct}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-Nationaliteit.page.md, text:Nationaliteit}}</td>
-      <td>{{pagelink:Home/LogicalModels/NL.HdBe-VermogenTotMondverzorging.page.md, text:VermogenTotMondverzorging}}</td>
+      <td>{{pagelink:NL.HdBe-FarmaceutischProduct, text:FarmaceutischProduct}}</td>
+      <td>{{pagelink:NL.HdBe-Nationaliteit, text:Nationaliteit}}</td>
+      <td>{{pagelink:NL.HdBe-VermogenTotMondverzorging, text:VermogenTotMondverzorging}}</td>
       <td></td>
     </tr>
   </tbody>
@@ -350,6 +354,84 @@
   </div>
 
    <div id="FR" class="tabcontent" style="border: none;padding-left: 0px;padding-right: 0px;">
-      FR index will be added later.
+      <p>CBB that have been translated to France are shown here.</p>
+      <table class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>A - F</th>
+      <th>F - O</th>
+      <th>O - P</th>
+      <th>R - Z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{pagelink:FR.HdBe-AdministrationMédication2, text:AdministrationMédication2}}</td>
+      <td>{{pagelink:FR.HdBe-FonctionVisuelle, text:FonctionVisuelle}}</td>
+      <td>{{pagelink:FR.HdBe-OrganismeSoins, text:OrganismeSoins}}</td>
+      <td>{{pagelink:FR.HdBe-RésultatTestLaboratoire, text:RésultatTestLaboratoire}}</td>
+    </tr>
+    <tr>
+      <td>{{pagelink:FR.HdBe-Alerte, text:Alerte}}</td>
+      <td>{{pagelink:FR.HdBe-InformationAdresse, text:InformationAdresse}}</td>
+      <td>{{pagelink:FR.HdBe-Patient, text:Patient}}</td>
+      <td>{{pagelink:FR.HdBe-SituationVie, text:SituationVie}}</td>
+    </tr>
+    <tr>
+      <td>{{pagelink:FR.HdBe-ConseilNutritionnel, text:ConseilNutritionnel}}</td>
+      <td>{{pagelink:FR.HdBe-InformationContact, text:InformationContact}}</td>
+      <td>{{pagelink:FR.HdBe-Payeur, text:Payeur}}</td>
+      <td>{{pagelink:FR.HdBe-StatutFonctionnelOuMental, text:StatutFonctionnelOuMental}}</td>
+    </tr>
+    <tr>
+      <td>{{pagelink:FR.HdBe-ConsommationAlcool, text:ConsommationAlcool}}</td>
+      <td>{{pagelink:FR.HdBe-InformationNom, text:InformationNom}}</td>
+      <td>{{pagelink:FR.HdBe-PersonneContact, text:PersonneContact}}</td>
+      <td>{{pagelink:FR.HdBe-StatutTabagique, text:StatutTabagique}}</td>
+    </tr>
+    <tr>
+      <td>{{pagelink:FR.HdBe-ConsommationDrogue, text:ConsommationDrogue}}</td>
+      <td>{{pagelink:FR.HdBe-InstructionsDUtilisation, text:InstructionsDUtilisation}}</td>
+      <td>{{pagelink:FR.HdBe-Plage, text:Plage}}</td>
+      <td>{{pagelink:FR.HdBe-TailleCorporelle, text:TailleCorporelle}}</td>
+    </tr>
+    <tr>
+      <td>{{pagelink:FR.HdBe-Contact, text:Contact}}</td>
+      <td>{{pagelink:FR.HdBe-IntervalleTemps, text:IntervalleTemps}}</td>
+      <td>{{pagelink:FR.HdBe-PoidsCorporel, text:PoidsCorporel}}</td>
+      <td>{{pagelink:FR.HdBe-TempératureCorporelle, text:TempératureCorporelle}}</td>
+    </tr>
+    <tr>
+      <td>{{pagelink:FR.HdBe-ConventionMédication, text:ConventionMédication}}</td>
+      <td>{{pagelink:FR.HdBe-InterventionSoinsInfirmiers, text:InterventionSoinsInfirmiers}}</td>
+      <td>{{pagelink:FR.HdBe-Pouls, text:Pouls}}</td>
+      <td>{{pagelink:FR.HdBe-TensionArtérielle, text:TensionArtérielle}}</td>
+    </tr>
+    <tr>
+      <td>{{pagelink:FR.HdBe-DirectiveTraitement2, text:DirectiveTraitement2}}</td>
+      <td>{{pagelink:FR.HdBe-IntoléranceAllergie, text:IntoléranceAllergie}}</td>
+      <td>{{pagelink:FR.HdBe-Problème, text:Problème}}</td>
+      <td>{{pagelink:FR.HdBe-UtilisationMédication2, text:UtilisationMédication2}}</td>
+    </tr>
+    <tr>
+      <td>{{pagelink:FR.HdBe-DispositifMédical, text:DispositifMédical}}</td>
+      <td>{{pagelink:FR.HdBe-LocalisationAnatomique, text:LocalisationAnatomique}}</td>
+      <td>{{pagelink:FR.HdBe-Procédure, text:Procédure}}</td>
+      <td>{{pagelink:FR.HdBe-Vaccination, text:Vaccination}}</td>
+    </tr>
+    <tr>
+      <td>{{pagelink:FR.HdBe-DéclarationVolonté, text:DéclarationVolonté}}</td>
+      <td>{{pagelink:FR.HdBe-Nationalité, text:Nationalité}}</td>
+      <td>{{pagelink:FR.HdBe-ProduitPharmaceutique, text:ProduitPharmaceutique}}</td>
+      <td>{{pagelink:FR.HdBe-ÉtatCivil, text:ÉtatCivil}}</td>
+    </tr>
+    <tr>
+      <td>{{pagelink:FR.HdBe-FonctionAuditive, text:FonctionAuditive}}</td>
+      <td>{{pagelink:FR.HdBe-ObjectifTraitement, text:ObjectifTraitement}}</td>
+      <td>{{pagelink:FR.HdBe-ProfessionnelSanté, text:ProfessionnelSanté}}</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
   </div>
 </div>

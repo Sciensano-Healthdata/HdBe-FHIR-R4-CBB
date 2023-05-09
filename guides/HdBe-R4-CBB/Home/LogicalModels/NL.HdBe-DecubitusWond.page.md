@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-PressureUlcer.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-DecubitusWond
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-PressureUlcer, text:EN}}  {{pagelink:NL.HdBe-DecubitusWond, text:NL}}  <p>
+</div>
 
 # HdBe-DecubitusWond
 

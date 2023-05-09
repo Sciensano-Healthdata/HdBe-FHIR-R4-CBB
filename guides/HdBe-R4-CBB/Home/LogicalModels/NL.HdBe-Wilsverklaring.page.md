@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-AdvanceDirective.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-Wilsverklaring
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-AdvanceDirective, text:EN}}  {{pagelink:NL.HdBe-Wilsverklaring, text:NL}}  {{pagelink:FR.HdBe-DéclarationVolonté, text:FR}}<p>
+</div>
 
 # HdBe-Wilsverklaring
 

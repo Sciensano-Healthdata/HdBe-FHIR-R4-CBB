@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-DAS.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-DAS
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-DAS, text:EN}}  {{pagelink:NL.HdBe-DAS, text:NL}}  <p>
+</div>
 
 # HdBe-DAS
 

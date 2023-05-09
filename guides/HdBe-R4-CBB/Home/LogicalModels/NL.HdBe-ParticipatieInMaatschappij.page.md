@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-ParticipationInSociety.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-ParticipatieInMaatschappij
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-ParticipationInSociety, text:EN}}  {{pagelink:NL.HdBe-ParticipatieInMaatschappij, text:NL}}  <p>
+</div>
 
 # HdBe-ParticipatieInMaatschappij
 

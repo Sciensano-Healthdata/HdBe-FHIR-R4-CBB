@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-PainScore.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-Pijnscore
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-PainScore, text:EN}}  {{pagelink:NL.HdBe-Pijnscore, text:NL}}  <p>
+</div>
 
 # HdBe-Pijnscore
 

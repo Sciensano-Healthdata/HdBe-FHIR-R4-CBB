@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/NL.HdBe-VermogenTotMondverzorging.page.md, text:NL }} </p>
-</div>
+---
+topic: EN.HdBe-AbilityToPerformMouthcareActivities
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-AbilityToPerformMouthcareActivities, text:EN}}  {{pagelink:NL.HdBe-VermogenTotMondverzorging, text:NL}}  <p>
+</div>
 
 # HdBe-AbilityToPerformMouthcareActivities
 

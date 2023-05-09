@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-NameInformation.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-Naamgegevens
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-NameInformation, text:EN}}  {{pagelink:NL.HdBe-Naamgegevens, text:NL}}  {{pagelink:FR.HdBe-InformationNom, text:FR}}<p>
+</div>
 
 # HdBe-Naamgegevens
 

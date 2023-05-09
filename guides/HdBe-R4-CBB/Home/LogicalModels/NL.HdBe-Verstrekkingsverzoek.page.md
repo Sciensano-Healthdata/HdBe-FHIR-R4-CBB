@@ -1,7 +1,10 @@
-<div style="float:right;width:70px;padding:10px;margin:10">
-<p>{{pagelink:Home/LogicalModels/EN.HdBe-DispenseRequest.page.md, text:EN }} </p>
-</div>
+---
+topic: NL.HdBe-Verstrekkingsverzoek
+---
 
+<div style="float:right;width:85px;padding:10px;margin:10">
+<p>{{pagelink:EN.HdBe-DispenseRequest, text:EN}}  {{pagelink:NL.HdBe-Verstrekkingsverzoek, text:NL}}  <p>
+</div>
 
 # HdBe-Verstrekkingsverzoek
 
