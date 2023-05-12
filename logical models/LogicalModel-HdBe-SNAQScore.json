@@ -1,0 +1,416 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-SNAQScore",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-SNAQScore",
+  "name": "HdBeSNAQScore",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeSNAQScore"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe SNAQScore",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "The Short Nutritional Assessment Questionnaire (SNAQ) is a (validated) measuring tool for determining the extent of a patient’s malnutrition. The tool comprises three questions, each of which is assigned a score. The total score determines the extent of malnutrition. \r\nThe SNAQ helps to recognize and treat malnutrition at an early stage. \r\nThree varieties of the measuring tool were developed for different care settings: hospitals, nursing and retirement homes and independently living seniors. This concept describes the tool intended for the hospital setting.\r\n\r\n#### Purpose\r\nThe SNAQ score is used to determine the extent of malnutrition or the risk of malnutrition. To treat malnutrition quickly and effectively, it is important to identify the malnutrition at an early stage.\r\n#### Evidence Base\r\nTo determine the extent of malnutrition, SNAQ has a number of tools, validated for different settings: \r\n\r\n* The SNAQ was developed foe adults admitted to hospital\r\n* The SNAQ65+ was developed for the group of seniors (> over 65) who live at home and who may make use of care at home.\r\n* The SNAQrc (Short Nutritional Assessment Questionnaire for Residential Care) is available for screening for malnutrition in nursing and retirement homes.\r\n* The STRONGkids tool is available for screening for malnutrition among children.\r\n\r\n\r\n\r\n\r\n\r\n#### Patient Population\r\nThe SNAQ is meant for patients over 18 years of age who are staying at the hospital.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "De Short Nutritional Assessment Questionnaire (SNAQ) is een (gevalideerd) meetinstrument voor het bepalen van de mate van ondervoeding van de patiënt. Het instrument bestaat uit drie vragen waaraan een score wordt toegekend. De totaalsom van deze score bepaalt de mate van ondervoeding. \r\nDe SNAQ ondersteunt het vroegtijdig herkennen en behandelen van ondervoeding.\r\nEr zijn drie varianten van het meetinstrument voor verschillende zorgsettingen ontwikkeld, te weten ziekenhuis, verzorgings- en verpleeghuizen en zelfstandig wonende ouderen. Dit concept beschrijft het instrument dat bedoeld is voor de ziekenhuissetting.\r\n#### Purpose\r\nDe SNAQ score wordt toegepast om de mate van ondervoeding of het risico hierop vast te stellen. Om ondervoeding snel en adequaat te kunnen behandelen is het van belang dat ondervoeding tijdig gesignaleerd wordt. \r\n#### Evidence Base\r\nVoor het vaststellen van de mate van ondervoeding kent SNAQ een aantal instrumenten, gevalideerd voor verschillende omgevingen:\r\n\r\n* De SNAQ is ontwikkeld voor volwassenen bij ziekenhuisopname\r\n* De SNAQ65+ is ontwikkeld voor de groep ouderen (>65 jaar) die thuis woont en eventueel gebruik maakt van thuiszorg.\r\n* Voor screening op ondervoeding in verpleeg- en verzorgingshuizen is de SNAQrc (Short Nutritional Assessment Questionnaire for Residential Care) beschikbaar.\r\n* Voor screenen op ondervoeding bij kinderen is het instrument STRONGkids beschikbaar.\r\n\r\n\r\n\r\n\r\n\r\n#### Patient Population\r\nDe SNAQ is bedoeld voor patienten boven de 18 jaar en die verblijven in het ziekenhuis.\r\n**References**\r\n1. Stuurgroep Ondervoeding [Online] Beschikbaar op: [http://www.stuurgroepondervoeding.nl/](http://www.stuurgroepondervoeding.nl/) [Geraadpleegd: 13 februari 2015]\r\n",
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/SNAQScore",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Snaqscore",
+        "path": "Snaqscore",
+        "short": "SNAQScore",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SNAQScore"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the SNAQScore information model. This root concept contains all data elements of the SNAQScore information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen SNAQScore. Dit rootconcept bevat alle gegevenselementen van de bouwsteen SNAQScore."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Snaqscore.WeightLossScore",
+        "path": "Snaqscore.WeightLossScore",
+        "short": "WeightLossScore",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GewichtsverliesScore"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The score based on undesired weight loss over the past month(s).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De score gebaseerd op het ongewenst gewichtsverlies gedurende de afgelopen maand(en)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "WeightLossScore codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/SNAQGewichtsverliesScore"
+        }
+      },
+      {
+        "id": "Snaqscore.AppetiteScore",
+        "path": "Snaqscore.AppetiteScore",
+        "short": "AppetiteScore",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "EetlustScore"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The score based on a reduced appetite over the past month.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De score gebaseerd op een verminderde eetlust gedurende de afgelopen maand."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "AppetiteScore codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/EetlustScore"
+        }
+      },
+      {
+        "id": "Snaqscore.NutritionScore",
+        "path": "Snaqscore.NutritionScore",
+        "short": "NutritionScore",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VoedingsScore"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The score based on the use of fluid or enteral nutrition over the past month.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De score gebaseerd op het gebruik van drink- of sondevoeding gedurende de afgelopen maand."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "NutritionScore codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/VoedingsScore"
+        }
+      },
+      {
+        "id": "Snaqscore.TotalScore",
+        "path": "Snaqscore.TotalScore",
+        "short": "TotalScore",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TotaalScore"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The total score is the sum of all the individual scores. The total score has a range from 0 - 5.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De totaalscore is de optelsom van de deelscores. Het bereik van de totaalscore is 0 tot 5."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "Snaqscore.SnaqscoreDateTime",
+        "path": "Snaqscore.SnaqscoreDateTime",
+        "short": "SNAQScoreDateTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SNAQScoreDatumTijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date and time at which the SNAQ score was determined.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en het tijdstip waarop de SNAQ score bepaald is."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Snaqscore.Comment",
+        "path": "Snaqscore.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A comment on the circumstances during the measurement.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een toelichting op de meting of omstandigheden tijdens de meting."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

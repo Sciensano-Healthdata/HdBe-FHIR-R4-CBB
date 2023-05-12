@@ -17,24 +17,32 @@
     1. [Definition of changelog's category](#changelog_def)
     2. [CBB overarching changes](#CBB_overarching_changes)
 6. [Extensions](#Extensions)
+7. [Negation](#Negation)
+    1. [Open World Assumption vs. Closed World Assumption](#OWA-vs-CWA)
+    2. [Negation in QI-Core](#NegationInQICore)
+    3. [Negation in zibs and CBBs](#NegationInZibsAndCbbs)
 
    **[Practical guidelines](#practicalguidelines)**
 
-7. [Identity of artifacts](#identityofartifacts)
+8. [Identity of artifacts](#identityofartifacts)
     1. [Canonical URL, id, name and title](#CanonicalURLIdNameTitle)
     2. [Folder structure and file name](FolderStructureAndFileName)
-8. [Metadata](#metadata)
+9. [Metadata](#metadata)
     1. [StructureDefinition](#StructureDefinition)
-9.  [ElementDefinition](#ElementDefinition)
+10. [ElementDefinition](#ElementDefinition)
     1. [Usage of DefinitionCodes](#DefinitionCodes)
     2. [Constraining a target CBB](#ConstrainingCBB)
     3. [Usage of zib concept examples](#ZibConceptExamples)
-10. [Terminology](#terminology)
+11. [Terminology](#terminology)
     1. [Netherlands Edition SNOMED codes](#DutchSnomed)
     2. [Custom codes](#CustomCodes)
-11. [Examples](#Examples)
-    1. [Logical model examples](#LogicalModelExamples)
+12. [Examples](#Examples)
+    1. [CBB examples](#CBBExamples)
     2. [FHIR profile examples](#FHIRProfileExamples)
+
+    **[Technical guidelines](#technical-guidelines)**
+
+12. [Exchange](#exchange)
 
 # General guidelines<a name="general"></a>
 
@@ -69,7 +77,7 @@ Changes to the zib are recorded in a [changelog file](#changelog) for every CBB.
 The FHIR conformance resources will be created based on the healthdata.be CBBs.
 
 #### Use case specific models<a name="usecasespecificmodels"></a>
-Use cases and exchange patterns use and potentially refine the healthdata.be CBBs information model to specific situations or applications.
+Use cases and exchange patterns use and potentially refine the healthdata.be CBBs information model to specific situations or applications. Use case specific profiles shall only be derived from the HdBe-profiles to further restrict or enhance these profiles for a specific use case. We do not create derived profiles if its sole purpose is keeping referential integrity.
 
 ### Associating the logical definition to StructureDefinitions <a name="associatingthelogicaldefinitiontostructuredefinitions"></a>
 Any StructureDefinition that profiles a Resource does so because there is some kind of logical definition "dictating" how. Profiles SHALL have a traceable relationship with their logical counterpart(s).
@@ -91,7 +99,7 @@ A specific element can then be mapped using:
     <path value="Patient.identifier" />
     <mapping>
         <identity value="HdBe-Patient" />
-        <map value="patient_identification_number" />
+        <map value="Patient.PatientIdentificationNumber" />
     </mapping>
 </element>
 ```
@@ -99,7 +107,7 @@ A specific element can then be mapped using:
 
 Mappings should only be added. There is no need to replace existing mappings as they are valid mappings and provide traceability to the original profiles. It shows the relation between zib and HdBe concepts.
 
-### Cardinalities <a name="Cardinalities"></a>
+### Cardinalities <a name="cardinalities"></a>
 The functional description will specify the cardinality for each concept as a minimum required and maximum allowed number of times it may occur, which is the same mechanism as in FHIR. However, one needs to be careful as the cardinality can only be restricted in derived profiles, and never widened. Being too strict could thus hinder the re-use of these profiles. This is especially true for cardinalities in CBBs, which should be interpreted as 'purely conceptual'; a use case might allow for data that conceptually always should be there to be absent in practice.
 
 For CBB profiles:
@@ -142,14 +150,20 @@ Template for changelog:
 |-----------------|-------------------|-----------------------------------------|
 |`[element.path]` | [category of change] | [Description of change]([Reference to ticket/issue/zulip chat using MarkDown link])
 ```
-Example:
+Examples:
 ```
 ## zib [Patient-v3.2](https://zibs.nl/wiki/Patient-v3.2(2020EN)) difference
 
-| Concept     | Category          | Description of change                   |
-|-------------|-------------------|-----------------------------------------|-----------------|
-|`patient_identification_number`|textual|Replaced Dutch context (BSN) in the definition with patient identification according to SSIN (NISS-INSZ).
-| `specimen.container_type`| terminology | Relaxed binding from required to preferred. ([zib ticket #1552](https://bits.nictiz.nl/browse/ZIB-1552))|
+| Concept     | Category          | Description            |
+|-------------|-------------------|------------------------|
+|`PatientIdentificationNumber` | textual | Replaced the Dutch context (BSN) with the Belgian equivalent (NISS-INSZ). |
+  
+ 
+## zib [LaboratoryTestResult-v4.6](https://zibs.nl/wiki/LaboratoryTestResult-v4.6(2020EN)) difference
+
+| Concept         | Category          | Description            |  
+|-----------------|-------------------|------------------------|
+|`Specimen.ContainerType`| terminology | Relaxed binding from required to preferred. ([zib ticket #1552](https://bits.nictiz.nl/browse/ZIB-1552))|
 ```
 
 ### Definition of changelog's category<a name="changelog_def"></a>
@@ -178,7 +192,8 @@ In addition to the changelog for each CBB, generic changes made that span multip
     - 'Revision History' headers are removed as this is only in Dutch and specifically about the zib.
 - A few zibs constrain a target zib, and this is visualized within a zib as such. We represent this in the Logical Model by defining a specific structure, which is described in the [Constraining a target CBB](#ConstrainingCBB) section. As this is not a conceptual but a visual change, this is not mentioned in the changelog.
 - The zib logical model export gives a model that includes partial zibs, thereby duplicating them. The inline partial zibs are replaced with a reference to that model.
-- The zib logical model export adds every target refence to one element within a container element. The container element is removed if this does not provide additional meaning.  
+- The zib logical model export adds every target reference to one element within a container element. The container element is removed if this does not provide additional meaning.  
+- When a zib has fundamental changes, a new zib is created and renamed, by suffixing the name with an incremental number (e.g. MedicationAdministration**2**). The `StructureDefinition.type` of a logical model is constructed using the name of the zib. In these cases, the tail of the `StructureDefinition.type` and the root element name of the CBB logical model differ, which violate the [sdf-8 constraint](https://www.hl7.org/fhir/structuredefinition.html#invs) in FHIR. To fix these violations in CBB, the root element name (`StructureDefinition.differential.element[0].path`) is aligned with the id of the logical model (see also [zib ticket #1875](https://bits.nictiz.nl/browse/ZIB-1875)).
 
 #### Profiles
 - `.mapping`: Mappings of extensions are moved from within the Extension profile to the host profile itself. This way, the mappings are shown in the mapping overview tab of the profile. This is because mappings in extensions are not (and will not be) included in the snapshot of the host profile. Therefore, Simplifier cannot render them. Nictiz might move in the same direction at some point [Nictiz GitHub ticket](https://github.com/Nictiz/Nictiz-R4-zib2020/issues/222).
@@ -192,10 +207,10 @@ All canonical references to the ValueSet and ConceptMap should be adjusted accor
 - **Replacement of NullFlavor codes with SNOMED CT codes** - The zibs ValueSet often contain [Nullflavor](https://www.hl7.org/fhir/v3/NullFlavor/cs.html) codes to indicate that a particular concept value is _unknown_ or _other_ than one of the codes listed in the bound ValueSet. As a design principle, SNOMED CT is the preferred CodeSystem in use for the CBB and CBB profiles because this is the most adopted CodeSystem. Therefore every NullFlavor code is replaced with an equivalent SNOMED CT code. For example, the code UNK - Unknown (code by NullFlavor) is replaced by 261665006 - Unknown (code by SNOMED CT).
 
 #### Example instances
-- Most example instances are in Dutch. If the examples are used as a basis, there are translated into English. A custom script can convert coded display values if it can find them in a terminology service.
+- Most example instances are in Dutch. If the examples are used as a basis, they are translated into English. A custom script can convert coded display values if it can find them in a terminology service.
 
 ## Extensions<a name="Extensions"></a>
-Sometimes a concept cannot be implemented using the building blocks FHIR offers by default. In this case, an extension might be used to implement such a concept. Keep in mind that extensions are often seen as a burden for implementers:
+Sometimes a concept cannot be implemented using elements that FHIR offers by default. In this case, an extension might be used to implement such a concept. Keep in mind that extensions are often seen as a burden for implementers:
 
 - If it is possible to model the concept (cleanly) without an extension, this is usually the preferred way.
 - If that's not possible, check if HL7 or other reliable standardization organizations provide an extension to implement the concept.
@@ -203,6 +218,20 @@ Sometimes a concept cannot be implemented using the building blocks FHIR offers 
 - If that's not possible, create an extension specific to the resource/profile.
 
 Usually, mappings for the concept, bindings to specific ValueSets and any functional descriptions will be added when the extension is used within a profile. When the extension pertains to a particular profile or resource, this information SHALL be added to the extension. To aid rendering purposes, functional descriptions and implementation guidance are placed on the extension root rather than the `Extension.value[x]` (except for terminology bindings). Without constraints, most snapshots generators will only include the root element in the profile that hosts the extension. So placing the information on the extension makes sure the information is visible in the profile without the need to navigate into the extension by the implementer.
+
+## Negation<a name="Negation"></a>
+In the context of healthcare and research, it is often important to know whether a specific event, medication administration, or treatment has taken place or not. However, healthcare systems generally only record information when an event takes place, making it challenging to discern the absence of events. This issue relates to the traditional problem in information systems and logic known as the Open World Assumption vs. Closed World Assumption. This chapter summarizes our latest understanding of handling negation in FHIR profiling.
+
+### Open World Assumption vs. Closed World Assumption <a name="OWA-vs-CWA"></a>
+The Open World Assumption posits that the absence of information does not imply its negation. In contrast, the Closed World Assumption suggests that any information not explicitly present is considered false. The key to solving this problem lies in the term "Assumption." When defining your system, it is essential to clearly document whether it supports the Open World or Closed World Assumption. Neither approach is inherently superior, but it is crucial to understand which one your system operates under. For healthcare systems on a national level, it seems we are handling the Open World Assumption. For more information, refer to the [Wikipedia article](https://en.wikipedia.org/wiki/Open-world_assumption) on this topic.
+
+### Negation in QI-Core <a name="NegationInQICore"></a>
+The [QI-Core Implementation Guide](http://hl7.org/fhir/us/qicore/index.html#negation-in-qi-core) provides a comprehensive approach to handling negation in FHIR. It encompasses the creation of profiles and other specifications to capture events that have not occurred and the reasons for their non-occurrence. QI-Core can serve as a valuable reference for implementing negation in our FHIR profiling. However, ideally, this should be documented and anchored in the conceptual layer (CBBs) before profiling.
+
+### Negation in zibs and CBBs <a name="NegationInZibsAndCbbs"></a>
+Some zibs, and their counterpart CBBs, contain concepts that enable the negation of the CBB, such as the UseIndicator concept in MedicationUse2, which indicates whether a medication has been taken or not. However, most CBBs do not support negation, and no overarching guidance or method exists. This issue has been raised in [ZIB-1843](
+https://bits.nictiz.nl/browse/ZIB-1843), but to date, no solution or guidance has been proposed. 
+
 
 #   Practical guidelines <a name="practicalguidelines"></a>
 
@@ -324,7 +353,7 @@ However, for the CBBs, we have decided not to take over these DefintionCodes bec
 ### Constraining a target CBB <a name="ConstrainingCBB"></a>  
 A few CBBs (e.g. [VisualFunction](https://zibs.nl/wiki/VisualFunction-v3.1(2020EN))) constrain a target CBB. To visualize this in a Logical Model, we defined the following guidelines, which should be modelled outside of Forge:
 - Add an element of the reference type with a reference to the target CBB. Match the cardinality with the cardinality of the zib. Add the following comment to this element: _"This CBB ([name CBB]) constrains the target CBB ([name target CBB]). The following child elements describe only the differences relative to the CBB in the target reference."_
-- Add an child element of the BackBoneElement type and give it the name of the target CBB. Set the cardinality to 1..1.
+- Add an child element of the BackboneElement type and give it the name of the target CBB. Set the cardinality to 1..1.
 - Finally only add the elements of the target CBB that are constrained. Keep the hierarchy and cardinality as is in the target CBB.
 
 ### Usage of zib concept examples <a name="ZibConceptExamples"></a>
@@ -348,21 +377,62 @@ When a code from a custom CodeSystem has been adopted by an internationally util
 Examples are a vital part of any specification as they will allow the reader to easier understand the expectations. Every logical model and profile shall have at least one example. 
 Logical models examples are functional in nature: they provide examples of what kind of information belongs to a CBB in a non-technical format. FHIR profile examples are technical in nature. The logical model examples are primarily aimed at researchers and non-technical people. They provide an example of how a CBB  is initialized in the FHIR standard, in XML or JSON format, conforming to the FHIR-profile for the respective CBB. These examples are aimed at developers and implementers of the technical specifications.   
 
-### Logical model examples <a name="LogicalModelExamples"></a>
-Examples of logical models are not conformant to FHIR, and are therefore not represented in XML or JSON. Examples are provided in  table format in a seperate markdown file. The file has the same name as the CBB logical model but ends with `.example.md.` For example `HdBe-BodyHeight.xml` <-> `HdBe-BodyHeight.example.md`.
-The following conventions exist:
+### CBB examples <a name="CBBExamples"></a>
+Examples of CBBd are not conformant to FHIR, and are therefore not represented in XML or JSON. Examples are provided in table format in a separate markdown file. The file has the same name as the CBB logical model but ends with `.example.md.` For example `HdBe-BodyHeight.xml` <-> `HdBe-BodyHeight.example.md`. For each element, the element path is taken, without the root. To represent BackboneElements, add an additional line containing the element name in bold.
+
+  The following conventions exist:
 - For elements that represent a quantity, also provide the unit.
+- For elements that represent a date, the format is: [YYYY-MM-DD].
+- For elements that represent a datetime, the format is: [YYYY-MM-DD]T[HH:MM:SS].
 - For elements that hold coded values: provide a code, the preferred display name and the CodeSystem. This format is used: [code] - [display name] (code by [CodeSystem]).
+- For elements that contain a reference to another CBB, provide the name of the CBB and an example value. This format is used: Reference to [CBB name] ([example value]).
 
 *Example*:
 ```
-| body_height      |                    |
-|------------------|--------------------|
-| height_value     |165 cm              | 
-| height_date_time |2022-01-02          |
-| comment          |                    |
-| position         |10904000 - Orthostatic body position (code by SNOMED CT)  |
+| Encounter                             |                   |
+|---------------------------------------|-------------------|        
+| ContactType	                        | CT0005 - Inpatient (code by Healtdata.Be (Sciensano)) |                   
+| ContactWith                           | Reference to HealthProfessional (E. Penninx) |
+| Location	                            | Reference to HealthcareProvider (GRAND HOPITAL DE CHARLEROI - SAINT-JOSEPH) |
+| StartDateTime                         | 2012-08-16T08:30:00 |
+| EndDateTime	                        | 2012-08-19T10:20:00 |
+| **ContactReason**                     | - |
+| ContactReason.Problem                 |   |
+| ContactReason.Procedure               |   |
+| ContactReason.DeviatingResult	        |   |
+| ContactReason.CommentContactReason	| stomach ache |
+| Origin                                | 264362003 - Home (code by SNOMED CT) |
+| Destination                           | 22232009 - Hospital (code by SNOMED CT) |
 ```
 
 ### FHIR profile examples <a name="FHIRProfileExamples"></a>
 Examples of FHIR profiles are provided in either XML or JSON format and must be a valid profile instance. Every example shall have at least one profile URL in the `.meta.profile` element. Examples are stored in the `/examples` folder.
+
+
+# Technical Guidelines
+
+## Exchange
+
+All information is sent to Sciensano using FHIR documents. These [FHIR documents](https://www.hl7.org/fhir/documents.html) are defined as: _FHIR resources can be used to build documents that represent a composition: a coherent set of information that is a statement of healthcare information, including clinical observations and services. A document is an immutable set of resources with a fixed presentation that is authored and/or attested by humans, organizations and devices._ 
+
+All FHIR documents have the same structure. The document itself is a `Bundle` resource of type = `document`. The first resource within the Bundle is always a `Composition` resource, then followed by a series of other resources, which are referenced within the Composition resource. When these resources reference other resources, these referenced resources SHOULD also be included in the bundle. The composition is the foundation of the document. It:
+
+ - provides identity and its purpose, and sets the context of the document
+ - carries key information such as the subject and author, and who attests to the document
+ - divides the document up into a series of sections, each with their own narrative
+
+A Composition profile, derived from the LaboratoryTestResult-Composition or ClinicalReportResearch-Composition profile, is used. It points to relevant DCD profiles, and can add constraints and additional clinical concepts. The Composition is split in relevant sections, each containing representative codes. Textual guidance is provided on which information is expected at what section. This also includes selection and filter rules. The Composition is relatively easy to build and author, but also provides control on what is exchanged.
+
+The exchange with FHIR documents is chosen as it bundles information regarding a certain use case.
+
+We dediced on using the FHIR Document for exchange, based on the [Exchange Approach page](https://build.fhir.org/exchanging.html). Each of the decisions-making steps are described here:
+
+|Step | Decision | 
+| -- | -- | 
+| Consumer initiates? | **No**: The data SHALL be pushed, as the data source knows the event that triggers the need for the exchange. | 
+| Configured by consumer? | **No**: Configuration by the consumer adds complexity for both the data source and the data consumer, which is unwanted. This also gives the data consumer full control over the data perstistence, which is not desired either. | 
+| Direct connection? (push) | **Yes**: There will be a direct connection between the data source and the data consumer. |
+| Data source directs consumer persistence? | **Yes**: The data source shall have control regarding the persistence, as the data source is the owner of the data. | 
+| Persist as a group? | **Yes**: The resources need to be packed as a set and to be stored together as they are only relevant together in context of a DCD. | 
+| Focus on presentation / story-telling? | **Yes**: The data is more then a set of resource stored togethere and it is necessary to provide storytelling regarding the contents of the resources. |
+| **Conclusion:** | This leads to exchanging the data using FHIR documents.| 

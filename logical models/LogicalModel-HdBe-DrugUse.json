@@ -1,0 +1,857 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-DrugUse",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-DrugUse",
+  "name": "HdBeDrugUse",
+  "_name": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeDrugsGebruik"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeConsommationDrogue"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "title": "HdBe DrugUse",
+  "_title": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe DrugsGebruik"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe ConsommationDrogue"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.259205+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "fhir.healthdata@sciensano.be",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Drugs (or: narcotics, amphetamines, intoxicants, highs, hallucinogenics, illegal substances or dope) is a collective term for drugs and chemical substances with a more or less ‘drugging' (anesthetic, boosting and/or hallucinogenic) effect and which can lead to addiction. Drug [Online] Available at: nl.Wikipedia.org/wiki/drug [Accessed: 11 February 2015]. \r\n\r\nThis information model describes the information asked of the patient about their drug use.\r\n\r\n#### Purpose\r\nDocumenting and sharing registration of the drug use, as described in the concept.\r\n#### Evidence Base\r\nThough this information model can also be used to abuse (the patient’s own) medication, the project group eventually decided to focus on information on drug use, as described in the concept. \r\nSeeing as there is a large variety of ways to record the amount of drugs used, we decided that this part is to be entered as free text.\r\n\r\n\r\n\r\n#### Instructions\r\nThe 'DrugOrMedicationTypeCodelist is extensible. If the drug in question is not on the codelist, the list can be extended with a code from the SNOMED CT hierarchy 'Substance; <105590001' or if necessary from the hierarchy 'Pharmaceutical/biologic product; < 373873005'.",
+  "_description": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Drugs (ook wel: verdovende middelen, stimulerende middelen, bedwelmingsmiddelen, roesmiddelen, geestverruimende middelen, verboden middelen of dope) is een verzamelnaam voor geneesmiddelen en genotsmiddelen die een meer of minder 'drogerende' (verdovende, opwekkende en/of hallucinogene) werking hebben en die tot verslaving kunnen leiden. Drug [Online] Beschikbaar op: nl.Wikipedia.org/wiki/drug [Geraadpleegd: 11 februari 2015].&#13;\n&#13;\nDeze bouwsteen beschrijft de bij de patiënt uitgevraagde gegevens over het gebruik van drugs.&#13;\n#### Purpose&#13;\nVastleggen en delen van de registratie van het gebruik van drugs, zoals in het concept beschreven.&#13;\n#### Evidence Base&#13;\nHoewel deze bouwsteen ook gebruikt kan worden voor misbruik van (eigen) medicatie heeft de projectgroep uiteindelijk besloten de focus op de gegevens over drugsgebruik, zoals beschreven in het concept. &#13;\nAangezien er grote diversiteit is in de wijze waarop de hoeveelheid gebruikte drugs wordt vastgelegd, is besloten dit als vrije tekst te doen.&#13;\n&#13;\n&#13;\n#### Instructions&#13;\nDe 'DrugsOfGeneesmiddelCodelijst is uitbreidbaar. Indien het betreffende middel niet in de codelijst staat, kan deze lijst uitgebreid worden met een code uit de SNOMED CT hiërarchie 'Substance; <105590001' of eventueel uit de hiërarchie 'Pharmaceutical/biologic product; < 373873005'."
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Drogues (ou : stupéfiants, amphétamines, substances intoxicantes, substances enivrantes, hallucinogènes, substances illégales ou came) est un terme collectif désignant les drogues et les substances chimiques ayant un effet plus ou moins ‘droguant’ (anesthésique, stimulant et/ou hallucinogène) et pouvant conduire à la dépendance. Drogue [en ligne] Disponible à l'adresse : nl.Wikipedia.org/wiki/drug [Accès : 11 février 2015]. \n\nCe modèle d'information décrit les renseignements demandés au patient au sujet de sa consommation de drogue.\n\n#### Purpose\nDocumenter et partager l'enregistrement de la consommation de drogues, comme décrit dans le concept.\n##### Evidence Base\nBien que ce modèle d'information puisse également être utilisé pour l'abus de médicaments (médication propre du patient), le groupe de projet a finalement décidé de se concentrer sur les informations sur la consommation de drogues, comme décrite dans le concept. \nVu la grande variété de façons d'enregistrer la quantité de drogues utilisées, nous avons décidé que cette partie devait être saisie sous forme de texte libre.\n\n\n\n#### Instructions\nLa ‘ListeCodeTypeDrogueOuMédicament’ est extensible. Si la drogue ou le médicament concerné ne figure pas dans la liste de codes, la liste peut être étendue avec un code de la hiérarchie SNOMED CT ‘Substance; <105590001’ ou, si nécessaire, de la hiérarchie ‘Pharmaceutical/biologic product; < 373873005’."
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/DrugUse",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "DrugUse",
+        "path": "DrugUse",
+        "short": "DrugUse",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DrugsGebruik"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ConsommationDrogue"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Root concept of the DrugUse information model. This concept contains all data elements of the DrugUse information model.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen DrugsGebruik. Dit concept bevat alle gegevenselementen van de bouwsteen DrugsGebruik."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Concept root du modèle d'information ConsommationDrogue. Ce concept contient tous les éléments de données du modèle d'information ConsommationDrogue."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "DrugUse.ObservationOfUse",
+        "path": "DrugUse.ObservationOfUse",
+        "short": "ObservationOfUse",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "WaarnemingGebruik"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ObservationDUtilisation"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Container for ObservationOfUse. This container contains all data elements of the ObservationOfUse container.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container voor WaarnemingGebruik. Deze container bevat alle gegevenselementen van de container WaarnemingGebruik."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Conteneur pour ObservationDUtilisation. Ce conteneur contient tous les éléments de données du conteneur ObservationDUtilisation."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "DrugUse.ObservationOfUse.StartDate",
+        "path": "DrugUse.ObservationOfUse.StartDate",
+        "short": "StartDate",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "StartDatum"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DateDébut"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The date on which the patient started using.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum waarop is gestart met het gebruik."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La date à laquelle le patient a commencé à consommer."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "DrugUse.ObservationOfUse.StopDate",
+        "path": "DrugUse.ObservationOfUse.StopDate",
+        "short": "StopDate",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "StopDatum"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DateArrêt"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The date on which the patient quit using.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum waarop is gestopt met het gebruik"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La date à laquelle le patient a arrêté de consommer."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "DrugUse.ObservationOfUse.Amount",
+        "path": "DrugUse.ObservationOfUse.Amount",
+        "short": "Amount",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Hoeveelheid"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Quantité"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The number of units (pills, joints, shots etc.) per day, week, month, or year; or the frequency of use.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het aantal eenheden (pillen, joints, shots etc.) per dag, week, maand of jaar of de freqentie van gebruik."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le nombre d'unités (pilules, joints, shoots, etc.) par jour, semaine, mois ou année ; ou la fréquence de consommation."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "DrugUse.Comment",
+        "path": "DrugUse.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Commentaire"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Relevant comments on the drug use.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Relevante opmerkingen over het gebruik."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Commentaires pertinents sur la consommation de drogue."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "DrugUse.DrugOrMedicationType",
+        "path": "DrugUse.DrugOrMedicationType",
+        "short": "DrugOrMedicationType",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DrugsOfGeneesmiddelSoort"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TypeDrogueOuMédicament"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Type of drug used by the patient.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Soort drugs die de patiënt gebruikt."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Type de drogue consommée par le patient."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "DrugOrMedicationType codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes TypeDrogueOuMédicament"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
+          "valueSet": "https://fhir.healthdata.be/ValueSet/TypeOfDrugOrMedication"
+        }
+      },
+      {
+        "id": "DrugUse.DrugUseStatus",
+        "path": "DrugUse.DrugUseStatus",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "228366006"
+          }
+        ],
+        "short": "DrugUseStatus",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DrugsGebruikStatus"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "StatutConsommationDrogue"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Indication stating whether there was any drug use in the past or present.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Indicatie of in het heden of verleden sprake is (geweest) van gebruik van drugs."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Indication précisant s'il y a eu consommation de drogue par le passé ou dans le présent."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "DrugUseStatus codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes StatutConsommationDrogue"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
+          "valueSet": "https://fhir.healthdata.be/ValueSet/DrugUseStatus"
+        }
+      },
+      {
+        "id": "DrugUse.RouteOfAdministration",
+        "path": "DrugUse.RouteOfAdministration",
+        "short": "RouteOfAdministration",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toedieningsweg"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VoieDAdministration"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The way the drugs are used.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De wijze de drugs wordt gebruikt."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La façon dont les drogues sont consommées."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "RouteOfAdministration codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes VoieDAdministration"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
+          "valueSet": "https://fhir.healthdata.be/ValueSet/RouteOfAdministration"
+        }
+      }
+    ]
+  }
+}

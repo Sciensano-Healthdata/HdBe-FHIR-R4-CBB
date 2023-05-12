@@ -283,9 +283,6 @@
       <alias value="BehandelBesluit" />
       <condition value="HdBe-TreatmentDirective2-2" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ConsentProvisionType" />
-        </extension>
         <strength value="required" />
         <description value="Use ConceptMap 'TreatmentDecision-to-ConsentProvisionType' to translate zib terminology to profile terminology in ValueSet 'ConsentProvisionType'" />
         <valueSet value="http://hl7.org/fhir/ValueSet/consent-provision-type|4.0.1">
@@ -411,9 +408,6 @@
       <alias value="Behandeling" />
       <max value="1" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ConsentContentCode" />
-        </extension>
         <strength value="extensible" />
         <valueSet value="https://fhir.healthdata.be/ValueSet/Treatment" />
       </binding>
@@ -426,10 +420,6 @@
         <identity value="HdBe-TreatmentDirective2" />
         <map value="TreatmentDirective2.Treatment" />
       </mapping>
-    </element>
-    <element id="Consent.provision.provision">
-      <path value="Consent.provision.provision" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Consent#Consent.provision" />
     </element>
   </differential>
 </StructureDefinition>

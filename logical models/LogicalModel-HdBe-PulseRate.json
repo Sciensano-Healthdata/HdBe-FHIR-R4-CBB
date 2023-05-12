@@ -1,0 +1,515 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-PulseRate",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PulseRate",
+  "name": "HdBePulseRate",
+  "_name": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBePolsfrequentie"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBePouls"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "title": "HdBe PulseRate",
+  "_title": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe Polsfrequentie"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe Pouls"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.259205+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "The pulse rate is the number of palpations per minute measured at an artery.\r\n#### Purpose\r\nObtaining information on the circulation and heart function by measuring the number of beats per minute and the regularity in artery palpation.",
+  "_description": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "De polsfrequentie is het aantal palpatie per minuut gemeten aan een slagader.&#13;\n#### Purpose&#13;\nHet verkrijgen van informatie over de bloedcirculatie en hartfunctie door middel van het meten van het aantal slagen per minuut en de gelijkmatigheid bij palpatie van een slagader.&#13;\n&#13;\n&#13;\n**References**&#13;\n1. openEHR-EHR-OBSERVATION.heart_rate-pulse.v1[Online] Beschikbaar op: http://www.openehr.org/knowledge/ [Geraadpleegd: 23 februari 2015].&#13;\n#### Traceability to other Standards&#13;\nDeze zorginformatie bouwsteen is in lijn met de bouwsteen blauwdruk Meting v1.0."
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Le pouls est le nombre de pulsations par minute mesurées au niveau d'une artère.\n##### Purpose\nObtenir des informations sur la circulation et la fonction cardiaque en mesurant le nombre de pulsations par minute et la régularité par palpation artérielle."
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/PulseRate",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PulseRate",
+        "path": "PulseRate",
+        "short": "PulseRate",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Polsfrequentie"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Pouls"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Root concept of the PulseRate information model. This root concept contains all data elements of the PulseRate information model.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Polsfrequentie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Polsfrequentie."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Concept root du modèle d'information Pouls. Ce concept root contient tous les éléments de données du modèle d'information Pouls."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "PulseRate.PulseRateValue",
+        "path": "PulseRate.PulseRateValue",
+        "short": "PulseRateValue",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "PolsfrequentieWaarde"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ValeurPouls"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The element contains the value of the pulse rate measured. The pulse rate is expressed in the number of tangible pulsations of an artery per minute, usually the a. radialis, a. carotis or a. femoralis.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het element bevat de waarde van de gemeten polsfrequentie. De polsfrequentie wordt uitgedrukt in het aantal voelbare pulsaties van een slagader per minuut, meestal de a. radialis, a. carotis of a. femoralis."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "L'élément contient la valeur du pouls mesuré. Le pouls est exprimé par le nombre de pulsations perceptibles d'une artère par minute, généralement l'artère radiale, l'artère carotide ou l'artère fémorale."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "PulseRate.PulseRateDateTime",
+        "path": "PulseRate.PulseRateDateTime",
+        "short": "PulseRateDateTime",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "PolsfrequentieDatumTijd"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DateHeurePouls"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Date and time of the pulse rate or pulse regularity measurement.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum en tijd van de waarneming van de polsfrequentie of polsregelmatigheid."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Date et heure de mesure du pouls ou de la régularité du pouls."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "PulseRate.Comment",
+        "path": "PulseRate.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Commentaire"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Comment on any problems or factors that may influence the measurement. Further explanation of pulse properties can be provided here as well: aequale/inaequale, pulsus alternans, pulsus paradoxus, pulse volume, etc.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting over eventuele problemen of factoren die van invloed kunnen zijn op de meting. Ook kan hier een nadere beschrijving van de polskwaliteiten worden weergegeven: aequaal/inaequaal, pulsus alternans, pulsus paradoxus, pols volume, enz."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Commentaire concernant tout problème ou facteur susceptible d'influencer la mesure. Une explication plus détaillée des propriétés du pouls peut être également fournie ici : égal/inégal, pouls alternant, pouls paradoxal, volume, etc."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "PulseRate.PulseRegularity",
+        "path": "PulseRate.PulseRegularity",
+        "short": "PulseRegularity",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "PolsRegelmatigheid"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "RégularitéPouls"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Regular or irregular rhythm.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Regulair (regelmatig) of irregulair (onregelmatig) ritme."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rythme régulier ou irrégulier."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "PulseRegularity codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes RégularitéPouls"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
+          "valueSet": "https://fhir.healthdata.be/ValueSet/PulseRegularity"
+        }
+      }
+    ]
+  }
+}

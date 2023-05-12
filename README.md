@@ -76,22 +76,19 @@ Packages are released using the following settings.
 There are multiple (semi)-automatic checks incorporated to assure the quality of the deliverables. 
 
 
-#### **1. Firely Terminal**
+#### **1. Forge**
 
-Firely terminal can be used to validate work locally. This is useful when you want to check your work before committing it.
+Forge can be used to validate work locally. This is useful when you want to check your work before committing it.
 
-Open Powershell and navigate to the folder you want to validate. If you use the main folder `HdBe-FHIR-R4-CBB` it will validate the complete project.* Use the following command to validate your work with all quality assurance rules:
+Open Forge and the folder you want to validate. If you use the main folder `HdBe-FHIR-R4-CBB` it will validate the complete project. Click on Quality Control and `Run qa-validate-all rules`. This will validate the project both on validity of the FHIR artifacts and on the quality assurance rules defined by ourselves.
 
-```
-fhir check qa-validate-all
-```
+![Quality Assurance in Forge](./.attachments/QA-Forge.png)
 
-Depending on what your work contains, you can also use another validation file to focus on on a part of the validation. Inside the rules files is described what and how it is validated. The validation files are all in the main folder and comprise of the name `qa-*.rules.yaml`.
+Depending on the content of the work, you can also pick another validation method to focus on on a part of the validation. Inside the rules files is described what and how it is validated. The validation files are all in the qa folder and comprise of the name `qa-*.rules.yaml`.
 
-* When you choose for `qa-validate-FHIR.rules.yaml` as quality assurance, the focus is on validating if the project conforms the FHIR specifications, and if the examples are in accordance with the profiles. 
-* When you choose for `qa-validate-business.rules.yaml` as quality assurance, the focus is on validating if the project meets the profiling guidelines. 
+* When you choose for `qa-validate-FHIR` as quality assurance, the focus is on validating if the project conforms the FHIR specifications, and if the examples are in accordance with the profiles. 
+* When you choose for `qa-validate-business` as quality assurance, the focus is on validating if the project meets the profiling guidelines. 
 
-*<sub>Without the src folder<sub>
 
 
 #### **2. Github Actions**

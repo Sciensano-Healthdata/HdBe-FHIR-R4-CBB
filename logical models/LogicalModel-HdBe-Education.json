@@ -1,0 +1,213 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-Education",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Education",
+  "name": "HdBeEducation",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeOpleiding"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe Education",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Education indicates the highest level of education achieved.\r\n#### Purpose\r\nThe obtained degree can offer an indication of the extent to which the patient is capable of understanding the doctor’s explanations about diseases, symptoms, treatment and prospects as well as the patient’s insight into the use of healthcare and the chances of contracting certain diseases.\r\n\r\n\r\n#### Instructions\r\n25 and over: highest level of education achieved. \r\nUnder 25: current level of educational courses being taken.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "De opleiding beschrijft de hoogst genoten opleiding.\r\n#### Purpose\r\nDe gevolgde opleiding kan een indicatie geven over de mate waarin de patiënt in staat is om te begrijpen wat de arts uitlegt over ziekte, symptomen, behandeling en vooruitzichten als ook de mate waarin de patiënt inzicht heeft in het gebruik van de gezondheidszorg en de kans op ziektes.\r\n\r\n\r\n#### Instructions\r\nVanaf 25 jaar: hoogst behaalde opleidingsniveau.\r\nJonger dan 25 jaar: de huidige opleiding die wordt gevolgd.\r\n",
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/Education",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Education",
+        "path": "Education",
+        "short": "Education",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Opleiding"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Education information model. This concept contains all data elements of the Education information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dit is het rootconcept van de bouwsteen Opleiding. Het concept bevat alle gegevenselementen van de bouwsteen Opleiding."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Education.SchoolType",
+        "path": "Education.SchoolType",
+        "short": "SchoolType",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Schooltype"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Indication of the highest level of education achieved.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Typering van de hoogst genoten opleiding."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Education.Comment",
+        "path": "Education.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "If deemed relevant, a specification of the degree program can be provided by means of an explanation (e.g.: patient is in medical school).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Indien relevant geacht kan middels de toelichting een specificatie van de opleiding (bijv. patient studeert Geneeskunde) worden toegevoegd."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

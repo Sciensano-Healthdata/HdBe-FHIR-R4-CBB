@@ -1,0 +1,799 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-AdministrationAgreement",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AdministrationAgreement",
+  "name": "HdBeAdministrationAgreement",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeToedieningsafspraak"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe AdministrationAgreement",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "An administration agreement is the use (or administering) instructions from the pharmacist to the patient (or their representative or administrator), whereby a medication agreement is structured at a concrete level.\r\n#### Purpose\r\nThe goal of the administration agreement is to provide insight into the concrete instructions for administration/use of medication.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Een toedieningsafspraak is de gebruiks- (of toedienings-)instructie van de apotheker aan de patiënt (of zijn vertegenwoordiger of toediener), waarbij een medicatieafspraak op een concreet niveau wordt ingevuld.\r\n#### Purpose\r\nHet doel van de toedieningsafspraak is inzicht te geven in de concrete instructie voor het toedienen/gebruik van medicatie.\r\n\r\n\r\n",
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/AdministrationAgreement",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "AdministrationAgreement",
+        "path": "AdministrationAgreement",
+        "short": "AdministrationAgreement",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toedieningsafspraak"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the AdministrationAgreement information model. This root concept contains all data elements of the AdministrationAgreement information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Toedieningsafspraak. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Toedieningsafspraak."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "AdministrationAgreement.Supplier",
+        "path": "AdministrationAgreement.Supplier",
+        "short": "Supplier",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Verstrekker"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The supplier (pharmacist) that entered the administration agreement.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De verstrekker (apotheker) die de toedieningsafspraak heeft vastgelegd."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareOrganization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AdministrationAgreement.MedicineForAdministrationAgreement",
+        "path": "AdministrationAgreement.MedicineForAdministrationAgreement",
+        "short": "MedicineForAdministrationAgreement",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GeneesmiddelBijToedieningsAfspraak"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Medicine in the AdministrationAgreement.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geneesmiddel horende bij de toedieningsafspraak."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PharmaceuticalProduct"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AdministrationAgreement.InstructionsForUse",
+        "path": "AdministrationAgreement.InstructionsForUse",
+        "short": "InstructionsForUse",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gebruiksinstructie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Instructions for administering the medication, e.g. dose and route of administration.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanwijzingen voor de toediening van de medicatie, bijvoorbeeld dosering en toedieningsweg."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Dosage",
+            "profile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-InstructionsForUse"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AdministrationAgreement.AdministrationAgreementDateTime",
+        "path": "AdministrationAgreement.AdministrationAgreementDateTime",
+        "short": "AdministrationAgreementDateTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ToedieningsafspraakDatumTijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The time at which the agreement was made.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het tijdstip waarop de afspraak gemaakt is."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "AdministrationAgreement.AgreementReason",
+        "path": "AdministrationAgreement.AgreementReason",
+        "short": "AgreementReason",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "RedenAfspraak"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Reason for this agreement. This will often be the same reason as the one for the medication agreement. \r\nThis field has the option to - if applicable - enter a specific reason for the administration agreement. Examples include: substitution, transfer to GDS, patient request for different product, etc.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Reden voor deze afspraak. Dit zal vaak dezelfde reden zijn als die van de medicatieafspraak.\r\nDit veld geeft de mogelijkheid om - indien van toepassing - een specifieke reden voor de toedieningsafspraak op te nemen. Voorbeelden hiervan zijn: substitutie, overgang naar GDS, wens patiënt voor ander handelsproduct, et cetera."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "AdministrationAgreement.PeriodOfUse",
+        "path": "AdministrationAgreement.PeriodOfUse",
+        "short": "PeriodOfUse",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gebruiksperiode"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Start date: This is the time at which the agreement was to take effect (or took effect or will take effect). This is the time at which the instructions for use in this agreement start. In the case of an agreement to discontinue use, this is the start date of the original administration agreement. The end date indicates from when the medication is to be discontinued. \r\nDuration: The intended duration of use. E.g. 5 days or 8 weeks. It is not allowed to indicate the duration in months, because different months have a variable duration in days. \r\nEnd date: The time at which the period of use ends (or ended or will end). In the case of an agreement to discontinue use, this is the time at which the medication is to be discontinued. To avoid confusion between 'to' and 'up to', the submission of time is always mandatory for the end date. \r\n\r\nWith medication for an indefinite period only a start date is indicated.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Ingangsdatum: Dit is het tijdstip waarop de afspraak ingaat (of is ingegaan of zal ingaan). Dit betreft het tijdstip waarop de in deze afspraak vastgelegde gebruiksinstructie ingaat. In geval van een afspraak om te stoppen betreft dit de ingangsdatum van de originele toedieningsafspraak. De einddatum geeft aan vanaf wanneer de medicatie gestaakt moet worden. \r\nGebruiksduur: De beoogde gebruiksduur.Bijvoorbeeld 5 dagen of 8 weken. Het is niet toegestaan om de gebruiksduur in maanden aan te geven, omdat verschillende maanden een variable duur in dagen hebben. \r\nEinddatum: Het tijdstip waarop de gebruiksperiode eindigt (of geëindigd is of zal eindigen). In het geval van een afspraak om het gebruik te staken betreft dit het tijdstip waarop de medicatie gestaakt moet worden. Om verwarring te voorkomen tussen 'tot' en 'tot en met' is het meegeven van de tijd altijd verplicht bij einddatum.\r\n\r\nBij medicatie voor onbepaalde duur wordt er alleen een ingangsdatum aangegeven."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "AdministrationAgreement.PeriodOfUse.StartDateTime",
+        "path": "AdministrationAgreement.PeriodOfUse.StartDateTime",
+        "short": "startDateTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "startDatumTijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The start date and time of the interval",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De begindatum en tijd van het interval"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "AdministrationAgreement.PeriodOfUse.EndDateTime",
+        "path": "AdministrationAgreement.PeriodOfUse.EndDateTime",
+        "short": "endDateTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "eindDatumTijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The end date and time of the interval",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De einddatum en tijd van het interval"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "AdministrationAgreement.PeriodOfUse.Duration",
+        "path": "AdministrationAgreement.PeriodOfUse.Duration",
+        "short": "Duration",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "tijdsDuur"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The duration of the interval in appropriate units of time (*e.g.* days or hours, etc.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De tijdsduur van het interval in een gewenste tijdseenheid (bv. dagen of uren, etc.)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "AdministrationAgreement.MedicationAgreement",
+        "path": "AdministrationAgreement.MedicationAgreement",
+        "short": "MedicationAgreement",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Medicatieafspraak"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Relationship to the medication agreement on which the administration agreement is based.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Relatie naar medicatieafspraak waarop de toedieningsafspraak gebaseerd is."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationAgreement"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AdministrationAgreement.AdministrationAgreementStopType",
+        "path": "AdministrationAgreement.AdministrationAgreementStopType",
+        "short": "AdministrationAgreementStopType",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ToedieningsafspraakStopType"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Stop type, the manner in which this medication is discontinued (temporary or definitive).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Stop type, de manier waarop gestopt wordt met deze medicatie (tijdelijk of definitief)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "AdministrationAgreementStopType codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/ToedieningsafspraakStopType"
+        }
+      },
+      {
+        "id": "AdministrationAgreement.CanceledIndicator",
+        "path": "AdministrationAgreement.CanceledIndicator",
+        "short": "CanceledIndicator",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GeannuleerdIndicator"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "In the event of an error correction, this indicator is to be put on for the incorrect agreement.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "In geval van foutcorrectie wordt bij de foutieve afspraak deze indicator aangezet."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "AdministrationAgreement.AdministrationAgreementAdditionalInformation",
+        "path": "AdministrationAgreement.AdministrationAgreementAdditionalInformation",
+        "short": "AdministrationAgreementAdditionalInformation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ToedieningsafspraakAanvullendeInformatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Additional information includes details on the structure of the agreement made. \r\n\r\nThis element mainly contains information that until now has been structured with ZZ rules. The medication-related topics that are now supported by the ZZ rules are best supported with a system functionality. A process has been started for this by Z-index/KNMP. For now, the following list will be used. This list will be replaced by a thesaurus in the G standard at a later stage.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie bevat bijzonderheden over de invulling van de gemaakte afspraak. \r\n\r\nDit element bevat vooral gegevens die tot op heden met ZZ-regels worden ingevuld. De medicatiegerelateerde onderwerpen die nu met de ZZ-regels worden ondersteund, kunnen het beste met behulp van systeemfunctionaliteit worden ondersteund. Hiervoor is een traject ingang gezet door Z-index/KNMP. Vooralsnog wordt onderstaande lijst gehanteerd. In een later stadium zal deze lijst vervangen worden door een thesaurus in de G-standaard."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "AdministrationAgreementAdditionalInformation codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/ToedieningsafspraakAanvullendeInformatie"
+        }
+      },
+      {
+        "id": "AdministrationAgreement.Comment",
+        "path": "AdministrationAgreement.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Comments on the administration agreement.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Opmerkingen met betrekking tot de toedieningsafspraak."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

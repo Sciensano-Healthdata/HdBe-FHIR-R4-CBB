@@ -1,0 +1,1428 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-Payer",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Payer",
+  "name": "HdBePayer",
+  "_name": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeBetaler"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBePayeur"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "title": "HdBe Payer",
+  "_title": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe Betaler"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe Payeur"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.259205+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Payers are organizations or individuals that pay for the healthcare supplied to the patient. These organizations or individuals can be: facilities or people who financially guarantee or who are responsible for the patient (such as parents or guardians of minors), organizations with direct financial responsibility, combinations of these or the patient themselves.\r\n#### Purpose\r\nRecording the information of the paying authorities and people serves to simplify payment of the fees for the supplied care and to provide insight in advance on how these fees are to be paid, especially when it comes to non-insured healthcare.\r\n#### Evidence Base\r\nThe structure of the 'European Health Insurance Card (EHIC)' information was taken into account.",
+  "_description": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Betalers zijn organisaties of individuen die betalen voor de aan de patiënt geleverde zorg. Deze organisaties of individuen kunnen zijn: instellingen of personen die financieel garant staan of verantwoordelijk zijn voor de patiënt (zoals ouders van minderjarigen), organisaties met directe financiële verantwoordelijkheid, combinaties van deze of de patiënt zelf.&#13;\n#### Purpose&#13;\nHet vastleggen van de gegevens van de betalende instanties en personen dient om betaling van de kosten van de geleverde zorg te vereenvoudigen en op voorhand inzicht te verkrijgen hoe deze kosten betaald gaan worden, zeker waar het gaat om niet verzekerde zorg.&#13;\n#### Evidence Base&#13;\nBij het vaststellen van het model is gekeken naar de gegevens die uitgewisseld worden bij de 'Controle op Verzekeringsrecht (COV)'. Hierbij is gebruik gemaakt van de berichtdefinities COV VZ801/802, v4 (02-nov-2012).&#13;\n&#13;\nDaarnaast is de opbouw van de gegevens op de 'European Health Insurance Card (EHIC)' in de afwegingen meegenomen. &#13;\n&#13;\n&#13;\n",
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Les payeurs sont les organisations ou les personnes qui paient les soins de santé prodigués au patient. Ces organisations ou personnes peuvent être : des établissements ou des personnes qui garantissent financièrement le patient ou qui en sont responsables (tels que les parents ou les tuteurs de mineurs), des organisations ayant une responsabilité financière directe, des combinaisons de ceux-ci, ou le patient lui-même.\n##### Purpose\nEnregistrer les informations concernant les autorités de paiement et les personnes sert à simplifier le paiement des frais pour les soins prodigués et à fournir des informations à l'avance sur la façon dont ces frais doivent être payés, en particulier en ce qui concerne les soins de santé non assurés.\n##### Evidence Base\nLa structure de l'information de la carte européenne d'assurance maladie (CEAM) a été prise en compte."
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/Payer",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Payer",
+        "path": "Payer",
+        "short": "Payer",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Betaler"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Payeur"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Root concept of the Payer information model. This root concept contains all data elements of the Payer information model.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Betaler. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Betaler."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Concept root du modèle d'information Payeur. Ce concept root contient tous les éléments de données du modèle d'information Payeur."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "HdBe-Payer-1",
+            "severity": "error",
+            "human": "Either payer_person or insurance_company must exist, but not both.",
+            "_human": {
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr-BE"
+                    },
+                    {
+                      "url": "content",
+                      "valueMarkdown": "Soit personne_payeur, soit compagnie_assurances doit exister, mais pas les deux."
+                    }
+                  ],
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation"
+                }
+              ]
+            },
+            "expression": "payer_person.exists() xor insurance_company.exists()"
+          }
+        ]
+      },
+      {
+        "id": "Payer.PayerPerson",
+        "path": "Payer.PayerPerson",
+        "short": "PayerPerson",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "BetalerPersoon"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "PersonnePayeur"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Container of the PayerPerson concept. This container contains all data elements of the PayerPerson concept.\r\nIn this a person is a natural person or a juridical person, such as an organization, municipality, etc.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept BetalerPersoon. Deze container bevat alle gegevenselementen van het concept BetalerPersoon.&#13;\nEen persoon is hierbij een natuurlijk persoon of een rechts persoon, zoals een organisatie, gemeente, etc."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Conteneur du concept PersonnePayeur. Ce conteneur contient tous les éléments de données du concept PersonnePayeur.Dans ce cas, une personne est une personne physique ou une personne morale, comme un organisme, une commune, etc."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "condition": [
+          "HdBe-Payer-1"
+        ]
+      },
+      {
+        "id": "Payer.PayerPerson.PayerName",
+        "path": "Payer.PayerPerson.PayerName",
+        "short": "PayerName",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "BetalerNaam"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "NomPayeur"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Full name of the paying person or organization (legal entity).",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naamgegevens van de betalende persoon of organisatie (rechtspersoon)."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Nom complet de la personne ou de l'organisme payeur (personne morale)."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Payer.PayerPerson.BankInformation",
+        "path": "Payer.PayerPerson.BankInformation",
+        "short": "BankInformation",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bankgegevens"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "InformationBancaire"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Container of the BankInformation concept. This container contains all data elements of the BankInformation concept.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept Bankgegevens. Deze container bevat alle gegevenselementen van het concept Bankgegevens."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Conteneur du concept InformationBancaire. Ce conteneur contient tous les éléments de données du concept InformationBancaire."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Payer.PayerPerson.BankInformation.BankName",
+        "path": "Payer.PayerPerson.BankInformation.BankName",
+        "short": "BankName",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "BankNaam"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "NomBanque"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Name of the financial organization.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van de financiële instelling."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Nom de l'organisme financier."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Payer.PayerPerson.BankInformation.BankCode",
+        "path": "Payer.PayerPerson.BankInformation.BankCode",
+        "short": "BankCode",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bankcode"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "CodeBanque"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Code indicating the bank and branch. For European countries, this is the organization’s BIC or SWIFT code.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Code die de bank en het filiaal aangeven. Voor Europese landen is dat de BIC of SWIFT code van de instelling."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Code indiquant la banque et la succursale. Pour les pays européens, il s'agit du code BIC ou SWIFT de l'organisme."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Payer.PayerPerson.BankInformation.AccountNumber",
+        "path": "Payer.PayerPerson.BankInformation.AccountNumber",
+        "short": "AccountNumber",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rekeningnummer"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "NuméroCompte"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The payer’s bank account number at the listed organization. For European countries, this is the IBAN.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rekeningnummer van de betaler bij de genoemde instelling. Voor Europese landen is dit het IBAN nummer."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le numéro de compte bancaire du payeur dans l'organisme listé. Pour les pays européens, il s'agit de l'IBAN."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Payer.InsuranceCompany",
+        "path": "Payer.InsuranceCompany",
+        "short": "InsuranceCompany",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Verzekeraar"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "CompagnieAssurances"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Container of the InsuranceCompany concept. This container contains all data elements of the InsuranceCompany concept.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept Verzekeraar. Deze container bevat alle gegevenselementen van het concept Verzekeraar."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Conteneur du concept CompagnieAssurances Ce conteneur contient tous les éléments de données du concept CompagnieAssurances."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "condition": [
+          "HdBe-Payer-1"
+        ]
+      },
+      {
+        "id": "Payer.InsuranceCompany.Insurance",
+        "path": "Payer.InsuranceCompany.Insurance",
+        "short": "Insurance",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Verzekering"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Assurance"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Container of the Insurance concept. This container contains all data elements of the Insurance concept.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept Verzekering. Deze container bevat alle gegevenselementen van het concept Verzekering."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Conteneur du concept Assurance Ce conteneur contient tous les éléments de données du concept Assurance."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Payer.InsuranceCompany.Insurance.StartDateTime",
+        "path": "Payer.InsuranceCompany.Insurance.StartDateTime",
+        "short": "StartDateTime",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "BeginDatumTijd"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DateHeureDébut"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Date from which the insurance policy coverage applies.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum vanaf wanneer de dekking van de verzekering geldt."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Date à partir de laquelle la couverture de la police d'assurance s'applique."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Payer.InsuranceCompany.Insurance.EndDateTime",
+        "path": "Payer.InsuranceCompany.Insurance.EndDateTime",
+        "short": "EndDateTime",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "EindDatumTijd"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DateHeureFin"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Date until which the insurance policy coverage applies. \r\nThis item maps the *‘Expiry date’* on EHIC field 9.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum tot wanneer de dekking van de verzekering geldt.&#13;\nDit item mapt op het EHIC veld 9 *'Expiry date'.*"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Date jusqu'à laquelle la couverture de la police d'assurance s'applique. \nCet élément applique la *‘date d'expiration’* du champ 9 de la CEAM."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Payer.InsuranceCompany.Insurance.InsuranceType",
+        "path": "Payer.InsuranceCompany.Insurance.InsuranceType",
+        "short": "InsuranceType",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Verzekeringssoort"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TypeAssurance"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Type of insurance policy. Codes as returned in the Check for Right to Insurance",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Soort verzekering. Codes zoals geretourneerd bij de controle op verzekeringsrecht"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Type de police d'assurance. Codes tels que retournés dans le contrôle du droit à l'assurance"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "InsuranceType codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes TypeAssurance"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
+          "valueSet": "https://fhir.healthdata.be/ValueSet/InsuranceType"
+        }
+      },
+      {
+        "id": "Payer.InsuranceCompany.IdentificationNumber",
+        "path": "Payer.InsuranceCompany.IdentificationNumber",
+        "short": "IdentificationNumber",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "IdentificatieNummer"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "NuméroIdentification"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Unique healthcare insurance company identification.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Unieke zorgverzekeraarsidentificatie (het UZOVI-nummer)."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identification unique de la compagnie d'assurance maladie."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "Payer.InsuranceCompany.OrganizationName",
+        "path": "Payer.InsuranceCompany.OrganizationName",
+        "short": "OrganizationName",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "OrganisatieNaam"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "NomOrganisme"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Full, official name of the healthcare insurance company.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De naamgegevens van de zorgverzekeraar. Indien het UZOVI nummer als identificatienummer wordt opgegeven, is dit de naam zoals vermeld in het UZOVI register en ook bij de controle op verzekeringsrecht (COV) wordt teruggegeven."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Nom officiel complet de la compagnie d'assurance maladie."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Payer.InsuranceCompany.InsurantNumber",
+        "path": "Payer.InsuranceCompany.InsurantNumber",
+        "short": "InsurantNumber",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VerzekerdeNummer"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "NuméroAssuré"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Number under which the insured person is registered at the insurance company \r\nThis item maps the *‘Identification number of the card’* on EHIC field 8",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Nummer waaronder de verzekerde bekend is bij de verzekeraar&#13;\nDit item mapt op het EHIC veld 8 *'Identification number of the card'*"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Numéro sous lequel la personne assurée est inscrite à la compagnie d'assurances\nCet élément applique le *‘Numéro d'identification de la carte’* du champ 8 de la CEAM"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Payer.AddressInformation",
+        "path": "Payer.AddressInformation",
+        "short": "AddressInformation",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adresgegevens"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "InformationAdresse"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The payer’s address information.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adresgegevens van betaler."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "L'information d'adresse du payeur."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Address",
+            "profile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AddressInformation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Payer.ContactInformation",
+        "path": "Payer.ContactInformation",
+        "short": "ContactInformation",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "InformationContact"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The payer’s telephone number and/or e-mail address.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Telefoonnummer en/of e-mailadres van betaler."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le numéro de téléphone et/ou l'adresse e-mail du payeur."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ContactPoint",
+            "profile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactInformation"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,866 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-SmokingStatus",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-SmokingStatus",
+  "name": "HdBeSmokingStatus",
+  "_name": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeTabakGebruik"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeStatutTabagique"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "title": "HdBe SmokingStatus",
+  "_title": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe TabakGebruik"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe StatutTabagique"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "status": "draft",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Tobacco is a product that comes from the leaves of the tobacco plant, which is smoked as a drug. Smokable forms of tobacco include rolling tobacco, cigarettes, cigars and pipe tobacco. This information model describes the information asked of the patient about their smoking behaviour and use of tobacco.\r\n#### Purpose\r\nDuring the social anamnesis, the patient is frequently asked about their smoking behaviour, use of tobacco or exposure to tobacco smoke at home or elsewhere. Information on tobacco use can be important for treatment and diagnostics.\r\n#### Evidence Base\r\nExposure to tobacco is an important risk factor for things like neoplasms, degenerative diseases and vascular incidents. During the anamnesis, the patient is often asked about their current smoking pattern and number of pack years. The number of pack years is the unit that describes the total exposure to tobacco smoke, which is the number of smoked packs of cigarettes per day (one pack = 20 cigarettes) times the number of years of smoking. A different formula is often used for rolling tobacco and pipes, with one of the parameters being the number of grams per week. \r\n#### Instructions\r\nThe pack year is a measure for smokers’ exposure to tobacco smoke. The *calculation* is not included in the model. It is entered in the EPD and/or during the anamnesis and is only entered if known. This should not be calculated based on the other values in this clinical information model.",
+  "_description": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Tabak is een product afkomstig van de bladeren van de tabaksplant dat als genotmiddel wordt gerookt. Rookbare vormen van tabak zijn shag, sigaretten, sigaren en pijptabak. Deze bouwsteen beschrijft de bij de patiënt uitgevraagde gegevens over het gebruik van tabak. &#13;\n#### Purpose&#13;\nTijdens de sociale anamnese wordt frequent gevraagd naar het gebruik van tabak of blootstellingen aan tabaksrook thuis of elders. Informatie over tabakgebruik kan van belang zijn i.v.m. behandeling en diagnostiek. &#13;\n#### Evidence Base&#13;\nDe blootstelling aan tabak is een belangrijke risicofactor voor onder andere nieuwvormingen, degeneratieve afwijkingen en vasculaire incidenten. Tijdens de anamnese wordt vaak het huidige rookgedrag en het aantal packyears (pakjaren) uitgevraagd. Het aantal packyears is de eenheid waarin de totale blootstelling aan tabaksrook bij rokers beschreven wordt, namelijk het aantal gerookte pakjes sigaretten per dag (inhoud pakje is 20 stuks) maal het aantal jaren dat werd gerookt. Bij shag en pijp wordt vaak een andere formule genomen, waarin het aantal gram per week een parameter is. &#13;\n&#13;\n&#13;\n#### Instructions&#13;\nDe packyear is een maat voor blootstelling aan tabaksrook bij rokers. De *berekening* wordt niet meegenomen in het model. Deze vindt plaats in het EPD dan wel tijdens de anamnese en wordt uitsluitend doorgegeven als deze bekend is. Het is niet de bedoeling dat deze wordt berekend op basis van de overige waarden in deze klinische bouwsteen. &#13;\n",
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Le tabac est un produit issu des feuilles de la plante de tabac, que l'on fume en tant que drogue. Les formes de tabac à fumer incluent le tabac à rouler, les cigarettes, les cigares et le tabac pour pipe. Ce modèle d'information décrit les renseignements demandés au patient au sujet de son comportement tabagique et de son tabagisme.\n##### Purpose\nPendant l'anamnèse sociale, le patient est fréquemment interrogé sur son comportement tabagique, son usage du tabac (tabagisme) ou son exposition à la fumée de tabac à la maison ou ailleurs. Les informations sur l'usage du tabac peuvent être importantes pour le traitement et le diagnostic.\n##### Evidence Base\nL'exposition au tabac est un facteur de risque important pour les néoplasmes, les maladies dégénératives et les incidents vasculaires. Pendant l'anamnèse, le patient est souvent interrogé sur son profil actuel de tabagisme et le nombre de paquets-années. Le nombre de paquets-années est l'unité qui décrit l'exposition totale à la fumée de tabac, soit le nombre de paquets de cigarettes fumés par jour (un paquet = 20 cigarettes) fois le nombre d'années de tabagisme. Une formule différente est souvent utilisée pour le tabac à rouler et les pipes, l'un des paramètres étant le nombre de grammes par semaine. \n#### Instructions\nLe paquet-année est une mesure de l'exposition des fumeurs à la fumée de tabac. Le *calcul* n'est pas inclus dans le modèle. Il est saisi dans le dossier pharmaceutique électronique et/ou pendant l'anamnèse et n'est entré que s'il est connu. Cette valeur ne doit pas être calculée sur la base des autres valeurs de ce modèle d'information clinique."
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/SmokingStatus",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "SmokingStatus",
+        "path": "SmokingStatus",
+        "short": "SmokingStatus",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TabakGebruik"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "StatutTabagique"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Root concept of the SmokingStatus information model. This concept contains all data elements of the SmokingStatus information model.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen TabakGebruik. Dit concept bevat alle gegevenselementen van de bouwsteen TabakGebruik."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Concept root du modèle d'information StatutTabagique. Ce concept contient tous les éléments de données du modèle d'information StatutTabagique."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "SmokingStatus.SmokingStatus",
+        "path": "SmokingStatus.SmokingStatus",
+        "short": "SmokingStatus",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TabakGebruikStatus"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "StatutTabagique"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The patient’s smoking status or usage of (smokeless) tobacco.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De status van het tabaksgebruik van de patiënt."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le statut tabagique du patient ou son usage du tabac (sans fumée)."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "SmokingStatus codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes StatutTabagique"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
+          "valueSet": "https://fhir.healthdata.be/ValueSet/SmokingStatus"
+        }
+      },
+      {
+        "id": "SmokingStatus.TypeOfSmokingOrTobacco",
+        "path": "SmokingStatus.TypeOfSmokingOrTobacco",
+        "short": "TypeOfSmokingOrTobacco",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SoortTabakGebruik"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TypeDeTabagismeOuDUsageDuTabac"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The patient's type of smoking or tobacco use.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Soort tabak die de patiënt gebruikt."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le type de tabagisme ou d'usage du tabac du patient."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "TypeOfSmokingOrTobacco codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes TypeDeTabagismeOuDUsageDuTabac"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
+          "valueSet": "https://fhir.healthdata.be/ValueSet/TypeOfSmokingOrTobacco"
+        }
+      },
+      {
+        "id": "SmokingStatus.ObservationOfUse",
+        "path": "SmokingStatus.ObservationOfUse",
+        "short": "ObservationOfUse",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "WaarnemingGebruik"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ObservationDUtilisation"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "This container contains all information on the extent to which the patient is or was exposed to tobacco.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Deze container bevat alle gegevens over de mate waarin de patiënt aan tabak is blootgesteld geweest of wordt blootgesteld."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Ce conteneur contient toutes les informations sur la mesure où le patient est ou a été exposé au tabac."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "SmokingStatus.ObservationOfUse.StartDate",
+        "path": "SmokingStatus.ObservationOfUse.StartDate",
+        "short": "StartDate",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "StartDatum"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DateDébut"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The date on which the patient started smoking.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum waarop is gestart met roken."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La date à laquelle le patient a commencé à fumer."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "SmokingStatus.ObservationOfUse.StopDate",
+        "path": "SmokingStatus.ObservationOfUse.StopDate",
+        "short": "StopDate",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "StopDatum"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DateArrêt"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The date on which the patient quit smoking",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum waarop is gestopt met roken"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La date à laquelle le patient a arrêté de fumer."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "SmokingStatus.ObservationOfUse.Frequency",
+        "path": "SmokingStatus.ObservationOfUse.Frequency",
+        "short": "Frequency",
+        "definition": "The frequency of smoking or tobacco use.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/CodeableConcept"
+            ]
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "Frequency qualifier values",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Valeurs de qualificatif de fréquence"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
+          "valueSet": "https://fhir.healthdata.be/ValueSet/Frequency"
+        }
+      },
+      {
+        "id": "SmokingStatus.ObservationOfUse.Amount",
+        "path": "SmokingStatus.ObservationOfUse.Amount",
+        "short": "Amount",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Hoeveelheid"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Quantité"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The number of cigarettes, cigars or grams of rolling tobacco consumed per day, week, month or year.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het aantal sigaretten, sigaren of gram shag per dag, week, maand of jaar."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le nombre de cigarettes, de cigares ou de grammes de tabac à rouler consommés par jour, semaine, mois ou année."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "SmokingStatus.ObservationOfUse.PackYears",
+        "path": "SmokingStatus.ObservationOfUse.PackYears",
+        "short": "PackYears",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "PackYears"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Paquets-années"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The unit indicating the smoker’s total exposure to tobacco smoke. For cigarettes, this is calculated using the number of smoked packs of cigarettes per day (one pack = 20 cigarettes) times the number of years of smoking. For other forms of tobacco, this is usually converted to an equivalent cigarette consumption. Often, only the number of pack years is estimated.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De eenheid waarin de totale blootstelling aan tabaksrook bij rokers beschreven wordt. Bij sigaretten wordt dit berekend aan de hand van het aantal gerookte pakjes sigaretten per dag (inhoud pakje is 20 stuks) en het aantal jaren dat werd gerookt. Bij andere rookwaren wordt vaak een omrekening naar equivalente sigarettenconsumptie gehanteerd. Vaak wordt ook alleen het aantal packyears geschat."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "L'unité indiquant l'exposition totale du fumeur à la fumée de tabac. Dans le cas des cigarettes, cette valeur est calculée en utilisant le nombre de paquets de cigarettes fumés par jour (un paquet = 20 cigarettes) fois le nombre d'années de tabagisme. Pour d'autres formes de tabac, on convertit généralement en une consommation équivalente de cigarettes. Souvent, seul le nombre de paquets-années est estimé."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "SmokingStatus.Comment",
+        "path": "SmokingStatus.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Commentaire"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Relevant comments on the patient’s use of tobacco.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Relevante opmerkingen over het gebruik."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Commentaires pertinents sur l'usage du tabac par le patient."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

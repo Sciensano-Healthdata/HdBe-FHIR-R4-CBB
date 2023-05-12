@@ -1,0 +1,993 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-Procedure",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Procedure",
+  "name": "HdBeProcedure",
+  "_name": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeVerrichting"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeProcédure"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "title": "HdBe Procedure",
+  "_title": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe Verrichting"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe Procédure"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.259205+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "The concept Procedure describes therapeutic or diagnostic procedures undergone by the patient or which the patient will undergo. The concept can describe in the right context historical, future as well as advised procedures.\r\nA procedure can be a simple blood pressure measurement, but also a complex heart surgery.\r\nIn some care settings, the term treatment is used instead of the term procedure.\r\n#### Purpose\r\nA procedure is carried out or planned as part of a planned policy or to obtain additional information in the diagnostic process. Procedures are documented to gain insight into the treatment of a patient. In addition, procedures are documented for administrative purposes such as invoicing and workload measurement, scientific research and/or education.",
+  "_description": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Het concept Verrichting beschrijft een therapeutische of diagnostische verrichting, die de patiënt heeft ondergaan of zal ondergaan. Het concept kan in de juiste context zowel historische, toekomstige als geadviseerde verrichtingen beschrijven. &#13;\nEen verrichting kan een simpele bloeddrukmeting zijn maar ook een complexe hartoperatie.&#13;\nIn sommige zorgsectoren wordt in plaats van  de term verrichting de term behandeling gebruikt.&#13;\n#### Purpose&#13;\nEen verrichting wordt uitgevoerd of gepland in het kader van een uitgezet beleid of voor het verkrijgen van aanvullende informatie in het diagnostisch proces. Het vastleggen van verrichtingen dient om inzicht te krijgen in de behandeling van de patiënt. Daarnaast worden verrichtingen vastgelegd ten behoeve van administratieve doeleinden zoals facturering en werklastmeting, wetenschappelijk onderzoek en/of onderwijs.&#13;\n&#13;\n&#13;\n**References**&#13;\n1. Waardelijst GGZ-Verrichtingen [Online] Beschikbaar op: http://https://www.vippggz.nl/waardelijst-ggz-verrichtingen.html [Geraadpleegd: 03-08-2020].&#13;\n",
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Le concept de Procédure décrit les procédures thérapeutiques ou diagnostiques subies par le patient ou que le patient va subir. Le concept peut décrire dans le bon contexte les procédures historiques, futures, ainsi que conseillées.Une procédure peut être une simple mesure de la tension artérielle, mais aussi une chirurgie cardiaque complexe.Dans certains contextes de soins, le terme de traitement est utilisé au lieu du terme de procédure.\n##### Purpose\nUne procédure est effectuée ou planifiée dans le cadre d'une politique planifiée ou pour obtenir des informations supplémentaires dans le processus de diagnostic. Les procédures sont documentées pour bien comprendre le traitement d'un patient. En outre, les procédures sont documentées à des fins administratives, notamment pour la facturation et la mesure de la charge de travail, la recherche scientifique et/ou l'enseignement."
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/Procedure",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Procedure",
+        "path": "Procedure",
+        "short": "Procedure",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Verrichting"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Procédure"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Root concept of the Procedure information model. This root concept contains all data elements of the Procedure information model.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Verrichting. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Verrichting."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Concept root du modèle d'information Procédure. Ce concept root contient tous les éléments de données du modèle d'information Procédure."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Procedure.ProcedureStartDate",
+        "path": "Procedure.ProcedureStartDate",
+        "short": "ProcedureStartDate",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VerrichtingStartDatum"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DateDébutProcédure"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The (desired) start date (and if possible start time) of the procedure. A ‘vague’ date, such as only the year, is permitted. \r\nThe element offers the option to indicate the start of the period of a series of related procedures.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De (gewenste) startdatum (en eventueel starttijd) van de verrichting. Een vage datum, bv. alleen een jaartal, is toegestaan.&#13;\nHet element biedt de mogelijkheid om de start van de periode van een reeks bij elkaar behorende verrichtingen aan te geven."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La date de début (souhaitée) (et, si possible, l'heure de début) de la procédure. Une date ‘vague’, telle que l'année uniquement, est autorisée. \nL'élément offre la possibilité d'indiquer le début de la période d'une série de procédures liées."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.ProcedureEndDate",
+        "path": "Procedure.ProcedureEndDate",
+        "short": "ProcedureEndDate",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VerrichtingEindDatum"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DateFinProcédure"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The end date (and if possible end time) of the procedure. A ‘vague’ date, such as only the year, is permitted. \r\nThe element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De einddatum (en eventueel eindtijd) van de verrichting. Een vage datum, bijv. alleen een jaartal, is toegestaan.&#13;\nHet element biedt de mogelijkheid om het einde van de periode van een reeks bij elkaar behorende verrichtingen aan te geven. De element einddatum wordt alleen gebruikt bij een verrichting die enige tijd duurt en wordt dan altijd toegepast. Als de verrichting nog voortduurt wordt de waarde leeg gelaten. Voor instantane of heel kort durende  verrichtingen wordt het element weggelaten."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La date de fin (et, si possible, l'heure de fin) de la procédure. Une date ‘vague’, telle que l'année uniquement, est autorisée. \nL'élément offre la possibilité d'indiquer la fin de la période d'une série de procédures liées. L'élément date de fin n'est utilisé que pour les procédures qui prennent un certain temps, et est alors toujours appliqué. Si la procédure se poursuit toujours, la valeur est laissée vide. Pour les procédures instantanées ou de très courte durée, l'élément est omis."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.ProcedureType",
+        "path": "Procedure.ProcedureType",
+        "short": "ProcedureType",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VerrichtingType"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TypeProcédure"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The name of the procedure.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De naam van de verrichting. &#13;\nGekozen kan worden uit de DHD verrichtingenthesaurus, het verrichtingenbestand (CBV), de zorgactiviteiten (NZa), de GGZ Verrichtingenlijst (GGZ) en NHG Ingrepen en behandelingen tabel (NHG)."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le nom de la procédure."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "ProcedureType codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes TypeProcédure"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
+          "valueSet": "https://fhir.healthdata.be/ValueSet/ProcedureType"
+        }
+      },
+      {
+        "id": "Procedure.ProcedureMethod",
+        "path": "Procedure.ProcedureMethod",
+        "short": "ProcedureMethod",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VerrichtingMethode"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MéthodeProcédure"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The method or technique that was used to perform the procedure, *e.g.* approach, lavage, pressuring, etc.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De methode of de techniek die toegepast is bij het uitvoeren van de verrichting, zoals toegangsmethode, lavage, pressuring, etc"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La méthode ou la technique ayant été utilisée pour effectuer la procédure, *par ex.* méthode d'approche, lavage, pressuring, etc."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "ProcedureMethod codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes MéthodeProcédure"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
+          "valueSet": "https://fhir.healthdata.be/ValueSet/ProcedureMethod"
+        }
+      },
+      {
+        "id": "Procedure.ProcedureAnatomicalLocation",
+        "path": "Procedure.ProcedureAnatomicalLocation",
+        "short": "ProcedureAnatomicalLocation",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VerrichtingAnatomischeLocatie"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "LocalisationAnatomiqueProcédure"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Anatomical location that is the focus of the procedure.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Anatomische locatie die de focus is van de verrichting."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La localisation anatomique qui est au centre de la procédure."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.Indication",
+        "path": "Procedure.Indication",
+        "short": "Indication",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Indicatie"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Indication"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The indication is the reason for the procedure.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De indicatie is de reden voor het uitvoeren van de verrichting."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "L'indication est la raison de la procédure."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.MedicalDevice",
+        "path": "Procedure.MedicalDevice",
+        "short": "MedicalDevice",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MedischHulpmiddel"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DispositifMédical"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The product, the placing of which in or on the body is the purpose of the procedure, for example placing an implant.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het product waarvan het plaatsen in of aan het lichaam het doel is van de verrichting, bijv. het plaatsen van een implantaat."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le produit, dont le placement dans ou sur le corps est le but de la procédure, par exemple le placement d'un implant."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicalDevice"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.Location",
+        "path": "Procedure.Location",
+        "short": "Location",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Locatie"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Localisation"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The healthcare center where the procedure was, is or will be carried out.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De zorginstelling waar de verrichting is, wordt of zal worden uitgevoerd."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le centre de soins où la procédure a été, est ou sera effectuée."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareOrganization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.Performer",
+        "path": "Procedure.Performer",
+        "short": "Performer",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Uitvoerder"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Exécutant"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The healthcare professional who carried out or will carry out the procedure. In most cases, only the medical specialty is entered, and not the name of the healthcare professional.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De zorgverlener die de verrichting heeft uitgevoerd of zal uitvoeren. In de meeste gevallen wordt alleen het specialisme en niet de naam van de zorgverlener doorgegeven."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le professionnel de la santé qui a exécuté ou exécutera la procédure. Dans la plupart des cas, seule la spécialité médicale est saisie, et non le nom du professionnel de la santé."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.Requester",
+        "path": "Procedure.Requester",
+        "short": "Requester",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvrager"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Demandeur"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The healthcare professional who requested the procedure.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De zorgverlener die de verrichting heeft aangevraagd."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le professionnel de la santé qui a demandé la procédure."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-AbilityToUseToilet",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AbilityToUseToilet",
+  "name": "HdBeAbilityToUseToilet",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeVermogenTotToiletgang"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe AbilityToUseToilet",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Being able to urinate, defecate and keep up hygiene during a menstrual cycle independently is part of self-care. Limitations in this ability indicate a reduced ability to cope for oneself. \r\nThis activity and activities such as those including eating, getting dressed and bathing are also known as activities of daily living (ADL). These are the activities people go through in daily life. The extent to which a person is able to do all these activities by themselves is a measure for their total ability to do things independently.\r\n\r\n#### Purpose\r\nInformation on limitations in a patient’s ability to urinate, defecate and keep up their hygiene during their menstrual cycle is important in determining the nature and intensity of the care the patient needs. In a transfer situation, it gives the receiving organization the ability to anticipate the intensity of the care to be given to the patient, enabling continuity in healthcare for the patient. \r\nIf policy has been implemented to improve a patient’s ability to do things independently, the entered extent of independence helps to determine the efficiency of the treatment.\r\n\r\n#### Evidence Base\r\nThe definitions of the concepts were (partially) taken from the BarthelIndex definitions. \r\n\r\nIn addition to this information model, there are other tools to record independence, such as the KATZ-ADL and the BarthelIndex. The KATZ-ADL is mainly used for vulnerable seniors and the BarthelIndex is mainly used for patients who have had a stroke. \r\n\r\nThis information model evaluates the ability to use the toilet on a three-point scale that is in accordance with this aspect in the BarthelIndex. In the KATZ-ADL, this falls under the aspect of Toilet Hygiene.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Zelfstandig kunnen zorgdragen voor urineren, defeceren en de zorg bij menstruatie is een onderdeel van zelfzorg. Beperkingen in dit vermogen duiden op een verminderde zelfredzaamheid op dit gebied.\r\nDeze activiteit wordt samen met activiteiten zoals onder andere eten, zich kleden en zich wassen, ook aangeduid als algemene dagelijkse levensverrichtingen (ADL). Dit zijn de handelingen die mensen dagelijks in het gewone leven verrichten. De mate waarin een persoon al deze activiteiten zelfstandig kan verrichten zijn een maat voor de totale zelfredzaamheid.\r\n#### Purpose\r\nInformatie over beperkingen in het vermogen om zelfstandig zorg te kunnen dragen voor urineren, defeceren en verzorging bij menstruatie is van belang bij het bepalen van de aard en intensiteit van de zorg die aan de patiënt geboden moet worden. In een overdrachtsituatie biedt het de ontvangende organisatie de mogelijkheid te anticiperen op de zwaarte van de te leveren zorg waardoor continuïteit van de zorgverlening gerealiseerd kan worden.\r\nIndien beleid is ingezet om de zelfredzaamheid te verbeteren, biedt de vastgelegde mate van zelfstandigheid de mogelijkheid de doeltreffendheid van de behandeling vast te stellen.\r\n#### Evidence Base\r\nVoor de definities van de concepten is gebruik gemaakt van de omschrijvingen uit de Barthel index.\r\n\r\nNaast deze bouwsteen zijn er meer instrumenten om zelfredzaamheid vast te leggen, zoals KATZ-ADL en de BarthelIndex. De KATZ-ADL wordt vooral gebruikt bij kwetsbare ouderen en de BarthelIndex wordt met name gebruikt voor patiënten met een beroerte. \r\n\r\nDeze bouwsteen evalueert het vermogen tot toiletgang met een driepuntsschaal die overeenkomt met dit aspect in de BarthelIndex. Bij KATZ-ADL valt dit onder het aspect WC-bezoek.\r\n\r\n\r\n",
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/AbilityToUseToilet",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ToiletUseAbility",
+        "path": "ToiletUseAbility",
+        "short": "ToiletUseAbility",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VermogenTotToiletgang"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the ToiletUse information model. This root concept contains all data elements of the ToiletUse information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen VermogenTotToiletgang. Dit rootconcept bevat alle gegevenselementen van de bouwsteen VermogenTotToiletgang."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ToiletUseAbility.ToiletUse",
+        "path": "ToiletUseAbility.ToiletUse",
+        "short": "ToiletUse",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toiletgebruik"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Coordinating and realizing urination or defecation, such as indicating the need, getting into the right position, finding and reaching a suitable spot, manipulating clothing before and after urination, and cleaning up (the body) afterwards.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het coördineren en zorg dragen voor urineren of defecatie, zoals door het aangeven van de noodzaak, het in de juiste positie komen, een geschikte plaats vinden en bereiken, het manipuleren van de kleding voor en na, en het zich schoonmaken."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "ToiletUse codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/Toiletgebruik"
+        }
+      },
+      {
+        "id": "ToiletUseAbility.MenstrualCare",
+        "path": "ToiletUseAbility.MenstrualCare",
+        "short": "MenstrualCare",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ZorgBijMenstruatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Coordinating, planning and hygiene in the event of menstruation, such as anticipating the menstruation and using sanitary napkins and tampons.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het coördineren, plannen en de verzorging bij de menstruatie, zoals door anticipatie op de menstruatie en het gebruiken van maandverband en tampons."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "MenstrualCare codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/ZorgBijMenstruatie"
+        }
+      }
+    ]
+  }
+}

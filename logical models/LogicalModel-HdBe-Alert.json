@@ -1,0 +1,717 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-Alert",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Alert",
+  "name": "HdBeAlert",
+  "_name": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeAlert"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeAlerte"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "title": "HdBe Alert",
+  "_title": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe Alert"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe Alerte"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.259205+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "An alert describes a clinical or administrative fact brought to the attention of the users of the clinical systems to be taken into account when shaping diagnostic and therapeutic policy or in dealing with the patient, usually because of a safety risk. \r\nDisorders that describe the body’s sensitivity to a substance which results in a specific physiological reaction after being exposed to that substance are referred to as allergies. These are described in a separate information model. \r\nWarnings for non-allergic disorders can concern: \r\n\r\n* A disorder, condition or diagnosis which can be considered as a contraindication for undergoing a certain type of therapy, such as pregnancy or long QT syndrome; \r\n\r\n* Impaired functioning of an organ system (heart failure, impaired liver or kidney function, weakened immune system); \r\n\r\n* Risk of spreading certain microorganisms (multi-resistant bacteria, tubercle bacilli, HIV, HBV, Ebola virus); \r\n\r\n* Other risks \r\n\r\n\r\n#### Purpose\r\nDocumenting and entering disorders or conditions that require attention is an important part of medical registration. It concerns the core of patient safety. In the execution of research and treatment, these patient characteristics - which are marked as a warning - constantly have to be taken into account. They provide information that is important for the patient’s condition and the options a healthcare professional has for therapy. Disorders that are registered or transferred as an Alert can also be described as a Problem. The difference is in the fact that the healthcare professional considers the problem as an Alert = warning. In many cases, transfer will be subject to strict privacy rules, as the warning will not always elicit an adequate reaction in the informed environment.\r\n\r\n\r\n#### Instructions\r\nIf there is a contraindication which is also important for medication safety, it should also be registered via MedicationContraIndication.",
+  "_description": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Een alert beschrijft een klinisch of administratief feit dat onder de aandacht van de gebruikers van de klinische systemen wordt gebracht, om er bij het vormen van diagnostisch en therapeutisch beleid of bij de omgang met de patiënt rekening mee te houden, meestal wegens een veiligheidsrisico. &#13;\nAandoeningen, die de overgevoeligheid van het lichaam voor een stof beschrijven, zich uitend in een specifieke fysiologische reactie na blootstelling, worden allergieën genoemd. Deze worden in een aparte bouwsteen beschreven&#13;\nWaarschuwingen voor niet allergische aandoeningen kunnen betreffen: &#13;\n&#13;\n* Een aandoening, conditie of diagnose die beschouwd kan worden als contra-indicatie voor het ondergaan van een bepaalde therapie, zoals zwangerschap of een verlengd QT-syndroom; &#13;\n&#13;\n* Verminderde functie van een orgaansysteem (hartfalen, verminder lever- of nierfunctie, verminderde afweer); &#13;\n&#13;\n* Kans op verspreiding van bepaalde micro-organismen (multiresistente bacterie, tuberkelbacterie, HIV, HBV, Ebola virus); &#13;\n&#13;\n* Andere risico’s. &#13;\n&#13;\n&#13;\n#### Purpose&#13;\nHet vastleggen en doorgeven van aandoeningen of condities die aandacht behoeven, is een belangrijk onderdeel van de medische registratie. Het raakt de kern van patiëntveiligheid. In de uitvoering van onderzoek en behandeling moet veelal continu rekening worden gehouden met deze, als waarschuwing gemarkeerde, patiëntkenmerken. Ze verschaffen informatie die belangrijk is in relatie met de conditie van de patiënt en de opties die een zorgverlener heeft voor therapie. Aandoeningen die als Alert worden geregistreerd of overgedragen, kunnen ook als Probleem worden beschreven. Het verschil is hierin gelegen, dat de zorgverlener het probleem heeft aangemerkt als Alert = waarschuwing. In veel gevallen zal overdracht onderworpen zijn aan sterke privacy regels, aangezien de waarschuwing niet altijd een adequate reactie van de geïnformeerde omgeving kan uitlokken.&#13;\n&#13;\n&#13;\n#### Instructions&#13;\nIndien sprake is van een contra-indicatie die tevens van belang is voor de medicatieveiligheid dient deze ook via de g-standaard (Thesaurus 40) te worden vastgelegd.  Zie hiervoor de bouwsteen MedicatieContraIndicatie&#13;\n",
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Une alerte décrit un fait clinique ou administratif porté à l'attention des utilisateurs des systèmes cliniques, à prendre en compte lors de l'élaboration de la politique diagnostique et thérapeutique ou lors de la prise en charge du patient, généralement en raison d'un risque de sécurité. \nLes affections décrivant la sensibilité du corps à une substance qui entraîne une réaction physiologique spécifique après exposition à cette substance sont appelées allergies. Elles sont décrites dans un modèle d'information distinct. \nLes avertissements concernant des affections non allergiques peuvent porter sur : \n\n* Une affection, un état ou un diagnostic pouvant être considéré comme une contre-indication à se soumettre à un certain type de traitement, tel que la grossesse ou le syndrome du QT long ;\n\n* Le dysfonctionnement d'un système d'organes (insuffisance cardiaque, altération de la fonction hépatique ou rénale, affaiblissement du système immunitaire) ; \n\n* Un risque de propagation de certains micro-organismes (bactéries multirésistantes, bacille de la tuberculose, VIH, VHB, virus Ebola) ; \n\n* Autres risques\n\n\n#### Purpose\nDocumenter et saisir les affections ou les états qui nécessitent de l'attention est une part importante de l'enregistrement médical. Cela concerne l'essence de la sécurité des patients. Dans l'exécution de l'examen et du traitement, ces caractéristiques du patient - qui sont notées comme un avertissement - doivent constamment être prises en compte. Elles fournissent des informations importantes pour l'état du patient et les options dont un professionnel de la santé dispose pour la thérapie. Les affections enregistrées ou transférées comme une Alerte peuvent également être décrites comme un Problème. La différence réside dans le fait que le professionnel de la santé considère le problème comme une Alerte = avertissement. Dans de nombreux cas, le transfert sera soumis à des règles strictes en matière de confidentialité, car l'avertissement ne suscitera pas toujours une réaction adéquate dans l'environnement informé.\n\n\n#### Instructions\nS'il existe une contre-indication qui est également importante pour l'innocuité des médicaments, elle doit également être enregistrée via ContreIndicationMédicament."
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/Alert",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Alert",
+        "path": "Alert",
+        "short": "Alert",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Alert"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Alerte"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Root concept of the Alert information model. This root concept contains all data elements of the Alert information model.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Alert. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Alert."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Concept root du modèle d'information Alerte. Ce concept root contient tous les éléments de données du modèle d'information Alerte."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "HdBe-Alert-1",
+            "severity": "error",
+            "human": "One concept from Condition and AlertName must be selected.",
+            "_human": {
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr-BE"
+                    },
+                    {
+                      "url": "content",
+                      "valueMarkdown": "Un concept entre État et NomAlerte doit être sélectionné."
+                    }
+                  ],
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation"
+                }
+              ]
+            },
+            "expression": "Condition.exists() xor AlertName.exists()"
+          }
+        ]
+      },
+      {
+        "id": "Alert.EndDateTime",
+        "path": "Alert.EndDateTime",
+        "short": "EndDateTime",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "EindDatumTijd"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DateHeureFin"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The date and time at which the described condition was retracted as a warning. \r\nThis can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year).",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en tijd waarop de beschreven toestand als waarschuwing is ingetrokken. &#13;\nDit kan een exacte datum en tijd zijn maar ook een globale aanduiding van de datum (bijvoorbeeld alleen jaar of jaar en maand)."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Les date et heure auxquelles l'état décrit a été retiré en tant qu'avertissement. \nIl peut s'agir de date et heure exactes ou d'une indication approximative de la date (par exemple, l'année uniquement, ou le mois et l'année)."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Alert.Condition",
+        "path": "Alert.Condition",
+        "short": "Condition",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Conditie"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "État"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The patient’s health problem or condition that is the subject of the alert. This could involve a patient’s problem, condition or diagnosis that is seen as a contraindication in prescribing medication or which has to be taken into account when shaping diagnostic and therapeutic policy. This can be in the patient’s own interest, or it can involve a problem or disorder that can make the patient a risk to their surroundings, such as an infection hazard. These are references to conditions included on the patient’s problem list.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een gezondheidsprobleem of toestand van de patiënt die de reden is van het alert. Het kan hierbij gaan om een probleem,toestand of diagnose van de patiënt die geldt als contra-indicatie bij het voorschrijven van medicatie of waarmee rekening moet worden gehouden bij het vormen van diagnostisch en therapeutisch beleid. Dit kan zijn in het belang van de patiënt zelf, maar het kan ook gaan om een probleem of aandoening waardoor de patiënt een risico vormt voor zijn omgeving, bijvoorbeeld besmettingsgevaar. Het betreft hier verwijzigingen naar condities die vermeld staan op de probleemlijst van de patiënt."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le problème de santé ou l'état du patient faisant l'objet de l'alerte. Cela peut impliquer un problème, un état ou un diagnostic du patient qui est considéré comme une contre-indication à la prescription de médicaments ou qui doit être pris en compte lors de l'élaboration de la politique diagnostique et thérapeutique. Cela peut être dans l'intérêt personnel du patient ou impliquer un problème ou une affection qui peut faire que le patient devienne un risque pour son entourage, comme un risque d'infection. Il s'agit de références à des états figurant dans la liste des problèmes du patient."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"
+            ]
+          }
+        ],
+        "condition": [
+          "HdBe-Alert-1"
+        ]
+      },
+      {
+        "id": "Alert.AlertName",
+        "path": "Alert.AlertName",
+        "short": "AlertName",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AlertNaam"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "NomAlerte"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "A warning, other than a condition or problem. For example, a patient can be given an ‘Aggressive patient' alert.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een waarschuwing, anders dan een conditie of probleem. Zo kan bijvoorbeeld als alert 'Agressieve patient' meegegeven worden.&#13;\nDe waarschuwing kan als een gecodeerd gegeven worden vastgelegd (voor veelvoorkomende alerts zijn codes voorzien), maar gezien het dynamische karakter van de waarschuwingen cf. Sars en Ebola, zullen deze alerts vaak als vrije tekst doorgegeven worden."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Un avertissement autre qu'un état ou un problème. Par exemple, un patient peut se voir attribuer une alerte ‘Patient agressif’."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "condition": [
+          "HdBe-Alert-1"
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "AlertName codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes NomAlerte"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
+          "valueSet": "https://fhir.healthdata.be/ValueSet/AlertName"
+        }
+      },
+      {
+        "id": "Alert.StartDateTime",
+        "path": "Alert.StartDateTime",
+        "short": "StartDateTime",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "BeginDatumTijd"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DateHeureDébut"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The date and time at which the described condition was entered as a warning. \r\nThis can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year).",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en tijd waarop de beschreven toestand als waarschuwing is aangemerkt. &#13;\nDit kan een exacte datum en tijd zijn maar ook een globale aanduiding van de datum (bijvoorbeeld alleen jaar of jaar en maand)."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Les date et heure auxquelles l'état décrit a été entré en tant qu'avertissement. \nIl peut s'agir de date et heure exactes ou d'une indication approximative de la date (par exemple, l'année uniquement, ou le mois et l'année)."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Alert.AlertType",
+        "path": "Alert.AlertType",
+        "short": "AlertType",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AlertType"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TypeAlerte"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Indicates the type of alert, meaning a rough description of the cause or origin of the warning.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft het type alert aan, dat wil zeggen een grove indeling van de oorzaak of oorsprong waaruit de waarschuwing voort komt."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Indique le type d'alerte, ce qui signifie une description approximative de la cause ou de l'origine de l'avertissement."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "AlertType codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes TypeAlerte"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
+          "valueSet": "https://fhir.healthdata.be/ValueSet/AlertType"
+        }
+      },
+      {
+        "id": "Alert.Comment",
+        "path": "Alert.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Commentaire"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Explanatory comments to the alert that cannot be expressed in any of the other elements.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichtende opmerking bij de alert die niet in een van de andere elementen uitgedrukt kan worden."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Commentaires explicatifs sur l'alerte ne pouvant être exprimés dans aucun des autres éléments."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

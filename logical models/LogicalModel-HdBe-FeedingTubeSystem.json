@@ -1,0 +1,944 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-FeedingTubeSystem",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FeedingTubeSystem",
+  "name": "HdBeFeedingTubeSystem",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeSondeSysteem"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe FeedingTubeSystem",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "A feeding tube is a special catheter used to: \r\n\r\n* administer liquid food to people who are incapable of oral intake of food or liquid,\r\n* administer medication,\r\n* drain (siphon) or pump out gastric juice.\r\nThere are different ways to place a feeding tube. A feeding tube can be inserted through the nose, in the stomach or in the intestines (duodenum, jejunum). \r\nPercutaneous endoscopic gastrostomy (PEG) is a technique in which a feeding tube is placed into the stomach through the abdominal wall. This thin tube (PEG tube) is used to feed a patient who is incapable of oral food intake for a prolonged period of time.\r\n\r\n#### Purpose\r\nThe purpose of a feeding tube is usually to administer food and/or medication. \r\nInformation on present feeding tubes is recorded to inform other health professionals. This information is of importance in determining the care required for the patient and in safely administering medication. In a transfer situation, the information offers the option to realize continuity of care by organizing specific expertise and materials in advance, for example.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Een sonde is een speciale katheter die gebruikt wordt om:\r\n\r\n* vloeibare voeding toe te dienen aan mensen die niet op een normale manier kunnen eten of drinken,\r\n* medicatie toe te dienen,\r\n* maagsap af te laten lopen (hevelen) of af te zuigen.\r\nSondes kunnen op verschillende wijzen ingebracht worden. Een sonde kan, via de neus, worden ingebracht in de maag of darm (duodenum, jejunum). \r\nPercutane endoscopische gastrostomie (PEG) is een techniek om een sondeslang in de maag te leggen via de buikwand. Deze dunne slang wordt gebruikt om een patiënt te voeden die gedurende lange tijd geen voeding op de normale wijze tot zich kan nemen (PEG-sonde).\r\n#### Purpose\r\nHet doel van een sonde is meestal het toedienen van voeding en/of medicatie. \r\nHet vastleggen van informatie over aanwezige sondes heeft tot doel om andere zorgverleners hierover te informeren. Deze informatie is van belang bij het vaststellen van benodigde zorg voor de patiënt en voor veilige toediening van medicatie. In een overplaatsingssituatie biedt de informatie de mogelijkheid om de continuïteit van zorg te bewerkstelligen door bijvoorbeeld specifieke deskundigheid en materialen vooraf te regelen. \r\n\r\n\r\n**References**\r\n1. V&VN. *Landelijke multidisciplinaire richtlijn Neusmaagsonde.* (2011) [Online] Beschikbaar op: [http://www.stuurgroepondervoeding.nl/wp-content/uploads/2015/02/Richtlijn-Neusmaagsonde-definitief.pdf](http://www.stuurgroepondervoeding.nl/wp-content/uploads/2015/02/Richtlijn-Neusmaagsonde-definitief.pdf) [Geraadpleegd: 13 februari 2015]\r\n",
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/FeedingTubeSystem",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "FeedingTubeSystem",
+        "path": "FeedingTubeSystem",
+        "short": "FeedingTubeSystem",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SondeSysteem"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the FeedingTubeSystem information model. This root concept contains all data elements of the FeedingTubeSystem information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen SondeSysteem. Dit rootconcept bevat alle gegevenselementen van de bouwsteen SondeSysteem."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "FeedingTubeSystem.FeedingTube",
+        "path": "FeedingTubeSystem.FeedingTube",
+        "short": "FeedingTube",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Sonde"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "FeedingTube describes the presence of a feeding tube. If this is the case, the date of placement and insertion location can be described in addition to the type of feeding tube. Furthermore, it offers the option to record identification information of the feeding tube if desired.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Sonde beschrijft de aanwezigheid van een sonde. Indien hier sprake van is, kunnen naast het type sonde, de plaatsingsdatum en entreelocatie van de sonde beschreven worden. Bovendien biedt het de mogelijkheid om indien gewenst identificerende gegevens van de sonde vast te leggen."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "FeedingTubeSystem.FeedingTube.MedicalDevice",
+        "path": "FeedingTubeSystem.FeedingTube.MedicalDevice",
+        "short": "MedicalDevice",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MedischHulpmiddel"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the MedicalDevice information model. This root concept contains all data elements of the MedicalDevice information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen MedischHulpmiddel. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedischHulpmiddel."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "FeedingTubeSystem.FeedingTube.MedicalDevice.Product",
+        "path": "FeedingTubeSystem.FeedingTube.MedicalDevice.Product",
+        "short": "Product",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Product"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The medical device (internally or externally).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het medische hulpmiddel dat wordt gebruikt (inwendig of uitwendig)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "FeedingTubeSystem.FeedingTube.MedicalDevice.Product.ProductId",
+        "path": "FeedingTubeSystem.FeedingTube.MedicalDevice.Product.ProductId",
+        "short": "ProductID",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ProductID"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Unique identification of the product, such as the serial number. \r\nFrequently used coding systems are HIBC and GTIN.\r\nIf the law requires this to be registered on the basis of a UDI (Unique Device Identifier), the unique identification must consist of a UDI-DI (Device Identifier) and a UDI-PI (Production Identifier(s)). See http://www.gs1.org/healthcare/udi for more information. \r\n\r\nThe UDI-DI must be recorded in reference to GS1 GTIN (01) encryptions, with which for example a firm is linked to the product type. The UDI-PI must consist of the following: application identifier (AI); expiration date (17) and serial number (21) and/or batch or lot number (10).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Unieke identificatie van het product, bijvoorbeeld het serienummer.\r\nVeel gebruikte coderingen zijn HIBC en GTIN.\r\nIndien de wet verplicht stelt dat deze geregistreerd wordt op basis van een UDI (Unique Device Identifier), dient de unieke identificatie opgebouwd te zijn uit een UDI-DI (Device Identifier) en een UDI-PI (Production Identifier(s)). Voor meer informatie, zie: http://www.gs1.org/healthcare/udi .\r\n\r\nDe UDI-DI dient m.b.t. GS1 GTIN (01) coderingen worden vastgelegd, waarmee o.a. een firma aan het producttype wordt gekoppeld. De UDI-PI dient te bestaan uit de volgende application identifier (AI); vervaldatum (17) en serienummer (21) en/of batch- of lotnummer (10)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "FeedingTubeSystem.FeedingTube.MedicalDevice.Product.ProductType",
+        "path": "FeedingTubeSystem.FeedingTube.MedicalDevice.Product.ProductType",
+        "short": "ProductType",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ProductType"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A description of the type of feeding tube based on the location where it was inserted and the position of the tip of the tube.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een beschrijving van het type sonde op basis van de locatie waar deze is ingebracht en de positie van de tip van de sonde."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "ProductType codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/SondeType"
+        }
+      },
+      {
+        "id": "FeedingTubeSystem.FeedingTube.MedicalDevice.ProductDescription",
+        "path": "FeedingTubeSystem.FeedingTube.MedicalDevice.ProductDescription",
+        "short": "ProductDescription",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ProductOmschrijving"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Textual description of the product.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele beschrijving van het product."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "FeedingTubeSystem.FeedingTube.MedicalDevice.AnatomicalLocation",
+        "path": "FeedingTubeSystem.FeedingTube.MedicalDevice.AnatomicalLocation",
+        "short": "AnatomicalLocation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AnatomischeLocatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Patient’s anatomical location of the medical device used.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Anatomische locatie van het gebruikte hulpmiddel bij de patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "FeedingTubeSystem.FeedingTube.MedicalDevice.Indication",
+        "path": "FeedingTubeSystem.FeedingTube.MedicalDevice.Indication",
+        "short": "Indication",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Indicatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The medical reason for use of the medical device.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De medische reden voor het gebruik van het medisch hulpmiddel."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "FeedingTubeSystem.FeedingTube.MedicalDevice.StartDate",
+        "path": "FeedingTubeSystem.FeedingTube.MedicalDevice.StartDate",
+        "short": "StartDate",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "BeginDatum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The start date of the first use or implant of the medical device. A ‘vague’ date, such as only the year, is permitted.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De startdatum van eerste toepassing of implantatie het medische hulpmiddel. Een vage datum, bijv. alleen een jaartal, is toegestaan."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "FeedingTubeSystem.FeedingTube.MedicalDevice.EindDatum",
+        "path": "FeedingTubeSystem.FeedingTube.MedicalDevice.EindDatum",
+        "short": "EindDatum",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "EindDatum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The end date of the last use or explant of the medical device. A ‘vague’ date, such as only the year, is permitted.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De einddatum van de laatste toepassing of explantatie van het medische hulpmiddel. Een vage datum, bijv. alleen een jaartal, is toegestaan."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "EndDate"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "FeedingTubeSystem.FeedingTube.MedicalDevice.Comment",
+        "path": "FeedingTubeSystem.FeedingTube.MedicalDevice.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Comment about use or information on the medical device used.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Opmerking bij de toepassing of informatie over het gebruikte hulpmiddel."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "FeedingTubeSystem.FeedingTube.MedicalDevice.Location",
+        "path": "FeedingTubeSystem.FeedingTube.MedicalDevice.Location",
+        "short": "Location",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The healthcare organization at which use of the medical device was initiated or where the aid was implanted.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De zorgaanbieder waar het gebruik van het hulpmiddel geïnitieerd werd of waar het hulpmiddel geïmplanteerd werd."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareOrganization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "FeedingTubeSystem.FeedingTube.MedicalDevice.HealthProfessional",
+        "path": "FeedingTubeSystem.FeedingTube.MedicalDevice.HealthProfessional",
+        "short": "HealthProfessional",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Zorgverlener"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The healthcare professional involved in the indication for use of the medical device implant.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De zorgverlener betrokken bij de indicatiestelling voor het gebruik of de implantatie van het hulpmiddel."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "FeedingTubeSystem.FeedingTubeLength",
+        "path": "FeedingTubeSystem.FeedingTubeLength",
+        "short": "FeedingTubeLength",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SondeLengte"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The input length of the feeding tube in cm for the patient in question as determined by formulas based on for example the NEX i.e. nosepoint-earlobe-xyphoid distance (adults) or body length (children).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De invoer lengte van de sonde in cm bij de betreffende patiënt zoals bepaald met formules op basis van bijv. de NEX oftewel neuspunt-oorlel-uiteinde borstbeen (bij volwassenen) of lichaamslengte (bij kinderen)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "FeedingTubeSystem.EnteralNutrition",
+        "path": "FeedingTubeSystem.EnteralNutrition",
+        "short": "EnteralNutrition",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SondeVoeding"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The description of the fluid administered through the feeding tube and the dose administered, as given in the medication prescription. \r\nThough most cases involve food being administered through the feeding tube, medication is often administered through these tubes as well.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De beschrijving van de vloeistof die toegediend wordt via de sonde en de dosis van de verstrekking, zoals vermeld staat in het medicatievoorschrift.\r\nHoewel het in de meeste gevallen via de sonde voeding wordt toegediend kunnen ook medicamenten via deze weg toegediend worden."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicationAdministration2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "FeedingTubeSystem.MedicalDevice",
+        "path": "FeedingTubeSystem.MedicalDevice",
+        "short": "MedicalDevice",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MedischHulpmiddel"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A description of aids required to use the feeding tube, such as an enteral feeding pump or a vacuum pump in the event of draining fluid.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een beschrijving van hulpmiddelen die benodigd zijn voor het gebruik van de sonde, bijvoorbeeld een voedingspomp of, in het geval van afzuigen, een vacuumpomp."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicalDevice"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "FeedingTubeSystem.Comment",
+        "path": "FeedingTubeSystem.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A comment on the feeding tube.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een toelichting op de sonde."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

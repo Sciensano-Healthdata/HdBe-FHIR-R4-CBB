@@ -1,0 +1,871 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-DOSScore",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-DOSScore",
+  "name": "HdBeDOSScore",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeDOSScore"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe DOSScore",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "The Delirium Observation Screening Scale is a tool to determine whether a patient has delirium. The DOSS includes 13 observations of behavior (verbal and non-verbal) which represent the symptoms of a delirium. These observations can be performed during regular contact with the patient.\r\n#### Purpose\r\nDelirium is one of the most forms of psychopathology among elderly patients and patients in the last phase of their lives. The main characteristic of delirium is the rapid onset and changing of symptoms. The DOSS is meant to qualify and quantify the nature and seriousness of delirium symptoms. This enables a quick start of treatment. The DOSS is used to signal risks and as an evaluation tool.\r\n#### Evidence Base\r\nThe definitions of the concepts are based on the DOS score.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "De DOSS (Delirium Observatie Screening Schaal) is een hulpmiddel om te bepalen of er sprake is van een delier. De DOSS bevat 13 observaties van gedrag (verbaal en non-verbaal) die de symptomen van het delier weergeven. Deze observaties kunnen gedaan worden tijdens reguliere contacten met de patiënt. \r\n#### Purpose\r\nHet delier is een van de meest voorkomende vormen van psychopathologie bij oude patiënten en bij patiënten in de laatste fase van het leven. Kenmerkend voor het delier zijn het snelle ontstaan en de wisseling van de symptomen. De DOSS is bedoeld om de aard en ernst van de symptomen van een delier te kwalificeren en kwantificeren. Hierdoor kan snel een behandeling worden ingezet. De DOSS wordt gebruikt als risicosignalering en als evaluatie instrument. \r\n#### Evidence Base\r\nDe definities van de concepten zijn gebaseerd op de DOS scorelijst.\r\n\r\n\r\n",
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/DOSScore",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Dosscore",
+        "path": "Dosscore",
+        "short": "DOSScore",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DOSScore"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the DOSScore information model. This root concept contains all data elements of the DOSScore information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen DOSScore. Dit rootconcept bevat alle gegevenselementen van de bouwsteen DOSScore."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Dosscore.DosscoreTotal",
+        "path": "Dosscore.DosscoreTotal",
+        "short": "DOSScoreTotal",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DOSScoreTotaal"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Per shift a total score is calculated (minimum 0 and maximum 13). The total scores of three shifts (day, evening and night shifts) are summed to the total score of the day (minimum 0 and maximum 39).\r\n\r\nThe DOS scale final score is calculated by dividing the total score of the day by 3 (minimum 0 and maximum 13).\r\n\r\nA DOS scale final score < 3 means that the patient is probably not delirious. A DOS scale final score > 3 means that the patiënt is probably delirious.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Per dienst wordt een totaal score berekend (minimaal 0 en maximaal 13). De totaal scores van drie diensten (dag, late en nachtdienst) worden opgeteld tot de totaal score van deze dag (minimaal 0 en maximaal 39).\r\n\r\nDe DOS schaal eindscore wordt berekend door de totaal score van deze dag te delen door 3 (minimaal 0 en maximaal 13).\r\n\r\nEen DOS schaal eindscore < 3 betekent dat de patiënt waarschijnlijk niet delirant is. Een DOS schaal eindscore > 3 betekent dat de patiënt waarschijnlijk wel delirant is."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "Dosscore.DosscoreDateTime",
+        "path": "Dosscore.DosscoreDateTime",
+        "short": "DOSScoreDateTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DOSScoreDatumTijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date on which the DOS score is registered.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum waarop de DOS score is vastgelegd."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Dosscore.DozesOff",
+        "path": "Dosscore.DozesOff",
+        "short": "DozesOff",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ZaktWeg"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "DOS observation: patient dozes off during conversation or activities.\r\n\r\nScore:\r\n0: never\r\n1: sometimes-always\r\n-: don't know",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DOS observatie: patiënt zakt weg tijdens gesprek of bezigheden.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "Dosscore.EasilyDistracted",
+        "path": "Dosscore.EasilyDistracted",
+        "short": "EasilyDistracted",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SnelAfgeleid"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "DOS observation: patient is easily distracted by stimuli from the environment.\r\n\r\nSomeone is easily distracted by stimuli from the environment when he/she responds verbally or non-verbally to sounds or movements that have no relation to him/her and the nature of which does not make you expect a reaction from him/her.\r\n\r\nScore:\r\n0: never\r\n1: sometimes-always\r\n-: don't know",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DOS observatie: patiënt is snel afgeleid door prikkels uit de omgeving.\r\n\r\nIemand is snel afgeleid door prikkels uit de omgeving wanneer hij/zij verbaal of nonverbaal reageert op geluiden of bewegingen die geen betrekking op hem/haar hebben en die van dien aard zijn dat je geen reactie van hem/haar zou verwachten.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "Dosscore.MaintainsAttention",
+        "path": "Dosscore.MaintainsAttention",
+        "short": "MaintainsAttention",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "HeeftAandacht"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "DOS observation: patient maintains attention to conversation or action.\r\n\r\nSomeone is maintaining attention to a conversation or action if he/she verbally or non-verbally shows that they are following the conversation or action.\r\n\r\nScore:\r\n1: never\r\n0: sometimes-always\r\n-: don't know",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DOS observatie: patiënt heeft aandacht voor gesprek of handeling.\r\n\r\nIemand heeft aandacht voor gesprek of handeling als hij /zij verbaal of nonverbaal blijk geeft het gesprek of de handeling te volgen.\r\n\r\nScore:\r\n1: nooit\r\n0: soms-altijd\r\n-: weet niet"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "Dosscore.UnfinishedQuestionAnswer",
+        "path": "Dosscore.UnfinishedQuestionAnswer",
+        "short": "UnfinishedQuestionAnswer",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VraagAntwoordNietAf"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "DOS observation: patient does not finish question or answer.\r\n\r\nScore:\r\n0: never\r\n1: sometimes-always\r\n-: don't know",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DOS observatie: patiënt maakt vraag of antwoord niet af.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "Dosscore.AnswersNoFit",
+        "path": "Dosscore.AnswersNoFit",
+        "short": "AnswersNoFit",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AntwoordenNietPassend"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "DOS observation: patient gives answers that do not fit the question.\r\n\r\nScore:\r\n0: never\r\n1: sometimes-always\r\n-: don't know",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DOS observatie: patiënt geeft antwoorden die niet passen bij de vraag.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "Dosscore.ReactsSlowly",
+        "path": "Dosscore.ReactsSlowly",
+        "short": "ReactsSlowly",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ReageertTraag"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "DOS observation: patient reacts slowly to instructions.\r\n\r\nSomeone reacts slowly to instructions when acting is delayed and/or there are moments of stillness/inactivity before moving into action.\r\n\r\nScore:\r\n0: never\r\n1: sometimes-always\r\n-: don't know",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DOS observatie: patiënt reageert traag op opdrachten.\r\n\r\nIemand reageert traag op opdrachten wanneer het handelen is vertraagd en/of er momenten van stilte/inactiviteit zijn voordat tot handelen wordt overgegaan.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "Dosscore.ThinksSomewhereElse",
+        "path": "Dosscore.ThinksSomewhereElse",
+        "short": "ThinksSomewhereElse",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DenktErgensAnders"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "DOS observation: patient thinks they are somewhere else.\r\n\r\nSomeone thinks they are somewhere else when he/she shows this in words or actions.\r\n\r\nScore:\r\n0: never\r\n1: sometimes-always\r\n-: don't know",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DOS observatie: patiënt denkt ergens anders te zijn.\r\n\r\nIemand denkt ergens anders te zijn als hij/zij in woorden of handelen dit laat blijken.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "Dosscore.KnowsPartDay",
+        "path": "Dosscore.KnowsPartDay",
+        "short": "KnowsPartDay",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "BeseftDagdeel"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "DOS observation: patient knows which part of the day it is.\r\n\r\nSomeone knows what part of the day it is when he/she shows such in words or actions.\r\n\r\nScore:\r\n1: never\r\n0: sometimes-always\r\n-: don't know",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DOS observatie: patiënt beseft wel welk dagdeel het is.\r\n\r\nIemand beseft welk dagdeel het is als hij/zij in woorden of handelen dit laat blijken.\r\n\r\nScore:\r\n1: nooit\r\n0: soms-altijd\r\n-: weet niet"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "Dosscore.RemembersRecent",
+        "path": "Dosscore.RemembersRecent",
+        "short": "RemembersRecent",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "HerinnertRecent"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "DOS observation: patient remembers recent events.\r\n\r\nSomeone remembers recent events when he/she can for example tell whether they had visitors or what he/she ate.\r\n\r\nScore:\r\n1: never\r\n0: sometimes-always\r\n-: don't know",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DOS observatie: patiënt herinnert zich recente gebeurtenis.\r\n\r\nIemand herinnert zich recente gebeurtenissen wanneer hij/zij bijvoorbeeld juist kan vertellen of er bezoek is geweest of wat hij/zij gegeten heeft.\r\n\r\nScore:\r\n1: nooit\r\n0: soms-altijd\r\n-: weet niet"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "Dosscore.Restless",
+        "path": "Dosscore.Restless",
+        "short": "Restless",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rusteloos"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "DOS observation: patient is picking, disorderly, restless.\r\n\r\nScore:\r\n0: never\r\n1: sometimes-always\r\n-: don't know",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DOS observatie: patiënt is plukkerig, rommelig, rusteloos.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "Dosscore.PullsWires",
+        "path": "Dosscore.PullsWires",
+        "short": "PullsWires",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TrektDraden"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "DOS observation: patient pulls IV tubing, feeding tubes, catheters, etc.\r\n\r\nScore:\r\n0: never\r\n1: sometimes-always\r\n-: don't know",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DOS observatie: patiënt trekt aan infuus, sonde, catheter, enz.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "Dosscore.EasilyEmotional",
+        "path": "Dosscore.EasilyEmotional",
+        "short": "EasilyEmotional",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SnelGeemotioneerd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "DOS observation: patient is easily or suddenly emotional.\r\n\r\nSomeone is easily or suddenly emotional when he/she responds with a fierce emotion without provocation or when the fierceness of the emotion does not seem to match the provocation.\r\n\r\nScore:\r\n0: never\r\n1: sometimes-always\r\n-: don't know",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DOS observatie: patiënt is snel of plotseling geëmotioneerd.\r\n\r\nIemand is snel of plotseling geëmotioneerd wanneer hij/zij reageert met een heftige emotie zonder aanleiding of wanneer de heftigheid van de emotie niet in overeenstemming lijkt met de aanleiding.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "Dosscore.Hallucinations",
+        "path": "Dosscore.Hallucinations",
+        "short": "Hallucinations",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Hallucinaties"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "DOS observation: patient sees/hears things which are not there.\r\n\r\nSomeone sees/hears things which are not there when he/she shows this verbally (ask!) or non-verbally.\r\n\r\nScore:\r\n0: never\r\n1: sometimes-always\r\n-: don't know",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DOS observatie: patiënt ziet/hoort dingen die er niet zijn.\r\n\r\nIemand ziet/hoort dingen die er niet zijn wanneer hij/zij hiervan verbaal (navragen!) of nonverbaal blijk geeft.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "Dosscore.Comment",
+        "path": "Dosscore.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Comment on the DOS score.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting op de DOS score."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -29,7 +29,7 @@ select
      <button class="tablinks" onclick="openTab(event, 'Mapping')">Mapping</button>
      <button class="tablinks" onclick="openTab(event, 'Examples')">Examples</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff')">Zib-profile diff</button>
-     <button class="tablinks">{{pagelink:Home/LogicalModels/HdBe-NameInformation.page.md, text:CBB}}</button>
+     <button class="tablinks">{{pagelink:Home/LogicalModels/EN.HdBe-NameInformation.page.md, text:CBB}}</button>
   </div>
 
   <div id="Snapshot view" class="tabcontent" style="display:block">
@@ -92,7 +92,7 @@ select
      <button class="tablinks" onclick="openTab(event, 'Mapping2')">Mapping</button>
      <button class="tablinks" onclick="openTab(event, 'Examples2')">Examples</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff2')">Zib-profile diff</button>
-     <button class="tablinks">{{pagelink:Home/LogicalModels/HdBe-NameInformation.page.md, text:CBB}}</button>
+     <button class="tablinks">{{pagelink:Home/LogicalModels/EN.HdBe-NameInformation.page.md, text:CBB}}</button>
   </div>
 
   <div id="Snapshot view2" class="tabcontent" style="display:block">

@@ -30,7 +30,7 @@ The below diagram offers an overview of the technical layering of CBB profiles. 
 	- Various artifacts and definitions are reused from the eHealth Platform Federal Core Profiles (hl7.fhir.be.core package). 
 	- A copy of the zib-profile is the starting point for creating a CBB profile. A technical dependency is impossible because of incompatible required changes for use in the Belgian realm. Therefore alignment with (a newer version of) zib profiles happens manually. An extensive kept changelog should aid in maintaining close alignment with zib-profiles. For more information on the changelog to the zib, please see the {{pagelink:Home/Guidance/ProfilingGuidelines.page.md, text:Profling Guidelines}}.  
 - The green box indicates this implementation guide contains all the CBBs, CBB profiles, and overarching principles.
-- CBBs are used to build use cases illustrated by the grey boxes. Two standard use cases are the exchange of LaboratoryTestResult and the PatientSummary. Next, we have DCDs (represented by DCDxyx) that can build on top of these standard use cases and/or directly depend on the CBBs. 
+- CBBs are used to build use cases illustrated by the grey boxes. Two standard use cases are the exchange of LaboratoryTestResult and the ClinicalReportResearch. Next, we have DCDs (represented by DCDxyx) that can build on top of these standard use cases and/or directly depend on the CBBs. 
 
 <br/><br/>
 
@@ -42,7 +42,7 @@ node hl7.fhir.be.core                       #aliceblue;line:blue;text:blue
 node nictiz.fhir.nl.r4.zib2020              #aliceblue;line:blue;text:blue
 node healthdata.be.r4.cbb                   #green;line:blue;text:yellow
 node healthdata.be.r4.laboratorytestresult
-node healthdata.be.r4.patientsummary
+node healthdata.be.r4.clinicalreportresearch
 node healthdata.be.r4.dcd.xyz
 
 hl7.fhir.r4.core -- hl7.fhir.be.core #line:blue
@@ -50,10 +50,10 @@ hl7.fhir.r4.core -- nictiz.fhir.nl.r4.zib2020 #line:blue
 nictiz.fhir.nl.r4.zib2020 .. healthdata.be.r4.cbb #line:blue : manual dependency 
 hl7.fhir.be.core -- healthdata.be.r4.cbb #line:blue
 healthdata.be.r4.cbb -- healthdata.be.r4.laboratorytestresult
-healthdata.be.r4.cbb -- healthdata.be.r4.patientsummary
+healthdata.be.r4.cbb -- healthdata.be.r4.clinicalreportresearch
 healthdata.be.r4.cbb ~~ healthdata.be.r4.dcd.xyz : potential dependency
 healthdata.be.r4.laboratorytestresult ~~ healthdata.be.r4.dcd.xyz  
-healthdata.be.r4.patientsummary ~~ healthdata.be.r4.dcd.xyz 
+healthdata.be.r4.clinicalreportresearch ~~ healthdata.be.r4.dcd.xyz 
 </plantuml>
 
 <br/><br/>

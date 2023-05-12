@@ -1,0 +1,738 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-Refraction",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Refraction",
+  "name": "HdBeRefraction",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeRefractie"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe Refraction",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "The refraction measurement is a measurement with which the refractive error of the eye is determined. During the refraction measurement, the necessary correction is established: the spherical power (in diopter), the cylindrical power (in diopter), the axis direction(in degrees) for any cylindrical correction, the prism (in diopter)and any additional power of the reading area (in diopter), the so-called reading addition\r\n#### Purpose\r\nThe purpose of a refraction measurement is to determine the correction (through glasses or lenses) with which the patient can see optimally.\r\n\r\n\r\n#### Patient Population\r\nAdults and children from the age that they can interpret a picture chart.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "De refractiemeting is een meting waarbij de brekingsafwijking van het oog wordt bepaald. Bij de refractiemeting wordt de benodigde correctie bepaald: de sferische sterkte (in dioptrie),de cylindrische sterkte (in dioptrie), de asrichting (in graden) voor de eventuele cilindrische sterkte , de prisma (in dioptrie) en de eventuele extra sterkte van het leesgedeelte (in dioptrie) , de zogenaamde leesadditie.\r\n#### Purpose\r\nHet doel van een refractiemeting is het bepalen van de correctie (door middel van bril of lenzen) waarmee de patiënt optimaal kan zien.\r\n\r\n\r\n#### Patient Population\r\nVolwassenen en kinderen vanaf de leeftijd dat ze een plaatjeskaart kunnen interpreteren. \r\n",
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/Refraction",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Refraction",
+        "path": "Refraction",
+        "short": "Refraction",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Refractie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Refractie information model.This root concept contains all data elements of the Refraction information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Refractie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Refractie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Refraction.RefractionMeasurementMethod",
+        "path": "Refraction.RefractionMeasurementMethod",
+        "short": "RefractionMeasurementMethod",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "RefractieMeetMethode"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The method used to measure the refraction.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De gebruikte methodiek om de refractie te meten"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "RefractionMeasurementMethod codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/RefractieMeetMethode"
+        }
+      },
+      {
+        "id": "Refraction.RefractionDateTime",
+        "path": "Refraction.RefractionDateTime",
+        "short": "RefractionDateTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "RefractieDatumTijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date and time when the refraction measurement was carried out.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en tijd waarop de refractie is gemeten."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Refraction.CilindricalRefraction",
+        "path": "Refraction.CilindricalRefraction",
+        "short": "CilindricalRefraction",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "CilindrischeRefractie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the CilindricalRefraction concept.This container contains all data elements of the CilindricalRefraction concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept CilindrischeRefractie. Deze container bevat alle gegevenselementen van het concept CilindrischeRefractie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Refraction.CilindricalRefraction.CylindricalRefractionValue",
+        "path": "Refraction.CilindricalRefraction.CylindricalRefractionValue",
+        "short": "CylindricalRefractionValue",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "CilindrischeRefractieWaarde"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The power of the cylinder needed to correct the cylindrical error (astigmatism), expressed in diopters. When a cylindrical refraction is registered, the axis of the cylinder must also be specified.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dit is de sterkte van de cylinder die nodig is om de cylindrische afwijking (astigmatisme) te corrigeren, uitgedrukt in dioptrieën, oplopend per 0.25D. Bij een cilindrische refractiewaarde dient ook de as van de cilinder opgegeven te worden."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Refraction.CilindricalRefraction.CilindricRefractionAxis",
+        "path": "Refraction.CilindricalRefraction.CilindricRefractionAxis",
+        "short": "CilindricRefractionAxis",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "CilindrischeRefractieAs"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The axis direction of the cylindrical refraction value expressed in degrees.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De asrichting van de cilindrische refractiewaarde uitgedrukt in graden."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Refraction.Prisma",
+        "path": "Refraction.Prisma",
+        "short": "Prisma",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Prisma"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the Prisma concept.This container contains all data elements of the Prisma container.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept Prisma. Deze container bevat alle gegevenselementen van de container Prisma."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Refraction.Prisma.PrismaValue",
+        "path": "Refraction.Prisma.PrismaValue",
+        "short": "PrismaValue",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "PrismaWaarde"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The power of the prism, expressed in diopters.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De sterkte van de prisma, uitgedrukt in dioptrieën."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Refraction.Prisma.PrismaBase",
+        "path": "Refraction.Prisma.PrismaBase",
+        "short": "PrismaBase",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "PrismaBasis"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The base of the prism, expressed in degrees.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De basis van de prisma, uitgedrukt in graden."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Refraction.SfericRefraction",
+        "path": "Refraction.SfericRefraction",
+        "short": "SfericRefraction",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SferischeRefractie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the SfericRefraction concept.This container contains all data elements of the SfericRefraction concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept SferischeRefractie. Deze container bevat alle gegevenselementen van het concept SferischeRefractie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Refraction.SfericRefraction.SfericRefractionValue",
+        "path": "Refraction.SfericRefraction.SfericRefractionValue",
+        "short": "SfericRefractionValue",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SferischeRefractieWaarde"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The spherical spectacle strength power needed to correct nearsightedness (myopia) or farsightedness (hyperopia), expressed in diopters, ascending by 0.25D.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De sferische brilsterkte die nodig is om bijziendheid (myopie) of verziendheid (hypermetropie) te corrigeren, uitgedrukt in dioptrieën, oplopend per 0.25D."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Refraction.SfericRefraction.SfericalEquivalent",
+        "path": "Refraction.SfericRefraction.SfericalEquivalent",
+        "short": "SfericalEquivalent",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SferischEquivalent"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The spherical power added to half of the cylindrical power. Expressed in diopters, ascending by 0.1D. Some equipment automatically calculates the spherical equivalent automatically.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De sferische sterkte en halve cylindrische sterkte bij elkaar opgeteld. Wordt uitgedrukt in dioptrieën, oplopend per 0.25D. Door sommige apparatuur wordt de sferische equivalent automatisch berekend."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Refraction.ReadAddition",
+        "path": "Refraction.ReadAddition",
+        "short": "ReadAddition",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "LeesAdditie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A supplement that is added to the refraction value to determine the strength of the reading glasses, expressed in diopters.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een toeslag die wordt opgeteld bij de uitkomst van de refractie waarde om de sterkte van de leesbril te bepalen, uitgedrukt in dioptrieën."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Refraction.AnatomicalLocation",
+        "path": "Refraction.AnatomicalLocation",
+        "short": "AnatomicalLocation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AnatomischeLocatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The laterality of the eye whose of which the refraction has been measured.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De zijdigheid van het oog waarvan de refractie is gemeten."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

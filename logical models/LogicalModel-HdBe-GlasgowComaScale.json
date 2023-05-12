@@ -1,0 +1,458 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-GlasgowComaScale",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-GlasgowComaScale",
+  "name": "HdBeGlasgowComaScale",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeGlasgowComaScale"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe GlasgowComaScale",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Fifteen-point scale for expressing a person’s level of consciousness, from fully awake to deep unconsciousness, in a number: the so-called EMV score. \r\nThe Glasgow Coma Scale score or EMV (Eye-Motor-Verbal) score is a scale to measure the extent of consciousness, based on eye, verbal and motor responses to specific prescribed sound and pain stimuli.\r\n\r\n#### Purpose\r\nThe GCS score provides the opportunity to document a clinical observation of a patient’s conscious state with a validated instrument which makes use of a patient’s responses to stimuli.\r\n#### Evidence Base\r\nThe Glasgow Coma Scale is used to evaluate a patient’s consciousness by means of three elements: \r\n\r\n1. opening eyes (eye response); \r\n\r\n1. answering questions (verbal response); \r\n\r\n1. motor response. \r\n\r\n\r\nThe three response values are looked at individually and as a whole. The total is referred to as the EMV score. The minimum total score is 3 and the maximum is 15. A slightly altered scale is used for infants (age 0-2) and toddlers (age 2-5). \r\n\r\nThe EMV score can be expressed as a combination of each of the three individual scores, such as: E3M2V4 (opens eyes when spoken to, arms stretch in response to pain and patient produces incomprehensible sounds). \r\nIf one of the EMV elements cannot be evaluated - such as might be the case if a patient is intubated and incapable of verbally responding, or is paralyzed/weak and incapable of fulfilling the motor request, then the individual score is included (score NT), with an extra comment. Er moet dan GEEN totaalscore worden doorgegeven.\r\nV1T is used for an intubated patient, in which t = 'tube'. \r\nClinical decisions must be based on each of the specific data of the eyes, motor and verbal responses and, if evaluation is not possible, an explicit explanation. \r\n\r\nStandard values for the total score, depending on age: \r\n0-6 months : 9 and up\r\n6 months: 10 and up\r\n6-12 months : 11 and up \r\n1-2 : 12 and up \r\n2-5 : 13 and up \r\n> 5 : 14 and up",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Vijftienpuntschaal waarmee het bewustzijnsniveau van een persoon, van volkomen helder tot diep bewusteloos, kan worden weergegeven in een cijfer, de zogenaamde EMV-score.\r\nDe Glasgow comascore ofwel EMV (Eye-Motor-Verbal) score is een maat voor de mate van het bewustzijn, gebaseerd op oog-, verbale en bewegingsreacties op specifieke voorgeschreven hoorbare en voelbare prikkels.\r\n#### Purpose\r\nDe Glasgow comascore biedt de mogelijkheid om een klinische observatie betreffende de bewustzijnstoestand van een patiënt vast te leggen met een gevalideerd instrument dat gebruikt maakt van de reacties van een patiënt op stimuli.\r\n#### Evidence Base\r\nDe Glasgow Coma Scale wordt gebruikt om gebruikt om het bewustzijn van een patiënt te beoordelen aan de hand van drie componenten: \r\n\r\n1. de ogen openen; \r\n\r\n1. op vragen antwoorden; \r\n\r\n1. bewegingsreactie. \r\n\r\n\r\nDe drie responswaarden worden afzonderlijk en als totaal beschouwd. Het totaal wordt de EMV-score genoemd. De minimale totale score is 3 en de maximaal mogelijke is 15. Voor zuigelingen (0-2 jaar) en peuters (2-5 jaar) wordt een aangepaste schaal gebruikt.\r\n\r\nDe EMV score kan worden weergegeven als een samenstelling van elk de deelscores bijvoorbeeld E3M2V4 (opent ogen bij aanspreken, heeft een strekreactie van de armen op pijn en produceert onbegrijpelijke geluiden).\r\n\r\nAls een van de EMV onderdelen niet kan worden beoordeeld - bijvoorbeeld als het subject geïntubeerd is en niet in staat om verbaal te reageren, of verlamd/verslapt en niet in staat om de motor vraag te beantwoorden, dan wordt de deelscore wel opgenomen (score NT), en aangevuld met een extra toelichting. Er moet dan GEEN totaalscore worden doorgegeven.\r\nVoor een geïntubeerde patiënt wordt V1T gebruikt, waarbij t = 'tube'. \r\nKlinische besluitvorming moet worden gebaseerd op elk van de specifieke gegevens van de ogen, motorische en verbale reacties en de expliciete toelichting als niet kan worden beoordeeld.\r\n\r\nNormaalwaarden voor de totaal score, afhankelijk van de leeftijd:\r\n0-6 maanden : 9 of hoger\r\n6 maanden : 10 of hoger\r\n6-12 maanden : 11 of hoger\r\n1-2 jaar : 12 of hoger\r\n2-5 jaar : 13 of hoger\r\n> 5 jaar : 14 of hoger\r\n\r\n\r\n**References**\r\n\r\n1. Glasgow Coma Scale (GCS) [Online] op [https://www.openehr.org/ckm/ ](https://www.openehr.org/ckm/)[Geraadpleegd: 22 mei 2020].\r\n1. Paediatric Glasgow Coma Scale (pGCS) [online] beschikbaar via [https://www.openehr.org/ckm/ ](https://www.openehr.org/ckm/ ) [Geraadpleegd: 22 mei 2020].\r\n1. Performance of the Pediatric Glasgow Coma Scale Score in the Evaluation of Children With Blunt Head Trauma, Dominic A. Borgialli, et. all. 2016 by the Society for Academic Emergency Medicine, doi: 10.1111/acem.13014 \r\n1. [https://www.glasgowcomascale.org](https://www.glasgowcomascale.org) [geraadpleegd: 22 mei 2020]\r\n\r\n\r\n",
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/GlasgowComaScale",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "GlasgowComaScale",
+        "path": "GlasgowComaScale",
+        "short": "GlasgowComaScale",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GlasgowComaScale"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the GlasgowComaScale information model. This root concept contains all data elements of the GlasgowComaScale information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen GlasgowComaScale. Dit rootconcept bevat alle gegevenselementen van de bouwsteen GlasgowComaScale."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "GlasgowComaScale.GlasgowComaScaleDateTime",
+        "path": "GlasgowComaScale.GlasgowComaScaleDateTime",
+        "short": "GlasgowComaScaleDateTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GlasgowComaScaleDatumTijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Time at which the EMV score was determined.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tijdstip waarop de EMV score werd bepaald."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "GlasgowComaScale.GcsEyes",
+        "path": "GlasgowComaScale.GcsEyes",
+        "short": "GCS_Eyes",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GCS_Eyes"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Best eye response to a stimulus. The element is mandatory, but does not require a numerical value. If no value is given, the reason for this is to be provided in the ConditionsDuringMeasurement concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Beste response van de ogen op een stimulus. Het element is verplicht, maar er hoeft geen getalmatige waarde toegekend te zijn. Als er geen waarde is toegekend, dan wordt de reden hiervan vermeld in het concept ConditiesTijdensMeting."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "GCS-Eyes codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/GCS_Eyes"
+        }
+      },
+      {
+        "id": "GlasgowComaScale.GcsMotor",
+        "path": "GlasgowComaScale.GcsMotor",
+        "short": "GCS_Motor",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GCS_Motor"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Best motor response to a stimulus. The element is mandatory, but does not require a numerical value. If no value is given, the reason for this is to be provided in the ConditionsDuringMeasurement concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Beste motorische response op een stimulus. Het element is verplicht, maar er hoeft geen getalmatige waarde toegekend te zijn. Als er geen waarde is toegekend, dan wordt de reden hiervan vermeld in het concept ConditiesTijdensMeting."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "GlasgowComaScale.GcsVerbal",
+        "path": "GlasgowComaScale.GcsVerbal",
+        "short": "GCS_Verbal",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GCS_Verbal"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Best verbal response to a stimulus. The element is mandatory, but does not require a numerical value. If no value is given, the reason for this is to be provided in the ConditionsDuringMeasurement concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Beste verbale response op een stimulus. Het element is verplicht, maar er hoeft geen getalmatige waarde toegekend te zijn. Als er geen waarde is toegekend, dan wordt de reden hiervan vermeld in het concept ConditiesTijdensMeting."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "GlasgowComaScale.TotalScore",
+        "path": "GlasgowComaScale.TotalScore",
+        "short": "TotalScore",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TotaalScore"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The sum of the EMV scores, expressed as a number on a scale from 3-15. The value does not have to be recorded, as it can always be calculated based on the individual scores, and as recording the total is not common for a difficult to determine individual score.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De som van de EMV scores, uitgedrukt als getal in het bereik 3-15. De waarde hoeft niet te worden vastgelegd, omdat deze altijd op grond van de deelscores berekend kan worden, en omdat het vastleggen van het totaal bij een niet goed te bepalen deelscore niet gebruikelijk is."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "GlasgowComaScale.ConditionsDuringMeasurement",
+        "path": "GlasgowComaScale.ConditionsDuringMeasurement",
+        "short": "ConditionsDuringMeasurement",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ConditiesTijdensMeting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Conditions during the measurement that prevent one or more of the subscores from being determined (non testable), such as,e.g. intubation during testing of GCS_Verbal.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Condities tijdens de meting die verhinderen dat een of meer van de subscores bepaald kan worden (niet testbaar), zoals bijvoorbeeld intubatie van het bepalen van GCS_Verbal."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "ConditionsDuringMeasurement codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/ConditiesTijdensMeting"
+        }
+      },
+      {
+        "id": "GlasgowComaScale.Comment",
+        "path": "GlasgowComaScale.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Comment on (the context of) the EMV score measurement, such as any problems or factors that may influence interpretation.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Opmerking over de (context van de) meting van de EMV score, zoals eventuele problemen of factoren die van invloed kunnen zijn op de interpretatie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

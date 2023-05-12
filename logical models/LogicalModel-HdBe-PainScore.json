@@ -1,0 +1,312 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-PainScore",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PainScore",
+  "name": "HdBePainScore",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBePijnscore"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe PainScore",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "The pain score is a general measurement for pain experience, not a description of specific, localized pain. \r\n\r\nThe following are used as an easily reproducible measurement for pain experience: \r\n\r\n1. NRS (Numeric Rating Scale) in which the patient gives the pain a number on a scale of 1 (no pain) to 10 (unbearable pain). \r\n1. VAS (Visual Analogue Score), in which the patient points to a bar with a line to indicate the pain they feel. The back of the bar has a scale from 0 (no pain) to 10 (unbearable pain) on it. \r\nThe results of both scores have the same meaning, but the visual analogue method (VAS) is seen as more reliable than the NRS pain score. \r\n#### Purpose\r\nThe purpose of the pain score is to quantify and objectify the patient’s subjective pain experience.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "De pijnscore is een algemene maat voor de pijnbeleving, geen beschrijving van specifieke, gelocaliseerde pijn.\r\n\r\nAls goed reproduceerbare maat voor de beleving van pijn worden gebruikt:\r\n\r\n1. NRS (Numeric Rating Scale) waarbij de patiënt een cijfer geeft aan de pijn op een schaal van 1 (geen pijn) en 10 (ondraaglijke pijn).\r\n1. VAS (Visual Analogue Score) , waarbij de patiënt op een lat met een lijn aangeeft hoe de pijn ervaren wordt en op de achterkant van de lat staat een schaal van 0 (geen pijn) tot 10 (ondraaglijke pijn).\r\nDe uitslag van beide scores hebben dezelfde betekenis, maar de visueel analoge methode (VAS) wordt als betrouwbaarder aangemerkt dan de NRS pijnscore.\r\n\r\n\r\n#### Purpose\r\nHet doel van de pijnscore is het kwantificeren en objectiveren van de subjectieve pijnbeleving van de patiënt. \r\n\r\n\r\n**References**\r\n1. openEHR-EHR-OBSERVATION.symptom-pain.v1[Online] Beschikbaar op: http://www.openehr.org/knowledge/ [Geraadpleegd: 23 december 2014].\r\n",
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/PainScore",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PainScore",
+        "path": "PainScore",
+        "short": "PainScore",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "PijnScore"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the PainScore information model. This root concept contains all data elements of the PainScore information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Pijnscore. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Pijnscore."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "PainScore.PainScoreValue",
+        "path": "PainScore.PainScoreValue",
+        "short": "PainScoreValue",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "PijnscoreWaarde"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The score is a general measurement of pain experience, not a description of specific, localized pain. \r\n\r\nDepending on the measuring method used, it indicates the level of pain experienced by the patient on a scale of 0 to 10: 0 = no pain and 10 = the worst pain imaginable. No descriptions are used for the intermediate values, so that the value is displayed as a number and not as a code. \r\n\r\nSometimes a value range of 0-100 is used instead of 0-10.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De score is een algemene maat voor de pijnbeleving, geen beschrijving van specifieke, gelocaliseerde pijn.\r\n\r\nAfhankelijk van de gebruikte meetmethode geeft het de door de patiënt beleefde mate van pijn aan op een schaal van 0 tot en met 10: 0 = geen pijn en 10 = de ergst voorstelbare pijn. Voor de tussenliggende waarden zijn geen omschrijvingen in gebruik, zodat de waarde als een getal en niet als een code wordt weergegeven. \r\n\r\nSoms wordt een waardebereik van 0-100 gebruikt i.p.v. 0-10."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "PainScore.PainScoreDateTime",
+        "path": "PainScore.PainScoreDateTime",
+        "short": "PainScoreDateTime",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "PijnscoreDatumTijd"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date and time at which the pain score was measured.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en het tijdstip waarop de pijnscore gemeten is."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "PainScore.PainMeasuringMethod",
+        "path": "PainScore.PainMeasuringMethod",
+        "short": "PainMeasuringMethod",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "PijnMeetmethode"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The measuring method describes the method used to determine the pain score. The measurement involves a visualization of the pain scale.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De meetmethode beschrijft de gebruikte methodiek om de pijnscore vast te leggen. Bij de meting wordt gebruik gemaakt van een visualisatie van de pijnschaal."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "PainMeasuringMethod codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/PijnMeetmethode"
+        }
+      },
+      {
+        "id": "PainScore.Comment",
+        "path": "PainScore.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Comment on the pain score measurement, including comments on for example the circumstances and/or disruptive factors that may influence the result.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting op de pijnscore meting, bijvoorbeeld opmerkingen betreffende de omstandigheden en storende factoren die het meetresultaat kunnen beïnvloeden."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -13,11 +13,11 @@ URL: url
 
 ### Introduction
 This Patient profile contains mappings to the following CBBs:
-- {{pagelink:Home/LogicalModels/HdBe-Patient.page.md}}
-- {{pagelink:Home/LogicalModels/HdBe-Nationality.page.md}}
-- {{pagelink:Home/LogicalModels/HdBe-MaritalStatus.page.md}}
-- {{pagelink:Home/LogicalModels/HdBe-LanguageProficiency.page.md}}
-- {{pagelink:Home/LogicalModels/HdBe-ContactPerson.page.md}}
+- {{pagelink:Home/LogicalModels/EN.HdBe-Patient.page.md}}
+- {{pagelink:Home/LogicalModels/EN.HdBe-Nationality.page.md}}
+- {{pagelink:Home/LogicalModels/EN.HdBe-MaritalStatus.page.md}}
+- {{pagelink:Home/LogicalModels/EN.HdBe-LanguageProficiency.page.md}}
+- {{pagelink:Home/LogicalModels/EN.HdBe-ContactPerson.page.md}}
 
 <div>
   <div class="tab">
@@ -27,7 +27,7 @@ This Patient profile contains mappings to the following CBBs:
      <button class="tablinks" onclick="openTab(event, 'Mapping')">Mapping</button>
      <button class="tablinks" onclick="openTab(event, 'Examples')">Examples</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff')">Zib-profile diff</button>
-     <button class="tablinks">{{pagelink:Home/LogicalModels/HdBe-Patient.page.md, text:CBB}}</button>
+     <button class="tablinks">{{pagelink:Home/LogicalModels/EN.HdBe-Patient.page.md, text:CBB}}</button>
   </div>
 
   <div id="Snapshot view" class="tabcontent" style="display:block">

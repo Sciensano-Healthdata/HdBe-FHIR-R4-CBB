@@ -1,0 +1,457 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-TreatmentObjective",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-TreatmentObjective",
+  "name": "HdBeTreatmentObjective",
+  "_name": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeBehandeldoel"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeObjectifTraitement"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "title": "HdBe TreatmentObjective",
+  "_title": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe Behandeldoel"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe ObjectifTraitement"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.259205+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "The treatment objective describes the desired result of the treatment/interventions in terms of the patient’s diagnosed problem. The objective and target date are entered in addition to the target value. Comparing the healthcare results to the treatment objective provides insight into the effectivity of the treatment/interventions. \r\n#### Purpose\r\nA treatment objective is recorded to indicate the intention of the treatment/intervention. It provides an indication of the procedures to be carried out as part of the care process. This also enables us to monitor developments in the patient’s health condition for the desired healthcare result.",
+  "_description": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Het behandeldoel omschrijft het gewenste resultaat van de behandeling/interventies met betrekking tot het benoemde probleem van de patiënt. Naast de streefwaarde wordt bij het te bereiken doel ook een streefdatum aangegeven. Vergelijking van het behandeldoel met de uitkomsten van zorg geeft inzicht in de effectiviteit van de behandeling/interventies. &#13;\n#### Purpose&#13;\nEen behandeldoel wordt vastgelegd om de intentie van de behandeling/interventie aan te geven. Daarmee geeft het een indicatie over de in te zetten acties als onderdeel van zorgproces. Dit maakt het tevens mogelijk om de ontwikkelingen rondom de gezondheidstoestand van de patiënt te monitoren op gewenst zorgresultaat.&#13;\n&#13;\n&#13;\n**References**&#13;\n1. International Classification of Functioning Disability and Health (ICF) [Online] Beschikbaar op: [http:/www.rivm.nl/who-fic/icf.htm](http:/www.rivm.nl/who-fic/icf.htm) [Geraadpleegd: 13 februari 2015]"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "L'objectif de traitement décrit le résultat souhaité du traitement/des interventions en fonction du problème diagnostiqué chez le patient. L'objectif et la date cible sont saisis en plus de la valeur cible. Comparer les résultats des soins de santé avec l'objectif de traitement permet de mieux appréhender l'efficacité du traitement/des interventions. \n#### Purpose\nUn objectif de traitement est enregistré pour indiquer l'intention du traitement/de l'intervention. Il fournit une indication des procédures à accomplir dans le cadre du processus de soins. Cela nous permet également de surveiller l'évolution de l'état de santé du patient pour le résultat de soins souhaité."
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/TreatmentObjective",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "TreatmentObjective",
+        "path": "TreatmentObjective",
+        "short": "TreatmentObjective",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Behandeldoel"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ObjectifTraitement"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Root concept of the TreatmentObjective information model. This root concept contains all data elements of the TreatmentObjective information model.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Behandeldoel. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Behandeldoel."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Concept root du modèle d'information ObjectifTraitement. Ce concept root contient tous les éléments de données du modèle d'information ObjectifTraitement."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "HdBe-TreatmentObjective-1",
+            "severity": "error",
+            "human": "Either DesiredHealthcareResult or DesiredHealthCondition must exist.",
+            "_human": {
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr-BE"
+                    },
+                    {
+                      "url": "content",
+                      "valueMarkdown": "Soit RésultatSoinsDésiré, soit ÉtatSantéDésiré doit exister."
+                    }
+                  ],
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation"
+                }
+              ]
+            },
+            "expression": "DesiredHealthcareResult.exists() xor DesiredHealthCondition.exists()"
+          }
+        ]
+      },
+      {
+        "id": "TreatmentObjective.DesiredHealthcareResult",
+        "path": "TreatmentObjective.DesiredHealthcareResult",
+        "short": "DesiredHealthcareResult",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GewenstZorgresultaat"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "RésultatSoinsDésiré"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The textual account of the treatment objective. This concept provides the option to define a treatment objective which cannot be described as a measurement value or functional/mental status.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De tekstuele weergave van het behandeldoel. Dit concept geeft de mogelijkheid om een behandeldoel te definieren dat niet omschreven kan worden als een meetwaarde of functionele dan wel mentale status."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Le compte textuel de l'objectif de traitement. Ce concept permet de définir un objectif de traitement qui ne peut pas être décrit comme une valeur de mesure ou un état fonctionnel/mental."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "condition": [
+          "HdBe-TreatmentObjective-1"
+        ]
+      },
+      {
+        "id": "TreatmentObjective.DesiredHealthCondition",
+        "path": "TreatmentObjective.DesiredHealthCondition",
+        "short": "DesiredHealthCondition",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GewensteGezondheidstoestand"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ÉtatSantéDésiré"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The desired health condition is a target value which can be expressed as the patient’s functional or mental status.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De gewenste gezondheidstoestand is een streefwaarde die uitgedrukt kan worden als een functionele of mentale status van de patiënt."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "L'état de santé désiré est une valeur cible qui peut être exprimée en tant que statut fonctionnel ou mental du patient."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-FunctionalOrMentalStatus"
+            ]
+          }
+        ],
+        "condition": [
+          "HdBe-TreatmentObjective-1"
+        ]
+      },
+      {
+        "id": "TreatmentObjective.Problem",
+        "path": "TreatmentObjective.Problem",
+        "short": "Problem",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Probleem"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Problème"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Description of the problem to which the treatment objective applies.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Beschrijving van het probleem waar het behandeldoel betrekking op heeft."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Description du problème auquel l'objectif de traitement s'applique."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

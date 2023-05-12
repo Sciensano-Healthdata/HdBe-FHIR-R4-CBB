@@ -1,0 +1,357 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-EpisodeOfCare",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-EpisodeOfCare",
+  "name": "HdBeEpisodeOfCare",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeZorgEpisode"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe EpisodeOfCare",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "The period in which a health problem, such as a complaint or illness, receives attention from a care professional. During this period the designation of this health problem can change due to evolving insight and/or the progress of the illness. An episode of care serves as a context for all data related to the health problem. \r\n#### Purpose\r\n Designation of a health problem requiring care, and facilitation of a good overview of course and treatment on the basis of data, relevant to the health problem. The episode of care can be useful in many disciplines of care, but is currently mainly in use in general practice.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Periode waarin een gezondheidsprobleem, zoals een klacht of een aandoening, de aandacht heeft van een zorgverlener. In deze periode kan de duiding van het gezondheidsprobleem veranderen door voortschrijdend inzicht en/of het beloop van de aandoening. Een zorgepisode fungeert als context voor alle gegevens die op het gezondheidsprobleem betrekking hebben. \r\n#### Purpose\r\n Het verkrijgen van een goed overzicht van beloop en behandeling aan de hand van de gegevens die voor het gezondheidsprobleem relevant zijn. De zorgepisode kan voor veel disciplines in de zorg nuttig zijn, maar thans is deze met name in gebruik in de huisartsenzorg. \r\n\r\n\r\n",
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/EpisodeOfCare",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "EpisodeOfCare",
+        "path": "EpisodeOfCare",
+        "short": "EpisodeOfCare",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ZorgEpisode"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the EpisodeOfCare information model.This root concept contains all data elements of the EpisodeOfCare information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen ZorgEpisode. Dit rootconcept bevat alle gegevenselementen van de bouwsteen ZorgEpisode."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "EpisodeOfCare.StartDate",
+        "path": "EpisodeOfCare.StartDate",
+        "short": "StartDate",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "BeginDatum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date that marks the beginning of the episode of care. Usually this is the date of the first contact of the patient with the care professional in the context of the health problem.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum die het begin van de zorgepisode markeert. In het algemeen is dit de datum van het eerste contact van de patiënt met de zorgverlener in het kader van het gezondheidsprobleem."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "EpisodeOfCare.EndDate",
+        "path": "EpisodeOfCare.EndDate",
+        "short": "EndDate",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "EindDatum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date that marks the end of the episode of care. This can be the date of the last contact of the patient with the care professional in the context of the health problem, but also thereafter on the basis of hindsight.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum die het einde van de zorgepisode markeert. Dit kan de datum zijn van het laatste contact van de patiënt met de zorgverlener in het kader van het gezondheidsprobleem, maar ook daarna op basis van inzicht achteraf."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "EpisodeOfCare.FocusEpisodeOfCare",
+        "path": "EpisodeOfCare.FocusEpisodeOfCare",
+        "short": "FocusEpisodeOfCare",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "FocusZorgEpisode"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The health problem on which the episode of care focuses.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het gezondheidsprobleem waar de zorgepisode betrekking op heeft."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Problem"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "EpisodeOfCare.EpisodeOfCareName",
+        "path": "EpisodeOfCare.EpisodeOfCareName",
+        "short": "EpisodeOfCareName",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ZorgEpisodeNaam"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A name that characterizes the episode of care for the care professional.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een naam die de zorgepisode voor de zorgverlener kenmerkt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "EpisodeOfCare.Comment",
+        "path": "EpisodeOfCare.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Additional information about the episode of care that the care professional wishes to see at first glance.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie bij de zorgepisode die de zorgverlener belangrijk vindt om direct in beeld te hebben."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

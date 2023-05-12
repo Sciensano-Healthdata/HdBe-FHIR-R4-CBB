@@ -1,0 +1,365 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-Stoma",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Stoma",
+  "name": "HdBeStoma",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeStoma"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe Stoma",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "A stoma is an unnatural, surgically created opening connecting a body cavity with the outside world. A stoma is created e.g. as an exit opening for feces or urine in the event that they cannot leave the body naturally. In the case of a tracheostomy, the stoma is intended to facilitate breathing if that is no longer possible via the oral, nasal and throat cavity.\r\n#### Purpose\r\nInformation on present stomas is recorded to inform other health professionals. This information is of importance in determining the care required for the patient. In a transfer situation, the information offers the option to realize continuity of care by organizing specific expertise and materials in advance, for example.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Een stoma is een onnatuurlijke, chirurgisch aangelegde opening die een lichaamsholte verbindt met de buitenwereld. Een stoma wordt onder andere aangelegd als uitgang voor ontlasting of urine wanneer deze stoffen het lichaam niet op natuurlijke wijze kunnen verlaten. Bij een tracheostoma dient de stoma om ademhaling mogelijk te maken wanneer dat niet meer via de mond, neus- en keelholte kan.\r\n#### Purpose\r\nHet vastleggen van informatie over aanwezige stoma's heeft tot doel om andere zorgverleners hierover te informeren. Deze informatie is van belang bij het vaststellen van benodigde zorg voor de patiënt. In een overplaatsingssituatie biedt de informatie de mogelijkheid om de continuïteit van zorg te bewerkstelligen door bijvoorbeeld specifieke deskundigheid en materialen vooraf te regelen. \r\n\r\n\r\n**References**\r\n1. V&VN afdeling Stomaverpleegkundigen. *Evidence-based Richtlijn Stomazorg Nederland.* (2012) [Online] Beschikbaar op: [http://www.mdl.nl/uploads/240/1143/Evidence-based_Richtlijn_Stomazorg_Nederland.pdf](http://www.mdl.nl/uploads/240/1143/Evidence-based_Richtlijn_Stomazorg_Nederland.pdf) [Geraadpleegd: 13 februari 2015]\r\n",
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/Stoma",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Stoma",
+        "path": "Stoma",
+        "short": "Stoma",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Stoma"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Stoma information model. This root concept contains all data elements of the Stoma information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Stoma. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Stoma."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Stoma.StomaType",
+        "path": "Stoma.StomaType",
+        "short": "StomaType",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "StomaType"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Stoma type indicates which body cavity the stoma is in and the kind of stoma used.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het type stoma geeft aan vanuit welke lichaamsholte de stoma is aangelegd en wat voor een soort stoma hiervoor gebruikt is."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "StomaType codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/StomaType"
+        }
+      },
+      {
+        "id": "Stoma.StomaMaterial",
+        "path": "Stoma.StomaMaterial",
+        "short": "StomaMaterial",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "StomaMateriaal"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Stoma material describes the medical aids used, such as a skin plate (the adhesive part around the stoma), the stoma pouch (to catch the stoma output) and other stoma aids for caring for the stoma. For tracheostomies, it also describes aids such as voice prostheses and stoma filters. \r\nCatheters inserted through the stoma such as tracheal cannulas are not described in this concept. These aids must be modeled in a higher information model describing the catheter and referring to the stoma.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het stomamateriaal beschrijft de gebruikte hulpmiddelen, zoals huidplaat (het plakkende deel rondom stoma), stomazakje (voor het opvangen van output van stoma) en overige stomahulpmiddelen voor verzorgen van de stoma. Voor tracheostomata beschrijft het eveneens hulpmiddelen zoals spraakprothese en stomafilter.\r\nKatheters die door de stoma naar binnen gebracht worden zoals een tracheacanule worden niet in dit concept beschreven. Deze hulpmiddelen moeten in een bovenliggende bouwsteen die de katheter beschrijft en naar de stoma verwijst gemodelleerd worden."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-MedicalDevice"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Stoma.AnatomicalLocation",
+        "path": "Stoma.AnatomicalLocation",
+        "short": "AnatomicalLocation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AnatomischeLocatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Anatomical location of the stoma on the patient.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De anatomische locatie van de stoma bij de patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Stoma.CreationDate",
+        "path": "Stoma.CreationDate",
+        "short": "CreationDate",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AanlegDatum"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date on which the stoma was created in the patient. A vague date, such as only the year, is permitted.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum waarop de stoma bij de patiënt is aangelegd, een vage datum, bijv. alleen een jaartal, is toegestaan."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Stoma.Comment",
+        "path": "Stoma.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A comment on the stoma.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een toelichting op de stoma."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

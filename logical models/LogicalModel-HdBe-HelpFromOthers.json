@@ -1,0 +1,509 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-HelpFromOthers",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HelpFromOthers",
+  "name": "HdBeHelpFromOthers",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeHulpVanAnderen"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe HelpFromOthers",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "There are often multiple people or parties involved in the care for a patient with a disorder or disability, particularly in the event of home care. Their efforts enable the patient to function more or less independently. This includes not only caregivers, but also professional help such as that offered by home care organizations, nurses, aids and helpers. \r\nCurrent doctors and staff from the facility to which a patient is admitted do not fall under this concept.\r\n\r\n#### Purpose\r\nInformation on help from others can provide a good estimate of the availability of the care required by the patient. If this care is not sufficiently available, measures can be taken to facilitate the required care. \r\nThis plays a particularly important role in for example discharges from the hospital or from a nursing home.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Bij de zorg voor een patiënt met een aandoening of beperking zijn, met name in de thuissituatie, vaak meerdere personen of instanties betrokken. Hun inzet maakt het voor de patiënt mogelijk in meer of mindere mate zelfstandig te functioneren. Het gaat hierbij niet alleen om mantelzorgers, maar ook om professionele hulp zoals geboden door thuiszorg instanties, verpleegkundigen, verzorgenden en helpenden.\r\nBehandelende artsen en personeel van de organisatie waarin een patiënt is opgenomen vallen niet onder dit concept.\r\n#### Purpose\r\nMet informatie over hulp van anderen is het mogelijk een goede inschatting te maken over de beschikbaarheid van de voor de patiënt noodzakelijke zorg. Indien deze zorg onvoldoende aanwezig is, kunnen maatregelen genomen worden om dit te regelen.\r\nMet name bij ontslag uit ziekenhuis of verpleeghuis speelt dit een belangrijke rol.\r\n\r\n\r\n",
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HelpFromOthers",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "HelpFromOthers",
+        "path": "HelpFromOthers",
+        "short": "HelpFromOthers",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "HulpVanAnderen"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the HelpFromOthers information model. This root concept contains all data elements of the HelpFromOthers information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van bouwsteen HulpVanAnderen. Dit rootconcept bevat alle gegevenselementen van de bouwsteen HulpVanAnderen."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "HelpFromOthers.CareAid",
+        "path": "HelpFromOthers.CareAid",
+        "short": "CareAid",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Hulpverlener"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the Aid concept. This container contains all data elements of the Aid concept. \r\nAn aid can be a health professional such as nurses, carers and helpers but also a caregiver or healthcare organizations such as a home care organization.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept Hulpverlener. Deze container bevat alle gegevenselementen van het concept Hulpverlener.\r\nEen hulpverlener kan zijn een professionele zorgverlener zoals verpleegkundigen, zorgenden en helpenden maar ook een mantelzorger of een zorgaanbieder zoals een thuiszorgorganisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "HelpFromOthers.CareAid.HealthProfessional",
+        "path": "HelpFromOthers.CareAid.HealthProfessional",
+        "short": "HealthProfessional",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Zorgverlener"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Details of the health professional involved in the patient’s care.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De gegevens van de zorgverlener die betrokken is bij de zorg."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthProfessional"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HelpFromOthers.CareAid.Caregiver",
+        "path": "HelpFromOthers.CareAid.Caregiver",
+        "short": "Caregiver",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Mantelzorger"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Details of the caregiver involved in the patient’s support.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De gegevens van de mantelzorger die betrokken is bij de ondersteuning van patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-ContactPerson"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HelpFromOthers.CareAid.HealthcareOrganization",
+        "path": "HelpFromOthers.CareAid.HealthcareOrganization",
+        "short": "HealthcareOrganization",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Zorgaanbieder"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Details of the organization the health professional/aid works for in the event that it is not entered as a person.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De gegevens van de organisatie waar de zorgverlener/hulpverlener voor werkt als deze niet als persoon wordt opgegegven."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-HealthcareOrganization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HelpFromOthers.Nature",
+        "path": "HelpFromOthers.Nature",
+        "short": "Nature",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aard"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The nature of the help/support provided to the patient.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De aard van de hulp/ondersteuning die geboden wordt aan de patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "HelpFromOthers.Frequency",
+        "path": "HelpFromOthers.Frequency",
+        "short": "Frequency",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Frequentie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The frequency of the provided support, e.g. daily/weekly.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De frequentie van de geboden ondersteuning, bijvoorbeeld dagelijks/wekelijks."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "HelpFromOthers.TypeOfHelp",
+        "path": "HelpFromOthers.TypeOfHelp",
+        "short": "TypeOfHelp",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SoortHulp"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The type of help offered by the person in question.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het type hulp dat de betrokken persoon biedt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "TypeOfHelp codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/SoortHulp"
+        }
+      },
+      {
+        "id": "HelpFromOthers.Comment",
+        "path": "HelpFromOthers.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A comment on the help/support the patient receives from others.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een toelichting op de hulp/ondersteuning die de patiënt ontvangt van anderen."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1289 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-TNMTumorClassification",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-TNMTumorClassification",
+  "name": "HdBeTNMTumorClassification",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeTNMTumorClassificatie"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "HdBe TNMTumorClassification",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "TNM Classification of Malignant Tumors (TNM) is the cancer staging system developed and is maintained by the Union for International Cancer Control (UICC). It is also used by the American Joint Committee on Cancer (AJCC) and the International Federation of Gynecology and Obstetrics (FIGO). In 1987, the UICC and AJCC staging systems were unified into the single TNM staging system. Nevertheless, there are still some differences between the two systems. \r\nThe TNM-classification is developed for solid tumors. TNM is a notation system that describes the stage of a cancer, which originates from a solid tumor, using alphanumeric codes; T describes the size of the original (primary) tumor and whether it has invaded nearby tissue, N describes nearby (regional) lymph nodes that are involved, and M describes distant metastasis (spread of cancer from one part of the body to another). In addition to T, N and M, the classification also contains other parameters that may be\n                    relevant.\r\n#### Purpose\r\nTNM classification is a major determinant of appropriate treatment and prognosis. Stage is an increasingly important component of cancer surveillance and cancer control and an endpoint for the evaluation of the population-based screening and early detection efforts.\r\nThe TNM staging system is the common language in which oncology health professionals can communicate on the cancer extent for individual patients as a basis for decision making on treatment management and individual prognosis but can also be used, to inform and evaluate treatment guidelines, national cancer planning and research.\r\nThe objectives of the TNM classification are the following: \r\n\r\n* Aid treatment planning,\r\n* Provide an indication of prognosis based on historical outcome data,\r\n* Assist in the evaluation of treatment results,\r\n* Facilitate the exchange of information between treatment centers,\r\n* Contribute to continuing investigations of human malignancies,\r\n* Support cancer control activities, including through cancer registries.\r\n\r\n\r\nThe TNM classification is a unified standard. It goes beyond clinician practice and constitutes vital information for policy-makers developing or implementing cancer control and prevention plans.\r\n\r\n\r\n#### Instructions\r\n**From a generic TNM Classification towards a disease-specific TNM Classification**\r\nDevelopment or implementation of a tumor-specific information model of the TNM Classification standard requires insight into how values sets can be restricted, expanded, and applied.\r\nRestriction of a value list means either leaving out items or making items more specific by choosing other terms within the official code system. The aim for the future is to have available ready-to-use value sets per type of malignancy.\r\n**Codes systems**\r\nThis clinical model uses 2 international code systems:\r\n\r\n* SNOMED CT (managed by SNOMED international, Dutch management by Nictiz)\r\n* International Classification of Diseases for Oncology, version 3 (ICD-O-3), managed by the WHO.\r\n\r\n\r\nFor items where neither of these 2 code systems were considered useful or satisfactory, we chose to manage the value sets as part of the management of the HCIMs (Health and Care Information Models). When a unique and international reference to the TNM Classification standard as codesystem and the valuesets becomes availble these can be amended in a next version of the HCIM . \r\n**Starting points from the perspective of the TNM Classification standard**\r\n\r\n* One TNM-classification per single organ, and one classification per side for paired organs. For example: when breast cancer involves a primary tumor in both breasts, there will be two instances of the HCIM with laterality ‘left’ for one breast and laterality ‘right’ for the other (‘bilateral’ is not allowed for paired organs).\r\n* The HCIM does not only encompass the outcome of the TNM classification, but also the exact localization of the primary tumor(s), the positive lymph nodes, and metastases.\r\n* In case of multiple primary tumors in the same organ, one should classify the tumor with the highest T-category, and mention the multiple presence or number of tumors between brackets. For example: T2 (m) or T2 (5). The lesion with the highest T-category determines the classification of the tumor. In order to distinguish between lesions and to represent each individual lesion, the HCIM has the container ‘Lesion’. Each lesion has a number. The HCIM does not represent which lesion (e.g. 1, 2, or 4) has the highest T-category, since this is only clear after judgment by the health professional on the basis of morphology and/or imaging.\r\n\r\n\r\n**Use of the ****UICC (**[http://www.uicc.org/resources/tnm](http://www.uicc.org/resources/tnm)**) ****/ ****AJCC (**[http://cancerstaging.org/references-tools/deskreferences/Pages/default.aspx](http://cancerstaging.org/references-tools/deskreferences/Pages/default.aspx)** )**** version of the TNM Classification of Malignant Tumours.**\r\n\r\n* Although definitions and wording should not differ between the AJCC and UICC TNM classifications, some differences have regrettably crept in (for example: the definition of regional lymph nodes associated with carcinomas of the esophagus and endometrium). Therefore, the HCIM allows for choosing between the UICC or AJCC version. Criteria within the TNM-classification system have changed over the years and resulted in various editions. As a result, a specific tumor stage may have a completely different prognosis, depending on the edition used. Furthermore, it is important to consider the consequences of improved treatment over time.\r\n* Beside staging based on the UICC or AJCC classifications there is the ‘Essential TNM’. This is a simplified version of the TNM, specifically developed for the representation of the occurrence of cancer in low wage countries. These countries often lack the resources for early diagnosis, and make limited use of the TNM classification system (in these countries, cancer is generally detected in a very late stage). This special version of the TNM has not been taken into account while developing this HCIM. Furthermore, the use of the ‘Essential TNM’ is generally limited to acquire data for statistics related to the prevalence of certain malignancies in these countries.\r\n\r\n\r\n**Prefix and suffix are integrated in value sets**\r\nAlthough it would be possible to create separate value sets for the potential prefixes and suffixes associated with the T, N, and M items, we chose to facilitate the use of the model by integrating them in the T, N, and M value sets. This decision is based on the current insight that it prevents the creation of invalid combinations. \r\n**Prefix **\r\n\r\n* **c: **Clinical classification, based on data prior to treatment, such as clinical examination, imaging, endoscopy, biopsies, surgical exploration or examination under anesthesia, and other types of examination.\r\n* **yc:** Classification performed during or following initial multimodal therapy (non-surgical).\r\n* **p:** Post-surgical histopathological classification. This is based on data prior to treatment, supplemented with pathological examination after surgical treatment.\r\n* **yp:** Classification performed during or after multimodal treatment (including surgical treatment).\r\n* **rc:** Clinical classification in case of a recurrent tumor (after a disease-free interval).\r\n* **rp:** Postoperative pathological classificationin case of a recurrent tumor (after a disease-free interval).\r\n* **a:** Classification determined during autopsy.\r\n\r\n\r\n**Suffix**\r\n\r\n* (mi): Cases with micrometastasis only\r\n* (sn): Cases after sentinel lymph node assessment\r\n* (f): Cases where FNA or a core biopsy is performed on regional lymph nodes\r\n* (i-): negative morphological findings for isolated tumor cells (ITC)\r\n* (i+): positive morphological findings for isolated tumor cells (ITC)\r\n* (mol-): negative non-morphological findings for isolated tumor cells (ITC)\r\n* (mol+): positive non-morphological findings for isolated tumor cells (ITC)\r\n* (0): without elevated (LDH)\r\n* (1): with elevated (LDH)\r\n\r\n\r\n\r\n#### Patient Population\r\nAdult patients with a solid tumor on which the TNM-classifications can be applied.\r\n**Issues**\r\n Usability of this HCIM as well as disease-specific code lists are created in the first pilot(s), planned in the summer of 2020. During these projects, IKNL will provide the maintenance for these code lists. When these pilot projects are completed, the findings will be included as change requests in the regular maintenance process of the HCIM center.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "TNM Classificatie van Maligne Tumoren (TNM) is het systeem voor de stadiëring van kanker dat is ontwikkeld door de Union Internationale Contre le Cancer of International Union Against Cancer (UICC). De TNM-classificatie wordt ook gebruikt door de American Joint Committee on Cancer (AJCC) en de International Federation of Gynecology and Obstetrics (FIGO). In 1987 werden de TNM-classificaties van de UICC en de AJCC tot één systeem gecombineerd met dezelfde definities. Desondanks zitten er nog altijd verschillen tussen beide systemen. \r\nDe TNM-classificatie is ontwikkeld voor solide tumoren (waaronder carcinomen en sarcomen); niet-solide tumoren (bijvoorbeeld lymfomen en gliomen) kennen een ander systeem voor stadiëring. De algemene opzet is als volgt: De T staat voor tumor en beschrijft de grootte van de tumor en de lokale uitbreiding, de N staat voor lymfekliermetastasering (Engels: node) en de M staat voor metastase op afstand (uitbreiding van de kanker van één\n                    locatie in het lichaam naar een andere. Naast T, N en M bevat de classificatie nog een aantal andere parameters.\r\n#### Purpose\r\nTNM-classificatie is een belangrijke bepalende factor voor de juiste behandeling en prognose. Het stadium is een steeds belangrijker onderdeel van kankersurveillance en kankerbestrijding en een eindpunt voor de evaluatie van populatie screening en vroege detectie.\r\nHet TNM-stadiëringssysteem is de gemeenschappelijke taal waarin zorgprofessionals in de oncologie kunnen communiceren over de uitbreiding en verspreiding van kanker bij individuele patiënten als basis voor besluitvorming over behandeling en individuele prognose. Het kan ook worden gebruikt voor het opstellen en evalueren van behandelrichtlijnen, nationale beleid t.a.v. zorgplanning en onderzoek.\r\nDe doelstellingen van de TNM-classificatie zijn: \r\n\r\n* Hulp bij het plannen van de behandeling.\r\n* Het geven van een indicatie van prognose op basis van historische gegevens over uitkomsten.\r\n* Ondersteuning bij de evaluatie van behandelresultaten.\r\n* De uitwisseling van informatie tussen behandelcentra vergemakkelijken.\r\n* Bijdragen aan doorlopend onderzoek naar kanker.\r\n* Ondersteuning van kankerbestrijding, onder meer via kankerregisters.\r\n\r\n\r\nDe TNM-classificatie is een uniforme standaard. Het doel is breder dan alleen de toepassing binnen het primaire zorgproces en zorgt voor essentiële informatie voor beleidsmakers die kankerbestrijdings- en preventieplannen ontwikkelen of uitvoeren.\r\n\r\n\r\n#### Instructions\r\n**Van een generieke TNM classificatie naar een ziekte specifieke TNM classificatie**\r\nBij het uitwerken van een tumor specifieke TNM-bouwsteen of implementatie moet gekeken worden hoe de waardelijsten kunnen worden ingeperkt, toegepast of uitgebreid. \r\nInperken wil zeggen dat items in een codelijst worden weggelaten of specifiek worden gemaakt door binnen het voorgeschreven code systeem andere termen te kiezen. Het is de bedoeling dat in de toekomst kant en klare codelijsten per kankeraandoening beschikbaar worden gemaakt (zie ook issues). \r\n**Codesystemen**\r\nIn deze zib worden 2 internationale codesystemen gebruikt: \r\n\r\n* SNOMED CT (beheerder international SNOMED international, Nederlands beheer door Nictiz)\r\n* International Classification of Diseases for Oncology, version 3 (ICD-O-3) beheerd door de WHO.\r\n\r\n\r\nWaar toepassing van één van deze codesystemen niet zinvol werd geacht of mogelijk was is gekozen voor beheer ervan als onderdeel van het beheer van de zibs. Wanneer er een eenduidige internationale verwijzing mogelijk is naar de TNM standaard zelf als codesysteem met waardelijsten kunnen deze worden aangepast in een volgende versie van de zib. \r\n**Uitgangspunten vanuit de TNM standaard**\r\n\r\n* Eén TNM-classificatie per orgaan, maar in geval van gepaarde organen is er één classificatie per zijde. Bijvoorbeeld bij borstkanker met in iedere borst een primaire tumor zijn er dan dus ook twee instantiaties van de zib, waarbij de ene lateraliteit links en de andere lateraliteit rechts heeft (beiderzijds is niet toegestaan bij gepaarde organen).\r\n* Niet alleen de uitkomst van de TNM, maar ook de exacte lokalisatie van de primaire tumor(en), positieve lymfeklieren en metastasen kan worden aangeduid.\r\n* In het geval van meerdere primaire tumoren in één orgaan, moet de tumor met de hoogste T-categorie worden geclassificeerd en moet de veelvoud of het aantal tumoren tussen haakjes worden vermeld, bijvoorbeeld T2 (m) of T2 (5).De afwijking met de hoogste T-categorie bepaalt de classificatie van de tumor. Om het onderscheid hierin te maken en alle afwijkingen te kunnen weergeven bestaat de container ‘afwijking’ in de zib. Elke afwijking heeft een nummer. Welke afwijking (b.v. 1, 2 of 4) de hoogste t-categorie heeft wordt niet in de zib aangegeven. Dit is logische want dit is pas duidelijk na de inschatting van de zorgverlener o.b.v. de pathologie dan wel beeldvorming.\r\n\r\n\r\n**Gebruikte versie van de ****UICC (**[http://www.uicc.org/resources/tnm](http://www.uicc.org/resources/tnm)**) ****/ ****AJCC (**[http://cancerstaging.org/references-tools/deskreferences/Pages/default.aspx](http://cancerstaging.org/references-tools/deskreferences/Pages/default.aspx)** )**** TNM Classification of Malignant Tumours.**\r\n\r\n* Hoewel er geen verschillen in definities en verwoordingen tussen AJCC en UICC TNM classificaties zouden mogen voorkomen zijn er helaas wel enkele verschillen ingeslopen (bijvoorbeeld bij de definitie van regionale lymfeklieren bij slokdarm- en endometriumcarcinomen). Daarom kan in deze zib gekozen worden tussen de UICC en AJCC versie. Criteria die in het TNM-classificatiesysteem worden gebruikt, zijn in de loop van de jaren veranderd en er zijn verschillende edities uitgebracht. Als gevolg hiervan kan een bepaalde stagering een heel andere prognose hebben, afhankelijk van welke editie wordt gebruikt. Verder is een belangrijke overweging het effect van een verbeterde behandeling in de tijd\r\n* Naast de stagering via UICC of AJCC classificaties is er ook ‘Essential TNM’. Dit is een versimpelde vorm van TNM die is gemaakt voor het weergeven van het voorkomen van kanker in lage lonen landen. In deze landen zijn vaak de middelen voor vroege diagnose niet aanwezig en het gebruik van TNM beperkt (kanker wordt in de regel in deze landen pas in een zeer laat stadium ontdekt). Deze speciale TNM is niet meegenomen in de uitwerking van deze zib. Overigens wordt deze speciale TNM meestal alleen gebruikt voor het kunnen betrekken van deze landen in de statistiek over het voorkomen van bepaalde kankers in deze landen.\r\n\r\n\r\n**Prefix en suffix zijn geïntegreerd in codelijsten.**\r\nAlhoewel het mogelijk zou zijn om voor de mogelijke voor en achtervoegsels op zowel de T, N en M losse codelijsten te maken is voor het eenvoudig toepassen ervan gekozen om deze te integreren in de codelijsten. Dit is besloten omdat de huidige inzichten zijn dat hiermee het maken van verkeerde combinaties wordt voorkomen \r\n**Prefix **\r\n\r\n* **c: **Klinische classificatie, gebaseerd op gegevens vóór behandeling, zoals klinisch onderzoek, beeldvorming, endoscopie, biopten, chirurgische exploratie of onderzoek onder narcose, en andere onderzoeken.\r\n* **yc:** Classificatie uitgevoerd tijdens of na een initiële multimodaliteitsbehandeling (zijnde niet- chirurgisch).\r\n* **p:** De post-chirurgische histologische pathologische classificatie. Dit is gebaseerd op de gegevens van voor de behandeling, aangevuld met pathologisch onderzoek na een heelkundige behandeling.\r\n* **yp:** Classificatie uitgevoerd tijdens of na een initiële multimodaliteitsbehandeling (waaronder ook chirurgische behandeling).\r\n* **rc:** Klinische classificatie in geval van een recidiverende tumor (na een ziektevrij interval).\r\n* **rp:** Post-operatieve pathologische classificatie in geval van een recidiverende tumor (na een ziektevrij interval).\r\n* **a:** Classificatie vastgesteld tijdens autopsie\r\n\r\n\r\n**Suffix**\r\n\r\n* (mi): Gevallen met alleen micrometastase\r\n* (sn): Gevallen waarbij schildwachtklier onderzoek heeft plaatsgevonden.\r\n* (f): Gevallen waarbij FNA of biopsie heeft plaatsgevonden op de regionale lymfeklieren\r\n* (i-): negatieve morfologische bevindingen voor geïsoleerde tumorcellen\r\n* (i+): positieve morfologische bevindingen voor geïsoleerde tumorcellen\r\n* (mol-): negatieve niet-morfologische bevindingen voor geïsoleerde tumorcellen\r\n* (mol+): positieve niet- morfologische bevindingen voor geïsoleerde tumorcellen\r\n* (0): zonder verhoogd lactaatdehydrogenase (LDH)\r\n* (1): met verhoogd lactaatdehydrogenase (LDH)\r\n\r\n\r\n\r\n#### Patient Population\r\nVolwassen patiënten met een solide tumor waarop een TNM-classificatie kan worden toegepast.\r\n**Issues**\r\nBruikbaarheid van deze zib als ook de ziekte specifieke codelijsten worden gemaakt in de eerste proeftuin(en), gepland in de zomer van 2020. Gedurende dit project zal IKNL het beheer voor deze codelijsten verzorgen. Wanneer deze proeftuin(en) zijn afgerond worden de bevindingen meegenomen als wijzigingsverzoeken in het reguliere beheerproces van het zib centrum.\r\n**References**\r\n\r\n1. TNM Classification of Malignant Tumours, 8th Edition - James D. Brierley (Editor), Mary K. Gospodarowicz (Editor), Christian Wittekind (Editor)- International Union Against Cancer (UICC)- ISBN: 9781119263562 (epub)\r\n1. https://www.uicc.org/resources/tnm [ONLINE geraadpleegd: 04 mei 2020]\r\n1. International Classification of diseases for oncology (ICD-O) – 3rd edition, 1st revision – April Frits, Constance Percy, Andrew Jack, Kanagaratnam Shanmugaratnam, Leslie Sobin, D Max Parkin, Sharon Whelan – World Health Organisation – WHO library cataloguing – ISBN 978 92 4 069212 1 (PDF)\r\n\r\n\r\n",
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/TNMTumorClassification",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "TnmtumorClassification",
+        "path": "TnmtumorClassification",
+        "short": "TNMTumorClassification",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TNMTumorClassificatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the TNMTumorClassification information model.This root concept contains all data elements of the TNMTumorClassification information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen TNMTumorClassificatie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen TNMTumorClassificatie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "TnmtumorClassification.PrimaryTumor",
+        "path": "TnmtumorClassification.PrimaryTumor",
+        "short": "PrimaryTumor",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "PrimaireTumor"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the PrimaryTumor concept.This container contains all data elements of the PrimaryTumor concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept PrimaireTumor. Deze container bevat alle gegevenselementen van het concept PrimaireTumor."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "TnmtumorClassification.PrimaryTumor.MNumberOfPrimaryTumors",
+        "path": "TnmtumorClassification.PrimaryTumor.MNumberOfPrimaryTumors",
+        "short": "m_NumberOfPrimaryTumors",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "m_AantalPrimaireTumoren"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "-",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "m-NumberOfPrimaryTumors codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/m_AantalPrimaireTumoren"
+        }
+      },
+      {
+        "id": "TnmtumorClassification.PrimaryTumor.TPrimaryTumor",
+        "path": "TnmtumorClassification.PrimaryTumor.TPrimaryTumor",
+        "short": "T_PrimaryTumor",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "T_PrimaireTumor"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Staging result of the size extension of the primary tumor, the T-category of the TNM classification including the prefix and suffix.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Uitkomst van stadiëring van de omvang van de primaire tumor, de T-categorie inclusief prefix en suffix."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "TnmtumorClassification.PrimaryTumor.Abnormality",
+        "path": "TnmtumorClassification.PrimaryTumor.Abnormality",
+        "short": "Abnormality",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Afwijking"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the Abnormality concept.This container contains all data elements of the Abnormality concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept Afwijking. Deze container bevat alle gegevenselementen van het concept Afwijking."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "TnmtumorClassification.PrimaryTumor.Abnormality.AbnormalityNumber",
+        "path": "TnmtumorClassification.PrimaryTumor.Abnormality.AbnormalityNumber",
+        "short": "AbnormalityNumber",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AfwijkingNummer"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The number assigned to the abnormality, which is necessary in order to be able to clearly indicate to which abnormality the information relates in various examinations.\r\nIn the case of multiple primary tumors in one organ, the tumor with the highest T category should be classified.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het aan de afwijking toegewezen nummer, noodzakelijk om bij verschillende onderzoeken eenduidig aan te kunnen geven op welke afwijking de informatie betrekking heeft .\r\nBij meerdere afwijkingen in één orgaan wordt de afwijking met de hoogste T-categorie geclassificeerd."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "TnmtumorClassification.PrimaryTumor.Abnormality.Morphology",
+        "path": "TnmtumorClassification.PrimaryTumor.Abnormality.Morphology",
+        "short": "Morphology",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Morfologie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Behavior of a tumor and cell type expressed in ICD-O-3 morphological or histology code. Describes the cell type (or histology) of the tumor, together with the behavior (malignant or benign). This is determined by a pathologist.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gedrag van de tumor en het celtype van de tumor uitgedrukt in de ICD-O-3 morfologie code. Beschrijft het celtype of histologie van de tumor als ook het gedrag van die cel (maligne of benigne). \r\nDeze wordt door een patholoog bepaald."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "Morphology codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/Morfologie"
+        }
+      },
+      {
+        "id": "TnmtumorClassification.PrimaryTumor.Abnormality.GHistopathologicalGrading",
+        "path": "TnmtumorClassification.PrimaryTumor.Abnormality.GHistopathologicalGrading",
+        "short": "G_HistopathologicalGrading",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "G_DifferentiatiegraadTumor"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Staging result of the histopathological grading, the G-category of theTNM classification. The differentiation grade of a tumor is determined by a pathologist.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Uitkomst van stadiëring van de G-categorie, de differentiatiegraad van de tumor, die door een patholoog wordt bepaald."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "G-HistopathologicalGrading codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/G_DifferentiatiegraadTumor"
+        }
+      },
+      {
+        "id": "TnmtumorClassification.PrimaryTumor.Abnormality.TumorLocalization",
+        "path": "TnmtumorClassification.PrimaryTumor.Abnormality.TumorLocalization",
+        "short": "TumorLocalization",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TumorLokalisatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the TumorLocalization concept.This container contains all data elements of the TumorLocalization concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept TumorLokalisatie. Deze container bevat alle gegevenselementen van het concept TumorLokalisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "TnmtumorClassification.RegionalLymphnodes",
+        "path": "TnmtumorClassification.RegionalLymphnodes",
+        "short": "RegionalLymphnodes",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "RegionaleLymfeklieren"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the RegionalLymphnodes concept.This container contains all data elements of the RegionalLymphnodes concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept RegionaleLymfeklieren. Deze container bevat alle gegevenselementen van het concept RegionaleLymfeklieren."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "TnmtumorClassification.RegionalLymphnodes.NRegionalLymphnodes",
+        "path": "TnmtumorClassification.RegionalLymphnodes.NRegionalLymphnodes",
+        "short": "N_RegionalLymphnodes",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "N_RegionaleLymfeklieren"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Staging result of the presence or absence of regional lymph nodes metastasis, the N-category of the TNM classification.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Uitkomst van stadiëring van de aan- of afwezigheid en omvang regionale lymfekliermetastase, de N-categorie van de TNM classificatie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "TnmtumorClassification.RegionalLymphnodes.RegionalLymphNodesLocalization",
+        "path": "TnmtumorClassification.RegionalLymphnodes.RegionalLymphNodesLocalization",
+        "short": "RegionalLymphNodesLocalization",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "RegionaleLymfeklierenLocalisatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the RegionalLymphNodesLocalization concept.This container contains all data elements of the RegionalLymphNodesLocalization concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept RegionaleLymfeklierenLocalisatie. Deze container bevat alle gegevenselementen van het concept RegionaleLymfeklierenLocalisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "TnmtumorClassification.DistantMetastasis",
+        "path": "TnmtumorClassification.DistantMetastasis",
+        "short": "DistantMetastasis",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AfstandsMetastasen"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the DistantMetastasis concept.This container contains all data elements of the DistantMetastasis concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept AfstandsMetastasen. Deze container bevat alle gegevenselementen van het concept AfstandsMetastasen."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "TnmtumorClassification.DistantMetastasis.MDistantMetastasis",
+        "path": "TnmtumorClassification.DistantMetastasis.MDistantMetastasis",
+        "short": "M_DistantMetastasis",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "M_AfstandsMetastasen"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Staging result of the presence or absence of distant metastasis, the M-category of the TNM classification.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Uitkomst van stadiëring van de aan- of afwezigheid van metastasen op afstand, de M-categorie van de TNM classificatie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "TnmtumorClassification.DistantMetastasis.DistantMetastasisLocalization",
+        "path": "TnmtumorClassification.DistantMetastasis.DistantMetastasisLocalization",
+        "short": "DistantMetastasisLocalization",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AfstandsMetastasenLocalisatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Container of the DistantMetastasisLocalization concept.This container contains all data elements of the DistantMetastasisLocalization concept.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Container van het concept AfstandsMetastasenLocalisatie. Deze container bevat alle gegevenselementen van het concept AfstandsMetastasenLocalisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "TnmtumorClassification.DateOfTnmclassification",
+        "path": "TnmtumorClassification.DateOfTnmclassification",
+        "short": "DateOfTNMClassification",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DatumTNMClassificatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date at which the TNM Classification (the value) has been assigned.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum waarop de TNM-Classificatie (de waarde) is vastgesteld."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "TnmtumorClassification.Tnmversion",
+        "path": "TnmtumorClassification.Tnmversion",
+        "short": "TNMVersion",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TNMVersie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "TNM classification version (AJCC or UICC) and edition used (7th, 8th etc.).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "TNM-classificatie versie (AJCC of UICC) en de gebruikte editie (7e, 8e etc.)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "TNMVersion codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/TNMVersie"
+        }
+      },
+      {
+        "id": "TnmtumorClassification.IntegratedTnmvalue",
+        "path": "TnmtumorClassification.IntegratedTnmvalue",
+        "short": "IntegratedTNMValue",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GeintegreerdeTNMWaarde"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The assigned TNM classification (the value), based on each T, N and M category (optional incl. multiple primary tumors (m) and/or the localization of M).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De vastgestelde TNM-classificatie (de waarde), op basis van elke T-, N- en M-categorie (evt. incl. het aantal primaire tumoren (m) en/of de lokalisatie van M)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "TnmtumorClassification.Explanation",
+        "path": "TnmtumorClassification.Explanation",
+        "short": "Explanation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Remark regarding interpretation of the integrated TNM value as is classified.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting met betrekking tot de interpretatie van de geïntegreerde TNM waarde zoals deze is geclassificeerd."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "TnmtumorClassification.TlLymphaticInvasion",
+        "path": "TnmtumorClassification.TlLymphaticInvasion",
+        "short": "TL_LymphaticInvasion",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "L_LymfatischeInvasie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Presence or absence of tissue invasion absence of lymphatic invasion, the L-category. It concerns an additional description within the TNM classification that is determined by a pathologist.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De aan- of afwezigheid van lymfatische invasie, de L-categorie. Het betreft een additionele beschrijving binnen de TNM-classificatie die door een patholoog wordt bepaald."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "TL-LymphaticInvasion codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/L_LymfatischeInvasie"
+        }
+      },
+      {
+        "id": "TnmtumorClassification.PnPerineuralInvasion",
+        "path": "TnmtumorClassification.PnPerineuralInvasion",
+        "short": "Pn_PerineuralInvasion",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Pn_PerineuraleInvasie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Presence or absence of perineural invasion, the Pn-category. It concerns an additional description within the TNM classification that is determined by a pathologist.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De aan- of afwezigheid van perineurale invasie, de Pn-categorie. Het betreft een additionele beschrijving binnen de TNM-classificatie die door een patholoog wordt bepaald."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "Pn-PerineuralInvasion codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/Pn_PerineuraleInvasie"
+        }
+      },
+      {
+        "id": "TnmtumorClassification.VVenousInvasion",
+        "path": "TnmtumorClassification.VVenousInvasion",
+        "short": "V_VenousInvasion",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "V_VeneuzeInvasie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Presence or absence of venous invasion, the V-category. It concerns an additional description within the TNM classification that is determined by a pathologist.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De aan- of afwezigheid van veneuze invasie, de V-categorie. Het betreft een additionele beschrijving binnen de TNM-classificatie die door een patholoog wordt bepaald."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "V-VenousInvasion codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/V_VeneuzeInvasie"
+        }
+      },
+      {
+        "id": "TnmtumorClassification.AnatomicalStage",
+        "path": "TnmtumorClassification.AnatomicalStage",
+        "short": "AnatomicalStage",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AnatomischStadium"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The stage of the disease is the grouping based on the anatomical extent of the disease.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het stadium van de ziekte is de groepering op basis van de anatomische uitbreiding en verspreiding van de ziekte (de T, N en M categorieën)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "AnatomicalStage codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/AnatomischStadium"
+        }
+      },
+      {
+        "id": "TnmtumorClassification.PrognosticStage",
+        "path": "TnmtumorClassification.PrognosticStage",
+        "short": "PrognosticStage",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "PrognostischStadium"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The Prognostic Stage group of the disease. Next to the anatomic extent of the disease additional prognostic factors are included in the grouping.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het prognostisch stadium van de ziekte. Hierin wordt in de groepering naast de anatomische uitbreiding en verspreiding van de ziekte ook additionele prognostische factoren meegenomen."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "PrognosticStage codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/PrognostischStadium"
+        }
+      },
+      {
+        "id": "TnmtumorClassification.RResidualTumor",
+        "path": "TnmtumorClassification.RResidualTumor",
+        "short": "R_ResidualTumor",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "R_ResidueleTumor"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Presence or absence of Residual Tumor after treatment, the R-category.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De aan- of afwezigheid van residuele tumor na behandeling, de R-categorie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "R-ResidualTumor codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/R_ResidueleTumor"
+        }
+      }
+    ]
+  }
+}

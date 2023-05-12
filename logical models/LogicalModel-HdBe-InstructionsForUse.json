@@ -1,0 +1,1701 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-InstructionsForUse",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-InstructionsForUse",
+  "name": "HdBeInstructionsForUse",
+  "_name": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeGebruiksInstructie"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeInstructionsDUtilisation"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "title": "HdBe InstructionsForUse",
+  "_title": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe GebruiksInstructie"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBe InstructionsDUtilisation"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.259205+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Instructions for the use or administration of the medication, e.g. dose and route of administration. In the event of medication use, this is the pattern of use established by the patient or which the patient followed. \r\nThis is a partial information model.\r\n#### Purpose\r\nInstructionsForUse gives an insight into the manner a drug is to be used.\r\n\r\n\r\n#### Instructions\r\nAsNeeded dosage:\r\nUsing the term 'as needed' or a specific reason (e.g. 'in case of pain') to use medication leads to ambiguity. It is not always clear whether the whole dose is 'as needed' or only part of the dose. For example: 1x daily 1-2 tablets as needed. This can mean: 1 tablet fixed per day and 1 tablet as needed or, as needed, a maximum of 2 tablets. As needed medication is not included in GDS. In the first situation, 1 tablet comes in the GDS (drug dispensing systems) and 1 tablet is delivered separately. In the second situation there is only separate delivery. The system must make sufficiently clear whether the entire instruction or part of the dose is necessary. The CBB supports both options described above.",
+  "_description": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-NL"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Aanwijzingen voor het gebruik of toediening van de medicatie, bijvoorbeeld dosering en toedieningsweg. Bij medicatiegebruik is dit het gebruikspatroon dat de patiënt heeft gevolgd of met zichzelf heeft afgesproken. &#13;\nDit is een subbouwsteen&#13;\n#### Purpose&#13;\nGebruiksinstructie geeft inzicht in de wijze waarop een geneesmiddel gebruikt dient te worden.&#13;\n&#13;\n&#13;\n#### Instructions&#13;\nZonodig dosering:&#13;\nHet gebruiken van de term ‘zo nodig’ of een specifieke reden (bijv. ‘bij pijn’) om medicatie in te nemen leidt tot onduidelijkheid. Er is niet altijd duidelijk of de hele dosering ‘zo nodig’ is of alleen een deel van de dosering. Bijvoorbeeld: 1x daags 1-2 tabletten zo nodig. Dit kan betekenen: per dag 1 tablet vast en 1 tablet zo nodig of zo nodig maximaal 2 tabletten. Zo nodig medicatie wordt niet opgenomen in GDS. In de eerste situatie komt er 1 tablet in de GDS en wordt er 1 tablet los geleverd. In de tweede situatie is er alleen losse levering. Het systeem dient voldoende duidelijk te maken of de gehele instructie of een deel van de dosering zo nodig is. De CBB ondersteunt beide hierboven beschreven opties."
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      },
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "fr-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Instructions relatives à l'utilisation ou à l'administration de la médication, par ex. la dose et la voie d'administration. En cas d'utilisation de médicaments, il s'agit du mode d'utilisation établi par le patient ou suivi par le patient. \nIl s'agit d'un modèle d'information partiel.\n##### Purpose\nInstructionsDUtilisation donne des informations sur la manière dont un médicament doit être utilisé.\n\n\n#### Instructions\nDosage SelonBesoins :L'utilisation du terme ‘selon les besoins’ ou d'une raison spécifique (par ex. ‘en cas de douleur’) pour utiliser un médicament est source d'ambiguïté. Il n'est pas toujours clair de déterminer si la dose entière est ‘selon les besoins’ ou seulement une partie de la dose. Par exemple : 1 à 2 comprimés 1x par jour selon les besoins. Cela peut signifier : 1 comprimé fixe par jour et 1 comprimé au besoin, ou, selon les besoins, un maximum de 2 comprimés. La médication selon les besoins n'est pas comprise dans le GDS. Dans la première situation, 1 comprimé se retrouve dans le GDS (systèmes de distribution de médicaments) et 1 comprimé est délivré séparément. Dans la seconde situation, il n'y a qu'une délivrance séparée. Le système doit rendre suffisamment clairement si l'instruction complète, ou une partie de la dose, est nécessaire. Le CBB prend en charge les deux options décrites ci-dessus."
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/InstructionsForUse",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "InstructionsForUse",
+        "path": "InstructionsForUse",
+        "short": "InstructionsForUse",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GebruiksInstructie"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "InstructionsDUtilisation"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Root concept of the InstructionsForUse partial information model. This root concept contains all data elements of the InstructionsForUse partial information model.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de sub-bouwsteen GebruiksInstructie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen GebruiksInstructie."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Concept root du modèle d'information partiel InstructionsDUtilisation. Ce concept root contient tous les éléments de données du modèle d'information partiel InstructionsDUtilisation."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "InstructionsForUse.AdditionalInstructions",
+        "path": "InstructionsForUse.AdditionalInstructions",
+        "short": "AdditionalInstructions",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "AanvullendeInstructie"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "InstructionsSupplémentaires"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The additional instructions contain extra information on the use of the current prescription. \r\n\r\nThis includes all instructions for use. The text can come from the original “paper\" medication prescription, but can also be generated from the coded information. \r\n\r\nThis concept may contain more information than what is structurally coded in the information below, but may not conflict with it. \r\nThe instructions may not conflict with other components of the request for administration. \r\nThe instructions can also refer to an existing protocol.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De aanvullende instructie bevat een aanvullend uitleg over het gebruik. &#13;\n Het gaat hier om alle aanwijzingen voor gebruik. De tekst kan afkomstig zijn van het oorspronkelijke \"papieren\" medicatievoorschrift, maar kan ook gegenereerd worden uit de gecodeerde gegevens. &#13;\n Dit concept mag meer informatie bevatten dan gestructureerd gecodeerd is in de onderliggende informatie, maar mag er niet mee in tegenspraak zijn. &#13;\n De instructies mogen niet conflicteren met andere onderdelen van het toedieningsverzoek. &#13;\n De instructies kunnen ook verwijzen naar een bestaand protocol."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Les instructions supplémentaires contiennent des explications complémentaires sur l'utilisation de la prescription actuelle. \n\nCeci inclut toutes les instructions d'utilisation. Le texte peut provenir de la prescription de médicament « papier » initiale, mais peut également être généré à partir des informations codées. \n\nCe concept peut contenir davantage d'informations que ce qui est structurellement codé dans les informations sous-jacentes, mais ne peut pas entrer en conflit avec elles. \nLes instructions ne peuvent pas entrer en conflit avec d'autres composants de la demande d'administration. \nLes instructions peuvent également faire référence à un protocole existant."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "InstructionsForUse.Description",
+        "path": "InstructionsForUse.Description",
+        "short": "Description",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Omschrijving"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Description"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Textual description of the complete instructions for use including the period of use.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele omschrijving van de volledige gebruiksinstructie inclusief de gebruiksperiode."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Description textuelle des instructions d'utilisation complètes, y compris la période d'utilisation."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "InstructionsForUse.RepeatPeriodCyclicalSchedule",
+        "path": "InstructionsForUse.RepeatPeriodCyclicalSchedule",
+        "short": "RepeatPeriodCyclicalSchedule",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "HerhaalperiodeCyclischSchema"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SchémaCycliquePériodeRépétition"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The repeated period in a cyclical schedule (of one or more dosing instructions). A cyclic schedule is noted in days, the corresponding dosing duration is also in days.\r\n\r\nExamples of a cyclical schedule: \r\ncontraceptive pill (21 days, 1 pill 1x a day, then skip for 7 days, repeat), repeat period here is 28 days",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De herhaalperiode van een cyclisch schema (van één of meer doseerinstructies). Een cyclisch schema wordt weergegeven in dagen, de bijbehorende doseerduur is daarbij ook in dagen.&#13;\n&#13;\nVoorbeelden van een cyclisch schema:&#13;\nde anticonceptiepil (21 dagen 1 maal per dag 1 stuk, dan 7 dagen niet, dit herhalen), de herhaalperiode is hier 28 d"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La période de répétition d'un schéma cyclique (d'une ou de plusieurs instructions de dosage). Un schéma cyclique est consigné en jours, la durée de dosage correspondante est également exprimée en jours.\n\nExemples de schéma cyclique : \npilule contraceptive (21 jours, 1 pilule 1x par jour, puis passer pendant 7 jours, répéter), la période de répétition est ici de 28 jours"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "InstructionsForUse.RouteOfAdministration",
+        "path": "InstructionsForUse.RouteOfAdministration",
+        "short": "RouteOfAdministration",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toedieningsweg"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "VoieDAdministration"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The route through which the medication is administered (oral, nasal, intravenous, etc.).",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De route waarlangs de medicatie wordt toegediend (oraal, nasaal, intraveneus, et cetera)."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La voie par laquelle le médicament est administré (voie orale, nasale, intraveineuse, etc.)."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "RouteOfAdministration codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes VoieDAdministration"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
+          "valueSet": "https://fhir.healthdata.be/ValueSet/RouteOfMedicationAdministration"
+        }
+      },
+      {
+        "id": "InstructionsForUse.DosingInstructions",
+        "path": "InstructionsForUse.DosingInstructions",
+        "short": "DosingInstructions",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Doseerinstructie"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "InstructionsDosage"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Dosing instructions",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Doseerinstructie"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Instructions de dosage"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "InstructionsForUse.DosingInstructions.DoseDuration",
+        "path": "InstructionsForUse.DosingInstructions.DoseDuration",
+        "short": "DoseDuration",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Doseerduur"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DuréeDosage"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The intended time duration for these dosing instructions, *e.g*. 5 days or 8 weeks. \r\nIn the case of medication for an indefinite period, the dosing duration is left empty in the last dosing instruction.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De beoogde tijdsduur voor deze doseerinstructie, bijvoorbeeld 5 dagen of 8 weken.&#13;\nBij medicatie voor onbepaalde duur wordt in de laatste doseerinstructie de doseerduur leeg gelaten."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La durée prévue pour ces instructions de dosage, *par ex.* 5 jours ou 8 semaines. \nDans le cas d'une médication prévue pour une période indéterminée, la durée de dosage est laissée vide dans la dernière instruction de dosage."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "InstructionsForUse.DosingInstructions.SequenceNumber",
+        "path": "InstructionsForUse.DosingInstructions.SequenceNumber",
+        "short": "SequenceNumber",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Volgnummer"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "NuméroSéquence"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "This indicates the sequence of the dosing instructions within the medication agreement.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Deze geeft de volgorde van de doseerinstructies aan binnen de medicatieafspraak."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Ceci indique la séquence des instructions de dosage dans la convention de médication."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ]
+      },
+      {
+        "id": "InstructionsForUse.DosingInstructions.Dosage",
+        "path": "InstructionsForUse.DosingInstructions.Dosage",
+        "short": "Dosage",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dosering"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dosage"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Container of the Dosage concept. This container contains all data elements of the Dosage concept. \r\n\r\nInstructions for the administrator to administer the medication (the patient themselves, a nurse or other aid). When taking stock of medication use, the dosage describes the pattern of use established by the patient. \r\n\r\nOnce the dose schedule (distribution of doses over time) and the dose have been determined, then there should be one single instruction for use. \r\n\r\nMultiple *parallel* instructions for use can be included in the event of a changing dose within one day and in the event of a variable use frequency. \r\n\r\nMultiple *sequential* instructions for use can be included in the event of changing doses within one period and/or in the event of a changing dose schedule.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De container van het concept Dosering. Deze container bevat alle gegevenselementen van de concept Dosering.&#13;\n&#13;\nInstructies voor toediening van de medicatie aan de toediener (de patiënt zelf, een verpleegkundige of andere hulpverlener). Bij inventarisatie van medicatiegebruik beschrijft de dosering het gebruikspatroon dat de patiënt met zichzelf heeft afgesproken.&#13;\n&#13;\nAls het doseerschema (spreiding van toedieningen over de tijd) vast is en de keerdosis ook, dan is er een enkele gebruiksinstructie.&#13;\n&#13;\nEr kunnen meerdere *parallelle* gebruiksinstructies opgenomen worden bij een wisselende doseerhoeveelheid binnen de dag en bij een variabele gebruiksfrequentie.&#13;\n&#13;\nEr kunnen meerdere *sequentiële* gebruiksinstructies opgenomen worden bij wisselende doseerhoeveelheden binnen de periode en/of een wisselend doseerschema."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Conteneur du concept Dosage. Ce conteneur contient tous les éléments de données du concept Dosage. \n\nInstructions pour l'administration de la médication à l'administrateur (le patient lui-même, une infirmière ou une autre aide). Lors de l'inventaire de l'utilisation des médicaments, le dosage décrit le modèle d'utilisation établi par le patient. \n\nUne fois que le schéma de dosage (distribution des doses dans le temps) et que la dose ont été déterminés, il doit y avoir une seule instruction d'utilisation. \n\nDes instructions d'utilisation *parallèles* multiples peuvent être incluses en cas de changement de dosage au cours de la journée et en cas de fréquence d'utilisation variable. \n\nDes instructions d'utilisation *séquentielles* multiples peuvent être incluses en cas de changement de dosage au cours d'une période et/ou en cas de changement de schéma de dosage."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "InstructionsForUse.DosingInstructions.Dosage.AdministeringSpeed",
+        "path": "InstructionsForUse.DosingInstructions.Dosage.AdministeringSpeed",
+        "short": "AdministeringSpeed",
+        "definition": "The administering speed is used in slow administration of liquid. In practice, the measuring unit is almost always ml/hour. \r\nEntering an interval (such as 0-10 ml/hour) is also a commonly used option. \r\n\r\nFor example, with an administering speed of 10ml/hour: \r\n\r\n* amount = 10, \r\n* dose unit = ml, \r\n* time unit = hour",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Range",
+            "profile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Range"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "InstructionsForUse.DosingInstructions.Dosage.DurationOfAdministration",
+        "path": "InstructionsForUse.DosingInstructions.Dosage.DurationOfAdministration",
+        "short": "DurationOfAdministration",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toedieningsduur"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DuréeDAdministration"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The duration of administration defines the length of time during which the drug is administered and is mainly used in the slow parenteral administration of fluids.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De toedieningsduur definieert de tijdsduur gedurende welke het medicijn wordt toegediend enwordt voornamelijk gebruikt bij de langzame parenterale toediening van vloeistoffen."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La durée d'administration définit la période de temps pendant laquelle le médicament est administré et est principalement utilisée dans l'administration parentérale lente de liquides."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Range",
+            "profile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-TimeInterval"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "InstructionsForUse.DosingInstructions.Dosage.Dose",
+        "path": "InstructionsForUse.DosingInstructions.Dosage.Dose",
+        "short": "Dose",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Keerdosis"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dose"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The dose indicates the amount/unit per administration. The unit can be any unit that can occur with this particular medicine.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De keerdosis bevat de hoeveelheid/eenheid die per gift wordt gegeven. De eenheid kan elke eenheid zijn die bij het geneesmiddel kan voorkomen."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La dose indique la quantité/unité par administration. L'unité peut être toute unité qui peut se présenter avec ce médicament particulier."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Range",
+            "profile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Range"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "InstructionsForUse.DosingInstructions.Dosage.AsNeeded",
+        "path": "InstructionsForUse.DosingInstructions.Dosage.AsNeeded",
+        "short": "AsNeeded",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Zonodig"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SelonBesoins"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "As needed means that the dose is only to be administered under certain conditions.\r\nSee also the Instructions section for more information about use of the element.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Zo nodig betekent dat de toediening alleen onder een bepaalde voorwaarde wordt uitgevoerd.&#13;\nZie ook de sectie Instructions voor meer informatie over het gebruik."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Selon les besoins signifie que la dose ne doit être administrée que dans certaines conditions.Voir également la section instructions pour plus d'informations sur l'utilisation de l'élément."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "InstructionsForUse.DosingInstructions.Dosage.AsNeeded.Condition",
+        "path": "InstructionsForUse.DosingInstructions.Dosage.AsNeeded.Condition",
+        "short": "Condition",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Criterium"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Condition"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The condition for administering medication can be: \r\n\r\n* a physiological measurement value (plasma glucose concentration, body temperature, blood pressure);\r\n* a symptom or other circumstance (in the event of a headache, or itch).\r\n\r\nPhysiological measurement values or other conditions do not need to be coded. These can be expressed in free text in the Description concept.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De voorwaarde voor het toedienen van een medicament kan zijn:&#13;\n&#13;\n* een fysiologische meetwaarde (plasma glucose concentratie, lichaamstemperatuur, bloeddruk);&#13;\n* een symptoom of andere omstandigheid (bij hoofdpijn, bij jeuk).&#13;\n&#13;\n&#13;\nFysiologische meetwaarden of andere voorwaarde hoeven niet gecodeerd te worden. Deze kunnen uitgedrukt worden in vrije tekst in het concept omschrijving."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La condition d'administration de médicaments peut être : \n\n* une valeur de mesure physiologique (concentration de glucose plasmatique, température corporelle, tension artérielle) ;\n* un symptôme ou une autre circonstance (en cas de maux de tête ou de démangeaisons).\n\nIl n'est pas nécessaire de coder les valeurs de mesure physiologiques ou d'autres conditions. Elles peuvent être exprimées en texte libre dans le concept Description."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Condition codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes Condition"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
+          "valueSet": "https://fhir.healthdata.be/ValueSet/AsNeededCriterium"
+        }
+      },
+      {
+        "id": "InstructionsForUse.DosingInstructions.Dosage.AsNeeded.MaximumDose",
+        "path": "InstructionsForUse.DosingInstructions.Dosage.AsNeeded.MaximumDose",
+        "short": "MaximumDose",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MaximaleDosering"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "DoseMaximale"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "A maximum dose indicates the maximum duration a product can be used with an ‘as needed’ prescription.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een maximale dosering maximaliseert (in tijd) het gebruik van een middel in een 'zo nodig' voorschrift."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Une dose maximale indique la durée maximale pendant laquelle un produit peut être utilisé avec une prescription ‘selon les besoins’."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "InstructionsForUse.DosingInstructions.Dosage.AdministeringSchedule",
+        "path": "InstructionsForUse.DosingInstructions.Dosage.AdministeringSchedule",
+        "short": "AdministeringSchedule",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toedieningsschema"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "SchémaAdministration"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Specifications of the times at which the medication is to be administered. This is indicated as follows: \r\n\r\n* Time(s) (16:00) or indications (“before meals”) at which the medication is to be taken each day.\r\n* A specific number of times the medication is to be taken each day (\"3x a day\"), indicated with the frequency.\r\n* A time interval between consecutive doses (“Every 2 hours”, “every 3 days”), indicated with the word Interval.\r\n* Combined periods with an interval and duration (“1 daily for three out of four weeks: the pill schedule”)\r\n\r\n\r\n\r\nIf a certain medication is not to be taken daily, the aforementioned can be combined with daily indications: \r\n\r\n* One or more week days on which the medication is to be administered (e.g. “Monday, Wednesday, Friday”)\r\n* ”3x a week”, “2x a month”.\r\n\r\n\r\n\r\nThe specified administration “infinite” is automatically to be repeated until: \r\n\r\n* The end date and time has been reached\r\n* The total administration duration has been reached (14 days)\r\n* A specific amount of administrations has been reached (“20 doses”), to be entered in the Frequency concept.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De specificatie van de tijdsmomenten waarop het medicament toegediend wordt of zal worden. De wijze waarop dit wordt weergegeven is:&#13;\n&#13;\n* Tijdstip(pen) (16:00) of gebeurtenissen (\"voor het eten\") waarop het medicament dagelijks ingenomen moet worden.&#13;\n* Een specifiek aantal keren dat het medicament dagelijks ingenomen moet worden (\"3x per dag\"), aangeduid met de frequentie&#13;\n* Een tijdsafstand tussen opeenvolgende innames (\"Elke 2 uur\", \"elke 3 dagen\"), aangeduid met Interval.&#13;\n* Combinaties van periodes met een interval en een duur (\"Gedurende drie van vier weken dagelijks 1 : het pilschema\")&#13;\n&#13;\n&#13;\n&#13;\nAls een medicament niet dagelijks ingenomen moet worden, kan het voorgaande gecombineerd worden met dagaanduidingen:&#13;\n&#13;\n* Een of meerdere weekdagen waarop de toediening moet plaatsvinden (\"maandag, woensdag, vrijdag\")&#13;\n* \"3 keer per week\", \"2 keer per maand\".&#13;\n&#13;\n&#13;\n&#13;\nStandaard zal de gespecificeerde toediening \"oneindig\" herhaald worden tot: &#13;\n&#13;\n* De einddatum en tijd bereikt is&#13;\n* De totale toedieningsduur bereikt is (gedurende 14 dagen)&#13;\n* Een specifiek aantal toedieningen bereikt is (\"20 giften), op te geven in het concept Frequentie."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Spécifications des moments auxquels le médicament doit être administré. L'indication se fait comme suit : \n\n* Heure(s) (16:00) ou événements (« avant les repas ») auxquels le médicament doit être pris chaque jour.* Un nombre spécifique de fois où le médicament doit être pris chaque jour (« 3x par jour »), indiqué avec la fréquence.* Un intervalle de temps entre doses consécutives (« toutes les 2 heures », « tous les 3 jours »), indiqué par le mot Intervalle.* Des périodes combinées avec un intervalle et une durée (« 1 par jour pendant trois semaines sur quatre : le schéma des pilules »)\n\n\n\nSi un certain médicament ne doit pas être pris quotidiennement, ce qui précède peut être combiné avec des indications quotidiennes : \n\n* Un ou plusieurs jours de la semaine où le médicament doit être administré (par ex. « lundi, mercredi, vendredi »)\n* « 3x par semaine », « 2x par mois ».\n\n\n\nL'administration spécifiée « infini » doit être automatiquement répétée jusqu'à ce que : \n\n* La date et l'heure de fin ont été atteintes\n* La durée totale d'administration a été atteinte (14 jours)\n* Un nombre spécifique d'administrations a été atteint (« 20 doses »), à saisir dans le concept de Fréquence."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "InstructionsForUse.DosingInstructions.Dosage.AdministeringSchedule.Frequency",
+        "path": "InstructionsForUse.DosingInstructions.Dosage.AdministeringSchedule.Frequency",
+        "short": "Frequency",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Frequentie"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Fréquence"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The frequency indicates the number of dose moments per time unit, usually per day. If this frequency is included, then the Interval will not have been included. Usually, frequency comprises both amount and time unit (3 times a day), but it can occur without the time unit (single use). \r\n\r\nIn that case, a reasonable distribution over the day is expected, but exact times are not given. This is left to the patient. It is the most common manner of extramural prescription. In the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics). \r\n\r\nThe time unit of the frequency must be the same as how it is indicated in the textual description of the dose. \r\n\r\nExample: \r\nfor a '2x a day...' dose: \r\n\r\n* amount = 2 \r\n\r\n* time unit = 'day'. \r\n\r\n\r\nfor a '3x a week...' dose: \r\n\r\n* amount = 3 \r\n\r\n* time unit = 'week'.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De frequentie geeft het aantal doseermomenten per tijdseenheid, meestal per dag. Als dit gegeven is opgenomen, dan zal het Interval niet zijn opgegeven. Meestal bestaat frequentie uit zowel aantal als tijdseenheid (3 maal per dag), maar het kan ook zonder tijdseenheid voorkomen (éénmalig).&#13;\n&#13;\nEr wordt dan een redelijke verdeling over de dag verwacht, maar dit komt niet heel precies en wordt aan de patiënt overgelaten. Het is de gebruikelijke manier van voorschrijven extramuraal. Bij baxteren en intramuraal wordt uit een dergelijk voorschrift daarna een (locatiegebonden) uitwerking gemaakt in uitdeeltijden (logistiek).&#13;\n&#13;\nDe tijdseenheid van de frequentie moet gelijk zijn aan hoe deze is weergegeven in de tekstuele weergave van de dosering. &#13;\n&#13;\nBijvoorbeeld: &#13;\nbij dosering '2 maal per dag...' geldt: &#13;\n&#13;\n* aantal = 2 &#13;\n&#13;\n* tijdseenheid = 'dag'. &#13;\n&#13;\n&#13;\nbij dosering '3 maal per week...' geldt: &#13;\n&#13;\n* aantal = 3 &#13;\n&#13;\n* tijdseenheid = 'week'."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "La fréquence indique le nombre de moments de dose par unité de temps, généralement par jour. Si cette fréquence est incluse, l'intervalle n'aura pas été stipulé. Généralement, la fréquence comprend à la fois la quantité et l'unité de temps (3 fois par jour), mais elle peut également se présenter sans l'unité de temps (utilisation unique). \n\nDans ce cas, une répartition raisonnable au cours de la journée est attendue, mais des heures exactes ne sont pas définies. C'est laissé à l'appréciation du patient. Il s'agit du mode de prescription le plus courant extramuros. Dans le cas de baxters et de soins intramuros, une telle prescription est utilisée pour établir un plan (spécifique à la localisation) pour les moments de distribution (logistique). \n\nL'unité de temps de la fréquence doit être la même que celle indiquée dans la description textuelle de la dose. \n\nExemple : \npour une dose ‘2x par jour...’ : \n\n* quantité = 2\n\n* unité de temps = ‘jour’. \n\n\npour une dose ‘3x par semaine...’ : \n\n* quantité = 3\n\n* unité de temps = ‘semaine’."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Range",
+            "profile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Range"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "InstructionsForUse.DosingInstructions.Dosage.AdministeringSchedule.WeekDay",
+        "path": "InstructionsForUse.DosingInstructions.Dosage.AdministeringSchedule.WeekDay",
+        "short": "WeekDay",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Weekdag"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "JourSemaine"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "WeekDay indicates a pattern of doses on fixed week days.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Weekdag definieert een patroon van toedieningen op vaste weekdagen."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "JourSemaine indique un modèle de doses sur des jours de la semaine fixes."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "WeekDay codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes JourSemaine"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
+          "valueSet": "https://fhir.healthdata.be/ValueSet/WeekDay"
+        }
+      },
+      {
+        "id": "InstructionsForUse.DosingInstructions.Dosage.AdministeringSchedule.TimeOfDay",
+        "path": "InstructionsForUse.DosingInstructions.Dosage.AdministeringSchedule.TimeOfDay",
+        "short": "TimeOfDay",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dagdeel"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MomentDeJournée"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Time of day: morning, afternoon, evening, night.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dagdeel: ochtend, middag, avond, nacht."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Moment de la journée : matin, après-midi, soir, nuit."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "TimeOfDay codes",
+          "_description": {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr-BE"
+                  },
+                  {
+                    "url": "content",
+                    "valueMarkdown": "Codes MomentDeJournée"
+                  }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+              }
+            ]
+          },
+          "valueSet": "https://fhir.healthdata.be/ValueSet/TimeOfDay"
+        }
+      },
+      {
+        "id": "InstructionsForUse.DosingInstructions.Dosage.AdministeringSchedule.AdministrationTime",
+        "path": "InstructionsForUse.DosingInstructions.Dosage.AdministeringSchedule.AdministrationTime",
+        "short": "AdministrationTime",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toedientijd"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "HeureAdministration"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The time of administration is a specific time of day (on the clock). This time usually isn’t (intended to be) exact. There can be multiple administering times in one day. \r\n\r\nThe ideal time of administration can also be entered as a time of day (morning, afternoon, evening, night-time). The administration time is then to be left empty, and the time of day can be entered in the TimeOfDay concept.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De toedientijd is een specifieke (klok)tijd op de dag. Deze tijd is meestal niet exact (bedoeld). Er kunnen meerdere inname tijdstippen op een dag zijn.&#13;\n&#13;\nDe beoogde toedientijd kan ook als dagdeel worden aangegeven (ochtend, middag, avond, nacht). De toedientijd blijft dan leeg, waarbij het dagdeel vastgelegd kan worden in het concept Dagdeel."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "L'heure d'administration est une heure spécifique de la journée. Cette heure n'est généralement pas (censée être) exacte. Il peut y avoir plusieurs heures d'administration sur une journée. \n\nL'heure d'administration idéale peut également être saisie sous la forme d'un moment de la journée (matin, après-midi, soir, nuit). L'heure d'administration doit alors être laissée vide, et le moment de la journée peut être saisi dans le concept MomentDeJournée."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "InstructionsForUse.DosingInstructions.Dosage.AdministeringSchedule.Interval",
+        "path": "InstructionsForUse.DosingInstructions.Dosage.AdministeringSchedule.Interval",
+        "short": "Interval",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Interval"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Intervalle"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Interval indicates the time between dose times. If this is included, then the *Frequency *will not have been included. \r\n\r\nExamples: every 4 hours, every 3 weeks. \r\n\r\nThe times can now be chosen freely, but distribution throughout the day is more precise, and the interval between times is important (e.g. in the case of antibiotics) \r\nIn the case of Baxter packs and intramural care, such a prescription is used to draw up a (location-specific) outline for distribution times (logistics).",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-NL"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het interval geeft de tijd tussen doseermomenten weer. Als dit gegeven is opgenomen, dan zal de *Frequentie *niet zijn opgegeven.&#13;\n&#13;\nVoorbeelden : elke 4 uur, om de 3 weken.&#13;\n&#13;\nDe tijdstippen kunnen nu vrij gekozen worden, maar de verdeling over de dag komt nauwer en het interval tussen de tijdstippen is belangrijk (bv. antibiotica)&#13;\nBij baxteren en intramuraal wordt uit een dergelijk voorschrift daarna een (locatiegebonden) uitwerking gemaakt in uitdeeltijden (logistiek)."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            },
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Intervalle indique le temps entre moments de dose. Si cet intervalle est inclus, alors la *Fréquence* n'aura pas été stipulée. \n\nExemples : toutes les 4 heures, toutes les 3 semaines. \n\nLes moments peuvent désormais être choisis librement, mais la distribution tout au long de la journée est plus précise, et l'intervalle entre les moments est important (par ex. dans le cas d'antibiotiques)\nDans le cas de baxters et de soins intramuros, une telle prescription est utilisée pour établir un plan (spécifique à la localisation) pour les moments de distribution (logistique)."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      }
+    ]
+  }
+}
