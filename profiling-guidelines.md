@@ -40,6 +40,10 @@
     1. [CBB examples](#CBBExamples)
     2. [FHIR profile examples](#FHIRProfileExamples)
 
+    **[Technical guidelines](#technical-guidelines)**
+
+12. [Exchange](#exchange)
+
 # General guidelines<a name="general"></a>
 
 ## Introduction <a name="introduction"></a>
@@ -403,3 +407,32 @@ Examples of CBBd are not conformant to FHIR, and are therefore not represented i
 
 ### FHIR profile examples <a name="FHIRProfileExamples"></a>
 Examples of FHIR profiles are provided in either XML or JSON format and must be a valid profile instance. Every example shall have at least one profile URL in the `.meta.profile` element. Examples are stored in the `/examples` folder.
+
+
+# Technical Guidelines
+
+## Exchange
+
+All information is sent to Sciensano using FHIR documents. These [FHIR documents](https://www.hl7.org/fhir/documents.html) are defined as: _FHIR resources can be used to build documents that represent a composition: a coherent set of information that is a statement of healthcare information, including clinical observations and services. A document is an immutable set of resources with a fixed presentation that is authored and/or attested by humans, organizations and devices._ 
+
+All FHIR documents have the same structure. The document itself is a `Bundle` resource of type = `document`. The first resource within the Bundle is always a `Composition` resource, then followed by a series of other resources, which are referenced within the Composition resource. When these resources reference other resources, these referenced resources SHOULD also be included in the bundle. The composition is the foundation of the document. It:
+
+ - provides identity and its purpose, and sets the context of the document
+ - carries key information such as the subject and author, and who attests to the document
+ - divides the document up into a series of sections, each with their own narrative
+
+A Composition profile, derived from the LaboratoryTestResult-Composition or ClinicalReportResearch-Composition profile, is used. It points to relevant DCD profiles, and can add constraints and additional clinical concepts. The Composition is split in relevant sections, each containing representative codes. Textual guidance is provided on which information is expected at what section. This also includes selection and filter rules. The Composition is relatively easy to build and author, but also provides control on what is exchanged.
+
+The exchange with FHIR documents is chosen as it bundles information regarding a certain use case.
+
+We dediced on using the FHIR Document for exchange, based on the [Exchange Approach page](https://build.fhir.org/exchanging.html). Each of the decisions-making steps are described here:
+
+|Step | Decision | 
+| -- | -- | 
+| Consumer initiates? | **No**: The data SHALL be pushed, as the data source knows the event that triggers the need for the exchange. | 
+| Configured by consumer? | **No**: Configuration by the consumer adds complexity for both the data source and the data consumer, which is unwanted. This also gives the data consumer full control over the data perstistence, which is not desired either. | 
+| Direct connection? (push) | **Yes**: There will be a direct connection between the data source and the data consumer. |
+| Data source directs consumer persistence? | **Yes**: The data source shall have control regarding the persistence, as the data source is the owner of the data. | 
+| Persist as a group? | **Yes**: The resources need to be packed as a set and to be stored together as they are only relevant together in context of a DCD. | 
+| Focus on presentation / story-telling? | **Yes**: The data is more then a set of resource stored togethere and it is necessary to provide storytelling regarding the contents of the resources. |
+| **Conclusion:** | This leads to exchanging the data using FHIR documents.| 
