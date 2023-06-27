@@ -3,6 +3,7 @@
 | LaboratoryTestResult                    |                   |
 |-----------------------------------------|-------------------|
 | LaboratoryTest	                      |
+| LaboratoryTest.TestResultId             | 6458f56c-2183-4f01-8eb0-c286d3703362
 | LaboratoryTest.TestCode	              | Chloride [Moles/volume] in Blood |
 | LaboratoryTest.TestMethod	              | 275711006 - Serum chemistry test (code by SNOMED CT)  |
 | LaboratoryTest.TestDateTime	          | 2022-01-13 12:00:00 |

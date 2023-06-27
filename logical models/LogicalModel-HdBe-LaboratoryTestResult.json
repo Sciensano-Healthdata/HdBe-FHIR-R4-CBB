@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "HdBe-LaboratoryTestResult",
   "meta": {
-    "lastUpdated": "2022-12-12T13:56:41.028469+00:00"
+    "lastUpdated": "2023-06-27T14:41:03.0779226+00:00"
   },
   "language": "en-US",
   "extension": [
@@ -101,7 +101,7 @@
           },
           {
             "url": "content",
-            "valueMarkdown": "Een laboratoriumuitslag beschrijft het resultaat van een laboratoriumbepaling. Het gaat hierbij om monster-geörienteerde bepalingen zoals deze verricht worden in laboratoria als Klinische chemie, Serologie, Microbiologie etc.&#13;\nBehalve de uitkomsten van testen met een enkelvoudig resultaat kan dit concept ook de uitkomsten van meer complexe testen met meervoudige resultaten of 'panel' bevatten.&#13;\n#### Purpose&#13;\nLaboratoriumonderzoek wordt gedaan ten behoeve van de diagnose en preventie van ziekte en het vervolgen van de effecten van behandeling. &#13;\n#### Evidence Base&#13;\nVoor het vastleggen van laboratoriumuitslagen zijn twee bouwstenen beschikbaar: TekstUitslag en LaboratoriumUitslag. &#13;\n&#13;\nBij uitslagen van laboratoriumbepalingen is het moeilijk eenduidig aan te geven wanneer deze bouwsteen gebruikt moet worden en wanneer de bouwsteen TekstUitslagen gebruikt moet worden. &#13;\nIn het algemeen worden laboratoriumtesten die resulteren in een waarde (7,1 mmol/L), rangtelwoord (++ uit reeks tot ++++) of een kwantitatieve uitslag (Weinig) vastgelegd met deze bouwsteen. De bouwsteen TekstUitslag is meer geschikt voor tekstuele uitslagen die van nature verhalend zijn en langer dan een paar woorden. In vrijwel alle laboratoria komen beide soorten testen voor.&#13;\nDe toepasbaarheid van bovengenoemde bouwstenen wordt niet door het soort laboratorium maar door het soort uitslag bepaald.&#13;\n&#13;\n&#13;\n**References**&#13;\n1. Nederlandse Vereniging voor Medische Microbiologie (2010) *ELab en EvT.* [Online] Beschikbaar op: http://www.nvmm.nl/ict/vereniging/werkgroepen_commissies/elab-en-evt [Geraadpleegd: 23 juli 2014].&#13;\n",
+            "valueMarkdown": "Een laboratoriumuitslag beschrijft het resultaat van een laboratoriumbepaling. Het gaat hierbij om monster-geörienteerde bepalingen zoals deze verricht worden in laboratoria als Klinische chemie, Serologie, Microbiologie etc.&#13;\nBehalve de uitkomsten van testen met een enkelvoudig resultaat kan dit concept ook de uitkomsten van meer complexe testen met meervoudige resultaten of 'panel' bevatten.&#13;\n#### Purpose&#13;\nLaboratoriumonderzoek wordt gedaan ten behoeve van de diagnose en preventie van ziekte en het vervolgen van de effecten van behandeling. &#13;\n#### Evidence Base&#13;\nVoor het vastleggen van laboratoriumuitslagen zijn twee bouwstenen beschikbaar: TekstUitslag en LaboratoriumUitslag. &#13;\n&#13;\nBij uitslagen van laboratoriumbepalingen is het moeilijk eenduidig aan te geven wanneer deze bouwsteen gebruikt moet worden en wanneer de bouwsteen TekstUitslagen gebruikt moet worden. &#13;\nIn het algemeen worden laboratoriumtesten die resulteren in een waarde (7,1 mmol/L), rangtelwoord (++ uit reeks tot ++++) of een kwantitatieve uitslag (Weinig) vastgelegd met deze bouwsteen. De bouwsteen TekstUitslag is meer geschikt voor tekstuele uitslagen die van nature verhalend zijn en langer dan een paar woorden. In vrijwel alle laboratoria komen beide soorten testen voor.&#13;\nDe toepasbaarheid van bovengenoemde bouwstenen wordt niet door het soort laboratorium maar door het soort uitslag bepaald.&#13;\n&#13;\n&#13;\n**References**&#13;\n1. Nederlandse Vereniging voor Medische Microbiologie (2010) *ELab en EvT.* [Online] Beschikbaar op: http://www.nvmm.nl/ict/vereniging/werkgroepen_commissies/elab-en-evt [Geraadpleegd: 23 juli 2014].&#13;"
           }
         ],
         "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -272,6 +272,22 @@
         ]
       },
       {
+        "id": "LaboratoryTestResult.LaboratoryTest.TestResultId",
+        "path": "LaboratoryTestResult.LaboratoryTest.TestResultId",
+        "short": "TestResultId",
+        "definition": "A unique identifier assigned to this LaboratoryTest.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/string"
+            ]
+          }
+        ]
+      },
+      {
         "id": "LaboratoryTestResult.LaboratoryTest.TestCode",
         "path": "LaboratoryTestResult.LaboratoryTest.TestCode",
         "short": "TestCode",
@@ -345,7 +361,7 @@
         ]
       },
       {
-        "id": "LaboratoryTestResult.LaboratoryTest.TestResultpolymorphic",
+        "id": "LaboratoryTestResult.LaboratoryTest.TestResult[x]",
         "path": "LaboratoryTestResult.LaboratoryTest.TestResult[x]",
         "short": "TestResult",
         "_short": {
@@ -446,54 +462,6 @@
             "code": "CodeableConcept",
             "profile": [
               "http://hl7.org/fhir/StructureDefinition/CodeableConcept"
-            ]
-          },
-          {
-            "code": "boolean",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/boolean"
-            ]
-          },
-          {
-            "code": "integer",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/integer"
-            ]
-          },
-          {
-            "code": "Range",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/Range"
-            ]
-          },
-          {
-            "code": "Ratio",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/Ratio"
-            ]
-          },
-          {
-            "code": "SampledData",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/SampledData"
-            ]
-          },
-          {
-            "code": "time",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/time"
-            ]
-          },
-          {
-            "code": "dateTime",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/dateTime"
-            ]
-          },
-          {
-            "code": "Period",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/Period"
             ]
           }
         ]
@@ -780,7 +748,7 @@
         }
       },
       {
-        "id": "LaboratoryTestResult.LaboratoryTest.ReferenceRangeUpperLimitpolymorphic",
+        "id": "LaboratoryTestResult.LaboratoryTest.ReferenceRangeUpperLimit[x]",
         "path": "LaboratoryTestResult.LaboratoryTest.ReferenceRangeUpperLimit[x]",
         "short": "ReferenceRangeUpperLimit",
         "_short": {
@@ -880,7 +848,7 @@
         ]
       },
       {
-        "id": "LaboratoryTestResult.LaboratoryTest.ReferenceRangeLowerLimitpolymorphic",
+        "id": "LaboratoryTestResult.LaboratoryTest.ReferenceRangeLowerLimit[x]",
         "path": "LaboratoryTestResult.LaboratoryTest.ReferenceRangeLowerLimit[x]",
         "short": "ReferenceRangeLowerLimit",
         "_short": {
@@ -1983,7 +1951,7 @@
         "max": "1",
         "type": [
           {
-            "code": "HdBe-TimeInterval",
+            "code": "TimeInterval",
             "profile": [
               "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-TimeInterval"
             ]

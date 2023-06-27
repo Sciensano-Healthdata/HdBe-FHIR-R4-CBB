@@ -2,6 +2,7 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
+|`LaboratoryTest.TestResultId`| element | The TestResultId element is added due to its frequent usage within the Data Collection Definitions of Healthdata.be, despite its somewhat technical nature for a informational model. 
 |`LaboratoryTest.TestCode` | terminology | Removed ValueSet binding and described in the comment the use of Loinc and Albert codes as per the subset defined by the FPS Health (ReTaM). Added a reference to the subset on the website of the FPS Health. The ReTaM codes are not duplicated in a FHIR ValueSet because this would require extensive maintenance in keeping the ValueSet up-to-date. |
 |`LaboratoryTest.TestResult`| type | The zib datatype 'ANY' was incorrectly exported as only a 'string', likely because Forge was giving an (incorrect) warning. The element has been made polymorphic by allowing all the `Observation.Value[x]` datatype options. | 
 |`LaboratoryTest.TestResult`| textual | Added textual guidance to include the unit for quantitative results. | 
