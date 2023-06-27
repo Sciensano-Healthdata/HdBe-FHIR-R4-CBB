@@ -60,13 +60,6 @@
     </element>
     <element id="MedicationRequest.extension">
       <path value="MedicationRequest.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="0" />
     </element>
     <element id="MedicationRequest.extension:medicationAgreementAdditionalInformation">
@@ -134,15 +127,12 @@
         <map value="MedicationAgreement.PeriodOfUse" />
       </mapping>
     </element>
+    <element id="MedicationRequest.extension:periodOfUse.value[x].extension">
+      <path value="MedicationRequest.extension.value[x].extension" />
+      <min value="0" />
+    </element>
     <element id="MedicationRequest.modifierExtension">
       <path value="MedicationRequest.modifierExtension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="0" />
     </element>
     <element id="MedicationRequest.modifierExtension:stopType">
@@ -398,6 +388,10 @@
         <identity value="HdBe-MedicationAgreement" />
         <map value="MedicationAgreement.InstructionsForUse" />
       </mapping>
+    </element>
+    <element id="MedicationRequest.dosageInstruction.timing.repeat.extension">
+      <path value="MedicationRequest.dosageInstruction.timing.repeat.extension" />
+      <min value="0" />
     </element>
   </differential>
 </StructureDefinition>

@@ -56,13 +56,6 @@
     </element>
     <element id="Procedure.extension">
       <path value="Procedure.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="0" />
     </element>
     <element id="Procedure.extension:procedureMethod">
@@ -293,6 +286,10 @@
         <identity value="HdBe-Procedure" />
         <map value="ProcedureAnatomicalLocation" />
       </mapping>
+    </element>
+    <element id="Procedure.bodySite.extension">
+      <path value="Procedure.bodySite.extension" />
+      <min value="0" />
     </element>
     <element id="Procedure.report">
       <path value="Procedure.report" />
