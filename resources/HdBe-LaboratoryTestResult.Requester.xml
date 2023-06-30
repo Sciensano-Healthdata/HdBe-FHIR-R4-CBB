@@ -5,6 +5,7 @@
   <name value="HdBeLaboratoryTestResultRequester" />
   <title value="HdBe LaboratoryTestResult Requester" />
   <status value="draft" />
+  <date value="2022-10-17T09:09:13.9562003+00:00" />
   <publisher value="Healthdata.be (Sciensano)" />
   <contact>
     <name value="Service portal – healthdata.be" />
@@ -14,8 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="The requester of the laboratory test." />
-  <purpose value="This is a minimal defined profile on ServiceRequest to capture the requester information of the CBB LaboratoryTestResult. Although the concept Requester is not implemented in the related zib profile because it is deemed unimplementable as-is, it has been implemented by this profile using a light profile on ServiceRequest. The profile does not contain enough guidance to implement a requesting service fully. It merely defines capturing the LaboratoryTestResult requester information in a native FHIR element." />
+  <description value="This is a minimal defined profile on ServiceRequest to capture the requester information of the CBB LaboratoryTestResult. Although the concept Requester is not implemented in the zib profile because it is deemed unimplementable as-is, it has been implemented by this profile using a light profile on ServiceRequest. The profile does not contain enough guidance to implement a requesting service fully. It merely allows capturing the requester information in a native FHIR element." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -31,7 +31,7 @@
   <differential>
     <element id="ServiceRequest">
       <path value="ServiceRequest" />
-      <comment value="This is a minimal defined profile on ServiceRequest to capture the requester information of the CBB LaboratoryTestResult. Although the concept Requester is not implemented in the related zib profile because it is deemed unimplementable as-is, it has been implemented by this profile using a light profile on ServiceRequest. The profile does not contain enough guidance to implement a requesting service fully. It merely defines capturing the LaboratoryTestResult requester information in a native FHIR element.&#xD;&#xA;&#xD;&#xA;Although the profile has essentially been created to capture the LaboratoryTestResult requester information, the ServiceRequest.requester element is optional to ensure open world modelling." />
+      <comment value="This is a minimal defined profile on ServiceRequest to capture the requester information of the CBB LaboratoryTestResult. Although the concept Requester is not implemented in the zib profile because it is deemed unimplementable as-is, it has been implemented by this profile using a light profile on ServiceRequest. The profile does not contain enough guidance to implement a requesting service fully. It merely allows capturing the requester information in a native FHIR element." />
     </element>
     <element id="ServiceRequest.status">
       <path value="ServiceRequest.status" />
@@ -55,6 +55,7 @@
     <element id="ServiceRequest.requester">
       <path value="ServiceRequest.requester" />
       <definition value="The individual who initiated the request and has responsibility for its activation. Using the PractitionerRole(HdBe-HealthProfessional-PractitionerRole) reference, the affiliated organization can be captured." />
+      <min value="1" />
       <type>
         <code value="Reference" />
         <profile value="https://fhir.healthdata.be/StructureDefinition/pattern-HealthProfessionalReference" />
