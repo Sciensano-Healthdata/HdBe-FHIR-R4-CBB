@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="HdBe-Measurement" />
+  <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-Measurement" />
+  <name value="HdBeMeasurement" />
+  <title value="HdBe Measurement" />
+  <status value="draft" />
+  <date value="2022-10-17T09:09:13.9562003+00:00" />
+  <publisher value="Healthdata.be (Sciensano)" />
+  <contact>
+    <name value="Service portal – healthdata.be" />
+    <telecom>
+      <system value="url" />
+      <value value="https://sciensano.service-now.com/sp" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This is a minimal defined profile on Observation to document how to exchange the Measurement CBB in FHIR." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="HdBe-Measurement" />
+    <uri value="https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Measurement" />
+    <name value="HdBe logical model Measurement" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <definition value="**Guidance on use for singular measurements and multiple related measurements**&#xA;&#xA;The CBB Measurement captures both singular measurements and and panels/clusters of multiple related measurements requested together. This profile should be used slightly different in these two situations:&#xA;&#xA;* For singular measurements&#xA;    * A single instance of this profile is to be used.&#xA;    * `Observation.code` represents concept MeasurementName (the name and code of the executed measument) &#xA;* For a panel or cluster of measurements:&#xA;    * There is a single instance for the overall result plus an instance for each test result.&#xA;    * The concepts Comment (`Observation.note`), ResultType ( `Observation.category:resultType`) and Performer ( `Observation.performer`) are repeated in the instance for the overall result and in all instances for the individual test results.&#xA;    * For the instance representing the overall result:&#xA;      * `Observation.code` represents concept MeasurementName &#xA;      * The instances representing the individual test results are referenced using `Observation.hasMember`.&#xA;    * For the instances representing the individual test results:&#xA;      * `Observation.code` represents concept MeasurementValue (the name and code of the executed measurement). The `Observation.value[x]` holds the MeasurementValue value." />
+      <mapping>
+        <identity value="HdBe-Measurement" />
+        <map value="Measurement" />
+      </mapping>
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <short value="MeasurementName" />
+      <definition value="Name of the measurement as coded description (name and code)" />
+      <mapping>
+        <identity value="HdBe-Measurment" />
+        <map value=".Measurment.MeasurementName" />
+      </mapping>
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
+      </type>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.effective[x]:effectivePeriod">
+      <path value="Observation.effective[x]" />
+      <sliceName value="effectivePeriod" />
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
+    <element id="Observation.effective[x]:effectivePeriod.start">
+      <path value="Observation.effective[x].start" />
+      <short value="MeasurementDateStartTime" />
+      <definition value="The date end if applicable the time at which the execution of the measurement starts." />
+      <mapping>
+        <identity value="HdBe-Measurement" />
+        <map value="Measurement.MeasurementDateStartTime" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x]:effectivePeriod.end">
+      <path value="Observation.effective[x].end" />
+      <short value="MeasurementDateEndTime" />
+      <definition value="The date end if applicable the time at which the execution of the measurement ends." />
+      <mapping>
+        <identity value="HdBe-Measurement" />
+        <map value="Measurement.MeasurementDateEndTime" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <short value="MeasurementValue" />
+      <definition value="The result of the measurement." />
+      <mapping>
+        <identity value="HdBe-Measurement" />
+        <map value="Measurement.MeasurementValue" />
+      </mapping>
+    </element>
+    <element id="Observation.note">
+      <path value="Observation.note" />
+      <max value="1" />
+    </element>
+    <element id="Observation.note.text">
+      <path value="Observation.note.text" />
+      <short value="Comment" />
+      <definition value="A comment about the result or the execution of the measurement. It may e.g. include statements about significant, unexpected or unreliable values, or information about the source of the value where this may be relevant to the interpretation of the result." />
+      <mapping>
+        <identity value="HdBe-Measurement" />
+        <map value="Measurement.Comment" />
+      </mapping>
+    </element>
+    <element id="Observation.bodySite">
+      <path value="Observation.bodySite" />
+      <short value="Location" />
+      <definition value="Location on/in the body." />
+      <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
+      <alias value="Locatie" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-AnatomicalLocation" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/Location" />
+      </binding>
+      <mapping>
+        <identity value="HdBe-Measurement" />
+        <map value="Measurement.AnatomicalLocation" />
+      </mapping>
+    </element>
+    <element id="Observation.bodySite.extension">
+      <path value="Observation.bodySite.extension" />
+      <min value="0" />
+    </element>
+    <element id="Observation.method">
+      <path value="Observation.method" />
+      <short value="MeasurementMethod" />
+      <definition value="The way in which the measurement was carried out and the method used." />
+      <mapping>
+        <identity value="HdBe-Measurement" />
+        <map value="Measurement.MeasurementMethod" />
+      </mapping>
+    </element>
+    <element id="Observation.hasMember">
+      <path value="Observation.hasMember" />
+      <comment value="When this resource is used to represent the overall result of a panel/cluster of laboratory tests, the individual test results SHOULD be referenced here. See the root of this profile for guidance." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MolecularSequence" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Measurement" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
