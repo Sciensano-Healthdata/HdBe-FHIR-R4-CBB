@@ -1,0 +1,591 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HdBe-Measurement",
+  "language": "en-US",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2020-09-01T00:00:00+02:00"
+      }
+    },
+    {
+      "url": "https://fhir.healthdata.be/StructureDefinition/ext-CBB-MM",
+      "valueInteger": 0
+    }
+  ],
+  "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Measurement",
+  "name": "HdBeMeasurement",
+  "_name": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "HdBeMeting"
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "title": "HdBe-Measurement",
+  "status": "draft",
+  "date": "2022-07-07T15:04:03.2592055+00:00",
+  "publisher": "Healthdata.be (Sciensano)",
+  "contact": [
+    {
+      "name": "Service portal – healthdata.be",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://sciensano.service-now.com/sp",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "A measurement records the result of a examination of a physiological characteristic of the patient. A measurement is performed on the patient. Measurements performed on specimen taken from a patient are not included. This is a template for information models For actual use, meaningful element names and value set concepts must be defined for derived CBB's.\r\n#### Purpose\r\nThe measurement and documentation of physiological observations are an important tool for evaluating a patient condition.\r\n#### Instructions\r\n With this template, single CBBs can be made that model one measurement with one or more results. If a CBB has to model more than one measurement, a model will have to be chosen where this template occurs more than once.",
+  "_description": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl-BE"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Een meting legt de uitkomst vast van een bepaling van een fysiologische eigenschap van de patient. Een meting wordt aan de patiënt uitgevoerd. Metingen, die uitgevoerd worden aan patiëntmateriaal, vallen hier niet onder. Dit is een blauwdruk voor CBB. Voor daadwerkelijk gebruik zal voor afgeleide CBBs invulling gegeven moeten worden aan betekenisvolle elementnamen en vulling van de waardelijsten.\r\n#### Purpose\r\nDe meting en bijhorende documentatie van fysiologische observaties zijn een belangrijk instrument voor het beoordelen van de toestand van een patient.\r\n#### Instructions\r\nMet deze blauwdruk kunnen enkelvoudige CBBs gemaakt worden die één meting met één of meer uitslagen modelleren. Indien een CBB meer dan één meting moet modelleren zal gekozen moeten worden voor een model waar deze blauwdruk meer dan één keer voorkomt."
+          }
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+      }
+    ]
+  },
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/Measurement",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Measurement",
+        "path": "Measurement",
+        "short": "Measurement",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Meting"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Root concept of the Measurement information model. This concept contains all data elements of the Measurement information model.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dit is het rootconcept van de bouwsteen Meting. Het concept bevat alle gegevenselementen van de bouwsteen Meting."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Measurement.MeasurementName",
+        "path": "Measurement.MeasurementName",
+        "short": "[MeasurementName]",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "[MeetNaam]"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Name of the measurement as coded description (name and code). In single measurements, this value is assigned to the rootconcept. However, if there are several variations of the measurement that are carried out under the same circumstances (measurement method, conditions, etc.), a (mini) category HCIM can be created with the associated code list.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van de meting als gecodeerde waarde (naam en code). Bij enkelvoudige metingen wordt deze waarde toegekend aan het rootconcept. Als er echter meerdere variaties van de meting bestaan die onder dezelfde omstandigheden uitgevoerd worden (meetmethode, condities, etc) kan met de bijbehorende codelijst een (mini) categorie CBB gemaakt worden."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Measurement.MeasurementValue[x]",
+        "path": "Measurement.MeasurementValue[x]",
+        "short": "[MeasurementValue]",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "[MeetWaarde]"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The result of the measurement. Depending on the type of measurement, this can be a numerical value, an ordinal value, a coded description or even a textual result. A measurement may result in more than one result or observation that may also differ in type, e.g. heart rate frequency and regularity.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het resultaat van de meting. Afhankelijk van het type meting kan dit een numerieke waarde zijn, een ordinale waarde, een gecodeerde waarde of zelf een tekstuele uitslag. Een meting kan meer dan één uitslag of waarneming als resultaat hebben die onderling ook nog van type kunnen verschillen, b.v hartslag frequentie en regelmatigheid."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          },
+          {
+            "code": "integer",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/integer"
+            ]
+          },
+          {
+            "code": "decimal",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/decimal"
+            ]
+          },
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/CodeableConcept"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Measurement.MeasurementMethod",
+        "path": "Measurement.MeasurementMethod",
+        "short": "MeasurementMethod",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MeetMethode"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The way in which the measurement was carried out and the method used.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De wijze waarop de meting uitgevoerd is en de methode die daarbij gebruikt is."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/CodeableConcept"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Measurement.MeasurementAncillary[x]",
+        "path": "Measurement.MeasurementAncillary[x]",
+        "short": "[MeasurementAncillary]",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "[MeetHulpmiddel]"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Ancillary item that was used in the measurement. It describes a more detailed specification of the measurement method.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Hulpmiddel dat toegepast is bij de uitvoering van de meting. Het gaat hierbij om een verbijzondering van de meetmethode."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          },
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/CodeableConcept"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Measurement.MeasurementCondition[x]",
+        "path": "Measurement.MeasurementCondition[x]",
+        "short": "[MeasurementCondition]",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "[MeetConditie]"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The circumstances under which the measurement was taken. This can relate to the patient as well as to the environment of the patient was.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De omstandigheden waaronder de meting is gedaan. Dit kan zowel betrekking hebben op de patient als op de omgeving waarin de patient zich bevond."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          },
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/CodeableConcept"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Measurement.MeasurementDateStartTime",
+        "path": "Measurement.MeasurementDateStartTime",
+        "short": "[Measurement]DateStartTime",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "[Meet]DatumBeginTijd"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The date end if applicable the time at which the execution of the measurement starts.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en eventueel de tijd waarop het uitvoeren van de meting aanvangt."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/dateTime"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Measurement.MeasurementDateEndTime",
+        "path": "Measurement.MeasurementDateEndTime",
+        "short": "[Measurement]DateEndTime",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "[Meet]DatumEindTijd"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "The date end if applicable the time at which the execution of the measurement ends.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en eventueel de tijd waarop het uitvoeren van de meting is voltooid."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/dateTime"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Measurement.Comment",
+        "path": "Measurement.Comment",
+        "short": "Comment",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "A comment about the result or the execution of the measurement. It may e.g. include statements about significant, unexpected or unreliable values, or information about the source of the value where this may be relevant to the interpretation of the result.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een opmerking over het resultaat van de meting of de uitvoering ervan. Het kan b.v. informatie bevatten over significante, onverwachte en onbetrouwbare resultaten als dit belangrijk is voor de interpretatie van het resultaat."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/string"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Measurement.AnatomicalLocation",
+        "path": "Measurement.AnatomicalLocation",
+        "short": "[AnatomischeLocatieMeting]::AnatomischeLocatie",
+        "_short": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "[MeasurementValue]"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "definition": "Anatomical location and if applicable laterality as focus of the measurment, e.g. right arm.",
+        "_definition": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl-BE"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Anatomische locatie en als van toepassing lateraliteit die de focus van de meting is, b.v. rechter arm."
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-AnatomicalLocation"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

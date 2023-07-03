@@ -3,7 +3,7 @@
   <id value="HdBe-MedicalDevice" />
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-MedicalDevice" />
   <name value="HdBeMedicalDevice" />
-  <title value="HdBe MedicalDevice" />
+  <title value="HdBe-MedicalDevice" />
   <status value="draft" />
   <date value="2022-10-17T09:09:13.9562003+00:00" />
   <publisher value="Healthdata.be (Sciensano)" />
@@ -80,13 +80,6 @@
     </element>
     <element id="DeviceUseStatement.extension">
       <path value="DeviceUseStatement.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="0" />
     </element>
     <element id="DeviceUseStatement.extension:healthProfessional">
@@ -319,6 +312,10 @@
         <identity value="HdBe-MedicalDevice" />
         <map value="MedicalDevice.AnatomicalLocation" />
       </mapping>
+    </element>
+    <element id="DeviceUseStatement.bodySite.extension">
+      <path value="DeviceUseStatement.bodySite.extension" />
+      <min value="0" />
     </element>
     <element id="DeviceUseStatement.note">
       <path value="DeviceUseStatement.note" />

@@ -3,7 +3,7 @@
   <id value="HdBe-Problem" />
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-Problem" />
   <name value="HdBeProblem" />
-  <title value="HdBe Problem" />
+  <title value="HdBe-Problem" />
   <status value="draft" />
   <date value="2022-10-17T09:09:13.9562003+00:00" />
   <publisher value="Healthdata.be (Sciensano)" />
@@ -169,13 +169,6 @@
     </element>
     <element id="Condition.code.extension">
       <path value="Condition.code.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="0" />
     </element>
     <element id="Condition.code.extension:furtherSpecificationProblemName">
@@ -218,6 +211,10 @@
         <identity value="HdBe-Problem" />
         <map value="Problem.ProblemAnatomicalLocation" />
       </mapping>
+    </element>
+    <element id="Condition.bodySite.extension">
+      <path value="Condition.bodySite.extension" />
+      <min value="0" />
     </element>
     <element id="Condition.onset[x]">
       <path value="Condition.onset[x]" />

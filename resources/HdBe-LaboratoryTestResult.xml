@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult" />
   <meta>
-    <lastUpdated value="2023-05-08T17:10:44.5064071+00:00" />
+    <lastUpdated value="2023-06-27T14:46:53.7229124+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult" />
   <name value="HdBeLaboratoryTestResult" />
-  <title value="HdBe LaboratoryTestResult" />
+  <title value="HdBe-LaboratoryTestResult" />
   <status value="draft" />
   <publisher value="Healthdata.be (Sciensano)" />
   <contact>
@@ -64,13 +64,6 @@
     </element>
     <element id="Observation.extension">
       <path value="Observation.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="0" />
     </element>
     <element id="Observation.extension:relatedResult">
@@ -100,6 +93,15 @@
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
         <map value="LaboratoryTestResult.RelatedResult" />
+      </mapping>
+    </element>
+    <element id="Observation.identifier">
+      <path value="Observation.identifier" />
+      <short value="TestResultId" />
+      <definition value="A unique identifier assigned to this LaboratoryTest." />
+      <mapping>
+        <identity value="HdBe-LaboratoryTestResult" />
+        <map value="LaboratoryTestResult.LaboratoryTest.TestResultId" />
       </mapping>
     </element>
     <element id="Observation.basedOn">

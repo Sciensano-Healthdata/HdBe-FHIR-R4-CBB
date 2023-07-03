@@ -1,5 +1,6 @@
 ---
 topic: NL.HdBe-Betaler
+lang: nl-BE
 ---
 
 <div style="float:right;width:85px;padding:10px;margin:10">
@@ -15,7 +16,7 @@ from StructureDefinition
 where url = 'https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Payer'
 select 
 CBB: id,
-join for description.extension.where(url='http://hl7.org/fhir/StructureDefinition/translation') where extension.where(url='lang').value = 'nl-NL' select {Concept: extension.where(url='content').value}, 
+join for description.extension.where(url='http://hl7.org/fhir/StructureDefinition/translation') where extension.where(url='lang').value = 'nl-BE' select {Concept: extension.where(url='content').value}, 
 Version: version,
 Status: status
 ```
@@ -32,7 +33,7 @@ Status: status
 
   <div id="Rendered view" class="tabcontent" style="display:block">
     <br>
-      {{render:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Payer , snapshot}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Payer , snapshot}}
   </div>
 
   <div id="Table view" class="tabcontent">

@@ -1,5 +1,6 @@
 ---
 topic: EN.HdBe-PulseRate
+
 ---
 
 <div style="float:right;width:85px;padding:10px;margin:10">
@@ -32,7 +33,7 @@ Status: status
 
   <div id="Rendered view" class="tabcontent" style="display:block">
     <br>
-      {{render:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PulseRate , snapshot}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-PulseRate , snapshot}}
   </div>
 
   <div id="Table view" class="tabcontent">

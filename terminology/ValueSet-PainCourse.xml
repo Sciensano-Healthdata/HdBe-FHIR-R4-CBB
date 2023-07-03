@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="PainCourse"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+01:00"/>
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/ValueSet/PainCourse"/>
+  <identifier>
+    <use value="official"/>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.12.21.2"/>
+  </identifier>
+  <version value="2020-09-01T00:00:00"/>
+  <name value="PainCourse"/>
+  <title value="PainCourse"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="Healthdata.be (Sciensano)"/>
+  <description value="PainCourse Codelist"/>
+  <immutable value="false"/>
+  <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+          <valueString value="Stabiel"/>
+        </extension>
+        <code value="58158008"/>
+        <display value="Stable"/>
+        <designation>
+          <language value="en"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Stable"/>
+        </designation>
+      </concept>
+      <concept>
+        <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+          <valueString value="Toenemend"/>
+        </extension>
+        <code value="260369004"/>
+        <display value="stijgend"/>
+        <designation>
+          <language value="en"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Increasing"/>
+        </designation>
+      </concept>
+      <concept>
+        <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+          <valueString value="Afnemend"/>
+        </extension>
+        <code value="260371004"/>
+        <display value="verminderend"/>
+        <designation>
+          <language value="en"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Decreasing"/>
+        </designation>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

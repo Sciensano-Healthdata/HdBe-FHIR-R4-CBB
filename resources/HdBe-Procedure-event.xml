@@ -3,7 +3,7 @@
   <id value="HdBe-Procedure-event" />
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-event" />
   <name value="HdBeProcedureevent" />
-  <title value="HdBe Procedure event" />
+  <title value="HdBe-Procedure event" />
   <status value="draft" />
   <date value="2022-10-17T09:09:13.9562003+00:00" />
   <publisher value="Healthdata.be (Sciensano)" />
@@ -56,13 +56,6 @@
     </element>
     <element id="Procedure.extension">
       <path value="Procedure.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="0" />
     </element>
     <element id="Procedure.extension:procedureMethod">
@@ -293,6 +286,10 @@
         <identity value="HdBe-Procedure" />
         <map value="ProcedureAnatomicalLocation" />
       </mapping>
+    </element>
+    <element id="Procedure.bodySite.extension">
+      <path value="Procedure.bodySite.extension" />
+      <min value="0" />
     </element>
     <element id="Procedure.report">
       <path value="Procedure.report" />

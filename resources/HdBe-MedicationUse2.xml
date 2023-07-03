@@ -3,7 +3,7 @@
   <id value="HdBe-MedicationUse2" />
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-MedicationUse2" />
   <name value="HdBeMedicationUse2" />
-  <title value="HdBe MedicationUse2" />
+  <title value="HdBe-MedicationUse2" />
   <status value="draft" />
   <date value="2022-10-17T09:09:13.9562003+00:00" />
   <publisher value="Healthdata.be (Sciensano)" />
@@ -56,13 +56,6 @@
     </element>
     <element id="MedicationStatement.extension">
       <path value="MedicationStatement.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="0" />
     </element>
     <element id="MedicationStatement.extension:renderedDosageInstruction">
@@ -117,13 +110,6 @@
     </element>
     <element id="MedicationStatement.modifierExtension">
       <path value="MedicationStatement.modifierExtension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="0" />
     </element>
     <element id="MedicationStatement.modifierExtension:stopType">
@@ -310,6 +296,10 @@
         <map value="MedicationUse2.PeriodOfUse" />
       </mapping>
     </element>
+    <element id="MedicationStatement.effective[x]:effectivePeriod.extension">
+      <path value="MedicationStatement.effective[x].extension" />
+      <min value="0" />
+    </element>
     <element id="MedicationStatement.dateAsserted">
       <path value="MedicationStatement.dateAsserted" />
       <short value="MedicationUseDateTime" />
@@ -393,6 +383,10 @@
         <identity value="HdBe-MedicationUse2" />
         <map value="MedicationUse2.InstructionsForUse" />
       </mapping>
+    </element>
+    <element id="MedicationStatement.dosage.timing.repeat.extension">
+      <path value="MedicationStatement.dosage.timing.repeat.extension" />
+      <min value="0" />
     </element>
   </differential>
 </StructureDefinition>

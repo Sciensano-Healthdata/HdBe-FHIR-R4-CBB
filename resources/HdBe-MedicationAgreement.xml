@@ -3,7 +3,7 @@
   <id value="HdBe-MedicationAgreement" />
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-MedicationAgreement" />
   <name value="HdBeMedicationAgreement" />
-  <title value="HdBe MedicationAgreement" />
+  <title value="HdBe-MedicationAgreement" />
   <status value="draft" />
   <date value="2022-10-17T09:09:13.9562003+00:00" />
   <publisher value="Healthdata.be (Sciensano)" />
@@ -60,13 +60,6 @@
     </element>
     <element id="MedicationRequest.extension">
       <path value="MedicationRequest.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="0" />
     </element>
     <element id="MedicationRequest.extension:medicationAgreementAdditionalInformation">
@@ -134,15 +127,12 @@
         <map value="MedicationAgreement.PeriodOfUse" />
       </mapping>
     </element>
+    <element id="MedicationRequest.extension:periodOfUse.value[x].extension">
+      <path value="MedicationRequest.extension.value[x].extension" />
+      <min value="0" />
+    </element>
     <element id="MedicationRequest.modifierExtension">
       <path value="MedicationRequest.modifierExtension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="0" />
     </element>
     <element id="MedicationRequest.modifierExtension:stopType">
@@ -398,6 +388,10 @@
         <identity value="HdBe-MedicationAgreement" />
         <map value="MedicationAgreement.InstructionsForUse" />
       </mapping>
+    </element>
+    <element id="MedicationRequest.dosageInstruction.timing.repeat.extension">
+      <path value="MedicationRequest.dosageInstruction.timing.repeat.extension" />
+      <min value="0" />
     </element>
   </differential>
 </StructureDefinition>

@@ -13,36 +13,37 @@
 4. [Versioning](#Versioning)
     1. [CBBs](#Versioning-CBB)
     2. [FHIR conformance resources](#Versioning-FHIR)
-5. [Changelog of changes to zibs and zib-profiles](#changelog)
+5. [CBB Maturity Model](#CBB-MM)
+6. [Changelog of changes to zibs and zib-profiles](#changelog)
     1. [Definition of changelog's category](#changelog_def)
     2. [CBB overarching changes](#CBB_overarching_changes)
-6. [Extensions](#Extensions)
-7. [Negation](#Negation)
+7. [Extensions](#Extensions)
+8. [Negation](#Negation)
     1. [Open World Assumption vs. Closed World Assumption](#OWA-vs-CWA)
     2. [Negation in QI-Core](#NegationInQICore)
     3. [Negation in zibs and CBBs](#NegationInZibsAndCbbs)
 
    **[Practical guidelines](#practicalguidelines)**
 
-8. [Identity of artifacts](#identityofartifacts)
+9. [Identity of artifacts](#identityofartifacts)
     1. [Canonical URL, id, name and title](#CanonicalURLIdNameTitle)
     2. [Folder structure and file name](FolderStructureAndFileName)
-9. [Metadata](#metadata)
+10. [Metadata](#metadata)
     1. [StructureDefinition](#StructureDefinition)
-10. [ElementDefinition](#ElementDefinition)
+11. [ElementDefinition](#ElementDefinition)
     1. [Usage of DefinitionCodes](#DefinitionCodes)
     2. [Constraining a target CBB](#ConstrainingCBB)
     3. [Usage of zib concept examples](#ZibConceptExamples)
-11. [Terminology](#terminology)
+12. [Terminology](#terminology)
     1. [Netherlands Edition SNOMED codes](#DutchSnomed)
     2. [Custom codes](#CustomCodes)
-12. [Examples](#Examples)
+13. [Examples](#Examples)
     1. [CBB examples](#CBBExamples)
     2. [FHIR profile examples](#FHIRProfileExamples)
 
     **[Technical guidelines](#technical-guidelines)**
 
-12. [Exchange](#exchange)
+14. [Exchange](#exchange)
 
 # General guidelines<a name="general"></a>
 
@@ -138,7 +139,18 @@ Regarding points 1 and 2: Healthdata.be uses the package level as the main versi
 Regarding point 4: the life cycle of the underlying data model is not reflected directly in the version number of the conformance resources, but a change in de the underlying data could result in a change in one or more of the conformance resources. In this case, the normal SemVer rules will determine what happens, as described in [CBB versioning](#Versioning-CBB). When a new version of the underlying data model reflects a fundamental change, the choice can be made to create a new package under a different name rather than a new version.
 
 Version updates of conformance resources normally do not affect their canonical URI. Any resource that references another resource normally does so without a version indicator (uri|version). Instead, this is handled at the package level; reference targets either reside within the same package or in a versioned package that has been added as a dependency.
-  
+
+## CBB Maturity Model<a name="CBB-MM"></a>
+
+The content of each release undergoes extensive internal review. However, the degree of testing varies. Some CBBs have been rigorously tested and have found applications in a diverse range of projects and environments. In contrast, others have received relatively minimal real-world exposure. Every CBB is assigned a "maturity level," known as CBB-MM (modeled after the well-established [CMM  grades](https://en.wikipedia.org/wiki/Capability_Maturity_Model) and [FHIR FMM level](http://hl7.org/fhir/R4/versions.html#maturity)). The CBB-MM level can be utilized by researchers and implementers to assess the advancement and thus the stability of a CBB. The following CBB-MM levels have been defined:
+
+- **CBB-MM 0** - The CBB has been published for discovery purposes. This level is synonymous with draft
+- **CBB-MM 1** - The CBB generates no warnings during the build process, and the healthdata.be team has indicated that they consider the artifact to be substantially complete and ready for testing and external feedback.
+- **CBB-MM 2** - PLUS the CBB has no open issues. It has been thoroughly reviewed by parties other than the developer. All terminology has been approved and thoroughly vetted.
+- **CBB-MM 3** - PLUS the CBB is utilized in at least one research project, deployed in at least one acceptance environment, and has undergone successful testing.
+- **CBB-MM 4** - PLUS the CBB is in active use in more than three independent research projects that have been implemented in production.
+- **CBB-MM 5** - PLUS the CBB is in active use in more than six independent research projects that have been implemented in production.
+
 ## Changelog of changes to zibs and zib-profiles<a name="changelog"></a>
 Because a technical dependency on the base zibs and zib-profiles is not possible, another method for keeping a tight connection is required because the goal is to keep them as aligned as possible. Therefore, every CBB logical model and profile will have an accompanying documentation file that contains a changelog/differential to the zib or zib-profile. The documentation file has the same name as the CBB profile and ends with `.doc.md`. For example `HdBe-Patient.xml` <-> `HdBe-Patient.doc.md`. This changelog comes in handy when the CBB and CBB profiles need to be updated based on a higher version of the zibs. The changelog is used to determine what to incorporate/merge when comparing the CBB to a higher version of the zib using any diff tool. 
 
@@ -223,7 +235,7 @@ Usually, mappings for the concept, bindings to specific ValueSets and any functi
 In the context of healthcare and research, it is often important to know whether a specific event, medication administration, or treatment has taken place or not. However, healthcare systems generally only record information when an event takes place, making it challenging to discern the absence of events. This issue relates to the traditional problem in information systems and logic known as the Open World Assumption vs. Closed World Assumption. This chapter summarizes our latest understanding of handling negation in FHIR profiling.
 
 ### Open World Assumption vs. Closed World Assumption <a name="OWA-vs-CWA"></a>
-The Open World Assumption posits that the absence of information does not imply its negation. In contrast, the Closed World Assumption suggests that any information not explicitly present is considered false. The key to solving this problem lies in the term "Assumption." When defining your system, it is essential to clearly document whether it supports the Open World or Closed World Assumption. Neither approach is inherently superior, but it is crucial to understand which one your system operates under. For healthcare systems on a national level, it seems we are handling the Open World Assumption. For more information, refer to the [Wikipedia article](https://en.wikipedia.org/wiki/Open-world_assumption) on this topic.
+The Open World Assumption posits that the absence of information does not imply its negation. In contrast, the Closed World Assumption suggests that any information not explicitly present is considered false. The key to solving this problem lies in the term "Assumption." When defining your system, it is essential to clearly document whether it supports the Open World or Closed World Assumption. Neither approach is inherently superior, but it is crucial to understand which one your system operates under. For data in healthcare systems it is needed to use the Open World Assumption. For more information, refer to the [Wikipedia article](https://en.wikipedia.org/wiki/Open-world_assumption) on this topic.
 
 ### Negation in QI-Core <a name="NegationInQICore"></a>
 The [QI-Core Implementation Guide](http://hl7.org/fhir/us/qicore/index.html#negation-in-qi-core) provides a comprehensive approach to handling negation in FHIR. It encompasses the creation of profiles and other specifications to capture events that have not occurred and the reasons for their non-occurrence. QI-Core can serve as a valuable reference for implementing negation in our FHIR profiling. However, ideally, this should be documented and anchored in the conceptual layer (CBBs) before profiling.
@@ -267,7 +279,7 @@ Conformance resources can have multiple types of identifying information, which 
     - For profiles: `https://fhir.healthdata.be/StructureDefinition/[id]`
 
 - The `name` will be the `.id` capitalized, with hyphens removed.
-- The `title` will generally be the `.id` with hyphens replaced by spaces.
+- The `title` will generally be the `.id`.
 
 Where:
 `[purpose]` and `[English concept name]` are generally a PascalCased name joining words together, with the first letter of every word capitalized.

@@ -3,7 +3,7 @@
   <id value="HdBe-NursingIntervention" />
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-NursingIntervention" />
   <name value="HdBeNursingIntervention" />
-  <title value="HdBe NursingIntervention" />
+  <title value="HdBe-NursingIntervention" />
   <status value="draft" />
   <date value="2022-10-17T09:09:13.9562003+00:00" />
   <publisher value="Healthdata.be (Sciensano)" />
@@ -178,13 +178,6 @@
     </element>
     <element id="CarePlan.contributor:requester.extension">
       <path value="CarePlan.contributor.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="1" />
     </element>
     <element id="CarePlan.contributor:requester.extension:contributorIsRequester">
@@ -246,13 +239,6 @@
     </element>
     <element id="CarePlan.activity.detail.extension">
       <path value="CarePlan.activity.detail.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="0" />
     </element>
     <element id="CarePlan.activity.detail.extension:medicalDevice">

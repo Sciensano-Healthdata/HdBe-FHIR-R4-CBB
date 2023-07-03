@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-Patient" />
   <meta>
-    <lastUpdated value="2023-05-08T17:11:08.6472828+00:00" />
+    <lastUpdated value="2023-06-12T15:09:16.5598446+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
   <name value="HdBePatient" />
-  <title value="HdBe Patient" />
+  <title value="HdBe-Patient" />
   <status value="draft" />
   <experimental value="false" />
   <publisher value="Healthdata.be (Sciensano)" />
@@ -103,13 +103,6 @@
     </element>
     <element id="Patient.extension">
       <path value="Patient.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="0" />
     </element>
     <element id="Patient.extension:nationality">
@@ -124,13 +117,6 @@
     </element>
     <element id="Patient.extension:nationality.extension">
       <path value="Patient.extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="0" />
     </element>
     <element id="Patient.extension:nationality.extension:code">
@@ -219,6 +205,18 @@
         <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation" />
       </type>
     </element>
+    <element id="Patient.name:nameInformation.extension">
+      <path value="Patient.name.extension" />
+      <min value="0" />
+    </element>
+    <element id="Patient.name:nameInformation.family.extension">
+      <path value="Patient.name.family.extension" />
+      <min value="0" />
+    </element>
+    <element id="Patient.name:nameInformation.given.extension">
+      <path value="Patient.name.given.extension" />
+      <min value="1" />
+    </element>
     <element id="Patient.name:nameInformation-GivenName">
       <path value="Patient.name" />
       <sliceName value="nameInformation-GivenName" />
@@ -251,6 +249,10 @@
         <comment value="ContactInformation" />
       </mapping>
     </element>
+    <element id="Patient.telecom.extension">
+      <path value="Patient.telecom.extension" />
+      <min value="0" />
+    </element>
     <element id="Patient.gender">
       <path value="Patient.gender" />
       <short value="Gender" />
@@ -277,13 +279,6 @@
     </element>
     <element id="Patient.gender.extension">
       <path value="Patient.gender.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="0" />
     </element>
     <element id="Patient.gender.extension:genderCodelist">
@@ -407,6 +402,18 @@
         <comment value="AddressInformation" />
       </mapping>
     </element>
+    <element id="Patient.address.extension">
+      <path value="Patient.address.extension" />
+      <min value="1" />
+    </element>
+    <element id="Patient.address.line.extension">
+      <path value="Patient.address.line.extension" />
+      <min value="0" />
+    </element>
+    <element id="Patient.address.country.extension">
+      <path value="Patient.address.country.extension" />
+      <min value="0" />
+    </element>
     <element id="Patient.maritalStatus">
       <path value="Patient.maritalStatus" />
       <short value="MaritalStatus" />
@@ -495,13 +502,6 @@
     </element>
     <element id="Patient.contact.extension">
       <path value="Patient.contact.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="0" />
     </element>
     <element id="Patient.contact.extension:contactPerson">
@@ -604,6 +604,18 @@
         <map value="NameInformation" />
       </mapping>
     </element>
+    <element id="Patient.contact.name.extension">
+      <path value="Patient.contact.name.extension" />
+      <min value="0" />
+    </element>
+    <element id="Patient.contact.name.family.extension">
+      <path value="Patient.contact.name.family.extension" />
+      <min value="0" />
+    </element>
+    <element id="Patient.contact.name.given.extension">
+      <path value="Patient.contact.name.given.extension" />
+      <min value="1" />
+    </element>
     <element id="Patient.contact.telecom">
       <path value="Patient.contact.telecom" />
       <short value="ContactInformation" />
@@ -628,6 +640,10 @@
         <map value="ContactInformation" />
       </mapping>
     </element>
+    <element id="Patient.contact.telecom.extension">
+      <path value="Patient.contact.telecom.extension" />
+      <min value="0" />
+    </element>
     <element id="Patient.contact.address">
       <path value="Patient.contact.address" />
       <definition value="Contact’s address information." />
@@ -645,6 +661,18 @@
         <identity value="HdBe-ContactPerson" />
         <map value="AddressInformation" />
       </mapping>
+    </element>
+    <element id="Patient.contact.address.extension">
+      <path value="Patient.contact.address.extension" />
+      <min value="1" />
+    </element>
+    <element id="Patient.contact.address.line.extension">
+      <path value="Patient.contact.address.line.extension" />
+      <min value="0" />
+    </element>
+    <element id="Patient.contact.address.country.extension">
+      <path value="Patient.contact.address.country.extension" />
+      <min value="0" />
     </element>
   </differential>
 </StructureDefinition>

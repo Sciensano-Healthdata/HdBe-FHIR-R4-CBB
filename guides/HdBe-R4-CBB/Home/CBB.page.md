@@ -23,159 +23,159 @@ topic: cbb_index
   </thead>
   <tbody>
     <tr>
-      <td>{{pagelink:EN.HdBe-AbilityToDressOneself, text:AbilityToDressOneself}}</td>
-      <td>{{pagelink:EN.HdBe-ContactInformation, text:ContactInformation}}</td>
-      <td>{{pagelink:EN.HdBe-Infusion, text:Infusion}}</td>
-      <td>{{pagelink:EN.HdBe-PharmaceuticalProduct, text:PharmaceuticalProduct}}</td>
+      <td>{{pagelink:EN.HdBe-AbilityToDressOneself, text:AbilityToDressOneself}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-ContactInformation, text:ContactInformation}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-Infusion, text:Infusion}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-Payer, text:Payer}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-AbilityToDrink, text:AbilityToDrink}}</td>
-      <td>{{pagelink:EN.HdBe-ContactPerson, text:ContactPerson}}</td>
-      <td>{{pagelink:EN.HdBe-InstructionsForUse, text:InstructionsForUse}}</td>
-      <td>{{pagelink:EN.HdBe-Pregnancy, text:Pregnancy}}</td>
+      <td>{{pagelink:EN.HdBe-AbilityToDrink, text:AbilityToDrink}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-ContactPerson, text:ContactPerson}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-InstructionsForUse, text:InstructionsForUse}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-PharmaceuticalProduct, text:PharmaceuticalProduct}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-AbilityToEat, text:AbilityToEat}}</td>
-      <td>{{pagelink:EN.HdBe-DAS, text:DAS}}</td>
-      <td>{{pagelink:EN.HdBe-LaboratoryTestResult, text:LaboratoryTestResult}}</td>
-      <td>{{pagelink:EN.HdBe-PressureUlcer, text:PressureUlcer}}</td>
+      <td>{{pagelink:EN.HdBe-AbilityToEat, text:AbilityToEat}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-DAS, text:DAS}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-LaboratoryTestResult, text:LaboratoryTestResult}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-Pregnancy, text:Pregnancy}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-AbilityToGroom, text:AbilityToGroom}}</td>
-      <td>{{pagelink:EN.HdBe-DevelopmentChild, text:DevelopmentChild}}</td>
-      <td>{{pagelink:EN.HdBe-LanguageProficiency, text:LanguageProficiency}}</td>
-      <td>{{pagelink:EN.HdBe-Problem, text:Problem}}</td>
+      <td>{{pagelink:EN.HdBe-AbilityToGroom, text:AbilityToGroom}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-DevelopmentChild, text:DevelopmentChild}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-LanguageProficiency, text:LanguageProficiency}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-PressureUlcer, text:PressureUlcer}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-AbilityToManageMedication, text:AbilityToManageMedication}}</td>
-      <td>{{pagelink:EN.HdBe-DispenseRequest, text:DispenseRequest}}</td>
-      <td>{{pagelink:EN.HdBe-LegalSituation, text:LegalSituation}}</td>
-      <td>{{pagelink:EN.HdBe-Procedure, text:Procedure}}</td>
+      <td>{{pagelink:EN.HdBe-AbilityToManageMedication, text:AbilityToManageMedication}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-DispenseRequest, text:DispenseRequest}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-LegalSituation, text:LegalSituation}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-Problem, text:Problem}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-AbilityToPerformMouthcareActivities, text:AbilityToPerformMouthcareActivities}}</td>
-      <td>{{pagelink:EN.HdBe-DOSScore, text:DOSScore}}</td>
-      <td>{{pagelink:EN.HdBe-LifeStance, text:LifeStance}}</td>
-      <td>{{pagelink:EN.HdBe-PulseRate, text:PulseRate}}</td>
+      <td>{{pagelink:EN.HdBe-AbilityToPerformMouthcareActivities, text:AbilityToPerformMouthcareActivities}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-DOSScore, text:DOSScore}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-LifeStance, text:LifeStance}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-Procedure, text:Procedure}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-AbilityToPerformNursingActivities, text:AbilityToPerformNursingActivities}}</td>
-      <td>{{pagelink:EN.HdBe-DrugUse, text:DrugUse}}</td>
-      <td>{{pagelink:EN.HdBe-LivingSituation, text:LivingSituation}}</td>
-      <td>{{pagelink:EN.HdBe-Range, text:Range}}</td>
+      <td>{{pagelink:EN.HdBe-AbilityToPerformNursingActivities, text:AbilityToPerformNursingActivities}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-DrugUse, text:DrugUse}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-LivingSituation, text:LivingSituation}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-PulseRate, text:PulseRate}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-AbilityToUseToilet, text:AbilityToUseToilet}}</td>
-      <td>{{pagelink:EN.HdBe-Education, text:Education}}</td>
-      <td>{{pagelink:EN.HdBe-MaritalStatus, text:MaritalStatus}}</td>
-      <td>{{pagelink:EN.HdBe-Refraction, text:Refraction}}</td>
+      <td>{{pagelink:EN.HdBe-AbilityToUseToilet, text:AbilityToUseToilet}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-Education, text:Education}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-MaritalStatus, text:MaritalStatus}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-Range, text:Range}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-AbilityToWashOneself, text:AbilityToWashOneself}}</td>
-      <td>{{pagelink:EN.HdBe-Encounter, text:Encounter}}</td>
-      <td>{{pagelink:EN.HdBe-MedicalDevice, text:MedicalDevice}}</td>
-      <td>{{pagelink:EN.HdBe-Respiration, text:Respiration}}</td>
+      <td>{{pagelink:EN.HdBe-AbilityToWashOneself, text:AbilityToWashOneself}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-Encounter, text:Encounter}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-Measurement, text:Measurement}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-Refraction, text:Refraction}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-AddressInformation, text:AddressInformation}}</td>
-      <td>{{pagelink:EN.HdBe-EpisodeOfCare, text:EpisodeOfCare}}</td>
-      <td>{{pagelink:EN.HdBe-MedicationAdministration2, text:MedicationAdministration2}}</td>
-      <td>{{pagelink:EN.HdBe-SkinDisorder, text:SkinDisorder}}</td>
+      <td>{{pagelink:EN.HdBe-AddressInformation, text:AddressInformation}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-EpisodeOfCare, text:EpisodeOfCare}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-MedicalDevice, text:MedicalDevice}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-Respiration, text:Respiration}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-AdministrationAgreement, text:AdministrationAgreement}}</td>
-      <td>{{pagelink:EN.HdBe-FamilyHistory, text:FamilyHistory}}</td>
-      <td>{{pagelink:EN.HdBe-MedicationAgreement, text:MedicationAgreement}}</td>
-      <td>{{pagelink:EN.HdBe-SmokingStatus, text:SmokingStatus}}</td>
+      <td>{{pagelink:EN.HdBe-AdministrationAgreement, text:AdministrationAgreement}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-FamilyHistory, text:FamilyHistory}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-MedicationAdministration2, text:MedicationAdministration2}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-SkinDisorder, text:SkinDisorder}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-AdvanceDirective, text:AdvanceDirective}}</td>
-      <td>{{pagelink:EN.HdBe-FamilySituation, text:FamilySituation}}</td>
-      <td>{{pagelink:EN.HdBe-MedicationContraIndication, text:MedicationContraIndication}}</td>
-      <td>{{pagelink:EN.HdBe-SNAQScore, text:SNAQScore}}</td>
+      <td>{{pagelink:EN.HdBe-AdvanceDirective, text:AdvanceDirective}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-FamilySituation, text:FamilySituation}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-MedicationAgreement, text:MedicationAgreement}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-SmokingStatus, text:SmokingStatus}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-AlcoholUse, text:AlcoholUse}}</td>
-      <td>{{pagelink:EN.HdBe-FamilySituationChild, text:FamilySituationChild}}</td>
-      <td>{{pagelink:EN.HdBe-MedicationDispense, text:MedicationDispense}}</td>
-      <td>{{pagelink:EN.HdBe-SOAPReport, text:SOAPReport}}</td>
+      <td>{{pagelink:EN.HdBe-AlcoholUse, text:AlcoholUse}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-FamilySituationChild, text:FamilySituationChild}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-MedicationContraIndication, text:MedicationContraIndication}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-SNAQScore, text:SNAQScore}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-Alert, text:Alert}}</td>
-      <td>{{pagelink:EN.HdBe-FeedingPatternInfant, text:FeedingPatternInfant}}</td>
-      <td>{{pagelink:EN.HdBe-MedicationUse2, text:MedicationUse2}}</td>
-      <td>{{pagelink:EN.HdBe-Stoma, text:Stoma}}</td>
+      <td>{{pagelink:EN.HdBe-Alert, text:Alert}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-FeedingPatternInfant, text:FeedingPatternInfant}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-MedicationDispense, text:MedicationDispense}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-SOAPReport, text:SOAPReport}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-AllergyIntolerance, text:AllergyIntolerance}}</td>
-      <td>{{pagelink:EN.HdBe-FeedingTubeSystem, text:FeedingTubeSystem}}</td>
-      <td>{{pagelink:EN.HdBe-Mobility, text:Mobility}}</td>
-      <td>{{pagelink:EN.HdBe-TextResult, text:TextResult}}</td>
+      <td>{{pagelink:EN.HdBe-AllergyIntolerance, text:AllergyIntolerance}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-FeedingTubeSystem, text:FeedingTubeSystem}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-MedicationUse2, text:MedicationUse2}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-Stoma, text:Stoma}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-AnatomicalLocation, text:AnatomicalLocation}}</td>
-      <td>{{pagelink:EN.HdBe-FluidBalance, text:FluidBalance}}</td>
-      <td>{{pagelink:EN.HdBe-NameInformation, text:NameInformation}}</td>
-      <td>{{pagelink:EN.HdBe-TimeInterval, text:TimeInterval}}</td>
+      <td>{{pagelink:EN.HdBe-AnatomicalLocation, text:AnatomicalLocation}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-FluidBalance, text:FluidBalance}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-Mobility, text:Mobility}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-TextResult, text:TextResult}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-ApgarScore, text:ApgarScore}}</td>
-      <td>{{pagelink:EN.HdBe-FreedomRestrictingIntervention, text:FreedomRestrictingIntervention}}</td>
-      <td>{{pagelink:EN.HdBe-Nationality, text:Nationality}}</td>
-      <td>{{pagelink:EN.HdBe-TNMTumorClassification, text:TNMTumorClassification}}</td>
+      <td>{{pagelink:EN.HdBe-ApgarScore, text:ApgarScore}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-FreedomRestrictingIntervention, text:FreedomRestrictingIntervention}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-NameInformation, text:NameInformation}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-TimeInterval, text:TimeInterval}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-BarthelADLIndex, text:BarthelADLIndex}}</td>
-      <td>{{pagelink:EN.HdBe-FunctionalOrMentalStatus, text:FunctionalOrMentalStatus}}</td>
-      <td>{{pagelink:EN.HdBe-NursingIntervention, text:NursingIntervention}}</td>
-      <td>{{pagelink:EN.HdBe-TreatmentDirective2, text:TreatmentDirective2}}</td>
+      <td>{{pagelink:EN.HdBe-BarthelADLIndex, text:BarthelADLIndex}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-FunctionalOrMentalStatus, text:FunctionalOrMentalStatus}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-Nationality, text:Nationality}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-TNMTumorClassification, text:TNMTumorClassification}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-BladderFunction, text:BladderFunction}}</td>
-      <td>{{pagelink:EN.HdBe-GlasgowComaScale, text:GlasgowComaScale}}</td>
-      <td>{{pagelink:EN.HdBe-NutritionAdvice, text:NutritionAdvice}}</td>
-      <td>{{pagelink:EN.HdBe-TreatmentObjective, text:TreatmentObjective}}</td>
+      <td>{{pagelink:EN.HdBe-BladderFunction, text:BladderFunction}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-GlasgowComaScale, text:GlasgowComaScale}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-NursingIntervention, text:NursingIntervention}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-TreatmentDirective2, text:TreatmentDirective2}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-BloodPressure, text:BloodPressure}}</td>
-      <td>{{pagelink:EN.HdBe-HeadCircumference, text:HeadCircumference}}</td>
-      <td>{{pagelink:EN.HdBe-O2Saturation, text:O2Saturation}}</td>
-      <td>{{pagelink:EN.HdBe-Vaccination, text:Vaccination}}</td>
+      <td>{{pagelink:EN.HdBe-BloodPressure, text:BloodPressure}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-HeadCircumference, text:HeadCircumference}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-NutritionAdvice, text:NutritionAdvice}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-TreatmentObjective, text:TreatmentObjective}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-BodyHeight, text:BodyHeight}}</td>
-      <td>{{pagelink:EN.HdBe-HealthcareOrganization, text:HealthcareOrganization}}</td>
-      <td>{{pagelink:EN.HdBe-OutcomeOfCare, text:OutcomeOfCare}}</td>
-      <td>{{pagelink:EN.HdBe-VisualAcuity, text:VisualAcuity}}</td>
+      <td>{{pagelink:EN.HdBe-BodyHeight, text:BodyHeight}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-HealthcareOrganization, text:HealthcareOrganization}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-O2Saturation, text:O2Saturation}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-Vaccination, text:Vaccination}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-BodyTemperature, text:BodyTemperature}}</td>
-      <td>{{pagelink:EN.HdBe-HealthProfessional, text:HealthProfessional}}</td>
-      <td>{{pagelink:EN.HdBe-PainCharacteristics, text:PainCharacteristics}}</td>
-      <td>{{pagelink:EN.HdBe-VisualFunction, text:VisualFunction}}</td>
+      <td>{{pagelink:EN.HdBe-BodyTemperature, text:BodyTemperature}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-HealthProfessional, text:HealthProfessional}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-OutcomeOfCare, text:OutcomeOfCare}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-VisualAcuity, text:VisualAcuity}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-BodyWeight, text:BodyWeight}}</td>
-      <td>{{pagelink:EN.HdBe-HearingFunction, text:HearingFunction}}</td>
-      <td>{{pagelink:EN.HdBe-PainScore, text:PainScore}}</td>
-      <td>{{pagelink:EN.HdBe-Wound, text:Wound}}</td>
+      <td>{{pagelink:EN.HdBe-BodyWeight, text:BodyWeight}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-HearingFunction, text:HearingFunction}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-PainCharacteristics, text:PainCharacteristics}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-VisualFunction, text:VisualFunction}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-BowelFunction, text:BowelFunction}}</td>
-      <td>{{pagelink:EN.HdBe-HeartRate, text:HeartRate}}</td>
-      <td>{{pagelink:EN.HdBe-ParticipationInSociety, text:ParticipationInSociety}}</td>
+      <td>{{pagelink:EN.HdBe-BowelFunction, text:BowelFunction}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-HeartRate, text:HeartRate}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-PainScore, text:PainScore}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-Wound, text:Wound}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+    </tr>
+    <tr>
+      <td>{{pagelink:EN.HdBe-Burnwound, text:Burnwound}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-HelpFromOthers, text:HelpFromOthers}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-ParticipationInSociety, text:ParticipationInSociety}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
       <td></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-Burnwound, text:Burnwound}}</td>
-      <td>{{pagelink:EN.HdBe-HelpFromOthers, text:HelpFromOthers}}</td>
-      <td>{{pagelink:EN.HdBe-Patient, text:Patient}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{pagelink:EN.HdBe-CareTeam, text:CareTeam}}</td>
-      <td>{{pagelink:EN.HdBe-IllnessPerception, text:IllnessPerception}}</td>
-      <td>{{pagelink:EN.HdBe-Payer, text:Payer}}</td>
+      <td>{{pagelink:EN.HdBe-CareTeam, text:CareTeam}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-IllnessPerception, text:IllnessPerception}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:EN.HdBe-Patient, text:Patient}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
       <td></td>
     </tr>
   </tbody>
@@ -188,165 +188,165 @@ topic: cbb_index
     <tr style="text-align: right;">
       <th>A - F</th>
       <th>F - N</th>
-      <th>O - V</th>
+      <th>N - V</th>
       <th>V - Z</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>{{pagelink:NL.HdBe-Ademhaling, text:Ademhaling}}</td>
-      <td>{{pagelink:NL.HdBe-FunctieHoren, text:FunctieHoren}}</td>
-      <td>{{pagelink:NL.HdBe-O2Saturatie, text:O2Saturatie}}</td>
-      <td>{{pagelink:NL.HdBe-VermogenTotToiletgang, text:VermogenTotToiletgang}}</td>
+      <td>{{pagelink:NL.HdBe-Ademhaling, text:Ademhaling}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-FunctieHoren, text:FunctieHoren}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-Nationaliteit, text:Nationaliteit}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-VermogenTotMondverzorging, text:VermogenTotMondverzorging}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-Adresgegevens, text:Adresgegevens}}</td>
-      <td>{{pagelink:NL.HdBe-FunctieZien, text:FunctieZien}}</td>
-      <td>{{pagelink:NL.HdBe-OntwikkelingKind, text:OntwikkelingKind}}</td>
-      <td>{{pagelink:NL.HdBe-VermogenTotUiterlijkeVerzorging, text:VermogenTotUiterlijkeVerzorging}}</td>
+      <td>{{pagelink:NL.HdBe-Adresgegevens, text:Adresgegevens}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-FunctieZien, text:FunctieZien}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-O2Saturatie, text:O2Saturatie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-VermogenTotToiletgang, text:VermogenTotToiletgang}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-AlcoholGebruik, text:AlcoholGebruik}}</td>
-      <td>{{pagelink:NL.HdBe-FunctioneleOfMentaleStatus, text:FunctioneleOfMentaleStatus}}</td>
-      <td>{{pagelink:NL.HdBe-Opleiding, text:Opleiding}}</td>
-      <td>{{pagelink:NL.HdBe-VermogenTotVerpleegtechnischeHandelingen, text:VermogenTotVerpleegtechnischeHandelingen}}</td>
+      <td>{{pagelink:NL.HdBe-AlcoholGebruik, text:AlcoholGebruik}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-FunctioneleOfMentaleStatus, text:FunctioneleOfMentaleStatus}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-OntwikkelingKind, text:OntwikkelingKind}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-VermogenTotUiterlijkeVerzorging, text:VermogenTotUiterlijkeVerzorging}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-Alert, text:Alert}}</td>
-      <td>{{pagelink:NL.HdBe-GebruiksInstructie, text:GebruiksInstructie}}</td>
-      <td>{{pagelink:NL.HdBe-ParticipatieInMaatschappij, text:ParticipatieInMaatschappij}}</td>
-      <td>{{pagelink:NL.HdBe-VermogenTotZelfstandigMedicatiegebruik, text:VermogenTotZelfstandigMedicatiegebruik}}</td>
+      <td>{{pagelink:NL.HdBe-Alert, text:Alert}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-GebruiksInstructie, text:GebruiksInstructie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-Opleiding, text:Opleiding}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-VermogenTotVerpleegtechnischeHandelingen, text:VermogenTotVerpleegtechnischeHandelingen}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-AllergieIntolerantie, text:AllergieIntolerantie}}</td>
-      <td>{{pagelink:NL.HdBe-Gezinssituatie, text:Gezinssituatie}}</td>
-      <td>{{pagelink:NL.HdBe-Patient, text:Patient}}</td>
-      <td>{{pagelink:NL.HdBe-VermogenTotZichKleden, text:VermogenTotZichKleden}}</td>
+      <td>{{pagelink:NL.HdBe-AllergieIntolerantie, text:AllergieIntolerantie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-Gezinssituatie, text:Gezinssituatie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-ParticipatieInMaatschappij, text:ParticipatieInMaatschappij}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-VermogenTotZelfstandigMedicatiegebruik, text:VermogenTotZelfstandigMedicatiegebruik}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-AnatomischeLocatie, text:AnatomischeLocatie}}</td>
-      <td>{{pagelink:NL.HdBe-GezinssituatieKind, text:GezinssituatieKind}}</td>
-      <td>{{pagelink:NL.HdBe-Pijnkenmerken, text:Pijnkenmerken}}</td>
-      <td>{{pagelink:NL.HdBe-VermogenTotZichWassen, text:VermogenTotZichWassen}}</td>
+      <td>{{pagelink:NL.HdBe-AnatomischeLocatie, text:AnatomischeLocatie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-GezinssituatieKind, text:GezinssituatieKind}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Patient, text:Patient}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-VermogenTotZichKleden, text:VermogenTotZichKleden}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-ApgarScore, text:ApgarScore}}</td>
-      <td>{{pagelink:NL.HdBe-GlasgowComaScale, text:GlasgowComaScale}}</td>
-      <td>{{pagelink:NL.HdBe-Pijnscore, text:Pijnscore}}</td>
-      <td>{{pagelink:NL.HdBe-VerpleegkundigeInterventie, text:VerpleegkundigeInterventie}}</td>
+      <td>{{pagelink:NL.HdBe-ApgarScore, text:ApgarScore}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-GlasgowComaScale, text:GlasgowComaScale}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Pijnkenmerken, text:Pijnkenmerken}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-VermogenTotZichWassen, text:VermogenTotZichWassen}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-BarthelIndex, text:BarthelIndex}}</td>
-      <td>{{pagelink:NL.HdBe-Hartfrequentie, text:Hartfrequentie}}</td>
-      <td>{{pagelink:NL.HdBe-Polsfrequentie, text:Polsfrequentie}}</td>
-      <td>{{pagelink:NL.HdBe-Verrichting, text:Verrichting}}</td>
+      <td>{{pagelink:NL.HdBe-BarthelIndex, text:BarthelIndex}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Hartfrequentie, text:Hartfrequentie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Pijnscore, text:Pijnscore}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-VerpleegkundigeInterventie, text:VerpleegkundigeInterventie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-BehandelAanwijzing2, text:BehandelAanwijzing2}}</td>
-      <td>{{pagelink:NL.HdBe-Huidaandoening, text:Huidaandoening}}</td>
-      <td>{{pagelink:NL.HdBe-Probleem, text:Probleem}}</td>
-      <td>{{pagelink:NL.HdBe-Verstrekkingsverzoek, text:Verstrekkingsverzoek}}</td>
+      <td>{{pagelink:NL.HdBe-BehandelAanwijzing2, text:BehandelAanwijzing2}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-Huidaandoening, text:Huidaandoening}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Polsfrequentie, text:Polsfrequentie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Verrichting, text:Verrichting}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-Behandeldoel, text:Behandeldoel}}</td>
-      <td>{{pagelink:NL.HdBe-HulpVanAnderen, text:HulpVanAnderen}}</td>
-      <td>{{pagelink:NL.HdBe-Refractie, text:Refractie}}</td>
-      <td>{{pagelink:NL.HdBe-Visus, text:Visus}}</td>
+      <td>{{pagelink:NL.HdBe-Behandeldoel, text:Behandeldoel}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-HulpVanAnderen, text:HulpVanAnderen}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Probleem, text:Probleem}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-Verstrekkingsverzoek, text:Verstrekkingsverzoek}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-Bereik, text:Bereik}}</td>
-      <td>{{pagelink:NL.HdBe-Infuus, text:Infuus}}</td>
-      <td>{{pagelink:NL.HdBe-SNAQScore, text:SNAQScore}}</td>
-      <td>{{pagelink:NL.HdBe-Vochtbalans, text:Vochtbalans}}</td>
+      <td>{{pagelink:NL.HdBe-Bereik, text:Bereik}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-Infuus, text:Infuus}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Refractie, text:Refractie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Visus, text:Visus}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-Betaler, text:Betaler}}</td>
-      <td>{{pagelink:NL.HdBe-JuridischeSituatie, text:JuridischeSituatie}}</td>
-      <td>{{pagelink:NL.HdBe-SOEPVerslag, text:SOEPVerslag}}</td>
-      <td>{{pagelink:NL.HdBe-Voedingsadvies, text:Voedingsadvies}}</td>
+      <td>{{pagelink:NL.HdBe-Betaler, text:Betaler}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-JuridischeSituatie, text:JuridischeSituatie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-SNAQScore, text:SNAQScore}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Vochtbalans, text:Vochtbalans}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-Blaasfunctie, text:Blaasfunctie}}</td>
-      <td>{{pagelink:NL.HdBe-LaboratoriumUitslag, text:LaboratoriumUitslag}}</td>
-      <td>{{pagelink:NL.HdBe-Schedelomvang, text:Schedelomvang}}</td>
-      <td>{{pagelink:NL.HdBe-VoedingspatroonZuigeling, text:VoedingspatroonZuigeling}}</td>
+      <td>{{pagelink:NL.HdBe-Blaasfunctie, text:Blaasfunctie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-LaboratoriumUitslag, text:LaboratoriumUitslag}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-SOEPVerslag, text:SOEPVerslag}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Voedingsadvies, text:Voedingsadvies}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-Bloeddruk, text:Bloeddruk}}</td>
-      <td>{{pagelink:NL.HdBe-Levensovertuiging, text:Levensovertuiging}}</td>
-      <td>{{pagelink:NL.HdBe-SondeSysteem, text:SondeSysteem}}</td>
-      <td>{{pagelink:NL.HdBe-VrijheidsbeperkendeInterventie, text:VrijheidsbeperkendeInterventie}}</td>
+      <td>{{pagelink:NL.HdBe-Bloeddruk, text:Bloeddruk}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-Levensovertuiging, text:Levensovertuiging}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Schedelomvang, text:Schedelomvang}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-VoedingspatroonZuigeling, text:VoedingspatroonZuigeling}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-Brandwond, text:Brandwond}}</td>
-      <td>{{pagelink:NL.HdBe-Lichaamsgewicht, text:Lichaamsgewicht}}</td>
-      <td>{{pagelink:NL.HdBe-Stoma, text:Stoma}}</td>
-      <td>{{pagelink:NL.HdBe-Wilsverklaring, text:Wilsverklaring}}</td>
+      <td>{{pagelink:NL.HdBe-Brandwond, text:Brandwond}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Lichaamsgewicht, text:Lichaamsgewicht}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-SondeSysteem, text:SondeSysteem}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-VrijheidsbeperkendeInterventie, text:VrijheidsbeperkendeInterventie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-BurgerlijkeStaat, text:BurgerlijkeStaat}}</td>
-      <td>{{pagelink:NL.HdBe-Lichaamslengte, text:Lichaamslengte}}</td>
-      <td>{{pagelink:NL.HdBe-TNMTumorClassificatie, text:TNMTumorClassificatie}}</td>
-      <td>{{pagelink:NL.HdBe-Wond, text:Wond}}</td>
+      <td>{{pagelink:NL.HdBe-BurgerlijkeStaat, text:BurgerlijkeStaat}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-Lichaamslengte, text:Lichaamslengte}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-Stoma, text:Stoma}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Wilsverklaring, text:Wilsverklaring}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-Contact, text:Contact}}</td>
-      <td>{{pagelink:NL.HdBe-Lichaamstemperatuur, text:Lichaamstemperatuur}}</td>
-      <td>{{pagelink:NL.HdBe-Taalvaardigheid, text:Taalvaardigheid}}</td>
-      <td>{{pagelink:NL.HdBe-Woonsituatie, text:Woonsituatie}}</td>
+      <td>{{pagelink:NL.HdBe-Contact, text:Contact}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-Lichaamstemperatuur, text:Lichaamstemperatuur}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-TNMTumorClassificatie, text:TNMTumorClassificatie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Wond, text:Wond}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-Contactgegevens, text:Contactgegevens}}</td>
-      <td>{{pagelink:NL.HdBe-MedicatieContraIndicatie, text:MedicatieContraIndicatie}}</td>
-      <td>{{pagelink:NL.HdBe-TabakGebruik, text:TabakGebruik}}</td>
-      <td>{{pagelink:NL.HdBe-Ziektebeleving, text:Ziektebeleving}}</td>
+      <td>{{pagelink:NL.HdBe-Contactgegevens, text:Contactgegevens}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-MedicatieContraIndicatie, text:MedicatieContraIndicatie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Taalvaardigheid, text:Taalvaardigheid}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Woonsituatie, text:Woonsituatie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-Contactpersoon, text:Contactpersoon}}</td>
-      <td>{{pagelink:NL.HdBe-MedicatieGebruik2, text:MedicatieGebruik2}}</td>
-      <td>{{pagelink:NL.HdBe-TekstUitslag, text:TekstUitslag}}</td>
-      <td>{{pagelink:NL.HdBe-ZorgEpisode, text:ZorgEpisode}}</td>
+      <td>{{pagelink:NL.HdBe-Contactpersoon, text:Contactpersoon}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-MedicatieGebruik2, text:MedicatieGebruik2}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-TabakGebruik, text:TabakGebruik}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-Ziektebeleving, text:Ziektebeleving}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-DAS, text:DAS}}</td>
-      <td>{{pagelink:NL.HdBe-MedicatieToediening2, text:MedicatieToediening2}}</td>
-      <td>{{pagelink:NL.HdBe-TijdsInterval, text:TijdsInterval}}</td>
-      <td>{{pagelink:NL.HdBe-ZorgTeam, text:ZorgTeam}}</td>
+      <td>{{pagelink:NL.HdBe-DAS, text:DAS}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-MedicatieToediening2, text:MedicatieToediening2}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-TekstUitslag, text:TekstUitslag}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-ZorgEpisode, text:ZorgEpisode}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-DOSScore, text:DOSScore}}</td>
-      <td>{{pagelink:NL.HdBe-Medicatieafspraak, text:Medicatieafspraak}}</td>
-      <td>{{pagelink:NL.HdBe-Toedieningsafspraak, text:Toedieningsafspraak}}</td>
-      <td>{{pagelink:NL.HdBe-Zorgaanbieder, text:Zorgaanbieder}}</td>
+      <td>{{pagelink:NL.HdBe-DOSScore, text:DOSScore}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Medicatieafspraak, text:Medicatieafspraak}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-TijdsInterval, text:TijdsInterval}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-ZorgTeam, text:ZorgTeam}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-Darmfunctie, text:Darmfunctie}}</td>
-      <td>{{pagelink:NL.HdBe-Medicatieverstrekking, text:Medicatieverstrekking}}</td>
-      <td>{{pagelink:NL.HdBe-UitkomstVanZorg, text:UitkomstVanZorg}}</td>
-      <td>{{pagelink:NL.HdBe-Zorgverlener, text:Zorgverlener}}</td>
+      <td>{{pagelink:NL.HdBe-Darmfunctie, text:Darmfunctie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Medicatieverstrekking, text:Medicatieverstrekking}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Toedieningsafspraak, text:Toedieningsafspraak}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-Zorgaanbieder, text:Zorgaanbieder}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-DecubitusWond, text:DecubitusWond}}</td>
-      <td>{{pagelink:NL.HdBe-MedischHulpmiddel, text:MedischHulpmiddel}}</td>
-      <td>{{pagelink:NL.HdBe-Vaccinatie, text:Vaccinatie}}</td>
-      <td>{{pagelink:NL.HdBe-Zwangerschap, text:Zwangerschap}}</td>
+      <td>{{pagelink:NL.HdBe-DecubitusWond, text:DecubitusWond}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-MedischHulpmiddel, text:MedischHulpmiddel}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-UitkomstVanZorg, text:UitkomstVanZorg}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Zorgverlener, text:Zorgverlener}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-DrugsGebruik, text:DrugsGebruik}}</td>
-      <td>{{pagelink:NL.HdBe-Mobiliteit, text:Mobiliteit}}</td>
-      <td>{{pagelink:NL.HdBe-VermogenTotDrinken, text:VermogenTotDrinken}}</td>
+      <td>{{pagelink:NL.HdBe-DrugsGebruik, text:DrugsGebruik}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-Meting, text:Meting}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Vaccinatie, text:Vaccinatie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-Zwangerschap, text:Zwangerschap}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+    </tr>
+    <tr>
+      <td>{{pagelink:NL.HdBe-Familieanamnese, text:Familieanamnese}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:NL.HdBe-Mobiliteit, text:Mobiliteit}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-VermogenTotDrinken, text:VermogenTotDrinken}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
       <td></td>
     </tr>
     <tr>
-      <td>{{pagelink:NL.HdBe-Familieanamnese, text:Familieanamnese}}</td>
-      <td>{{pagelink:NL.HdBe-Naamgegevens, text:Naamgegevens}}</td>
-      <td>{{pagelink:NL.HdBe-VermogenTotEten, text:VermogenTotEten}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{pagelink:NL.HdBe-FarmaceutischProduct, text:FarmaceutischProduct}}</td>
-      <td>{{pagelink:NL.HdBe-Nationaliteit, text:Nationaliteit}}</td>
-      <td>{{pagelink:NL.HdBe-VermogenTotMondverzorging, text:VermogenTotMondverzorging}}</td>
+      <td>{{pagelink:NL.HdBe-FarmaceutischProduct, text:FarmaceutischProduct}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-Naamgegevens, text:Naamgegevens}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-VermogenTotEten, text:VermogenTotEten}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
       <td></td>
     </tr>
   </tbody>
@@ -366,69 +366,69 @@ topic: cbb_index
   </thead>
   <tbody>
     <tr>
-      <td>{{pagelink:FR.HdBe-AdministrationMédication2, text:AdministrationMédication2}}</td>
-      <td>{{pagelink:FR.HdBe-FonctionVisuelle, text:FonctionVisuelle}}</td>
-      <td>{{pagelink:FR.HdBe-OrganismeSoins, text:OrganismeSoins}}</td>
-      <td>{{pagelink:FR.HdBe-RésultatTestLaboratoire, text:RésultatTestLaboratoire}}</td>
+      <td>{{pagelink:FR.HdBe-AdministrationMédication2, text:AdministrationMédication2}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-FonctionVisuelle, text:FonctionVisuelle}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-OrganismeSoins, text:OrganismeSoins}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-RésultatTestLaboratoire, text:RésultatTestLaboratoire}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:FR.HdBe-Alerte, text:Alerte}}</td>
-      <td>{{pagelink:FR.HdBe-InformationAdresse, text:InformationAdresse}}</td>
-      <td>{{pagelink:FR.HdBe-Patient, text:Patient}}</td>
-      <td>{{pagelink:FR.HdBe-SituationVie, text:SituationVie}}</td>
+      <td>{{pagelink:FR.HdBe-Alerte, text:Alerte}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-InformationAdresse, text:InformationAdresse}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-Patient, text:Patient}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-SituationVie, text:SituationVie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:FR.HdBe-ConseilNutritionnel, text:ConseilNutritionnel}}</td>
-      <td>{{pagelink:FR.HdBe-InformationContact, text:InformationContact}}</td>
-      <td>{{pagelink:FR.HdBe-Payeur, text:Payeur}}</td>
-      <td>{{pagelink:FR.HdBe-StatutFonctionnelOuMental, text:StatutFonctionnelOuMental}}</td>
+      <td>{{pagelink:FR.HdBe-ConseilNutritionnel, text:ConseilNutritionnel}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-InformationContact, text:InformationContact}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-Payeur, text:Payeur}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-StatutFonctionnelOuMental, text:StatutFonctionnelOuMental}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:FR.HdBe-ConsommationAlcool, text:ConsommationAlcool}}</td>
-      <td>{{pagelink:FR.HdBe-InformationNom, text:InformationNom}}</td>
-      <td>{{pagelink:FR.HdBe-PersonneContact, text:PersonneContact}}</td>
-      <td>{{pagelink:FR.HdBe-StatutTabagique, text:StatutTabagique}}</td>
+      <td>{{pagelink:FR.HdBe-ConsommationAlcool, text:ConsommationAlcool}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-InformationNom, text:InformationNom}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-PersonneContact, text:PersonneContact}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-StatutTabagique, text:StatutTabagique}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:FR.HdBe-ConsommationDrogue, text:ConsommationDrogue}}</td>
-      <td>{{pagelink:FR.HdBe-InstructionsDUtilisation, text:InstructionsDUtilisation}}</td>
-      <td>{{pagelink:FR.HdBe-Plage, text:Plage}}</td>
-      <td>{{pagelink:FR.HdBe-TailleCorporelle, text:TailleCorporelle}}</td>
+      <td>{{pagelink:FR.HdBe-ConsommationDrogue, text:ConsommationDrogue}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-InstructionsDUtilisation, text:InstructionsDUtilisation}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-Plage, text:Plage}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-TailleCorporelle, text:TailleCorporelle}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:FR.HdBe-Contact, text:Contact}}</td>
-      <td>{{pagelink:FR.HdBe-IntervalleTemps, text:IntervalleTemps}}</td>
-      <td>{{pagelink:FR.HdBe-PoidsCorporel, text:PoidsCorporel}}</td>
-      <td>{{pagelink:FR.HdBe-TempératureCorporelle, text:TempératureCorporelle}}</td>
+      <td>{{pagelink:FR.HdBe-Contact, text:Contact}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-IntervalleTemps, text:IntervalleTemps}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-PoidsCorporel, text:PoidsCorporel}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-TempératureCorporelle, text:TempératureCorporelle}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:FR.HdBe-ConventionMédication, text:ConventionMédication}}</td>
-      <td>{{pagelink:FR.HdBe-InterventionSoinsInfirmiers, text:InterventionSoinsInfirmiers}}</td>
-      <td>{{pagelink:FR.HdBe-Pouls, text:Pouls}}</td>
-      <td>{{pagelink:FR.HdBe-TensionArtérielle, text:TensionArtérielle}}</td>
+      <td>{{pagelink:FR.HdBe-ConventionMédication, text:ConventionMédication}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-InterventionSoinsInfirmiers, text:InterventionSoinsInfirmiers}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-Pouls, text:Pouls}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
+      <td>{{pagelink:FR.HdBe-TensionArtérielle, text:TensionArtérielle}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:FR.HdBe-DirectiveTraitement2, text:DirectiveTraitement2}}</td>
-      <td>{{pagelink:FR.HdBe-IntoléranceAllergie, text:IntoléranceAllergie}}</td>
-      <td>{{pagelink:FR.HdBe-Problème, text:Problème}}</td>
-      <td>{{pagelink:FR.HdBe-UtilisationMédication2, text:UtilisationMédication2}}</td>
+      <td>{{pagelink:FR.HdBe-DirectiveTraitement2, text:DirectiveTraitement2}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-IntoléranceAllergie, text:IntoléranceAllergie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-Problème, text:Problème}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-UtilisationMédication2, text:UtilisationMédication2}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:FR.HdBe-DispositifMédical, text:DispositifMédical}}</td>
-      <td>{{pagelink:FR.HdBe-LocalisationAnatomique, text:LocalisationAnatomique}}</td>
-      <td>{{pagelink:FR.HdBe-Procédure, text:Procédure}}</td>
-      <td>{{pagelink:FR.HdBe-Vaccination, text:Vaccination}}</td>
+      <td>{{pagelink:FR.HdBe-DispositifMédical, text:DispositifMédical}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-LocalisationAnatomique, text:LocalisationAnatomique}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-Procédure, text:Procédure}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-Vaccination, text:Vaccination}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:FR.HdBe-DéclarationVolonté, text:DéclarationVolonté}}</td>
-      <td>{{pagelink:FR.HdBe-Nationalité, text:Nationalité}}</td>
-      <td>{{pagelink:FR.HdBe-ProduitPharmaceutique, text:ProduitPharmaceutique}}</td>
-      <td>{{pagelink:FR.HdBe-ÉtatCivil, text:ÉtatCivil}}</td>
+      <td>{{pagelink:FR.HdBe-DéclarationVolonté, text:DéclarationVolonté}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-Nationalité, text:Nationalité}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-ProduitPharmaceutique, text:ProduitPharmaceutique}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-ÉtatCivil, text:ÉtatCivil}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:FR.HdBe-FonctionAuditive, text:FonctionAuditive}}</td>
-      <td>{{pagelink:FR.HdBe-ObjectifTraitement, text:ObjectifTraitement}}</td>
-      <td>{{pagelink:FR.HdBe-ProfessionnelSanté, text:ProfessionnelSanté}}</td>
+      <td>{{pagelink:FR.HdBe-FonctionAuditive, text:FonctionAuditive}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-ObjectifTraitement, text:ObjectifTraitement}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:FR.HdBe-ProfessionnelSanté, text:ProfessionnelSanté}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
       <td></td>
     </tr>
   </tbody>
