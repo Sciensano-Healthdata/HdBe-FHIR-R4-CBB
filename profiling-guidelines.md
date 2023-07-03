@@ -144,10 +144,10 @@ Version updates of conformance resources normally do not affect their canonical 
 
 The content of each release undergoes extensive internal review. However, the degree of testing varies. Some CBBs have been rigorously tested and have found applications in a diverse range of projects and environments. In contrast, others have received relatively minimal real-world exposure. Every CBB is assigned a "maturity level," known as CBB-MM (modeled after the well-established [CMM  grades](https://en.wikipedia.org/wiki/Capability_Maturity_Model) and [FHIR FMM level](http://hl7.org/fhir/R4/versions.html#maturity)). The CBB-MM level can be utilized by researchers and implementers to assess the advancement and thus the stability of a CBB. The following CBB-MM levels have been defined:
 
-- **CBB-MM 0**   - The CBB has been published for discovery purposes. This level is synonymous with Draft
-- **CBB-MM 1** - The CBB generates no warnings during the build process, and the Healthdata.be team has indicated that they consider the artifact to be substantially complete and ready for testing and external feedback.
+- **CBB-MM 0** - The CBB has been published for discovery purposes. This level is synonymous with draft
+- **CBB-MM 1** - The CBB generates no warnings during the build process, and the healthdata.be team has indicated that they consider the artifact to be substantially complete and ready for testing and external feedback.
 - **CBB-MM 2** - PLUS the CBB has no open issues. It has been thoroughly reviewed by parties other than the developer. All terminology has been approved and thoroughly vetted.
-- **CBB-MM 3** - PLUS the CBB is utilized in a research project, deployed in at least one acceptance environment, and has undergone successful testing.
+- **CBB-MM 3** - PLUS the CBB is utilized in at least one research project, deployed in at least one acceptance environment, and has undergone successful testing.
 - **CBB-MM 4** - PLUS the CBB is in active use in more than three independent research projects that have been implemented in production.
 - **CBB-MM 5** - PLUS the CBB is in active use in more than six independent research projects that have been implemented in production.
 
