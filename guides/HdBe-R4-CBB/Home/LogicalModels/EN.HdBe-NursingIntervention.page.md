@@ -1,5 +1,6 @@
 ---
 topic: EN.HdBe-NursingIntervention
+
 ---
 
 <div style="float:right;width:85px;padding:10px;margin:10">
@@ -27,12 +28,12 @@ Status: status
      <button class="tablinks" onclick="openTab(event, 'Detailed descriptions')">Detailed Descriptions</button>
      <button class="tablinks" onclick="openTab(event, 'Example')">Example</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff')">Zib diff</button>
-     <button class="tablinks">{{pagelink:Home/FHIR/HdBe-NursingIntervention.page.md, text:FHIR profile}}</button>
+     <button class="tablinks">{{{{pagelink:Home/FHIR/{CBB.id}.page.md, text:FHIR profile}}}}</button>
   </div>
 
   <div id="Rendered view" class="tabcontent" style="display:block">
     <br>
-      {{render:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NursingIntervention , snapshot}}
+      {{tree:https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-NursingIntervention , snapshot}}
   </div>
 
   <div id="Table view" class="tabcontent">
