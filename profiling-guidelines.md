@@ -279,7 +279,7 @@ Conformance resources can have multiple types of identifying information, which 
     - For profiles: `https://fhir.healthdata.be/StructureDefinition/[id]`
 
 - The `name` will be the `.id` capitalized, with hyphens removed.
-- The `title` will generally be the `.id` with hyphens replaced by spaces.
+- The `title` will generally be the `.id`.
 
 Where:
 `[purpose]` and `[English concept name]` are generally a PascalCased name joining words together, with the first letter of every word capitalized.
