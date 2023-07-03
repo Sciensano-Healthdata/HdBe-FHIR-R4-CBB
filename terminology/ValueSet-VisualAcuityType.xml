@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="VisualAcuityType"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00+01:00"/>
+    </valuePeriod>
+  </extension>
+  <url value="https://fhir.healthdata.be/ValueSet/VisualAcuityType"/>
+  <identifier>
+    <use value="official"/>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.12.19.2"/>
+  </identifier>
+  <version value="2020-09-01T00:00:00"/>
+  <name value="VisualAcuityType"/>
+  <title value="VisualAcuityType"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="Healthdata.be (Sciensano)"/>
+  <description value="VisualAcuityType Codelist"/>
+  <immutable value="false"/>
+  <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+  <compose>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+      <concept>
+        <code value="OTH"/>
+        <display value="Other"/>
+        <designation>
+          <language value="en-US"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Other"/>
+        </designation>
+        <designation>
+          <language value="nl-BE"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Anders"/>
+        </designation>
+      </concept>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+          <valueString value="Gecorrigeerde visus (met eigen bril)"/>
+        </extension>
+        <code value="397536007"/>
+        <display value="gecorrigeerde visus"/>
+        <designation>
+          <language value="en"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Corrected visual acuity"/>
+        </designation>
+      </concept>
+      <concept>
+        <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+          <valueString value="Ongecorrigeerde visus"/>
+        </extension>
+        <code value="420050001"/>
+        <display value="ongecorrigeerde visus"/>
+        <designation>
+          <language value="en"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Uncorrected visual acuity"/>
+        </designation>
+      </concept>
+      <concept>
+        <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+          <valueString value="Best gecorrigeerde visus(met optimale bril)"/>
+        </extension>
+        <code value="419775003"/>
+        <display value="best-gecorrigeerde visus"/>
+        <designation>
+          <language value="en"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Best corrected visual acuity"/>
+        </designation>
+      </concept>
+      <concept>
+        <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+          <valueString value="Stereoscopische visus"/>
+        </extension>
+        <code value="359750002"/>
+        <display value="Stereoscopic acuity"/>
+        <designation>
+          <language value="en"/>
+          <use>
+            <system value="http://snomed.info/sct"/>
+            <code value="900000000000013009"/>
+            <display value="Synonym"/>
+          </use>
+          <value value="Stereoscopic acuity"/>
+        </designation>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>
