@@ -10,8 +10,8 @@
       }
     },
     {
-      "url" : "https://fhir.healthdata.be/StructureDefinition/ext-CBB-MM",
-      "valueInteger" : 0
+      "url": "https://fhir.healthdata.be/StructureDefinition/ext-CBB-MM",
+      "valueInteger": 0
     }
   ],
   "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-DOSScore",
@@ -19,7 +19,6 @@
   "_name": {
     "extension": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/translation",
         "extension": [
           {
             "url": "lang",
@@ -29,7 +28,8 @@
             "url": "content",
             "valueMarkdown": "HdBeDOSScore"
           }
-        ]
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
       }
     ]
   },
@@ -53,7 +53,6 @@
   "_description": {
     "extension": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/translation",
         "extension": [
           {
             "url": "lang",
@@ -61,9 +60,10 @@
           },
           {
             "url": "content",
-            "valueMarkdown": "De DOSS (Delirium Observatie Screening Schaal) is een hulpmiddel om te bepalen of er sprake is van een delier. De DOSS bevat 13 observaties van gedrag (verbaal en non-verbaal) die de symptomen van het delier weergeven. Deze observaties kunnen gedaan worden tijdens reguliere contacten met de patiënt. \r\n#### Purpose\r\nHet delier is een van de meest voorkomende vormen van psychopathologie bij oude patiënten en bij patiënten in de laatste fase van het leven. Kenmerkend voor het delier zijn het snelle ontstaan en de wisseling van de symptomen. De DOSS is bedoeld om de aard en ernst van de symptomen van een delier te kwalificeren en kwantificeren. Hierdoor kan snel een behandeling worden ingezet. De DOSS wordt gebruikt als risicosignalering en als evaluatie instrument. \r\n#### Evidence Base\r\nDe definities van de concepten zijn gebaseerd op de DOS scorelijst.\r\n\r\n\r\n"
+            "valueMarkdown": "De DOSS (Delirium Observatie Screening Schaal) is een hulpmiddel om te bepalen of er sprake is van een delier. De DOSS bevat 13 observaties van gedrag (verbaal en non-verbaal) die de symptomen van het delier weergeven. Deze observaties kunnen gedaan worden tijdens reguliere contacten met de patiënt. \r\n#### Purpose\r\nHet delier is een van de meest voorkomende vormen van psychopathologie bij oude patiënten en bij patiënten in de laatste fase van het leven. Kenmerkend voor het delier zijn het snelle ontstaan en de wisseling van de symptomen. De DOSS is bedoeld om de aard en ernst van de symptomen van een delier te kwalificeren en kwantificeren. Hierdoor kan snel een behandeling worden ingezet. De DOSS wordt gebruikt als risicosignalering en als evaluatie instrument. \r\n#### Evidence Base\r\nDe definities van de concepten zijn gebaseerd op de DOS scorelijst."
           }
-        ]
+        ],
+        "url": "http://hl7.org/fhir/StructureDefinition/translation"
       }
     ]
   },
@@ -77,13 +77,12 @@
   "differential": {
     "element": [
       {
-        "id": "Dosscore",
-        "path": "Dosscore",
+        "id": "DOSScore",
+        "path": "DOSScore",
         "short": "DOSScore",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -93,7 +92,8 @@
                   "url": "content",
                   "valueMarkdown": "DOSScore"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -101,7 +101,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -111,7 +110,8 @@
                   "url": "content",
                   "valueMarkdown": "Rootconcept van de bouwsteen DOSScore. Dit rootconcept bevat alle gegevenselementen van de bouwsteen DOSScore."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -119,13 +119,12 @@
         "max": "*"
       },
       {
-        "id": "Dosscore.DosscoreTotal",
-        "path": "Dosscore.DosscoreTotal",
+        "id": "DOSScore.DosscoreTotal",
+        "path": "DOSScore.DosscoreTotal",
         "short": "DOSScoreTotal",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -135,7 +134,8 @@
                   "url": "content",
                   "valueMarkdown": "DOSScoreTotaal"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -143,7 +143,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -153,7 +152,8 @@
                   "url": "content",
                   "valueMarkdown": "Per dienst wordt een totaal score berekend (minimaal 0 en maximaal 13). De totaal scores van drie diensten (dag, late en nachtdienst) worden opgeteld tot de totaal score van deze dag (minimaal 0 en maximaal 39).\r\n\r\nDe DOS schaal eindscore wordt berekend door de totaal score van deze dag te delen door 3 (minimaal 0 en maximaal 13).\r\n\r\nEen DOS schaal eindscore < 3 betekent dat de patiënt waarschijnlijk niet delirant is. Een DOS schaal eindscore > 3 betekent dat de patiënt waarschijnlijk wel delirant is."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -166,13 +166,12 @@
         ]
       },
       {
-        "id": "Dosscore.DosscoreDateTime",
-        "path": "Dosscore.DosscoreDateTime",
+        "id": "DOSScore.DosscoreDateTime",
+        "path": "DOSScore.DosscoreDateTime",
         "short": "DOSScoreDateTime",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -182,7 +181,8 @@
                   "url": "content",
                   "valueMarkdown": "DOSScoreDatumTijd"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -190,7 +190,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -200,7 +199,8 @@
                   "url": "content",
                   "valueMarkdown": "De datum waarop de DOS score is vastgelegd."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -213,13 +213,12 @@
         ]
       },
       {
-        "id": "Dosscore.DozesOff",
-        "path": "Dosscore.DozesOff",
+        "id": "DOSScore.DozesOff",
+        "path": "DOSScore.DozesOff",
         "short": "DozesOff",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -229,7 +228,8 @@
                   "url": "content",
                   "valueMarkdown": "ZaktWeg"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -237,7 +237,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -247,7 +246,8 @@
                   "url": "content",
                   "valueMarkdown": "DOS observatie: patiënt zakt weg tijdens gesprek of bezigheden.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -260,13 +260,12 @@
         ]
       },
       {
-        "id": "Dosscore.EasilyDistracted",
-        "path": "Dosscore.EasilyDistracted",
+        "id": "DOSScore.EasilyDistracted",
+        "path": "DOSScore.EasilyDistracted",
         "short": "EasilyDistracted",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -276,7 +275,8 @@
                   "url": "content",
                   "valueMarkdown": "SnelAfgeleid"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -284,7 +284,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -294,7 +293,8 @@
                   "url": "content",
                   "valueMarkdown": "DOS observatie: patiënt is snel afgeleid door prikkels uit de omgeving.\r\n\r\nIemand is snel afgeleid door prikkels uit de omgeving wanneer hij/zij verbaal of nonverbaal reageert op geluiden of bewegingen die geen betrekking op hem/haar hebben en die van dien aard zijn dat je geen reactie van hem/haar zou verwachten.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -307,13 +307,12 @@
         ]
       },
       {
-        "id": "Dosscore.MaintainsAttention",
-        "path": "Dosscore.MaintainsAttention",
+        "id": "DOSScore.MaintainsAttention",
+        "path": "DOSScore.MaintainsAttention",
         "short": "MaintainsAttention",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -323,7 +322,8 @@
                   "url": "content",
                   "valueMarkdown": "HeeftAandacht"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -331,7 +331,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -341,7 +340,8 @@
                   "url": "content",
                   "valueMarkdown": "DOS observatie: patiënt heeft aandacht voor gesprek of handeling.\r\n\r\nIemand heeft aandacht voor gesprek of handeling als hij /zij verbaal of nonverbaal blijk geeft het gesprek of de handeling te volgen.\r\n\r\nScore:\r\n1: nooit\r\n0: soms-altijd\r\n-: weet niet"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -354,13 +354,12 @@
         ]
       },
       {
-        "id": "Dosscore.UnfinishedQuestionAnswer",
-        "path": "Dosscore.UnfinishedQuestionAnswer",
+        "id": "DOSScore.UnfinishedQuestionAnswer",
+        "path": "DOSScore.UnfinishedQuestionAnswer",
         "short": "UnfinishedQuestionAnswer",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -370,7 +369,8 @@
                   "url": "content",
                   "valueMarkdown": "VraagAntwoordNietAf"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -378,7 +378,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -388,7 +387,8 @@
                   "url": "content",
                   "valueMarkdown": "DOS observatie: patiënt maakt vraag of antwoord niet af.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -401,13 +401,12 @@
         ]
       },
       {
-        "id": "Dosscore.AnswersNoFit",
-        "path": "Dosscore.AnswersNoFit",
+        "id": "DOSScore.AnswersNoFit",
+        "path": "DOSScore.AnswersNoFit",
         "short": "AnswersNoFit",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -417,7 +416,8 @@
                   "url": "content",
                   "valueMarkdown": "AntwoordenNietPassend"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -425,7 +425,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -435,7 +434,8 @@
                   "url": "content",
                   "valueMarkdown": "DOS observatie: patiënt geeft antwoorden die niet passen bij de vraag.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -448,13 +448,12 @@
         ]
       },
       {
-        "id": "Dosscore.ReactsSlowly",
-        "path": "Dosscore.ReactsSlowly",
+        "id": "DOSScore.ReactsSlowly",
+        "path": "DOSScore.ReactsSlowly",
         "short": "ReactsSlowly",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -464,7 +463,8 @@
                   "url": "content",
                   "valueMarkdown": "ReageertTraag"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -472,7 +472,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -482,7 +481,8 @@
                   "url": "content",
                   "valueMarkdown": "DOS observatie: patiënt reageert traag op opdrachten.\r\n\r\nIemand reageert traag op opdrachten wanneer het handelen is vertraagd en/of er momenten van stilte/inactiviteit zijn voordat tot handelen wordt overgegaan.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -495,13 +495,12 @@
         ]
       },
       {
-        "id": "Dosscore.ThinksSomewhereElse",
-        "path": "Dosscore.ThinksSomewhereElse",
+        "id": "DOSScore.ThinksSomewhereElse",
+        "path": "DOSScore.ThinksSomewhereElse",
         "short": "ThinksSomewhereElse",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -511,7 +510,8 @@
                   "url": "content",
                   "valueMarkdown": "DenktErgensAnders"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -519,7 +519,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -529,7 +528,8 @@
                   "url": "content",
                   "valueMarkdown": "DOS observatie: patiënt denkt ergens anders te zijn.\r\n\r\nIemand denkt ergens anders te zijn als hij/zij in woorden of handelen dit laat blijken.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -542,13 +542,12 @@
         ]
       },
       {
-        "id": "Dosscore.KnowsPartDay",
-        "path": "Dosscore.KnowsPartDay",
+        "id": "DOSScore.KnowsPartDay",
+        "path": "DOSScore.KnowsPartDay",
         "short": "KnowsPartDay",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -558,7 +557,8 @@
                   "url": "content",
                   "valueMarkdown": "BeseftDagdeel"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -566,7 +566,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -576,7 +575,8 @@
                   "url": "content",
                   "valueMarkdown": "DOS observatie: patiënt beseft wel welk dagdeel het is.\r\n\r\nIemand beseft welk dagdeel het is als hij/zij in woorden of handelen dit laat blijken.\r\n\r\nScore:\r\n1: nooit\r\n0: soms-altijd\r\n-: weet niet"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -589,13 +589,12 @@
         ]
       },
       {
-        "id": "Dosscore.RemembersRecent",
-        "path": "Dosscore.RemembersRecent",
+        "id": "DOSScore.RemembersRecent",
+        "path": "DOSScore.RemembersRecent",
         "short": "RemembersRecent",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -605,7 +604,8 @@
                   "url": "content",
                   "valueMarkdown": "HerinnertRecent"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -613,7 +613,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -623,7 +622,8 @@
                   "url": "content",
                   "valueMarkdown": "DOS observatie: patiënt herinnert zich recente gebeurtenis.\r\n\r\nIemand herinnert zich recente gebeurtenissen wanneer hij/zij bijvoorbeeld juist kan vertellen of er bezoek is geweest of wat hij/zij gegeten heeft.\r\n\r\nScore:\r\n1: nooit\r\n0: soms-altijd\r\n-: weet niet"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -636,13 +636,12 @@
         ]
       },
       {
-        "id": "Dosscore.Restless",
-        "path": "Dosscore.Restless",
+        "id": "DOSScore.Restless",
+        "path": "DOSScore.Restless",
         "short": "Restless",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -652,7 +651,8 @@
                   "url": "content",
                   "valueMarkdown": "Rusteloos"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -660,7 +660,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -670,7 +669,8 @@
                   "url": "content",
                   "valueMarkdown": "DOS observatie: patiënt is plukkerig, rommelig, rusteloos.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -683,13 +683,12 @@
         ]
       },
       {
-        "id": "Dosscore.PullsWires",
-        "path": "Dosscore.PullsWires",
+        "id": "DOSScore.PullsWires",
+        "path": "DOSScore.PullsWires",
         "short": "PullsWires",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -699,7 +698,8 @@
                   "url": "content",
                   "valueMarkdown": "TrektDraden"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -707,7 +707,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -717,7 +716,8 @@
                   "url": "content",
                   "valueMarkdown": "DOS observatie: patiënt trekt aan infuus, sonde, catheter, enz.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -730,13 +730,12 @@
         ]
       },
       {
-        "id": "Dosscore.EasilyEmotional",
-        "path": "Dosscore.EasilyEmotional",
+        "id": "DOSScore.EasilyEmotional",
+        "path": "DOSScore.EasilyEmotional",
         "short": "EasilyEmotional",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -746,7 +745,8 @@
                   "url": "content",
                   "valueMarkdown": "SnelGeemotioneerd"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -754,7 +754,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -764,7 +763,8 @@
                   "url": "content",
                   "valueMarkdown": "DOS observatie: patiënt is snel of plotseling geëmotioneerd.\r\n\r\nIemand is snel of plotseling geëmotioneerd wanneer hij/zij reageert met een heftige emotie zonder aanleiding of wanneer de heftigheid van de emotie niet in overeenstemming lijkt met de aanleiding.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -777,13 +777,12 @@
         ]
       },
       {
-        "id": "Dosscore.Hallucinations",
-        "path": "Dosscore.Hallucinations",
+        "id": "DOSScore.Hallucinations",
+        "path": "DOSScore.Hallucinations",
         "short": "Hallucinations",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -793,7 +792,8 @@
                   "url": "content",
                   "valueMarkdown": "Hallucinaties"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -801,7 +801,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -811,7 +810,8 @@
                   "url": "content",
                   "valueMarkdown": "DOS observatie: patiënt ziet/hoort dingen die er niet zijn.\r\n\r\nIemand ziet/hoort dingen die er niet zijn wanneer hij/zij hiervan verbaal (navragen!) of nonverbaal blijk geeft.\r\n\r\nScore:\r\n0: nooit\r\n1: soms-altijd\r\n-: weet niet"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -824,13 +824,12 @@
         ]
       },
       {
-        "id": "Dosscore.Comment",
-        "path": "Dosscore.Comment",
+        "id": "DOSScore.Comment",
+        "path": "DOSScore.Comment",
         "short": "Comment",
         "_short": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -840,7 +839,8 @@
                   "url": "content",
                   "valueMarkdown": "Toelichting"
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
@@ -848,7 +848,6 @@
         "_definition": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
               "extension": [
                 {
                   "url": "lang",
@@ -858,7 +857,8 @@
                   "url": "content",
                   "valueMarkdown": "Toelichting op de DOS score."
                 }
-              ]
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/translation"
             }
           ]
         },
