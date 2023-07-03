@@ -28,7 +28,7 @@ Status: status
      <button class="tablinks" onclick="openTab(event, 'Detailed descriptions')">Detailed Descriptions</button>
      <button class="tablinks" onclick="openTab(event, 'Example')">Example</button>
      <button class="tablinks" onclick="openTab(event, 'Zib diff')">Zib diff</button>
-     <button class="tablinks">{{{{pagelink:Home/FHIR/{CBB.id}.page.md, text:FHIR profile}}}}</button>
+     <button class="tablinks">{{pagelink:Home/FHIR/HdBe-MedicalDevice.page.md, text:FHIR profile}}</button>
   </div>
 
   <div id="Rendered view" class="tabcontent" style="display:block">
