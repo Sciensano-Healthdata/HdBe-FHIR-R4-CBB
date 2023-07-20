@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-HealthProfessional-Practitioner" />
   <meta>
-    <lastUpdated value="2023-06-12T15:08:36.3906048+00:00" />
+    <lastUpdated value="2023-07-04T07:54:23.8132429+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner" />
   <name value="HdBeHealthProfessionalPractitioner" />
@@ -122,18 +122,6 @@
         <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation" />
       </type>
     </element>
-    <element id="Practitioner.name:nameInformation.extension">
-      <path value="Practitioner.name.extension" />
-      <min value="0" />
-    </element>
-    <element id="Practitioner.name:nameInformation.family.extension">
-      <path value="Practitioner.name.family.extension" />
-      <min value="0" />
-    </element>
-    <element id="Practitioner.name:nameInformation.given.extension">
-      <path value="Practitioner.name.given.extension" />
-      <min value="1" />
-    </element>
     <element id="Practitioner.name:nameInformation-GivenName">
       <path value="Practitioner.name" />
       <sliceName value="nameInformation-GivenName" />
@@ -166,10 +154,6 @@
         <map value="HealthProfessional.ContactInformation" />
       </mapping>
     </element>
-    <element id="Practitioner.telecom.extension">
-      <path value="Practitioner.telecom.extension" />
-      <min value="0" />
-    </element>
     <element id="Practitioner.address">
       <path value="Practitioner.address" />
       <definition value="Health professional’s address information." />
@@ -186,18 +170,6 @@
         <identity value="HdBe-HealthProfessional" />
         <map value="HealthProfessional.AddressInformation" />
       </mapping>
-    </element>
-    <element id="Practitioner.address.extension">
-      <path value="Practitioner.address.extension" />
-      <min value="1" />
-    </element>
-    <element id="Practitioner.address.line.extension">
-      <path value="Practitioner.address.line.extension" />
-      <min value="0" />
-    </element>
-    <element id="Practitioner.address.country.extension">
-      <path value="Practitioner.address.country.extension" />
-      <min value="0" />
     </element>
     <element id="Practitioner.gender">
       <path value="Practitioner.gender" />
@@ -223,14 +195,9 @@
         <map value="HealthProfessional.Gender" />
       </mapping>
     </element>
-    <element id="Practitioner.gender.extension">
-      <path value="Practitioner.gender.extension" />
-      <min value="0" />
-    </element>
     <element id="Practitioner.gender.extension:gender">
       <path value="Practitioner.gender.extension" />
       <sliceName value="gender" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.healthdata.be/StructureDefinition/ext-CodeSpecification" />

@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-Patient" />
   <meta>
-    <lastUpdated value="2023-06-12T15:09:16.5598446+00:00" />
+    <lastUpdated value="2023-07-04T07:55:06.5531962+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
   <name value="HdBePatient" />
@@ -101,28 +101,18 @@
         <map value="Patient" />
       </mapping>
     </element>
-    <element id="Patient.extension">
-      <path value="Patient.extension" />
-      <min value="0" />
-    </element>
     <element id="Patient.extension:nationality">
       <path value="Patient.extension" />
       <sliceName value="nationality" />
       <comment value="Due to the nature of the nationality core extension (which allows for a period to be placed next to the nationality and thus allows for different nationalities over time), the cardinality of the extension is left at 0..* instead of the CBB cardinality of 0..1." />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/patient-nationality" />
       </type>
     </element>
-    <element id="Patient.extension:nationality.extension">
-      <path value="Patient.extension.extension" />
-      <min value="0" />
-    </element>
     <element id="Patient.extension:nationality.extension:code">
       <path value="Patient.extension.extension" />
       <sliceName value="code" />
-      <min value="0" />
     </element>
     <element id="Patient.extension:nationality.extension:code.value[x]">
       <path value="Patient.extension.extension.value[x]" />
@@ -205,18 +195,6 @@
         <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-NameInformation" />
       </type>
     </element>
-    <element id="Patient.name:nameInformation.extension">
-      <path value="Patient.name.extension" />
-      <min value="0" />
-    </element>
-    <element id="Patient.name:nameInformation.family.extension">
-      <path value="Patient.name.family.extension" />
-      <min value="0" />
-    </element>
-    <element id="Patient.name:nameInformation.given.extension">
-      <path value="Patient.name.given.extension" />
-      <min value="1" />
-    </element>
     <element id="Patient.name:nameInformation-GivenName">
       <path value="Patient.name" />
       <sliceName value="nameInformation-GivenName" />
@@ -249,10 +227,6 @@
         <comment value="ContactInformation" />
       </mapping>
     </element>
-    <element id="Patient.telecom.extension">
-      <path value="Patient.telecom.extension" />
-      <min value="0" />
-    </element>
     <element id="Patient.gender">
       <path value="Patient.gender" />
       <short value="Gender" />
@@ -277,14 +251,9 @@
         <comment value="Gender" />
       </mapping>
     </element>
-    <element id="Patient.gender.extension">
-      <path value="Patient.gender.extension" />
-      <min value="0" />
-    </element>
     <element id="Patient.gender.extension:genderCodelist">
       <path value="Patient.gender.extension" />
       <sliceName value="genderCodelist" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -402,18 +371,6 @@
         <comment value="AddressInformation" />
       </mapping>
     </element>
-    <element id="Patient.address.extension">
-      <path value="Patient.address.extension" />
-      <min value="1" />
-    </element>
-    <element id="Patient.address.line.extension">
-      <path value="Patient.address.line.extension" />
-      <min value="0" />
-    </element>
-    <element id="Patient.address.country.extension">
-      <path value="Patient.address.country.extension" />
-      <min value="0" />
-    </element>
     <element id="Patient.maritalStatus">
       <path value="Patient.maritalStatus" />
       <short value="MaritalStatus" />
@@ -500,14 +457,9 @@
         <map value="Contact" />
       </mapping>
     </element>
-    <element id="Patient.contact.extension">
-      <path value="Patient.contact.extension" />
-      <min value="0" />
-    </element>
     <element id="Patient.contact.extension:contactPerson">
       <path value="Patient.contact.extension" />
       <sliceName value="contactPerson" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -604,18 +556,6 @@
         <map value="NameInformation" />
       </mapping>
     </element>
-    <element id="Patient.contact.name.extension">
-      <path value="Patient.contact.name.extension" />
-      <min value="0" />
-    </element>
-    <element id="Patient.contact.name.family.extension">
-      <path value="Patient.contact.name.family.extension" />
-      <min value="0" />
-    </element>
-    <element id="Patient.contact.name.given.extension">
-      <path value="Patient.contact.name.given.extension" />
-      <min value="1" />
-    </element>
     <element id="Patient.contact.telecom">
       <path value="Patient.contact.telecom" />
       <short value="ContactInformation" />
@@ -640,10 +580,6 @@
         <map value="ContactInformation" />
       </mapping>
     </element>
-    <element id="Patient.contact.telecom.extension">
-      <path value="Patient.contact.telecom.extension" />
-      <min value="0" />
-    </element>
     <element id="Patient.contact.address">
       <path value="Patient.contact.address" />
       <definition value="Contact’s address information." />
@@ -661,18 +597,6 @@
         <identity value="HdBe-ContactPerson" />
         <map value="AddressInformation" />
       </mapping>
-    </element>
-    <element id="Patient.contact.address.extension">
-      <path value="Patient.contact.address.extension" />
-      <min value="1" />
-    </element>
-    <element id="Patient.contact.address.line.extension">
-      <path value="Patient.contact.address.line.extension" />
-      <min value="0" />
-    </element>
-    <element id="Patient.contact.address.country.extension">
-      <path value="Patient.contact.address.country.extension" />
-      <min value="0" />
     </element>
   </differential>
 </StructureDefinition>

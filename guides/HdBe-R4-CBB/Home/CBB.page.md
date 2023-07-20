@@ -435,3 +435,8 @@ topic: cbb_index
 </table>
   </div>
 </div>
+
+## CBB development progression
+There are 44/102 CBBs ready to use with the following maturity levels:
+{{render:guides/HdBe-R4-CBB/Home/LogicalModels/bar_chart.png}}
+
