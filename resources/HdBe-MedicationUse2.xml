@@ -54,14 +54,9 @@
         <map value="MedicationUse2" />
       </mapping>
     </element>
-    <element id="MedicationStatement.extension">
-      <path value="MedicationStatement.extension" />
-      <min value="0" />
-    </element>
     <element id="MedicationStatement.extension:renderedDosageInstruction">
       <path value="MedicationStatement.extension" />
       <sliceName value="renderedDosageInstruction" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.healthdata.be/StructureDefinition/ext-RenderedDosageInstruction" />
@@ -77,7 +72,6 @@
     <element id="MedicationStatement.extension:prescriber">
       <path value="MedicationStatement.extension" />
       <sliceName value="prescriber" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -94,7 +88,6 @@
     <element id="MedicationStatement.extension:asAgreedIndicator">
       <path value="MedicationStatement.extension" />
       <sliceName value="asAgreedIndicator" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -108,14 +101,9 @@
         <map value="MedicationUse2.AsAgreedIndicator" />
       </mapping>
     </element>
-    <element id="MedicationStatement.modifierExtension">
-      <path value="MedicationStatement.modifierExtension" />
-      <min value="0" />
-    </element>
     <element id="MedicationStatement.modifierExtension:stopType">
       <path value="MedicationStatement.modifierExtension" />
       <sliceName value="stopType" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.healthdata.be/StructureDefinition/ext-StopType" />
@@ -138,7 +126,6 @@
     <element id="MedicationStatement.modifierExtension:repeatPeriodCyclicalSchedule">
       <path value="MedicationStatement.modifierExtension" />
       <sliceName value="repeatPeriodCyclicalSchedule" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.healthdata.be/StructureDefinition/ext-InstructionsForUse.RepeatPeriodCyclicalSchedule" />
@@ -296,10 +283,6 @@
         <map value="MedicationUse2.PeriodOfUse" />
       </mapping>
     </element>
-    <element id="MedicationStatement.effective[x]:effectivePeriod.extension">
-      <path value="MedicationStatement.effective[x].extension" />
-      <min value="0" />
-    </element>
     <element id="MedicationStatement.dateAsserted">
       <path value="MedicationStatement.dateAsserted" />
       <short value="MedicationUseDateTime" />
@@ -383,10 +366,6 @@
         <identity value="HdBe-MedicationUse2" />
         <map value="MedicationUse2.InstructionsForUse" />
       </mapping>
-    </element>
-    <element id="MedicationStatement.dosage.timing.repeat.extension">
-      <path value="MedicationStatement.dosage.timing.repeat.extension" />
-      <min value="0" />
     </element>
   </differential>
 </StructureDefinition>

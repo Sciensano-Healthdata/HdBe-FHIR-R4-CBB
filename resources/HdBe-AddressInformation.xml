@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-AddressInformation" />
   <meta>
-    <lastUpdated value="2023-05-08T17:10:13.4826628+00:00" />
+    <lastUpdated value="2023-07-04T07:53:49.610033+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-AddressInformation" />
   <name value="HdBeAddressInformation" />
@@ -58,7 +58,6 @@
     <element id="Address.extension:language">
       <path value="Address.extension" />
       <sliceName value="language" />
-      <min value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/language" />
@@ -99,14 +98,9 @@
       <path value="Address.line" />
       <comment value="The elements of Address stored in the address-part extensions will be ignored by applications that do not support them, so any information in them should also be duplicated in the `Address.line` to which they are attached. The value of `Address.line` should be populated with a complete string representation of all the separate extension values, like: &quot;[Street] [HouseNumberIndication] [HouseNumber] [HouseNumberLetter] [HouseNumberAddition]&quot;." />
     </element>
-    <element id="Address.line.extension">
-      <path value="Address.line.extension" />
-      <min value="0" />
-    </element>
     <element id="Address.line.extension:streetName">
       <path value="Address.line.extension" />
       <sliceName value="streetName" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -131,7 +125,6 @@
     <element id="Address.line.extension:houseNumber">
       <path value="Address.line.extension" />
       <sliceName value="houseNumber" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -156,7 +149,6 @@
     <element id="Address.line.extension:houseNumberLetter-houseNumberAddition">
       <path value="Address.line.extension" />
       <sliceName value="houseNumberLetter-houseNumberAddition" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -191,7 +183,6 @@
     <element id="Address.line.extension:houseNumberIndication">
       <path value="Address.line.extension" />
       <sliceName value="houseNumberIndication" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -223,7 +214,6 @@
     <element id="Address.line.extension:additionalInformation">
       <path value="Address.line.extension" />
       <sliceName value="additionalInformation" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -293,14 +283,9 @@
       <path value="Address.country" />
       <comment value="The FHIR datatype does not properly support coding the country using a CodeableConcept or Coding datatype. If the sender supports coded countries, it SHALL send the coded value using the CodeSpecification extension under `Address.country.extension:countryCode`." />
     </element>
-    <element id="Address.country.extension">
-      <path value="Address.country.extension" />
-      <min value="0" />
-    </element>
     <element id="Address.country.extension:countryCode">
       <path value="Address.country.extension" />
       <sliceName value="countryCode" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
