@@ -21,12 +21,17 @@
   <status value="draft"/>
   <experimental value="false"/>
   <publisher value="Healthdata.be (Sciensano)"/>
-  <description value="ICD-O-3 - International Classification of Diseases for Oncology, version 3 (Morphology codes)"/>
+  <description value="MorphologyCodelist"/>
   <immutable value="false"/>
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
   <compose>
     <include>
-      <system value="urn:oid:2.16.840.1.113883.6.43.1"/>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="49755003"/>
+      </filter>
     </include>
   </compose>
 </ValueSet>

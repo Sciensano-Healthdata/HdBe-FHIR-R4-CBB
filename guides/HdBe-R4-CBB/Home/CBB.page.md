@@ -83,7 +83,7 @@ topic: cbb_index
       <td>{{pagelink:EN.HdBe-Respiration, text:Respiration}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
     </tr>
     <tr>
-      <td>{{pagelink:EN.HdBe-AdministrationAgreement, text:AdministrationAgreement}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:EN.HdBe-AdministrationAgreement, text:AdministrationAgreement}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
       <td>{{pagelink:EN.HdBe-FamilyHistory, text:FamilyHistory}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
       <td>{{pagelink:EN.HdBe-MedicationAdministration2, text:MedicationAdministration2}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
       <td>{{pagelink:EN.HdBe-SkinDisorder, text:SkinDisorder}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
@@ -322,7 +322,7 @@ topic: cbb_index
     <tr>
       <td>{{pagelink:NL.HdBe-Darmfunctie, text:Darmfunctie}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
       <td>{{pagelink:NL.HdBe-Medicatieverstrekking, text:Medicatieverstrekking}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
-      <td>{{pagelink:NL.HdBe-Toedieningsafspraak, text:Toedieningsafspraak}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
+      <td>{{pagelink:NL.HdBe-Toedieningsafspraak, text:Toedieningsafspraak}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">0</a></td>
       <td>{{pagelink:NL.HdBe-Zorgaanbieder, text:Zorgaanbieder}} <a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/Guidance/ProfilingGuidelines.page.md?version=current#CBB-MM">1</a></td>
     </tr>
     <tr>
@@ -437,6 +437,6 @@ topic: cbb_index
 </div>
 
 ## CBB development progression
-There are 44/102 CBBs ready to use with the following maturity levels:
+There are 43/102 CBBs ready to use with the following maturity levels:
 {{render:guides/HdBe-R4-CBB/Home/LogicalModels/bar_chart.png}}
 
