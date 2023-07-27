@@ -244,6 +244,25 @@ html, body {
       font-weight: bold;
   }
   
+    /*Make FQL generated tables prettier... ugly/hacky CSS though*/
+    #ig-editor table.scrollbar td:not(:last-child), #ig-editor table.scrollbar th:not(:last-child), #ig-viewer table.scrollbar td:not(:last-child), #ig-viewer table.scrollbar th:not(:last-child), #preview-content table.scrollbar td:not(:last-child), #preview-content table.scrollbar th:not(:last-child), .rendered-resource table.scrollbar td:not(:last-child), .rendered-resource table.scrollbar th:not(:last-child){
+        border: 0px
+    }
+
+    .table-bordered, .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+        border: 0px solid #ddd;
+    }
+
+    #ig-editor table.scrollbar tbody td, #ig-viewer table.scrollbar tbody td, #preview-content table.scrollbar tbody td, .rendered-resource table.scrollbar tbody td {
+        background-color:transparent;
+    }
+
+    #ig-editor table.scrollbar, #ig-viewer table.scrollbar, #preview-content table.scrollbar, .rendered-resource table.scrollbar {
+        border: 0px solid #e0e0e0;
+        display: table!important;
+    }
+    /*End of prettify FQL tables. */
+
   /*standard table class for tables in html code*/
   table.standard-html{
       table-layout: fixed;
