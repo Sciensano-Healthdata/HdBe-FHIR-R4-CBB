@@ -403,7 +403,7 @@ Examples of CBBd are not conformant to FHIR, and are therefore not represented i
 ```
 | Encounter                             |                   |
 |---------------------------------------|-------------------|        
-| ContactType	                        | CT0005 - Inpatient (code by Healtdata.Be (Sciensano)) |                   
+| ContactType	                        | CT0005 - Inpatient (code by healtdata.be (Sciensano)) |                   
 | ContactWith                           | Reference to HealthProfessional (E. Penninx) |
 | Location	                            | Reference to HealthcareProvider (GRAND HOPITAL DE CHARLEROI - SAINT-JOSEPH) |
 | StartDateTime                         | 2012-08-16T08:30:00 |
