@@ -7,4 +7,6 @@
 |`PatientIdentificationNumber` | textual | Replaced the Dutch context (BSN) with the Belgian equivalent (NISS-INSZ). |
 |`DateOfBirth` | textual | Removed text regarding mandatory date of birth. |
 |`Gender` | textual | Extended definition to clarify that the concept is about administrative gender rather then the patient's identified sex.  |
-|`MultipleBirthOrder` | element | Added element which defines the order of birth. Although reported for inclusion in the zibs [ZIB-1670](https://bits.nictiz.nl/browse/ZIB-1670)|, it has been deemed to specific. It does however apply for the use cases within Sciensano and is therefore added to the CBB.   
+|`MultipleBirthOrder` | element | Added element which defines the order of birth. Although reported for inclusion in the zibs [ZIB-1670](https://bits.nictiz.nl/browse/ZIB-1670), it has been deemed to specific. It does however apply for the use cases within Sciensano and is therefore added to the CBB.   
+|`MultipleBirthIndicator` | type |  Changed type from boolean to CodeableConcept to bind a ValueSet that contains appropriate Snomed code for yes/true and the '0' code as defined by healthdata.be (Sciensano) codesystem as this is what is currently in use.
+|`DeathIndicator` | type | Changed type from boolean to CodeableConcept to bind a ValueSet that contains appropriate Snomed codes for yes/true and no/false because this is what is currently in use.   

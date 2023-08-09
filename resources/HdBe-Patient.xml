@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-Patient" />
   <meta>
-    <lastUpdated value="2023-07-04T07:55:06.5531962+00:00" />
+    <lastUpdated value="2023-08-09T14:17:23.3524791+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
   <name value="HdBePatient" />
@@ -310,6 +310,7 @@
       <sliceName value="deceasedBoolean" />
       <short value="DeathIndicator" />
       <definition value="An indication stating whether the patient has died." />
+      <comment value="Mapping of CBB values:&#xD;&#xA;* `419099009` - Dead (code by SNOMED CT) maps to `false`&#xD;&#xA;* `438949009` - Alive (code by SNOMED CT) maps to `true`" />
       <alias value="OverlijdensIndicator" />
       <type>
         <code value="boolean" />
@@ -410,6 +411,7 @@
       <sliceName value="multipleBirthBoolean" />
       <short value="MultipleBirthIndicator" />
       <definition value="An indication stating whether the patient is of a multiple birth." />
+      <comment value="Mapping of CBB values:&#xD;&#xA;* `45384004` - Multiple birth (code by SNOMED CT) maps to `true`&#xD;&#xA;* `0` - No (code by healthdata.be (Sciensano)) maps to `false`" />
       <alias value="MeerlingIndicator" />
       <type>
         <code value="boolean" />

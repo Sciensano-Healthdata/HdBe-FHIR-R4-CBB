@@ -7,7 +7,7 @@
 | PatientIdentificationNumber | 41.07.21.00.284 (SSIN)
 | DateOfBirth | 1941-07-21
 | Gender | 248152002 - Female (code by SNOMED CT)  
-| MultipleBirthIndicator | false
+| MultipleBirthIndicator | 0 (code by healthdata.be (Sciensano))
 | MultipleBirthOrder | 
-| DeathIndicator |false
+| DeathIndicator |438949009 - Alive  (code by SNOMED CT)  
 | DateOfDeath |
