@@ -11,7 +11,7 @@
 | **InsuranceCompany.Insurance**	            | ---
 | InsuranceCompany.Insurance.StartDateTime	| 01-01-2012
 | InsuranceCompany.Insurance.EndDateTime		| 31-12-2012
-| InsuranceCompany.Insurance.InsuranceType	| IT0001 - basis (verplichte ziekteverzekering) (code by Healthdata.be (Sciensano))
+| InsuranceCompany.Insurance.InsuranceType	| IT0001 - basis (verplichte ziekteverzekering) (code by healthdata.be (Sciensano))
 | InsuranceCompany.IdentificationNumber		| 235
 | InsuranceCompany.OrganizationName		    | Neutraal ziekenfonds Vlaanderen  
 | InsuranceCompany.InsurantNumber		        | 12345678

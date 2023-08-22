@@ -10,8 +10,8 @@
       }
     },
     {
-      "url" : "https://fhir.healthdata.be/StructureDefinition/ext-CBB-MM",
-      "valueInteger" : 1
+      "url": "https://fhir.healthdata.be/StructureDefinition/ext-CBB-MM",
+      "valueInteger": 1
     }
   ],
   "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-Patient",
@@ -737,9 +737,17 @@
         "max": "1",
         "type": [
           {
-            "code": "boolean"
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/CodeableConcept"
+            ]
           }
-        ]
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "MultipleBirthIndicator codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/MultipleBirthIndicator"
+        }
       },
       {
         "id": "Patient.MultipleBirthOrder",
@@ -856,9 +864,17 @@
         "max": "1",
         "type": [
           {
-            "code": "boolean"
+            "code": "CodeableConcept",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/CodeableConcept"
+            ]
           }
-        ]
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "DeathIndicator codes",
+          "valueSet": "https://fhir.healthdata.be/ValueSet/DeathIndicator"
+        }
       },
       {
         "id": "Patient.DateOfDeath",

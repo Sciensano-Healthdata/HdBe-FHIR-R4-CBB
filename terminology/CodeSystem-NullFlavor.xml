@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-  <id value="CodeSystem-HouseNumberIndication" />
+  <id value="CodeSystem-NullFlavor" />
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem" />
   </meta>
@@ -10,13 +10,13 @@
       <start value="2020-09-01T00:00:00+02:00" />
     </valuePeriod>
   </extension>
-  <url value="https://fhir.healthdata.be/CodeSystem/HouseNumberIndication" />
+  <url value="https://fhir.healthdata.be/CodeSystem/NullFlavor" />
   <version value="2020-09-01T00:00:00" />
-  <name value="HouseNumberIndication" />
-  <title value="HouseNumberIndication" />
+  <name value="NullFlavor" />
+  <title value="NullFlavor" />
   <status value="draft" />
   <experimental value="false" />
-  <date value="2022-07-07T11:50:14.7966344+00:00" />
+  <date value="2023-07-07T11:50:14.7966344+00:00" />
   <publisher value="Healthdata.be (Sciensano)" />
   <contact>
     <name value="Service portal – healthdata.be" />
@@ -26,15 +26,15 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="HouseNumberIndication" />
-  <purpose value="This CodeSystem is developed to define concepts that were not available in SNOMED International at the time of implementation of these codes. If a matching SNOMED code is available in the ValueSet, the SNOMED code should preferably be used instead of the code in this CodeSystem." />
+  <description value="NullFlavor" />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <caseSensitive value="false" />
   <content value="complete" />
-  <count value="4" />
+  <count value="2" />
   <concept>
-    <code value="HI0001" />
-    <display value="To" />
+    <code value="999" />
+    <display value="Missing data" />
+    <definition value="Missing data" />
     <designation>
           <language value="nl-BE"/>
           <use>
@@ -42,12 +42,22 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
           </use>
-          <value value="tegenover"/>
+          <value value="Ontbrekende data"/>
     </designation>
+    <designation>
+      <language value="fr-BE"/>
+      <use>
+        <system value="http://snomed.info/sct"/>
+        <code value="900000000000013009"/>
+        <display value="Synonym"/>
+      </use>
+      <value value="Donnée manquante"/>
+   </designation>
   </concept>
-    <concept>
-    <code value="HI0002" />
-    <display value="By" />
+  <concept>
+    <code value="9999" />
+    <display value="Residence not in Belgium" />
+    <definition value="Residence not in Belgium" />
     <designation>
           <language value="nl-BE"/>
           <use>
@@ -55,8 +65,16 @@
             <code value="900000000000013009"/>
             <display value="Synonym"/>
           </use>
-          <value value="bij"/>
+          <value value="Woonplaats niet in België"/>
+    </designation>
+    <designation>
+      <language value="fr-BE"/>
+      <use>
+        <system value="http://snomed.info/sct"/>
+        <code value="900000000000013009"/>
+        <display value="Synonym"/>
+      </use>
+      <value value="Résidence pas en Belgique"/>
     </designation>
   </concept>
-  
 </CodeSystem>

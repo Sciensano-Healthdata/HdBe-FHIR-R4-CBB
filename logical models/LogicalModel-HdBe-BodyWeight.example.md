@@ -5,14 +5,14 @@
 | WeightValue     | 68 kg             |
 | Comment          |                   |
 | WeightDateTime | 2022-01-02        |
-| Clothing        | CL0002 - Fully dressed (code by healthdata.Be (Sciensano)) |
+| Clothing        | CL0002 - Fully dressed (code by healthdata.be (Sciensano)) |
 
 | BodyWeight      |                   |
 |------------------|-------------------|
 | WeightValue     | 58 kg             |
 | Comment          | right leg amputated below the knee |
 | WeightDateTime | 2021-11-30        |
-| Clothing        | CL0001 - Minimally dressed (code by healthdata.Be (Sciensano)) |
+| Clothing        | CL0001 - Minimally dressed (code by healthdata.be (Sciensano)) |
 
 | BodyWeight      |                   |
 |------------------|-------------------|
