@@ -13,3 +13,5 @@
 | `interpretation.resultFlags` | textual | Removed notion of 'Resistent', 'Intermediate' and 'Susceptible' codes in definition.
 | `referenceRange.text` | mapping | Added mapping to ReferenceRangeLowerLimit and ReferenceRangeUpperLimit for when the quantaty datatype does not suffice.|
 | `basedOn` | mapping | Added mapping to a new profile on ServiceRequest to implement the requester element of the CBB/zib. Although this element does not provide enough information to create a profile that describes a full ordering service, it will provide details on capturing a requester in FHIR. |
+| `hasMember` | slice | Add mapping slice on Observation.hasMember to povide extra guidance on panels/clusters |
+|`dlaberatoryCategory`| cardinality | Restrain cardinality from 1..* to 1..1 |
