@@ -42,7 +42,7 @@
         <key value="hdbe-NursingIntervention-01" />
         <severity value="error" />
         <human value="The start and/or end date of a repeating schedule should be communicated in CarePlan.encounter as well." />
-        <expression value="activity.detail.scheduledTiming.repeat.boundsPeriod.exists() implies (period = activity.detail.scheduledTiming.repeat.boundsPeriod)" />
+        <expression value="activity.detail.scheduled.ofType(Timing).repeat.bounds.ofType(Period).exists() implies (period = activity.detail.scheduled.ofType(Timing).repeat.bounds.ofType(Period))" />
       </constraint>
       <mapping>
         <identity value="zib-nursingintervention-v3.2-2020EN" />
@@ -87,15 +87,15 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="$this" />
+          <path value="coding" />
         </discriminator>
         <rules value="open" />
       </slicing>
       <min value="1" />
     </element>
-    <element id="CarePlan.category:nursingIntervention">
+    <element id="CarePlan.category:nursingInterventionCode">
       <path value="CarePlan.category" />
-      <sliceName value="nursingIntervention" />
+      <sliceName value="nursingInterventionCode" />
       <min value="1" />
       <max value="1" />
       <patternCodeableConcept>
