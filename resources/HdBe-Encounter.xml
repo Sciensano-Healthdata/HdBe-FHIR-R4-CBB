@@ -89,7 +89,7 @@
       <alias value="ContactType" />
       <binding>
         <strength value="extensible" />
-        <description value="Use ConceptMap ContactType-to-ActEncounterCode to translate CBB terminology to profile terminology in ValueSet ActEncounterCode." />
+        <description value="Use ConceptMap ContactType-to-ActEncounterCode to translate CBB terminology from the functional model to profile terminology in ValueSet ActEncounterCode." />
         <valueSet value="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
             <valueCanonical value="https://fhir.healthdata.be/ConceptMap/ContactType-to-ActEncounterCode" />
@@ -126,6 +126,10 @@
       <definition value="The role the health professional fulfils in the healthcare process. For health professionals, this could be for example attender, referrer or performer." />
       <alias value="ZorgverlenerRol" />
       <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.healthdata.be/ValueSet/HealthProfessionalRole" />
+      </binding>
       <mapping>
         <identity value="zib-healthprofessional-v3.5-2020EN" />
         <map value="NL-CM:17.1.5" />
@@ -193,6 +197,57 @@
         <map value="Encounter.EndDateTime" />
       </mapping>
     </element>
+    <element id="Encounter.reasonCode">
+      <path value="Encounter.reasonCode" />
+      <slicing>
+        <discriminator>
+          <type value="exists" />
+          <path value="coding" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Encounter.reasonCode:deviatingResult">
+      <path value="Encounter.reasonCode" />
+      <sliceName value="deviatingResult" />
+    </element>
+    <element id="Encounter.reasonCode:deviatingResult.extension:commentContactReason">
+      <path value="Encounter.reasonCode.extension" />
+      <sliceName value="commentContactReason" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/ext-AnatomicalLocation.Laterality" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Encounter.reasonCode:deviatingResult.extension:commentContactReason.value[x]">
+      <path value="Encounter.reasonCode.extension.value[x]" />
+      <short value="CommentContactReason" />
+      <definition value="Explanation of the reason for the contact" />
+      <alias value="ToelichtingRedenContact" />
+      <mapping>
+        <identity value="HdBe-Encounter" />
+        <map value="NL-CM:15.1.17" />
+        <comment value="CommentContactReason" />
+      </mapping>
+    </element>
+    <element id="Encounter.reasonCode:deviatingResult.coding">
+      <path value="Encounter.reasonCode.coding" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.reasonCode:deviatingResult.text">
+      <path value="Encounter.reasonCode.text" />
+      <short value="DeviatingResult" />
+      <definition value="A deviating result or other textual explanation which serves as the reason for the contact." />
+      <comment value="Note that this definition is wider than the zib concept DeviatingResult (NL-CM:15.1.12); although the zib concept deals only with deviating results as reason for the encounter, this element could be populated with _any_ reason for the encounter, including but not limited to deviating results. Implementers should be aware of the usage context of this profile to understand if this element is limited to a deviating result." />
+      <alias value="AfwijkendeUitslag" />
+      <mapping>
+        <identity value="HdBe-Encounter" />
+        <map value="NL-CM:15.1.12" />
+        <comment value="DeviatingResult" />
+      </mapping>
+    </element>
     <element id="Encounter.reasonReference">
       <path value="Encounter.reasonReference" />
       <slicing>
@@ -203,16 +258,16 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Encounter.reasonReference.extension:comment">
+    <element id="Encounter.reasonReference.extension:commentContactReason">
       <path value="Encounter.reasonReference.extension" />
-      <sliceName value="comment" />
+      <sliceName value="commentContactReason" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.healthdata.be/StructureDefinition/ext-Comment" />
       </type>
     </element>
-    <element id="Encounter.reasonReference.extension:comment.value[x]">
+    <element id="Encounter.reasonReference.extension:commentContactReason.value[x]">
       <path value="Encounter.reasonReference.extension.value[x]" />
       <short value="CommentContactReason" />
       <definition value="Explanation of the reason for the contact" />
@@ -267,27 +322,6 @@
         <map value="Encounter.ContactReason.Procedure" />
       </mapping>
     </element>
-    <element id="Encounter.reasonReference:deviatingResult">
-      <path value="Encounter.reasonReference" />
-      <sliceName value="deviatingResult" />
-      <short value="DeviatingResult" />
-      <definition value="A deviating result which serves as the reason for the contact." />
-      <comment value="DeviatingResult is captured with a reference to the CBB LaboratoryTestResult instead of a string value as the CBB 2020 incorrectly states. This will be fixed in a future version of the CBB. At time of writing (November 2021), the proposed change can be followed in this BITS ticket: &lt;https://bits.nictiz.nl/browse/ZIB-1427&gt;." />
-      <alias value="AfwijkendeUitslag" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult" />
-      </type>
-      <mapping>
-        <identity value="zib-encounter-v4.0.1-2020EN" />
-        <map value="NL-CM:15.1.12" />
-        <comment value="DeviatingResult" />
-      </mapping>
-      <mapping>
-        <identity value="HdBe-Encounter" />
-        <map value="Encounter.ContactReason.DeviatingResult" />
-      </mapping>
-    </element>
     <element id="Encounter.hospitalization.admitSource">
       <path value="Encounter.hospitalization.admitSource" />
       <short value="Origin" />
@@ -328,7 +362,7 @@
     </element>
     <element id="Encounter.location">
       <path value="Encounter.location" />
-      <comment value="The CBB has a restricted cardinality of 0..1 for the Location concept. However, this cardianlity is propably too restricted (see &lt;https://bits.nictiz.nl/browse/ZIB-1632&gt; for discussion) and would prevent some practical use cases. Therefore, the cardinality has been left on 0..* in this profile." />
+      <max value="1" />
     </element>
     <element id="Encounter.location.location">
       <path value="Encounter.location.location" />
