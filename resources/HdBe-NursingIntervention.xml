@@ -80,7 +80,7 @@
     </element>
     <element id="CarePlan.intent">
       <path value="CarePlan.intent" />
-      <definition value="Indicates the level of authority/intentionality associated with the care plan and where the care plan fits into the workflow chain.&#xD;&#xA;&#xD;&#xA;For NursingIntervention, this will normally be _plan_, but the context may specify a more suitable intent." />
+      <comment value="For NursingIntervention, this will normally be _plan_, but the context may specify a more suitable intent." />
     </element>
     <element id="CarePlan.category">
       <path value="CarePlan.category" />
@@ -104,15 +104,6 @@
           <code value="9632001" />
         </coding>
       </patternCodeableConcept>
-    </element>
-    <element id="CarePlan.subject">
-      <path value="CarePlan.subject" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
-      </type>
     </element>
     <element id="CarePlan.period.start">
       <path value="CarePlan.period.start" />
@@ -163,7 +154,7 @@
       <alias value="Aanvrager" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner" />
       </type>
       <mapping>
@@ -430,7 +421,7 @@
       <path value="CarePlan.activity.detail.performer" />
       <slicing>
         <discriminator>
-          <type value="type" />
+          <type value="profile" />
           <path value="resolve()" />
         </discriminator>
         <rules value="open" />
