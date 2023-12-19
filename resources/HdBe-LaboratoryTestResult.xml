@@ -481,11 +481,13 @@
       <alias value="LaboratoriumTest" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MolecularSequence" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult" />
       </type>
+      <mapping>
+        <identity value="HdBe-LaboratoryTestResult" />
+        <map value="LaboratoryTestResult.LaboratoryTest" />
+        <comment value="LaboratoryTest, if these are part of a panel/cluster"/>
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
