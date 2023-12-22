@@ -19,6 +19,12 @@ issues should occur: false
       - message: None of the codings provided are in the value set 'Consent Scope Codes' (http://hl7.org/fhir/ValueSet/consent-scope), and a coding should come from this value set unless it has no suitable code
         reason: see above
 
+HdBe-BloodPressure-01:
+  ignored issues:
+    Observation.component[2].value.ofType(CodeableConcept):
+    - message: None of the codings provided are in the value set 'Vital Signs Units' (http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1), and a coding from this value set is required) (codes = http://snomed.info/sct#720737000)
+      reason: https://chat.fhir.org/#narrow/stream/179177-conformance/topic/Vitalsigns.20Profiles
+
 HdBe-AllergyIntolerance-01:
   ignored issues:
     AllergyIntolerance.code:
