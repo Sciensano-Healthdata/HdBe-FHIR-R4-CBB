@@ -209,7 +209,8 @@ In addition to the changelog for each CBB, generic changes made that span multip
 
 #### Profiles
 - `.mapping`: Mappings of extensions are moved from within the Extension profile to the host profile itself. This way, the mappings are shown in the mapping overview tab of the profile. This is because mappings in extensions are not (and will not be) included in the snapshot of the host profile. Therefore, Simplifier cannot render them. Nictiz might move in the same direction at some point [Nictiz GitHub ticket](https://github.com/Nictiz/Nictiz-R4-zib2020/issues/222).
-- `.mapping`: Mappings to the CBB logical model are included. 
+- `.mapping`: Mappings to the CBB logical model are included.
+- Direct references to the HdBe-Patient profile are included within the profiles. In the Nictiz FHIR profiles, these are situated in the nl-core layer. 
 
 #### ValueSets & ConceptMaps
 - **Deduplication of ValueSets** - As a design principle, zibs contain distinct ValueSets for every concept, even if the ValueSet's values/concepts are the same for multiple concepts. For the CBBs, these ValueSets are 'deduplicated' and reused where applicable. A valueSet can be reused at multiple elements if they contain similar concepts and have the same purpose. For example, the ValueSet `Gender` is reused in both Patient and HealthProfessional. Contradictory, both the InstructionsForUse `RouteOfMedicationAdminstration` ValueSet and the AllergyIntolerance `RouteOfExposure` ValueSet consist of the same descendant of a SNOMED value. However, they have a different purpose and thus are kept as separate ValueSets. If ValueSets are similar but have different names, naming is done at the author's discretion. The reuse should be mentioned in the changelog at each of the CBBs where a deduplicated ValueSet is used. This should contain all CBBs where the ValueSet is used. In case of changing the ValueSet, this should draw attention to the other CBBs as well.
