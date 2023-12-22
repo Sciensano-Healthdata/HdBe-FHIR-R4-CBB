@@ -85,6 +85,14 @@
       <path value="NutritionOrder.intent" />
       <comment value="No CBB concept can be mapped to `intent`. Unless `intent` is explicitly recorded it may be assumed that a NutritionAdvise represents an _order_." />
     </element>
+    <element id="NutritionOrder.patient">
+      <path value="NutritionOrder.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
+      </type>
+    </element>
     <element id="NutritionOrder.oralDiet.type.text">
       <path value="NutritionOrder.oralDiet.type.text" />
       <short value="DietType" />
