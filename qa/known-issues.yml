@@ -19,17 +19,36 @@ issues should occur: false
       - message: None of the codings provided are in the value set 'Consent Scope Codes' (http://hl7.org/fhir/ValueSet/consent-scope), and a coding should come from this value set unless it has no suitable code
         reason: see above
 
+HdBe-AllergyIntolerance-01:
+  ignored issues:
+    AllergyIntolerance.code:
+      - message: None of the codings provided are in the value set 'CausativeAgent' (https://fhir.healthdata.be/ValueSet/CausativeAgent|2020-09-01T00:00:00), and a coding from this value set is required) (codes = http://snomed.info/sct#419442005)
+        reason: The CausativeAgent ValueSet contains a filter on a SCT ^751000172100| Belgian subset for POC FHIR, causative agent, no drug (foundation metadata concept). This is not a snomed hierarchy but a refset. The ValueSet filterering should be okay according to https://www.hl7.org/fhir/snomedct.html#4.3.1.0.8.2. Therefore we assume that the JAVA validator/terminology server does not support this, or has no access to the BE refset.
+
 HdBe-BloodPressure-01:
   ignored issues:
     Observation.component[2].value.ofType(CodeableConcept):
     - message: None of the codings provided are in the value set 'Vital Signs Units' (http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1), and a coding from this value set is required) (codes = http://snomed.info/sct#720737000)
       reason: Error in vital signs profiles... see pattern-VitalSigns.xml profile for reasons. As of this chat, the validator is checking conformance to vital signs profiles based on Observation.code https://chat.fhir.org/#narrow/stream/179177-conformance/topic/Vitalsigns.20Profiles
 
-HdBe-AllergyIntolerance-01:
+HdBe-BodyWeight-01:
   ignored issues:
-    AllergyIntolerance.code:
-      - message: None of the codings provided are in the value set 'CausativeAgent' (https://fhir.healthdata.be/ValueSet/CausativeAgent|2020-09-01T00:00:00), and a coding from this value set is required) (codes = http://snomed.info/sct#419442005)
-        reason: The CausativeAgent ValueSet contains a filter on a SCT ^751000172100| Belgian subset for POC FHIR, causative agent, no drug (foundation metadata concept). This is not a snomed hierarchy but a refset. The ValueSet filterering should be okay according to https://www.hl7.org/fhir/snomedct.html#4.3.1.0.8.2. Therefore we assume that the JAVA validator/terminology server does not support this, or has no access to the BE refset.
+    Observation.component[0].value.ofType(CodeableConcept):
+    - message: None of the codings provided are in the value set 'Vital Signs Units' (http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1), and a coding from this value set is required) (codes = http://snomed.info/sct#720737000)
+      reason: Error in vital signs profiles... see pattern-VitalSigns.xml profile for reasons. As of this chat, the validator is checking conformance to vital signs profiles based on Observation.code https://chat.fhir.org/#narrow/stream/179177-conformance/topic/Vitalsigns.20Profiles
+
+HdBe-BodyWeight-02:
+  ignored issues:
+    Observation.component[0].value.ofType(CodeableConcept):
+    - message: None of the codings provided are in the value set 'Vital Signs Units' (http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1), and a coding from this value set is required) (codes = http://snomed.info/sct#720737000)
+      reason: Error in vital signs profiles... see pattern-VitalSigns.xml profile for reasons. As of this chat, the validator is checking conformance to vital signs profiles based on Observation.code https://chat.fhir.org/#narrow/stream/179177-conformance/topic/Vitalsigns.20Profiles
+
+HdBe-BodyWeight-03:
+  ignored issues:
+    Observation.component[0].value.ofType(CodeableConcept):
+    - message: None of the codings provided are in the value set 'Vital Signs Units' (http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1), and a coding from this value set is required) (codes = http://snomed.info/sct#720737000)
+      reason: Error in vital signs profiles... see pattern-VitalSigns.xml profile for reasons. As of this chat, the validator is checking conformance to vital signs profiles based on Observation.code https://chat.fhir.org/#narrow/stream/179177-conformance/topic/Vitalsigns.20Profiles
+
 
 HdBe-HearingFunction.HearingAid-*:
   ignored issues:
@@ -54,6 +73,13 @@ HdBe-MedicalDevice-*:
     DeviceUseStatement.reasonReference[*]:
       - message: Slicing cannot be evaluated
         reason: To check slicing in instances, the referenced resources need to be inspected, but this is not supported by the HL7 Validator.
+
+HdBe-PulseRate-01:
+  ignored issues:
+    Observation.component[0].value.ofType(CodeableConcept):
+    - message: None of the codings provided are in the value set 'Vital Signs Units' (http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1), and a coding from this value set is required) (codes = http://snomed.info/sct#720737000)
+      reason: Error in vital signs profiles... see pattern-VitalSigns.xml profile for reasons. As of this chat, the validator is checking conformance to vital signs profiles based on Observation.code https://chat.fhir.org/#narrow/stream/179177-conformance/topic/Vitalsigns.20Profiles
+
 
 HdBe-SmokingStatus-01:
   ignored issues:
