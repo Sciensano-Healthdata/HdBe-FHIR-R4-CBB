@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Therapeutic or diagnostic procedure undergone by the patient (the complementary profile HdBe-Procedure-request can be used for therapeutic or diagnostics procedures that the patient will undergo). A procedure can be a simple blood pressure measurement, but also a complex heart surgery.&#xD;&#xA;In some care settings, the term treatment is used instead of the term procedure." />
+  <description value="Therapeutic or diagnostic procedure undergone by the patient (the complementary profile HdBe-Procedure-request can be used for therapeutic or diagnostic procedures that the patient will undergo). A procedure can be a simple blood pressure measurement, but also a complex heart surgery.&#xD;&#xA;In some care settings, the term treatment is used instead of the term procedure." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -121,6 +121,15 @@
         <identity value="HdBe-Procedure" />
         <map value="ProcedureType" />
       </mapping>
+    </element>
+    <element id="Procedure.subject">
+      <path value="Procedure.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
+      </type>
     </element>
     <element id="Procedure.performed[x]">
       <path value="Procedure.performed[x]" />

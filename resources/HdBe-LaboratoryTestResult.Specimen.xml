@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult.Specimen" />
   <meta>
-    <lastUpdated value="2023-07-04T07:54:37.4061961+00:00" />
+    <lastUpdated value="2023-12-22T10:08:22.1067224+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen" />
   <name value="HdBeLaboratoryTestResultSpecimen" />
@@ -110,6 +110,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Substance" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult.Specimen.Source" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
       </type>
       <mapping>
         <identity value="HdBe-LaboratoryTestResult" />
@@ -138,7 +139,7 @@
     </element>
     <element id="Specimen.parent">
       <path value="Specimen.parent" />
-      <comment value="When this resource represents a microorganism (that is, `Specimen.type` represents the CCB concept Microorganism and contains a code from Microorganism ValueSet), this reference can be used to refer to the source material from which is was isolated. The referenced resource should have `Specimen.type` represent the CCB concept SpecimenMaterial and contain a code from the SpecimenMaterial valueSet." />
+      <comment value="When this resource represents a microorganism (that is, `Specimen.type` represents the CCB concept Microorganism and contains a code from Microorganism ValueSet), this reference can be used to refer to the source material from which it was isolated. In this case, the referenced resource should have `Specimen.type` represent the CCB concept SpecimenMaterial and contain a code from the SpecimenMaterial valueSet." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Specimen" />

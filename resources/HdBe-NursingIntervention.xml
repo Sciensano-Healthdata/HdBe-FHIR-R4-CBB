@@ -42,7 +42,7 @@
         <key value="hdbe-NursingIntervention-01" />
         <severity value="error" />
         <human value="The start and/or end date of a repeating schedule should be communicated in CarePlan.encounter as well." />
-        <expression value="activity.detail.scheduledTiming.repeat.boundsPeriod.exists() implies (period = activity.detail.scheduledTiming.repeat.boundsPeriod)" />
+        <expression value="activity.detail.scheduled.ofType(Timing).repeat.bounds.ofType(Period).exists() implies (period = activity.detail.scheduled.ofType(Timing).repeat.bounds.ofType(Period))" />
       </constraint>
       <mapping>
         <identity value="zib-nursingintervention-v3.2-2020EN" />
@@ -80,22 +80,22 @@
     </element>
     <element id="CarePlan.intent">
       <path value="CarePlan.intent" />
-      <definition value="Indicates the level of authority/intentionality associated with the care plan and where the care plan fits into the workflow chain.&#xD;&#xA;&#xD;&#xA;For NursingIntervention, this will normally be _plan_, but the context may specify a more suitable intent." />
+      <comment value="For NursingIntervention, this will normally be _plan_, but the context may specify a more suitable intent." />
     </element>
     <element id="CarePlan.category">
       <path value="CarePlan.category" />
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="$this" />
+          <path value="coding" />
         </discriminator>
         <rules value="open" />
       </slicing>
       <min value="1" />
     </element>
-    <element id="CarePlan.category:nursingIntervention">
+    <element id="CarePlan.category:nursingInterventionCode">
       <path value="CarePlan.category" />
-      <sliceName value="nursingIntervention" />
+      <sliceName value="nursingInterventionCode" />
       <min value="1" />
       <max value="1" />
       <patternCodeableConcept>
@@ -163,7 +163,7 @@
       <alias value="Aanvrager" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-PractitionerRole" />
+        <profile value="https://fhir.healthdata.be/StructureDefinition/pattern-HealthProfessionalReference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-HealthProfessional-Practitioner" />
       </type>
       <mapping>
@@ -430,7 +430,7 @@
       <path value="CarePlan.activity.detail.performer" />
       <slicing>
         <discriminator>
-          <type value="type" />
+          <type value="profile" />
           <path value="resolve()" />
         </discriminator>
         <rules value="open" />

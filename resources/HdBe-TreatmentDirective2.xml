@@ -154,6 +154,19 @@
     </element>
     <element id="Consent.category">
       <path value="Consent.category" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Consent.category:treatmentDirectiveCode">
+      <path value="Consent.category" />
+      <sliceName value="treatmentDirectiveCode" />
+      <min value="1" />
+      <max value="1" />
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
@@ -172,7 +185,7 @@
     <element id="Consent.dateTime">
       <path value="Consent.dateTime" />
       <short value="MostRecentReviewDate" />
-      <definition value="The date on which the treatment directive has been agreed is with the patient and / or his representative (s). This can be the first time that the treatment directive have been discussed, but an existing treatment directive may also have been discussed again. The content of the treatment directive may have changed or remained the same." />
+      <definition value="The date on which the treatment directive has been agreed with the patient and / or his representative (s). This can be the first time that the treatment directive have been discussed, but an existing treatment directive may also have been discussed again. The content of the treatment directive may have changed or remained the same." />
       <alias value="MeestRecenteBespreekdatum" />
       <mapping>
         <identity value="zib-treatmentdirective2-v1.0-2020EN" />
@@ -247,7 +260,7 @@
       <condition value="HdBe-TreatmentDirective2-2" />
       <binding>
         <strength value="required" />
-        <description value="Use ConceptMap 'TreatmentDecision-to-ConsentProvisionType' to translate zib terminology to profile terminology in ValueSet 'ConsentProvisionType'" />
+        <description value="Use ConceptMap 'TreatmentDecision-to-ConsentProvisionType' to translate zib terminology from the functional model to profile terminology in ValueSet 'ConsentProvisionType'" />
         <valueSet value="http://hl7.org/fhir/ValueSet/consent-provision-type|4.0.1">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
             <valueCanonical value="https://fhir.healthdata.be/ConceptMap/TreatmentDecision-to-ConsentProvisionType" />
@@ -293,7 +306,6 @@
       <path value="Consent.provision.actor" />
       <sliceName value="agreementParty" />
       <short value="AgreementParty" />
-      <definition value="Container of the Agreement concept.This container contains all data elements of the Agreement concept." />
       <alias value="AfspraakPartij" />
       <mapping>
         <identity value="zib-treatmentdirective2-v1.0-2020EN" />
@@ -317,7 +329,7 @@
     <element id="Consent.provision.actor:agreementParty.reference">
       <path value="Consent.provision.actor.reference" />
       <short value="Patient / Representative / HealthProfessional" />
-      <definition value="* Patient as the person with whom the agreement was made.&#xD;&#xA;* Person who represents the patient in health care matters and with whom the agreement has been made (too).&#xD;&#xA;* HealthProfessional who has made de agreement regarding the treatement directive." />
+      <definition value="* Patient as the person with whom the agreement was made.&#xD;&#xA;* Person who represents the patient in health care matters and with whom the agreement has been made (too).&#xD;&#xA;* HealthProfessional who has made the agreement regarding the treatment directive." />
       <alias value="Patient" />
       <alias value="Vertegenwoordiger" />
       <alias value="Zorgverlener" />

@@ -48,16 +48,16 @@
         <map value="NutritionAdvice" />
       </mapping>
     </element>
-    <element id="NutritionOrder.extension:problem">
+    <element id="NutritionOrder.extension:indication">
       <path value="NutritionOrder.extension" />
-      <sliceName value="problem" />
+      <sliceName value="indication" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/workflow-reasonReference" />
       </type>
     </element>
-    <element id="NutritionOrder.extension:problem.value[x]">
+    <element id="NutritionOrder.extension:indication.value[x]">
       <path value="NutritionOrder.extension.value[x]" />
       <short value="Indication" />
       <definition value="The indication is the reason for advising the diet." />
@@ -84,6 +84,14 @@
     <element id="NutritionOrder.intent">
       <path value="NutritionOrder.intent" />
       <comment value="No CBB concept can be mapped to `intent`. Unless `intent` is explicitly recorded it may be assumed that a NutritionAdvise represents an _order_." />
+    </element>
+    <element id="NutritionOrder.patient">
+      <path value="NutritionOrder.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
+      </type>
     </element>
     <element id="NutritionOrder.oralDiet.type.text">
       <path value="NutritionOrder.oralDiet.type.text" />
