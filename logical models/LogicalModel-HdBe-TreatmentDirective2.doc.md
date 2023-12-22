@@ -10,4 +10,3 @@
 | `MostRecentReviewDate` | textual | Replaced 'his representative (s)' with 'his representative(s)'. |
 | `MostRecentReviewDate` | textual | Replaced 'treatment directive have' with 'treatment directive has'. |
 | `AgreementParty` | textual | Replaced 'concept.This' with 'concept. This'. |
-| `AgreementParty.HealthProfessional` | textual | Replaced 'de' with 'the'. |
