@@ -2,6 +2,4 @@
 
 | Concept         | Category          | Description                             | 
 |-----------------|-------------------|-----------------------------------------|
-| n/a | n/a | There is no longer a profile for the template zib LaboratoryTestResult.Requester. |
-
-| `requester` | mapping | Added mapping to a new profile on ServiceRequest to implement the requester element of the CBB/zib. Although this element does not provide enough information to create a profile that describes a full ordering service, it will provide details on capturing a requester in FHIR.|
+| `requester` | mapping | Added mapping to a new profile on ServiceRequest to implement the requester element of the CBB/zib. Although this element does not provide enough information to create a profile that describes a full ordering service, it will provide details on capturing a requester in FHIR. Note: there is no Nictiz profile for the zib LaboratoryTestResult.Requester.|
