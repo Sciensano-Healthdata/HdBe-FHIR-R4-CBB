@@ -4,7 +4,7 @@
 	from StructureDefinition
 	where type = 'Extension'
 	select 
-	Name: title.substring((4 + title.indexOf('ext- '))),
+	Name: title.substring((5 + title.indexOf('ext- '))),
 	Context: context.expression, 
 	Description: description, 
 	Canonical: url,
