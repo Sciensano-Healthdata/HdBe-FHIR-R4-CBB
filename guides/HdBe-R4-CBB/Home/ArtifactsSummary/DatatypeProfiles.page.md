@@ -5,7 +5,7 @@
 	from StructureDefinition
 	where type != 'Extension' and kind != 'logical' and kind ='complex-type'
 	select 
-	Name: title.substring((5 + title.indexOf('HdBe- '))), 
+	Name: title.substring((6 + title.indexOf('HdBe- '))), 
 	DataType: type.toString(),
 	Description: description, 
 	Canonical: url,
