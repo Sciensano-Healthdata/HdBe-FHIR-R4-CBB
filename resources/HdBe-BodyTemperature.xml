@@ -74,7 +74,7 @@
       <sliceName value="temperatureType" />
       <short value="TemperatureType" />
       <definition value="The TemperatureType indicates the way and place the measurement (temperature) has been performed." />
-      <comment value="The use of an additional Observation coding to further specify the body temperature measurement type differs from the recommendation by the HL7 Vital Signs IG to communicate this kind of information. The HL7 Vital Signs IG suggest that additional observations may be used for explicitly defining the temperature measurement site and the type of temperature device. Implementers can still use this mechanism if needed; however the HL7 Vital Signs IG doesn't specify ValueSets for these concepts so no mapping to the zib concept can be made." />
+      <comment value="The use of an additional Observation coding to further specify the body temperature measurement type differs from the recommendation by the HL7 Vital Signs IG to communicate this kind of information. The HL7 Vital Signs IG suggests that additional observations may be used for explicitly defining the temperature measurement site and the type of temperature device. Implementers can still use this mechanism if needed; however the HL7 Vital Signs IG doesn't specify ValueSets for these concepts so no mapping to the zib concept can be made." />
       <alias value="TemperatuurType" />
       <max value="1" />
       <binding>
@@ -90,6 +90,14 @@
         <identity value="HdBe-BodyTemperature" />
         <map value="BodyTemperature.TemperatureType" />
       </mapping>
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
+      </type>
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />

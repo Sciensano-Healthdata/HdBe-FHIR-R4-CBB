@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Therapeutic or diagnostic procedure the patient will undergo (the complementary profile HdBe-Procedure-request can be used for therapeutic or diagnostics procedures that the has undergone). A procedure can be a simple blood pressure measurement, but also a complex heart surgery.&#xD;&#xA;In some care settings, the term treatment is used instead of the term procedure." />
+  <description value="Therapeutic or diagnostic procedure the patient will undergo (the complementary profile HdBe-Procedure-request can be used for therapeutic or diagnostic procedures that the has undergone). A procedure can be a simple blood pressure measurement, but also a complex heart surgery.&#xD;&#xA;In some care settings, the term treatment is used instead of the term procedure." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -108,7 +108,7 @@
       <path value="ServiceRequest.orderDetail" />
       <sliceName value="procedureMethod" />
       <short value="ProcedureMethod" />
-      <definition value="The method or technique that will be used to perform the procedure, e.g. approach, lavage, pressuring, ets." />
+      <definition value="The method or technique that will be used to perform the procedure, e.g. approach, lavage, pressuring, etc." />
       <alias value="VerrichtingMethode" />
       <binding>
         <strength value="required" />
@@ -123,6 +123,17 @@
         <identity value="HdBe-Procedure" />
         <map value="ProcedureMethod" />
       </mapping>
+    </element>
+    <element id="ServiceRequest.subject">
+      <path value="ServiceRequest.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
+      </type>
     </element>
     <element id="ServiceRequest.occurrence[x]">
       <path value="ServiceRequest.occurrence[x]" />

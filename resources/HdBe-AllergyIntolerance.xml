@@ -73,16 +73,6 @@
         <map value="AllergyIntolerance.AllergyStatus" />
       </mapping>
     </element>
-    <element id="AllergyIntolerance.verificationStatus">
-      <path value="AllergyIntolerance.verificationStatus" />
-      <short value="AllergyStatus" />
-      <alias value="AllergieStatus" />
-      <mapping>
-        <identity value="zib-allergyintolerance-v3.3-2020EN" />
-        <map value="NL-CM:8.2.5" />
-        <comment value="AllergyStatus" />
-      </mapping>
-    </element>
     <element id="AllergyIntolerance.category">
       <path value="AllergyIntolerance.category" />
       <short value="AllergyCategory" />
@@ -206,6 +196,14 @@
         <identity value="HdBe-AllergyIntolerance" />
         <map value="AllergyIntolerance.CausativeAgent" />
       </mapping>
+    </element>
+    <element id="AllergyIntolerance.patient">
+      <path value="AllergyIntolerance.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
+      </type>
     </element>
     <element id="AllergyIntolerance.onset[x]">
       <path value="AllergyIntolerance.onset[x]" />

@@ -16,7 +16,7 @@
 | LaboratoryTest.ResultInterpretation	  | High |
 | Specimen	 	                          |
 | Specimen.SpecimenId                     | 123456 |
-| Specimen.SpecimenNumberExtension	      |
+| Specimen.SpecimenNumberExtension	      | A
 | Specimen.ContainerType	              |
 | Specimen.SpecimenMaterial	              | 119297000  -  Blood specimen (code by SNOMED CT) |
 | Specimen.AnatomicalLocation	          | 368208006  - Left upper arm (code by SNOMED CT)  |

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "HdBe-LaboratoryTestResult",
   "meta": {
-    "lastUpdated": "2023-06-27T14:41:03.0779226+00:00"
+    "lastUpdated": "2023-12-22T15:37:17.8052272+00:00"
   },
   "language": "en-US",
   "extension": [
@@ -13,8 +13,8 @@
       }
     },
     {
-      "url" : "https://fhir.healthdata.be/StructureDefinition/ext-CBB-MM",
-      "valueInteger" : 1
+      "url": "https://fhir.healthdata.be/StructureDefinition/ext-CBB-MM",
+      "valueInteger": 1
     }
   ],
   "url": "https://fhir.healthdata.be/StructureDefinition/LogicalModel/HdBe-LaboratoryTestResult",
@@ -1425,7 +1425,10 @@
         "max": "1",
         "type": [
           {
-            "code": "Count"
+            "code": "string",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/string"
+            ]
           }
         ]
       },

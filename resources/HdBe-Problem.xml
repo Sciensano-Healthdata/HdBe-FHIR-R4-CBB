@@ -105,6 +105,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
     </element>
     <element id="Condition.verificationStatus.coding:verificationStatusCodelist">
       <path value="Condition.verificationStatus.coding" />
@@ -206,6 +207,15 @@
         <identity value="HdBe-Problem" />
         <map value="Problem.ProblemAnatomicalLocation" />
       </mapping>
+    </element>
+    <element id="Condition.subject">
+      <path value="Condition.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
+      </type>
     </element>
     <element id="Condition.onset[x]">
       <path value="Condition.onset[x]" />

@@ -132,6 +132,15 @@
         <comment value="implicit, main mapping is on DeviceUseStatement.timingPeriod.end" />
       </mapping>
     </element>
+    <element id="DeviceUseStatement.subject">
+      <path value="DeviceUseStatement.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Patient" />
+      </type>
+    </element>
     <element id="DeviceUseStatement.derivedFrom">
       <path value="DeviceUseStatement.derivedFrom" />
       <slicing>
@@ -142,22 +151,47 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="DeviceUseStatement.derivedFrom:procedure">
+    <element id="DeviceUseStatement.derivedFrom:procedure-request">
       <path value="DeviceUseStatement.derivedFrom" />
-      <sliceName value="procedure" />
+      <sliceName value="procedure-request" />
       <short value="Procedure" />
       <definition value="The procedure which has the purpose if placing this product in or on the body." />
       <comment value="Please note that on a functional level, CBB Procedure references CBB MedicalDevice, but in FHIR this direction is reversed." />
       <alias value="Verrichting" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-event" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-request" />
       </type>
       <mapping>
         <identity value="zib-procedure-v5.2-2020EN" />
         <map value="NL-CM:14.1.7" />
         <comment value="Reversed reference for zib Procedure.MedicalDevice" />
+      </mapping>
+      <mapping>
+        <identity value="HdBe-Procedure" />
+        <map value="MedicalDevice" />
+        <comment value="Reversed reference for CBB Procedure.medical_device" />
+      </mapping>
+    </element>
+    <element id="DeviceUseStatement.derivedFrom:procedure-event">
+      <path value="DeviceUseStatement.derivedFrom" />
+      <sliceName value="procedure-event" />
+      <short value="Procedure" />
+      <definition value="The procedure which has the purpose of placing this product in or on the body." />
+      <comment value="Please note that on a functional level, CBB Procedure references CBB MedicalDevice, but in FHIR this direction is reversed." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Claim" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Procedure-event" />
+      </type>
+      <mapping>
+        <identity value="zib-procedure-v5.2-2020EN" />
+        <map value="NL-CM:14.1.7" />
       </mapping>
       <mapping>
         <identity value="HdBe-Procedure" />
@@ -250,18 +284,16 @@
         <map value="MedicalDevice.Indication" />
       </mapping>
     </element>
-    <element id="DeviceUseStatement.reasonReference:HdBe-MedicalDeviceReference">
+    <element id="DeviceUseStatement.reasonReference:functionalOrMentalStatus">
       <path value="DeviceUseStatement.reasonReference" />
-      <sliceName value="HdBe-MedicalDeviceReference" />
-      <short value="CBB MedicalDevice reference" />
+      <sliceName value="functionalOrMentalStatus" />
+      <short value="FunctionalOrMentalStatus" />
       <definition value="The association between a CBB MedicalDevice and another zib or other functional model." />
       <comment value="There are several CBBs that reference CBB MedicalDevice on a functional level, but for which the direction of the reference in FHIR is reversed. Consult the mappings on this element for an overview of which zib concepts are mapped to this element. &#xD;&#xA;&#xD;&#xA;Note that some CBBs have a reference to MedicalDevice that is further constrained (e.g. with additional constraints on ProductType or AnatomicalLocation), such as HearingFunction and VisualFunction. For these CBBs separate DeviceUseStatement profiles have been created (based on this profile) which also include a specific slice on which their respective MedicalDevice concept mapping is present." />
       <alias value="FunctioneleOfMentaleStatus" />
-      <alias value="Mobiliteit" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-FunctionalOrMentalStatus" />
-        <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-Mobility" />
       </type>
       <mapping>
         <identity value="zib-functionalormentalstatus-v3.2-2020EN" />
@@ -269,19 +301,9 @@
         <comment value="Reversed reference for zib FunctionalOrMentalStatus.MedicalDevice" />
       </mapping>
       <mapping>
-        <identity value="zib-mobility-v3.3-2020EN" />
-        <map value="NL-CM:4.3.4" />
-        <comment value="Reversed reference for zib Mobility.MedicalDevice" />
-      </mapping>
-      <mapping>
         <identity value="HdBe-FunctionalOrMentalStatus" />
         <map value="MedicalDevice" />
         <comment value="Reversed reference for CBB FunctionalOrMentalStatus.medical_device" />
-      </mapping>
-      <mapping>
-        <identity value="HdBe-Mobility" />
-        <map value="MedicalDevice" />
-        <comment value="Reversed reference for CBB Mobility.medical_device" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.bodySite">

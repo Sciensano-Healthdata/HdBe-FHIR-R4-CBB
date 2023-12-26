@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="HdBe-LaboratoryTestResult" />
   <meta>
-    <lastUpdated value="2023-07-04T07:54:39.4511013+00:00" />
+    <lastUpdated value="2023-11-30T08:30:52.8774451+00:00" />
   </meta>
   <url value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult" />
   <name value="HdBeLaboratoryTestResult" />
@@ -162,6 +162,7 @@
       <path value="Observation.category" />
       <sliceName value="laboratoryCategory" />
       <min value="1" />
+      <max value="1" />
       <patternCodeableConcept>
         <coding>
           <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
@@ -318,7 +319,7 @@
       <path value="Observation.interpretation" />
       <sliceName value="resultFlags" />
       <short value="ResultFlags" />
-      <definition value="Attention codes indicating whether the result of a quantitative test is above or below certain reference values or interpreting the result otherwise.(Resistent). The values Resistant, Intermediate en Susceptible are used with microbiological test results." />
+      <definition value="Attention codes indicating whether the result of a quantitative test is above or below certain reference values or interpreting the result otherwise (Resistent). The values Resistant, Intermediate and Susceptible are used with microbiological test results." />
       <alias value="InterpretatieVlaggen" />
       <binding>
         <strength value="extensible" />
@@ -462,14 +463,31 @@
     </element>
     <element id="Observation.hasMember">
       <path value="Observation.hasMember" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <comment value="When this resource is used to represent the overall result of a panel/cluster of laboratory tests, the individual test results SHOULD be referenced here. See the root of this profile for guidance." />
+    </element>
+    <element id="Observation.hasMember:laboratoryTest">
+      <path value="Observation.hasMember" />
+      <sliceName value="laboratoryTest" />
+      <short value="LaboratoryTest" />
+      <definition value="Individual laboratory tests if the current Observation resource represents a panel or cluster." />
+      <comment value="See the root comment for guidance on representing singular laboratory test results versus panels/clusters." />
+      <alias value="LaboratoriumTest" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MolecularSequence" />
         <targetProfile value="https://fhir.healthdata.be/StructureDefinition/HdBe-LaboratoryTestResult" />
       </type>
+      <mapping>
+        <identity value="HdBe-LaboratoryTestResult" />
+        <map value="LaboratoryTestResult.LaboratoryTest" />
+        <comment value="LaboratoryTest, if these are part of a panel/cluster"/>
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
