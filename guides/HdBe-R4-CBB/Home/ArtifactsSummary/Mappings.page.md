@@ -14,7 +14,7 @@ select
         select {
             join mapping.where(identity.startsWith('HdBe-')) 
 			{
-			 CBB: '<a href="https://simplifier.net/guide/hdbe-r4-cbb-develop/Home/LogicalModels/EN.' + identity + '.page.md?version=current">' + identity + '</a>',
+			 CBB: '<a href="https://simplifier.net/guide/hdbe-r4-cbb/Home/LogicalModels/EN.' + identity + '.page.md?version=current">' + identity + '</a>',
 			 Concept:map
 			},
             Element:path
